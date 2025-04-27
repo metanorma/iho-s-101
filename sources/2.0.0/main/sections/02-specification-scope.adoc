@@ -1,0 +1,10 @@
+
+
+[[sec_2]]
+== Specification Scope
+
+*Scope ID:* Global
+
+*Level:* 006 - series
+
+*Level name:* ENC Dataset

@@ -1,0 +1,738 @@
+
+[[sec_1]]
+== Overview
+
+[[sec_1.1]]
+===  Scope
+
+This document describes an S-100 compliant Product Specification for
+Electronic Navigational Charts, which will form the base navigation
+layer for an S-100 based marine navigation system. It specifies the
+content, structure, and metadata needed for creating a fully compliant
+S-101 ENC and for its portrayal within an S-100 system. This Product
+Specification includes the content model, the encoding, the Feature
+Catalogue, Portrayal Catalogue, metadata, and implementation guidance
+for developers.
+
+[[sec_1.2]]
+[bibliography]
+=== References
+
+* [[[IHO_S_52,IHO S-52]]]
+
+* [[[IHO_S_100,IHO S-100]]]
+
+* [[[ISO_639_2,ISO 639-2]]]
+
+* [[[ISO_3166_1,ISO 3166-1]]]
+
+* [[[ISO_IEC_8211_1994,ISO/IEC 8211:1994]]]
+
+* [[[ISO_8601_2004,ISO 8601:2004]]]
+
+* [[[ISO_19101_2003,ISO 19101]]]
+    span:date.published[2003]
+
+* [[[ISO_19103_2005,ISO/TS 19103:2005]]]
+    span:date.published[2005]
+
+* [[[ISO_19103_2_2005,ISO 19103-2:2005]]]
+    _Geographic Information -- Conceptual Schema Language -- Part 2_,
+    span:date.published[2005]
+
+* [[[ISO_19105_2000, ISO 19105:2000]]]
+
+* [[[ISO_19107_2003, ISO 19107:2003]]]
+
+* [[[ISO_19108_2002, ISO 19108:2002]]]
+
+* [[[ISO_19109_2005, ISO 19109:2005]]]
+
+* [[[ISO_19110_2005, ISO 19110:2005]]]
+
+* [[[ISO_19111_2007, ISO 19111:2007]]]
+
+* [[[ISO_19113_2002, ISO 19113:2002]]]
+
+* [[[ISO_19115_1, ISO 19115-1]]]
+
+* [[[ISO_TS_19115_3, ISO/TS 19115-3]]]
+
+* [[[ISO_19117_2012, ISO 19117:2012]]]
+
+* [[[ISO_19118_2005, ISO 19118:2005]]]
+
+* [[[ISO_19131_2008, ISO 19131:2008]]]
+
+* [[[ISO_TS_19138_2006, ISO/TS 19138:2006]]]
+
+* [[[ISO_19157_2013, ISO 19157:2013]]]
+
+* [[[ISO_IEC_19501_2005, ISO/IEC 19501:2005]]]
+
+* [[[FIPS_186, FIPS 186]]]
+
+[[sec_1.3]]
+[heading="terms and definitions"]
+=== Terms, definitions and abbreviations
+
+[[sec_1.3.1]]
+==== Use of language
+
+Within this document:
+
+* "Must" indicates a mandatory requirement.
+* "Should" indicates an optional requirement, that is the recommended
+process to be followed, but is not mandatory.
+* "May" means "allowed to" or "could possibly", and is not mandatory.
+
+[[sec_1.3.2]]
+==== Terms and definitions
+
+==== Accuracy
+
+Closeness of agreement between a test result and the accepted reference
+values.
+
+NOTE: A test result can be from an observation or measurement.
+
+==== Aggregation
+
+Special form of {{Association,association}} that specifies a whole-part
+relationship between the aggregate (whole) and a component part
+(see {{Composition,composition}}).
+
+==== Alarm
+
+(MSC.302/A) a high-priority {{Alert,alert}}. Condition requiring immediate
+attention and action by the bridge team, to maintain the safe navigation
+of the ship.
+
+==== Alert
+
+(MSC.302/A) announcement of abnormal situations and conditions requiring
+attention. Alerts are divided in four priorities:
+{{Emergency Alarm,emergency alarms}}, {{Alarm,alarms}}, {{Warning,warnings}}
+and {{Caution,cautions}}. An alert provides information about a defined
+state change in connection with information about how to announce
+this event in a defined way to the system and the operator.
+
+==== Application Schema
+
+Conceptual schema for data required by one or more applications.
+
+==== Association
+
+Semantic relationship between two or more classifiers that specifies
+connections among their {{Instance,instances}}.
+
+NOTE: A binary association is an association among exactly two classifiers
+(including the possibility of an association from a classifier to itself)
+
+==== Attribute
+
+. Named property of an entity.
++
+--
+NOTE: Describes a geometrical, topological, thematic, or other characteristic
+of an entity.
+--
+
+. Feature within a classifier that describes a range of values that
+{{Instance,instances}} of the classifier may hold.
++
+--
+NOTE: An attribute is semantically equivalent to a composition association;
+however, the intent and usage is normally different.
+
+NOTE: "Feature" used in this definition is the UML meaning of the
+term.
+--
+
+==== Boundary
+
+Set that represents the limit of an entity.
+
+NOTE: Boundary is most commonly used in the context of geometry, where
+the set is a collection of points or a collection of objects that
+represent those points.
+
+==== Caution
+
+(MSC.302/A) lowest priority of an {{Alert,alert}}. Awareness of a
+condition which does not warrant an {{Alarm,alarm}} or warning condition,
+but still requires attention out of the ordinary consideration of
+the situation or of given information.
+
+==== Class
+
+Description of a set of objects that share the same {{Attribute,attributes}},
+operations, methods, {{Relationship,relationships}}, and semantics.
+
+NOTE: A class represents a concept within the system being modelled.
+Depending on the kind of model, the concept may be real-world
+(for an analysis model), or it may also contain algorithmic and computer
+implementation concepts (for a design model). A classifier is a generalization
+of class that includes other class-like elements, such as data type,
+actor and component.
+
+==== Classification
+
+The process of determining the appropriate {{Data Type,data type}}
+within a {{Feature Catalogue,feature catalogue}} for a particular
+real world feature, including consideration of
+{{Data Quality,data quality}}.
+
+==== Composition
+
+Form of {{Aggregation,aggregation}} {{Association,association}} with
+strong ownership and coincident lifetime as part of the whole.
+
+NOTE: Parts with non-fixed multiplicity may be created after the composite
+itself, but once created they live and die with it (that is, they
+share lifetimes). Such parts can also be explicitly removed before
+the death of the composite. Composition may be recursive. Synonym:
+Composite aggregation.
+
+==== Coordinate
+
+One of a sequence of n numbers designating the position of a {{Point,point}}
+in n-dimensional space.
+
+NOTE: In a {{Coordinate Reference System,coordinate reference system}},
+the coordinate numbers are qualified by units.
+
+==== Coordinate Reference System
+
+{{Coordinate}} system that is related to an object by a datum.
+
+NOTE: For geodetic and vertical datums, the object will be the Earth.
+
+==== Coordinate Tuple
+
+Ordered list of {{Coordinate,coordinates}} where the number and order
+of coordinates is identical to the axes of the
+{{Coordinate Reference System,coordinate reference system}}.
+
+==== Curve
+
+1-dimensional {{Geometric Primitive,geometric primitive}}, representing
+the continuous image of a line.
+
+NOTE: The boundary of a curve is the set of points at either end of
+the curve. If the curve is a cycle, the two ends are identical, and
+the curve (if topologically closed) is considered to not have a boundary.
+The first point is called the start point, and the last is the end
+point. Connectivity of the curve is guaranteed by the "continuous
+image of a line" clause. A topological theorem states that a continuous
+image of a connected set is connected.
+
+==== Curve Segment
+
+1-dimensional geometric object used to represent a continuous component
+of a {{Curve,curve}} using homogeneous interpolation and definition
+methods.
+
+NOTE: The geometric set represented by a single curve segment is equivalent
+to a curve.
+
+==== Data Product
+
+A {{Dataset,dataset}} or dataset series that conforms to a data product
+specification.
+
+==== Data Quality
+
+A set of elements describing aspects of quality, including a measure
+of quality, an evaluation procedure, a quality result, and a scope.
+
+==== Data Type
+
+Specification of a value domain with operations allowed on values
+in this domain.
+
+NOTE: Data types include primitive predefined types and user-definable
+types.
+
+NOTE: A data type is identified by a term, for example Integer.
+
+[example]
+Integer, Real, Boolean, CharacterString, DirectPosition and S_100_TruncatedDate
+
+==== Dataset
+
+An identifiable collection of data.
+
+NOTE: A dataset may be a smaller grouping of data which, though limited
+by some constraint such as spatial extent or featuretype,is located
+physically within a larger dataset. Theoretically, a dataset may be
+as small as a single feature contained within a larger dataset.
+A hardcopy map or chart may be considered a dataset.
+
+==== Datum
+
+Parameter or set of parameters that define the position of the origin,
+the scale, and the orientation of a {{Coordinate,coordinate}} system.
+
+==== Display Priority
+
+Display priorities control the order in which the output of the portrayal
+functions is processed by the rendering engine. Priorities with smaller
+numerical values will be processed first. Instructions which have
+equal display priority must be ordered so that area instructions are
+rendered first, followed by line instructions, then point instructions,
+and lastly text instructions. If the display priority is equal among
+the same type of instruction (area, line, point, or text) some other
+neutral criterion must be used to order the instructions.
+
+==== ECDIS
+
+A navigation information system which with adequate back-up arrangements
+can be accepted as complying with the up-to-date chart required by
+regulations V/19 and V/27 of the 1974 SOLAS Convention, as amended,
+by displaying selected information from a System Electronic Navigational
+Chart (System Database) with positional information from navigation
+sensors to assist the Mariner in route planning and route monitoring,
+and if required display additional navigation-related information.
+
+==== ECDIS Chart 1
+
+An ECDIS version of INT 1, including all symbols, line styles and
+colour coding used for chart presentation. Intended for the Mariner
+for both familiarization with ECDIS and to look up specific symbols.
+
+==== Emergency Alarm
+
+(MSC.302/A) highest priority of an {{Alert,alert}}. A condition presenting
+an immediate danger to human life or to the ship and its machinery
+exists and that immediate action must be taken.
+
+==== ENC
+
+The {{Dataset,dataset}}, standardized as to content, structure and
+format, issued for use with {{ECDIS}} by or on the authority of a
+Government authorized Hydrographic Office or other relevant government
+institution, and conforming to IHO standards. The ENC contains all
+the chart information necessary for safe navigation and may contain
+supplementary information in addition to that contained in the paper
+chart which may be considered necessary for safe navigation.
+
+==== ENDS
+
+A special-purpose database compiled from nautical chart and nautical
+publication data, standardized as to content, structure and format,
+issued for use with {{ECDIS}} by or on the authority of a Government,
+authorized Hydrographic Office or other relevant government institution,
+and conforming to IHO standards; and, which is designed to meet the
+requirement of marine navigation and the nautical charts and nautical
+publications carriage requirements in SOLAS regulations V/19 and V/27.
+The navigational base layer of ENDS is the Electronic Navigational
+Chart ({{ENC}}).
+
+==== Enumeration
+
+A fixed list of valid identifiers of named literal values.
+{{Attribute,Attributes}} of an enumeration type may only take values
+from this list.
+
+==== Feature
+
+Abstraction of real world phenomena.
+
+NOTE: A feature may occur as a type or an instance. Feature type or
+feature instance should be used when only one is meant.
+
+[example]
+The phenomenon named 'London Eye' may be classified as a feature instance
+with other phenomena into a feature type 'landmark'
+
+==== Feature Association
+
+{{Relationship}} that links instances of one {{Feature,feature}} type
+with instances of the same or a different {{Feature,feature}} type.
+
+==== Feature Attribute
+
+Characteristic of a {{Feature,feature}}.
+
+NOTE: A feature attribute may occur as a type or an instance. Feature
+attribute type or feature attribute instance is used when only one
+is meant.
+
+NOTE: A feature attribute type has a name, a data type and a domain
+associated to it. A feature attribute instance has an attribute value
+taken from the value domain of the feature attribute type.
+
+NOTE: In a Feature Catalogue, a feature attribute may include a value
+domain but does not specify attribute values for feature instances.
+
+[example]
+A feature attribute named _communication channel_ may have an attribute
+value _VHF0007_ which belongs to the data type _text_
+
+[example]
+A feature attribute named _length_ may have an attribute value _82.4_
+which belongs to the data type _real_
+
+==== Feature Catalogue
+
+A catalogue containing definitions and descriptions of the
+{{Feature,feature}} types, {{Feature Attribute,feature attributes}},
+and {{Feature Association,feature associations}} occurring in one
+or more sets of geographic data.
+
+==== Geometric Primitive
+
+Geometric object representing a single, connected, homogeneous element
+of geometry.
+
+NOTE: Geometric primitives are non-decomposed objects that present
+information about geometric configuration. They include points, curves,
+surfaces, and solids.
+
+==== Human Readable
+
+A representation of information that can be naturally read by humans.
+
+==== Identifier
+
+A linguistically independent sequence of characters capable of uniquely
+and permanently identifying that with which it is associated.
+
+==== Indication
+
+Visual indication giving information about the condition of a system
+or equipment.
+
+==== Instance
+
+Entity to which a set of operations can be applied and which has a
+state that stores the effects of the operations.
+
+NOTE: See {{Feature,feature}}.
+
+==== Machine Readable
+
+A representation of information that can be processed by computers.
+
+==== Maximum Display Scale
+
+The value considered by the Data Producer to be the maximum (largest)
+scale at which the data is to be displayed before it can be considered
+to be "grossly overscaled".
+
+==== Metadata
+
+Data about data.
+
+==== Minimum Display Scale
+
+The minimum (smallest) scale with which the data is intended to be
+displayed.
+
+==== Model
+
+Abstraction of some aspects of universe of discourse.
+
+NOTE: A semantically complete abstraction of a system.
+
+==== Multiplicity
+
+Specification of the number of possible occurrences of a property,
+or the number of allowable elements that may participate in a given
+relationship.
+
+[example]
+1..* (one to many); 1 (exactly one); 0..1 (zero or one)
+
+==== Optimum Display Scale
+
+The maximum (largest) scale with which the data is intended to be
+displayed.
+
+NOTE: Optimum Display Scale may be considered to be the compilation
+scale for the data, and is the reference for the overscale indication.
+When the Mariners Selected Viewing Scale (MSVS) is set to a scale
+that is larger than Optimum Display Scale, this triggers the overscale
+indication in the end user system.
+
+==== Overscale
+
+The viewing scale is larger than the value considered by the Data
+Producer to be the largest intended (optimum) display scale for the
+data.
+
+==== Point
+
+0-dimensional {{Geometric Primitive,geometric primitive}}, representing
+a position.
+
+NOTE: The boundary of a point is the empty set.
+
+==== Pointset
+
+A set of {{Point,points}} in geometric space.
+
+==== Portrayal Catalogue
+
+Collection of defined portrayals for a
+{{Feature Catalogue,feature catalogue}}.
+
+NOTE: Content of a portrayal catalogue includes portrayal functions,
+symbols, and portrayal context.
+
+==== Record
+
+Finite, named collection of related items (objects or values).
+
+NOTE: Logically, a record is a set of pairs <name, item >.
+
+==== Relationship
+
+Semantic connection among model elements.
+
+NOTE: Kinds of relationships include association, generalization,
+metarelationship, flow, and several kinds grouped under dependency.
+
+==== Scale Minimum
+
+The smallest scale at which a feature is intended to be displayed
+(for example, a minor light, with a scale minimum of 1:45,000, would
+not normally be displayed at a scale of 1:90,000).
+
+==== Skin of the Earth
+
+A defined set of non-overlapping geographic features of geometric
+primitive surface, completely covering an area equivalent to that
+of meta-features *Data Coverage*.
+
+==== Surface
+
+Connected 2-dimensional {{Geometric Primitive,geometric primitive}},
+representing the continuous image of a region of a plane.
+
+NOTE: The boundary of a surface is the set of oriented, closed curves
+that delineate the limits of the surface.
+
+==== System Database
+
+A database, in the manufacturer's internal ECDIS format, resulting
+from the lossless transformation of the Electronic Navigational Data
+Service (ENDS) contents and its updates. It is this database that
+is accessed by ECDIS for the display generation and other navigational
+functions, and is equivalent to up-to-date ENDS.
+
+==== Temporal Reference System
+
+Reference system against which time is measured.
+
+==== Vertical Datum
+
+Datum describing the relation of gravity-related heights or depths
+to the Earth.
+
+==== Viewing Scale
+
+The value of the ratio of the linear dimensions of {{Feature,features}}
+of a {{Dataset,dataset}} presented in the display and the actual dimensions
+of the {{Feature,features}} represented of the {{Dataset,dataset}}.
+
+==== Warning
+
+(MSC.302/A) {{Alert,alert}} for condition requiring immediate attention,
+but no immediate action by the bridge team. Warnings are presented
+for precautionary reasons to make the bridge team aware of changed
+conditions which are not immediately hazardous, but may become so
+if no action is taken.
+
+[[sec_1.3.3]]
+==== Abbreviations
+
+CRS:: Coordinate Reference System
+
+DCEG:: Data Classification and Encoding Guide
+
+ECDIS:: Electronic Chart Display and Information System
+
+ENC:: Electronic Navigational Chart
+
+ENDS:: Electronic Navigational Data Service
+
+EPSG:: European Petroleum Survey Group
+
+GFM:: General Feature Model
+
+IEC:: International Electrotechnical Commission
+
+IHO:: International Hydrographic Organization
+
+IMO:: International Maritime Organization
+
+ISO:: International Organization for Standardization
+
+MSVS:: Mariners Selected Viewing Scale
+
+SOLAS:: Safety of Life at Sea
+
+SVG:: Scalable Vector Graphics
+
+S-100WG:: IHO S-100 Working Group
+
+S-101PT:: S-100WG - S-101 Project Team
+
+TIFF:: Tagged Image File Format
+
+UML:: Unified Modelling Language
+
+URL:: Universal Resource Locator
+
+XML:: Extensible Markup Language
+
+[[sec_1.4]]
+=== General S-101 data product description
+
+NOTE: This information contains general information about the data
+product.
+
+*Title:*:: Electronic Navigational Chart
+
+*Abstract:*:: An Electronic Navigational Chart (ENC) is a vector chart
+produced on the authority of a government authorized Hydrographic
+Office or other relevant government institution. Its primary purpose
+is for use within an Electronic Chart Display and Information System
+(ECDIS) to meet International Maritime Organization (IMO) and Safety
+of Life at Sea (SOLAS) chart carriage requirements; however it may
+also be used as the base dataset in other S-100 based marine navigation
+systems. The ENC contains an extraction of real world information
+necessary for the safe navigation of vessels.
+
+*Content:*:: The Product Specification defines all requirements to
+which ENC data products must conform. Specifically it defines the
+data product content in terms of features and attributes within the
+Feature Catalogue. The display of features is defined by the symbols
+and rule sets contained in the Portrayal Catalogue. The Data Classification
+and Encoding Guide (DCEG) provides guidance on how data product content
+must be captured. (<<annexA>>.)
+
+*Spatial Extent:*::
++
+--
+*Description:* Areas specific to marine navigation.
+
+*East Bounding Longitude:* 180°
+
+*West Bounding Longitude:* -180°
+
+*North Bounding Latitude:* 90°
+
+*South Bounding Latitude:* -90°
+--
+
+*Purpose:*:: The purpose of an ENC dataset is to provide official
+navigational data for navigation systems for the safe passage and
+route planning of vessels between destinations.
+
+[[sec_1.5]]
+=== Data Product Specification metadata
+
+NOTE: This information uniquely identifies this Product Specification
+and provides information about its creation and maintenance. For further
+information on dataset metadata see <<sec_12>>.
+
+*Title:*:: The International Hydrographic Organization Electronic
+Navigational Chart Product Specification
+
+*S-100 Version:*:: 5.2.0
+
+*S-101 Version:*:: 2.0.0
+
+*Date:*:: December 2024
+
+*Language:*:: English
+
+*Classification:*:: Unclassified
+
+*Contact:*::
++
+--
+International Hydrographic Organization +
+4b Quai Antoine 1er +
+B.P. 445 +
+MC 98011 MONACO CEDEX +
+Telephone: 377 93 10 81 00 +
+Fax: 377 93 10 81 40 +
+Email: mailto:info@iho.int[info@iho.int]
+--
+
+*URL:*:: http://www.iho.int/[www.iho.int]
+
+*Identifier:*:: S-101
+
+*Maintenance:*:: Changes to the Product Specification S-101 are coordinated
+by the S-101 Project Team (S-101PT), a Project Team under the
+IHO S-100 Working Group (S-100WG), and must be made available via
+the IHO web site. Maintenance of the Product Specification must conform
+to IHO Resolution 2/2007, as amended.
+
+[[sec_1.6]]
+=== IHO Product Specification maintenance
+
+[[sec_1.6.1]]
+==== Introduction
+
+Changes to S-101 will be released by the IHO as a New Edition, revision,
+or clarification.
+
+[[sec_1.6.2]]
+==== New Edition
+
+_New Editions_ of S-101 introduce significant changes. _New Editions_
+enable new concepts, such as the ability to support new functions
+or applications, or the introduction of new constructs or data types.
+_New Editions_ are likely to have a significant impact on either existing
+users or future users of S-101. All cumulative _revisions_ and _clarifications_
+must be included with the release of approved New Editions.
+
+[[sec_1.6.3]]
+==== Revision
+
+_Revisions_ are defined as substantive semantic changes to S-101.
+Typically, _revisions_ will change S-101 to correct factual errors;
+or introduce necessary changes that have become evident as a result
+of practical experience or changing circumstances. A _revision_ must
+not be classified as a clarification. _Revisions_ could have an impact
+on either existing users or future users of S-101. All cumulative
+_clarifications_ must be included with the release of approved revisions.
+
+Changes in a _revision_ are minor and ensure backward compatibility
+with the previous versions within the same Edition. Newer revisions,
+for example, introduce new features and attributes. Within the same
+Edition, a dataset of one version could always be processed with a
+later version of the Feature and Portrayal Catalogues.
+
+In most cases a new Feature Catalogue or Portrayal Catalogue will
+result in a _revision_ of S-101.
+
+[[sec_1.6.4]]
+==== Clarification
+
+_Clarifications_ are defined as non-substantive changes to S-101.
+Typically, _clarifications_: remove ambiguity; correct grammatical
+and spelling errors; amend or update cross references; and insert
+improved graphics. A _clarification_ must not cause any substantive
+semantic change to S-101.
+
+Changes in a _clarification_ are minor and ensure backward compatibility
+with the previous versions.
+
+[[sec_1.6.5]]
+==== Version numbers
+
+The associated version control numbering to identify changes (n)
+to S-101 must be as follows:
+
+New Editions denoted as *n*.0.0
+
+Revisions denoted as n.*n*.0
+
+Clarifications denoted as n.n.*n*
