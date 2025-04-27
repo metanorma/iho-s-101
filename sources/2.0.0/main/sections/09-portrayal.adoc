@@ -56,7 +56,7 @@ Citation information for the Portrayal Catalogue is provided in
 
 [[table_9-1]]
 .S-101 Portrayal Catalogue
-[cols="a,a,a,a"]
+[cols="4"]
 |===
 h| No. h| ISO class or attribute h| Type h| Value
 

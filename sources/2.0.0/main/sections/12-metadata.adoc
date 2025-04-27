@@ -99,13 +99,13 @@ h|Name h|Description h|Mult h|Type h|Remarks
 | Description of what the Exchange Catalogue contains
 | 0..1
 | CharacterString
-| 
+|
 
 | exchangeCatalogueComment
 | Any additional Information
 | 0..1
 | CharacterString
-| 
+|
 
 | certificates
 | Signed public key certificates referred to by digital signatures in the Exchange Set
@@ -117,13 +117,13 @@ h|Name h|Description h|Mult h|Type h|Remarks
 | Identifies the data server for the permit
 | 0..1
 | CharacterString
-| 
+|
 
 | datasetDiscoveryMetadata
 | Exchange Catalogues may include or reference discovery metadata for the datasets in the Exchange Set
 | 0..*
 | Aggregation S100_DatasetDiscoveryMetadata
-| 
+|
 
 | catalogueDiscoveryMetadata
 | Metadata for Catalogue
@@ -135,9 +135,8 @@ h|Name h|Description h|Mult h|Type h|Remarks
 | Exchange Catalogues may include or reference discovery metadata for the support files in the Exchange Set
 | 0..*
 | Aggregation S100_SupportFileDiscoveryMetadata
-| 
+|
 |===
-
 
 
 [[sec_12.1.1.1]]
@@ -146,7 +145,6 @@ h|Name h|Description h|Mult h|Type h|Remarks
 [cols="a,a,a,a,a,a",options="unnumbered"]
 |===
 h| Role Name h| Name h| Description h| Mult h| Type h| Remarks
-
 
 | Class | S100_ExchangeCatalogueIdentifier | An Exchange Catalogue contains the discovery metadata about the exchange datasets and support files | - | - | The concatenation of identifier and dateTime form the unique name
 | Attribute | identifier | Uniquely identifies this Exchange Catalogue | 1 | CharacterString | <S100XC:identifier>US_101_20200101_120101_01</S100XC:identifier>
@@ -160,7 +158,6 @@ h| Role Name h| Name h| Description h| Mult h| Type h| Remarks
 [cols="a,a,a,a,a,a",options="unnumbered"]
 |===
 h| Role Name h| Name h| Description h| Mult h| Type h| Remarks
-
 
 | Class | S100_CataloguePointOfContact | Contact details of the issuer of this Exchange Catalogue | - | - | -
 | Attribute | organization | The organization distributing this Exchange Catalogue | 1 | CharacterString | This could be an individual producer, value added reseller, etc
@@ -186,7 +183,6 @@ h| Role Name h| Name h| Description h| Mult h| Type h| Remarks
 [cols="a,a,a,a,a",options="unnumbered"]
 |===
 h| Name h| Description h| Mult h| Type h| Remarks
-
 
 | S100_DatasetDiscoveryMetadata | Metadata about the individual datasets in the Exchange Catalogue | - | - | -
 
@@ -408,9 +404,7 @@ NULL
 |===
 h| Item h| Name h| Description h| Code h| Remarks
 
-
 | Enumeration | S100_Purpose | The purpose of the dataset | - |
-
 | Value | newDataset | Brand new dataset | 1 | No data has previously been produced for this area
 | Value | newEdition | New edition of the dataset or Catalogue | 2 | Includes new information which has not been previously distributed by updates
 | Value | update | Dataset update | 3 | Changing some information in an existing dataset
@@ -422,32 +416,23 @@ h| Item h| Name h| Description h| Code h| Remarks
 [[sec_12.1.2.4]]
 ===== S100_TemporalExtent
 
-[cols="a,a,a,a,a,a",options="unnumbered"]
+[cols="6",options="unnumbered"]
 |===
 h| Role Name h| Name h| Description h| Mult h| Type h| Remarks
 
-| Class
-| S100_TemporalExtent
-| Temporal extent
+| Class | S100_TemporalExtent | Temporal extent | -- |
+| At least one of the timeInstantBegin and timeInstantEnd
+attributes must be populated; if both are known, both must
+be populated. The absence of either begin or end indicates
+indefinite validity in the corresponding direction, limited
+by the issue date/time or the cancellation or supersession
+of the dataset
 
-| --
-|
+| Attribute | timeInstantBegin | The instant at which the temporal extent begins
+| 0..1 | DateTime |
 
-| At least one of the timeInstantBegin and timeInstantEnd attributes must be populated; if both are known, both must be populated. The absence of either begin or end indicates indefinite validity in the corresponding direction, limited by the issue date/time or the cancellation or supersession of the dataset
-
-| Attribute
-| timeInstantBegin
-| The instant at which the temporal extent begins
-| 0..1
-| DateTime
-|
-
-| Attribute
-| timeInstantEnd
-| The instant at which the temporal extent ends
-| 0..1
-| DateTime
-|
+| Attribute | timeInstantEnd | The instant at which the temporal extent ends
+| 0..1 | DateTime |
 
 |===
 
@@ -474,7 +459,6 @@ h| Item h| Name h| Description h| Code h| Remarks
 |===
 h| Role Name h| Name h| Description h| Mult h| Type h| Remarks
 
-
 | Class | S100_ProductSpecification | The Product Specification contains the information needed to build the specified product | - | - | -
 
 | Attribute | name | The name of the Product Specification used to create the datasets | 1 | CharacterString
@@ -499,7 +483,6 @@ h| Role Name h| Name h| Description h| Mult h| Type h| Remarks
 [cols="a,a,a,a,a",options="unnumbered"]
 |===
 h| Item h| Name h| Description h| Code h| Remarks
-
 
 | Enumeration | S100_CompliancyCategory | | -
 | All S-101 products fully conforming to this Product Specification would be category3 or category4. (S-101 is expected to be category4, but the requirements for harmonized display are being determined, so category3 is provisionally retained to allow for potential divergences between S-101 and those requirements while both specifications are being finalised. In the absence of specific guidance to the contrary from the S-101 project team use category4)
@@ -655,9 +638,11 @@ h| Name h| Description h| Mult h| Type h| Remarks
 |
 The values must be one of the following:
 
-2. new edition
+[start=2]
+. new edition
 
-5. cancellation
+[start=5]
+. cancellation
 
 Default is new edition
 | editionNumber | The Edition number of the Catalogue | 1 | Integer | Initially set to 1 for a given productSpecification.numberIncreased by 1 for each subsequent New EditionUniquely identifies the version of the Catalogue
@@ -698,7 +683,6 @@ Default is new edition
 [cols="a,a,a,a,a",options="unnumbered"]
 |===
 h| Item h| Name h| Description h| Code h| Remarks
-
 
 | Enumeration | S100_CatalogueScope       | The scope of the Catalogue       | - | -
 | Value       | featureCatalogue          | S-100 Feature Catalogue          | 1 |

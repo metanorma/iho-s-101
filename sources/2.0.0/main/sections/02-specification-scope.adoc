@@ -1,5 +1,4 @@
 
-
 [[sec_2]]
 == Specification Scope
 
