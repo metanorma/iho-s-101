@@ -1,0 +1,2360 @@
+
+
+[[annexB]]
+[appendix,obligation="normative"]
+== Data Product format (encoding)
+
+[discrete]
+=== Introduction
+
+S-101 uses the S-100 profile of ISO/IEC 8211 (refer to S-100 Part
+10A) to encapsulate data. This Annex specifies the interchange format
+to facilitate the moving of files containing data records between
+computer systems. It defines a specific structure which can be used
+to transmit files containing data type and data structures specific
+to S-101.
+
+[[sec_B-1]]
+=== Dataset Files
+
+The order of data records in each base or update dataset file is described
+below:
+
+[source%unnumbered]
+----
+Dataset file
+    Dataset General Information record
+    Dataset Coordinate Reference System record
+    Information Type records
+    Point records
+    Multi Point records
+    Curve records
+    Composite Curve records
+    Surface records
+    Feature Type records
+----
+
+For Information Type records, Composite Curve records, and Feature
+Type records it must be ensured that any record that is referenced
+is stored before the record that references it.
+
+[[sec_B-2]]
+=== Records
+
+Records and fields that do not appear in the following tree structure
+diagrams are prohibited. The order of records in the files must be
+the same as that described in these tree structure diagrams.
+
+The combination of the file name and the "Name" of the record must
+provide a unique world-wide identifier of the record. The "Name" of
+the record is the combination of the subfields RCNM and RCID in the
+appropriate Identifier field of the record.
+
+[[sec_B-3]]
+=== Fields
+
+For base dataset files, some fields may be repeated
+(indicated by `<0..*>` or `<1..*>`) and all of their content may be
+repeated (indicated by \*). In order to reduce the volume of data,
+the encoder should repeat the sequence of subfields, in preference
+to creating several fields.
+
+[[sec_B-4]]
+=== Subfields
+
+Mandatory subfields must be filled by a non-null value.
+
+Prohibited subfields must be encoded as missing subfields values.
+The exact meaning of missing attribute values is defined in <<annexA>>.
+
+In the Tables following the tree structure diagrams, prescribed values
+are indicated in the "Values" column.
+
+When encoding new base datasets the Record Update Instruction (RUIN)
+subfield must be set to "Insert". When encoding updates RUIN may be
+set to "Insert", "Modify" or "Delete".
+
+[[sec_B-5]]
+=== Base Dataset Structure
+
+NOTE: The number contained in parenthesis () is the number of subfields
+that are contained in the field.
+
+[source%unnumbered]
+----
+Base dataset file
+   |
+   |--<1>- Dataset General Information record
+   |   |
+   |   |--<1>-DSID (13\\*1): Dataset Identification field
+   |       |
+   |       |--<1>-DSSI (13): Dataset Structure Information field
+   |       |
+   |       |--<0..1>-ATCS (*2): Attribute Codes field
+   |       |
+   |       |--<0..1>-ITCS (*2): Information Type Codes field
+   |       |
+   |       |--<0..1>-FTCS (*2): Feature Type Codes field
+   |       |
+   |       |--<0..1>-IACS (*2): Information Association Codes field
+   |       |
+   |       |-<0..1>-FACS (*2): Feature Association Codes field
+   |       |
+   |       |-<0..1>-ARCS (*2): Association Role Codes field
+   |
+   |
+   |--<1>--Dataset Coordinate Reference System record
+   |   |
+   |   |--<1>-CSID (3): Coordinate Reference System Record Identifier field
+   |       |
+   |       |--<1..*>-CRSH (7): Coordinate Reference System Header field
+   |           |
+   |           |--<0..1>-CSAX (*2): Coordinate System Axes field
+   |           |
+   |           |--<0..1>-VDAT (4): Vertical Datum field
+   |
+   |
+   |--<0..*>--Information Type record
+   |   |
+   |   |--<1>-IRID (5): Information Type Record Identifier field
+   |       |
+   |       |--<0..*>- ATTR (*5): Attribute field
+   |       |
+   |       |--<0..*>- INAS (5\\*5): Information Association field
+   |
+   |
+   |--<0..*>-- Point record
+   |   |
+   |   |--<1>-PRID (4): Point Record Identifier field
+   |       |
+   |       |-<0..*>-INAS (5\\*5): Information Association field
+   |       |
+   |       | alternate coordinate representations
+   |       |
+   |       *-<1>-C2IT (2): 2-D Integer Coordinate Tuple field
+   |       |
+   |       *-<1>-C3IT (4): 3-D Integer Coordinate Tuple field
+   |
+   |
+   |--<0..*>-- Multi Point record
+   |   |
+   |   |--<1>-MRID (4): Multi Point Record Identifier field
+   |       |
+   |       |-<0..*>-INAS (5\\*5): Information Association field
+   |       |
+   |       | alternate coordinate representations
+   |       |
+   |       *-<0..*>-C2IL (*2): 2-D Integer Coordinate List field
+   |       |
+   |       *-<1..*>-C3IL (1\\*3): 3-D Integer Coordinate List field
+   |
+   |
+   |--<0..*>-- Curve record
+   |   |
+   |   |--<1>-CRID (4): Curve Record Identifier field
+   |       |
+   |       |-<0..*>-INAS (5\\*5): Information Association field
+   |       |
+   |       |-<1>-PTAS (*3): Point Association field
+   |       |
+   |       |-<1>-SEGH (1): Segment Header field
+   |           |
+   |           |-<1..*>-C2IL (*2): 2-D Integer Coordinate List field
+   |
+   |
+   |--<0..*>-- Composite Curve record
+   |   |
+   |   |--<1>-CCID (4): Composite Curve Record Identifier field
+   |       |
+   |       |-<0..*>-INAS (5\\*5): Information Association field
+   |       |
+   |       |-<1..*>-CUCO (*3): Curve Component field
+   |
+   |
+   |--<0..*>-- Surface record
+   |   |
+   |   |--<1>-SRID (4): Surface Record Identifier field
+   |       |
+   |       |-<0..*>-INAS (5\\*5): Information Association field
+   |       |
+   |       |-<1..*>-RIAS (*5): Ring Association Field
+   |
+   |
+   |--<0..*>-- Feature Type record
+       |
+       |--<1>-FRID (5): Feature Type Record Identifier field
+           |
+           |-<1>-FOID (3): Feature Object Identifier field
+           |
+           |-<0..*>-ATTR (*5): Attribute field
+           |
+           |-<0..*>-INAS (5\\*5): Information Association field
+           |
+           |-<0..*>-SPAS (*6): Spatial Association field
+           |
+           |-<0..*>-FASC (*5): Feature Association field
+           |
+           |-<0..*>-MASK (*4): Masked Spatial Type field
+----
+
+[[sec_B-5.1]]
+==== Field content
+
+[[sec_B-5.1.1]]
+===== Dataset Identification field - DSID
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+
+| Record name | RCNM | {10} | b11 | {10} - Data Set Identification
+| Record identification number | RCID | {1} | b14 | Only one record
+| Encoding specification | ENSP | "S-100 Part 10a" | A() | Encoding specification that defines the encoding
+| Encoding specification edition | ENED | "5.2" | A() | Edition of the encoding specification
+| Product identifier | PRSP | "INT.IHO.S-101.2.0" | A() | Unique identifier for the data product as specified in the Product Specification
+| Product edition | PRED | "2.0" | A() | Edition of the Product Specification
+| Application profile | PROF | "1" | A() | "1" - Base dataset profile
+| Dataset file identifier
+| DSNM
+|
+
+| A()
+| The file identifier including the extension but excluding any path
+information
+
+| Dataset title
+| DSTL
+|
+
+| A()
+| The title of the dataset
+
+| Dataset reference date
+| DSRD
+|
+
+| A(8)
+| The reference date of the datasetFormat: YYYYMMDD according to ISO 8601
+
+| Dataset language | DSLG | "EN" | A() | The (primary) language used in this dataset
+| Dataset abstract | DSAB | omitted | A() | The abstract of the dataset
+| Dataset edition
+| DSED
+|
+
+| A()
+| See <<sec_11.3.3>>
+
+| Dataset topic category | *DSTC | {14}{18} | b11 | A set of topic categories
+
+|===
+
+[[sec_B-5.1.2]]
+===== Dataset Structure Information field - DSSI
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Dataset Coordinate Origin X | DCOX | {0.0} | b48 | Shift used to adjust x-coordinate before encoding
+| Dataset Coordinate Origin Y | DCOY | {0.0} | b48 | Shift used to adjust y-coordinate before encoding
+| Dataset Coordinate Origin Z | DCOZ | {0.0} | b48 | Shift used to adjust z-coordinate before encoding
+| Coordinate multiplication factor for x-coordinate | CMFX | {stem:[10^7]} | b14 | Floating point to integer multiplication factor for the x-coordinate or longitude
+| Coordinate multiplication factor for y-coordinate | CMFY | {stem:[10^7]} | b14 | Floating point to integer multiplication factor for the y-coordinate or latitude
+| Coordinate multiplication factor for z-coordinate | CMFZ | {10} | b14 | Floating point to integer multiplication factor for the z-coordinate or depths or height
+| Number of Information Type records
+| NOIR
+|
+
+| b14
+| Number of information records in the dataset
+
+| Number of Point records
+| NOPN
+|
+
+| b14
+| Number of point records in the dataset
+
+| Number of Multi Point records
+| NOMN
+|
+
+| b14
+| Number of multi point records in the dataset
+
+| Number of Curve records
+| NOCN
+|
+
+| b14
+| Number of curve records in the dataset
+
+| Number of Composite Curve records
+| NOXN
+|
+
+| b14
+| Number of composite curve records in the dataset
+
+| Number of Surface records
+| NOSN
+|
+
+| b14
+| Number of surface records in the dataset
+
+| Number of Feature Type records
+| NOFR
+|
+
+| b14
+| Number of feature records in the dataset
+
+|===
+
+[[sec_B-5.1.3]]
+===== Attribute Code field structure - ATCS
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Attribute Code
+| *ATCD
+|
+
+| A()
+| The code as defined in the Feature Catalogue
+
+| Attribute Numeric Code
+| ANCD
+|
+
+| b12
+| The code used within the NATC subfield
+
+|===
+
+// lef it
+
+[[sec_B-5.1.4]]
+===== Information Type Codes field structure - ITCS
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+
+| Information Type Code         | *ITCD | | A() | The code as defined in the Feature Catalogue
+| Information Type Numeric Code | ITNC  | | b12 | The code used within the NITC subfield
+|===
+
+[[sec_B-5.1.5]]
+===== Feature Type Codes field structure - FTCS
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+
+| Feature Type Code         | *FTCD | | A() | The code as defined in the Feature Catalogue
+| Feature Type Numeric Code | FTNC  | | b12 | The code used within the NFTC subfield
+|===
+
+[[sec_B-5.1.6]]
+===== Information Association Codes field structure - IACS
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Information Association Code
+| *IACD
+|
+
+| A()
+| The code as defined in the Feature Catalogue
+
+| Information Association Numeric Code
+| IANC
+|
+
+| b12
+| The code used within the NIAC subfield
+
+|===
+
+[[sec_B-5.1.7]]
+===== Feature Association Codes field structure - FACS
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Feature Association Code
+| *FACD
+|
+
+| A()
+| The code as defined in the Feature Catalogue
+
+| Feature Association Numeric Code
+| FANC
+|
+
+| b12
+| The code used within the NFAC subfield
+
+|===
+
+[[sec_B-5.1.8]]
+===== Association Role Codes field structure - ARCS
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Association Role Code
+| *ARCD
+|
+
+| A()
+| The code as defined in the Feature Catalogue
+
+| Association Role Numeric Code
+| ARNC
+|
+
+| b12
+| The code used within the NARC subfield
+
+|===
+
+[[sec_B-5.1.9]]
+===== Coordinate Reference System Record Identifier field - CSID
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Record Name | RCNM | {15} | b11 | {15} - Coordinate Reference System Identifier
+| Record identification number | RCID | {1} | b14 | Only one record
+| Number of CRS Components
+| NCRC
+|
+
+| b11
+| {1} - Single CRS (No C3IT or C3IL fields in the dataset)>{1} - Compound CRS
+
+|===
+
+[[sec_B-5.1.10]]
+===== Coordinate Reference System Header field - CRSH
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| CRS Index
+| CRIX
+|
+
+| b11
+| 1 - for the horizontal CRS +
+>1 - for the vertical CRSs
+
+| CRS Type | CRST | {1} or {5} | b11 | {1} - 2D Geographic +
+{5} - Vertical
+| Coordinate System Type | CSTY | {1} or {3} | b11 | {1} - Ellipsoidal CS +
+{3} - Vertical CS
+| CRS Name
+| CRNM
+| "WGS84" for horizontal CRS "\*" for vertical CRS where * is the name of the vertical datum
+| A()
+|
+
+| CRS Identifier
+| CRSI
+| "4326" - for horizontal CRS "omitted for vertical CRS
+| A()
+|
+
+| CRS Source | CRSS | {2} for horizontal CRS +
+{255} for vertical CRS | b11 | {2} - EPSG +
+{255} - Not Applicable
+| CRS Source Information
+| SCRI
+| omitted
+| A()
+|
+
+|===
+
+[[sec_B-5.1.11]]
+===== Coordinate System Axes field - CSAX
+
+This field is only used for vertical CRS.
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+
+| Axis Type            | *AXTY | {12} | b11 | {12} - Gravity related depth (orientation down)
+| Axis Unit of Measure | AXUM  | {4}  | b11 | {4} - Metre
+|===
+
+[[sec_B-5.1.12]]
+===== Vertical Datum field - VDAT
+
+This field is only used for vertical CRS.
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Datum Name
+| DTNM
+|
+
+| A()
+| Name of the vertical datum
+
+| Datum Identifier
+| DTID
+|
+
+| A()
+| Identifier of the datum in an external source
+
+| Datum Source | DTSR | {2} | b11 | {2} - Feature Catalogue
+| Datum Source Information
+| SCRI
+| omitted
+| A()
+|
+
+|===
+
+[[sec_B-5.1.13]]
+===== Information Type Identifier field - IRID
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Record Name | RCNM | {150} | b11 | {150} - Information Type
+| Record identification number
+| RCID
+|
+
+| b14
+| Range: 1 to stem:[2^{32} - 2]
+
+| Numeric Information Type Code
+| NITC
+|
+
+| b12
+| A valid information type code as defined in the ITCS field of the Dataset General Information Record
+
+| Record version
+| RVER
+|
+
+| b12
+| RVER contains the serial number of the record edition
+
+| Record update instruction | RUIN | {1} | b11 | {1} - Insert
+
+|===
+
+[[sec_B-5.1.14]]
+===== Attribute field - ATTR
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Numeric attribute code
+| *NATC
+|
+
+| b12
+| A valid attribute code as defined in the ATCS field of the Dataset General Information Record
+
+| Attribute index
+| ATIX
+|
+
+| b12
+| Index (position) of the attribute in the sequence of attributes with the same code and the same parent (starting with 1)
+
+| Parent index
+| PAIX
+|
+
+| b12
+| Index (position) of the parent complex attribute within this ATTR field (starting with 1). If the attribute has no parent (top level attribute) the value is 0
+
+| Attribute instruction | ATIN | {1} | b11 | {1} - Insert
+| Attribute value
+| ATVL
+|
+
+| A()
+| A string containing a valid value for the domain of the attribute specified by the subfields above
+
+|===
+
+[[sec_B-5.1.15]]
+===== Information Association field - INAS
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Subfield content and specification
+| Referenced Record name | RRNM | {150} | b11 | Record name of the referenced record +
+{150} - Information Type
+| Referenced Record identifier
+| RRID
+|
+
+| b14
+| Record identifier of the referenced record
+
+| Numeric Information Association Code
+| NIAC
+|
+
+| b12
+| A valid code for the information association as defined in the IACS field of the Dataset General Information Record
+
+| Numeric Association Role Code
+| NARC
+|
+
+| b12
+| A valid code for the role as defined in the ARCS field of the Dataset General Information Record
+
+| Information Association Update Instruction
+| IUIN
+|
+
+| b11
+| {1} - Insert
+
+| Numeric attribute code
+| *NATC
+|
+
+| b12
+| A valid attribute code as defined in the ATCS field of the Dataset General Information Record
+
+| Attribute index
+| ATIX
+|
+
+| b12
+| Index (position) of the attribute in the sequence of attributes with the same code and the same parent (starting with 1)
+
+| Parent index
+| PAIX
+|
+
+| b12
+| Index (position) of the parent complex attribute within this INAS field (starting with 1). If the attribute has no parent (top level attribute) the value is 0
+
+| Attribute Instruction
+| ATIN
+|
+
+| b11
+| {1} - Insert +
+{2} - Delete +
+{3} - Modify
+
+| Attribute value
+| ATVL
+|
+
+| A()
+| A string containing a valid value for the domain of the attribute specified by the subfields above
+
+|===
+
+[[sec_B-5.1.16]]
+===== Point Record Identifier field - PRID
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Record name | RCNM | {110} | b11 | {110} - Point
+| Record identification number
+| RCID
+|
+
+| b14
+| Range: 1 to stem:[2^{32} - 2]
+
+| Record version
+| RVER
+|
+
+| b12
+| RVER contains the serial number of the record edition
+
+| Record update instruction | RUIN | {1} | b11 | {1} - Insert
+
+|===
+
+[[sec_B-5.1.17]]
+===== 2-D Integer Coordinate Tuple field structure - C2IT
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Coordinate in Y axis
+| YCOO
+|
+
+| b24
+| Y-coordinate or latitude
+
+| Coordinate in X axis
+| XCOO
+|
+
+| b24
+| X-coordinate or longitude
+
+|===
+
+[[sec_B-5.1.18]]
+===== 3-D Integer Coordinate Tuple field structure - C3IT
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Vertical CRS Id
+| VCID
+|
+
+| b11
+| Internal identifier of the Vertical CRS
+
+| Coordinate in Y axis
+| YCOO
+|
+
+| b24
+| Y-coordinate or latitude
+
+| Coordinate in X axis
+| XCOO
+|
+
+| b24
+| X-coordinate or longitude
+
+| Coordinate in Z axis
+| ZCOO
+|
+
+| b24
+| Z-coordinate (depth)
+
+|===
+
+[[sec_B-5.1.19]]
+===== Multi Point Record Identifier field - MRID
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Record name | RCNM | {115} | b11 | {115} - Multi Point
+| Record identification number
+| RCID
+|
+
+| b14
+| Range: 1 to stem:[2^{32} - 2]
+
+| Record version
+| RVER
+|
+
+| b12
+| RVER contains the serial number of the record edition
+
+| Record update instruction | RUIN | {1} | b11 | {1} - Insert
+
+|===
+
+[[sec_B-5.1.20]]
+===== 2-D Integer Coordinate List field structure - C2IL
+
+[cols="a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Format h| Subfield content and specification
+| Coordinate in Y axis | *YCOO | b24 | Y-coordinate or latitude
+| Coordinate in X axis | XCOO | b24 | X-coordinate or longitude
+
+|===
+
+[[sec_B-5.1.21]]
+===== 3-D Integer Coordinate List field structure - C3IL
+
+[cols="a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Format h| Subfield content and specification
+| Vertical CRS Id | VCID | b11 | Internal identifier of the Vertical CRS
+| Coordinate in Y axis | *YCOO | b24 | Y-coordinate or latitude
+| Coordinate in X axis | XCOO | b24 | X-coordinate or longitude
+| Coordinate in Z axis | ZCOO | b24 | Z-coordinate (depth)
+
+|===
+
+[[sec_B-5.1.22]]
+===== Curve Record Identifier field - CRID
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Record name | RCNM | {120} | b11 | {120} - Curve
+| Record identification number
+| RCID
+|
+
+| b14
+| Range: 1 to stem:[2^{32} - 2]
+
+| Record version
+| RVER
+|
+
+| b12
+| RVER contains the serial number of the record edition
+
+| Record update instruction | RUIN | {1} | b11 | {1} - Insert
+
+|===
+
+[[sec_B-5.1.23]]
+===== Point Association field - PTAS
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Referenced Record name | *RRNM | {110} | b11 | Record name of the referenced record +
+{110} - Point
+| Referenced Record identifier
+| RRID
+|
+
+| b14
+| Record identifier of the referenced record
+
+| Topology indicator
+| TOPI
+|
+
+| b11
+|
+{1} - Beginning point +
+{2} - End point +
+{3} - Beginning & End point
+
+|===
+
+[[sec_B-5.1.24]]
+===== Segment Header field - SEGH
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Interpolation | INTP | {4} | b11 | {4} - Loxodromic
+
+|===
+
+[[sec_B-5.1.25]]
+===== Composite Curve Record Identifier field - CCID
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Record name | RCNM | {125} | b11 | {125} - Composite Curve
+| Record identification number
+| RCID
+|
+
+| b14
+| Range: 1 to stem:[2^{32} - 2]
+
+| Record version
+| RVER
+|
+
+| b12
+| RVER contains the serial number of the record edition
+
+| Record update instruction | RUIN | {1} | b11 | {1} - Insert
+
+|===
+
+[[sec_B-5.1.26]]
+===== Curve Component field - CUCO
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Referenced Record name | *RRNM | {120} or {125} | b11
+| Record name of the referenced record
+
+{120} - Curve +
+{125} - Composite Curve
+| Referenced Record identifier
+| RRID
+|
+
+| b14
+| Record identifier of the referenced record
+
+| Orientation
+| ORNT
+|
+
+| b11
+|
+{1} - Forward +
+{2} - Reverse
+
+|===
+
+[[sec_B-5.1.27]]
+===== Surface Record Identifier field - SRID
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+
+| Record name | RCNM | {130} | b11 | {130} - Surface
+| Record identification number | RCID |  | b14 | Range: 1 to stem:[2^{32} - 2]
+| Record version | RVER | | b12 | RVER contains the serial number of the record edition
+| Record update instruction | RUIN | {1} | b11 | {1} - Insert
+|===
+
+[[sec_B-5.1.28]]
+===== Ring Association field - RIAS
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Referenced Record name | *RRNM | {120} or {125} | b11
+| Record name of the referenced record
+
+{120} - Curve +
+{125} - Composite Curve
+| Referenced Record identifier
+| RRID
+|
+
+| b14
+| Record identifier of the referenced record
+
+| Orientation
+| ORNT
+|
+
+| b11
+| {1} - Forward +
+{2} - Reverse
+
+| Usage indicator
+| USAG
+|
+
+| b11
+| {1} - Exterior +
+{2} - Interior
+
+| Ring Association update instruction | RAUI | {1} | b11 | {1} - Insert
+
+|===
+
+[[sec_B-5.1.29]]
+===== Feature Type Record Identifier field - FRID
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Record name | RCNM | {100} | b11 | {100} - Feature type
+| Record identification number
+| RCID
+|
+
+| b14
+| Range: 1 to stem:[2^{32} - 2]
+
+| Numeric Feature Type Code
+| NFTC
+|
+
+| b12
+| A valid feature type code as defined in the FTCS field of the Dataset General Information Record
+
+| Record version
+| RVER
+|
+
+| b12
+| RVER contains the serial number of the record edition
+
+| Record update instruction | RUIN | {1} | b11 | {1} - Insert
+
+|===
+
+[[sec_B-5.1.30]]
+===== Feature Object Identifier field - FOID
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Producing agency
+| AGEN
+|
+
+| b12
+| Agency code
+
+| Feature identification number
+| FIDN
+|
+
+| b14
+| Range: 1 to stem:[2^{32} - 2]
+
+| Feature identification subdivision
+| FIDS
+|
+
+| b12
+| Range: 1 to stem:[2^{16} - 2]
+
+|===
+
+[[sec_B-5.1.31]]
+===== Spatial Association field - SPAS
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Referenced Record name | *RRNM | One of +
+{110}{115}{120}{125}{130} | b11 | Record name of the referenced record +
+{110} - Point +
+{115} - Multi Point +
+{120} - Curve +
+{125} - Composite Curve +
+{130} - Surface
+| Referenced Record identifier
+| RRID
+|
+
+| b14
+| Record identifier of the referenced record
+
+| Orientation
+| ORNT
+|
+
+| b11
+| {1} - Forward +
+{2} - Reverse +
+{255} - NULL (Not Applicable)
+
+| Scale Minimum
+| SMIN
+|
+
+| b14
+| {stem:[2^{32} - 1]} - NULL (Not Applicable) - (see Note)
+
+| Scale Maximum
+| SMAX
+|
+
+| b14
+| {0} - NULL (Not Applicable) - (see Note)
+
+| Spatial Association Update Instruction | SAUI | {1} | b11 | {1} - Insert
+
+|===
+
+NOTE: For a correct handling of older data, robust parsers should
+consider both 0 and stem:[2^{32} - 1] as 'Not Applicable' for the
+SMIN and the SMAX sub-field.
+
+[[sec_B-5.1.32]]
+===== Feature Association field - FASC
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Referenced Record name | RRNM | {100} | b11 | Record name of the referenced record +
+{100} - Feature Type
+| Referenced Record identifier
+| RRID
+|
+
+| b14
+| Record identifier of the referenced record
+
+| Numeric Feature Association Code
+| NFAC
+|
+
+| b12
+| A valid code for the feature association as defined in the FACS field of the Dataset General Information Record
+
+| Numeric Association Role Code
+| NARC
+|
+
+| b12
+| A valid code for the role as defined in the ARCS field of the Dataset General Information Record
+
+| Feature Association Update Instruction | FAUI | {1} | b11 | {1} - Insert
+| Numeric Attribute Code
+| *NATC
+|
+
+| b12
+| A valid attribute code as defined in the ATCS field of the Dataset General Information Record
+
+| Attribute index
+| ATIX
+|
+
+| b12
+| Index (position) of the attribute in the sequence of attributes with the same code and the same parent (starting with 1)
+
+| Parent index
+| PAIX
+|
+
+| b12
+| Index (position) of the parent complex attribute within this FASC field (starting with 1). If the attribute has no parent (top level attribute) the value is 0
+
+| Attribute Instruction
+| ATIN
+|
+
+| b11
+| {1} - Insert
+
+| Attribute value
+| ATVL
+|
+
+| A()
+| A string containing a valid value for the domain of the attribute specified by the subfields above
+
+|===
+
+[[sec_B-5.1.33]]
+===== Masked Spatial Type field - MASK
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Referenced Record name | *RRNM | {120} or {125} | b11
+| Record name of the referenced record
+
+{120} - Curve +
+{125} - Composite Curve
+
+| Referenced Record identifier
+| RRID
+|
+
+| b14
+| Record identifier of the referenced record
+
+| Mask Indicator | MIND | {1} or {2} | b11
+| {1} - Truncated by the data coverage limit +
+{2} - Suppress portrayal
+| Mask Update Instruction | MUIN | {1} | b11 | {1} - Insert
+
+|===
+
+[[sec_B-6]]
+=== Update Dataset Structure
+
+[source%unnumbered]
+----
+Update dataset file
+   |
+   |--<1>- Dataset General Information record
+   |   |
+   |   |--<1>-DSID (13\\*1): Dataset Identification field
+   |       |
+   |       |--<1>-DSSI (13): Dataset Structure Information field
+   |       |
+   |       |--<0..1>-ATCS (*2): Attribute Codes field
+   |       |
+   |       |--<0..1>-ITCS (*2): Information Type Codes field
+   |       |
+   |       |--<0..1>-FTCS (*2): Feature Type Codes field
+   |       |
+   |       |--<0..1>-IACS (*2): Information Association Codes field
+   |       |
+   |       |-<0..1>-FACS (*2): Feature Association Codes field
+   |       |
+   |       |-<0..1>-ARCS (*2): Association Role Codes field
+   |
+   |
+   |--<0..*>--Information Type record
+   |   |
+   |   |--<1>-IRID (5): Information Type Record Identifier field
+   |       |
+   |       |--<0..*>- ATTR (*5): Attribute field
+   |       |
+   |       |--<0..*>- INAS (5\\*5): Information Association field
+   |
+   |
+   |--<0..*>-- Point record
+   |   |
+   |   |--<1>-PRID (4): Point Record Identifier field
+   |       |
+   |       |-<0..*>-INAS (5\\*5): Information Association field
+   |       |
+   |       | alternate coordinate representations
+   |       |
+   |       *-<0..1>-C2IT (2): 2-D Integer Coordinate Tuple field
+   |       |
+   |       *-<0..1>-C3IT (4): 3-D Integer Coordinate Tuple field
+   |
+   |
+   |--<0..*>-- Multi Point record
+   |   |
+   |   |--<1>-MRID (4): Multi Point Record Identifier field
+   |       |
+   |       |-<0..*>-INAS (5\\*5): Information Association field
+   |       |
+   |       |-<0..1>-COCC (3): Coordinate Control field
+   |       |
+   |       | alternate coordinate representations
+   |       |
+   |       *-<0..*>-C2IL (*2): 2-D Integer Coordinate List field
+   |       |
+   |       *-<1..*>-C3IL (1\\*3): 3-D Integer Coordinate List field
+   |
+   |
+   |--<0..*>-- Curve record
+   |   |
+   |   |--<1>-CRID (4): Curve Record Identifier field
+   |       |
+   |       |-<0..*>-INAS (5\\*5): Information Association field
+   |       |
+   |       |-<0..1>-PTAS (*3): Point Association field
+   |       |
+   |       |-<0..1>-SECC (3): Segment Control field
+   |       |
+   |       |-<0..1>-SEGH (1): Segment Header field
+   |           |
+   |           |-<0..1>-COCC (3): Coordinate Control Field
+   |           |
+   |           |-<0..*>-C2IL (*2): 2-D Integer Coordinate List field
+   |
+   |
+   |--<0..*>-- Composite Curve record
+   |   |
+   |   |--<1>-CCID (4): Composite Curve Record Identifier field
+   |       |
+   |       |-<0..*>-INAS (5\\*5): Information Association field
+   |       |
+   |       |-<0..1>-CCOC (3): Curve Component Control field
+   |       |
+   |       |-<0..*>-CUCO (*3): Curve Component field
+   |
+   |
+   |--<0..*>-- Surface record
+   |   |
+   |   |--<1>-SRID (4): Surface Record Identifier field
+   |       |
+   |       |-<0..*>-INAS (5\\*5): Information Association field
+   |       |
+   |       |-<0..*>-RIAS (*5): Ring Association Field
+   |
+   |
+   |--<0..*>-- Feature Type record
+       |
+       |--<1>-FRID (5): Feature Type Record Identifier field
+           |
+           |-<0..1>-FOID (3): Feature Object Identifier field
+           |
+           |-<0..*>-ATTR (*5): Attribute field
+           |
+           |-<0..*>-INAS (5\\*5): Information Association field
+           |
+           |-<0..*>-SPAS (*6): Spatial Association field
+           |
+           |-<0..*>-FASC (*5): Feature Association field
+           |
+           |-<0..*>-MASK (*4): Masked Spatial Type field
+----
+
+[[sec_B-6.1]]
+==== Field content
+
+[[sec_B-6.1.1]]
+===== Dataset Identification field - DSID
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Record name | RCNM | {10} | b11 | {10} - Data Set Identification
+| Record identification number | RCID | {1} | b14 | Only one record
+| Encoding specification | ENSP | "S-100 Part 10a" | A() | Encoding specification that defines the encoding
+| Encoding specification edition | ENED | "5.2" | A() | Edition of the encoding specification
+| Product identifier | PRSP | "INT.IHO.S-101.2.0" | A() | Unique identifier for the data product as specified in the Product Specification
+| Product edition | PRED | "2.0" | A() | Edition of the Product Specification
+| Application profile | PROF | "2" | A() | "2" - Update dataset profile
+| Dataset file identifier
+| DSNM
+|
+
+| A()
+| The file identifier including the extension but excluding any path information
+
+| Dataset title
+| DSTL
+|
+
+| A()
+| The title of the dataset
+
+| Dataset reference date
+| DSRD
+|
+
+| A(8)
+| The reference date of the datasetFormat: YYYYMMDD according to ISO 8601
+
+| Dataset language | DSLG | "EN" | A() | The (primary) language used in this dataset
+| Dataset abstract | DSAB | omitted | A() | The abstract of the dataset
+| Dataset edition
+| DSED
+|
+
+| A()
+| [edition number].[update number] for example 4.20
+
+| Dataset topic category | *DSTC | {14}{18} | b11 | A set of topic categories
+
+|===
+
+[[sec_B-6.1.2]]
+===== Dataset Structure Information field - DSSI
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Dataset Coordinate Origin X | DCOX | {0.0} | b48 | Shift used to adjust x-coordinate before encoding
+| Dataset Coordinate Origin Y | DCOY | {0.0} | b48 | Shift used to adjust y-coordinate before encoding
+| Dataset Coordinate Origin Z | DCOZ | {0.0} | b48 | Shift used to adjust z-coordinate before encoding
+| Coordinate multiplication factor for x-coordinate | CMFX | {stem:[10^7]} | b14 | Floating point to integer multiplication factor for the x-coordinate or longitude
+| Coordinate multiplication factor for y-coordinate | CMFY | {stem:[10^7]} | b14 | Floating point to integer multiplication factor for the y-coordinate or latitude
+| Coordinate multiplication factor for z-coordinate | CMFZ | {10} | b14 | Floating point to integer multiplication factor for the z-coordinate or depths or height
+| Number of Information Type records
+| NOIR
+|
+
+| b14
+| Number of information records in the dataset
+
+| Number of Point records
+| NOPN
+|
+
+| b14
+| Number of point records in the dataset
+
+| Number of Multi Point records
+| NOMN
+|
+
+| b14
+| Number of multi point records in the dataset
+
+| Number of Curve records
+| NOCN
+|
+
+| b14
+| Number of curve records in the dataset
+
+| Number of Composite Curve records
+| NOXN
+|
+
+| b14
+| Number of composite curve records in the dataset
+
+| Number of Surface records
+| NOSN
+|
+
+| b14
+| Number of surface records in the dataset
+
+| Number of Feature Type Records
+| NOFR
+|
+
+| b14
+| Number of feature records in the dataset
+
+|===
+
+[[sec_B-6.1.3]]
+===== Attribute Code field structure - ATCS
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Attribute Code
+| *ATCD
+|
+
+| A()
+| The code as defined in the Feature Catalogue
+
+| Attribute Numeric Code
+| ANCD
+|
+
+| b12
+| The code used within the NATC subfield
+
+|===
+
+[[sec_B-6.1.4]]
+===== Information Type Codes field structure - ITCS
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Information Type Code
+| *ITCD
+|
+
+| A()
+| The code as defined in the Feature Catalogue
+
+| Information Type Numeric Code
+| ITNC
+|
+
+| b12
+| The code used within the NITC subfield
+
+|===
+
+[[sec_B-6.1.5]]
+===== Feature Type Codes field structure - FTCS
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Feature Type Code
+| *FTCD
+|
+
+| A()
+| The code as defined in the Feature Catalogue
+
+| Feature Type Numeric Code
+| FTNC
+|
+
+| b12
+| The code used within the NFTC subfield
+
+|===
+
+[[sec_B-6.1.6]]
+===== Information Association Codes field structure - IACS
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Information Association Code
+| *IACD
+|
+
+| A()
+| The code as defined in the Feature Catalogue
+
+| Information Association Numeric Code
+| IANC
+|
+
+| b12
+| The code used within the NIAC subfield
+
+|===
+
+[[sec_B-6.1.7]]
+===== Feature Association Codes field structure - FACS
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Feature Association Code
+| *FACD
+|
+
+| A()
+| The code as defined in the Feature Catalogue
+
+| Feature Association Numeric Code
+| FANC
+|
+
+| b12
+| The code used within the NFAC subfield
+
+|===
+
+[[sec_B-6.1.8]]
+===== Association Role Codes field structure - ARCS
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Association Role Code
+| *ARCD
+|
+
+| A()
+| The code as defined in the Feature Catalogue
+
+| Association Role Numeric Code
+| ARNC
+|
+
+| b12
+| The code used within the NARC subfield
+
+|===
+
+[[sec_B-6.1.9]]
+===== Information Type Identifier field - IRID
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Record name | RCNM | {150} | b11 | {150} - Information Type
+| Record identification number
+| RCID
+|
+
+| b14
+| Range: 1 to stem:[2^{32} - 2]
+
+| Numeric Information Type Code
+| NITC
+|
+
+| b12
+| A valid information type code as defined in the ITCS field of the Dataset General Information Record
+
+| Record version
+| RVER
+|
+
+| b12
+| RVER contains the serial number of the record edition
+
+| Record update instruction | RUIN | {1},{2} or {3} | b11
+| {1} - Insert +
+{2} - Delete +
+{3} - Modify
+
+|===
+
+[[sec_B-6.1.10]]
+===== Attribute field - ATTR
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Numeric attribute code
+| *NATC
+|
+
+| b12
+| A valid attribute code as defined in the ATCS field of the Dataset General Information Record
+
+| Attribute index
+| ATIX
+|
+
+| b12
+| Index (position) of the attribute in the sequence of attributes with the same code and the same parent (starting with 1)
+
+| Parent index
+| PAIX
+|
+
+| b12
+| Index (position) of the parent complex attribute within this ATTR field (starting with 1). If the attribute has no parent (top level attribute) the value is 0
+
+| Attribute instruction
+| ATIN
+|
+
+| b11
+| {1} - Insert +
+{2} - Delete +
+{3} - Modify
+
+| Attribute value
+| ATVL
+|
+
+| A()
+| A string containing a valid value for the domain of the attribute specified by the subfields above
+
+|===
+
+[[sec_B-6.1.11]]
+===== Information Association field - INAS
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Subfield content and specification
+| Referenced Record name | RRNM | {150} | b11 | Record name of the referenced record +
+{150} - Information Type
+| Referenced Record identifier
+| RRID
+|
+
+| b14
+| Record identifier of the referenced record
+
+| Numeric Information Association Code
+| NIAC
+|
+
+| b12
+| A valid code for the information association as defined in the IACS field of the Dataset General Information Record
+
+| Numeric Association Role code
+| NARC
+|
+
+| b12
+| A valid code for the role as defined in the ARCS field of the Dataset General Information Record
+
+| Information Association Update Instruction
+| IUIN
+|
+
+| b11
+| {1} - Insert +
+{2} - Delete +
+{3} - Modify
+
+| Numeric Attribute code
+| *NATC
+|
+
+| b12
+| A valid attribute code as defined in the ATCS field of the Dataset General Information Record
+
+| Attribute index
+| ATIX
+|
+
+| b12
+| Index (position) of the attribute in the sequence of attributes with the same code and the same parent (starting with 1)
+
+| Parent index
+| PAIX
+|
+
+| b12
+| Index (position) of the parent complex attribute within this ATTR field (starting with 1). If the attribute has no parent (top level attribute) the value is 0
+
+| Attribute instruction | ATIN | {1},{2} or {3} | b11
+| {1} - Insert +
+{2} - Delete +
+{3} - Modify
+| Attribute value
+| ATVL
+|
+
+| A()
+| A string containing a valid value for the domain of the attribute specified by the subfields above
+
+|===
+
+[[sec_B-6.1.12]]
+===== Point Record Identifier field - PRID
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Record name | RCNM | {110} | b11 | {110} - Point
+| Record identification number
+| RCID
+|
+
+| b14
+| Range: 1 to stem:[2^{32} - 2]
+
+| Record version
+| RVER
+|
+
+| b12
+| RVER contains the serial number of the record edition
+
+| Record update instruction | RUIN | {1},{2} or {3} | b11
+| {1} - Insert +
+{2} - Delete +
+{3} - Modify
+
+|===
+
+[[sec_B-6.1.13]]
+===== 2-D Integer Coordinate Tuple field structure - C2IT
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Coordinate in Y axis
+| YCOO
+|
+
+| b24
+| Y-coordinate or latitude
+
+| Coordinate in X axis
+| XCOO
+|
+
+| b24
+| X-coordinate or longitude
+
+|===
+
+[[sec_B-6.1.14]]
+===== 3-D Integer Coordinate Tuple field structure - C3IT
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Vertical CRS Id
+| VCID
+|
+
+| b11
+| Internal identifier of the Vertical CRS
+
+| Coordinate in Y axis
+| YCOO
+|
+
+| b24
+| Y-coordinate or latitude
+
+| Coordinate in X axis
+| XCOO
+|
+
+| b24
+| X-coordinate or longitude
+
+| Coordinate in Z axis
+| ZCOO
+|
+
+| b24
+| Z-coordinate (depth)
+
+|===
+
+[[sec_B-6.1.15]]
+===== Multi Point Record Identifier field - MRID
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Record name | RCNM | {115} | b11 | {115} - Multi Point
+| Record identification number
+| RCID
+|
+
+| b14
+| Range: 1 to stem:[2^{32} - 2]
+
+| Record version
+| RVER
+|
+
+| b12
+| RVER contains the serial number of the record edition
+
+| Record update instruction | RUIN | {1},{2} or {3} | b11
+| {1} - Insert +
+{2} - Delete +
+{3} - Modify
+
+|===
+
+[[sec_B-6.1.16]]
+===== 2-D Integer Coordinate List field structure - C2IL
+
+[cols="a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Format h| Subfield content and specification
+| Coordinate in Y axis | *YCOO | b24 | Y-coordinate or latitude
+| Coordinate in X axis | XCOO | b24 | X-coordinate or longitude
+
+|===
+
+[[sec_B-6.1.17]]
+===== 3-D Integer Coordinate List field structure - C3IL
+
+[cols="a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Format h| Subfield content and specification
+| Vertical CRS Id | VCID | b11 | Internal identifier of the Vertical CRS
+| Coordinate in Y axis | *YCOO | b24 | Y-coordinate or latitude
+| Coordinate in X axis | XCOO | b24 | X-coordinate or longitude
+| Coordinate in Z axis | ZCOO | b24 | Z-coordinate (depth)
+
+|===
+
+[[sec_B-6.1.18]]
+===== Coordinate Control field - COCC
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Coordinate Update Instruction | COUI | {1},{2} or {3} | b11
+| {1} - Insert +
+{2} - Delete +
+{3} - Modify
+| Coordinate Index
+| COIX
+|
+
+| b12
+| Index (position) of the addressed coordinate tuple within the coordinate field(s) of the target record
+
+| Number of Coordinates
+| NCOR
+|
+
+| b12
+| Number of coordinate tuples in the coordinate field(s) of the update record
+
+|===
+
+[[sec_B-6.1.19]]
+===== Curve Record Identifier field - CRID
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Record name | RCNM | {120} | b11 | {120} - Curve
+| Record identification number
+| RCID
+|
+
+| b14
+| Range: 1 to stem:[2^{32} - 2]
+
+| Record version
+| RVER
+|
+
+| b12
+| RVER contains the serial number of the record edition
+
+| Record update instruction | RUIN | {1},{2} or {3} | b11
+| {1} - Insert +
+{2} - Delete +
+{3} - Modify
+
+|===
+
+[[sec_B-6.1.20]]
+===== Point Association field - PTAS
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Referenced Record name | *RRNM | {110} | b11
+| Record name of the referenced record +
+{110} - Point
+| Referenced Record identifier
+| RRID
+|
+
+| b14
+| Record identifier of the referenced record
+
+| Topology indicator
+| TOPI
+|
+
+| b11
+| {1} - Beginning point +
+{2} - End point +
+{3} - Beginning & End point
+
+|===
+
+[[sec_B-6.1.21]]
+===== Segment Control field - SECC
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Segment update instruction | SEUI | {1},{2} or {3} | b11
+| {1} - Insert +
+{2} - Delete +
+{3} - Modify
+| Segment index
+| SEIX
+|
+
+| b12
+| Index (position) of the addressed segment in the target record
+
+| Number of segments
+| NSEG
+|
+
+| b12
+| Number of segments in the update record
+
+|===
+
+[[sec_B-6.1.22]]
+===== Segment Header field - SEGH
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Interpolation | INTP | {4} | b11 | {4} - Loxodromic
+
+|===
+
+[[sec_B-6.1.23]]
+===== Composite Curve Record Identifier field - CCID
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Record name | RCNM | {125} | b11 | {125} - Composite Curve
+| Record identification number
+| RCID
+|
+
+| b14
+| Range: 1 to stem:[2^{32} - 2]
+
+| Record version
+| RVER
+|
+
+| b12
+| RVER contains the serial number of the record edition
+
+| Record update instruction | RUIN | {1},{2} or {3} | b11
+| {1} - Insert +
+{2} - Delete +
+{3} - Modify
+
+|===
+
+// left it
+
+[[sec_B-6.1.24]]
+===== Curve Component Control field - CCOC
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Curve Component update instruction
+| CCUI
+|
+
+| b11
+| {1} - Insert +
+{2} - Delete +
+{3} - Modify
+
+| Curve Component Index
+| CCIX
+|
+
+| b12
+| Index (position) of the addressed Curve record pointer within the CUCO field(s) of the target record
+
+| Number of Curve Components
+| NCCO
+|
+
+| b12
+| Number of Curve record pointer in the CUCO field(s) of the update record
+
+|===
+
+[[sec_B-6.1.25]]
+===== Curve Component field - CUCO
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Referenced Record name | *RRNM | {120} or {125} | b11
+| Record name of the referenced record +
+{120} - Curve +
+{125} - Composite Curve
+| Referenced Record identifier
+| RRID
+|
+
+| b14
+| Record identifier of the referenced record
+
+| Orientation
+| ORNT
+|
+
+| b11
+| {1} - Forward +
+{2} - Reverse
+
+|===
+
+[[sec_B-6.1.26]]
+===== Surface Record Identifier field - SRID
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Record name | RCNM | {130} | b11 | {130} - Surface
+| Record identification number
+| RCID
+|
+
+| b14
+| Range: 1 to stem:[2^{32} - 2]
+
+| Record version
+| RVER
+|
+
+| b12
+| RVER contains the serial number of the record edition
+
+| Record update instruction | RUIN | {1},{2} or {3} | b11
+| {1} - Insert +
+{2} - Delete +
+{3} - Modify
+
+|===
+
+[[sec_B-6.1.27]]
+===== Ring Association field - RIAS
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Referenced Record name | *RRNM | {120} or {125} | b11 | Record name of the referenced record +
+{120} - Curve +
+{125} - Composite Curve
+| Referenced Record identifier
+| RRID
+|
+
+| b14
+| Record identifier of the referenced record
+
+| Orientation
+| ORNT
+|
+
+| b11
+| {1} - Forward +
+{2} - Reverse
+
+| Usage indicator
+| USAG
+|
+
+| b11
+| {1} - Exterior +
+{2} - Interior
+
+| Ring Association update instruction | RAUI | {1} or {2} | b11
+| {1} - Insert +
+{2} - Delete
+
+|===
+
+[[sec_B-6.1.28]]
+===== Feature Type Record Identifier field - FRID
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Record name | RCNM | {100} | b11 | {100} - Feature type
+| Record identification number
+| RCID
+|
+
+| b14
+| Range: 1 to stem:[2^{32} - 2]
+
+| Numeric Feature Type Code
+| NFTC
+|
+
+| b12
+| A valid feature type code as defined in the FTCS field of the Dataset General Information Record
+
+| Record version
+| RVER
+|
+
+| b12
+| RVER contains the serial number of the record edition
+
+| Record update instruction | RUIN | {1},{2} or {3} | b11
+| {1} - Insert +
+{2} - Delete +
+{3} - Modify
+
+|===
+
+[[sec_B-6.1.29]]
+===== Feature Object Identifier field - FOID
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Producing agency
+| AGEN
+|
+
+| b12
+| Agency code
+
+| Feature identification number
+| FIDN
+|
+
+| b14
+| Range: 1 to stem:[2^{32} - 2]
+
+| Feature identification subdivision
+| FIDS
+|
+
+| b12
+| Range: 1 to stem:[2^{16} - 2]
+
+|===
+
+[[sec_B-6.1.30]]
+===== Spatial Association field - SPAS
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Referenced Record name | *RRNM | One of {110} {115} (120} {125} {130} | b11
+| Record name of the referenced record +
+{110} - Point +
+{115} - Multi Point +
+{120} - Curve +
+{125} - Composite Curve +
+{130} - Surface
+| Referenced Record identifier
+| RRID
+|
+
+| b14
+| Record identifier of the referenced record
+
+| Orientation
+| ORNT
+|
+
+| b11
+| {1} - Forward +
+{2} - Reverse +
+{255} - NULL (Not Applicable)
+
+| Scale Minimum
+| SMIN
+|
+
+| b14
+| {stem:[2^{32} - 1]} - NULL (Not Applicable) - (see Note)
+
+| Scale Maximum
+| SMAX
+|
+
+| b14
+| {0} - NULL (Not Applicable) - (see Note)
+
+| Spatial Association Update instruction | SAUI | {1} or {2} | b11
+| {1} - Insert +
+{2} - Delete
+
+|===
+
+NOTE: For a correct handling of older data, robust parsers should consider both 0 and stem:[2^{32} - 1] as 'Not Applicable' for the SMIN and the SMAX sub-field.
+
+[[sec_B-6.1.31]]
+===== Feature Association field - FASC
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Referenced Record name | RRNM | {100} | b11 | Record name of the referenced record +
+{100} - Feature Type
+| Referenced Record identifier
+| RRID
+|
+
+| b14
+| Record identifier of the referenced record
+
+| Numeric Feature Association Code
+| NFAC
+|
+
+| b12
+| A valid code for the feature association as defined in the FACS field of the Dataset General Information Record
+
+| Numeric Association Role Code
+| NARC
+|
+
+| b12
+| A valid code for the role as defined in the ARCS field of the Dataset General Information Record
+
+| Feature Association Update Instruction | FAUI | {1} ,{2} or {3} | b11
+| {1} - Insert +
+{2} - Delete +
+{3} - Modify
+| Numeric Attribute Code
+| *NATC
+|
+
+| b12
+| A valid attribute code as defined in the ATCS field of the Dataset General Information Record
+
+| Attribute index
+| ATIX
+|
+
+| b12
+| Index (position) of the attribute in the sequence of attributes with the same code and the same parent (starting with 1)
+
+| Parent index
+| PAIX
+|
+
+| b12
+| Index (position) of the parent complex attribute within this ATTR field (starting with 1). If the attribute has no parent (top level attribute) the value is 0
+
+| Attribute Instruction | ATIN | {1},{2} or {3} | b11
+| {1} - Insert +
+{2} - Delete +
+{3} - Modify
+| Attribute value
+| ATVL
+|
+
+| A()
+| A string containing a valid value for the domain of the attribute specified by the subfields above
+
+|===
+
+[[sec_B-6.1.32]]
+===== Masked Spatial Type field - MASK
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Referenced Record name | *RRNM | {120} or {125} | b11 | Record name of the referenced record +
+{120} - Curve +
+{125} - Composite Curve
+| Referenced Record identifier
+| RRID
+|
+
+| b14
+| Record identifier of the referenced record
+
+| Mask Indicator | MIND | {1} or {2} | b11 | {1} - Truncated by the data coverage limit +
+{2} - Suppress portrayal
+| Mask Update Instruction | MUIN | {1} or {2} | b11
+| {1} - Insert +
+{2} - Delete
+
+|===
+
+[[sec_B-7]]
+=== Dataset Cancellation Structure
+
+[source%unnumbered]
+----
+Dataset cancelation file
+   |
+   |--<1>- Dataset General Information record
+       |
+       |--<1>-DSID (13\\*1): Dataset Identification field
+----
+
+[[sec_B-7.1]]
+==== Field content
+
+[[sec_B-7.1.1]]
+===== Dataset Identification field - DSID
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Subfield name h| Label h| Value h| Format h| Comment
+| Record name | RCNM | {10} | b11 | {10} - Data Set Identification
+| Record identification number | RCID | {1} | b14 | Only one record
+| Encoding specification | ENSP | "S-100 Part 10a" | A() | Encoding specification that defines the encoding
+| Encoding specification edition | ENED | "5.2" | A() | Edition of the encoding specification
+| Product identifier | PRSP | "INT.IHO.S-101.2.0" | A() | Unique identifier for the data product as specified in the product specification
+| Product edition | PRED | "2.0" | A() | Edition of the product specification
+| Application profile | PROF | "2" | A() | "2" - Update dataset profile
+| Dataset file identifier
+| DSNM
+|
+
+| A()
+| The file identifier including the extension but excluding any path information
+
+| Dataset title
+| DSTL
+|
+
+| A()
+| The title of the dataset
+
+| Dataset reference date
+| DSRD
+|
+
+| A(8)
+| The reference date of the datasetFormat: YYYYMMDD according to ISO 8601
+
+| Dataset language | DSLG | "EN" | A() | The (primary) language used in this dataset
+| Dataset abstract | DSAB | omitted | A() | The abstract of the dataset
+| Dataset edition | DSED | "0" | A() | 0 - Indicates the cancellation
+| Dataset topic category | *DSTC | {14}{18} | b11 | A set of topic categories
+
+|===

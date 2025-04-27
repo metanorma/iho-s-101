@@ -1,0 +1,93 @@
+
+[[sec_9]]
+== Portrayal
+
+[[sec_9.1]]
+=== Introduction
+
+S-101 portrayal is intended to contribute to the safe operation of
+an S-100 based marine navigation system by:
+
+* Ensuring base and supplementary levels of display for ENC data;
+standards of symbols, colours and their standardized assignment to
+features; scale limitations of data presentation; and appropriate
+compatibility with paper chart symbols as standardized in the Chart
+Specifications of the IHO (IHO Publication S-4);
+* Ensuring the display is clear and unambiguous;
+* Establishing an accepted pattern for presentation that becomes familiar
+to mariners and so can be recognized instantly without
+confusion; and
+* Utilizing the S-100 portrayal model to ensure interoperability.
+
+To ensure that presentation remains intuitive, including where S-101
+ENCs are used in conjunction with S-57 ENCs, the following principles
+must be followed when changes are made to the S-101 Portrayal Catalogue:
+
+* S-101 may extend the Portrayal Catalogue with new symbols, however
+they must follow IHO Publication S-4 - _Regulations of the IHO for
+International (INT) Charts and Chart Specifications of the IHO_, including
+conventions on colour; and be designed to be intuitive to the user;
+* S-101 may modify existing symbols, however key aspects such as shape
+and colour should be retained in order to ensure that the symbol remains
+identifiable;
+* S-101 must maintain equivalence in terms of alerts and indications
+functionality in ECDIS;
+* The S-101 Portrayal Catalogue should be modified by extension. Symbols
+and Portrayal rules should be retained for items that have been superseded
+in the current version of S-101. This ensures that S-101 data produced
+to previous versions can be displayed using the latest Portrayal Catalogue.
+
+S-101 portrayal is covered by the portrayal model as defined in S-100.
+This model reflects how the Portrayal Catalogue is defined for use
+in marine navigation systems. The Portrayal Catalogue defines symbology
+and the portrayal rules for each feature/attribute combination contained
+in the Feature Catalogue.
+
+S-101 uses the portrayal process defined in S-100 Part 9A.
+
+Items included in an S-101 Portrayal Catalogue must be registered
+in the IHO Geospatial Information (GI) Registry.
+
+[[sec_9.2]]
+=== Portrayal Catalogue
+
+Citation information for the Portrayal Catalogue is provided in
+<<table_9-1>> below.
+
+[[table_9-1]]
+.S-101 Portrayal Catalogue
+[cols="a,a,a,a"]
+|===
+h| No. h| ISO class or attribute h| Type h| Value
+
+| --    | CI_Citation           | Class                          | --
+| 1     | title                 | CharacterString                | S-101 Portrayal Catalogue
+| 2     | date                  | CI_Date (class)                | --
+| 2.1   | date                  | DateTime                       | 2024-12-16T00:00:00
+| 2.2   | dateType              | CI_DateTypeCode (ISO codelist) | publication
+| 3     | edition               | CharacterString                | 2.0.0
+| 4     | editionDate           | DateTime                       | 2024-12-16T00:00:00
+| 5     | citedResponsibleParty | CI_Responsibility (class)      | --
+| 5.1   | role                  | CI_RoleCode (ISO codelist)     | publisher
+| 5.2   | party                 | CI_Organisation (class)        | --
+| 5.2.1 | name                  | CharacterString                | International Hydrographic Organization
+| 6     | otherCitationDetails  | CharacterString                | Found in the Product Specification Register of the IHO Geospatial Information (GI) Registry under the Register entry for S-101 - Electronic Navional Chart.
+| 7     | onlineResource        | CI_OnlineResource (class)      | --
+| 7.1   | linkage               | CharacterString (URL)          | https://registry.iho.int/
+| 7.2   | name                  | CharacterString                | S-101 Portrayal Catalogue
+| 7.3   | description           | CharacterString                | XML Portrayal Catalogue accompanied by related files for symbols, colour profiles, rules, etc
+|===
+
+The Portrayal Catalogue contains the mechanisms for the system to
+portray information found in S-101 ENCs. The S-101 Portrayal Catalogue
+contains the following types of mechanisms and structures:
+
+* Set of portrayal rules;
+* Set of pixmaps, symbols, complex line styles, area fills,
+fonts and colour profiles.
+
+The Portrayal Catalogue model is defined in S-100 Part 9, clause 9-13.
+
+The S-101 Portrayal Catalogue is available in an XML document which
+conforms to the S-100 XML Portrayal Catalogue Schema. The structure
+for the Portrayal Catalogue is described in S-100 Part 9, clause 9-13.2.

@@ -1,0 +1,47 @@
+
+[[sec_8]]
+== Maintenance
+
+[[sec_8.1]]
+=== Introduction
+
+This clause describes the requirement to adequately maintain datasets;
+use of newly acquired source data; maintenance requirements within
+the overall production process; and how Feature and Portrayal Catalogues
+are to be managed within an S-100 based marine navigation system.
+
+[[sec_8.2]]
+=== Maintenance and update frequency
+
+Datasets must be maintained as needed; and the overall production
+process must include mechanisms for ENC updating designed to meet
+the needs of the mariner regarding safety of navigation.
+
+[[sec_8.3]]
+=== Data source
+
+Data Producers must use all available and applicable sources, as evaluated
+against a robust data assessment process, to maintain and update ENC
+datasets as required.
+
+[[sec_8.4]]
+=== Production process
+
+Data Producers should follow their established production processes
+for maintaining and updating datasets. Data must be maintained against
+S-101 <<annexA>> - _Data Classification and Encoding Guide_, checked
+against IHO Publications S-158:100 - _S-100 Validation Checks_ and
+S-158:101 - _S-101 Validation Checks_, and encapsulated in
+ISO/IEC 8211.
+
+Only maintained datasets that conform to the mandatory requirements
+outlined in S-101 will be considered to be an ENC satisfying the SOLAS
+chart carriage requirements for use in an ECDIS.
+
+[[sec_8.5]]
+=== Feature and Portrayal Catalogue management
+
+For each new version of the S-101 Product Specification a new Feature
+and/or Portrayal Catalogue may be released. The management of Feature
+and Portrayal Catalogues in end user systems is described in IHO Publication
+S-98 - _Data Product Interoperability in S-100 Navigation Systems_.

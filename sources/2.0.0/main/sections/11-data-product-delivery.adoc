@@ -1,0 +1,349 @@
+
+[[sec_11]]
+== Data Product Delivery
+
+[[sec_11.1]]
+=== Introduction
+
+This clause specifies the encoding and delivery mechanisms for
+an S-101 ENC. Data which conforms to this Product Specification must
+be delivered by means of an Exchange Set.
+
+The S-100 Exchange Set structure is described in S-100 Part 17,
+clause 17-4.1.
+
+[[sec_11.2]]
+=== Exchange Set
+
+S-101 datasets are grouped into Exchange Sets. Each Exchange Set consists
+of one or more ENC datasets with a single Exchange Catalogue XML file
+containing metadata. Optionally, an associated XML Metadata file
+(S100_ResourcePurpose (ISOMetadata) - see S-100 Part 17, clause 17-4.5)
+may be included (see <<sec_11.5>>). It may also include one or more
+support files. The S-101 Exchange Set structure is the same as that
+described in S-100 Part 17, clause 17-4.1.
+
+*Units of Delivery:*:: Exchange Set
+
+*Transfer Size:*:: Unlimited
+
+*Medium Name:*:: Digital data delivery
+
+*Other Delivery Information:*::
++
+--
+Each Exchange Set has a single Exchange Catalogue which contains the
+discovery metadata for each dataset and references to any support
+files. See S-100 Part 17, clauses 17-4.4 and 17-4.5.
+--
+
+[[sec_11.3]]
+=== Dataset
+
+[[sec_11.3.1]]
+==== Datasets
+
+Four types of dataset files may be produced and contained within an
+Exchange Set:
+
+* New dataset and New Edition of a dataset (Base dataset): Including
+new information which has not been previously distributed by updates.
+Each New Edition of a dataset must have the same name as the dataset
+that it replaces. A New Edition can also be ENC data that has previously
+been produced for this area and at the same optimum display scale.
+The encoding structure is located in <<sec_B-5>>.
+* Update: Changing some information in an existing dataset. Each Update
+dataset file must have the same name as the original base cell file,
+with an extension number greater than or equal to 001
+(see EEE in <<sec_11.3.2>> below). They must not extend the geographical
+area covered by the base cell file to which they apply (see <<sec_4.5.2>>).
+The encoding structure for an Update is located in <<sec_B-6>>.
+* Re-issue of a dataset: Including all the updates applied to the
+original dataset up to the date of the reissue. A Re-issue is intended
+to avoid unnecessary loading of the Base cell and all applicable updates
+individually for new users of the dataset, therefore does not contain
+any new information additional to that previously issued by updates,
+and can be issued at any time. The encoding structure is located in
+<<sec_B-5>>.
+* Cancellation: The dataset is cancelled and is deleted from the system.
+The encoding structure for a Cancellation file is located in <<sec_B-7>>.
+
+"File-less" management of published S-101 base datasets and their
+textual or pictorial ENC support files is not allowed for this Edition
+of S-101, with the exception of ENC support file deletions or metadata
+"supportedResource" updates. That is, producing a S-100 Exchange Set
+which only includes the mandatory "CATALOG.XML" file with the dataset
+and/or ENC Support File Discovery Metadata without including the appropriate
+dataset, dataset update or ENC support file in the S-100 Exchange
+Set is not allowed other than for the above exception.
+
+[[sec_11.3.2]]
+==== Dataset file naming
+
+101CCCCØØØØØØØØØØ.EEE
+
+The file name forms a unique S-101 identifier where:
+
+* 101 - the first 3 characters identify the dataset as an S-101 dataset
+(mandatory).
+* CCCC - the fourth to seventh characters identify the Producer Code
+of the issuing agency (mandatory for S-101). Producer Codes must registered
+in the IHO Geospatial Information (GI) Registry, Producer Code Register;
+and conform to its rules. Where the Producer Code is derived from
+a 2 or 3 character format (for instance when converting S-57 ENCs),
+the missing characters of the Producer Code may be populated with
+zeros ("00" or "0" respectively), as required.
+* ØØØØØØØØØØ - the eighth to the maximum seventeenth characters are
+optional and may be used in any way by the producer to provide the
+unique file name. The following characters are allowed in the dataset
+name: A to Z (upper case characters only), 0 to 9 and the special
+character _ (underscore). It is not required to use all the available
+characters, however at least one character must be used.
+* .EEE - new datasets and New Editions use 000, updates start at 001
+and increment until a limit of 999 (mandatory). Re-issues use the
+same number as the last Update applied to the dataset. Cancellations
+use the next sequential number from the previous Update applied to
+the dataset.
+
+[[sec_11.3.3]]
+==== New Editions, re-issues, updates and cancellations
+
+This section defines the sequencing of S-101 datasets for New Editions,
+updates and re-issues. In order to ensure that feature type updates
+are incorporated into an end user system in the correct sequence without
+any omission, a number of parameters encoded in the data are used
+in the following way:
+
+*Edition number*:: When a dataset is initially created (Base dataset),
+the Edition number 1 is assigned to it. The Edition number is increased
+by 1 at each New Edition.
+
+*Update number*::
++
+--
+Update number 0 is assigned to a new dataset and a New Edition.
+The first update dataset file associated with this new dataset must
+have update number 1. The update number must be increased by one for
+each subsequent update, until a New Edition is released.
+
+A re-issue of a dataset must have the update number of the last update
+applied to the dataset, and use the same Edition number.
+--
+
+*Issue date*:: Date up to which the Data Producer has incorporated
+all applicable changes. The issue date must be greater than the previous
+issue date of the dataset.
+
+In order to cancel a dataset, an update dataset file is created for
+which the Edition number must be set to 0. This method is only used
+to cancel a Base dataset file. Where a dataset is cancelled and its
+name is reused at a later date, the issue date must be greater than
+the issue date of the cancelled dataset. When the dataset is cancelled
+it must be removed from the system.
+
+An Exchange Set may contain Base dataset files and update dataset
+files for the same datasets. Under these circumstances the update
+dataset files must follow on in the correct sequential order from
+the last update applied to the Base dataset file.
+
+[[sec_11.4]]
+=== Support files
+
+[[sec_11.4.1]]
+==== ENC support files
+
+ENC support files offer supplementary information that can be included
+in an ENC Exchange Set.
+
+* Text files must contain only UTF-8 encoded text as defined by this
+standard (text consisting only of printable characters and without
+HTML, XML, or other markup).
+* Picture files must be in TIFF (6.0 specification) *(TIFF)*.
+
+[[table_11-1]]
+.ENC support file extensions
+[cols="a,a,a"]
+|===
+h| File Types h| Extensions h| Comment
+
+| *Text*    | TXT |
+| *Picture* | TIF | Baseline TIFF 6.0.
+|===
+
+[[sec_11.4.2]]
+==== System support files
+
+System support files used with the S-101 ENC Product Specification
+follow the general S-100 Framework principles without any specific
+S-101 ENC Product Specification restrictions. System support files
+include the Feature, Portrayal and Interoperability Catalogues; Language
+packs for Catalogues; and other system support files as required.
+
+[[sec_11.4.3]]
+==== ENC support file naming
+
+All ENC support files must have unique universal file identifiers.
+The file identifier of support information should not be used to describe
+the physical content of the file. The ENC support file metadata that
+accompanies the file will inform the user of the name and purpose
+of the file (that is new, replacement and deletion).
+
+In this encoding the ENC support files are named according to the
+specifications given below:
+
+101CCCCØØØØØØØØØØ.EEE
+
+The main part forms an identifier where:
+
+* 101 - the first 3 characters identify the ENC support file as applicable
+to an S-101 dataset (mandatory).
+* CCCC - the fourth to seventh characters identify the Producer Code
+of the issuing agency (mandatory). Where the Producer Code is derived
+from a 2 or 3 character format (for instance when converting S-57
+ENCs), the missing characters of the Producer Code may be populated
+with zeros ("00" or "0" respectively) for the sixth and seventh characters
+of the ENC support file name, as required.
+* ØØØØØØØØØØ - the eighth to the maximum seventeenth characters are
+optional and can be used in any way by the Producer to provide the
+unique ENC support file name. The following characters are allowed
+in the support file name: A to Z (upper case characters only), 0 to
+9 and the special character \_ (underscore). It is not required to
+use all the available characters, however at least one character must
+be used.
+* .EEE - ENC support file extension. (TXT or TIF).
+
+[[sec_11.4.4]]
+==== Support file management
+
+When a support file is created or a subsequent version is issued it
+must carry its own issue date and be supported with a digital signature
+which authenticates it against the Producer's public key included
+in the Exchange Set metadata.
+
+The "revisionStatus" field of the support file discovery metadata
+defines if the support file is new, replacement or deletion.
+
+The "purpose" field of catalogue discovery metadata defines if the
+Catalogue is a new edition or a cancellation.
+
+Support files carrying the "deletion" or "cancellation" flag must
+be removed or archived. Upon receiving an ENC support file with the
+"SupportFileDiscoveryMetadata" field "revisionStatus" populated as
+"deletion" is received, the system software must check to see whether
+any features reference the ENC support file prior to deleting or archiving
+the file.
+
+Support files, with the exception of Catalogue files, must be stored
+in a separate folder within the Exchange Set named SUPPORT_FILES.
+The Catalogue files must be stored within the Exchange Set in a folder
+named "CATALOGUES". Refer to S-100 Part 17, clause 17-4.2 Figure 17-3
+- An S-100 Exchange Set folder structure.
+
+Re-use of an ENC support file name after a deletion is possible only
+if the ENC support file edition number is higher than the previous
+edition number before the deletion.
+
+Only the latest edition of a support file can be used. As soon as
+a New Edition is created and installed, the older version is retired
+and can no longer be used by any feature.
+
+If an ENC support file is associated with multiple features in one
+or several datasets, a New Edition of the file will immediately be
+used by all associated features.
+
+If a New Edition of an ENC support file contains changes not applicable
+to all previous associated features, a completely new ENC support
+file must be created instead. This is to maintain the ENC support
+file information for the associated features not effected by the changes.
+The associations to the original file must then be removed for the
+relevant features and new associations created for the new ENC support
+file and applied by ENC update. Features where changes were not applicable
+will continue to use the original ENC support file.
+
+In all cases, the ENC update(s) and the associated new or updated
+ENC support file(s) must be included in the same Exchange Set.
+If the original ENC support file's supportFileDiscoveryMetadata
+"supportedResource" was originally populated to reference one of more
+ENCs, then it can be updated in the CATALOG.XML without adding the
+original ENC support file in the Exchange set.
+
+The following scenario demonstrates the rules related to versioning
+and issuing of new ENC support files:
+
+<<fig_11-1>>: Three Caution areas are encoded within three different
+ENCs. All of them reference the same ENC support file A:
+
+[[fig_11-1]]
+.Reference to a new ENC support file
+image::figure-11-1.png[]
+
+<<fig_11-2>>: Changes occur making it necessary to issue a New Edition
+of ENC support file A. Edition 1 is no longervalid, and all 3 caution
+areas refer to the New Edition of ENC support file A (Edition 1 of
+the file is deleted from the system or not used if no longer referenced
+by any ENC features):
+
+[[fig_11-2]]
+.Reference to a New Edition of an ENC support file
+image::figure-11-2.png[]
+
+<<fig_11-3>>: Changes occur that are only applicable to the Caution
+areas in ENC 1 and ENC 2. Consequently, these ENCs can no longer refer
+to ENC support file A Edition 2:
+
+[[fig_11-3]]
+.Changes to an ENC support file affecting limited referenced features
+image::figure-11-3.png[]
+
+<<fig_11-4>>: A new ENC support file B must be created for ENC 1 and
+ENC 2 to use as reference:
+
+[[fig_11-4]]
+.A new ENC support file affecting limited referenced features
+image::figure-11-4.png[]
+
+[NOTE,keep-separate=true]
+====
+In <<fig_11-4>>, if the ENC support file A Edition 2 Support
+File Discovery Metadata attribute "supportedResource" has been populated
+with all the previous ENC references, then the ENC support file A
+Edition 2 Support File Discovery Metadata should also be included
+and updated in the update Exchange Set CATALOG.XML with the "supportedResource"
+updated accordingly - now referencing only "ENC 3".
+====
+
+To simplify this process it consideration may be given to not populating
+the ENC Support File Discovery Metadata attribute "supportedResource"
+where the ENC support file is referenced in more than one ENC product
+(see S-100 Part 17, clause 17-4.3.1 - Supported resources / multiple
+references guide).
+
+[[sec_11.5]]
+=== Associated XML Metadata file
+
+An associated XML Metadata file is expected to carry information specific
+to producing authorities' internal production procedures, and is not
+intended for use within the end user systems.
+
+If used, all associated XML Metadata files must have unique names.
+The name of the associated XML Metadata file should not be used to
+describe the physical content of the file.
+
+The associated XML Metadata file must be named according to the specification
+given below:
+
+MD_<data file base name>.XML
+
+[[sec_11.6]]
+=== S-101 Exchange Catalogue
+
+The S-101 Exchange Catalogue acts as the table of contents for the
+S-100 Exchange Set. The Catalogue file of the Exchange Set must be
+named CATALOG.XML. No other file in the Exchange Set may be named
+CATALOG.XML. The contents of the S-101 Exchange Catalogue are described
+in <<sec_12>>.
+
+[[sec_11.7]]
+=== Data integrity and encryption
+
+See S-100 Parts 15 and 17.

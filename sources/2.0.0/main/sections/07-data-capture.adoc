@@ -1,0 +1,8 @@
+
+[[sec_7]]
+== Data Capture and Classification
+
+The S-101 ENC Data Classification and Encoding Guide (DCEG) describes
+how data describing the real world should be captured using the types
+defined in the S-101 Feature Catalogue. This Guide is located at
+<<annexA>>.
