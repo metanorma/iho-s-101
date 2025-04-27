@@ -1,5 +1,4 @@
 
-
 [[annexB]]
 [appendix,obligation="normative"]
 == Data Product format (encoding)
