@@ -1970,8 +1970,6 @@ h| Subfield name h| Label h| Value h| Format h| Comment
 
 |===
 
-// left it
-
 [[sec_B-6.1.24]]
 ===== Curve Component Control field - CCOC
 
