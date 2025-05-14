@@ -54,20 +54,20 @@ The following Table indicates&nbsp;individual feature attributes that supersede 
 .Hierarchy of metadata
 [cols="179,201,200"]
 |===
-.<h| Meta feature class .<h| Meta feature attribute .>h| Geo feature attribute
-| *Navigational System of Marks* | *marks navigational -- system of* | *marks navigational -- system of*
-| *Quality of Bathymetric Data* | *horizontal position uncertainty** | *horizontal position uncertainty***
-| *Quality of Bathymetric Data* | *vertical uncertainty** | *vertical uncertainty*
-| *Quality of Bathymetric Data* | *vertical uncertainty** | *vertical uncertainty***
-| *Quality of Non-Bathymetric Data* | *horizontal distance uncertainty* | **horizontal clearance fixed**, *horizontal clearance open*
-| *Quality of Non-Bathymetric Data* | *horizontal position uncertainty* | *horizontal position uncertainty***
-| *Quality of Non-Bathymetric Data* | *orientation uncertainty* | *orientation uncertainty*
-| *Quality of Non-Bathymetric Data* | *vertical uncertainty* | **vertical clearance closed**, **vertical clearance fixed**, **vertical clearance open**, *vertical uncertainty***
+h| Meta feature class h| Meta feature attribute h| Geo feature attribute
+
+| *Navigational System of Marks*    | *marks navigational -- system of*  | *marks navigational -- system of*
+| *Quality of Bathymetric Data*     | *horizontal position uncertainty** | *horizontal position uncertainty***
+| *Quality of Bathymetric Data*     | *vertical uncertainty**            | *vertical uncertainty*
+| *Quality of Bathymetric Data*     | *vertical uncertainty**            | *vertical uncertainty***
+| *Quality of Non-Bathymetric Data* | *horizontal distance uncertainty*  | **horizontal clearance fixed**, *horizontal clearance open*
+| *Quality of Non-Bathymetric Data* | *horizontal position uncertainty*  | *horizontal position uncertainty***
+| *Quality of Non-Bathymetric Data* | *orientation uncertainty*          | *orientation uncertainty*
+| *Quality of Non-Bathymetric Data* | *vertical uncertainty*             | **vertical clearance closed**, **vertical clearance fixed**, **vertical clearance open**, *vertical uncertainty***
 | *Quality of Survey* | *quality of horizontal measurement* | *quality of horizontal measurement***
 | *Quality of Survey* | *quality of vertical measurement* | *quality of vertical measurement*
 | *Quality of Survey* | *technique of vertical measurement* | *technique of vertical measurement*
 | *Vertical Datum of Data* | *vertical datum* | *vertical datum*
-
 |===
 
 \* The information type **Spatial Quality**, attributes *horizontal position uncertainty* and **vertical uncertainty**, may be associated to *Quality of Bathymetric Data* using the information to feature association *Quality of Bathymetric Data Composition* (see clause 25.12).
@@ -81,7 +81,7 @@ It is prohibited to use an attribute on an individual object, if this attribute 
 [[sec_3.4]]
 === Quality of non-bathymetric data
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *QUALITY OF NON-BATHYMETRIC DATA*. An area within which a uniform assessment of the quality of the non-bathymetric data exists. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.208, November 2000).
 10+| *S-101 Metadata Feature:* *Quality of Non-Bathymetric Data (M_ACCY)*
@@ -90,147 +90,47 @@ It is prohibited to use an attribute on an individual object, if this attribute 
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| category of temporal variation
-2+|
 
-3+|
+3+| category of temporal variation 2+| 3+|
 1: extreme event +
 4: likely to change +
-| EN
-| 0,1
+| EN | 0,1
 
-3+| horizontal distance uncertainty
-2+| (HORACC)
-3+|
+3+| horizontal distance uncertainty 2+| (HORACC) 3+| | RE | 0,1
 
-| RE
-| 0,1
+3+| horizontal position uncertainty 2+| _(POSACC)_ 3+| | C | 1,1
 
-3+| horizontal position uncertainty
-2+| _(POSACC)_
-3+|
+3+| uncertainty fixed 2+| 3+| | (S) RE | 1,1
 
-| C
-| 1,1
+3+| uncertainty variable factor 2+| 3+| | (S) RE | 0,1
 
-3+| uncertainty fixed
-2+|
+3+| interoperability identifier 2+| 3+| MRN (see clause 27.114) | URN | 0,1
 
-3+|
+3+| orientation uncertainty 2+| 3+| | RE | 0,1
 
-| (S) RE
-| 1,1
+3+| survey date range 2+| 3+| See clause 2.4.8 | C | 0,1
 
-3+| uncertainty variable factor
-2+|
+3+| date end 2+| _(SUREND)_ 3+| | (S) TD | 1,1
 
-3+|
+3+| date start 2+| _(SURSTA)_ 3+| | (S) TD | 0,1
 
-| (S) RE
-| 0,1
+3+| vertical uncertainty 2+| _(VERACC)_ 3+| | C | 0,1
 
-3+| interoperability identifier
-2+|
+3+| uncertainty fixed 2+| 3+| | (S) RE | 1,1 
 
-3+| MRN (see clause 27.114)
-| URN
-| 0,1
+3+| uncertainty variable factor 2+| 3+| | (S) RE | 0,1
 
-3+| orientation uncertainty
-2+|
+3+| information 2+| 3+| See clause 2.4.6 | C | 0,*
 
-3+|
+3+| file locator 2+| 3+| | (S) TE | 0,1
 
-| RE
-| 0,1
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 ^†^
 
-3+| survey date range
-2+|
+3+| headline 2+| 3+| | (S) TE | 0,1
 
-3+| See clause 2.4.8
-| C
-| 0,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| date end
-2+| _(SUREND)_
-3+|
-
-| (S) TD
-| 1,1
-
-3+| date start
-2+| _(SURSTA)_
-3+|
-
-| (S) TD
-| 0,1
-
-3+| vertical uncertainty
-2+| _(VERACC)_
-3+|
-
-| C
-| 0,1
-
-3+| uncertainty fixed
-2+|
-
-3+|
-
-| (S) RE
-| 1,1
-
-3+| uncertainty variable factor
-2+|
-
-3+|
-
-| (S) RE
-| 0,1
-
-3+| information
-2+|
-
-3+| See clause 2.4.6
-| C
-| 0,*
-
-3+| file locator
-2+|
-
-3+|
-
-| (S) TE
-| 0,1
-
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
-| 0,1 ^†^
-
-3+| headline
-2+|
-
-3+|
-
-| (S) TE
-| 0,1
-
-3+| language
-2+|
-
-3+| ISO 639-2/T
-| (S) TE
-| 1,1
-
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
-| 0,1 ^†^
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 ^†^
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -250,7 +150,7 @@ The Meta feature *Quality of Non-Bathymetric Data* may be used to provide an ind
 
 Meta features *Quality of Non-bathymetric Data* and *Quality of Bathymetric Data*may overlap.
 
-Remarks:
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -393,7 +293,7 @@ h| maximum display scale .<h| optimum display scale h| minimum display scale | |
 
 Where a series of differing optimum display scale ENC datasets are compiled covering the same geographic area, the smallest scale value populated for *optimum display scale* for *Data Coverage* feature(s) in the dataset should correspond to the **minimum display scale**, where populated, for the next largest optimum display scale ENC dataset. The largest scale value populated for *optimum display scale* for *Data Coverage* feature(s) in the dataset must not be a larger scale value than the *optimum display scale* for the next largest optimum display scale ENC dataset, where such a dataset exists.
 
-Remarks:
+[underline]#Remarks:#
 
 * This Meta feature is intended to support an indication of coverage; and facilitates the loading and rendering (display) of datasets in the end-user system.
 * Where more than one *Data Coverage* feature exists for a dataset, the dataset, when initially loaded, will be displayed in the ECDIS at a display scale corresponding to the largest scale value populated for *optimum display scale*.
@@ -511,9 +411,7 @@ Individual buoys and beacons may not be part of the general buoyage system. This
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
-| URN
-| 0,1
+3+| MRN (see clause 27.114) | URN | 0,1
 
 3+| marks navigational -- system of 2+| (MARSYS) 3+|
 1: IALA A +
@@ -587,7 +485,7 @@ Individual buoys and beacons may not be part of the general buoyage system. This
 
 [[fig_3-1]]
 .Buoyage system and direction
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_6b87d79f.png["",465,188]
+image::figure-3-1.png["",465,188]
 
 Within a dataset, there may be some areas where the direction of buoyage is defined by local rules and must, therefore, be specified. If required, these areas must be encoded as *Local* **Direction of Buoyage** features, with the mandatory attribute *orientation value* indicating the direction of buoyage. *Local* **Direction of Buoyage** features must not overlap, but in areas where local buoyage directions apply, *Local* **Direction of Buoyage** features must overlap *Navigational System of Marks* features (see clause3.6) (see Figure 3-1 above).
 
@@ -883,13 +781,13 @@ The Meta feature *Quality of Bathymetric Data* defines areas within which unifor
 
 [[fig_3-2]]
 .Adjoining and overlapping Quality of Bathymetric Data features
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_febf43c2.png["",657,402]
+image::figure-3-2.png["",657,402]
 
 Figure 3-2 above demonstrates the encoding for varying quality of bathymetric data in the water column, in this example a mechanically swept area to a depth of 5 metres that has also been previously surveyed using single beam echo sounder to the seabed. For the *Quality of Bathymetric Data* feature that defines the data quality for the swept area, it is important to note that the recommended attribution shown above is intended to provide the highest (best) quality indicator for vessels navigating at a safety depth of less than 5 metres in the area. For vessels navigating at a safety depth of greater than 5 metres in the area, or at any depth outside the area, the lower quality indicator will be provided.
 
 NOTE: Figure 3-2 demonstrates the two options for the encoding of the horizontal position and vertical uncertainties available in S-101. For the area covered by the swept area, the varying horizontal position and vertical uncertainties in the water column are encoded using the sub-complex attributes *horizontal position uncertainty* and *vertical uncertainty* on the *Quality of Bathymetric Data* features. For the two areas covered only by the single beam echo sounder survey to the seabed, the horizontal position and vertical uncertainties are encoded using the sub-complex attributes *horizontal position uncertainty* and *vertical uncertainty* on an associated *Spatial Quality* feature (which may be a single *Spatial Quality* feature associated to both *Quality of Bathymetric Data* features). See the Remarks below and clause 24.5.
 
-Remarks:
+[underline]#Remarks:#
 
 * The mandatory attribute *data assessment* provides an overall indicative level of assessment of bathymetric data from which further attribution is derived, and assists with portrayal of bathymetric data quality information in ECDIS:
 
@@ -1056,7 +954,7 @@ The CRS for the Z-coordinate should also have the subfield "Axis Type" [AXTY] of
 
 Note, that because every ZCOO value is explicitly linked to sounding datum there is no default value.
 
-Remarks:
+[underline]#Remarks:#
 
 * The default sounding datum of the dataset must be encoded using the Meta feature **Sounding Datum**, and must be equivalent to the definition of the CRS as stored in the "Dataset Coordinate Reference System" record for the dataset.
 * If an area of the dataset is referenced to a different sounding datum than the default, a separate *Sounding Datum* feature must be encoded. All parts of the dataset covered by *Quality of Bathymetric Data* features (see clause 3.8) must be covered by *Sounding Datum* features, with the attribute *vertical datum* indicating the sounding (depth) datum.

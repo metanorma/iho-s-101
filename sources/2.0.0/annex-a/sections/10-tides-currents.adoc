@@ -748,7 +748,9 @@ The term "tidal streams" (French: "courants de marée", US usage: "tidal current
 
 If it is required to encode the information generally shown on paper charts as a tidal stream panel and stations, it must be done using the feature *Tidal Stream Panel Data*.
 
-Tidal stream values encoded in this way should be spring rates; that is, the tidal stream rates associated with a tidal range which is defined as the difference in height between MHWS and MLWS. Remarks:
+Tidal stream values encoded in this way should be spring rates; that is, the tidal stream rates associated with a tidal range which is defined as the difference in height between MHWS and MLWS. 
+
+[underline]#Remarks:#
 
 * The mandatory complex attribute *tidal stream panel values* is structured such that, in combination with attributes *station name* and **station number**, the equivalent layout of a paper chart tidal stream panel can be reproduced in an ECDIS Pick Report display. An example of the encoding of a *Tidal Stream Panel Data* feature as compared to the S-57 object class *TS_PAD* is included below:
 S-57 Encoding: Population of attribute TS_TSP0014,PLYMOUTH (DEVONPORT),HW,113,0.1,332,0.6,331,1.1,342,1.0,347,0.7,333,0.5,317,0.3,178,0.3,146,0.6,140,1.0,143,1.1,143, 0.8,138,0.3

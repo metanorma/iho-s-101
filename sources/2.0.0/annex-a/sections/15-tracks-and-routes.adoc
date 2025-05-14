@@ -1782,7 +1782,9 @@ A two way route is a route within defined limits inside which two way traffic is
 .One-way traffic flow in a two-way route
 image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_bc034dbe.gif[Shape33,359,213]
 
-If it is required to encode a two-way route with one-way sections, separate *Two-Way Route Part* features must be encoded for the different parts, with attribute *traffic flow* = _3_ (one-way) or _4_ (two-way). In one-way sections, the mandatory attribute *orientation value* must indicate the true direction of traffic flow, not its reciprocal. In two-way sections, *orientation value* may indicate either direction of traffic flow. Remarks:
+If it is required to encode a two-way route with one-way sections, separate *Two-Way Route Part* features must be encoded for the different parts, with attribute *traffic flow* = _3_ (one-way) or _4_ (two-way). In one-way sections, the mandatory attribute *orientation value* must indicate the true direction of traffic flow, not its reciprocal. In two-way sections, *orientation value* may indicate either direction of traffic flow. 
+
+[underline]#Remarks:#
 
 * The orientation of the two-way route part is defined by the centreline of the part and is related to the general direction of the two-way route.
 * The attribute *depth range minimum value* is used to encode the shallowest depth on the part, where required.
@@ -2709,7 +2711,9 @@ A complete Deep Water route (DW) consists of one or more areas within which the 
 [[sec_15.15.1]]
 ==== Deep Water routes (see S4 -- B-435.3)
 
-If it is required to define a complete Deep Water route (DW) system, the features **Deep Water Route Centreline**, *Deep Water Route Part* and any associated navigation aids must be associated with the feature *Deep Water Route* using the associations *Deep Water Route Aggregation* (see clause25.6) and *Aids to Navigation Association* (see clause25.2)Remarks:
+If it is required to define a complete Deep Water route (DW) system, the features **Deep Water Route Centreline**, *Deep Water Route Part* and any associated navigation aids must be associated with the feature *Deep Water Route* using the associations *Deep Water Route Aggregation* (see clause25.6) and *Aids to Navigation Association* (see clause25.2)
+
+[underline]#Remarks:#
 
 * The name of the DW, where known, must be populated using the complex attribute *feature name*. Where it is required for the name to be displayed in the ECDIS, the *Deep Water Route* must be encoded using surface geometry. The extent of the geometry of the *Deep Water Route* should utilise the geometry of the components of the route so as to cover its full extent.
 * All features comprising a Deep Water route must have the same value populated for the attribute *scale minimum* (see clause2.5.9).

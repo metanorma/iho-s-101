@@ -1,5 +1,4 @@
 = Annex A - Data Classification and Encoding Guide
-
 :series: S
 :docnumber: 101
 :doctype: standard
@@ -4283,7 +4282,9 @@ For each instance of **information**, at least one of the sub-attributes *file r
 [[sec_16.27.1]]
 ==== Collision regulations limit
 
-If it is required to encode a collision regulations (COLREGs) demarcation line, it must be done using the feature *Collision Regulations Limit*. Remarks:
+If it is required to encode a collision regulations (COLREGs) demarcation line, it must be done using the feature *Collision Regulations Limit*.
+
+Remarks:
 
 * If it is required to encode the national regulation citation it must be done using the attribute *regulation citation*. The regulation citation is generally the national legal citation for the implementation of an international regulation (for example _33 CFR 26_), as distinct from the title for the regulation, which should be populated in the complex attribute **feature name**, sub-attribute *name* (for example _International Regulations for the Prevention of Collisions at Sea_ -- _Vessel Bridge-to-Bridge Radiotelephone Regulations_.
 
@@ -9017,7 +9018,9 @@ Q58
 |
 
 |===
-__**Table 20-1 -- IALA special purpose buoys -- Common types**__Remarks:
+__**Table 20-1 -- IALA special purpose buoys -- Common types**__
+
+[underline]#Remarks:#
 
 * If it is required to encode a buoy or topmark that has more than one colour, the attributes *colour* and *colour pattern* must be encoded, according to the rules laid out in clause 2.4.10.
 * If it is required to encode the total vertical length, including the topmark and any equipment features (for example light), of the buoy above the water level, it must be done using the attribute *vertical length*.
@@ -11780,7 +11783,9 @@ In the following Table, a blank indicates that the encoder may choose a relevant
 
 |===
 
-__**Table 20-2 -- IALA special purpose beacons -- Common types**__Remarks:
+__**Table 20-2 -- IALA special purpose beacons -- Common types**__
+
+[underline]#Remarks:#
 
 * Non-beacon structures (for example chimneys, masts, towers) that are also used to serve the purpose of a special purpose beacon must be encoded, where required, using the feature *Landmark* (see clause 7.2).
 * If it is required to encode a beacon or topmark that has more than one colour, the attributes *colour* and *colour pattern* must be encoded, according to the rules laid out in clause 2.4.10.
@@ -12202,7 +12207,9 @@ In the following Table, a blank indicates that the encoder may choose a relevant
 
 |===
 
-__**Table 20-3 -- Daymarks -- Examples**__Remarks:
+__**Table 20-3 -- Daymarks -- Examples**__
+
+[underline]#Remarks:#
 
 * For guidance on the encoding of the attributes **elevation**, *height* and *vertical length* see clause 2.5.7. *elevation* applies only to daymarks on land. Values populated for *height* and *vertical length* must include any equipment features.
 * If it is required to encode a cairn that bears the colour(s) specified by a navigational system of marks, it must be done using a beacon feature.
@@ -15890,7 +15897,9 @@ For each instance of **information**, at least one of the sub-attributes *file r
 [[sec_22.8.1]]
 ==== Small craft facilities (see S-4 -- B-320.1-2)
 
-If it is required to encode a small craft facility, it must be done using the feature *Small Craft Facility*. Remarks:
+If it is required to encode a small craft facility, it must be done using the feature *Small Craft Facility*. 
+
+[underline]#Remarks:#
 
 * The *Small Craft Facility* must only be used to encode the function. In addition, if it is required to encode a physical feature (for example building), it must be done using an appropriate feature (for example*Building*).
 * Due to possible ECDIS display issues *Small Craft Facility* features of type surface should only be encoded on **Land Area**, **Shoreline Construction**, *Hulk* or *Pontoon* features of type surface.
@@ -17700,7 +17709,9 @@ IHO Definition: A specially constructed shuttle shaped buoy which is used in ice
 |===
 | IHO Definition: *BURIED DEPTH*. The depth below the seabed to which an object is buried. (S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.8, November 2000).
 
-Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: metre (m)Precision: 0∙1mMinimum range: 0Maximum range: 20Range closure: Left half-open interval (_minimum <_ _*buried depth*_ _≤ maximum_)Example:*2.5* for a depth of 2∙5 metresRemarks:
+Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: metre (m)Precision: 0∙1mMinimum range: 0Maximum range: 20Range closure: Left half-open interval (_minimum <_ _*buried depth*_ _≤ maximum_)Example:*2.5* for a depth of 2∙5 metres
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -17713,7 +17724,9 @@ Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: m
 |===
 | IHO Definition: *CALL SIGN*. The designated call-sign of a station (radio station, radar station, pilot, …). (S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.9, November 2000 (as amended)).
 
-Attribute Type: TextRemarks:
+Attribute Type: Text
+
+[underline]#Remarks:#
 
 * The attribute *call sign* should contain no more than 150 characters.
 
@@ -18690,7 +18703,9 @@ IHO Definition: A form of decorative gateway or portal, consisting of two uprigh
 IHO Definition: A structure erected over a depression or an obstacle such as a body of water, railroad, etc., to provide a roadway for vehicles or pedestrians. (IHO Dictionary -- S-32).
 [start=20]
 . ~*dam*~
-IHO Definition:A barrier to check or confine anything in motion; particularly one constructed to hold back water and raise its level to form a reservoir, or to prevent flooding. (IHO Dictionary -- S-32). Remarks:
+IHO Definition:A barrier to check or confine anything in motion; particularly one constructed to hold back water and raise its level to form a reservoir, or to prevent flooding. (IHO Dictionary -- S-32). 
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -20666,7 +20681,9 @@ Attribute Type: TextExpected input: Enter specific CommunicationChannel.
 
 Indication: Each Channel must be indicated in square brackets by 4 digits and up to 4 characters (A-Z).
 
-Format:**[**__XXX__**XXXXX]**(7 to 10 characters (mandatory))Example:*[VHF0007]* for VHF-Channel 7**[NBDP5555]** for Narrow Band Direct Printing Channel 5555Remarks:
+Format:**[**__XXX__**XXXXX]**(7 to 10 characters (mandatory))Example:*[VHF0007]* for VHF-Channel 7**[NBDP5555]** for Narrow Band Direct Printing Channel 5555
+
+[underline]#Remarks:#
 
 * The attribute "communication channel" encodes the various Channels used for all methods of radio communication.
 
@@ -20709,7 +20726,9 @@ IHO Definition: Detailed planning has been completed but construction has not be
 |===
 | IHO Definition: *CONTACT INSTRUCTIONS*. Instructions provided on how to contact a particular person, organisation or service.
 
-Attribute Type: TextRemarks:
+Attribute Type: Text
+
+[underline]#Remarks:#
 
 * Where required, *contact instructions* should also provide information on the access times for a particular person, organisation or service.
 * The attribute *contact instructions* should contain no more than 300 characters.
@@ -20793,7 +20812,9 @@ Format:YYYYMMDD (full date, *mandatory*)YYYYMM-- (no specific day required -- *m
 
 Attribute Type: TextIndication: The string encodes a recurring day each year that is not fixed in the Gregorian calendar.
 
-Example:*Fourth Thursday in November* **Easter Sunday**Remarks:
+Example:*Fourth Thursday in November* **Easter Sunday**
+
+[underline]#Remarks:#
 
 * The attribute *date variable* should contain no more than 150 characters.
 
@@ -20857,7 +20878,9 @@ Attribute Type: BooleanIndication: A True value is an indication that the identi
 |===
 | IHO Definition: *DEPTH RANGE MAXIMUM VALUE*. The maximum (deepest) value of a depth range. (S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.125, November 2000).
 
-Attribute Type: RealUnit: Metre (m)Precision: 0∙1mMinimum range: -30Maximum range: 12500Range closure: Open interval (_minimum <_ _*depth range maximum*_ _< maximum_)Example:*100* for a maximum depth of 100 metres**-0.5** for a deepest drying depth of 0.5 metresRemarks:
+Attribute Type: RealUnit: Metre (m)Precision: 0∙1mMinimum range: -30Maximum range: 12500Range closure: Open interval (_minimum <_ _*depth range maximum*_ _< maximum_)Example:*100* for a maximum depth of 100 metres**-0.5** for a deepest drying depth of 0.5 metres
+
+[underline]#Remarks:#
 
 * Depth range is the depth from a specified sounding datum as a depth interval bounded by the minimum (shoalest) and maximum (deepest) depth values. (Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2010).
 * Where the area dries, the value is negative or zero (0).
@@ -20871,7 +20894,9 @@ Attribute Type: RealUnit: Metre (m)Precision: 0∙1mMinimum range: -30Maximum ra
 |===
 | IHO Definition: *DEPTH RANGE MINIMUM VALUE*. The minimum (shoalest) value of a depth range. (S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.124, November 2000).
 
-Attribute Type: RealUnit: Metre (m)Precision: 0∙1mMinimum range: -30Maximum range: 12500Range closure: Open interval (_minimum <_ _*depth range minimum*_ _< maximum_)Example:*50* for a minimum depth of 50 metres**-3.5** for a minimum drying depth of 3.5 metresRemarks:
+Attribute Type: RealUnit: Metre (m)Precision: 0∙1mMinimum range: -30Maximum range: 12500Range closure: Open interval (_minimum <_ _*depth range minimum*_ _< maximum_)Example:*50* for a minimum depth of 50 metres**-3.5** for a minimum drying depth of 3.5 metres
+
+[underline]#Remarks:#
 
 * Depth range is the depth from a specified sounding datum as a depth interval bounded by the minimum (shoalest) and maximum (deepest) depth values. (Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2010).
 * Where the area dries, the value is negative.
@@ -20885,7 +20910,9 @@ Attribute Type: RealUnit: Metre (m)Precision: 0∙1mMinimum range: -30Maximum ra
 |===
 | IHO Definition: *DESTINATION*. The place or general direction to which a vessel is going or directed.
 
-Attribute Type: TextIndication:Remarks:
+Attribute Type: TextIndication:
+
+[underline]#Remarks:#
 
 * The attribute *destination* should contain no more than 100 characters.
 
@@ -20962,7 +20989,9 @@ Format:YYYYMMDD (full date, *mandatory*)YYYYMM-- (no specific day required -- *m
 
 Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: metre (m).
 
-Precision: 0∙1mMinimum range: 0Maximum range: 8850Range closure: Closed interval (_minimum ≤_ _*elevation*_ _≤ maximum_)Example:*47* for an elevation of 47 metresRemarks:
+Precision: 0∙1mMinimum range: 0Maximum range: 8850Range closure: Closed interval (_minimum ≤_ _*elevation*_ _≤ maximum_)Example:*47* for an elevation of 47 metres
+
+[underline]#Remarks:#
 
 ** No remarks.
 
@@ -20975,7 +21004,9 @@ Precision: 0∙1mMinimum range: 0Maximum range: 8850Range closure: Closed interv
 |===
 | IHO Definition: *ESTIMATED RANGE OF TRANSMISSION*. The estimated range of a non-optical electromagnetic transmission. (S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.128, November 2000).
 
-Attribute Type: RealUnit: Nautical mile (M) Precision: 0∙1MMinimum range: 0Maximum range: 1000Range closure: Open interval (_minimum <_ _*estimated range of transmission*_ _< maximum_)Example:*45* for a maximum range of 45 nautical milesRemarks:
+Attribute Type: RealUnit: Nautical mile (M) Precision: 0∙1MMinimum range: 0Maximum range: 1000Range closure: Open interval (_minimum <_ _*estimated range of transmission*_ _< maximum_)Example:*45* for a maximum range of 45 nautical miles
+
+[underline]#Remarks:#
 
 * The estimated range (distance) assumes "in vacuo" transmission and a standard antenna height of 5 metres. Thus it gives a hint to the mariner whether they are likely to receive transmission at a certain distance from a feature carrying this attribute.
 
@@ -21041,7 +21072,9 @@ IHO Definition: The depth is deeper than the maximum depth of the surrounding de
 
 Attribute Type: TextIndication: For S-101, the string encodes the location of a single fragment of text or other information contained in an ENC support file.
 
-Example:**p-224.105(a)(1)**Remarks:
+Example:**p-224.105(a)(1)**
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -21058,7 +21091,9 @@ Attribute Type: TextIndication: For S-101, the string encodes the file name of a
 
 Format:*101CCCCØØØØØØØØØØ.
 
-EEE*(See S-101 Main document, clause 11.4.3 (mandatory))Remarks:
+EEE*(See S-101 Main document, clause 11.4.3 (mandatory))
+
+[underline]#Remarks:#
 
 * The attribute *file reference* indicates that a file containing text extracted from relevant pilot books or nautical publications is available.
 * The files referenced by *file reference* must be.
@@ -21077,7 +21112,9 @@ TXT and may contain formatted text.
 
 Attribute Type: IntegerIndication:Indicates the bearing of the light flare to be included in the data for ECDIS display purposes where different from the defaults. The value encoded corresponds to a bearing away from the position of the light.
 
-Unit: Degree (°)Minimum range: 0Maximum range: 360Range closure: Right half-open interval (_minimum ≤_ _*flare bearing*_ _< maximum_)Example:*270* for an flare bearing of 270 degrees away from the lightRemarks:
+Unit: Degree (°)Minimum range: 0Maximum range: 360Range closure: Right half-open interval (_minimum ≤_ _*flare bearing*_ _< maximum_)Example:*270* for an flare bearing of 270 degrees away from the light
+
+[underline]#Remarks:#
 
 * The attribute *flare bearing* may be populated to cartographically align light flares where it is required to display the flare at a different bearing from the default. For example, *flare bearing* may be populated to align the flare along a transit or leading line (noting that in such cases the bearing to be encoded will be the reciprocal (+/- 180 of the bearing encoded for the navigational line); or to avoid other important encoded information.
 * The default bearing of a light flare (135°) is provided as a function of the S-101 Portrayal Catalogue. Where two all-around lights are collocated, one of the light flares is displayed at a bearing of 45°, also as a function of the S-101 Portrayal Catalogue, as follows:
@@ -21109,7 +21146,9 @@ Attribute Type: BooleanIndication: A True value is an indication that the offsho
 |===
 | IHO Definition: *FREQUENCY SHORE STATION RECEIVES*. The shore station receiver frequency. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.187, November 2000).
 
-Attribute Type: IntegerUnit: Hertz (Hz)Minimum range: 0Range closure: Left half-open ray (_minimum <_ _*frequency shore station receives*_)Example:*950000000* for a radio signal centred on 950 MHzRemarks:
+Attribute Type: IntegerUnit: Hertz (Hz)Minimum range: 0Range closure: Left half-open ray (_minimum <_ _*frequency shore station receives*_)Example:*950000000* for a radio signal centred on 950 MHz
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -21122,7 +21161,9 @@ Attribute Type: IntegerUnit: Hertz (Hz)Minimum range: 0Range closure: Left half-
 |===
 | IHO Definition: *FREQUENCY SHORE STATION TRANSMITS*. The shore station transmitter frequency. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.187, November 2000).
 
-Attribute Type: IntegerUnit: Hertz (Hz)Minimum range: 0Range closure: Left half-open ray (_minimum <_ _*frequency shore station transmits*_)Example:*950000000* for a radio signal centred on 950 MHzRemarks:
+Attribute Type: IntegerUnit: Hertz (Hz)Minimum range: 0Range closure: Left half-open ray (_minimum <_ _*frequency shore station transmits*_)Example:*950000000* for a radio signal centred on 950 MHz
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -21290,7 +21331,9 @@ IHO Definition: A facility to move solids, liquids or gases by means of pressure
 
 Attribute Type: TextIndication: The string encodes the heading relevant to a text string or information contained in an ENC support file.
 
-Example:**Description of table format for S-101 meta and geo features**Remarks:
+Example:**Description of table format for S-101 meta and geo features**
+
+[underline]#Remarks:#
 
 * The attribute *headline* should contain no more than 100 characters.
 
@@ -21303,7 +21346,9 @@ Example:**Description of table format for S-101 meta and geo features**Remarks:
 |===
 | IHO Definition: *HEIGHT*. The value of the vertical distance to the highest point of the feature, measured from a specified vertical datum. (S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.134, November 2000).
 
-Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: metre (m)Precision: 0∙1mMinimum range: 0Maximum range: 8850Range closure: Left half-open interval (_minimum <_ _*height*_ _≤ maximum_)Example:*73* for a height of 73 metresRemarks:
+Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: metre (m)Precision: 0∙1mMinimum range: 0Maximum range: 8850Range closure: Left half-open interval (_minimum <_ _*height*_ _≤ maximum_)Example:*73* for a height of 73 metres
+
+[underline]#Remarks:#
 
 * Height must not be used for floating features.
 
@@ -21316,7 +21361,9 @@ Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: m
 |===
 | IHO Definition: *HORIZONTAL CLEARANCE LENGTH*. The length of a feature, such as a lock or basin, which is available for safe navigation. This may, or may not, be the same as the total physical length of the feature. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.137, November 2000).
 
-Attribute Type: Real[[OLE_LINK5]][[OLE_LINK4]]Unit: Defined as an attribute in the ENC dataset metadata: metre (m)Precision: 0∙1mMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*horizontal clearance length*_)Example:*75* for a horizontal clearance length of 75 metresRemarks:
+Attribute Type: Real[[OLE_LINK5]][[OLE_LINK4]]Unit: Defined as an attribute in the ENC dataset metadata: metre (m)Precision: 0∙1mMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*horizontal clearance length*_)Example:*75* for a horizontal clearance length of 75 metres
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -21329,7 +21376,9 @@ Attribute Type: Real[[OLE_LINK5]][[OLE_LINK4]]Unit: Defined as an attribute in t
 |===
 | IHO Definition: *HORIZONTAL CLEARANCE VALUE*. The physical horizontal clearance distance between two points on a feature, such as a bridge span, dock, gate, lock or tunnel.
 
-Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: metre (m)Precision: 0∙1mMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*horizontal clearance value*_)Example:*125* for a horizontal clearance of 125 metresRemarks:
+Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: metre (m)Precision: 0∙1mMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*horizontal clearance value*_)Example:*125* for a horizontal clearance of 125 metres
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -21342,7 +21391,9 @@ Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: m
 |===
 | IHO Definition: *HORIZONTAL CLEARANCE WIDTH*. The width of a feature, such as a lock or basin, which is available for safe navigation. This may, or may not, be the same as the total physical width of the feature. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.137, November 2000).
 
-Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: metre (m)Precision: 0∙1mMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*horizontal clearance width*_)Example:*30* for a horizontal clearance width of 30 metresRemarks:
+Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: metre (m)Precision: 0∙1mMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*horizontal clearance width*_)Example:*30* for a horizontal clearance width of 30 metres
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -21355,7 +21406,9 @@ Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: m
 |===
 | IHO Definition: *HORIZONTAL LENGTH*. A measurement of the longer of two linear axis. (Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2010).
 
-Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: metre (m)Precision: 0∙1mMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*horizontal length*_)Example:*95* for a length of 95 metresRemarks:
+Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: metre (m)Precision: 0∙1mMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*horizontal length*_)Example:*95* for a length of 95 metres
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -21368,7 +21421,9 @@ Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: m
 |===
 | IHO Definition: *HORIZONTAL WIDTH*. A measurement of the shorter of two linear axis. (Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2010).
 
-Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: metre (m)Precision: 0∙1mMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*horizontal width*_)Example:*12.6* for a width of 12.6 metresRemarks:
+Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: metre (m)Precision: 0∙1mMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*horizontal width*_)Example:*12.6* for a width of 12.6 metres
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -21426,7 +21481,9 @@ Attribute Type: BooleanIndication: A True value is an indication that the area d
 
 Attribute Type: Universal Resource Name (URN)Indication: The identifier is encoded using the Maritime Resource Name (MRN) concept and namespace, administered by IALA, that follows the syntax and semantics for URNs specified in RFC 2141.
 
-Format:*urn:mrn:*_[Organisational ID]_*:*…*:*... (mandatory)Example:**urn:mrn:iho:mc:1234.5**Remarks:
+Format:*urn:mrn:*_[Organisational ID]_*:*…*:*... (mandatory)Example:**urn:mrn:iho:mc:1234.5**
+
+[underline]#Remarks:#
 
 * For further information regarding MRNs, see S-100 Part 3, clause 3-10.
 
@@ -21480,7 +21537,9 @@ IHO Definition: An area smaller than the nation in which it lies. (S-57 Edition 
 
 Attribute Type: TextIndication: The language is encoded by a character code following ISO 639-2/T.
 
-Format: c3 (mandatory)Example:*eng* for EnglishRemarks:
+Format: c3 (mandatory)Example:*eng* for English
+
+[underline]#Remarks:#
 
 * The attribute *language* indicates the language of the specific text.
 
@@ -21493,7 +21552,9 @@ Format: c3 (mandatory)Example:*eng* for EnglishRemarks:
 |===
 | IHO Definition: *LIFTING CAPACITY*. The specific safe lifting capacity of a feature. (S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.145, November 2000).
 
-Attribute Type: RealUnit: Tonne (t)Precision: 0∙1tMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*lifting capacity*_)Example:*120* for a lifting capacity of 120 tonnesRemarks:
+Attribute Type: RealUnit: Tonne (t)Precision: 0∙1tMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*lifting capacity*_)Example:*120* for a lifting capacity of 120 tonnes
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -21642,7 +21703,9 @@ IHO Definition: Lights that must be in line to be visible.
 
 Attribute Type: URIIndication: Character encoding of a URI must follow the syntax rules defined in RFC 3986.
 
-Format:*http://*..... or *https://*..... (mandatory)Example:https://www.iho.int/[**https://www.iho.int**]Remarks:
+Format:*http://*..... or *https://*..... (mandatory)Example:https://www.iho.int/[**https://www.iho.int**]
+
+[underline]#Remarks:#
 
 * For S-101, the attribute type URI is constrained to conformance with the HTTP or HTTPS protocols; that is, the character string must commence with _http://_ or _https://_.
 
@@ -21655,7 +21718,9 @@ Format:*http://*..... or *https://*..... (mandatory)Example:https://www.iho.int/
 |===
 | IHO Definition: *MAGNETIC ANOMALY VALUE*. The value of the deviation from the normal magnetic variation. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.228, November 2000).
 
-Attribute Type: RealUnit: Degree ()Precision: 0.1Minimum range: 0Maximum range: 180Range closure: Left half-open interval (_minimum <_ _*magnetic anomaly value*_ _≤ maximum_)Example:*5* for a deviation of 5 degreesRemarks:
+Attribute Type: RealUnit: Degree ()Precision: 0.1Minimum range: 0Maximum range: 180Range closure: Left half-open interval (_minimum <_ _*magnetic anomaly value*_ _≤ maximum_)Example:*5* for a deviation of 5 degrees
+
+[underline]#Remarks:#
 
 * The deviation is assumed to be positive and negative by default. The plus/minus character must not be encoded.
 
@@ -21710,7 +21775,9 @@ IHO Definition: Navigational aids as required in international, national or regi
 |===
 | IHO Definition: *MAXIMUM PERMITTED DRAUGHT*. The maximum draught of a vessel permitted along a route, in a channel or dock, at a berth, or over a submerged feature.
 
-Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: metre (m)Precision: 0∙1mMinimum range: 0Maximum range: 30Range closure: Left half-open interval (_minimum <_ _*maximum permitted draught*_ _≤ maximum_)Example:*14.5* for a maximum permitted draught of 14·5 metresRemarks:
+Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: metre (m)Precision: 0∙1mMinimum range: 0Maximum range: 30Range closure: Left half-open interval (_minimum <_ _*maximum permitted draught*_ _≤ maximum_)Example:*14.5* for a maximum permitted draught of 14·5 metres
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -21723,7 +21790,9 @@ Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: m
 |===
 | IHO Definition: *MAXIMUM PERMITTED VESSEL LENGTH*. The maximum length of a vessel permitted in a channel or dock, at a berth, or at an anchorage or mooring.
 
-Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: metre (m)Precision: 0∙1mMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*maximum permitted vessel length*_)Example:*30.5* for a maximum permitted vessel length of 30·5 metresRemarks:
+Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: metre (m)Precision: 0∙1mMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*maximum permitted vessel length*_)Example:*30.5* for a maximum permitted vessel length of 30·5 metres
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -21736,7 +21805,9 @@ Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: m
 |===
 | IHO Definition: *MEASURED DISTANCE*. A course at sea, whose ends are indicated by ranges ashore, and whose length has been accurately measured for determining the speed of vessels. (IHO Dictionary -- S-32).
 
-Attribute Type: IntegerUnit: Defined as an attribute in the ENC dataset metadata: metre (m)Minimum range: 0Range closure: Left half-open ray (_minimum <_ _*measured distance*_)Example:*1445* for a measured distance of 1445 metresRemarks:
+Attribute Type: IntegerUnit: Defined as an attribute in the ENC dataset metadata: metre (m)Minimum range: 0Range closure: Left half-open ray (_minimum <_ _*measured distance*_)Example:*1445* for a measured distance of 1445 metres
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -21749,7 +21820,9 @@ Attribute Type: IntegerUnit: Defined as an attribute in the ENC dataset metadata
 |===
 | IHO Definition: *MINIMUM BERTH DEPTH*. The least depth of the body of water at the berth or in a berth pocket adjacent to the berth. (IHO Nautical Information Provision Working Group, 2022).
 
-Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: metre (m)Precision: 0∙1mMinimum range: 0Maximum range: 30Range closure: Left half-open interval (_minimum <_ _*minimum berth depth*_ _≤ maximum_)Example:*14.6* for a minimum berth depth of 14.6 metresRemarks:
+Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: metre (m)Precision: 0∙1mMinimum range: 0Maximum range: 30Range closure: Left half-open interval (_minimum <_ _*minimum berth depth*_ _≤ maximum_)Example:*14.6* for a minimum berth depth of 14.6 metres
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -21764,7 +21837,9 @@ Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: m
 
 Attribute Type: TextIndication: MMSI code (c…): String of nine characters.
 
-Example:**366777490**Remarks:
+Example:**366777490**
+
+[underline]#Remarks:#
 
 * The attribute *MMSI code* must contain exactly 9 characters.
 
@@ -21811,7 +21886,9 @@ Attribute Type: TextIndication: Name of feature (c…): String of characters.
 
 Format:c...
 
-Example:**Monaco**Remarks:
+Example:**Monaco**
+
+[underline]#Remarks:#
 
 * The attribute *name* encodes the individual name of a feature (see clause 2.5.8).
 * The attribute *name* should contain no more than 75 characters.
@@ -21829,7 +21906,9 @@ Attribute Type: TextIndication: String of characters.
 
 Format:c...
 
-Example:**International Hydrographic Organization**Remarks:
+Example:**International Hydrographic Organization**
+
+[underline]#Remarks:#
 
 * The attribute *name of resource* encodes the name of an online resource. The URL/URI for accessing the resource is populated using the attribute *linkage*.
 * The attribute *name of resource* should contain no more than 100 characters.
@@ -21866,7 +21945,9 @@ IHO Definition: The name is intended to be displayed when the end-user system is
 
 Attribute Type: TextIndication: The nationality is encoded by a 2 character code following ISO 3166 (refer to S-57 Appendix A).
 
-Format: c2 (mandatory)Example:*AU* for Australia**US** for the United States of AmericaRemarks:
+Format: c2 (mandatory)Example:*AU* for Australia**US** for the United States of America
+
+[underline]#Remarks:#
 
 * The attribute "nationality" indicates the nationality of the specific feature.
 * Where it is required to encode multiple nationalities relevant to a single feature (for example, for a maritime jurisdiction area that is in dispute between two Coastal States), this must be done by populating multiple instances of *nationality*.
@@ -22026,7 +22107,9 @@ IHO Definition: Firm; usually refers to an area of the seafloor not covered by u
 |===
 | IHO Definition: *NUMBER OF FEATURES*. The number of features of identical character that exist as a co-located group. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.150, November 2000).
 
-Attribute Type: IntegerUnit: NoneMinimum range: 2Range closure: Left closed ray (_minimum ≤_ _*number of features*_)Example:*3* for 3 co-located cablesRemarks:
+Attribute Type: IntegerUnit: NoneMinimum range: 2Range closure: Left closed ray (_minimum ≤_ _*number of features*_)Example:*3* for 3 co-located cables
+
+[underline]#Remarks:#
 
 * The attribute *number of features* must only be used to indicate the number of entities of a feature, where known, that are co-located (for example 3 overhead cables suspended over a body of water between 2 pylons), and this information is considered to be of use to the Mariner. Where possible, features must be encoded individually.
 
@@ -22054,7 +22137,9 @@ Attribute Type: BooleanIndication: A True value is an indication that one or mor
 |===
 | IHO Definition: *ORIENTATION VALUE*. The angular distance measured from true north to the major axis of the feature. (Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2010).
 
-Attribute Type: RealUnit: Degree (°)Precision: 0∙01°Minimum range: 0Maximum range: 360Range closure: Right half-open interval (_minimum ≤_ _*orientation value*_ _< maximum_)Example:*246.7* for an orientation value of 246∙7 degreesRemarks:
+Attribute Type: RealUnit: Degree (°)Precision: 0∙01°Minimum range: 0Maximum range: 360Range closure: Right half-open interval (_minimum ≤_ _*orientation value*_ _< maximum_)Example:*246.7* for an orientation value of 246∙7 degrees
+
+[underline]#Remarks:#
 
 * An orientation quoted as 360° must be encoded as _0_.
 
@@ -22071,7 +22156,9 @@ Attribute Type: TextIndication: For S-101, the string encodes the file name of a
 
 Format:*101CCCCØØØØØØØØØØ.
 
-EEE*(See S-101 Main document, clause 11.4.3 (mandatory))Remarks:
+EEE*(See S-101 Main document, clause 11.4.3 (mandatory))
+
+[underline]#Remarks:#
 
 * The attribute *pictorial representation* indicates that a file containing an image is available.
 * The "pictorial representation" image can, for example, be a drawing or a photo.
@@ -22221,7 +22308,9 @@ Format:C(mandatory)Example:*X* for the (X) - Band.
 
 Attribute Type: BooleanIndication: A True value is an indication that the feature returns a strong radar echo.
 
-Default value:__False__Remarks:
+Default value:__False__
+
+[underline]#Remarks:#
 
 * *Radar conspicuous* applies to both features that themselves provide a strong radar echo; or return a strong radar echo as a result of being fitted with a radar reflector or a Radar Target Enhancer.
 
@@ -22234,7 +22323,9 @@ Default value:__False__Remarks:
 |===
 | IHO Definition: *RADIUS*. The vector extending from the centre to the periphery of a circular or spherical feature. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.173, November 2000).
 
-Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: metre (m)Precision: 0∙1mMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*radius*_)Example:*26* for a radius of 26 metresRemarks:
+Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: metre (m)Precision: 0∙1mMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*radius*_)Example:*26* for a radius of 26 metres
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -22330,7 +22421,9 @@ IHO Definition:The tides of mean range occurring between spring and neap tides.
 |===
 | IHO Definition: *REFERENCE YEAR FOR MAGNETIC VARIATION*. The reference calendar year for magnetic variation values. (S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.176, November 2000).
 
-Attribute Type: Truncated dateUnit: Four digit year indication (YYYY)Format: YYYY----Example:**2009----**Remarks:
+Attribute Type: Truncated dateUnit: Four digit year indication (YYYY)Format: YYYY----Example:**2009----**
+
+[underline]#Remarks:#
 
 ** The dashes (----) must be included in all cases.
 
@@ -22347,7 +22440,9 @@ Attribute Type: TextIndication: Regulation citation (c...).
 
 Format:c...
 
-Example:**CFR 33.88.810**Remarks:
+Example:**CFR 33.88.810**
+
+[underline]#Remarks:#
 
 * The attribute *regulation citation* should contain no more than 50 characters.
 
@@ -22503,7 +22598,9 @@ The *scale minimum* value of a feature determines the display scale below which 
 |===
 | IHO Definition: *SECTOR BEARING*. A sector is the part of a circle between two straight lines drawn from the centre to the circumference. (Advanced Learner's Dictionary, 2nd Edition).*sector bearing* specifies the limit of the sector. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.184, November 2000).
 
-Attribute Type: RealUnit: Degree (°) Precision: 0∙01°Minimum range: 0Maximum range: 360Range closure: Right half-open interval (_minimum ≤_ _*sector bearing*_ _< maximum_)Example:*125* for a sector bearing of 125 degreesRemarks:
+Attribute Type: RealUnit: Degree (°) Precision: 0∙01°Minimum range: 0Maximum range: 360Range closure: Right half-open interval (_minimum ≤_ _*sector bearing*_ _< maximum_)Example:*125* for a sector bearing of 125 degrees
+
+[underline]#Remarks:#
 
 * The values given to the common limits of adjacent sectors should be identical.
 * The orientation of the bearing is from seaward to the central feature. This conforms with the method used in "List of Lights" publications.
@@ -22519,7 +22616,9 @@ Attribute Type: RealUnit: Degree (°) Precision: 0∙01°Minimum range: 0Maximum
 |===
 | IHO Definition: *SECTOR LINE LENGTH*. A sector is the part of a circle between two straight lines drawn from the centre to the circumference. (Advanced Learner's Dictionary, 2nd Edition).*sector line length* specifies the displayed length of the line, in ground units, defining the limit of the sector.
 
-Attribute Type: RealUnit: Nautical mile (M) Precision: 0.01MMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*sector line length*_)Example:*5.15* for a sector line length of 5.15 nautical milesRemarks:
+Attribute Type: RealUnit: Nautical mile (M) Precision: 0.01MMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*sector line length*_)Example:*5.15* for a sector line length of 5.15 nautical miles
+
+[underline]#Remarks:#
 
 * The attribute *sector line length* is used to override the default sector line length in ECDIS for light sectors that are considered to be particularly critical to safe navigation.
 * Sector lines should be displayed such that they cover the area where they are useful to Mariners.
@@ -22534,7 +22633,9 @@ Attribute Type: RealUnit: Nautical mile (M) Precision: 0.01MMinimum range: 0Rang
 |===
 | IHO Definition: *SIGNAL DURATION*. The time occupied by a single instance of light/sound or eclipse/silence in a signal sequence.
 
-Attribute Type: RealUnit: Seconds (s)Precision: 0∙01sMinimum range: 0Maximum range: 60Range closure: Left half-open interval (_minimum <_ _*signal duration*_ _≤ maximum_)Example:*2.5* for an duration of 2·5 secondsRemarks:
+Attribute Type: RealUnit: Seconds (s)Precision: 0∙01sMinimum range: 0Maximum range: 60Range closure: Left half-open interval (_minimum <_ _*signal duration*_ _≤ maximum_)Example:*2.5* for an duration of 2·5 seconds
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -22547,7 +22648,9 @@ Attribute Type: RealUnit: Seconds (s)Precision: 0∙01sMinimum range: 0Maximum r
 |===
 | IHO Definition: *SIGNAL FREQUENCY*. The frequency of a signal. (S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.187, November 2000).
 
-Attribute Type: IntegerUnit: Hertz (Hz)Minimum range: 0Range closure: Left half-open ray (_minimum <_ _*signal frequency*_)Example:*950000000* for a radio signal centred on 950 MHzRemarks:
+Attribute Type: IntegerUnit: Hertz (Hz)Minimum range: 0Range closure: Left half-open ray (_minimum <_ _*signal frequency*_)Example:*950000000* for a radio signal centred on 950 MHz
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -22601,7 +22704,9 @@ Where no specific signal group is given for one of the light characteristics, th
 
 Format: (c)(c)...
 
-Examples:Light CharacteristicSignal GroupVQ(6)+LFl -> **(6)(1)**LFl+Fl(2+3) -> **(1)(2+3)**Fl(2)+LFl -> **(2)(1)**FFl -> **()(1)**Mo(AA) -> **(AA)**AlFl(2W+1R) -> **(2+1)**AlLFlWR -> **(1)**FOcW -> **()(1)**AlOc(4)WR -> **(4)**AlWR -> **()**Iso -> **(1)**IQ -> **()**Remarks:
+Examples:Light CharacteristicSignal GroupVQ(6)+LFl -> **(6)(1)**LFl+Fl(2+3) -> **(1)(2+3)**Fl(2)+LFl -> **(2)(1)**FFl -> **()(1)**Mo(AA) -> **(AA)**AlFl(2W+1R) -> **(2+1)**AlLFlWR -> **(1)**FOcW -> **()(1)**AlOc(4)WR -> **(4)**AlWR -> **()**Iso -> **(1)**IQ -> **()**
+
+[underline]#Remarks:#
 
 * In the above examples, where there is more than one group included in the rhythm of the light (for example (6)(1)), each group is encoded using a separate instance of **signal group**; in this case the first instance of *signal group* would be _(6)_ and the second instance would be _(1)_.
 * The attribute *signal group* should contain no more than 15 characters.
@@ -22615,7 +22720,9 @@ Examples:Light CharacteristicSignal GroupVQ(6)+LFl -> **(6)(1)**LFl+Fl(2+3) -> *
 |===
 | IHO Definition: *SIGNAL PERIOD*. The time occupied by an entire cycle of intervals of light and eclipse. (S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.190, November 2000).
 
-Attribute Type: RealUnit: Seconds (s)Precision: 0∙01sMinimum range: 0Maximum range: 120Range closure: Left half-open interval (_minimum <_ _*signal period*_ _≤ maximum_)Example:*12* for an interval of 12 secondsRemarks:
+Attribute Type: RealUnit: Seconds (s)Precision: 0∙01sMinimum range: 0Maximum range: 120Range closure: Left half-open interval (_minimum <_ _*signal period*_ _≤ maximum_)Example:*12* for an interval of 12 seconds
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -22651,7 +22758,9 @@ IHO Definition: The indication of an element of a signal sequence being a period
 
 Attribute Type: RealUnit: Defined by complex attribute **vessel speed limit**, sub-attribute *speed units* (see clause 27.168).
 
-Precision: 0∙1Minimum range: 0Maximum range: 35Range closure: Left half-open interval (_minimum <_ _*speed limit*_ _≤ maximum_)Example:*4.5* for a speed limit of 4.5 knots (or other speed unit of measure as defined by *speed units*)Remarks:
+Precision: 0∙1Minimum range: 0Maximum range: 35Range closure: Left half-open interval (_minimum <_ _*speed limit*_ _≤ maximum_)Example:*4.5* for a speed limit of 4.5 knots (or other speed unit of measure as defined by *speed units*)
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -22666,7 +22775,9 @@ Precision: 0∙1Minimum range: 0Maximum range: 35Range closure: Left half-open i
 
 Speed maximum is the maximum rate of travel that can occur. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.121, November 2000).
 
-Attribute Type: RealUnit: Knot (kt)Precision: 0∙1ktMinimum range: 0Maximum range: 35Range closure: Left half-open interval (_minimum <_ _*speed maximum*_ _≤ maximum_)Example:*2.1* for a maximum speed of 2·1 knotsRemarks:
+Attribute Type: RealUnit: Knot (kt)Precision: 0∙1ktMinimum range: 0Maximum range: 35Range closure: Left half-open interval (_minimum <_ _*speed maximum*_ _≤ maximum_)Example:*2.1* for a maximum speed of 2·1 knots
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -22681,7 +22792,9 @@ Attribute Type: RealUnit: Knot (kt)Precision: 0∙1ktMinimum range: 0Maximum ran
 
 Speed minimum is the minimum rate of travel that can occur. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.121, November 2000).
 
-Attribute Type: RealUnit: Knot (kt)Precision: 0∙1ktMinimum range: 0Maximum range: 20Range closure: Left half-open interval (_minimum <_ _*speed minimum*_ _≤ maximum_)Example:*1.6* for a maximum speed of 1·6 knotsRemarks:
+Attribute Type: RealUnit: Knot (kt)Precision: 0∙1ktMinimum range: 0Maximum range: 20Range closure: Left half-open interval (_minimum <_ _*speed minimum*_ _≤ maximum_)Example:*1.6* for a maximum speed of 1·6 knots
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -22825,7 +22938,9 @@ IHO Definition: Marked by buoys. (Australian Hydrographic Office).
 |===
 | IHO Definition: *STREAM DEPTH*. The depth below the sea surface to which the tidal stream data refers relative to the sounding datum.
 
-Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: metre (m)Precision: 0∙1mMinimum range: 0Maximum range: 200Range closure: Closed interval (_minimum ≤_ _*stream depth*_ _≤ maximum_)Examples:*0* for surface tidal stream data**15** for tidal stream data collected at a depth of 15 metresRemarks:
+Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: metre (m)Precision: 0∙1mMinimum range: 0Maximum range: 200Range closure: Closed interval (_minimum ≤_ _*stream depth*_ _≤ maximum_)Examples:*0* for surface tidal stream data**15** for tidal stream data collected at a depth of 15 metres
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -22917,7 +23032,9 @@ IHO Definition:The given area was determined to be free from navigational danger
 
 Attribute Type: TextIndication:Format:c...
 
-Example:**+61 2 4223 6500**; **pilsener@beer.com**Remarks:
+Example:**+61 2 4223 6500**; **pilsener@beer.com**
+
+[underline]#Remarks:#
 
 * The telecommunication identifier should include the international and any applicable regional codes.
 * The attribute *telecommunication identifier* should contain no more than 50 characters.
@@ -22970,7 +23087,9 @@ IHO Definition: Messages and other data exchanged between individuals using comp
 |===
 | IHO Definition: *TEXT*. A non-formatted digital text string.
 
-Attribute Type: TextIndication:Remarks:
+Attribute Type: TextIndication:
+
+[underline]#Remarks:#
 
 * This attribute should be used, for example, to hold the information that is shown on paper charts by short cautionary or explanatory notes. Therefore, text populated in *text* must not exceed 300 characters.
 * Text may be in English, or in a national language defined by the attribute *language* (see clause 27.117).
@@ -22985,7 +23104,9 @@ Attribute Type: TextIndication:Remarks:
 |===
 | IHO Definition: *TEXT OFFSET BEARING*. The angular distance measured from true north that text associated with a feature is positioned from the feature in an end-user system.
 
-Attribute Type: IntegerUnit: Degree (°)Minimum range: 0Maximum range: 360Range closure: Right half-open interval (_minimum ≤_ _*text offset bearing*_ _< maximum_)Example:*246* for a text offset bearing of 246 degreesRemarks:
+Attribute Type: IntegerUnit: Degree (°)Minimum range: 0Maximum range: 360Range closure: Right half-open interval (_minimum ≤_ _*text offset bearing*_ _< maximum_)Example:*246* for a text offset bearing of 246 degrees
+
+[underline]#Remarks:#
 
 * An orientation quoted as 360° must be encoded as _0_.
 * The attribute *text offset bearing* only defines the bearing to the anchor point of the text in the end-user system. It does not impact on the rotation of the text itself (that is, text is always displayed horizontally on the screen).
@@ -23001,7 +23122,9 @@ Attribute Type: IntegerUnit: Degree (°)Minimum range: 0Maximum range: 360Range 
 
 Attribute Type: IntegerUnit: Defined in relation to the desired distance in the ECDIS display from the associated feature at the optimum display scale of the ENC data in millimetres (mm).
 
-Minimum range: 0Maximum range: 50Range closure: Left half-open interval (_minimum <_ _*text offset distance*_ _≤ maximum_)Example:*15* for a text offset of 15 mmRemarks:
+Minimum range: 0Maximum range: 50Range closure: Left half-open interval (_minimum <_ _*text offset distance*_ _≤ maximum_)Example:*15* for a text offset of 15 mm
+
+[underline]#Remarks:#
 
 * None.
 
@@ -23085,7 +23208,9 @@ Format: hhmmssZ *(mandatory* for UTC time**)**hhmmss+hhmm *(mandatory* for local
 |===
 | IHO Definition: *TIME RELATIVE TO TIDE*. The time difference relative to the reference tide.
 
-Attribute Type: RealUnit: Hour Precision: 0∙1 hourMinimum range: -6Maximum range: 6Range closure: Closed interval (_minimum ≤_ _*tide relative to tide*_ _≤ maximum_)Example:*1.5* for 1·5 hours after the referenced tide**-1.5** for 1·5 hours before the referenced tideRemarks:
+Attribute Type: RealUnit: Hour Precision: 0∙1 hourMinimum range: -6Maximum range: 6Range closure: Closed interval (_minimum ≤_ _*tide relative to tide*_ _≤ maximum_)Example:*1.5* for 1·5 hours after the referenced tide**-1.5** for 1·5 hours before the referenced tide
+
+[underline]#Remarks:#
 
 * Positive values are time after the referenced tide, negative values are time before the referenced tide.
 
@@ -23262,7 +23387,9 @@ Minimum range: 0Maximum range: 5Range closure: Left half-open interval (_minimum
 |===
 | IHO Definition: *VALUE OF ANNUAL CHANGE IN MAGNETIC VARIATION*. The annual change in magnetic variation values. (S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.226, November 2000).
 
-Attribute Type: RealUnit: minute ('), negative westPrecision: 0.1'Minimum range: -1200Maximum range: 1200Range closure: Closed interval (_minimum ≤_ _*value of annual change in magnetic variation*_ _≤ maximum_)Example:*-7.1* for an annual change of 7·1' in a westerly directionRemarks:
+Attribute Type: RealUnit: minute ('), negative westPrecision: 0.1'Minimum range: -1200Maximum range: 1200Range closure: Closed interval (_minimum ≤_ _*value of annual change in magnetic variation*_ _≤ maximum_)Example:*-7.1* for an annual change of 7·1' in a westerly direction
+
+[underline]#Remarks:#
 
 ** A positive value; that is, unsigned, indicates a change in an easterly direction and a negative value indicates a change in a westerly direction.
 
@@ -23275,7 +23402,9 @@ Attribute Type: RealUnit: minute ('), negative westPrecision: 0.1'Minimum range:
 |===
 | IHO Definition: *VALUE OF DEPTH CONTOUR*. The depth of a sea bottom contour. (S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.227, November 2000).
 
-Attribute Type: RealUnit: metre (m)Precision: 0∙1mMinimum range: -30Maximum range: 12500Range closure: Open interval (_minimum <_ _*value of depth contour*_ _< maximum_)Example:*50* for a depth contour of 50 metresRemarks:
+Attribute Type: RealUnit: metre (m)Precision: 0∙1mMinimum range: -30Maximum range: 12500Range closure: Open interval (_minimum <_ _*value of depth contour*_ _< maximum_)Example:*50* for a depth contour of 50 metres
+
+[underline]#Remarks:#
 
 * Drying contours are indicated by a negative value.
 
@@ -23288,7 +23417,9 @@ Attribute Type: RealUnit: metre (m)Precision: 0∙1mMinimum range: -30Maximum ra
 |===
 | IHO Definition: *VALUE OF MAGNETIC VARIATION*. The angle between the magnetic and geographical meridians at any place, expressed in degrees east or west to indicate the direction of magnetic north from true north. (IHO Dictionary -- S-32).
 
-Attribute Type: RealUnit: degree (°), negative westPrecision: 0.01°Minimum range: -180Maximum range: 180Range closure: Left half-open interval (_minimum <_ _*value of magnetic variation*_ _≤ maximum_)Example:*2.3* for a magnetic north oriented at 2.3 degrees (2°18') east from the geographic (true) north-*1.5* for a magnetic north oriented at 2.3 degrees (1°30') west from the geographic (true) northRemarks:
+Attribute Type: RealUnit: degree (°), negative westPrecision: 0.01°Minimum range: -180Maximum range: 180Range closure: Left half-open interval (_minimum <_ _*value of magnetic variation*_ _≤ maximum_)Example:*2.3* for a magnetic north oriented at 2.3 degrees (2°18') east from the geographic (true) north-*1.5* for a magnetic north oriented at 2.3 degrees (1°30') west from the geographic (true) north
+
+[underline]#Remarks:#
 
 * A positive value; that is, unsigned, indicates a change in an easterly direction and a negative value indicates a change in a westerly direction.
 
@@ -23301,7 +23432,9 @@ Attribute Type: RealUnit: degree (°), negative westPrecision: 0.01°Minimum ran
 |===
 | IHO Definition: *VALUE OF MAXIMUM RANGE*. The extreme distance at which a feature can be seen or a signal detected. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.230, November 2000).
 
-Attribute Type: RealUnit: Nautical mile (M) Precision: 0∙1MMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*value of maximum range*_)Example:*17* for maximum range of 17 nautical milesRemarks:
+Attribute Type: RealUnit: Nautical mile (M) Precision: 0∙1MMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*value of maximum range*_)Example:*17* for maximum range of 17 nautical miles
+
+[underline]#Remarks:#
 
 * This attribute does not apply to lights, where the attribute "value of nominal range" should be used.
 
@@ -23314,7 +23447,9 @@ Attribute Type: RealUnit: Nautical mile (M) Precision: 0∙1MMinimum range: 0Ran
 |===
 | IHO Definition: *VALUE OF NOMINAL RANGE*. The luminous range of a light in a homogenous atmosphere in which the meteorological visibility is 10 sea miles. (IHO Dictionary -- S-32).
 
-Attribute Type: RealUnit: Nautical mile (M) Precision: 0∙1MMinimum range: 0Maximum range: 30Range closure: Left half-open interval (_minimum <_ _*value of nominal range*_ _≤ maximum_)Example:*14* for a nominal range of 14 nautical milesRemarks:
+Attribute Type: RealUnit: Nautical mile (M) Precision: 0∙1MMinimum range: 0Maximum range: 30Range closure: Left half-open interval (_minimum <_ _*value of nominal range*_ _≤ maximum_)Example:*14* for a nominal range of 14 nautical miles
+
+[underline]#Remarks:#
 
 * None.
 
@@ -23327,7 +23462,9 @@ Attribute Type: RealUnit: Nautical mile (M) Precision: 0∙1MMinimum range: 0Max
 |===
 | IHO Definition: *VALUE OF SOUNDING*. The value of the measurement of a sounding relative to the chart datum. (S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.232, November 2000).
 
-Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: metre (m)Precision: 0∙1mMinimum range: -30Maximum range: 12500Range closure: Open interval (_minimum <_ _*value of sounding*_ _< maximum_)Examples:*18.2* for a sounding of 18∙2 metres**-2.4** for a drying height of 2∙4 metresRemarks:
+Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: metre (m)Precision: 0∙1mMinimum range: -30Maximum range: 12500Range closure: Open interval (_minimum <_ _*value of sounding*_ _< maximum_)Examples:*18.2* for a sounding of 18∙2 metres**-2.4** for a drying height of 2∙4 metres
+
+[underline]#Remarks:#
 
 * A drying height is indicated by a negative value.
 
@@ -23355,7 +23492,9 @@ Attribute Type: BooleanIndication: A True value is an indication that the vertic
 |===
 | IHO Definition: *VERTICAL CLEARANCE VALUE*. The vertical clearance measured from the horizontal plane towards the feature overhead. (S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.234, November 2000).
 
-Attribute Type: RealUnit: Defined as an attribute in the ENC Dataset Discovery Metadata: metre (m)Precision: 0∙1mMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*vertical clearance value*_)Example:*7.6* for a vertical clearance of 7·6 metresRemarks:
+Attribute Type: RealUnit: Defined as an attribute in the ENC Dataset Discovery Metadata: metre (m)Precision: 0∙1mMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*vertical clearance value*_)Example:*7.6* for a vertical clearance of 7·6 metres
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -23480,7 +23619,9 @@ IHO Definition: The datum refers to each Baltic country's realization of the Eur
 |===
 | IHO Definition: *VERTICAL LENGTH*. The total vertical length of a feature. (S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.242, November 2000).
 
-Attribute Type: RealUnit: Defined as an attribute in the ENC Dataset Discovery Metadata: metre (m)Precision: 0∙1mMinimum range: 0Maximum range: 900Range closure: Left half-open interval (_minimum <_ _*vertical length*_ _≤ maximum_)Minimum value: 0Example:*24.5* for a vertical length of 24.5 metresRemarks:
+Attribute Type: RealUnit: Defined as an attribute in the ENC Dataset Discovery Metadata: metre (m)Precision: 0∙1mMinimum range: 0Maximum range: 900Range closure: Left half-open interval (_minimum <_ _*vertical length*_ _≤ maximum_)Minimum value: 0Example:*24.5* for a vertical length of 24.5 metres
+
+[underline]#Remarks:#
 
 * For floating features: The vertical distance from the surface of water to the highest point of that feature.
 * For fixed features: The vertical distance from seabed or ground to the highest point of that feature.
@@ -23498,7 +23639,9 @@ Attribute Type: RealUnit: Defined as an attribute in the ENC Dataset Discovery M
 
 Indication: The string encodes the classification of a vessel, normally by length or gross tonnage.
 
-Attribute Type: TextRemarks:
+Attribute Type: Text
+
+[underline]#Remarks:#
 
 * The attribute *vessel class* should contain no more than 50 characters.
 
@@ -23825,7 +23968,9 @@ Attribute Type: IntegerUnit: metreMinimum range: 0Range closure: Left half-open 
 
 Attribute Type: IntegerIndication: The modulus of the scale is indicated, that is 1:22 000 is encoded as 22000.
 
-Unit: noneMinimum range: 1Maximum range: 10000000Range closure: Closed interval (_minimum ≤_ _*maximum display scale*_ _≤ maximum_)Example:*12000* for a maximum display scale of scale of 1:12000Remarks:
+Unit: noneMinimum range: 1Maximum range: 10000000Range closure: Closed interval (_minimum ≤_ _*maximum display scale*_ _≤ maximum_)Example:*12000* for a maximum display scale of scale of 1:12000
+
+[underline]#Remarks:#
 
 * *Maximum display scale* provides a reference for the user selected viewing scale in the ECDIS at which the overscale warning will be displayed if there is no larger optimum display scale ENC dataset available.
 * This attribute is only used in conjunction with the Meta feature *Data Coverage* which is used to define polygons of equal largest intended viewing scale. See clause 3.5.1, Table 3-2, for the list of mandatory *maximum display scale* values.
@@ -23869,7 +24014,9 @@ Attribute Type: IntegerUnit: metrePrecision: 1mMinimum range: 0Range closure: Le
 |===
 | IHO Definition: *MINIMUM DISPLAY SCALE*. The smallest intended viewing scale for the data.
 
-Attribute Type: IntegerIndication: The modulus of the scale is indicated, that is 1:700 000 is encoded as 700000. Unit: noneMinimum range: 2000Maximum range: 10000000Range closure: Closed interval (_minimum ≤_ _*minimum display scale*_ _≤ maximum_)Example:*700000* for a minimum display scale of scale of 1:700000Remarks:
+Attribute Type: IntegerIndication: The modulus of the scale is indicated, that is 1:700 000 is encoded as 700000. Unit: noneMinimum range: 2000Maximum range: 10000000Range closure: Closed interval (_minimum ≤_ _*minimum display scale*_ _≤ maximum_)Example:*700000* for a minimum display scale of scale of 1:700000
+
+[underline]#Remarks:#
 
 * *Minimum display scale* is intended to be used in a series of ENC cells covering a geographic area to determine the dataset loading strategy as the user selected viewing scale becomes larger.
 * This attribute is only used in conjunction with the Meta feature *Data Coverage* which is used to define polygons of equal smallest intended viewing scale. *minimum display scale* should therefore not be confused with the attribute *scale minimum*. See clause 3.5.1, Table 3-2, for the list of mandatory *minimum display scale* values.
@@ -23885,7 +24032,9 @@ Attribute Type: IntegerIndication: The modulus of the scale is indicated, that i
 
 Attribute Type: IntegerIndication: The modulus of the scale is indicated, that is 1:22 000 is encoded as 22000.
 
-Unit: noneMinimum range: 1000Maximum range: 10000000Range closure: Closed interval (_minimum ≤_ _*optimum display scale*_ _≤ maximum_)Example:*12000* for an optimum display scale of scale of 1:12000Remarks:
+Unit: noneMinimum range: 1000Maximum range: 10000000Range closure: Closed interval (_minimum ≤_ _*optimum display scale*_ _≤ maximum_)Example:*12000* for an optimum display scale of scale of 1:12000
+
+[underline]#Remarks:#
 
 * *optimum display scale* provides a reference for the user selected viewing scale in the ECDIS at which the overscale indication will be displayed if there is no larger optimum display scale ENC dataset available, as well as the ECDIS viewing scale when the cell is loaded.
 * This attribute is only used in conjunction with the Meta feature *Data Coverage* which is used to define polygons of equal largest intended viewing scale. See clause 3.5.1, Table 3-2, for the list of mandatory *optimum display scale* values.
@@ -23899,7 +24048,9 @@ Unit: noneMinimum range: 1000Maximum range: 10000000Range closure: Closed interv
 |===
 | IHO Definition: *ORIENTATION UNCERTAINTY*. The best estimate of the accuracy of a bearing.
 
-Attribute Type: RealUnit: Degree (°)Precision: 0∙001°Minimum range: 0Maximum range: 360Range closure: Right half-open interval (_minimum ≤_ _*orientation uncertainty*_ _< maximum_)Example:*0·005* for an error of 0·005 degreesRemarks:
+Attribute Type: RealUnit: Degree (°)Precision: 0∙001°Minimum range: 0Maximum range: 360Range closure: Right half-open interval (_minimum ≤_ _*orientation uncertainty*_ _< maximum_)Example:*0·005* for an error of 0·005 degrees
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -23977,7 +24128,9 @@ IHO Definition:Depths may be altered by human influence, but will not be routine
 
 Attribute Type: IntegerIndication: The modulus of the scale is indicated, that is 1:25 000 is encoded as 25000.
 
-Unit: noneMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*scale value maximum*_)Example:*25000* for a scale of 1:25000Remarks:
+Unit: noneMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*scale value maximum*_)Example:*25000* for a scale of 1:25000
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -23992,7 +24145,9 @@ Unit: noneMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*scale
 
 Attribute Type: IntegerIndication: The modulus of the scale is indicated, that is 1:250 000 is encoded as 250000.
 
-Unit: noneMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*scale value minimum*_)Example:*250000* for a scale of 1:250000Remarks:
+Unit: noneMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*scale value minimum*_)Example:*250000* for a scale of 1:250000
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -24038,7 +24193,9 @@ Attribute Type: RealUnit: cubic metrePrecision: 0·01 cubic metresMinimum range:
 
 Attribute Type: TextIndication: Source (c...): String of characters.
 
-Example:**Notice to Mariners 3245/24**Remarks:
+Example:**Notice to Mariners 3245/24**
+
+[underline]#Remarks:#
 
 * The attribute *source* may be populated with the corresponding paper chart Notice to Mariners numbers, although other references are permitted.
 * The attribute *source* should contain no more than 150 characters.
@@ -24056,7 +24213,9 @@ Attribute Type: TextIndication: Survey authority (c...): String of characters.
 
 Format:c...
 
-Example:**Australian Hydrographic Office****Port of Melbourne Authority**Remarks:
+Example:**Australian Hydrographic Office****Port of Melbourne Authority**
+
+[underline]#Remarks:#
 
 * The attribute "survey authority" encodes the name of the source survey authority.
 * The attribute *survey authority* should contain no more than 100 characters.
@@ -24173,7 +24332,9 @@ IHO Definition: To change the place or position of something. (Adapted from Merr
 
 Attribute Type: RealUnit: Defined as an attribute in the ENC Dataset Discovery Metadata: metre (m).
 
-Precision: 0∙1mMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*uncertainty fixed*_)Example:*1.2* for a fixed uncertainty of 1∙2 metresRemarks:
+Precision: 0∙1mMinimum range: 0Range closure: Left half-open ray (_minimum <_ _*uncertainty fixed*_)Example:*1.2* for a fixed uncertainty of 1∙2 metres
+
+[underline]#Remarks:#
 
 * The maximum of the one-dimensional error (for vertical) or two-dimensional error (for horizontal). The error is assumed to be positive and negative. The plus/minus character must not be encoded.
 
@@ -24210,7 +24371,9 @@ In this example, at a depth of 25 metres, the variable uncertainty would be 2.5 
 
 Indication: The complex attribute defines whether the light is a moiré effect light and encodes the orientation of the directional light sector.
 
-Sub-attributes:*moiré effect* see clause 27.130*orientation* see clause 29.15Remarks:
+Sub-attributes:*moiré effect* see clause 27.130*orientation* see clause 29.15
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -24225,7 +24388,9 @@ Sub-attributes:*moiré effect* see clause 27.130*orientation* see clause 29.15Re
 
 Indication: The complex attribute provides the encoder with options as to the name to display in certain system display settings.
 
-Sub-attributes:*language* see clause 27.117*name* see clause 27.132*name usage* see clause 27.134Remarks:
+Sub-attributes:*language* see clause 27.117*name* see clause 27.132*name usage* see clause 27.134
+
+[underline]#Remarks:#
 
 * For further information regarding the population of the complex attribute **feature name**, in particular the encoding of multiple instances of *feature name* for a single feature instance, see clause 2.5.8.
 
@@ -24238,7 +24403,9 @@ Sub-attributes:*language* see clause 27.117*name* see clause 27.132*name usage* 
 |===
 | IHO Definition: *FEATURES DETECTED*. The uniform assessment of detected features.
 
-Indication:Sub-attributes:*least depth of detected features measured* see clause 28.6*significant features detected* see clause 28.19*size of features detected* see clause 28.28Remarks:
+Indication:Sub-attributes:*least depth of detected features measured* see clause 28.6*significant features detected* see clause 28.19*size of features detected* see clause 28.28
+
+[underline]#Remarks:#
 
 * A feature in this context is meant to be any object, whether manmade or not, projecting above the seafloor, which may be a danger for surface navigation. (Refer to IHO publication S-44). *features detected* does not describe if features were actually detected during a hydrographic survey, but whether the survey had the capacity to detect features.
 
@@ -24253,7 +24420,9 @@ Indication:Sub-attributes:*least depth of detected features measured* see clause
 
 Indication: The complex attribute describes single fixed period, as the date range between its sub-attributes.
 
-Sub-attributes:*date end* see clause 27.81*date start* see clause 27.83Remarks:
+Sub-attributes:*date end* see clause 27.81*date start* see clause 27.83
+
+[underline]#Remarks:#
 
 * The sub-attributes *date start* and *date end* must be encoded in the format YYYYMMDD; using 4 digits for the calendar year (YYYY) and, optionally, 2 digits for the month (MM) (for example April = 04) and 2 digits for the day (DD). When no specific month and/or day is required/known, the values are replaced with dashes (-).
 
@@ -24268,7 +24437,9 @@ Sub-attributes:*date end* see clause 27.81*date start* see clause 27.83Remarks:
 
 Indication: The complex attribute describes all variations of radio receiving and transmitting.
 
-Sub-attributes:*frequency shore station receives* see clause 27.101*frequency shore station transmits* see clause 27.102Remarks:
+Sub-attributes:*frequency shore station receives* see clause 27.101*frequency shore station transmits* see clause 27.102
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -24283,7 +24454,9 @@ Sub-attributes:*frequency shore station receives* see clause 27.101*frequency sh
 
 Indication: The complex attribute encodes the horizontal distance …….
 
-Sub-attributes:*horizontal clearance value* see clause 27.107*horizontal distance uncertainty* see clause 28.5Remarks:
+Sub-attributes:*horizontal clearance value* see clause 27.107*horizontal distance uncertainty* see clause 28.5
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -24298,7 +24471,9 @@ Sub-attributes:*horizontal clearance value* see clause 27.107*horizontal distanc
 
 Indication: The complex attribute encodes the horizontal distance …….
 
-Sub-attributes:*horizontal clearance value* see clause 27.107*horizontal distance uncertainty* see clause 28.5Remarks:
+Sub-attributes:*horizontal clearance value* see clause 27.107*horizontal distance uncertainty* see clause 28.5
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -24313,7 +24488,9 @@ Sub-attributes:*horizontal clearance value* see clause 27.107*horizontal distanc
 
 Indication: The complex attribute encodes the horizontal uncertainty associated with any horizontal measurement.
 
-Sub-attributes:*uncertainty fixed* see clause 28.26*uncertainty variable factor* see clause 28.27Remarks:
+Sub-attributes:*uncertainty fixed* see clause 28.26*uncertainty variable factor* see clause 28.27
+
+[underline]#Remarks:#
 
 * The expected input is the maximum of the two-dimensional error. The error is assumed to be positive and negative.
 
@@ -24328,7 +24505,9 @@ Sub-attributes:*uncertainty fixed* see clause 28.26*uncertainty variable factor*
 
 Indication: The complex attribute provides additional textual information that cannot be provided using other allowable attributes for the feature, and defines the language of the text string.
 
-Sub-attributes:*file locator* see clause 27.97*file reference* see clause 27.98*headline* see clause 27.104*language* see clause 27.117*text* see clause 27.177Remarks:
+Sub-attributes:*file locator* see clause 27.97*file reference* see clause 27.98*headline* see clause 27.104*language* see clause 27.117*text* see clause 27.177
+
+[underline]#Remarks:#
 
 * At least one of the sub-attributes *file reference* or *text* must be populated.
 * The files referenced by the sub-attribute *file reference* generally contain long text strings or those that require formatting; there is no restriction on the type of text (except for lexical level) that can be held in files referenced by sub-attribute *file reference*.
@@ -24345,7 +24524,9 @@ Sub-attributes:*file locator* see clause 27.97*file reference* see clause 27.98*
 |===
 | IHO Definition: *LIGHT SECTOR*. A sector is the part of a circle between two straight lines drawn from the centre to the circumference. (Advanced Learner's Dictionary, 2nd Edition).
 
-Indication:Sub-attributes:*colour* see clause 27.75*directional character* see clause 29.1*light visibility* see clause 27.120*sector limit* see clause 29.21*value of nominal range* see clause 27.192*sector information* see clause 29.20*sector arc extension* see clause 30.3Remarks:
+Indication:Sub-attributes:*colour* see clause 27.75*directional character* see clause 29.1*light visibility* see clause 27.120*sector limit* see clause 29.21*value of nominal range* see clause 27.192*sector information* see clause 29.20*sector arc extension* see clause 30.3
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -24358,7 +24539,9 @@ Indication:Sub-attributes:*colour* see clause 27.75*directional character* see c
 |===
 | IHO Definition: *MEASURED DISTANCE VALUE*. The distance value indicated on a distance mark, or the distance between two measured distance marks.
 
-Indication:Sub-attributes:*distance unit of measurement* see clause 27.91*reference location* see clause 27.149*waterway distance* see clause 27.203Remarks:
+Indication:Sub-attributes:*distance unit of measurement* see clause 27.91*reference location* see clause 27.149*waterway distance* see clause 27.203
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -24373,7 +24556,9 @@ Indication:Sub-attributes:*distance unit of measurement* see clause 27.91*refere
 
 Indication: The complex attribute provides an indication as to whether the true number of features is known and, where known, the number of features.
 
-Sub-attributes:*multiplicity known* see clause 27.131*number of features* see clause 27.139Remarks:
+Sub-attributes:*multiplicity known* see clause 27.131*number of features* see clause 27.139
+
+[underline]#Remarks:#
 
 * The attribute *multiplicity of features* must only be used to indicate the number of entities of a feature that are co-located (for example 3 overhead cables suspended over a body of water between 2 pylons), and this information is considered to be of use to the Mariner. Where possible, features must be encoded individually.
 
@@ -24388,7 +24573,9 @@ Sub-attributes:*multiplicity known* see clause 27.131*number of features* see cl
 
 Indication: The complex attribute describes the access to online resources according to ISO 19115.
 
-Sub-attributes:*headline* see clause 27.104*linkage* see clause 27.121*name of resource* see clause 27.133Remarks:
+Sub-attributes:*headline* see clause 27.104*linkage* see clause 27.121*name of resource* see clause 27.133
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -24403,7 +24590,9 @@ Sub-attributes:*headline* see clause 27.104*linkage* see clause 27.121*name of r
 
 Indication: The complex attribute provides the orientation value together with a measure of the uncertainty of the value.
 
-Sub-attributes:*orientation uncertainty* see clause 28.14*orientation value* see clause 27.141Remarks:
+Sub-attributes:*orientation uncertainty* see clause 28.14*orientation value* see clause 27.141
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -24418,7 +24607,9 @@ Sub-attributes:*orientation uncertainty* see clause 28.14*orientation value* see
 
 Indication: The complex attribute describes the active period for a seasonal feature (for example a buoy), as the dates between its sub-attributes.
 
-Sub-attributes:*date end* see clause 27.81*date start* see clause 27.83Remarks:
+Sub-attributes:*date end* see clause 27.81*date start* see clause 27.83
+
+[underline]#Remarks:#
 
 * The sub-attributes *date start* and *date end* must be encoded in the format ----MMDD; using 2 digits for the month (MM) (for example April = 04) and 2 digits for the day (DD). When no specific day is required/known, the values are replaced with dashes (-).
 
@@ -24433,7 +24624,9 @@ Sub-attributes:*date end* see clause 27.81*date start* see clause 27.83Remarks:
 
 Indication: The complex attribute describes the wave length, as the combination of its sub-attributes.
 
-Sub-attributes:*radar band* see clause 27.145*wave length value* see clause 27.204Remarks:
+Sub-attributes:*radar band* see clause 27.145*wave length value* see clause 27.204
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -24448,7 +24641,9 @@ Sub-attributes:*radar band* see clause 27.145*wave length value* see clause 27.2
 
 Indication: The complex attribute describes the rhythm of a light (or a light sector).
 
-Sub-attributes:*light characteristic* see clause 27.119*signal group* see clause 27.162*signal period* see clause 27.163*signal sequence* see clause 29.25Remarks:
+Sub-attributes:*light characteristic* see clause 27.119*signal group* see clause 27.162*signal period* see clause 27.163*signal sequence* see clause 29.25
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -24463,7 +24658,9 @@ Sub-attributes:*light characteristic* see clause 27.119*signal group* see clause
 
 Indication: The complex attribute encodes the regular schedule for a service.
 
-Sub-attributes:*category of schedule* see clause 27.59*time intervals by day of week* see clause 29.33Remarks:
+Sub-attributes:*category of schedule* see clause 27.59*time intervals by day of week* see clause 29.33
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -24478,7 +24675,9 @@ Sub-attributes:*category of schedule* see clause 27.59*time intervals by day of 
 
 Indication: The complex attribute describes the characteristics of a light sector.
 
-Sub-attributes:*light characteristic* see clause 27.119*light sector* see clause 29.10*signal group* see clause 27.162*signal period* see clause 27.163*signal sequence* see clause 29.25Remarks:
+Sub-attributes:*light characteristic* see clause 27.119*light sector* see clause 29.10*signal group* see clause 27.162*signal period* see clause 27.163*signal sequence* see clause 29.25
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -24491,7 +24690,9 @@ Sub-attributes:*light characteristic* see clause 27.119*light sector* see clause
 |===
 | IHO Definition: *SECTOR INFORMATION*. Additional textual information about a light sector. Indication: The complex attribute provides additional textual information that cannot be provided using other allowable attributes for the feature, and defines the language of the text string.
 
-Sub-attributes:*language* see clause 27.117*text* see clause 27.177Remarks:
+Sub-attributes:*language* see clause 27.117*text* see clause 27.177
+
+[underline]#Remarks:#
 
 * This complex attribute should be used, for example, to hold the information related to the characteristics of a complex light sector.
 
@@ -24510,7 +24711,9 @@ The sector limit specifies the limits of the sector in a clockwise direction aro
 
 Indication: The complex attribute describes the angle of a light sector as defined by the sub-attributes.
 
-Sub-attributes:*sector limit one* see clause 29.22*sector limit two* see clause 29.23Remarks:
+Sub-attributes:*sector limit one* see clause 29.22*sector limit two* see clause 29.23
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -24525,7 +24728,9 @@ Sub-attributes:*sector limit one* see clause 29.22*sector limit two* see clause 
 
 Indication: The complex attribute describes the line or bearing of a light where the character changes or the light is obscured.
 
-Sub-attributes:*sector bearing* see clause 27.157*sector line length* see clause 27.158Remarks:
+Sub-attributes:*sector bearing* see clause 27.157*sector line length* see clause 27.158
+
+[underline]#Remarks:#
 
 * The values given to the common limits of adjacent sectors should be identical.
 * The orientation of the bearing is from seaward to the central feature. This conforms with the method used in "List of Lights" publications.
@@ -24543,7 +24748,9 @@ Sub-attributes:*sector bearing* see clause 27.157*sector line length* see clause
 
 Indication: The complex attribute describes the line or bearing of a light where the character changes or the light is obscured.
 
-Sub-attributes:*sector bearing* see clause 27.157*sector line length* see clause 27.158Remarks:
+Sub-attributes:*sector bearing* see clause 27.157*sector line length* see clause 27.158
+
+[underline]#Remarks:#
 
 * The values given to the common limits of adjacent sectors should be identical.
 * The orientation of the bearing is from seaward to the central feature. This conforms with the method used in "List of Lights" publications.
@@ -24561,7 +24768,9 @@ Sub-attributes:*sector bearing* see clause 27.157*sector line length* see clause
 
 Indication: The complex attribute provides additional textual information that cannot be provided using the attribute *topmark/daymark shape*.
 
-Sub-attributes:*language* see clause 27.117*text* see clause 27.177Remarks:
+Sub-attributes:*language* see clause 27.117*text* see clause 27.177
+
+[underline]#Remarks:#
 
 * No formatting of text is possible within *shape* **information**. If formatted text is required, then an associated text file referenced by the complex attribute *information* must be used (see clause 29.9).
 
@@ -24576,7 +24785,9 @@ Sub-attributes:*language* see clause 27.117*text* see clause 27.177Remarks:
 
 Indication: The complex attribute provides the signal sequence for non-fixed lights and sound signals.
 
-Sub-attributes:*signal duration* see clause 27.159*signal status* see clause 27.164Remarks:
+Sub-attributes:*signal duration* see clause 27.159*signal status* see clause 27.164
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -24591,7 +24802,9 @@ Sub-attributes:*signal duration* see clause 27.159*signal status* see clause 27.
 
 Indication: The complex attribute defines the horizontal and vertical position accuracy of bathymetric features, which may optionally be degraded over time.
 
-Sub-attributes:*fixed date range* see clause 29.4*horizontal position uncertainty* see clause 29.8*vertical uncertainty* see clause 29.40Remarks:
+Sub-attributes:*fixed date range* see clause 29.4*horizontal position uncertainty* see clause 29.8*vertical uncertainty* see clause 29.40
+
+[underline]#Remarks:#
 
 * See clauses 3.8 and 24.5 for encoding guidance for the population of the sub-complex attributes *horizontal position uncertainty* and *vertical uncertainty*.
 
@@ -24606,7 +24819,9 @@ Sub-attributes:*fixed date range* see clause 29.4*horizontal position uncertaint
 
 Indication: The complex attribute encodes the range of the speed at a location.
 
-Sub-attributes:*speed maximum* see clause 27.166*speed minimum* see clause 27.167Remarks:
+Sub-attributes:*speed maximum* see clause 27.166*speed minimum* see clause 27.167
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -24619,7 +24834,9 @@ Sub-attributes:*speed maximum* see clause 27.166*speed minimum* see clause 27.16
 |===
 | IHO Definition: *SURFACE CHARACTERISTICS*. The general nature of the material of which the land surface or the seabed is composed.
 
-Indication:Sub-attributes:*nature of surface* see clause 27.137*nature of surface -- qualifying terms* see clause 27.138*underlying layer* see clause 27.187Remarks:
+Indication:Sub-attributes:*nature of surface* see clause 27.137*nature of surface -- qualifying terms* see clause 27.138*underlying layer* see clause 27.187
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -24634,7 +24851,9 @@ Indication:Sub-attributes:*nature of surface* see clause 27.137*nature of surfac
 
 Indication: The complex attribute describes the period of the hydrographic survey, as the time between its sub-attributes.
 
-Sub-attributes:*date end* see clause 27.81*date start* see clause 27.83Remarks:
+Sub-attributes:*date end* see clause 27.81*date start* see clause 27.83
+
+[underline]#Remarks:#
 
 * The sub-attributes *date start* and *date end* must be encoded using 4 digits for the calendar year (YYYY) and, optionally, 2 digits for the month (MM) (for example April = 04) and 2 digits for the day (DD). When no specific month and/or day is required/known, indication of the month and/or day is replaced with dashes (-).
 
@@ -24649,7 +24868,9 @@ Sub-attributes:*date end* see clause 27.81*date start* see clause 27.83Remarks:
 
 Indication: The complex attribute describes the different telecommunications methods and contact details.
 
-Sub-attributes:*contact instructions* see clause 27.79*telecommunication identifier* see clause 27.175*telecommunication service* see clause 27.176Remarks:
+Sub-attributes:*contact instructions* see clause 27.79*telecommunication identifier* see clause 27.175*telecommunication service* see clause 27.176
+
+[underline]#Remarks:#
 
 * If no value is populated for the sub-attribute **telecommunication service**, this means the service is by voice communication.
 
@@ -24662,7 +24883,9 @@ Sub-attributes:*contact instructions* see clause 27.79*telecommunication identif
 |===
 | IHO Definition: *TIDAL STREAM PANEL VALUES*. The direction of the flow and the tidal current rate from 6 hours before to 6 hours after high water (HW) or low water (LW) at the reference tide station, at hourly or sub-hourly intervals. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.210, November 2000).
 
-Indication:Sub-attributes:*reference tide* see clause 27.150*reference tide type* see clause 27.161*stream depth* see clause 27.172*tidal stream value* see clause 29.32Remarks:
+Indication:Sub-attributes:*reference tide* see clause 27.150*reference tide type* see clause 27.161*stream depth* see clause 27.172*tidal stream value* see clause 29.32
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -24675,7 +24898,9 @@ Indication:Sub-attributes:*reference tide* see clause 27.150*reference tide type
 |===
 | IHO Definition: *TIDAL STREAM VALUE*. A measurement of the direction and speed of a tidal stream at a given time relative to the reference tide.
 
-Indication:Sub-attributes:*orientation* see clause 29.14*speed maximum* see clause 27.166*time relative to tide* see clause 27.184Remarks:
+Indication:Sub-attributes:*orientation* see clause 29.14*speed maximum* see clause 27.166*time relative to tide* see clause 27.184
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -24690,7 +24915,9 @@ Indication:Sub-attributes:*orientation* see clause 29.14*speed maximum* see clau
 
 Indication: The complex attribute describes the timings for a regular service schedule.
 
-Sub-attributes:*day of week* see clause 27.85*day of week is range* see clause 27.86*time of day end* see clause 27.182*time of day start* see clause 27.183Remarks:
+Sub-attributes:*day of week* see clause 27.85*day of week is range* see clause 27.86*time of day end* see clause 27.182*time of day start* see clause 27.183
+
+[underline]#Remarks:#
 
 * At least one of the sub-attributes **day of week**, *time of day start* or *time of day end* must be encoded. Where populated, the number of instances of *time of day start* must be the same as the number of instances of *time of day end*.
 * The sub-attribute *day of week is range* indicates whether an instance of *time intervals by day of week* encodes a range of days or discrete days. The day(s) or day range(s) are encoded using sub-attribute *day of week*. Where *day of week is range* is populated as __True__, there must be exactly two instances of the attribute *day of week*. If *day of week* is not populated, this indicates that the same schedule applies every day (Monday through Sunday). Multiple ranges or mixing range with discrete days(s) is not allowed (if this is required another instance of *time intervals by day of week* must be encoded).
@@ -24705,7 +24932,9 @@ Sub-attributes:*day of week* see clause 27.85*day of week is range* see clause 2
 |===
 | IHO Definition: *TOPMARK*. A characteristic shape secured at the top of a buoy or beacon to aid in its identification. (IHO Dictionary -- S-32).
 
-Indication:Sub-attributes:*colour* see clause 27.75*colour pattern* see clause 27.76*topmark/daymark shape* see clause 27.185*shape information* see clause 29.24Remarks:
+Indication:Sub-attributes:*colour* see clause 27.75*colour pattern* see clause 27.76*topmark/daymark shape* see clause 27.185*shape information* see clause 29.24
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -24720,7 +24949,9 @@ Indication:Sub-attributes:*colour* see clause 27.75*colour pattern* see clause 2
 
 Indication: The complex attribute encodes the range of the local magnetic anomaly.
 
-Sub-attributes:*magnetic anomaly value* see clause 27.122*reference direction* see clause 27.148Remarks:
+Sub-attributes:*magnetic anomaly value* see clause 27.122*reference direction* see clause 27.148
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -24735,7 +24966,9 @@ Sub-attributes:*magnetic anomaly value* see clause 27.122*reference direction* s
 
 Indication: The complex attribute encodes the vertical distance from a defined vertical datum to the underside of a an opening overhead feature when it is in the closed position.
 
-Sub-attributes:*vertical clearance value* see clause 27.195*vertical uncertainty* see clause 29.40Remarks:
+Sub-attributes:*vertical clearance value* see clause 27.195*vertical uncertainty* see clause 29.40
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -24750,7 +24983,9 @@ Sub-attributes:*vertical clearance value* see clause 27.195*vertical uncertainty
 
 Indication: The complex attribute encodes the vertical distance from a defined vertical datum to the underside of a fixed overhead feature.
 
-Sub-attributes:*vertical clearance value* see clause 27.195*vertical uncertainty* see clause 29.40Remarks:
+Sub-attributes:*vertical clearance value* see clause 27.195*vertical uncertainty* see clause 29.40
+
+[underline]#Remarks:#
 
 * In the case of cables carrying high voltages an additional clearance of from 2 to 5 metres may be needed to avoid an electrical discharge. When known, the authorised safe clearance (known in the UK as the Safe Overhead Clearance) which is the physical clearance minus a safety margin shall be stated, using the attribute *vertical clearance safe* (see clause 29.40). *vertical clearance fixed* must not be used to populate authorized safe clearances.
 
@@ -24765,7 +25000,9 @@ Sub-attributes:*vertical clearance value* see clause 27.195*vertical uncertainty
 
 Indication: The complex attribute encodes the vertical distance from a defined vertical datum to the underside of an opening overhead feature when it is in the open position.
 
-Sub-attributes:*vertical clearance unlimited* see clause 27.194*vertical clearance value* see clause 27.195*vertical uncertainty* see clause 29.40Remarks:
+Sub-attributes:*vertical clearance unlimited* see clause 27.194*vertical clearance value* see clause 27.195*vertical uncertainty* see clause 29.40
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -24780,7 +25017,9 @@ Sub-attributes:*vertical clearance unlimited* see clause 27.194*vertical clearan
 
 Indication: The complex attribute encodes the safe vertical distance from a defined vertical datum to the lowest point of an electrical cable over navigable water.
 
-Sub-attributes:*vertical clearance value* see clause 27.195*vertical uncertainty* see clause 29.40Remarks:
+Sub-attributes:*vertical clearance value* see clause 27.195*vertical uncertainty* see clause 29.40
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -24795,7 +25034,9 @@ Sub-attributes:*vertical clearance value* see clause 27.195*vertical uncertainty
 
 Indication: The complex attribute encodes the vertical uncertainty associated with any vertical measurement.
 
-Sub-attributes:*uncertainty fixed* see clause 28.26*uncertainty variable factor* see clause 28.27Remarks:
+Sub-attributes:*uncertainty fixed* see clause 28.26*uncertainty variable factor* see clause 28.27
+
+[underline]#Remarks:#
 
 * No remarks.
 
@@ -24810,7 +25051,9 @@ Sub-attributes:*uncertainty fixed* see clause 28.26*uncertainty variable factor*
 
 Indication: The complex attribute describes the speed limit for vessels in an area where speed is restricted.
 
-Sub-attributes:*speed limit* see clause 27.165*speed units* see clause 27.168*vessel class* see clause 27.198Remarks:
+Sub-attributes:*speed limit* see clause 27.165*speed units* see clause 27.168*vessel class* see clause 27.198
+
+[underline]#Remarks:#
 
 * The speed limit in an area may differ for different classes of vessel.
 
@@ -24825,7 +25068,9 @@ Sub-attributes:*speed limit* see clause 27.165*speed units* see clause 27.168*ve
 
 Indication: The complex attribute defines the overall indication of the quality of bathymetric data, which may optionally be degraded over time.
 
-Sub-attributes:*category of zone of confidence in data* see clause 27.74*fixed date range* see clause 29.4*horizontal position uncertainty* see clause 29.8*vertical uncertainty* see clause 29.40Remarks:
+Sub-attributes:*category of zone of confidence in data* see clause 27.74*fixed date range* see clause 29.4*horizontal position uncertainty* see clause 29.8*vertical uncertainty* see clause 29.40
+
+[underline]#Remarks:#
 
 * See clauses 3.8 and 24.5 for encoding guidance for the population of the sub-complex attributes *horizontal position uncertainty* and *vertical uncertainty*.
 
@@ -24841,7 +25086,9 @@ Sub-attributes:*category of zone of confidence in data* see clause 27.74*fixed d
 |===
 | IHO Definition: *DEFAULT CLEARANCE DEPTH*. The depth value determined for an underwater hazard of unknown depth, based on the depth of the surrounding area.
 
-Attribute Type: RealUnit: Defined as an attribute in the ENC Dataset Discovery Metadata: metre (m)Precision: 0∙1mMinimum range: -30Maximum range: 12500Range closure: Open interval (_minimum <_ _*default clearance depth*_ _< maximum_)Examples:*12.5* for a default clearance depth of 12.5 metres**-2.4** for a drying default clearance height of 2∙4 metresRemarks:
+Attribute Type: RealUnit: Defined as an attribute in the ENC Dataset Discovery Metadata: metre (m)Precision: 0∙1mMinimum range: -30Maximum range: 12500Range closure: Open interval (_minimum <_ _*default clearance depth*_ _< maximum_)Examples:*12.5* for a default clearance depth of 12.5 metres**-2.4** for a drying default clearance height of 2∙4 metres
+
+[underline]#Remarks:#
 
 * The attribute *default* *clearance depth* must be populated with a value, which must not be an empty (null) value, only if the attribute *value of sounding* for the feature instance is populated with an empty (null) value and the attribute **height**, if an allowable attribute for the feature, is not populated.
 * The value for *default clearance depth* is determined from the attribute *depth range minimum value* for the surrounding encoded *Depth Area*(s) or *Dredged Area* (see clauses 11.4 and 11.7) in accordance with the Tables below. For an area feature covered by more than one depth area, the *default clearance depth* is determined based on the *depth range minimum**value* of the shoalest of the depth areas covering the feature.
@@ -25159,7 +25406,9 @@ Attribute Type: BooleanIndication:A True value indicates that a sector arc radiu
 |===
 | IHO Definition: *SURROUNDING DEPTH*. The depth value determined for seabed around an underwater hazard, based on the depth of the surrounding area.
 
-Attribute Type: RealUnit: Defined as an attribute in the ENC Dataset Discovery Metadata: metre (m)Precision: 0∙1mMinimum range: -30Maximum range: 12500Range closure: Open interval (_minimum <_ _*surrounding depth*_ _< maximum_)Example:*20* for a surrounding depth of 20 metresRemarks:
+Attribute Type: RealUnit: Defined as an attribute in the ENC Dataset Discovery Metadata: metre (m)Precision: 0∙1mMinimum range: -30Maximum range: 12500Range closure: Open interval (_minimum <_ _*surrounding depth*_ _< maximum_)Example:*20* for a surrounding depth of 20 metres
+
+[underline]#Remarks:#
 
 * The value for *surrounding depth* is determined from the attribute *depth range minimum value* for the surrounding encoded *Depth Area*(s) or *Dredged Area* (see clauses 11.4 and 11.7). For an area feature covered by more than one depth area, the *surrounding depth* is determined as the *depth range minimum**value* of the deeper of the depth areas covering the feature.
 * *surrounding depth* must be populated with a value, which must not be an empty (null) value.
@@ -25455,7 +25704,9 @@ If it is required to encode a custom feature required, for example, to encode su
 
 Attribute Type: TextIndication: The string encodes one or more drawing instructions as described in S-100 Part 9a and S-100 clause 13-6.1.
 
-Format: (c...)Example:**('PointInstruction:BOYMOR11')**Remarks:
+Format: (c...)Example:**('PointInstruction:BOYMOR11')**
+
+[underline]#Remarks:#
 
 * Each symbol instruction must be enclosed using brackets.
 

@@ -923,7 +923,9 @@ These features form the border of the *Land Area* feature.
 ==== Artificial coastline (see S-4 – B-313; B-320-322; B-324 and B-329)
 
 If it is required to encode artificial sections of coastlines; or lakeshores, riverbanks, canal banks and basin borders that are navigable at the optimum display scale for the ENC data, this must be done using the feature *Shoreline Construction*. The largest optimum display scale ENC data should make clear whether any shoreline construction along the coastline is intended for ships to berth alongside or not. In most instances, the associated detail (name or berth number, depths alongside, dolphins, cargo sheds, cranes or railway lines), in addition to the usually distinctive outline of such features as piers and jetties, will be sufficient to show that ships may come alongside. For shoreline constructions not intended to berth alongside (such as breakwaters and seawalls), an indication that ships do not go alongside may be given by encoding the sloping sides (for example the intertidal portion of the structure). If there is a possibility of misinterpretation by the Mariner, the danger may be indicated by encoding an *Obstruction* surface feature (see clause 13.6) with the seaward edge running parallel to the shoreline construction. Figure 8-1 below represents a shoreline construction such as a mole, including a berthing facility (INT1 - F12), with a relatively flat top (_abcdlmna_), and sloping sides partly above high water (_nmldefgn_) and partly intertidal (_dopqrhgfed_).__**Fimage::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_8ef71427.gif[Shape22,631,332]
- igure 8-1 – Shoreline constructions**__Remarks:
+ igure 8-1 – Shoreline constructions**__
+
+[underline]#Remarks:#
 
 * Each of the three surface parts of the example shoreline construction above may be encoded as separate *Shoreline Construction* features of type surface; the masked curve (_ang_) must be encoded; and, if part of the *Shoreline Construction*boundary has a different characteristic (for example (_bc_) attribute *category of shoreline construction* = _6_ or _15_), it should be encoded as a separate *Shoreline Construction* feature of type curve. Alternatively, all the boundaries of the components of the shoreline construction may be encoded as *Shoreline Construction* features of type curve.
 * In this example,the shoreline construction surface above the high water line must also be covered by a *Land Area* feature of type surface, and the intertidal shoreline construction surface must also be covered by a *Depth Area*feature of type surface with attribute *depth range minimum value* = -H (see clause11.7.3).
@@ -2355,7 +2357,9 @@ For each instance of **information**, at least one of the sub-attributes *file r
 [[sec_8.13.1]]
 ==== Cranes (see S-4 – B-328.3)
 
-If it is required to encode a crane, it must be done using the feature *Crane***.**Remarks:
+If it is required to encode a crane, it must be done using the feature *Crane***.**
+
+[underline]#Remarks:#
 
 * The purpose of charting these features is primarily to assist the Mariner in identifying particular berths, etc.
 * The complex attribute *orientation* is used, where required, to encode the angular distance from true north to the axis of the crane's jib (generally perpendicular to the wharf).

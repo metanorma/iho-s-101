@@ -56,7 +56,7 @@ In the Table, abbreviations are as follows: point (P), pointset (A), curve (C) a
 
 [[table_2-1]]
 .Features permitted for ENC and their geometric primitives
-[cols="214,11,11,11,11,11,209,11,11,11,11"]
+[cols="100,11,11,11,11,11,100,11,11,11,11"]
 |===
 11+| *GEO FEATURES*
 | *Administration Area*                  |   | C | S | | | *Airport/Airfield* | P | | S |
@@ -78,7 +78,7 @@ In the Table, abbreviations are as follows: point (P), pointset (A), curve (C) a
 | *Daymark*                              | P | | | | | *Deep Water Route* | | | S | N
 | *Deep Water Route Centreline*          |   | C | | | | *Deep Water Route Part* | | | S |
 | *Depth Area*                           |   | | S | | | *Depth Contour* | | C | |
-| *Depth -- No Bottom Found*              | A | | | | | *Discoloured Water* | P | | S |
+| *Depth -- No Bottom Found*             | A | | | | | *Discoloured Water* | P | | S |
 | *Distance Mark*                        | P | | | | | *Dock Area* | | | S |
 | *Dolphin*                              | P | | | | | *Dredged Area* | | | S |
 | *Dry Dock*                             |   | | S | | | *Dumping Ground* | | | S |
@@ -309,45 +309,49 @@ Within this document, mandatory attributes (multiplicity 1,1; 1,n (n>1); or 1,*)
 |===
 h| Feature h| Mandatory Attributes
 
-2+| *GEO FEATURES*
-
-| *Administration Area*         | *jurisdiction*
-| *Archipelagic Sea Lane*       | *nationality \**
-| *Archipelagic Sea Lane Area*  | *nationality \** (except when included in *ASL Aggregation* association)
-| *Archipelagic Sea Lane Axis*  | *nationality \** (except when included in *ASL Aggregation* association)
-| *Berth*                       | *feature name*
-| *Bridge*                      | over navigable water: **opening bridge**If *opening bridge* = _True_: *category of***opening bridge**other cases: none
-| *Cable Overhead*              | over navigable water, one of: *vertical clearance fixed* or **vertical clearance safe**other cases: none
+2+h| [underline]#GEO FEATURES#
+| *Administration Area*             | *jurisdiction*
+| *Archipelagic Sea Lane*           | *nationality* *
+| *Archipelagic Sea Lane Area*      | *nationality* * (except when included in *ASL Aggregation* association)
+| *Archipelagic Sea Lane Axis*      | *nationality* * (except when included in *ASL Aggregation* association)
+| *Berth*                           | *feature name*
+| *Bridge*                          |
+over navigable water: **opening bridge** +
+If *opening bridge* = _True_: *category of opening bridge* +
+other cases: none
+| *Cable Overhead*                  | over navigable water, one of: *vertical clearance fixed* or **vertical clearance safe** +
+other cases: none
 | *Cardinal Beacon*                 | **beacon shape**; **category of cardinal mark**; *colour*
 | *Cardinal Buoy*                   | **buoy shape**; **category of cardinal mark**; *colour*
-| *Caution Area*                    | at least one of: **information \***; *pictorial representation \**
-| *Contiguous Zone*                 | *nationality \**
-| *Continental Shelf Area*          | *nationality \**
-| *Conveyor*                        | over navigable water: **vertical clearance fixed**other cases: none
-| *Current -- Non-Gravitational*     | **orientation**; *speed*
-| *Custom Zone*                     | *nationality \**
-| *Daymark*                         | **colour**; *topmark shape*
-| *Deep Water Route Centreline*     | **based on fixed marks**; **orientation value \***; *traffic flow*
-| *Deep Water Route Part*           | **depth range minimum value**; **orientation value \***; *traffic flow*
-| *Depth Area*                      | **depth range maximum value \***; *depth range minimum value \**
-| *Depth Contour*                   | *value of depth contour \**
-| *Distance Mark*                   | **distance mark visible \***; *measured distance value*
+| *Caution Area*                    | at least one of: **information* **; *pictorial representation* *
+| *Contiguous Zone*                 | *nationality* *
+| *Continental Shelf Area*          | *nationality* *
+| *Conveyor*                        | over navigable water: **vertical clearance fixed** +
+other cases: none
+| *Current -- Non-Gravitational*    | *orientation*; *speed*
+| *Custom Zone*                     | *nationality* *
+| *Daymark*                         | *colour*; *topmark shape*
+| *Deep Water Route Centreline*     | **based on fixed marks**; **orientation value* **; *traffic flow*
+| *Deep Water Route Part*           | **depth range minimum value**; **orientation value* **; *traffic flow*
+| *Depth Area*                      | **depth range maximum value* **; *depth range minimum value* *
+| *Depth Contour*                   | *value of depth contour* *
+| *Distance Mark*                   | **distance mark visible* **; *measured distance value*
 | *Dolphin*                         | *category of dolphin*
-| *Dredged Area*                    | *depth range minimum value \**
+| *Dredged Area*                    | *depth range minimum value* *
 | *Emergency Wreck Marking Buoy*    | **buoy shape**; *colour*
-| *Exclusive Economic Zone*         | *nationality \**
+| *Exclusive Economic Zone*         | *nationality* *
 | *Ferry Route*                     | *category of ferry*
-| *Fishery Zone*                    | *nationality \**
+| *Fishery Zone*                    | *nationality* *
 | *Fog Signal*                      | *category of fog signal*
 | *Gate*                            | if navigable at optimum display scale for the data: *horizontal clearance open*
 | *Harbour Facility*                | *category of harbour facility*
 | *Ice Area*                        | *category of ice*
-| *Information Area*                | at least one of: **information \***; *pictorial representation \**
+| *Information Area*                | at least one of: **information* **; *pictorial representation* *
 | *Installation Buoy*               | **buoy shape**; *colour*
 | *Island Group*                    | *feature name*
 | *Isolated Danger Beacon*          | **beacon shape**; *colour*
 | *Isolated Danger Buoy*            | **buoy shape**; *colour*
-| *Land Elevation*                  | *elevation \**
+| *Land Elevation*                  | *elevation* *
 | *Land Region*                     | at least one of: **category of land region**; *feature name*
 | *Landmark*                        | **category of landmark**; *visual prominence*
 | *Lateral Beacon*                  | **beacon shape**; **category of lateral mark**; *colour*
@@ -357,11 +361,13 @@ h| Feature h| Mandatory Attributes
 | *Light Sectored*                  | *sector characteristics*
 | *Light Vessel*                    | *colour*
 | *Local Magnetic Anomaly*          | *value of local magnetic anomaly*
-| *Magnetic Variation*              | **reference year for magnetic variation**; **value of annual change in magnetic variation**; *value of magnetic variation \**
-| *Marine Farm/Culture*             | **water level effect**at least one of: **height**; *value of sounding*
+| *Magnetic Variation*              | **reference year for magnetic variation**; **value of annual change in magnetic variation**; *value of magnetic variation* *
+| *Marine Farm/Culture*             | **water level effect** +
+at least one of: **height**; *value of sounding*
 | *Mooring Buoy*                    | *buoy shape*
 | *Navigation Line*                 | **category of navigation line**; *orientation*
-| *Obstruction*                     | **water level effect**; **surrounding depth**one of: **height**; *value of sounding*
+| *Obstruction*                     | **water level effect**; **surrounding depth** +
+one of: **height**; *value of sounding*
 | *Offshore Platform*               | *water level effect*
 | *Pipeline Overhead*               | over navigable water: **vertical clearance fixed**other cases: none
 | *Precautionary Area*              | *information*
@@ -372,8 +378,8 @@ h| Feature h| Mandatory Attributes
 | *Radio Calling-In Point*          | *orientation value* (point features only); *traffic flow*
 | *Recommended Route Centreline*    | *based on fixed marks*
 | *Recommended Track*               | **based on fixed marks**; **orientation value**; *traffic flow*
-| *Recommended Traffic Lane Part*   | *orientation value \**
-| *Restricted Area*                 | *restriction \**
+| *Recommended Traffic Lane Part*   | *orientation value* *
+| *Restricted Area*                 | *restriction* *
 | *Safe Water Beacon*               | **beacon shape**; *colour*
 | *Safe Water Buoy*                 | **buoy shape**; *colour*
 | *Sea Area/Named Water Area*       | at least one of: **category of sea area**; *feature name*
@@ -385,38 +391,43 @@ h| Feature h| Mandatory Attributes
 | *Span Opening*                    | **vertical clearance closed**; *vertical clearance open*
 | *Special Purpose/General Beacon*  | **beacon shape**; **category of special purpose mark**; *colour*
 | *Special Purpose/General Buoy*    | **buoy shape**; **category of special purpose mark**; *colour*
-| *Straight Territorial Sea Baseline*   | *nationality \**
+| *Straight Territorial Sea Baseline*   | *nationality* *
 | *Structure Over Navigable Water*      | **horizontal clearance fixed**; *vertical clearance fixed*
-| *Swept Area*                          | *depth range minimum value \**
-| *Territorial Sea Area*                | *nationality \**
+| *Swept Area*                          | *depth range minimum value* *
+| *Territorial Sea Area*                | *nationality* *
 | *Tidal Stream -- Flood/Ebb*            | **category of tidal stream**; **orientation**; *speed*
-| *Tidal Stream Panel Data*             | **station name**; *tidal stream panel values \**
+| *Tidal Stream Panel Data*             | **station name**; *tidal stream panel values* *
 | *Traffic Separation Scheme Lane Part* | *orientation value* (except when the lane part is a junction)
 | *Two-Way Route Part*                  | **orientation value**; *traffic flow*
 | *Underwater/Awash Rock*               | **value of sounding**; **water level effect**; *surrounding depth*
 | *Vegetation*                          | *category of vegetation*
-| *Virtual AIS Aid to Navigation*       | *virtual AIS aid to navigation type \**
+| *Virtual AIS Aid to Navigation*       | *virtual AIS aid to navigation type* *
 | *Water Turbulence*                    | *category of water turbulence*
-| *Wreck*                               | **water level effect**; **surrounding depth**one of: **category of wreck**; *value of sounding*
-2+| *METADATA FEATURES*
-| *Data Coverage*                       | **maximum display scale \***; **minimum display scale**; *optimum display scale \**
-| *Local Direction of Buoyage*          | **marks navigational -- system of**; *orientation value \**
-| *Navigational System of Marks*        | *marks navigational -- system of \**
-| *Quality of Bathymetric Data*         | **category of temporal variation**; **data assessment**; **features detected**; **full seafloor coverage achieved**; *zone of confidence \**
+| *Wreck*                               | **water level effect**; **surrounding depth** +
+one of: **category of wreck**; *value of sounding*
+
+2+h| [underline]#METADATA FEATURES#
+| *Data Coverage*                       | **maximum display scale* **; **minimum display scale**; *optimum display scale* *
+| *Local Direction of Buoyage*          | **marks navigational -- system of**; *orientation value* *
+| *Navigational System of Marks*        | *marks navigational -- system of* *
+| *Quality of Bathymetric Data*         | **category of temporal variation**; **data assessment**; **features detected**; **full seafloor coverage achieved**; *zone of confidence* *
 | *Quality of Non-Bathymetric Data*     | *horizontal position uncertainty*
 | *Quality of Survey*                   | **survey authority**; **survey date range**; *survey type*
-| *Sounding Datum*                      | *vertical datum \**
+| *Sounding Datum*                      | *vertical datum* *
 | *Update Information*                  | **update number**; *update type*
-| *Vertical Datum of Data*              | *vertical datum \**
-2+| *CARTOGRAPHIC FEATURES*
-| *Text Placement*                      | **text offset bearing \***; **text offset distance \***;*text type \**
-2+| *INFORMATION TYPES*
-| *Nautical Information*                | at least one of: **information \***; *pictorial representation \**
-| *Non-Standard Working Day*            | at least one of: **date fixed \***; *date variable \**
-| *Service Hours*                       | *schedule by day of week \**
+| *Vertical Datum of Data*              | *vertical datum* *
+
+2+h| [underline]#CARTOGRAPHIC FEATURES#
+| *Text Placement*                      | **text offset bearing* **; **text offset distance** *; *text type* *
+
+2+h| [underline]#INFORMATION TYPES#
+| *Nautical Information*                | at least one of: **information* **; *pictorial representation* *
+| *Non-Standard Working Day*            | at least one of: **date fixed* **; *date variable* *
+| *Service Hours*                       | *schedule by day of week* *
 | *Spatial Quality*                     | at least one of: **quality of horizontal measurement**; *spatial accuracy*
-2+| *ECDIS CHART 1 FEATURES*
-| *Chart 1 Feature*                     | at least one of: *drawing instruction* \*; *feature name* \*
+
+2+h| [underline]#ECDIS CHART 1 FEATURES#
+| *Chart 1 Feature*                     | at least one of: *drawing instruction* *; **feature name** *
 
 |===
 
@@ -523,7 +534,7 @@ Spatial attribute types must contain referenced geometry and may be associated w
 
 [[figure_2-1]]
 .Spatial Quality information type
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_757f3cda.jpg["",505,514]
+image::figure-2-1.jpeg["",505,514]
 
 Spatial quality attributes are carried in the information type *Spatial Quality* (see clause24.5). Only point, multipoint and curve geometry and the Meta feature *Quality of Bathymetric Data*can be associated with *Spatial Quality*. Currently no use case for associating surfaces with spatial quality attributes is known, therefore this is prohibited; however it is allowable for *Spatial Quality* to be associated with the curves comprising the spatial edges (boundaries) of surface features. Vertical uncertainty is prohibited for curves as this dimension is not supported by curves.
 
@@ -562,7 +573,7 @@ Where the temporal attributes have been encoded for any feature that is the stru
 
 If it is required to show seasonality of features, it must be done using the attribute *status* = _5_ (periodic/intermittent). If it is required to encode the start and/or end dates of the season, this must be done using the complex attribute *periodic date range* (see clauses 2.4.8 and 29.15).
 
-Where there is a requirement to indicate the beginning or end date of a seasonal occurrence as the "last day in February", consideration must be given to allowing for the extra day (29^th^ February) added on leap years. Encoding **periodic date range**, sub-attribute *date end* with the value ----_0228_ may result in erroneous indication of seasonality in the ECDIS on the 29^th^ February for leap years, while encoding the value ----_0229_ may similarly result in ECDIS performance issues for non-leap years. Encoders are advised, therefore, that where it is required to encode the end of seasonality as the last day in February, this must be done, similar to any other month of the year, by encoding the value of **periodic date range**, sub-attribute *date end* as --_--02­­--_. Where the beginning of seasonality is the last day in February, this must be done by encoding the value of **periodic date range**, sub-attribute *date start* in accordance with the next occurrence of the date (--_--0228_ if the next occurrence is a non-leap year or --_--0229_ if the next occurrence is a leap year). The ENC dataset must be amended by ENC Update (see Section 31) where the date is required to be changed. For instance, if the value is --_--0228_ and the next occurrence is a leap year, an ENC Update must be created to amend the date to --_--0229_.
+Where there is a requirement to indicate the beginning or end date of a seasonal occurrence as the "last day in February", consideration must be given to allowing for the extra day (29^th^ February) added on leap years. Encoding **periodic date range**, sub-attribute *date end* with the value ----_0228_ may result in erroneous indication of seasonality in the ECDIS on the 29^th^ February for leap years, while encoding the value ----_0229_ may similarly result in ECDIS performance issues for non-leap years. Encoders are advised, therefore, that where it is required to encode the end of seasonality as the last day in February, this must be done, similar to any other month of the year, by encoding the value of **periodic date range**, sub-attribute *date end* as --_--02--_. Where the beginning of seasonality is the last day in February, this must be done by encoding the value of **periodic date range**, sub-attribute *date start* in accordance with the next occurrence of the date (--_--0228_ if the next occurrence is a non-leap year or --_--0229_ if the next occurrence is a leap year). The ENC dataset must be amended by ENC Update (see Section 31) where the date is required to be changed. For instance, if the value is --_--0228_ and the next occurrence is a leap year, an ENC Update must be created to amend the date to --_--0229_.
 
 Alternatively, if encoders consider that there is no regulatory requirement to update the start date of a period for leap years, the value of *date start* may be populated as&nbsp;--__--03--__, indicating a beginning date of 01 March each year.
 
@@ -573,15 +584,18 @@ If it is required to show the beginning and end of the active time period of a f
 
 Time is preferably expressed as Universal Time Coordinated (UTC). Where required, this must be done using the format __hhmmssZ__, with 2 digits for the hour (_hh_), 2 digits for the minutes (_mm_) and 2 digits for the seconds (_ss_); and "__Z__" mandatory.
 
-EXAMPLE: _183059Z_ to represent a UTC time of 30 minutes and 59 seconds after 6 o'clock in the evening
+[example]
+_183059Z_ to represent a UTC time of 30 minutes and 59 seconds after 6 o'clock in the evening
 
 If it is required to express Local Time with a given offset to UTC, this must be done using the format _hhmmss+hhmm_.
 
-EXAMPLE: _183059+0100_ to represent a local time that is 1 hour ahead of UTC
+[example]
+_183059+0100_ to represent a local time that is 1 hour ahead of UTC
 
 In areas that are subject to daylight saving hours during certain periods of the year, it may be more appropriate to provide local times that are independent of a UTC offset. If it is required to express Local Time without a specified offset to UTC, this must be done using the format _hhmmss_.
 
-EXAMPLE: _183059_ to represent a local time of 30 minutes and 59 seconds after 6 o'clock in the evening
+[example]
+_183059_ to represent a local time of 30 minutes and 59 seconds after 6 o'clock in the evening
 
 [[sec_2.4.9.1]]
 ===== Schedules
@@ -795,7 +809,7 @@ Each feature instance within an ENC must have a unique universal Feature Object 
 
 [[figure_2-2]]
 .Heights and elevations
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_b72f4495.gif[Shape2,528,252]
+image::figure-2-2.png[Shape2,528,252]
 
 If it is required to encode the altitude of natural features above a vertical datum (for example hills, coastlines, slopes), with the exception of trees, it must be done using the attribute *elevation* (Figure 2-2&nbsp;(a)).
 
@@ -832,52 +846,51 @@ In the following examples, a dash in the *name usage* sub-attribute column indic
 
 [[table_2-5]]
 .Complex attribute feature name encoding - examples
-[cols="86,78,78,41,116,97",options="noheader"]
+[cols="^86,^78,^78,^41,^116,^97",options="noheader"]
 |===
-3+h| *S-101 Feature:* *Sea Area/Named Water Area* .9+h| ► 2.2+.<h| *Name displayed in ECDIS (based on display of names enabled and Mariner's selected language settings)*
-3+| *Complex attribute feature name, sub-attributes:*
-| *name* | *language* | *name usage* .<| *Language setting* .<| *Name displayed*
-| _Grolsch Point_ | _eng_ | _-_ .<| Default .<| Grolsch Pt
-| _Grolsch Pt_ | _eng_ | _1_ .<| Alternate (German) .<| Hn. Grolsch
-| _Hafen Grolsch_ | _deu_ | _-_ .<| Alternate (French) .<| P. Grolsch
-| _Hn. Grolsch_ | _deu_ | _2_ .<| Alternate (Spanish) .<| Grolsch Pt
-| _Port de Grolsch_ | _fra_ | _-_ .<| Alternate (English) .<| Grolsch Pt
-| _P. Grolsch_
-| _fra_
-| _2_
-.<|
+3+<h| [underline]#S-101 Feature:# Sea Area/Named Water Area .9+^.^| ►
+2.2+<h| Name displayed in ECDIS
+(based on display of names enabled and Mariner's selected language settings)
+3+<h| Complex attribute feature name, sub-attributes:
 
-.<|
+h| name h| language h| name usage h| Language setting h| Name displayed
 
+| _Grolsch Point_   | _eng_ | _-_ | Default             | Grolsch Pt
+| _Grolsch Pt_      | _eng_ | _1_ | Alternate (German)  | Hn. Grolsch
+| _Hafen Grolsch_   | _deu_ | _-_ | Alternate (French)  | P. Grolsch
+| _Hn. Grolsch_     | _deu_ | _2_ | Alternate (Spanish) | Grolsch Pt
+| _Port de Grolsch_ | _fra_ | _-_ | Alternate (English) | Grolsch Pt
+| _P. Grolsch_      | _fra_ | _2_ |                     |
 |===
 
-[cols="86,78,78,41,116,96",options="noheader"]
+[cols="^86,^78,^78,^41,^116,^96",options="noheader"]
 |===
-3+| *S-101 Feature:* *Land Area* .7+| ► 2.2+.<| *Name displayed in ECDIS (based on display of names enabled and Mariner's selected language settings)*
+3+<h| [underline]#S-101 Feature:# Land Area .7+^.^| ►
+2.2+<h| Name displayed in ECDIS (based on display of names enabled and Mariner's selected language settings)
+3+<h| Complex attribute feature name, sub-attributes:
 
-3+| *Complex attribute feature name, sub-attributes:*
-| *name* | *language* | *name usage* .<| *Language setting* .<| *Name displayed*
-| _Baffin Island_ | _eng_ | _1_ .<| Default .<| Baffin Island
+h| name h| language h| name usage h| Language setting h| Name displayed
 
-| _Île de Baffin_ | _fra_ | _2_ .<| Alternate (French) .<| Île de Baffin
-| _Qikiqtaaluk_ | _iku_ | _2_ .<| Alternate (Inuktitut) .<| Qikiqtaaluk
-| _ᕿᑭᖅᑖᓗᒃ_ | _iku_ | _-_ .<| Alternate (Spanish) .<| Baffin Island
+| _Baffin Island_ | _eng_ | _1_ .<| Default               .<| Baffin Island
+| _Île de Baffin_ | _fra_ | _2_ .<| Alternate (French)    .<| Île de Baffin
+| _Qikiqtaaluk_   | _iku_ | _2_ .<| Alternate (Inuktitut) .<| Qikiqtaaluk
+| _ᕿᑭᖅᑖᓗᒃ_       | _iku_ | _-_ .<| Alternate (Spanish)   .<| Baffin Island
 
 |===
 
-[cols="86,78,78,41,116,96",options="noheader"]
+[cols="^86,^78,^78,^41,^116,^96",options="noheader"]
 |===
-3+| *S-101 Feature:* *Built-Up Area* .8+| ► 2.2+.<| *Name displayed in ECDIS (based on display of names enabled and Mariner's selected language settings)*
+3+<h| [underline]#S-101 Feature:# Built-Up Area .8+^.^| ►
+2.2+<h| Name displayed in ECDIS (based on display of names enabled and Mariner's selected language settings)
+3+<h| Complex attribute feature name, sub-attributes:
 
-3+| *Complex attribute feature name, sub-attributes:*
-| *name* | *language* | *name usage* .<| *Language setting* .<| *Name displayed*
-| _Inari_ | _fin_ | _1_ .<| Default .<| Inari
+h| name h| language h| name usage h| Language setting h| Name displayed
 
-| _Enare_ | _swe_ | _2_ .<| Alternate (Swedish) .<| Enare
-| _Aanaar_ | _smn_ | _2_ .<| Alternate (Inari Sami) .<| Aanaar
-| _Anár_ | _sme_ | _2_ .<| Alternate (Northern Sami) .<| Anár
-| _Aanar_ | _sms_ | _2_ .<| Alternate (Skolt Sami) .<| Aanar
-
+| _Inari_   | _fin_ | _1_ .<| Default                   .<| Inari
+| _Enare_   | _swe_ | _2_ .<| Alternate (Swedish)       .<| Enare
+| _Aanaar_  | _smn_ | _2_ .<| Alternate (Inari Sami)    .<| Aanaar
+| _Anár_    | _sme_ | _2_ .<| Alternate (Northern Sami) .<| Anár
+| _Aanar_   | _sms_ | _2_ .<| Alternate (Skolt Sami)    .<| Aanar
 |===
 
 Geographic names should be encoded using *feature name* based on the following criteria and at the Producing Authority's discretion:
@@ -917,7 +930,7 @@ The following policy for the application of *scale minimum* (see clause 27.156) 
 
 [[table_2-6]]
 .scale minimum values
-[cols=1]
+[cols=^]
 |===
 h| 19999999
 | 9999999
@@ -972,451 +985,237 @@ h| FEATURE h| PRIMITIVE h| CONDITION h| scale minimum STEPS
 
 4+| *GEO FEATURES*
 
-| *Administration Area* | Curve/Surface | | 3
-
-| *Airport/Airfield* | Point/Surface | | 1
-
-| *Anchor Berth* | Point/Surface | | 1
-
-| *Anchorage Area* | Point/Surface | If *restriction* defined | 3
-
-| *Anchorage Area* | Point/Surface | | 2
-
-| *Archipelagic Sea Lane* | Surface | | 4
-
-| *Archipelagic Sea Lane Area* | Surface | | 4
-
-| *Archipelagic Sea Lane Axis* | Curve | | 4
-
-| *Berth* | Point/Curve/Surface | | 1
-
-| *Bollard* | Point | | 1
-
-| *Bridge* | Curve/Surface | Covered by a surface **Depth Area**, **Dredged Area**, or *Unsurveyed Area* feature | 4 | *Bridge* | Curve/Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ and covered by a surface **Land Area**, **Dock Area**, or *Lock Basin* feature | NOT SET | *Bridge* | Curve/Surface | | 1
-
-| *Building* | Point/Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ or *function* contains value _33_ (light support) | 3 | *Building* | Point/Surface | If *function* = _2_ (harbour masters office) or _3_ (customs office) or *visual prominence* = _2_ (not visually conspicuous) | 2
-
+| *Administration Area*         | Curve/Surface       |                          | 3
+| *Airport/Airfield*            | Point/Surface       |                          | 1
+| *Anchor Berth*                | Point/Surface       |                          | 1
+| *Anchorage Area*              | Point/Surface       | If *restriction* defined | 3
+| *Anchorage Area*              | Point/Surface       |                          | 2
+| *Archipelagic Sea Lane*       | Surface             |                          | 4
+| *Archipelagic Sea Lane Area*  | Surface             |                          | 4
+| *Archipelagic Sea Lane Axis*  | Curve               |                          | 4
+| *Berth*                       | Point/Curve/Surface |                          | 1
+| *Bollard*                     | Point               |                          | 1
+| *Bridge*                      | Curve/Surface
+| Covered by a surface *Depth Area*, *Dredged Area*, or *Unsurveyed Area* feature | 4
+| *Bridge* | Curve/Surface
+| If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ and covered by a surface **Land Area**, **Dock Area**, or *Lock Basin* feature
+| NOT SET
+| *Bridge*                  | Curve/Surface | | 1
+| *Building* | Point/Surface
+| If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ or *function* contains value _33_ (light support) | 3
+| *Building* | Point/Surface
+| If *function* = _2_ (harbour masters office) or _3_ (customs office) or *visual prominence* = _2_ (not visually conspicuous) | 2
 | *Building* | Point/Surface | | 1
-
-| *Built-Up Area* | Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ or *category of built-up area* = _5_ (city) | NOT SET | *Built-up Area* | Point/Surface | If *category of built-up area* = _4_ (town) | 2 | *Built-up Area* | Point/Surface | | 1
-
-| *Cable Area* | Surface | If *restriction* defined | 3 | *Cable Area* | Surface | | 2
-
-| *Cable Overhead* | Curve | Covered by an area **Depth Area**, **Dredged Area**, or *Unsurveyed Area* feature | 4 | *Cable Overhead* | Curve | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET | *Cable Overhead* | Curve | | 1
-
-| *Cable Submarine* | Curve | | 3
-
-| *Canal* | Curve | | 1
-
-| *Canal* | Surface | | 4
-
-| *Cardinal Beacon* | Point | | 3 (see Notes 2, 3 & 4 above)
-
-| *Cardinal Buoy* | Point | | 3 (see Notes 2, 3 & 4 above)
-
+| *Built-Up Area* | Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ or *category of built-up area* = _5_ (city) | NOT SET
+| *Built-up Area*   | Point/Surface | If *category of built-up area* = _4_ (town)   | 2
+| *Built-up Area*   | Point/Surface |                                               | 1
+| *Cable Area*      | Surface       | If *restriction* defined                      | 3
+| *Cable Area*      | Surface       |                                               | 2
+| *Cable Overhead*  | Curve         | Covered by an area **Depth Area**, **Dredged Area**, or *Unsurveyed Area* feature | 4
+| *Cable Overhead*  | Curve         | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
+| *Cable Overhead*  | Curve         | | 1
+| *Cable Submarine* | Curve         | | 3
+| *Canal*           | Curve         | | 1
+| *Canal*           | Surface       | | 4
+| *Cardinal Beacon* | Point         | | 3 (see Notes 2, 3 & 4 above)
+| *Cardinal Buoy*   | Point         | | 3 (see Notes 2, 3 & 4 above)
 | *Cargo Transhipment Area* | Point/Surface | | 1
-
 | *Causeway* | Curve/Surface | | 2
-
 | *Caution Area* | Point/Surface | | 4
-
 | *Checkpoint* | Point/Surface | | 1
-
 | *Coast Guard Station* | Point/Surface | | 1
-
 | *Collision Regulations Limit* | Curve | | 4
-
 | *Contiguous Zone* | Curve/Surface | | 3
-
 | *Continental Shelf Area* | Curve/Surface | | 3
-
 | *Conveyor* | Curve/Surface | Covered by a surface **Depth Area**, **Dredged Area**, or *Unsurveyed Area* feature | 4
-
 | *Conveyor* | Curve/Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
-
 | *Conveyor* | Curve/Surface | | 1
-
 | *Crane* | Point/Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
-
 | *Crane* | Point/Surface | | 1
-
 | *Current -- Non-Gravitational* | Point | | 3
-
 | *Custom Zone* | Surface | | 2
-
 | *Dam* | Curve/Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ or if seaward edge is coincident with the coastline (see clause 8.12) | NOT SET
-
 | *Dam* | Curve/Surface | | 1
-
 | *Daymark* | Point | If Equipment *scale minimum* should match that of Structure | 3
-
 | *Deep Water Route* | Surface | | 4
-
 | *Deep Water Route Centreline* | Curve | | NOT SET
-
 | *Deep Water Route Part* | Surface | | NOT SET
-
 | *Depth Contour* | Curve | If *value of depth contour* = _0_ (drying line) or _30_ | 4
-
 | *Depth Contour* | Curve | | 2
-
 | *Depth -- No Bottom Found* | Pointset | | 1
-
 | *Discoloured Water* | Point/Surface | | NOT SET
-
 | *Distance Mark* | Point | | 2
-
 | *Dock Area* | Surface | | 1
-
 | *Dolphin* | Point/ Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
-
 | *Dolphin* | Point/Surface | | 1
-
 | *Dry Dock* | Surface | | 1
-
 | *Dumping Ground* | Point/Surface | If *restriction* defined | 3
-
 | *Dumping Ground* | Point/Surface | | 2
-
 | *Dyke* | Curve/Surface | If seaward edge is coincident with the coastline (see clause 8.5) | NOT SET
-
 | *Dyke* | Curve/Surface | | 1
-
 | *Emergency Wreck Marking Buoy* | Point | | 3 (see Notes 2, 3 & 4 above)
-
 | *Exclusive Economic Zone* | Curve/Surface | | 3
-
 | *Fairway* | Surface | | 3
-
 | *Fairway System* | Surface | | 3
-
 | *Fence/Wall* | Curve | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
-
 | *Fence/Wall* | Curve | | 1
-
 | *Ferry Route* | Curve/Surface | | 3
-
 | *Fishery Zone* | Surface | | 3
-
 | *Fishing Facility* | Point/Curve/Surface | | 2
-
 | *Fishing Ground* | Surface | | 1
-
 | *Floating Dock* | Curve | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
-
 | *Floating Dock* | Curve | | 1
-
 | *Floating Dock* | Surface | | NOT SET
-
 | *Fog Signal* | Point | If Equipment *scale minimum* should match that of Structure | 3
-
 | *Fortified Structure* | Point/Curve/Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
-
 | *Fortified Structure* | Point/Curve/Surface | | 1
-
 | *Foul Ground* | Point/ Surface | If *value of sounding* > _30_ | 4
-
 | *Foul Ground* | Point/ Surface | | NOT SET
-
 | *Free Port Area* | Surface | | 2
-
 | *Gate* | Point/Curve/Surface | Covered by a surface **Depth Area**, **Dredged Area**, or *Unsurveyed Area* feature | NOT SET
-
 | *Gate* | Point/Curve/Surface | | 2
-
 | *Gridiron* | Surface | | 1
-
 | *Harbour Area (Administrative)* | Surface | | 3
-
 | *Harbour Facility* | Point/Surface | | 1
-
 | *Helipad* | Point | | 1
-
 | *Hulk* | Point | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
-
 | *Hulk* | Point | | 1
-
 | *Hulk* | Surface | | NOT SET
-
 | *Ice Area* | Surface | | 3
-
 | *Information Area* | Point/Surface | | 2
-
 | *Inshore Traffic Zone* | Surface | | NOT SET
-
-| *Installation Buoy* | Point |
-
-| 3 (see Notes 2, 3 & 4 above)
-
+| *Installation Buoy* | Point | | 3 (see Notes 2, 3 & 4 above)
 | *Island Group* | Surface | | 4
-
-| *Isolated Danger Beacon* | Point |
-
-| 4 (see Notes 2, 3 & 4 above)
-
-| *Isolated Danger Buoy* | Point |
-
-| 4 (see Notes 2, 3 & 4 above)
-
+| *Isolated Danger Beacon* | Point | | 4 (see Notes 2, 3 & 4 above)
+| *Isolated Danger Buoy* | Point | | 4 (see Notes 2, 3 & 4 above)
 | *Lake* | Surface | | 1
-
 | *Land Area* | Surface | | NOT SET
-
 | *Land Area* | Point/Curve | | 4
-
 | *Land Elevation* | Point | If *visual prominence* = _1_ (visually conspicuous) | NOT SET | *Land Elevation* | Point/Curve | | 3
-
 | *Land Region* | Point/Curve/Surface | | 1
-
 | *Landmark* | Point/Curve/Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ or *function* contains value _33_ (light support) | NOT SET
-
 | *Landmark* | Point/Curve/Surface | | 1
-
-| *Lateral Beacon* | Point |
-
-| 3 (see Notes 2, 3 & 4 above)
-
-| *Lateral Buoy* | Point |
-
-| 3 (see Notes 2, 3 & 4 above)
-
-| *Light Air Obstruction* | Point | If Equipment *scale minimum* should match that of Structure | 4 (see Notes 2, 3 & 4 above) | *Light All Around* | Point | If Equipment *scale minimum* should match that of Structure | 4 (see Notes 2, 3 & 4 above) | *Light Float* | Point |
-
-| 4 (see Notes 2, 3 & 4 above)
-
-| *Light Fog Detector* | Point | If Equipment *scale minimum* should match that of Structure | 4 (see Notes 2, 3 & 4 above) | *Light Sectored* | Point | If Equipment *scale minimum* should match that of Structure | 4 (see Notes 2, 3 & 4 above) | *Light Vessel* | Point |
-
-| 4 (see Notes 2, 3 & 4 above)
-
+| *Lateral Beacon* | Point | | 3 (see Notes 2, 3 & 4 above)
+| *Lateral Buoy* | Point | | 3 (see Notes 2, 3 & 4 above)
+| *Light Air Obstruction* | Point | If Equipment *scale minimum* should match that of Structure | 4 (see Notes 2, 3 & 4 above) | *Light All Around* | Point | If Equipment *scale minimum* should match that of Structure | 4 (see Notes 2, 3 & 4 above) | *Light Float* | Point | | 4 (see Notes 2, 3 & 4 above)
+| *Light Fog Detector* | Point | If Equipment *scale minimum* should match that of Structure | 4 (see Notes 2, 3 & 4 above) | *Light Sectored* | Point | If Equipment *scale minimum* should match that of Structure | 4 (see Notes 2, 3 & 4 above) | *Light Vessel* | Point | | 4 (see Notes 2, 3 & 4 above)
 | *Local Magnetic Anomaly* | Point/Curve/Surface | | 3
-
 | *Lock Basin* | Surface | | 1
-
 | *Log Pond* | Point/Surface | Covered by a surface **Depth Area**, **Dredged Area**, or *Unsurveyed Area* feature | 4 | *Log Pond* | Point/Surface | | 1
-
 | *Magnetic Variation* | Point/Curve/Surface | | 1
-
 | *Marine Farm/Culture* | Point/Curve/Surface | If *exposition of sounding* = _2_ (shoaler than range of the surrounding depth area) and *value of sounding* ≤ _30_ | 4 | *Marine Farm/Culture* | Point/Curve/Surface | If *restriction* defined | 3 | *Marine Farm/Culture* | Point/Curve/Surface | | 1
-
 | *Marine Pollution Regulations Area* | Surface | | 3
-
 | *Military Practice Area* | Point/Surface | | 3
-
 | *Mooring Area* | Point/Surface | | 2
-
-| *Mooring Buoy* | Point |
-
-| 2 (see Note 3 above)
-
+| *Mooring Buoy* | Point | | 2 (see Note 3 above)
 | *Mooring Trot* | Surface | | 3
-
 | *Navigation Line* | Curve | | 3
-
-| *Obstruction* | Point/Curve/Surface | If *value of sounding* > _30_ and *exposition of sounding* ≠ _2_ (shoaler than range of the surrounding depth area) | 4 | *Obstruction* | Point/Curve/Surface | | NOT SET
-
+| *Obstruction* | Point/Curve/Surface | If *value of sounding* > _30_ and *exposition of sounding* ≠ _2_ (shoaler than range of the surrounding depth area) | 4
+| *Obstruction* | Point/Curve/Surface | | NOT SET
 | *Offshore Platform* | Point/Surface | Covered by a surface *Offshore Production Area* | 3 | *Offshore Platform* | Point/Surface | | 4
-
 | *Offshore Production Area* | Surface | | 4
-
 | *Oil Barrier* | Curve | | 4
-
-| *Physical AIS Aid to Navigation* | Point |
-
-| 3 (see Notes 2, 3 & 4 above)
-
-| *Pile* | Point | Where used to mark position of *Light* feature in water | 4 (see Notes 3 & 4 above) | *Pile* | Point/Curve/Surface | If *visual prominence* = _1_ (visually conspicuous) | NOT SET | *Pile* | Point/Curve/Surface | | 2
-
+| *Physical AIS Aid to Navigation* | Point | | 3 (see Notes 2, 3 & 4 above)
+| *Pile* | Point | Where used to mark position of *Light* feature in water | 4 (see Notes 3 & 4 above) | *Pile* | Point/Curve/Surface | If *visual prominence* = _1_ (visually conspicuous) | NOT SET
+| *Pile* | Point/Curve/Surface | | 2
 | *Pilot Boarding Place* | Point/Surface | | 3
-
 | *Pilotage District* | Surface | | 3
-
 | *Pipeline Overhead* | Curve | Covered by a surface **Depth Area**, **Dredged Area**, or *Unsurveyed Area* feature | 4
-
 | *Pipeline Overhead* | Curve | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
-
 | *Pipeline Overhead* | Curve | | 1
-
-| *Pipeline Submarine/On Land* | Curve | Covered by a surface **Depth Area**, **Dredged Area**, or *Unsurveyed Area* feature | 3 | *Pipeline Submarine/On Land* | Curve | | 1
-
-| *Pontoon* | Curve | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET | *Pontoon* | Curve | | 2
-
+| *Pipeline Submarine/On Land* | Curve | Covered by a surface **Depth Area**, **Dredged Area**, or *Unsurveyed Area* feature | 3
+| *Pipeline Submarine/On Land* | Curve | | 1
+| *Pontoon* | Curve | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
+| *Pontoon* | Curve | | 2
 | *Pontoon* | Surface | | 4
-
 | *Precautionary Area* | Point/Surface | | NOT SET
-
-| *Production/Storage Area* | Point/Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET | *Production/Storage Area* | Point/Surface | | 1
-
-| *Pylon/Bridge Support* | Point/Surface | Covered by a surface **Depth Area**, **Dredged Area**, or *Unsurveyed Area* feature | NOT SET | *Pylon/Bridge Support* | Point/Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET | *Pylon/Bridge Support* | Point/Surface | | 1
-
+| *Production/Storage Area* | Point/Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
+| *Production/Storage Area* | Point/Surface | | 1
+| *Pylon/Bridge Support* | Point/Surface | Covered by a surface **Depth Area**, **Dredged Area**, or *Unsurveyed Area* feature | NOT SET
+| *Pylon/Bridge Support* | Point/Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
+| *Pylon/Bridge Support* | Point/Surface | | 1
 | *Radar Line* | Curve | | 3
-
 | *Radar Range* | Surface | | 3
-
-| *Radar Reflector* | Point | If Equipment *scale minimum* should match that of Structure | 3 | *Radar Station* | Point | | 2
-
-| *Radar Transponder Beacon* | Point | If Equipment *scale minimum* should match that of Structure | 3 | *Radio Calling-In Point* | Point/Curve | | 3
-
+| *Radar Reflector* | Point | If Equipment *scale minimum* should match that of Structure | 3
+| *Radar Station* | Point | | 2
+| *Radar Transponder Beacon* | Point | If Equipment *scale minimum* should match that of Structure | 3
+| *Radio Calling-In Point* | Point/Curve | | 3
 | *Radio Station* | Point | | 1
-
 | *Railway* | Curve | | 1
-
 | *Range System* | Curve/Surface | | 3
-
 | *Rapids* | Curve/Surface | | 1
-
 | *Recommended Route Centreline* | Curve | | 3
-
 | *Recommended Track* | Curve | | 3
-
 | *Recommended Traffic Lane Part* | Point/Surface | | 3
-
 | *Rescue Station* | Point/Surface | | 3
-
 | *Restricted Area* | Surface | | 3
-
-| *Retroreflector* | Point | If Equipment *scale minimum* should match that of Structure | 3 | *River* | Curve | | 1
-
+| *Retroreflector* | Point | If Equipment *scale minimum* should match that of Structure | 3
+| *River* | Curve | | 1
 | *River* | Surface | | 4
-
 | *Road* | Curve/Surface | | 1
-
-| *Runway* | Curve/Surface | If *visual prominence* = _1_ (visually conspicuous) | NOT SET | *Runway* | Curve/Surface | | 1
-
-| *Safe Water Beacon* | Point |
-
-| 3 (see Notes 2, 3 & 4 above)
-
-| *Safe Water Buoy* | Point |
-
-| 3 (see Notes 2, 3 & 4 above)
-
+| *Runway* | Curve/Surface | If *visual prominence* = _1_ (visually conspicuous) | NOT SET
+| *Runway* | Curve/Surface | | 1
+| *Safe Water Beacon* | Point | | 3 (see Notes 2, 3 & 4 above)
+| *Safe Water Buoy* | Point | | 3 (see Notes 2, 3 & 4 above)
 | *Sandwave* | Point/Curve/Surface | | 3
-
 | *Sea Area/Named Water Area* | Point/Surface | | 1
-
 | *Seabed Area* | Point/Curve/Surface | | 1
-
 | *Seagrass* | Point/Surface | | 3
-
-| *Seaplane Landing Area* | Point/Surface | If *restriction* defined | 3 | *Seaplane Landing Area* | Point/Surface | | 1
-
-| *Separation Zone or Line* | Curve/Surface |
-
-.<| NOT SET
-
+| *Seaplane Landing Area* | Point/Surface | If *restriction* defined | 3
+| *Seaplane Landing Area* | Point/Surface | | 1
+| *Separation Zone or Line* | Curve/Surface | | NOT SET
 | *Shoreline Construction* | Point/Curve/Surface | | NOT SET
-
 | *Signal Station Traffic* | Point/Surface | If Equipment *scale minimum* should match that of Structure | 1
-
 | *Signal Station Warning* | Point/Surface | If Equipment *scale minimum* should match that of Structure | 1
-
 | *Silo/Tank* | Point/Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
-
 | *Silo/Tank* | Point/Surface | | 1
-
 | *Slope Topline* | Curve | | 3
-
 | *Sloping Ground* | Point/Surface | | 3
-
 | *Small Craft Facility* | Point/Surface | | 1
-
 | *Sounding* | Pointset | | 1
-
 | *Span Fixed* | Curve/Surface | | NOT SET
-
 | *Span Opening* | Curve/Surface | | NOT SET
-
-| *Special Purpose/General Beacon* | Point |
-
-| 3 (see Notes 2, 3 & 4 above)
-
-| *Special Purpose/General Buoy* | Point |
-
-| 3 (see Notes 2, 3 & 4 above)
-
+| *Special Purpose/General Beacon* | Point | | 3 (see Notes 2, 3 & 4 above)
+| *Special Purpose/General Buoy* | Point | | 3 (see Notes 2, 3 & 4 above)
 | *Spring* | Point | | 1
-
 | *Straight Territorial Sea Baseline* | Curve | | 3
-
 | *Structure Over Navigable Water* | Surface | | NOT SET
-
 | *Submarine Pipeline Area* | Point/Surface | | 3
-
 | *Submarine Transit Lane* | Surface | | 3
-
 | *Swept Area* | Surface | | 3
-
 | *Territorial Sea Area* | Curve/Surface | | 3
-
 | *Tidal Stream -- Flood/Ebb* | Point/Surface | | 3
-
 | *Tidal Stream Panel Data* | Point/Surface | | 2
-
 | *Tideway* | Curve/Surface | | 1
-
-| *Traffic Separation Scheme* | Surface |
-
-.<| 4
-
-| *Traffic Separation Scheme Boundary* | Curve |
-
-.<| NOT SET
-
-| *Traffic Separation Scheme Crossing* | Surface |
-
-.<| NOT SET
-
-| *Traffic Separation Scheme Lane Part* | Surface |
-
-.<| NOT SET
-
-| *Traffic Separation Scheme Roundabout* | Surface |
-
-.<| NOT SET
-
+| *Traffic Separation Scheme* | Surface | | 4
+| *Traffic Separation Scheme Boundary* | Curve | | NOT SET
+| *Traffic Separation Scheme Crossing* | Surface | | NOT SET
+| *Traffic Separation Scheme Lane Part* | Surface | | NOT SET
+| *Traffic Separation Scheme Roundabout* | Surface | | NOT SET
 | *Tunnel* | Curve/Surface | Covered by a surface **Depth Area**, **Dredged Area**, or *Unsurveyed Area* feature | 4 | *Tunnel* | Curve/Surface | | 1
-
 | *Two-Way Route* | Surface | | 4
-
 | *Two-Way Route Part* | Surface | | NOT SET
-
-| *Underwater/Awash Rock* | Point | If *value of sounding* > _30_ and *exposition of sounding* ≠ _2_ (shoaler than range of the surrounding depth area) | 4 | *Underwater/Awash Rock* | Point | Covered by a surface *Obstruction* feature | 2 | *Underwater/Awash Rock* | Point | | NOT SET
-
+| *Underwater/Awash Rock* | Point | If *value of sounding* > _30_ and *exposition of sounding* ≠ _2_ (shoaler than range of the surrounding depth area) | 4
+| *Underwater/Awash Rock* | Point | Covered by a surface *Obstruction* feature | 2 | *Underwater/Awash Rock* | Point | | NOT SET
 | *Vegetation* | Point/Curve/Surface | If *visual prominence* = _1_ (visually conspicuous) | NOT SET | *Vegetation* | Point/Curve/Surface | | 1
-
 | *Vessel Traffic Service Area* | Surface | | 3
-
-| *Virtual AIS Aid to Navigation* | Point |
-
-| 3 (see Notes 2, & 4 above)
-
+| *Virtual AIS Aid to Navigation* | Point | | 3 (see Notes 2, & 4 above)
 | *Water Turbulence* | Point/Curve/Surface | | 3
-
 | *Waterfall* | Point/Curve | If *visual prominence* = _1_ (visually conspicuous) | NOT SET
-
 | *Waterfall* | Point/Curve | | 1
-
 | *Weed/Kelp* | Point/Surface | | 3
-
-| *Wind Turbine* | Point | On land and if *visual prominence* = _2_ (not visually conspicuous) or _3_ (prominent) | 1 | *Wind Turbine* | Point | Covered by a surface *Offshore Production Area* | 3 | *Wind Turbine* | Point | | 4
-
+| *Wind Turbine* | Point | On land and if *visual prominence* = _2_ (not visually conspicuous) or _3_ (prominent) | 1
+| *Wind Turbine* | Point | Covered by a surface *Offshore Production Area* | 3 | *Wind Turbine* | Point | | 4
 | *Wreck* | Point/Surface | If *category of wreck* = _1_ or (*value of sounding* > _30_ and *exposition of sounding* ≠ _2_ (shoaler than range of the surrounding depth area)) | 3
-
 | *Wreck* | Point/Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
-
 | *Wreck* | Point/Surface | | NOT SET
 
 4+| *METADATA FEATURES*
-
 | *Local Direction of Buoyage* | Surface | | 4
-
 | *Update Information* | Point/Curve/Surface | | NOT SET
 
 4+| *CARTOGRAPHIC FEATURES*
-
-| *Text Placement* | Point |
-
-| <= associated feature
+| *Text Placement* | Point | | <= associated feature
 
 |===
 
@@ -1428,14 +1227,16 @@ Optional additional rules that can be manually applied to fine tune the applicat
 |===
 h| GEO FEATURE h| PRIMITIVE h| CONDITION h| scale minimum STEPS
 
-| *Obstruction* | Point .<| The most significant *Obstruction* of a group of **Obstruction**s within close proximity | NOT SET
-
-| *Obstruction* | Point | For groups of **Obstruction**s in close proximity, or within an *Obstruction* surface | 2
-| *Sounding* | Pointset .<| *scale minimum* should be applied so that the least significant soundings are set to 1 step progressing to 4 steps for the most significant, above the optimum display scale for the data in order to achieve a gradual reduction in the soundings displayed as the user zooms out. | 1, 2, 3, 4
-| *Depth -- No Bottom Found* | Pointset .<| *scale minimum* should be applied so that the least significant depths are set to 1 step progressing to 4 steps for the most significant, above the optimum display scale for the data in order to achieve a gradual reduction in the depths displayed as the user zooms out. | 1, 2, 3, 4
-| *Underwater/Awash Rock* | Point .<| The most significant *Underwater/Awash Rock* of a group of **Underwater/Awash Rock**s within close proximity and not within an *Obstruction* surface | NOT SET
-| *Wreck* | Point/Surface .<| For groups of *Wreck* in close proximity (the most significant should not have *scale minimum*) | 2
-
+| *Obstruction* | Point    | The most significant *Obstruction* of a group of **Obstruction**s within close proximity | NOT SET
+| *Obstruction* | Point    | For groups of **Obstruction**s in close proximity, or within an *Obstruction* surface | 2
+| *Sounding*    | Pointset | *scale minimum* should be applied so that the least significant soundings are set to 1 step progressing to 4 steps for the most significant, above the optimum display scale for the data in order to achieve a gradual reduction in the soundings displayed as the user zooms out. | 1, 2, 3, 4
+| *Depth -- No Bottom Found* | Pointset
+| *scale minimum* should be applied so that the least significant depths are set to 1 step progressing to 4 steps for the most significant, above the optimum display scale for the data in order to achieve a gradual reduction in the depths displayed as the user zooms out.
+| 1, 2, 3, 4
+| *Underwater/Awash Rock* | Point
+| The most significant *Underwater/Awash Rock* of a group of **Underwater/Awash Rock**s within close proximity and not within an *Obstruction* surface | NOT SET
+| *Wreck*                 | Point/Surface
+| For groups of *Wreck* in close proximity (the most significant should not have *scale minimum*) | 2
 |===
 
 [[sec_2.5.10]]
@@ -1445,7 +1246,7 @@ To improve the look and feel of the display of ENCs in ECDIS for the Mariner cer
 
 [[figure_2-3]]
 .Overwriting symbols -- Example
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_993c3668.jpg["",484,145]
+image::figure-2-3.jpeg["",484,145]
 
 In order to best determine the appropriate level of masking required for an ENC cell, it is recommended that the ENC be viewed in an ECDIS.
 
@@ -1457,7 +1258,7 @@ When a single feature of type surface crosses the boundaries of adjoining ENC ce
 
 [[figure_2-4]]
 .Surface feature crossing ENC cell boundaries
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_7dffabf3.jpg["",537,152]
+image::figure-2-4.jpeg["",537,152]
 
 This allows the features to be displayed as a single feature of type surface rather than being divided at the cell boundary and having the representation of two separate features. Note that some ENC production software will automatically truncate (mask) features at the cell boundary.
 
@@ -1467,7 +1268,7 @@ Where features of type surface extend beyond the entire limit of data coverage f
 
 [[figure_2-5]]
 .Surface features extending beyond the entire limit of data coverage
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_91d0c770.jpg["",391,92]
+image::figure-2-5.jpeg["",391,92]
 
 Where a cell contains an area of no data coverage and the ENC production software applies automatic truncation (masking) of features extending beyond the limit of data coverage of the ENC, edges of area features extending beyond the internal limit of the area of no data coverage may need to be masked manually.
 
@@ -1477,53 +1278,35 @@ Table 2-9 below lists those features of type surface that should have edges mask
 .Features requiring masking along data coverage limit edges
 [cols="76,173"]
 |===
-h| *Feature Type* h| *Comment*
+h| Feature Type h| Comment
 
-| *Anchorage Area* |
-
-| *Cable Area* |
-| *Cargo Transhipment Area* |
-| *Caution Area* | Also edges that are shared with Traffic Separation Scheme (TSS)
-| *Dredged Area*
-|
-
-| *Dumping Ground* |
-| *Exclusive Economic Zone* |
-| *Fishery Zone*
-|
-
-| *Fishing Ground* |
+| *Anchorage Area*                |
+| *Cable Area*                    |
+| *Cargo Transhipment Area*       |
+| *Caution Area*                  | Also edges that are shared with Traffic Separation Scheme (TSS)
+| *Dredged Area*                  |
+| *Dumping Ground*                |
+| *Exclusive Economic Zone*       |
+| *Fishery Zone*                  |
+| *Fishing Ground*                |
 | *Harbour Area (Administrative)* |
-| *Ice Area* |
-| *Military Practice Area* |
-| *Offshore Production Area* |
-| *Pilotage District* | When the whole cell falls within a pilotage area.
-| *Pilot Boarding Place*
-|
-
-| *Precautionary Area* | Not applied if it is within a TSS.
-| *Quality of Bathymetric Data*
-|
-
-| *Quality of Survey*
-|
-
-| *Restricted Area* |
-| *Sandwave*
-|
-
-| *Seaplane Landing Area* |
-| *Submarine Pipeline Area*
-|
-
-| *Submarine Transit Lane* |
-| *Territorial Sea Area* |
-| *Vegetation* |
-| *Vessel Traffic Service Area*
-|
-
-| *Water Turbulence* |
-
+| *Ice Area*                      |
+| *Military Practice Area*        |
+| *Offshore Production Area*      |
+| *Pilotage District*             | When the whole cell falls within a pilotage area.
+| *Pilot Boarding Place*          |
+| *Precautionary Area*            | Not applied if it is within a TSS.
+| *Quality of Bathymetric Data*   |
+| *Quality of Survey*             |
+| *Restricted Area*               |
+| *Sandwave*                      |
+| *Seaplane Landing Area*         |
+| *Submarine Pipeline Area*       |
+| *Submarine Transit Lane*        |
+| *Territorial Sea Area*          |
+| *Vegetation*                    |
+| *Vessel Traffic Service Area*   |
+| *Water Turbulence*              |
 |===
 
 . Surface features having ECDIS symbol pattern fill:
@@ -1532,11 +1315,12 @@ Surfaces symbolised in ECDIS with a patterned fill, and for which the outer edge
 
 [[figure_2-6]]
 .Surface feature with pattern fill
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_599b1d0a.png["",602,156]
+image::figure-2-6.png["",602,156]
 
 Compilers must take care that the surface is large enough at the optimum display scale of the ENC data (and at smaller optimum display scales at which it is intended that the feature should be displayed) so that at least one pattern symbol is displayed in the area. If this is not the case, the boundary of the surface should not be masked. Alternatively, a point feature may be encoded instead of the surface feature. It may be useful to load and display the ENC in an ECDIS in order to assist with making decisions as to the best encoding option to adopt in individual circumstances.
 
-3. Routeing measures -- entrance and exit edges:
+[start=3]
+. Routeing measures -- entrance and exit edges:
 
 Routeing measures such as Traffic Separation Schemes (TSS), Two-Way Routes and Deep Water Routes have defined "ends" through which vessels enter and exit the route. Most routeing measures also consist of multiple components having different orientations. Where encoded, many of the features comprising the routeing measure symbolise along the edges of the area. Where the edges corresponding to the entry/exit points and between individual components of the route have not been masked, the impression of the route as a single routeing measure may not be apparent to the Mariner, and cause confusion. Compilers should therefore mask the entry/exit edges, and all edges between components within the routeing measure.
 
@@ -1564,31 +1348,42 @@ Figure 2-7 below shows an example of a TSS with all appropriate edges of the com
 
 [[fig_2-7]]
 .Traffic Separation Scheme with appropriate masking
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_fe6cab30.png["",377,264]
+image::figure-2-7.png["",377,264]
 
 To give an indication of the effect of masking in a complex area such as a maritime area containing a TSS, Figure 2-7 includes a *Caution Area* feature of type surface which has not had its edges masked. Due to the existence of the magenta "!" symbols within the **Caution Area**, and the fact that the edges of the *Caution Area* are coincident with the outer edge of the TSS, it is possible to further reduce ECDIS display clutter by masking the edges of the *Caution Area*. The resultant ECDIS display can be seen in Figure 2-8 below.
 
 [[fig_2-8]]
 .Traffic Separation Scheme with masked Caution Area
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_9447974f.gif[Shape3,388,248]
+image::figure-2-8.jpeg[Shape3,388,248]
 
 NOTE: In the example above it is also possible to mask the areas of water turbulence (indicated in Figure 2-8 by red arrows -- see scenario 2 above), however the small area to the east of the West cardinal buoy is too small to display the symbol at the optimum display scale of the ENC data. In cases such as this the compiler should consider capturing this as a *Water Turbulence* feature of type point.
 
 [[sec_2.6]]
 === Description of table format for S-101 meta, geo and information features
 
-*X.X* **Clause heading**
+*X.X* [red]#Red#Clause heading#
 
-[cols="87,114,114,114,114,114,114,114,38,77"]
+[cols="80,80,80,80,80,80,80,80,50,77",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *FEATURE:* Definition. (Authority for definition).
 10+| *[underline]#S-101 Geo Feature:#* *Feature (S-57 Acronym)* S-101 feature type, name and corresponding S-57 acronym
 10+| *[underline]#Primitives:#* *Point, Curve, Surface, None* Allowable geometric primitive(s)
-2+| __Real World__Example(s) of real-world instance(s) of the Feature. 4+| __Paper Chart Symbol__Example(s) of paper chart equivalent symbology for the Feature. 4+| __ECDIS Symbol__Example(s) of ECDIS symbology for the Feature.
-3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| category of beer
-2+|
 
+2+| __Real World__
+
+Example(s) of real-world instance(s) of the Feature.
+
+4+| __Paper Chart Symbol__
+
+Example(s) of paper chart equivalent symbology for the Feature.
+
+4+| __ECDIS Symbol__
+
+Example(s) of ECDIS symbology for the Feature.
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+
+3+| category of beer 2+|
 3+|
 1: ale +
 2: lager +
@@ -1599,89 +1394,49 @@ NOTE: In the example above it is also possible to mask the areas of water turbul
 7: wheat beer +
 8: pale ale +
 9: indian pale ale +
-| EN
-| 1,1
+| EN | 1,1
 
-3+| This section liststhe full list of allowable attributes for the S-101 feature. Attributes are listed in alphabetical order. Sub-attributes (Type prefix (S)) of complex (Type C) attributes are listed in alphabetical order and indented directly under the entry for the complex attribute (see below for example). Note that a complex attribute may have simple or complex attributes as sub-complex attributes. 2+| This section liststhe corresponding S-57 attribute acronym. A blank cell indicates no corresponding S-57 acronym. 3+| This section liststhe allowable encoding values for S-101 (for enumeration (E) Type attributes only). Further information about the attribute is available in Sections 27-30. | Attribute type (see clause 2.4.2). | Multiplicity describes the "cardinality" of the attribute in regard to the feature. See clause 2.4.1.
-3+| fixed date range
-2+|
+3+| This section lists the full list of allowable attributes for the S-101 feature. Attributes are listed in alphabetical order. Sub-attributes (Type prefix (S)) of complex (Type C) attributes are listed in alphabetical order and indented directly under the entry for the complex attribute (see below for example). Note that a complex attribute may have simple or complex attributes as sub-complex attributes.
+2+| This section liststhe corresponding S-57 attribute acronym. A blank cell indicates no corresponding S-57 acronym.
+3+| This section liststhe allowable encoding values for S-101 (for enumeration (E) Type attributes only). Further information about the attribute is available in Sections 27-30.
+| Attribute type (see clause 2.4.2).
+| Multiplicity describes the "cardinality" of the attribute in regard to the feature. See clause 2.4.1.
 
-3+| See clause 2.4.8
-| C
-| 0,1
+3+| fixed date range 2+| 3+| See clause 2.4.8 | C | 0,1
 
-3+| date end
-2+| (DATEND)
-3+|
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnote:twodotsix[For each instance of fixed date range, at least one of the sub-attributes *date end* or *date start* must be populated.]
 
-| (S) TD
-| 0,1 ^†^
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnote:twodotsix[]
 
-3+| date start
-2+| (DATSTA)
-3+|
+3+| information 2+| 3+| See clause 2.4.6 | C | 0,*
 
-| (S) TD
-| 0,1 ^†^
+3+| file locator 2+| 3+| | (S) TE | 0,1
 
-3+| information
-2+|
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnote:twodotsix[]
 
-3+| See clause 2.4.6
-| C
-| 0,*
+3+| headline 2+| 3+| | (S) TE | 0,1
 
-3+| file locator
-2+|
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+|
-
-| (S) TE
-| 0,1
-
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
-| 0,1 ^†^
-
-3+| headline
-2+|
-
-3+|
-
-| (S) TE
-| 0,1
-
-3+| language
-2+|
-
-3+| ISO 639-2/T
-| (S) TE
-| 1,1
-
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
-| 0,1 ^†^
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnote:twodotsix[]
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+
+10+h| Feature Associations
+
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+
 | Role name 3+| *Name of Association* (see clause 25.xx) 3+| *Feature or Information Type(s)* 2+| Association/ Aggregation/ Composition | 0,1
-| See Section 26. 3+| See Section 25. 3+| Corresponds to the feature(s) that the subject feature may be associated to. See Section 25 2+| Association type. | The individual multiplicity to which the subject feature may be associated to the "Associated to" feature(s) (see clause 25).
-10+.<| ^†^ For each instance of fixed date range, at least one of the sub-attributes *date end* or *date start* must be populated.
+| See Section 26. 3+| See Section 25. 3+| Corresponds to the feature(s) that the subject feature may be associated to. See Section 25
+2+| Association type. | The individual multiplicity to which the subject feature may be associated to the "Associated to" feature(s) (see clause 25).
+
+10+a|
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 The "^†^" superscript in the Multiplicity column indicates a "conditional" mandatory attribute. See clause 2.4.3.
 
-|===
-
-[underline]#INT 1 Reference:#The INT 1 location(s) of the Feature -- by INT1 Section and Section Number.*X.X.X**Sub-clause heading(s)* **(see S-4 -- B-YYY.Y)**Introductory remarks. Includes information regarding the real world entity/situation requiring the encoding of the Feature in the ENC, and where required nautical cartographic principles relevant to the Feature to aid the compiler in determining encoding requirements. Specific instructions to encode the feature.
+[underline]#INT 1 Reference:# The INT 1 location(s) of the Feature -- by INT1 Section and Section Number.*X.X.X**Sub-clause heading(s)* **(see S-4 -- B-YYY.Y)**Introductory remarks. Includes information regarding the real world entity/situation requiring the encoding of the Feature in the ENC, and where required nautical cartographic principles relevant to the Feature to aid the compiler in determining encoding requirements. Specific instructions to encode the feature.
 
 Note that in all sub-clauses feature types and association names are shown in **Bold Capitalised Text**; attributes (complex, sub- and simple) are shown in **bold lower case text**; and attribute values (including enumerate codes) are shown in _italic text_.
 
@@ -1696,11 +1451,18 @@ Note that in all sub-clauses feature types and association names are shown in **
 
 [underline]#Distinction:# List of features in the Product Specification distinct from the Feature.
 
+|===
+
 [underline]#Remarks:#
 
 * S-101 Attribute: Indentation of attributes indicates sub-attributes of complex attributes. Complex attributes may also be sub-attributes of complex attributes, which is indicated by further indentation of the attribute name in the tables.
+
 * S-101 Attribute: Attributes shown in grey text are ECDIS "system" attributes which are populated by the ENC production system in order to assist with portrayal of ENC data in ECDIS (see Section30). These attributes may be further edited by the compiler as required.
+
 * S-57 Acronym: S-57 attribute acronyms shown in italic style text have been re-modelled in S-101 from S-57.
+
 * Allowable Encoding Value: For enumeration (EN) type attributes, the enumerate values listed are only those allowable for the particular binding of the attribute relevant to the feature. Allowable values may vary for the attribute depending on the feature to which the attribute is bound. Such bindings are defined in the S-101 Feature Catalogue. The full list of enumerate values that may be assigned to an attribute in S-101 can be found in Sections 27 and 28 of this document.
+
 * Type: The prefix (C) indicates that the attribute is a complex attribute. Complex attributes are aggregates of other attributes that can be simple type or complex type. The prefix (S) indicates that the attribute is a sub-attribute of a complex attribute. Complex attributes that are sub-attributes of a complex attribute, and their sub-attributes, are indicated by indentation of the attribute name in the S-101 Attribute column.
+
 * Feature/Feature, Feature/Information and Spatial/Information associations, including allowable features for association ends, are described in Section 25.
