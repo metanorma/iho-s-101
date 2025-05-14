@@ -1,0 +1,45 @@
+
+== Document Control
+
+[cols="61,156,71,71,90,127"]
+|===
+h| Version h| Version Type h| Date h| Approved By h| Signed Off By h| Role
+| 0.0.0 | Editing Committee Draft | Jan 2014 | TSMAD | J. Wootton | DCEG Coordinator
+| 0.0.1 | Baseline Version 1 | Apr 2014 | TSMAD | J. Wootton | DCEG Coordinator
+| 0.0.2 | Baseline Version | Aug 2016 | S-101PT | J. Wootton | DCEG Coordinator
+| 0.0.2 | Baseline Version 2 | Mar 2017 | S-101PT | J. Wootton | DCEG Coordinator
+| 1.0.0 | Edition 1.0.0 | Dec 2018 | S-101PT | A. Armstrong | S-101PT Chair
+| 1.0.1 | Edition 1.0.1 | Mar 2021 | S-101PT | T. Richardson | S-101PT Chair
+| 1.0.2 | Edition 1.0.2 | Mar 2022 | S-101PT | T. Richardson | S-101PT Chair
+| 1.1.0 | Edition 1.1.0 | Mar 2023 | S-101PT | T. Richardson | S-101PT Chair
+| 1.2.0 | Edition 1.2.0 | Mar 2024 | S-101PT | T. Richardson | S-101PT Chair
+| 2.0.0 | Edition 2.0.0 | Dec 2024 | IHO CL 02-2025 | T. Richardson | S-101PT Chair
+
+|===
+
+== Summary of Substantive Changes from Edition 2.0.0
+
+*Bold* references in the Clauses Affected column indicate the principle sections/clauses that are impacted by the described change.
+
+[cols="^,^"]
+|===
+h| Change Summary h| Clauses Affected
+
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+|===

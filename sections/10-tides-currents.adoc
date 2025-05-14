@@ -1,0 +1,812 @@
+[[sec_10]]
+== Geo Features -- Tides, Currents
+
+[[sec_10.1]]
+=== Tidal data (see S-4 -- B-406 to B-408)
+
+The inclusion of tidal information in ECDIS is optional. As such, for ENC only tidal stream and current information is required to be encoded. The implementation of tidal models based on predictions or applications to incorporate real-time tidal observations in ECDIS will be the subject of additional Product Specifications utilising the S-100 Universal Hydrographic Data Model.
+
+[[sec_10.2]]
+=== Tidal stream -- flood/ebb
+
+[cols="539,804,804,804,804,804,804,804,294,539"]
+|===
+10+| [underline]#IHO Definition:# *TIDAL STREAM*. Approximate tidal stream rates given as discrete rate values for flood and ebb flow during springs. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.173, November 2000).
+10+| *[underline]#S-101 Geo Feature:#* *Tidal Stream -- Flood/Ebb (TS_FEB)*
+10+| *[underline]#Primitives:#* *Point, Surface*
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| category of tidal stream 2+| (CAT_TS) 3+|
+1: flood stream +
+2: ebb stream +
+3: other tidal flow | EN | 1,1
+
+3+| feature name 2+| 3+| See clause 2.5.8 | C | 0,*
+
+3+| language
+2+|
+
+3+| ISO 639-2/T
+| (S) TE
+| 1,1
+
+3+| name
+2+| _(OBJNAM) (NOBJNM)_
+3+|
+
+| (S) TE
+| 1,1
+
+3+| name usage
+2+|
+
+3+|
+1: default name display +
+2: alternate name display +
+| (S) EN
+| 0,1 ^†^
+
+3+| fixed date range
+2+|
+
+3+| See clause 2.4.8
+| C
+| 0,1
+
+3+| date end
+2+| (DATEND)
+3+|
+
+| (S) TD
+| 0,1 ^†^
+
+3+| date start
+2+| (DATSTA)
+3+|
+
+| (S) TD
+| 0,1 ^†^
+
+3+| interoperability identifier
+2+|
+
+3+| MRN (see clause 27.114)
+| URN
+| 0,1
+
+3+| orientation
+2+|
+
+3+|
+
+| C
+| 1,1
+
+3+| orientation uncertainty
+2+|
+
+3+|
+
+| (S) RE
+| 0,1
+
+3+| orientation value
+2+| _(ORIENT)_
+3+|
+
+| (S) RE
+| 1,1
+
+3+| speed
+2+|
+
+3+|
+
+| C
+| 1,1
+
+3+| speed maximum 2+| (CURVEL) 3+| 35.0 >= speed maximum > speed minimum | (S) RE | 1,1
+3+| speed minimum
+2+|
+
+3+| 0 < speed minimum < speed maximum
+| (S) RE
+| 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| information
+2+|
+
+3+| See clause 2.4.6
+| C
+| 0,*
+
+3+| file locator
+2+|
+
+3+|
+
+| (S) TE
+| 0,1
+
+3+| file reference
+2+| _(TXTDSC) (NTXTDS)_
+3+|
+
+| (S) TE
+| 0,1 ^†^
+
+3+| headline
+2+|
+
+3+|
+
+| (S) TE
+| 0,1
+
+3+| language
+2+|
+
+3+| ISO 639-2/T
+| (S) TE
+| 1,1
+
+3+| text
+2+| _(INFORM) (NINFOM)_
+3+|
+
+| (S) TE
+| 0,1 ^†^
+
+10+| *Feature Associations*
+| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+
+For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+
+|===
+
+[underline]#INT 1 Reference:# H 40, 41
+
+[[sec_10.2.1]]
+==== Tidal stream (flood/ebb) (see S-4 -- B-407 and B-407.4)
+
+The term "tidal streams" (French: "courants de marée", US usage: "tidal currents"), is used to designate the periodical horizontal movements of the water, which are astronomical in origin. These are distinguished from "currents" (French: "courants généraux"), which are not dependent on astronomical conditions. In practice the navigator experiences a combination of tidal stream and current. Tidal streams are defined by the direction towards which they flow. The terms "flood stream" and "ebb stream" are used for designating the horizontal movement of the water when the tide is respectively rising or falling. To avoid any ambiguity, in the case of streams which do not turn at about the time of local high or low water, an indication must be given of the direction towards which the stream flows.
+
+Where data are inadequate for tabulated information (*Tidal Stream Panel Data* -- see clause10.5), or where otherwise required, single observations comprising flood and ebb directions and/or rates, preferably corresponding to maximum rates at the spring tide, should be encoded.
+
+If it is required to encode tidal stream information that is limited to flood and ebb directions and/or values, it must be done using the feature *Tidal Stream -- Flood/Ebb*.
+
+[underline]#Remarks:#
+
+* Maximum directions and rates (velocities) of tidal streams during springs, where known, must be encoded in knots using the complex attributes *orientation* and **speed**, and should be quoted to one decimal place. In rivers and estuaries where there are permanent currents caused by the flow of river water, such currents must be included in the calculation of the rate. Where the speed of the current in a river or estuary is so variable as to make it impractical to indicate a value, *speed* (sub-attribute *speed maximum*) should be populated with an empty (null) value.
+
+[underline]#Distinction:# Current -- Non-Gravitational; Tidal Stream Panel Data.
+
+[[sec_10.3]]
+=== Current -- non-gravitational
+
+[cols="539,804,804,804,804,804,804,804,294,539"]
+|===
+10+| [underline]#IHO Definition:# *CURRENT -- NON-GRAVITATIONAL*. Any [[current]] that is caused by other than [[tide-producing%20force]]. (IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Current -- Non-Gravitational (CURENT)*
+10+| *[underline]#Primitives:#* *Point*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| feature name
+2+|
+
+3+| See clause 2.5.8
+| C
+| 0,*
+
+3+| language
+2+|
+
+3+| ISO 639-2/T
+| (S) TE
+| 1,1
+
+3+| name
+2+| _(OBJNAM) (NOBJNM)_
+3+|
+
+| (S) TE
+| 1,1
+
+3+| name usage
+2+|
+
+3+|
+1: default name display +
+2: alternate name display +
+| (S) EN
+| 0,1 ^†^
+
+3+| fixed date range
+2+|
+
+3+| See clause 2.4.8
+| C
+| 0,1
+
+3+| date end
+2+| (DATEND)
+3+|
+
+| (S) TD
+| 0,1 ^†^
+
+3+| date start
+2+| (DATSTA)
+3+|
+
+| (S) TD
+| 0,1 ^†^
+
+3+| interoperability identifier
+2+|
+
+3+| MRN (see clause 27.114)
+| URN
+| 0,1
+
+3+| orientation
+2+|
+
+3+|
+
+| C
+| 1,1
+
+3+| orientation uncertainty
+2+|
+
+3+|
+
+| (S) RE
+| 0,1
+
+3+| orientation value
+2+| _(ORIENT)_
+3+|
+
+| (S) RE
+| 1,1
+
+3+| periodic date range
+2+|
+
+3+| See clause 2.4.8
+| C
+| 0,*
+
+3+| date end
+2+| _(PEREND)_
+3+|
+
+| (S) TD
+| 1,1
+
+3+| date start
+2+| _(PERSTA)_
+3+|
+
+| (S) TD
+| 1,1
+
+3+| speed
+2+|
+
+3+|
+
+| C
+| 1,1
+
+3+| speed maximum 2+| (CURVEL) 3+| 35.0 >= speed maximum > speed minimum | (S) RE | 1,1
+3+| speed minimum
+2+|
+
+3+| 0 < speed minimum < speed maximum
+| (S) RE
+| 0,1
+
+3+| status 2+| (STATUS) 3+|
+5: periodic/intermittent | EN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| information
+2+|
+
+3+| See clause 2.4.6
+| C
+| 0,*
+
+3+| file locator
+2+|
+
+3+|
+
+| (S) TE
+| 0,1
+
+3+| file reference
+2+| _(TXTDSC) (NTXTDS)_
+3+|
+
+| (S) TE
+| 0,1 ^†^
+
+3+| headline
+2+|
+
+3+|
+
+| (S) TE
+| 0,1
+
+3+| language
+2+|
+
+3+| ISO 639-2/T
+| (S) TE
+| 1,1
+
+3+| text
+2+| _(INFORM) (NINFOM)_
+3+|
+
+| (S) TE
+| 0,1 ^†^
+
+10+| *Feature Associations*
+| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+
+For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+
+|===
+
+[underline]#INT 1 Reference:# H 42, 43
+
+[[sec_10.3.1]]
+==== Current data (see S-4 -- B-408)
+
+The term "current(s)" in this document is used to describe water movements which are generally constant in direction, and are not dependent on astronomical conditions (that is, are non-gravitational). A current is described by the direction towards which it is running. For tidal streams, see clauses10.2and 10.5.
+
+Currents occur as:
+
+* The flow of river water in rivers and estuaries;
+* Permanent flows in other restricted waters, for example İstanbul Boğazı (Bosporus);
+* Permanent or seasonal oceanic currents;
+* Temporary wind-induced currents.
+It is particularly important to depict currents (both the main flows and permanent eddies) which could set a vessel towards dangers.
+
+If it is required to encode a non-gravitational current, it must be done using the feature *Current -- Non-Gravitational*.
+
+[underline]#Remarks:#
+
+* Maximum rates (velocities) of currents, where known, must be encoded in knots using the complex attributes *orientation* and **speed**, and should be quoted to one decimal place. Ideally, the minimum and maximum strengths should be quoted, where known, if the strength varies.
+* In tidal waters where the flow of river water alternately reinforces the ebb tidal stream and reduces the flood, the combined effect must be encoded, where required, for the convenience of the navigator; that is, the combined current must be encoded using the features *Tidal Stream -- Flood/Ebb* or *Tidal Stream Panel Data* (see clauses 10.2and 10.5). In restricted waters where tides are negligible, the direction and/or rate of flow should be encoded using *Current -- Non-Gravitational*.
+* Ocean currentsare permanent or seasonal, are somewhat variable in strength and direction, and generally cover broad areas. In cases where the current strength and direction are subject to seasonal variations, this should be indicated using the complex attribute *periodic date range*. This may require multiple *Current -- Non-Gravitational* features with attributes populated in accordance with the seasonal variations to be coincident in the ENC. Where the direction of an ocean current is so variable that it is not practicable to show this information, the complex attribute *orientation* (*orientation value*) must be populated with an empty (null) value.
+* Local weather conditions can produce significant temporary wind-induced currents which cannot be charted. If there is a known hazard, for example if winds from a particular direction have been found to endanger vessels by setting them on to shoals unexpectedly, a cautionary note may be added using the feature *Caution Area* (see clause 16.10). If considered necessary, the note may refer to further information in other publications, such as Sailing Directions.
+
+[underline]#Distinction:# Tidal Stream (Flood/Ebb); Tidal Stream Panel Data.
+
+[[sec_10.4]]
+=== Water turbulence
+
+[cols="539,804,804,804,804,804,804,804,294,539"]
+|===
+10+| [underline]#IHO Definition:# *WATER TURBULENCE*. The disturbance of water caused by the interaction of any combination of waves, currents, tidal streams, wind, shoal patches and obstructions. (IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Water Turbulence (WATTUR)*
+10+| *[underline]#Primitives:#* *Point, Curve, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| category of water turbulence 2+| (CATWAT) 3+|
+1: breakers +
+2: eddies +
+3: overfalls +
+4: tide rips +
+5: bombora | EN | 1,1
+3+| feature name
+2+|
+
+3+| See clause 2.5.8
+| C
+| 0,*
+
+3+| language
+2+|
+
+3+| ISO 639-2/T
+| (S) TE
+| 1,1
+
+3+| name
+2+| _(OBJNAM) (NOBJNM)_
+3+|
+
+| (S) TE
+| 1,1
+
+3+| name usage
+2+|
+
+3+|
+1: default name display +
+2: alternate name display +
+| (S) EN
+| 0,1 ^†^
+
+3+| interoperability identifier
+2+|
+
+3+| MRN (see clause 27.114)
+| URN
+| 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| information
+2+|
+
+3+| See clause 2.4.6
+| C
+| 0,*
+
+3+| file locator
+2+|
+
+3+|
+
+| (S) TE
+| 0,1
+
+3+| file reference
+2+| _(TXTDSC) (NTXTDS)_
+3+|
+
+| (S) TE
+| 0,1 ^†^
+
+3+| headline
+2+|
+
+3+|
+
+| (S) TE
+| 0,1
+
+3+| language
+2+|
+
+3+| ISO 639-2/T
+| (S) TE
+| 1,1
+
+3+| text
+2+| _(INFORM) (NINFOM)_
+3+|
+
+| (S) TE
+| 0,1 ^†^
+
+10+| *Feature Associations*
+| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+
+For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+
+|===
+
+[underline]#INT 1 Reference:# H 44, 45; K 17
+
+[[sec_10.4.1]]
+==== Overfalls, races, breakers, eddies (see S-4 -- B-423)
+
+If it is required to encode a disturbance of water, it must be done using the feature *Water Turbulence*.
+
+[underline]#Remarks:#
+
+* If it is required to encode a breaker over an off-lying shoal, it must be done using a *Water Turbulence* feature at the same position as the feature causing the breaker (for example*Underwater/Awash Rock*).
+* A *Water Turbulence* feature of type surface must be covered by **Depth Area**, *Dredged Area* or *Unsurveyed Area* features as appropriate.
+
+[underline]#Distinction:# Rapids; Waterfall.
+
+[[sec_10.5]]
+=== Tidal stream panel data
+
+[cols="705,597,597,470,245,597,597,597,210,385"]
+|===
+9+.<h| IHO Definition: *TIDAL STREAM PANEL DATA*. Approximate tidal stream characteristics given as discrete value sets at a specified interval before and/or after a high or low water. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.176, November 2000). |
+9+| *[underline]#S-101 Geo Feature:#* *Tidal Stream Panel Data (TS_PAD)* |
+9+| *[underline]#Primitives:#* *Point, Surface* |
+2+| _Real World_
+
+4+| _Paper Chart Symbol_
+
+3+| _ECDIS Symbol_
+
+|
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| feature name
+2+|
+
+3+| See clause 2.5.8
+| C
+| 0,*
+
+3+| language
+2+|
+
+3+| ISO 639-2/T
+| (S) TE
+| 1,1
+
+3+| name
+2+| _(OBJNAM) (NOBJNM)_
+3+|
+
+| (S) TE
+| 1,1
+
+3+| name usage
+2+|
+
+3+|
+1: default name display +
+2: alternate name display +
+| (S) EN
+| 0,1 ^†^
+
+3+| interoperability identifier
+2+|
+
+3+| MRN (see clause 27.114)
+| URN
+| 0,1
+
+3+| station name
+2+| _(TS_TSP)_
+3+|
+
+| TE
+| 1,1
+
+3+| station number
+2+| _(TS_TSP)_
+3+|
+
+| TE
+| 0,1
+
+3+| tidal stream panel values
+2+| _(TS_TSP)_
+3+|
+
+| C
+| 1,\* (ordered)
+
+3+| reference tide
+2+|
+
+3+|
+1: high water +
+2: low water +
+| (S) EN
+| 1,1
+
+3+| reference tide type
+2+|
+
+3+|
+1: springs +
+2: neaps +
+3: mean +
+| (S) EN
+| 1,1
+
+3+| stream depth
+2+|
+
+3+|
+
+| (S) RE
+| 0,1
+
+3+| tidal stream value
+2+|
+
+3+|
+
+| (S) C
+| 1,\* (ordered)
+
+3+| orientation
+2+|
+
+3+|
+
+| (S) C
+| 1,1
+
+3+| orientation uncertainty
+2+|
+
+3+|
+
+| (S) RE
+| 0,1
+
+3+| orientation value
+2+|
+
+3+|
+
+| (S) RE
+| 1,1
+
+3+| speed maximum
+2+|
+
+3+| 35.0 >= speed maximum
+| (S) RE
+| 1,1
+
+3+| time relative to tide
+2+|
+
+3+|
+
+| (S) RE
+| 1,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| information
+2+|
+
+3+| See clause 2.4.6
+| C
+| 0,*
+
+3+| file locator
+2+|
+
+3+|
+
+| (S) TE
+| 0,1
+
+3+| file reference
+2+| _(TXTDSC) (NTXTDS)_
+3+|
+
+| (S) TE
+| 0,1 ^†^
+
+3+| headline
+2+|
+
+3+|
+
+| (S) TE
+| 0,1
+
+3+| language
+2+|
+
+3+| ISO 639-2/T
+| (S) TE
+| 1,1
+
+3+| text
+2+| _(INFORM) (NINFOM)_
+3+|
+
+| (S) TE
+| 0,1 ^†^
+
+9+| *Feature Associations* |
+| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+9+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+
+For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+
+|===
+
+[underline]#INT 1 Reference:# H 31,46
+
+[[sec_10.5.1]]
+==== Tidal stream panels (see S-4 -- B-407 and B-407.2-3)
+
+The term "tidal streams" (French: "courants de marée", US usage: "tidal currents"), is used to designate the periodical horizontal movements of the water, which are astronomical in origin. These are distinguished from "currents" (French: "courants généraux"), which are not dependent on astronomical conditions. In practice the navigator experiences a combination of tidal stream and current. Tidal streams are defined by the direction towards which they flow. The terms "flood stream" and "ebb stream" are used for designating the horizontal movement of the water when the tide is respectively rising or falling. To avoid any ambiguity, in the case of streams which do not turn at about the time of local high or low water, an indication must be given of the direction towards which the stream flows.
+
+If it is required to encode the information generally shown on paper charts as a tidal stream panel and stations, it must be done using the feature *Tidal Stream Panel Data*.
+
+Tidal stream values encoded in this way should be spring rates; that is, the tidal stream rates associated with a tidal range which is defined as the difference in height between MHWS and MLWS. Remarks:
+
+* The mandatory complex attribute *tidal stream panel values* is structured such that, in combination with attributes *station name* and **station number**, the equivalent layout of a paper chart tidal stream panel can be reproduced in an ECDIS Pick Report display. An example of the encoding of a *Tidal Stream Panel Data* feature as compared to the S-57 object class *TS_PAD* is included below:
+S-57 Encoding: Population of attribute TS_TSP0014,PLYMOUTH (DEVONPORT),HW,113,0.1,332,0.6,331,1.1,342,1.0,347,0.7,333,0.5,317,0.3,178,0.3,146,0.6,140,1.0,143,1.1,143, 0.8,138,0.3
+S-101 Encoding: (Complex attributes in italics, encoded values in blue text)
+
+[cols="987,716,716,658,343,716,716,716,716,716"]
+|===
+5+h| *Tidal Stream Panel Data (feature)* | | | | |
+2+| station name 3+| Plymouth (Devonport) | | | | |
+2+| station number 3+| 0014 | | | | |
+5+| _tidal stream panel values_ | | | | |
+| reference tide 4+| high water | | | | |
+| reference tide type 4+| springs | | | | |
+.3+| _tidal stream value_ 2+| _orientation_ | orientation value | 113 | | | | |
+3+| speed maximum | 0.1 | | | | |
+3+| time relative to tide | -6 | | | | |
+.3+| _tidal stream value_ 2+| _orientation_ | orientation value | 332 | | | | |
+3+| speed maximum | 0.6 | | | | |
+3+| time relative to tide | -5 | | | | |
+.3+| _tidal stream value_ 2+| _orientation_ | orientation value | 331 | | | | |
+3+| speed maximum | 1.1 | | | | |
+3+| time relative to tide | -4 | | | | |
+.3+| _tidal stream value_ 2+| _orientation_ | orientation value | 342 | | | | |
+3+| speed maximum | 1.0 | | | | |
+3+| time relative to tide | -3 | | | | |
+.3+| _tidal stream value_ 2+| _orientation_ | orientation value | 347 | | | | |
+3+| speed maximum | 0.7 | | | | |
+3+| time relative to tide | -2 | | | | |
+.3+| _tidal stream value_ 2+| _orientation_ | orientation value | 333 | | | | |
+3+| speed maximum | 0.5 | | | | |
+3+| time relative to tide | -1 | | | | |
+.3+| _tidal stream value_ 2+| _orientation_ | orientation value | 317 | | | | |
+3+| speed maximum | 0.3 | | | | |
+3+| time relative to tide | 0 | | | | |
+.3+| _tidal stream value_ 2+| _orientation_ | orientation value | 178 | | | | |
+3+| speed maximum | 0.3 | | | | |
+3+| time relative to tide | 1 | | | | |
+.3+| _tidal stream value_ 2+| _orientation_ | orientation value | 146 | | | | |
+3+| speed maximum | 0.6 | | | | |
+3+| time relative to tide | 2 | | | | |
+.3+| _tidal stream value_ 2+| _orientation_ | orientation value | 140 | | | | |
+3+| speed maximum | 1.0 | | | | |
+3+| time relative to tide | 3 | | | | |
+.3+| _tidal stream value_ 2+| _orientation_ | orientation value | 143 | | | | |
+3+| speed maximum | 1.1 | | | | |
+3+| time relative to tide | 4 | | | | |
+.3+| _tidal stream value_ 2+| _orientation_ | orientation value | 143 | | | | |
+3+| speed maximum | 0.8 | | | | |
+3+| time relative to tide | 5 | | | | |
+.3+| _tidal stream value_ 2+| _orientation_ | orientation value | 138 | | | | |
+3+| speed maximum | 0.3 | | | | |
+3+| time relative to tide | 6 | | | | |
+
+|===
+
+__**Table 10-1 -- Tide Stream Panel Data - Example**__
+
+* Where an encoded complex attribute **tidal stream value**, sub-attribute *speed maximum* has a value of zero (indicating slack water), the corresponding sub-attribute *orientation* / *orientation value* must be populated with an empty (null) value.
+
+[underline]#Distinction:# Current -- Non-Gravitational; Tidal Stream -- Flood/Ebb.
+
