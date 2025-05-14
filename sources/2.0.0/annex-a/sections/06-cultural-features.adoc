@@ -5,7 +5,7 @@
 [[sec_6.1]]
 === Built-up area
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *BUILT-UP AREA.* An area of land or construction over the water containing a concentration of buildings and/or other structures. (Adapted from Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2010).
 10+| *[underline]#S-101 Geo Feature:#* *Built-Up Area (BUAARE)*
@@ -47,13 +47,11 @@
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| height
 2+| (HEIGHT)
@@ -90,9 +88,7 @@
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -102,12 +98,10 @@
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| headline
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -124,13 +118,11 @@
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
 3+| in the water
-2+|
-
-3+|
+2+| 3+|
 
 | BO
 | 0,1
@@ -141,7 +133,7 @@
 | The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 |===
@@ -169,7 +161,7 @@ If it is required to encode a built-up area, it must be done using the feature *
 [[sec_6.2]]
 === Building
 
-[cols="609,794,794,794,794,794,794,794,294,539"]
+[cols="609,794,794,794,794,794,794,794,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *BUILDING*. A free-standing self-supporting construction that is roofed, usually walled, and is intended for human occupancy (for example: a place of work or recreation) and/or habitation. (Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2010).
 10+| *[underline]#S-101 Geo Feature:#* *Building (BUISGL)*
@@ -204,7 +196,7 @@ If it is required to encode a built-up area, it must be done using the feature *
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | EN | 0,1 ^†^
+6: border stripe | EN | 0,1 footnote:crossnote[]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
@@ -238,13 +230,11 @@ If it is required to encode a built-up area, it must be done using the feature *
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| function 2+| (FUNCTN) 3+|
 2: harbour-masters office
@@ -308,25 +298,19 @@ If it is required to encode a built-up area, it must be done using the feature *
 | 0,1
 
 3+| multiplicity of features
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,1
 
 3+| multiplicity known
-2+|
-
-3+|
+2+| 3+|
 
 | (S) BO
 | 1,1
 
 3+| number of features
-2+|
-
-3+|
+2+| 3+|
 
 | (S) IN
 | 0,1
@@ -373,9 +357,7 @@ If it is required to encode a built-up area, it must be done using the feature *
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -385,12 +367,10 @@ If it is required to encode a built-up area, it must be done using the feature *
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| headline
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -407,13 +387,11 @@ If it is required to encode a built-up area, it must be done using the feature *
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
 3+| in the water
-2+|
-
-3+|
+2+| 3+|
 
 | BO
 | 0,1
@@ -427,7 +405,7 @@ If it is required to encode a built-up area, it must be done using the feature *
 | The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ The sub-attribute *colour pattern* is mandatory for buildings that have more than one value populated for the sub-attribute *colour*.
+10+.<| footnote:crossnote[] The sub-attribute *colour pattern* is mandatory for buildings that have more than one value populated for the sub-attribute *colour*.
 
 Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
 
@@ -455,7 +433,7 @@ If it is required to encode a building (other than a landmark, tank, silo or roo
 
 * For landmarks, see clause 7.2; for silos, tanks and water towers, see clause7.3. For common encoding combinations, see clause7.1. For roofed structures such as boathouses erected or extending over navigable water to provide protection for a vessel or its cargo, see clause 8.7.
 * The feature association *Structure/Equipment* (see clause25.16) must only be used with *Building* features if the main purpose of the building is to act as an aid to navigation (for example a lighthouse).
-* A ruined building should be encoded in the same way as the feature in good condition, but with attribute *condition*&nbsp;=&nbsp;_2_ (ruined).
+* A ruined building should be encoded in the same way as the feature in good condition, but with attribute *condition* = _2_ (ruined).
 * For an encoded *Building* feature located in navigable water, the Boolean attribute *in the water* must be set to _True_ to indicate that the feature is to be included in the ECDIS Base Display. Where such structures are located in the water it is not required to encode any supporting structures (for example piles, stilts).
 * If it is required to encode vertical and/or horizontal clearances and any other information relevant for allowing vessels to enter or berth beneath/within the structure, this must be done by encoding the structure using the feature *Structure Over Navigable Water* (see clause 8.7).
 * When a building is shown as a surface, indicating its true shape, and it is required to encode a prominent feature such as a tower or spire that is part of the structure, two features must be created (see Figure 6-1 below):
@@ -476,14 +454,14 @@ If it is required to encode a harbour office, it must be done using a *Building*
 [[sec_6.2.3]]
 ==== Transit sheds and warehouses (see S-4 -- B-328.1)
 
-If it is required to encode a transit shed or warehouse, it must be done using a *Building* feature, with attributes *function*&nbsp;=&nbsp;_15_ (transit shed/warehouse), and if it is required, *feature name* (*name*)&nbsp;=&nbsp;name or number of the shed.
+If it is required to encode a transit shed or warehouse, it must be done using a *Building* feature, with attributes *function* = _15_ (transit shed/warehouse), and if it is required, *feature name* (*name*) = name or number of the shed.
 
 Distinction: Built-Up Area; Coast Guard Station; Landmark; Rescue Station; Silo/Tank; Structure Over Navigable Water.
 
 [[sec_6.3]]
 === Airport/airfield
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *AIRPORT/AIRFIELD*.
 
@@ -530,13 +508,11 @@ A defined area on land (including any buildings, installations and equipment) in
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| interoperability identifier
 2+|
@@ -565,9 +541,7 @@ A defined area on land (including any buildings, installations and equipment) in
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -577,12 +551,10 @@ A defined area on land (including any buildings, installations and equipment) in
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| headline
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -599,7 +571,7 @@ A defined area on land (including any buildings, installations and equipment) in
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
 10+| *Feature Associations*
@@ -608,7 +580,7 @@ A defined area on land (including any buildings, installations and equipment) in
 | The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 |===
@@ -627,7 +599,7 @@ For ENC data at smaller optimum display scales, an airport should be encoded as 
 [underline]#Remarks:#
 
 * If individual buildings are visually conspicuous, they must be encoded as separate features.
-* If it is required to encode the control tower, it must be done using a *Landmark* feature, with attributes *function*&nbsp;=&nbsp;_39_ (control) and *category of landmark* = _17_ (tower). If it is required to encode other buildings, thismust be done using the feature *Building*.
+* If it is required to encode the control tower, it must be done using a *Landmark* feature, with attributes *function* = _39_ (control) and *category of landmark* = _17_ (tower). If it is required to encode other buildings, thismust be done using the feature *Building*.
 * If it is required to encode a seaplane landing area, it must be done using the feature *Seaplane Landing Area* (see clause 16.5).
 * For navigational aids associated with air navigation, and air obstruction lights, see clauses related to navigational aids.
 
@@ -636,7 +608,7 @@ For ENC data at smaller optimum display scales, an airport should be encoded as 
 [[sec_6.4]]
 === Runway
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *RUNWAY*. A defined area, on a land aerodrome, prepared for the landing and take-off run of aircraft. (Adapted from IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Runway (RUNWAY)*
@@ -672,13 +644,11 @@ For ENC data at smaller optimum display scales, an airport should be encoded as 
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| interoperability identifier
 2+|
@@ -703,16 +673,12 @@ For ENC data at smaller optimum display scales, an airport should be encoded as 
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
@@ -735,9 +701,7 @@ For ENC data at smaller optimum display scales, an airport should be encoded as 
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -747,12 +711,10 @@ For ENC data at smaller optimum display scales, an airport should be encoded as 
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| headline
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -769,7 +731,7 @@ For ENC data at smaller optimum display scales, an airport should be encoded as 
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -777,7 +739,7 @@ For ENC data at smaller optimum display scales, an airport should be encoded as 
 | The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 |===
@@ -802,7 +764,7 @@ For larger optimum display scale ENC data, an airport should be encoded using a 
 [[sec_6.5]]
 === Helipad
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *HELIPAD*. A site on which helicopters may land and take off. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Helipad* __**(RUNWAY)**__
@@ -838,13 +800,11 @@ For larger optimum display scale ENC data, an airport should be encoded using a 
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| interoperability identifier
 2+|
@@ -869,16 +829,12 @@ For larger optimum display scale ENC data, an airport should be encoded using a 
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
@@ -901,9 +857,7 @@ For larger optimum display scale ENC data, an airport should be encoded using a 
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -913,12 +867,10 @@ For larger optimum display scale ENC data, an airport should be encoded using a 
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| headline
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -935,7 +887,7 @@ For larger optimum display scale ENC data, an airport should be encoded using a 
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -944,7 +896,7 @@ For larger optimum display scale ENC data, an airport should be encoded using a 
 | The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 |===
@@ -968,7 +920,7 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 [[sec_6.6]]
 === Bridge
 
-[cols="609,793,793,793,793,793,793,793,301,539"]
+[cols="609,793,793,793,793,793,793,793,301,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *BRIDGE*. A structure erected over a depression or an obstacle such as a body of water, railroad, etc., to provide a roadway for vehicles or pedestrians. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Bridge (BRIDGE)*
@@ -992,7 +944,7 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 3: swing bridge +
 4: lifting bridge +
 5: bascule bridge +
-7: drawbridge | EN | 0,1 ^†^
+7: drawbridge | EN | 0,1 footnote:crossnote[]
 3+| colour 2+| (COLOUR) 3+|
 1: white +
 2: black +
@@ -1013,7 +965,7 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | EN | 0,1 ^†^
+6: border stripe | EN | 0,1 footnote:crossnote[]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
@@ -1040,13 +992,11 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| fixed date range
 2+|
@@ -1057,17 +1007,13 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
-| 0,1 ^†^
+3+| | (S) TD
+| 0,1 footnote:crossnote[]
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
-| 0,1 ^†^
+3+| | (S) TD
+| 0,1 footnote:crossnote[]
 
 3+| height
 2+| (HEIGHT)
@@ -1094,7 +1040,7 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 3+|
 
 | BO
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| radar conspicuous
 2+| (CONRAD)
@@ -1124,9 +1070,7 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -1136,12 +1080,10 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| headline
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -1158,7 +1100,7 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
 10+| *Feature Associations*
@@ -1170,7 +1112,7 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 | The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ For bridges encoded over navigable water, the attribute *opening bridge* is mandatory.
+10+.<| footnote:crossnote[] For bridges encoded over navigable water, the attribute *opening bridge* is mandatory.
 
 The attribute *category of opening bridge* is mandatory if *opening bridge* = _True_.
 
@@ -1202,7 +1144,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 * If it is required to encode a bridge for which part or the entire span is moved aside or backwards, it must be done using a *Bridge* feature, with attributes *opening bridge* = _True_ and *category of opening bridge* = _7_ (drawbridge).
 * If it is required to encode a pontoon bridge where a pontoon section may be temporarily removed or rotated so as to allow passage of vessels, this must be done using a *Bridge* feature, with attributes *bridge construction* = _3_ (pontoon bridge), *opening bridge* = _True_ and *category of opening bridge* = _3_ (swing bridge).
 * If it is required to encode a distance mark that is included on or associated with a bridge, this must be done using the feature *Distance Mark* (see clause8.10).
-* In navigable water, bridge supports must be encoded, where possible, using a *Pylon/Bridge Support* feature (see clause 6.12), with attribute *category of pylon*&nbsp;=&nbsp;_4_ (bridge/pylon tower) or _5_ (bridge pier); or if the bridge is a pontoon bridge as *Pontoon* features (see clause 8.19).
+* In navigable water, bridge supports must be encoded, where possible, using a *Pylon/Bridge Support* feature (see clause 6.12), with attribute *category of pylon* = _4_ (bridge/pylon tower) or _5_ (bridge pier); or if the bridge is a pontoon bridge as *Pontoon* features (see clause 8.19).
 * It is not mandatory to encode roads or railways on bridges.
 
 [[sec_6.6.2]]
@@ -1253,7 +1195,7 @@ image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_7f6d5600.gif[Shape20,128,96]
 [[sec_6.7]]
 === Span fixed
 
-[cols="609,793,793,793,793,793,793,793,301,539"]
+[cols="609,793,793,793,793,793,793,793,301,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *SPAN FIXED*. A fixed component of the deck of a bridge spanning successive bridge piers. (Adapted from Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2013).
 10+| *[underline]#S-101 Geo Feature:#* *Span Fixed* __**(BRIDGE)**__
@@ -1271,22 +1213,16 @@ image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_7f6d5600.gif[Shape20,128,96]
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
-| 0,1 ^†^
+3+| | (S) TD
+| 0,1 footnote:crossnote[]
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
-| 0,1 ^†^
+3+| | (S) TD
+| 0,1 footnote:crossnote[]
 
 3+| horizontal clearance fixed
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,1
@@ -1313,9 +1249,7 @@ image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_7f6d5600.gif[Shape20,128,96]
 | 0,1
 
 3+| vertical clearance fixed
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 1,1
@@ -1335,17 +1269,13 @@ image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_7f6d5600.gif[Shape20,128,96]
 | 0,1
 
 3+| uncertainty fixed
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 1,1
 
 3+| uncertainty variable factor
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 0,1
@@ -1375,9 +1305,7 @@ image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_7f6d5600.gif[Shape20,128,96]
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -1387,12 +1315,10 @@ image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_7f6d5600.gif[Shape20,128,96]
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| headline
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -1409,7 +1335,7 @@ image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_7f6d5600.gif[Shape20,128,96]
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
 10+| *Feature Associations*
@@ -1421,7 +1347,7 @@ image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_7f6d5600.gif[Shape20,128,96]
 | The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
+10+.<| footnote:crossnote[] For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 |===
@@ -1449,7 +1375,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 [[sec_6.8]]
 === Span opening
 
-[cols="609,793,793,793,793,793,793,793,301,539"]
+[cols="609,793,793,793,793,793,793,793,301,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *SPAN OPENING*. An opening component of the deck of a bridge spanning successive bridge piers. (Adapted from Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2013).
 10+| *[underline]#S-101 Geo Feature:#* *Span Opening* __**(BRIDGE)**__
@@ -1467,22 +1393,16 @@ The value of the vertical clearance between (high) water level and any fixed ove
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
-| 0,1 ^†^
+3+| | (S) TD
+| 0,1 footnote:crossnote[]
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
-| 0,1 ^†^
+3+| | (S) TD
+| 0,1 footnote:crossnote[]
 
 3+| horizontal clearance fixed
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,1
@@ -1509,9 +1429,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 | 0,1
 
 3+| vertical clearance closed
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 1,1
@@ -1531,33 +1449,25 @@ The value of the vertical clearance between (high) water level and any fixed ove
 | 0,1
 
 3+| uncertainty fixed
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 1,1
 
 3+| uncertainty variable factor
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 0,1
 
 3+| vertical clearance open
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 1,1
 
 3+| vertical clearance unlimited
-2+|
-
-3+|
+2+| 3+|
 
 | (S) BO
 | 1,1
@@ -1567,7 +1477,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 3+|
 
 | (S) RE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| vertical uncertainty
 2+| _(VERACC)_
@@ -1577,17 +1487,13 @@ The value of the vertical clearance between (high) water level and any fixed ove
 | 0,1
 
 3+| uncertainty fixed
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 1,1
 
 3+| uncertainty variable factor
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 0,1
@@ -1617,9 +1523,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -1629,12 +1533,10 @@ The value of the vertical clearance between (high) water level and any fixed ove
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| headline
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -1651,7 +1553,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
 10+| *Feature Associations*
@@ -1663,7 +1565,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 | The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
+10+.<| footnote:crossnote[] For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 The sub-attribute *vertical clearance value* for the complex attribute *vertical clearance open* is mandatory if the sub-attribute *vertical clearance unlimited* is set to _False_.
 
@@ -1696,7 +1598,7 @@ The value of the vertical clearance between (high) water level and any opening o
 [[sec_6.9]]
 === Conveyor
 
-[cols="609,794,794,794,794,794,794,794,294,539"]
+[cols="609,794,794,794,794,794,794,794,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *CONVEYOR*. A mechanical device for conveying bulk material or people using an endless moving belt or series of rollers. (Adapted from Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2010).
 10+| *[underline]#S-101 Geo Feature:#* *Conveyor (CONVYR)*
@@ -1730,7 +1632,7 @@ The value of the vertical clearance between (high) water level and any opening o
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | EN | 0,1 ^†^
+6: border stripe | EN | 0,1 footnote:crossnote[]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
@@ -1757,13 +1659,11 @@ The value of the vertical clearance between (high) water level and any opening o
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| fixed date range
 2+|
@@ -1774,17 +1674,13 @@ The value of the vertical clearance between (high) water level and any opening o
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
-| 0,1 ^†^
+3+| | (S) TD
+| 0,1 footnote:crossnote[]
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
-| 0,1 ^†^
+3+| | (S) TD
+| 0,1 footnote:crossnote[]
 
 3+| height
 2+| (HEIGHT)
@@ -1808,25 +1704,19 @@ The value of the vertical clearance between (high) water level and any opening o
 | 0,1
 
 3+| multiplicity of features
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,1
 
 3+| multiplicity known
-2+|
-
-3+|
+2+| 3+|
 
 | (S) BO
 | 1,1
 
 3+| number of features
-2+|
-
-3+|
+2+| 3+|
 
 | (S) IN
 | 0,1
@@ -1858,12 +1748,10 @@ The value of the vertical clearance between (high) water level and any opening o
 4: not in use +
 12: illuminated | EN | 0,*
 3+| vertical clearance fixed
-2+|
-
-3+|
+2+| 3+|
 
 | C
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| vertical clearance value
 2+| (VERCLR)
@@ -1880,17 +1768,13 @@ The value of the vertical clearance between (high) water level and any opening o
 | 0,1
 
 3+| uncertainty fixed
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 1,1
 
 3+| uncertainty variable factor
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 0,1
@@ -1931,9 +1815,7 @@ The value of the vertical clearance between (high) water level and any opening o
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -1943,12 +1825,10 @@ The value of the vertical clearance between (high) water level and any opening o
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| headline
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -1965,7 +1845,7 @@ The value of the vertical clearance between (high) water level and any opening o
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
 10+| *Feature Associations*
@@ -1976,7 +1856,7 @@ The value of the vertical clearance between (high) water level and any opening o
 | The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ The attribute *colour pattern* is mandatory for conveyors that have more than one value populated for the attribute *colour*.
+10+.<| footnote:crossnote[] The attribute *colour pattern* is mandatory for conveyors that have more than one value populated for the attribute *colour*.
 
 Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
 
@@ -1999,7 +1879,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 [underline]#Remarks:#
 
 * If it is required to encode an overhead cable car, it must be done using a *Conveyor* feature, with attribute *category of conveyor* = _1_ (aerial cableway).
-* In navigable water, conveyor supports must be encoded, where possible, using a *Pylon/Bridge Support* feature (see clause6.11), with attribute *category of pylon*&nbsp;=&nbsp;_3_ (aerial cableway pylon).
+* In navigable water, conveyor supports must be encoded, where possible, using a *Pylon/Bridge Support* feature (see clause6.11), with attribute *category of pylon* = _3_ (aerial cableway pylon).
 * Value _13_ (low water) for attribute *vertical datum* is only applicable to enclosed (inland) waterways; and must not be used to indicate the reference datum for vertical clearances in tidal waters.
 
 * If available and considered important for route planning and/or monitoring, the vertical uncertainty associated with encoded vertical clearance values should also be encoded.
@@ -2009,7 +1889,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 [[sec_6.10]]
 === Cable overhead
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *OVERHEAD CABLE*. A single continuous rope-like bundle consisting of multiple strands of fiber, plastic, metal, and/or glass, which is supported by structures such as poles or pylons and passing over or nearby navigable waters. (Adapted from Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2012).
 10+| *[underline]#S-101 Geo Feature:#* *Cable Overhead (CBLOHD)*
@@ -2034,17 +1914,13 @@ The value of the vertical clearance between (high) water level and any fixed ove
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
-| 0,1 ^†^
+3+| | (S) TD
+| 0,1 footnote:crossnote[]
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
-| 0,1 ^†^
+3+| | (S) TD
+| 0,1 footnote:crossnote[]
 
 3+| ice factor
 2+| (ICEFAC)
@@ -2075,13 +1951,11 @@ The value of the vertical clearance between (high) water level and any fixed ove
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| interoperability identifier
 2+|
@@ -2091,25 +1965,19 @@ The value of the vertical clearance between (high) water level and any fixed ove
 | 0,1
 
 3+| multiplicity of features
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,1
 
 3+| multiplicity known
-2+|
-
-3+|
+2+| 3+|
 
 | (S) BO
 | 1,1
 
 3+| number of features
-2+|
-
-3+|
+2+| 3+|
 
 | (S) IN
 | 0,1
@@ -2130,12 +1998,10 @@ The value of the vertical clearance between (high) water level and any fixed ove
 12: illuminated +
 28: buoyed | EN | 0,*
 3+| vertical clearance fixed
-2+|
-
-3+|
+2+| 3+|
 
 | C
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| vertical clearance value
 2+| _(VERCLR)_
@@ -2152,28 +2018,22 @@ The value of the vertical clearance between (high) water level and any fixed ove
 | 0,1
 
 3+| uncertainty fixed
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 1,1
 
 3+| uncertainty variable factor
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 0,1
 
 3+| vertical clearance safe
-2+|
-
-3+|
+2+| 3+|
 
 | C
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| vertical clearance value
 2+| _(VERCSA)_
@@ -2190,17 +2050,13 @@ The value of the vertical clearance between (high) water level and any fixed ove
 | 0,1
 
 3+| uncertainty fixed
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 1,1
 
 3+| uncertainty variable factor
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 0,1
@@ -2234,9 +2090,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -2246,12 +2100,10 @@ The value of the vertical clearance between (high) water level and any fixed ove
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| headline
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -2268,7 +2120,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -2277,7 +2129,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 | The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ For overhead cables over navigable water, one of the attributes *vertical clearance fixed* or *vertical clearance safe* must be populated.
+10+.<| footnote:crossnote[] For overhead cables over navigable water, one of the attributes *vertical clearance fixed* or *vertical clearance safe* must be populated.
 
 At least one of the sub-attributes *date end* or *date start* must be populated.
 
@@ -2301,7 +2153,7 @@ For power cables or transmission lines carrying very high voltages, an additiona
 
 * If it is required to encode telepheric cables, this must be done using *Conveyor* features (see clause 6.8), with attribute CATCON = _1_ (aerial cableway).
 * Where a cable has radar reflectors at known positions, they must be encoded as separate *Radar Reflector* features (see clause 20.18). If the whole cable is radar conspicuous, the optimum display scale for the ENC data is too small to show individual reflectors, or the positions of the radar reflectors are not known, the *Cable Overhead* should be encoded with attribute *radar conspicuous*.
-* In navigable water, overhead cable supports must be encoded, where possible, using a *Pylon/Bridge Support* feature (see clause6.12), with attribute *category of pylon*&nbsp;=&nbsp;_1_ or _2_.
+* In navigable water, overhead cable supports must be encoded, where possible, using a *Pylon/Bridge Support* feature (see clause6.12), with attribute *category of pylon* = _1_ or _2_.
 * Value _13_ (low water) for attribute *vertical datum* is only applicable to enclosed (inland) waterways; and must not be used to indicate the reference datum for vertical clearances in tidal waters.
 
 * If available and considered important for route planning and/or monitoring, the vertical uncertainty associated with encoded vertical clearance values should also be encoded.
@@ -2311,7 +2163,7 @@ For power cables or transmission lines carrying very high voltages, an additiona
 [[sec_6.11]]
 === Pipeline overhead
 
-[cols="154,201,201,201,201,201,201,201,201,84,154"]
+[cols="154,201,201,201,201,201,201,201,201,84,154", options="unnumbered"]
 |===
 11+.<h| IHO Definition: *OVERHEAD PIPELINE*. A string of interconnected pipes, supported by pylons and passing over or nearby navigable waters, used for the transport of matter, nowadays mainly oil or gas. (Adapted from IHO Dictionary -- S-32 and S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.119, November 2000).
 11+| *[underline]#S-101 Geo Feature:#* *Pipeline Overhead (PIPOHD)*
@@ -2353,13 +2205,11 @@ For power cables or transmission lines carrying very high voltages, an additiona
 | 1,1
 
 4+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 4+| fixed date range
 2+|
@@ -2370,17 +2220,13 @@ For power cables or transmission lines carrying very high voltages, an additiona
 
 4+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
-| 0,1 ^†^
+3+| | (S) TD
+| 0,1 footnote:crossnote[]
 
 4+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
-| 0,1 ^†^
+3+| | (S) TD
+| 0,1 footnote:crossnote[]
 
 4+| interoperability identifier
 2+|
@@ -2390,25 +2236,19 @@ For power cables or transmission lines carrying very high voltages, an additiona
 | 0,1
 
 4+| multiplicity of features
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,1
 
 4+| multiplicity known
-2+|
-
-3+|
+2+| 3+|
 
 | (S) BO
 | 1,1
 
 4+| number of features
-2+|
-
-3+|
+2+| 3+|
 
 | (S) IN
 | 0,1
@@ -2438,12 +2278,10 @@ For power cables or transmission lines carrying very high voltages, an additiona
 7: temporary +
 12: illuminated | EN | 0,*
 4+| vertical clearance fixed
-2+|
-
-3+|
+2+| 3+|
 
 | C
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 4+| vertical clearance value
 2+| (VERCLR)
@@ -2460,17 +2298,13 @@ For power cables or transmission lines carrying very high voltages, an additiona
 | 0,1
 
 4+| uncertainty fixed
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 1,1
 
 4+| uncertainty variable factor
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 0,1
@@ -2504,9 +2338,7 @@ For power cables or transmission lines carrying very high voltages, an additiona
 | 0,*
 
 4+| file locator
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -2516,12 +2348,10 @@ For power cables or transmission lines carrying very high voltages, an additiona
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 4+| headline
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -2538,7 +2368,7 @@ For power cables or transmission lines carrying very high voltages, an additiona
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 11+| *Feature Associations*
 2+| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -2548,7 +2378,7 @@ For power cables or transmission lines carrying very high voltages, an additiona
 | The Position Provider 4+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
 2+| - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
 2+| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-11+.<| ^†^ For overhead pipelines over navigable water, the attribute *vertical clearance fixed* is mandatory.
+11+.<| footnote:crossnote[] For overhead pipelines over navigable water, the attribute *vertical clearance fixed* is mandatory.
 
 At least one of the sub-attributes *date end* or *date start* must be populated.
 
@@ -2570,7 +2400,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 
 * Where an overhead pipeline is disused, it should be encoded with the attribute *status* = _4_ (not in use), and the attributes *category of pipe* and *product* must not be encoded.
 * Where a pipeline has radar reflectors at known positions, they must be encoded as separate *Radar Reflector* features (see clause20.18). If the whole pipeline is radar conspicuous, the optimum display scale for the ENC data is too small to show individual reflectors, or the positions of the radar reflectors are not known, the *Pipeline Overhead* should be encoded with attribute *radar conspicuous*.
-* In navigable water, overhead pipeline supports must be encoded, where possible, using a *Pylon/Bridge Support* feature (see clause6.12), with attribute *category of pylon*&nbsp;=&nbsp;_6_ (pipeline pylon).
+* In navigable water, overhead pipeline supports must be encoded, where possible, using a *Pylon/Bridge Support* feature (see clause6.12), with attribute *category of pylon* = _6_ (pipeline pylon).
 * Value _13_ (low water) for attribute *vertical datum* is only applicable to enclosed (inland) waterways; and must not be used to indicate the reference datum for vertical clearances in tidal waters.
 
 * If available and considered important for route planning and/or monitoring, the vertical uncertainty associated with encoded vertical clearance values should also be encoded.
@@ -2580,7 +2410,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 [[sec_6.12]]
 === Pylon/bridge support
 
-[cols="609,793,793,793,793,793,793,793,301,539"]
+[cols="609,793,793,793,793,793,793,793,301,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *PYLON/BRIDGE SUPPORT*. A vertical construction consisting, for example, of a steel framework or pre-stressed concrete to carry cables, a bridge, etc. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.125, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Pylon/Bridge Support (PYLONS)*
@@ -2616,7 +2446,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | EN | 0,1 ^†^
+6: border stripe | EN | 0,1 footnote:crossnote[]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
@@ -2643,13 +2473,11 @@ The value of the vertical clearance between (high) water level and any fixed ove
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| fixed date range
 2+|
@@ -2660,17 +2488,13 @@ The value of the vertical clearance between (high) water level and any fixed ove
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
-| 0,1 ^†^
+3+| | (S) TD
+| 0,1 footnote:crossnote[]
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
-| 0,1 ^†^
+3+| | (S) TD
+| 0,1 footnote:crossnote[]
 
 3+| height
 2+| (HEIGHT)
@@ -2687,25 +2511,19 @@ The value of the vertical clearance between (high) water level and any fixed ove
 | 0,1
 
 3+| multiplicity of features
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,1
 
 3+| multiplicity known
-2+|
-
-3+|
+2+| 3+|
 
 | (S) BO
 | 1,1
 
 3+| number of features
-2+|
-
-3+|
+2+| 3+|
 
 | (S) IN
 | 0,1
@@ -2754,9 +2572,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -2766,12 +2582,10 @@ The value of the vertical clearance between (high) water level and any fixed ove
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| headline
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -2788,7 +2602,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
 10+| *Feature Associations*
@@ -2801,7 +2615,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 | The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ The attribute *colour pattern* is mandatory for pylons that have more than one value populated for the attribute *colour*.
+10+.<| footnote:crossnote[] The attribute *colour pattern* is mandatory for pylons that have more than one value populated for the attribute *colour*.
 
 Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
 
@@ -2827,7 +2641,7 @@ The actual position of pylons supporting bridges, pipelines and cables must be i
 [[sec_6.13]]
 === Fence/wall
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *FENCE/WALL*. A man-made barrier used as an enclosure or boundary or for protection. (Adapted from Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2013).
 10+| *[underline]#S-101 Geo Feature:#* *Fence/Wall (FNCLNE)*
@@ -2860,7 +2674,7 @@ The actual position of pylons supporting bridges, pipelines and cables must be i
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | EN | 0,1 ^†^
+6: border stripe | EN | 0,1 footnote:crossnote[]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
@@ -2894,13 +2708,11 @@ The actual position of pylons supporting bridges, pipelines and cables must be i
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| height
 2+| (HEIGHT)
@@ -2956,9 +2768,7 @@ The actual position of pylons supporting bridges, pipelines and cables must be i
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -2968,12 +2778,10 @@ The actual position of pylons supporting bridges, pipelines and cables must be i
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| headline
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -2990,7 +2798,7 @@ The actual position of pylons supporting bridges, pipelines and cables must be i
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -2998,7 +2806,7 @@ The actual position of pylons supporting bridges, pipelines and cables must be i
 | The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ The attribute *colour pattern* is mandatory for fences or walls that have more than one value populated for the attribute *colour*.
+10+.<| footnote:crossnote[] The attribute *colour pattern* is mandatory for fences or walls that have more than one value populated for the attribute *colour*.
 
 Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
 
@@ -3022,7 +2830,7 @@ If it is required to encode a fence or wall, it must be done using the feature *
 [[sec_6.14]]
 === Railway
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *RAILWAY*. A rail or set of parallel rails on which a train, tram, or rail wagon runs. (Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2010).
 10+| *[underline]#S-101 Geo Feature:#* *Railway (RAILWY)*
@@ -3057,13 +2865,11 @@ If it is required to encode a fence or wall, it must be done using the feature *
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| height
 2+| (HEIGHT)
@@ -3096,9 +2902,7 @@ If it is required to encode a fence or wall, it must be done using the feature *
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -3108,12 +2912,10 @@ If it is required to encode a fence or wall, it must be done using the feature *
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| headline
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -3130,7 +2932,7 @@ If it is required to encode a fence or wall, it must be done using the feature *
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -3138,7 +2940,7 @@ If it is required to encode a fence or wall, it must be done using the feature *
 | The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+10+.<| footnote:crossnote[] For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
 
@@ -3165,7 +2967,7 @@ If it is required to encode a railway, it must be done using the feature *Railwa
 [[sec_6.15]]
 === Road
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *ROAD*. A route with a specially prepared surface that is intended for use by wheeled vehicles or pedestrians. (Adapted from Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2013).
 10+| *[underline]#S-101 Geo Feature:#* *Road (ROADWY)*
@@ -3207,13 +3009,11 @@ If it is required to encode a railway, it must be done using the feature *Railwa
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| interoperability identifier
 2+|
@@ -3244,9 +3044,7 @@ If it is required to encode a railway, it must be done using the feature *Railwa
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -3256,12 +3054,10 @@ If it is required to encode a railway, it must be done using the feature *Railwa
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| headline
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -3278,7 +3074,7 @@ If it is required to encode a railway, it must be done using the feature *Railwa
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -3286,7 +3082,7 @@ If it is required to encode a railway, it must be done using the feature *Railwa
 | The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
@@ -3312,7 +3108,7 @@ If it is required to encode a road or track, it must be done using the feature *
 [[sec_6.16]]
 === Tunnel
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *TUNNEL*. A passage that is open to the atmosphere at both ends, buried under the seabed or laid over the seafloor or bored under the ground or through mountains. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.191, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Tunnel (TUNNEL)*
@@ -3347,18 +3143,14 @@ If it is required to encode a road or track, it must be done using the feature *
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| horizontal clearance fixed
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,1
@@ -3393,9 +3185,7 @@ If it is required to encode a road or track, it must be done using the feature *
 8: private +
 14: public | EN | 0,*
 3+| vertical clearance fixed
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,1
@@ -3415,17 +3205,13 @@ If it is required to encode a road or track, it must be done using the feature *
 | 0,1
 
 3+| uncertainty fixed
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 1,1
 
 3+| uncertainty variable factor
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 0,1
@@ -3455,9 +3241,7 @@ If it is required to encode a road or track, it must be done using the feature *
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -3467,12 +3251,10 @@ If it is required to encode a road or track, it must be done using the feature *
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| headline
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -3489,7 +3271,7 @@ If it is required to encode a road or track, it must be done using the feature *
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
 10+| *Feature Associations*
@@ -3498,7 +3280,7 @@ If it is required to encode a road or track, it must be done using the feature *
 | The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 

@@ -63,7 +63,7 @@ Where issues of maritime jurisdiction between two or more Coastal States are in 
 [[sec_16.3]]
 === Anchorage area
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *ANCHORAGE AREA*. An area in which vessels or seaplanes anchor or may anchor. (Adapted from IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Anchorage Area (ACHARE)*
@@ -84,9 +84,7 @@ Where issues of maritime jurisdiction between two or more Coastal States are in 
 14: waiting anchorage +
 15: reported anchorage | EN | 0,*
 3+| category of cargo
-2+|
-
-3+|
+2+| 3+|
 1: bulk +
 2: container +
 3: general +
@@ -101,9 +99,7 @@ Where issues of maritime jurisdiction between two or more Coastal States are in 
 12: reefer container cargo +
 13: Ro-Ro cargo
 14: project cargo +
-15: break bulk cargo +
-| EN
-| 0,*
+15: break bulk cargo | EN | 0,*
 
 3+| feature name
 2+|
@@ -119,17 +115,10 @@ Where issues of maritime jurisdiction between two or more Coastal States are in 
 | (S) TE
 | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
-| 1,1
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -142,46 +131,28 @@ Where issues of maritime jurisdiction between two or more Coastal States are in 
 | C
 | 0,1
 
-3+| date end
-2+| (DATEND)
-3+|
-
-| (S) TD
+3+| date end 2+| (DATEND) 3+| | (S) TD
 | 0,1 ^†^
 
-3+| date start
-2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| date start 2+| (DATSTA) 3+| | (S) TD
 | 0,1 ^†^
 
-3+| interoperability identifier
-2+|
+3+| interoperability identifier 2+|
 
 3+| MRN (see clause 27.114)
 | URN
 | 0,1
 
-3+| periodic date range
-2+|
+3+| periodic date range 2+|
 
 3+| See clause 2.4.8
 | C
 | 0,*
 
-3+| date end
-2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD
 | 1,1
 
-3+| date start
-2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD
 | 1,1
 
 3+| restriction 2+| (RESTRN) 3+|
@@ -206,8 +177,7 @@ Where issues of maritime jurisdiction between two or more Coastal States are in 
 23: cargo transhipment (lightening) prohibited
 24: dragging prohibited +
 27: speed restricted +
-39: swimming prohibited | EN | 0,*
-3+| status 2+| (STATUS) 3+|
+39: swimming prohibited | EN | 0,* 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
 3: recommended +
@@ -216,84 +186,48 @@ Where issues of maritime jurisdiction between two or more Coastal States are in 
 7: temporary +
 8: private +
 9: mandatory +
-14: public | EN | 0,*
-3+| vessel speed limit
-2+|
-
-3+|
+14: public | EN | 0,* 3+| vessel speed limit 2+| 3+|
 
 | C
 | 0,*
 
-3+| speed limit
-2+|
-
-3+|
+3+| speed limit 2+| 3+|
 
 | (S) RE
 | 1,1
 
-3+| speed units
-2+|
-
-3+|
+3+| speed units 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots +
 | (S) EN
 | 1,1
 
-3+| vessel class
-2+|
-
-3+|
-
-| (S) TE
+3+| vessel class 2+| 3+| | (S) TE
 | 0,1
 
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
-3+| information
-2+|
+3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1 3+| information 2+|
 
 3+| See clause 2.4.6
 | C
 | 0,*
 
-3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE
 | 0,1 ^†^
 
-3+| headline
-2+|
-
-3+|
-
-| (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
-3+| language
-2+|
+3+| language 2+|
 
 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -323,7 +257,7 @@ If it is required to encode an anchorage area, including anchorages for seaplane
 
 * The complex attribute **feature name**, sub-attribute *name*is used to encode the name and/or number of the *Anchorage Area*.
 * The complex attribute *information* (see clause 2.4.6) may be used to provide additional information about the category of anchorage, where required.
-* Individual recommended anchorages without defined limits should be encoded as *Anchorage Area* features of type point, with attributes *category of anchorage* = _1_ (unrestricted anchorage) and *status*&nbsp;=&nbsp;_3_ (recommended).
+* Individual recommended anchorages without defined limits should be encoded as *Anchorage Area* features of type point, with attributes *category of anchorage* = _1_ (unrestricted anchorage) and *status* = _3_ (recommended).
 * If it is required to encode an anchorage at a location that has not been defined by a regulatory authority but has been reported to be suitable and safe for anchoring, this must be done using *Anchorage Area* of type point, with attribute *category of anchorage* = _15_ (reported anchorage). NOTE: the encoding of *Anchorage Area* with attribute *category of anchorage* = _15_ (reported anchorage) of type surface is prohibited.
 * If it is required to encode an anchorage which may be used for a period of not more than 24 hours, it must be done using *category of anchorage* = _9_ (anchorage for periods up to 24 hours).
 * If it is required to encode an anchorage with a specific, limited time period, it must be done using *category of anchorage* = _10_ (anchorage for limited period of time). The specific limit of time should be encoded using the complex attribute *information* (see clause 2.4.6), sub-attribute *text* (for example_Anchorage limited to 12 hours_).
@@ -336,7 +270,7 @@ If it is required to encode an anchorage area, including anchorages for seaplane
 [[sec_16.4]]
 === Mooring area
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *MOORING AREA*. An area in which vessels may be secured to mooring buoys (adapted from IHO dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Mooring Area (ACHARE)*
@@ -356,90 +290,59 @@ If it is required to encode an anchorage area, including anchorages for seaplane
 | C
 | 0,*
 
-3+| language
-2+|
+3+| language 2+|
 
 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE
 | 1,1
 
-3+| name usage
-2+|
-
-3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
 | 0,1 ^†^
 
-3+| fixed date range
-2+|
+3+| fixed date range 2+|
 
 3+| See clause 2.4.8
 | C
 | 0,1
 
-3+| date end
-2+| (DATEND)
-3+|
-
-| (S) TD
+3+| date end 2+| (DATEND) 3+| | (S) TD
 | 0,1 ^†^
 
-3+| date start
-2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| date start 2+| (DATSTA) 3+| | (S) TD
 | 0,1 ^†^
 
-3+| interoperability identifier
-2+|
+3+| interoperability identifier 2+|
 
 3+| MRN (see clause 27.114)
 | URN
 | 0,1
 
-3+| maximum permitted draught
-2+| _(INFORM)__(NINFOM)_
-3+|
+3+| maximum permitted draught 2+| _(INFORM)__(NINFOM)_ 3+|
 
 | RE
 | 0,1
 
-3+| maximum permitted vessel length
-2+| _(INFORM)__(NINFOM)_
-3+|
+3+| maximum permitted vessel length 2+| _(INFORM)__(NINFOM)_ 3+|
 
 | RE
 | 0,1
 
-3+| periodic date range
-2+|
+3+| periodic date range 2+|
 
 3+| See clause 2.4.8
 | C
 | 0,*
 
-3+| date end
-2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD
 | 1,1
 
-3+| date start
-2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD
 | 1,1
 
 3+| restriction 2+| (RESTRN) 3+|
@@ -467,8 +370,7 @@ If it is required to encode an anchorage area, including anchorages for seaplane
 25: stopping prohibited +
 27: speed restricted +
 39: swimming prohibited +
-42: power-driven vessels prohibited | EN | 0,*
-3+| status 2+| (STATUS) 3+|
+42: power-driven vessels prohibited | EN | 0,* 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
 3: recommended +
@@ -477,84 +379,48 @@ If it is required to encode an anchorage area, including anchorages for seaplane
 7: temporary +
 8: private +
 9: mandatory +
-14: public | EN | 0,*
-3+| vessel speed limit
-2+|
-
-3+|
+14: public | EN | 0,* 3+| vessel speed limit 2+| 3+|
 
 | C
 | 0,*
 
-3+| speed limit
-2+|
-
-3+|
+3+| speed limit 2+| 3+|
 
 | (S) RE
 | 1,1
 
-3+| speed units
-2+|
-
-3+|
+3+| speed units 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots +
 | EN
 | 1,1
 
-3+| vessel class
-2+|
-
-3+|
-
-| (S) TE
+3+| vessel class 2+| 3+| | (S) TE
 | 0,1
 
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
-3+| information
-2+|
+3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1 3+| information 2+|
 
 3+| See clause 2.4.6
 | C
 | 0,*
 
-3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE
 | 0,1 ^†^
 
-3+| headline
-2+|
-
-3+|
-
-| (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
-3+| language
-2+|
+3+| language 2+|
 
 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -591,7 +457,7 @@ If it is required to encode a mooring area, it must be done using the feature *M
 [[sec_16.5]]
 === Anchor berth
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *ANCHOR BERTH*. A designated area of water where a vessel, seaplane, etc., may anchor. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Anchor Berth (ACHBRT)*
@@ -609,11 +475,7 @@ If it is required to encode a mooring area, it must be done using the feature *M
 7: small craft anchorage +
 9: anchorage for periods up to 24 Hours +
 10: anchorage for a limited period of time +
-14: waiting anchorage | EN | 0,*
-3+| category of cargo
-2+|
-
-3+|
+14: waiting anchorage | EN | 0,* 3+| category of cargo 2+| 3+|
 1: bulk +
 2: container +
 3: general +
@@ -628,91 +490,62 @@ If it is required to encode a mooring area, it must be done using the feature *M
 12: reefer container cargo +
 13: Ro-Ro cargo
 14: project cargo +
-15: break bulk cargo +
+15: break bulk cargo
 | EN
 | 0,*
 
-3+| feature name
-2+|
+3+| feature name 2+|
 
 3+| See clause 2.5.8
 | C
 | 0,*
 
-3+| language
-2+|
+3+| language 2+|
 
 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE
 | 1,1
 
-3+| name usage
-2+|
-
-3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
 | 0,1 ^†^
 
-3+| fixed date range
-2+|
+3+| fixed date range 2+|
 
 3+| See clause 2.4.8
 | C
 | 0,1
 
-3+| date end
-2+| (DATEND)
-3+|
-
-| (S) TD
+3+| date end 2+| (DATEND) 3+| | (S) TD
 | 0,1 ^†^
 
-3+| date start
-2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| date start 2+| (DATSTA) 3+| | (S) TD
 | 0,1 ^†^
 
-3+| interoperability identifier
-2+|
+3+| interoperability identifier 2+|
 
 3+| MRN (see clause 27.114)
 | URN
 | 0,1
 
-3+| periodic date range
-2+|
+3+| periodic date range 2+|
 
 3+| See clause 2.4.8
 | C
 | 0,*
 
-3+| date end
-2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD
 | 1,1
 
-3+| date start
-2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD
 | 1,1
 
-3+| radius 2+| (RADIUS) 3+| Metres | RE | 0,1
-3+| status 2+| (STATUS) 3+|
+3+| radius 2+| (RADIUS) 3+| Metres | RE | 0,1 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
 3: recommended +
@@ -722,50 +555,28 @@ If it is required to encode a mooring area, it must be done using the feature *M
 7: temporary +
 8: private +
 9: mandatory +
-14: public | EN | 0,*
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
-3+| information
-2+|
+14: public | EN | 0,* 3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1 3+| information 2+|
 
 3+| See clause 2.4.6
 | C
 | 0,*
 
-3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE
 | 0,1 ^†^
 
-3+| headline
-2+|
-
-3+|
-
-| (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
-3+| language
-2+|
+3+| language 2+|
 
 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -802,7 +613,7 @@ If it is required to encode an anchor berth, it must be done using the feature *
 [[sec_16.6]]
 === Seaplane landing area
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *SEAPLANE LANDING AREA*. A designated portion of water for the landing and take-off of seaplanes. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.152, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Seaplane Landing Area (SPLARE)*
@@ -811,62 +622,40 @@ If it is required to encode an anchor berth, it must be done using the feature *
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| feature name
-2+|
 
-3+| See clause 2.5.8
-| C
-| 0,*
+3+| feature name 2+| 3+| See clause 2.5.8 | C | 0,*
 
-3+| language
-2+|
+3+| language 2+|
 
 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE
 | 1,1
 
-3+| name usage
-2+|
-
-3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
 | 0,1 ^†^
 
-3+| interoperability identifier
-2+|
+3+| interoperability identifier 2+|
 
 3+| MRN (see clause 27.114)
 | URN
 | 0,1
 
-3+| periodic date range
-2+|
+3+| periodic date range 2+|
 
 3+| See clause 2.4.8
 | C
 | 0,*
 
-3+| date end
-2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD
 | 1,1
 
-3+| date start
-2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD
 | 1,1
 
 3+| restriction 2+| (RESTRN) 3+|
@@ -895,8 +684,7 @@ If it is required to encode an anchor berth, it must be done using the feature *
 24: dragging prohibited +
 25: stopping prohibited +
 27: speed restricted +
-39: swimming prohibited | EN | 0,*
-3+| status 2+| (STATUS) 3+|
+39: swimming prohibited | EN | 0,* 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
 3: recommended +
@@ -906,70 +694,45 @@ If it is required to encode an anchor berth, it must be done using the feature *
 7: temporary +
 8: private +
 9: mandatory +
-14: public | EN | 0,*
-3+| vessel speed limit
-2+|
-
-3+|
+14: public | EN | 0,* 3+| vessel speed limit 2+| 3+|
 
 | C
 | 0,*
 
-3+| speed limit
-2+|
-
-3+|
+3+| speed limit 2+| 3+|
 
 | (S) RE
 | 1,1
 
-3+| speed units
-2+|
-
-3+|
+3+| speed units 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots +
 | (S) EN
 | 1,1
 
-3+| vessel class
-2+|
-
-3+|
-
-| (S) TE
+3+| vessel class 2+| 3+| | (S) TE
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
-3+| information
-2+|
+
+3+| information 2+|
 
 3+| See clause 2.4.6
 | C
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -981,9 +744,7 @@ If it is required to encode an anchor berth, it must be done using the feature *
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -1009,14 +770,14 @@ If it is required to encode a seaplane landing area, it must be done using the f
 
 * For additional guidance regarding the encoding of vessel speed limits, see clause 17.4.
 * If it is required to encode an area where seaplanes draw water for fire fighting activities, this must be done using *Seaplane Landing Area*.
-* If it is required to encode an anchorage for seaplanes, it must be done using an *Anchorage Area* feature (see clause 16.3), with attribute *category of anchorage*&nbsp;=&nbsp;_6_ (seaplane anchorage).
+* If it is required to encode an anchorage for seaplanes, it must be done using an *Anchorage Area* feature (see clause 16.3), with attribute *category of anchorage* = _6_ (seaplane anchorage).
 
 [underline]#Distinction:# Airport/Airfield; Helipad; Runway.
 
 [[sec_16.7]]
 === Dumping ground
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *DUMPING GROUND*. A sea area where dredged material or other potentially more harmful material, for example explosives, chemical waste, is deliberately deposited. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.59, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Dumping Ground (DMPGRD)*
@@ -1032,9 +793,7 @@ If it is required to encode a seaplane landing area, it must be done using the f
 5: spoil ground +
 6: vessel dumping ground | EN | 0,*
 3+| date disused
-2+|
-
-3+|
+2+| 3+|
 
 | TD
 | 0,1
@@ -1055,15 +814,11 @@ If it is required to encode a seaplane landing area, it must be done using the f
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -1107,25 +862,19 @@ If it is required to encode a seaplane landing area, it must be done using the f
 6: reserved +
 7: temporary | EN | 0,*
 3+| vessel speed limit
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,*
 
 3+| speed limit
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 1,1
 
 3+| speed units
-2+|
-
-3+|
+2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots +
@@ -1133,11 +882,7 @@ If it is required to encode a seaplane landing area, it must be done using the f
 | 1,1
 
 3+| vessel class
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
@@ -1149,26 +894,16 @@ If it is required to encode a seaplane landing area, it must be done using the f
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -1180,9 +915,7 @@ If it is required to encode a seaplane landing area, it must be done using the f
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -1224,9 +957,9 @@ Spoil grounds are areas set aside, clear of shipping channels and in deep water 
 
 Extraction (or dredging) areas are those areas where a concentration of dredging vessels may be encountered, taking up sand or shingle to be brought ashore (for example for construction purposes). Their significance is primarily as a collision hazard, although they also indicate the likelihood of finding a greater depth of water than charted. Channels dredged to provide an adequate depth of water for navigation are "dredged areas", not to be confused with "dredging areas".
 
-If it is required to encode a spoil ground, it must be done using a *Dumping Ground* feature, with attribute *category of dumping ground*&nbsp;=&nbsp;_5_ (spoil ground).
+If it is required to encode a spoil ground, it must be done using a *Dumping Ground* feature, with attribute *category of dumping ground* = _5_ (spoil ground).
 
-If it is required to encode a dredging area, it must be done using a *Restricted Area* feature (see clause 17.8), with attribute *category of restricted area*&nbsp;=&nbsp;_21_ (dredging area). An area in which seabed material (for example sand, shingle) is being extracted for purposes such as construction must be encoded, where required, using the feature *Offshore Production Area* (see clause 14.6), with attribute *category of production area* = _13_ (seabed material extraction area).
+If it is required to encode a dredging area, it must be done using a *Restricted Area* feature (see clause 17.8), with attribute *category of restricted area* = _21_ (dredging area). An area in which seabed material (for example sand, shingle) is being extracted for purposes such as construction must be encoded, where required, using the feature *Offshore Production Area* (see clause 14.6), with attribute *category of production area* = _13_ (seabed material extraction area).
 
 [underline]#Remarks:#
 
@@ -1237,7 +970,7 @@ If it is required to encode a dredging area, it must be done using a *Restricted
 [[sec_16.8]]
 === Military practice area
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *MILITARY PRACTICE AREA*. An area within which naval, military or aerial exercises are carried out. (Adapted from IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Military Practice Area (MIPARE)*
@@ -1268,15 +1001,11 @@ If it is required to encode a dredging area, it must be done using a *Restricted
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -1291,16 +1020,12 @@ If it is required to encode a dredging area, it must be done using a *Restricted
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -1312,9 +1037,7 @@ If it is required to encode a dredging area, it must be done using a *Restricted
 
 3+| nationality
 2+| (NATION)
-3+|
-
-| TE
+3+| | TE
 | 0,1
 
 3+| periodic date range
@@ -1326,16 +1049,12 @@ If it is required to encode a dredging area, it must be done using a *Restricted
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| restriction 2+| (RESTRN) 3+|
@@ -1375,25 +1094,19 @@ If it is required to encode a dredging area, it must be done using a *Restricted
 16: watched +
 17: unwatched | EN | 0,*
 3+| vessel speed limit
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,*
 
 3+| speed limit
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 1,1
 
 3+| speed units
-2+|
-
-3+|
+2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots +
@@ -1401,11 +1114,7 @@ If it is required to encode a dredging area, it must be done using a *Restricted
 | 1,1
 
 3+| vessel class
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
@@ -1417,26 +1126,16 @@ If it is required to encode a dredging area, it must be done using a *Restricted
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -1448,9 +1147,7 @@ If it is required to encode a dredging area, it must be done using a *Restricted
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -1494,7 +1191,7 @@ If it is required to encode a military practice area, it must be done using the 
 [[sec_16.9]]
 === Administration area
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *ADMINISTRATION AREA*. A defined area within which a jurisdiction applies. It may or may not be named.
 10+| *[underline]#S-101 Geo Feature:#* *Administration Area (ADMARE)*
@@ -1504,9 +1201,7 @@ If it is required to encode a military practice area, it must be done using the 
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| in dispute
-2+|
-
-3+|
+2+| 3+|
 
 | BO
 | 0,1
@@ -1531,15 +1226,11 @@ If it is required to encode a military practice area, it must be done using the 
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -1554,9 +1245,7 @@ If it is required to encode a military practice area, it must be done using the 
 
 3+| nationality
 2+| (NATION)
-3+|
-
-| TE
+3+| | TE
 | 0,*
 
 3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
@@ -1568,26 +1257,16 @@ If it is required to encode a military practice area, it must be done using the 
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -1599,9 +1278,7 @@ If it is required to encode a military practice area, it must be done using the 
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
@@ -1636,7 +1313,7 @@ If it is required to encode a named international or national territory, it must
 [[sec_16.10]]
 === Cargo transhipment area
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *CARGO TRANSHIPMENT AREA*. An area designated for transfer of cargo from one vessel to anothersometimes in order to reduce a vessel's draught. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Cargo Transhipment Area (CTSARE)*
@@ -1661,15 +1338,11 @@ If it is required to encode a named international or national territory, it must
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -1684,16 +1357,12 @@ If it is required to encode a named international or national territory, it must
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -1712,16 +1381,12 @@ If it is required to encode a named international or national territory, it must
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| restriction 2+| (RESTRN) 3+|
@@ -1756,25 +1421,19 @@ If it is required to encode a named international or national territory, it must
 7: temporary +
 9: mandatory | EN | 0,*
 3+| vessel speed limit
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,*
 
 3+| speed limit
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 1,1
 
 3+| speed units
-2+|
-
-3+|
+2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots +
@@ -1782,11 +1441,7 @@ If it is required to encode a named international or national territory, it must
 | 1,1
 
 3+| vessel class
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
@@ -1798,26 +1453,16 @@ If it is required to encode a named international or national territory, it must
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -1829,9 +1474,7 @@ If it is required to encode a named international or national territory, it must
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -1867,7 +1510,7 @@ If it is required to encode a cargo transhipment area, it must be done using the
 [[sec_16.11]]
 === Caution area
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *CAUTION AREA*. Generally, an area where the mariner has to be made aware of circumstances influencing the safety of navigation. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.33, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Caution Area (CTNARE)*
@@ -1889,16 +1532,12 @@ If it is required to encode a cargo transhipment area, it must be done using the
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -1917,16 +1556,12 @@ If it is required to encode a cargo transhipment area, it must be done using the
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
@@ -1942,26 +1577,16 @@ If it is required to encode a cargo transhipment area, it must be done using the
 | 0,\* ^†^
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -1973,9 +1598,7 @@ If it is required to encode a cargo transhipment area, it must be done using the
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1 ^†^
@@ -2014,7 +1637,7 @@ If it is required to identify an area in which the Mariner must be aware of circ
 [[sec_16.12]]
 === Information area
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *INFORMATION AREA*. An area for which general information regarding navigation, but not directly related to safety of navigation, is available.
 10+| *[underline]#S-101 Geo Feature:#* *Information Area* __**(M_NPUB)**__
@@ -2039,15 +1662,11 @@ If it is required to identify an area in which the Mariner must be aware of circ
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -2062,16 +1681,12 @@ If it is required to identify an area in which the Mariner must be aware of circ
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -2090,16 +1705,12 @@ If it is required to identify an area in which the Mariner must be aware of circ
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
@@ -2112,26 +1723,16 @@ If it is required to identify an area in which the Mariner must be aware of circ
 | 0,\* ^†^
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -2143,9 +1744,7 @@ If it is required to identify an area in which the Mariner must be aware of circ
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1 ^†^
@@ -2182,7 +1781,7 @@ If it is required to encode information which may be of use to the Mariner, but 
 [[sec_16.13]]
 === Contiguous Zone
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *CONTIGUOUS ZONE*. A zone contiguous to a coastal State's Territorial Sea, which may not extend beyond 24 nautical miles from the baselines from which the breadth of the Territorial Sea is measured. The coastal State may exercise certain control in this zone subject to the provisions of International Law. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Contiguous Zone (CONZNE)*
@@ -2200,22 +1799,16 @@ If it is required to encode information which may be of use to the Mariner, but 
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| in dispute
-2+|
-
-3+|
+2+| 3+|
 
 | BO
 | 0,1
@@ -2229,9 +1822,7 @@ If it is required to encode information which may be of use to the Mariner, but 
 
 3+| nationality
 2+| (NATION)
-3+|
-
-| TE
+3+| | TE
 | 1,*
 
 3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
@@ -2243,26 +1834,16 @@ If it is required to encode information which may be of use to the Mariner, but 
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -2274,9 +1855,7 @@ If it is required to encode information which may be of use to the Mariner, but 
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -2309,7 +1888,7 @@ If it is required to encode the Contiguous Zone, it must be done using the featu
 [[sec_16.14]]
 === Continental Shelf area
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *CONTINENTAL SHELF AREA*. The Continental Shelf of a coastal State comprises the seabed and subsoil of the submarine areas that extend beyond its Territorial Sea throughout the natural prolongation of its land territory to the outer edge of the continental margin, or to a distance of 200 nautical miles from the baselines from which the breadth of the Territorial Sea is measured where the outer edge of the continental margin does not extend up to that distance. (IHO Publication C-51).
 10+| *[underline]#S-101 Geo Feature:#* *Continental Shelf Area (COSARE)*
@@ -2334,15 +1913,11 @@ If it is required to encode the Contiguous Zone, it must be done using the featu
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -2357,9 +1932,7 @@ If it is required to encode the Contiguous Zone, it must be done using the featu
 
 3+| nationality
 2+| (NATION)
-3+|
-
-| TE
+3+| | TE
 | 1,*
 
 3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
@@ -2371,26 +1944,16 @@ If it is required to encode the Contiguous Zone, it must be done using the featu
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -2402,9 +1965,7 @@ If it is required to encode the Contiguous Zone, it must be done using the featu
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -2437,7 +1998,7 @@ If it is required to encode the Continental Shelf, it must be done using the fea
 [[sec_16.15]]
 === Custom zone
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *CUSTOM ZONE*. The area within which national custom regulations are in force. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.46, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Custom Zone (CUSZNE)*
@@ -2455,9 +2016,7 @@ If it is required to encode the Continental Shelf, it must be done using the fea
 
 3+| nationality
 2+| (NATION)
-3+|
-
-| TE
+3+| | TE
 | 1,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
@@ -2469,26 +2028,16 @@ If it is required to encode the Continental Shelf, it must be done using the fea
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -2500,9 +2049,7 @@ If it is required to encode the Continental Shelf, it must be done using the fea
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -2530,7 +2077,7 @@ If it is required to encode a custom zone, it must be done using the feature *Cu
 [[sec_16.16]]
 === Exclusive Economic Zone
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *EXCLUSIVE ECONOMIC ZONE*. An area, not exceeding 200 nautical miles from the baselines from which the breadth of the Territorial Sea is measured, subject to a specific legal regime established in the United Nations Convention on the Law of the Sea under which the coastal state has certain rights and jurisdiction. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Exclusive Economic Zone (EXEZNE)*
@@ -2540,9 +2087,7 @@ If it is required to encode a custom zone, it must be done using the feature *Cu
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| in dispute
-2+|
-
-3+|
+2+| 3+|
 
 | BO
 | 0,1
@@ -2556,9 +2101,7 @@ If it is required to encode a custom zone, it must be done using the feature *Cu
 
 3+| nationality
 2+| (NATION)
-3+|
-
-| TE
+3+| | TE
 | 1,*
 
 3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
@@ -2570,26 +2113,16 @@ If it is required to encode a custom zone, it must be done using the feature *Cu
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -2601,9 +2134,7 @@ If it is required to encode a custom zone, it must be done using the feature *Cu
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -2634,7 +2165,7 @@ If it is required to encode an Exclusive Economic Zone (EEZ), it must be done us
 [[sec_16.17]]
 === Fishery zone
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *FISHERY ZONE*. The offshore zone in which exclusive fishing rights and management are held by the coastal nation. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Fishery Zone (FSHZNE)*
@@ -2659,15 +2190,11 @@ If it is required to encode an Exclusive Economic Zone (EEZ), it must be done us
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -2682,9 +2209,7 @@ If it is required to encode an Exclusive Economic Zone (EEZ), it must be done us
 
 3+| nationality
 2+| (NATION)
-3+|
-
-| TE
+3+| | TE
 | 1,1
 
 3+| status 2+| (STATUS) 3+|
@@ -2701,26 +2226,16 @@ If it is required to encode an Exclusive Economic Zone (EEZ), it must be done us
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -2732,9 +2247,7 @@ If it is required to encode an Exclusive Economic Zone (EEZ), it must be done us
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -2768,7 +2281,7 @@ If it is required to encode a fishery zone, it must be done using the feature *F
 [[sec_16.18]]
 === Fishing ground
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *FISHING GROUND*. A water area in which fishing is frequently carried on. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Fishing Ground (FSHGRD)*
@@ -2793,15 +2306,11 @@ If it is required to encode a fishery zone, it must be done using the feature *F
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -2823,16 +2332,12 @@ If it is required to encode a fishery zone, it must be done using the feature *F
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| restriction 2+| (RESTRN) 3+|
@@ -2871,25 +2376,19 @@ If it is required to encode a fishery zone, it must be done using the feature *F
 17: unwatched +
 28: buoyed | EN | 0,*
 3+| vessel speed limit
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,*
 
 3+| speed limit
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 1,1
 
 3+| speed units
-2+|
-
-3+|
+2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots +
@@ -2897,11 +2396,7 @@ If it is required to encode a fishery zone, it must be done using the feature *F
 | 1,1
 
 3+| vessel class
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
@@ -2913,26 +2408,16 @@ If it is required to encode a fishery zone, it must be done using the feature *F
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -2944,9 +2429,7 @@ If it is required to encode a fishery zone, it must be done using the feature *F
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -2977,7 +2460,7 @@ If it is required to encode a fishing ground, it must be done using the feature 
 [[sec_16.19]]
 === Free port area
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *FREE PORT AREA*. A port where certain import and export duties are waived (unless goods pass into the country) to facilitate reshipment to other countries. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Free Port Area (FRPARE)*
@@ -3002,15 +2485,11 @@ If it is required to encode a fishing ground, it must be done using the feature 
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -3037,26 +2516,16 @@ If it is required to encode a fishing ground, it must be done using the feature 
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -3068,9 +2537,7 @@ If it is required to encode a fishing ground, it must be done using the feature 
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -3101,7 +2568,7 @@ If it is required to encode a free port area, it must be done using the feature 
 [[sec_16.20]]
 === Harbour area (administrative)
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *HARBOUR AREA*. The area over which a harbour authority has jurisdiction. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.80, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Harbour Area (Administrative) (HRBARE)*
@@ -3126,15 +2593,11 @@ If it is required to encode a free port area, it must be done using the feature 
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -3162,26 +2625,16 @@ If it is required to encode a free port area, it must be done using the feature 
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -3193,9 +2646,7 @@ If it is required to encode a free port area, it must be done using the feature 
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -3229,7 +2680,7 @@ If it is required to encode an administrative harbour area, it must be done usin
 [[sec_16.21]]
 === Log pond
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *LOG POND*. A maritime area enclosed with connected floating timbers used as a staging area for sawn logs. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.102, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Log Pond (LOGPON)*
@@ -3254,15 +2705,11 @@ If it is required to encode an administrative harbour area, it must be done usin
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -3284,16 +2731,12 @@ If it is required to encode an administrative harbour area, it must be done usin
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| status 2+| (STATUS) 3+|
@@ -3312,26 +2755,16 @@ If it is required to encode an administrative harbour area, it must be done usin
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -3343,9 +2776,7 @@ If it is required to encode an administrative harbour area, it must be done usin
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -3377,7 +2808,7 @@ If it is required to encode a log pond (also known as booming ground), it must b
 [[sec_16.22]]
 === Oil barrier
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *OIL BARRIER*. A floating barrier to stop and contain the spread of oil on a water body surface. (Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2010).
 10+| *[underline]#S-101 Geo Feature:#* *Oil Barrier (OILBAR)*
@@ -3409,15 +2840,11 @@ If it is required to encode a log pond (also known as booming ground), it must b
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -3432,16 +2859,12 @@ If it is required to encode a log pond (also known as booming ground), it must b
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1
 
 3+| interoperability identifier
@@ -3468,26 +2891,16 @@ If it is required to encode a log pond (also known as booming ground), it must b
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -3499,9 +2912,7 @@ If it is required to encode a log pond (also known as booming ground), it must b
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -3534,7 +2945,7 @@ If it is required to encode an oil barrier, it must be done using the feature *O
 [[sec_16.23]]
 === Straight Territorial Sea Baseline
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *STRAIGHT TERRITORIAL SEA BASELINE*. Straight baselines are a system of straight lines joining specified or discrete points on the low-water line, usually known as straight baseline turning points. Straight baselines are used in delimitation. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Straight Territorial Sea Baseline (STSLNE)*
@@ -3552,9 +2963,7 @@ If it is required to encode an oil barrier, it must be done using the feature *O
 
 3+| nationality
 2+| (NATION)
-3+|
-
-| TE
+3+| | TE
 | 1,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
@@ -3566,26 +2975,16 @@ If it is required to encode an oil barrier, it must be done using the feature *O
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -3597,9 +2996,7 @@ If it is required to encode an oil barrier, it must be done using the feature *O
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -3643,7 +3040,7 @@ If it is required to encode a Straight Territorial Sea Baseline, it must be done
 [[sec_16.24]]
 === Territorial Sea area
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *TERRITORIAL SEA AREA*. A belt of water of a defined breadth but not exceeding 12 nautical miles measured seaward from the Territorial Sea Baseline. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Territorial Sea Area (TESARE)*
@@ -3653,9 +3050,7 @@ If it is required to encode a Straight Territorial Sea Baseline, it must be done
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| in dispute
-2+|
-
-3+|
+2+| 3+|
 
 | BO
 | 0,1
@@ -3669,9 +3064,7 @@ If it is required to encode a Straight Territorial Sea Baseline, it must be done
 
 3+| nationality
 2+| (NATION)
-3+|
-
-| TE
+3+| | TE
 | 1,*
 
 3+| restriction 2+| (RESTRN) 3+|
@@ -3692,25 +3085,19 @@ If it is required to encode a Straight Territorial Sea Baseline, it must be done
 24: dragging prohibited +
 27: speed restricted | EN | 0,*
 3+| vessel speed limit
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,*
 
 3+| speed limit
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 1,1
 
 3+| speed units
-2+|
-
-3+|
+2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots +
@@ -3718,11 +3105,7 @@ If it is required to encode a Straight Territorial Sea Baseline, it must be done
 | 1,1
 
 3+| vessel class
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
@@ -3734,26 +3117,16 @@ If it is required to encode a Straight Territorial Sea Baseline, it must be done
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -3765,9 +3138,7 @@ If it is required to encode a Straight Territorial Sea Baseline, it must be done
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -3805,7 +3176,7 @@ If it is required to encode a Territorial Sea area, it must be done using the fe
 [[sec_16.25]]
 === Submarine transit lane
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *SUBMARINE TRANSIT LANE*. A lane where submarines may navigate under water or at the surface. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Submarine Transit Lane (SUBTLN)*
@@ -3830,15 +3201,11 @@ If it is required to encode a Territorial Sea area, it must be done using the fe
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -3853,9 +3220,7 @@ If it is required to encode a Territorial Sea area, it must be done using the fe
 
 3+| nationality
 2+| (NATION)
-3+|
-
-| TE
+3+| | TE
 | 0,1
 
 3+| restriction 2+| (RESTRN) 3+|
@@ -3884,25 +3249,19 @@ If it is required to encode a Territorial Sea area, it must be done using the fe
 25: stopping prohibited +
 27: speed restricted | EN | 0,*
 3+| vessel speed limit
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,*
 
 3+| speed limit
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 1,1
 
 3+| speed units
-2+|
-
-3+|
+2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots +
@@ -3910,11 +3269,7 @@ If it is required to encode a Territorial Sea area, it must be done using the fe
 | 1,1
 
 3+| vessel class
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
@@ -3926,26 +3281,16 @@ If it is required to encode a Territorial Sea area, it must be done using the fe
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -3957,9 +3302,7 @@ If it is required to encode a Territorial Sea area, it must be done using the fe
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -3992,7 +3335,7 @@ If it is required to encode a submarine transit lane, it must be done using the 
 [[sec_16.26]]
 === Pilotage district
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *PILOTAGE DISTRICT*. An area within which a pilotage direction exists. Such directions are regulated by a competent harbour authority which dictates circumstances under which they apply. (UK Pilotage Act 1987).
 10+| *[underline]#S-101 Geo Feature:#* *Pilotage District*
@@ -4003,9 +3346,7 @@ If it is required to encode a submarine transit lane, it must be done using the 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| communication channel
 2+| (COMCHA)
-3+|
-
-| TE
+3+| | TE
 | 0,*
 
 3+| feature name
@@ -4024,15 +3365,11 @@ If it is required to encode a submarine transit lane, it must be done using the 
 
 3+| name
 2+| _(PILDST) (NPLDST)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -4054,26 +3391,16 @@ If it is required to encode a submarine transit lane, it must be done using the 
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -4085,9 +3412,7 @@ If it is required to encode a submarine transit lane, it must be done using the 
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -4122,7 +3447,7 @@ If it is required to encode the area within which regulations regarding pilotage
 [[sec_16.27]]
 === Collision regulations limit
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *COLLISION REGULATIONS LIMIT*. Convention on the International Regulations for Preventing Collisions at Sea, 1972 (COLREGs). The demarcation line between inland navigation rules and international navigation rules.
 10+| *[underline]#S-101 Geo Feature:#* *Collision Regulations Limit*
@@ -4147,15 +3472,11 @@ If it is required to encode the area within which regulations regarding pilotage
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -4170,16 +3491,12 @@ If it is required to encode the area within which regulations regarding pilotage
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -4198,24 +3515,16 @@ If it is required to encode the area within which regulations regarding pilotage
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| regulation citation
-2+|
-
-3+|
-
-| TE
+2+| 3+| | TE
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
@@ -4227,26 +3536,16 @@ If it is required to encode the area within which regulations regarding pilotage
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -4258,9 +3557,7 @@ If it is required to encode the area within which regulations regarding pilotage
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -4293,7 +3590,7 @@ Remarks:
 [[sec_16.28]]
 === Marine pollution regulations area
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *MARINE POLLUTION REGULATIONS AREA*. ​​​The International Convention for the Prevention of Pollution from Ships (MARPOL) is the main international convention covering prevention of pollution of the marine environment by ships from operational or accidental causes. (International Maritime Organization).
 10+| *[underline]#S-101 Geo Feature:#* *Marine Pollution Regulations Area*
@@ -4318,15 +3615,11 @@ Remarks:
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -4340,11 +3633,7 @@ Remarks:
 | 0,1
 
 3+| regulation citation
-2+|
-
-3+|
-
-| TE
+2+| 3+| | TE
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
@@ -4356,26 +3645,16 @@ Remarks:
 | 0,\* ^†^
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -4387,9 +3666,7 @@ Remarks:
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -4446,12 +3723,12 @@ If it is required to encode a minefield, it must be done using a *Restricted Are
 
 A degaussing (or demagnetising) range is an area, usually of about 0.2M diameter, within which ships' magnetic fields may be measured. Sensing instruments and cables are installed on the seafloor in the range and there are cables leading from the range to a control position ashore. The range is usually marked by distinctive buoys. The significance of a degaussing range to Mariners is that anchoring and trawling are prohibited and that the range may have to be avoided when vessels are using it.
 
-If it is required to encode a degaussing range, it must be done using a *Restricted Area* feature (see clause17.8), with attribute *category of restricted area*&nbsp;=&nbsp;_8_ (degaussing range).
+If it is required to encode a degaussing range, it must be done using a *Restricted Area* feature (see clause17.8), with attribute *category of restricted area* = _8_ (degaussing range).
 
 [[sec_17.3]]
 === Nature reserves (see S-4 -- B-437.3)
 
-If it is required to encode a marine nature reserve area, it must be done using a *Restricted Area* feature (see clause17.8), with attribute *category of restricted area*&nbsp;=&nbsp;_4_ (nature reserve).
+If it is required to encode a marine nature reserve area, it must be done using a *Restricted Area* feature (see clause17.8), with attribute *category of restricted area* = _4_ (nature reserve).
 
 [[sec_17.4]]
 === Speed limits (see S-4 -- B-430.2)
@@ -4463,7 +3740,7 @@ If it is required to encode the buoys/beacons marking the *Restricted Area* feat
 [[sec_17.5]]
 === Anchoring restricted (see S-4 -- B-431.4)
 
-If it is required to encode a restricted anchoring area, it must be done using a *Restricted Area* feature (see clause17.8), or using other features with the attribute *restriction* (see clause17), where *restriction*&nbsp;=&nbsp;_1_ (anchoring prohibited) or _2_ (anchoring restricted). Additional information about the restriction should be encoded using the complex attribute *information* (see clause 2.4.6).
+If it is required to encode a restricted anchoring area, it must be done using a *Restricted Area* feature (see clause17.8), or using other features with the attribute *restriction* (see clause17), where *restriction* = _1_ (anchoring prohibited) or _2_ (anchoring restricted). Additional information about the restriction should be encoded using the complex attribute *information* (see clause 2.4.6).
 
 [[sec_17.6]]
 === Areas to be avoided (see S-4 -- B-435.7)
@@ -4486,7 +3763,7 @@ An Environmentally Sensitive Sea Area that is shown on the source as a point sym
 [[sec_17.8]]
 === Restricted area
 
-[cols="87,114,114,114,114,114,114,114,38,77"]
+[cols="87,114,114,114,114,114,114,114,38,77", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *RESTRICTED AREA*. A specified area on land or water designated by an appropriate authority within which access or navigation is restricted in accordance with certain specified conditions. (Adapted from IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Restricted Area (RESARE)*
@@ -4536,15 +3813,11 @@ An Environmentally Sensitive Sea Area that is shown on the source as a point sym
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -4559,16 +3832,12 @@ An Environmentally Sensitive Sea Area that is shown on the source as a point sym
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -4587,16 +3856,12 @@ An Environmentally Sensitive Sea Area that is shown on the source as a point sym
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| restriction 2+| (RESTRN) 3+|
@@ -4641,25 +3906,19 @@ An Environmentally Sensitive Sea Area that is shown on the source as a point sym
 18: existence doubtful +
 28: buoyed | EN | 0,*
 3+| vessel speed limit
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,*
 
 3+| speed limit
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 1,1
 
 3+| speed units
-2+|
-
-3+|
+2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots +
@@ -4667,11 +3926,7 @@ An Environmentally Sensitive Sea Area that is shown on the source as a point sym
 | 1,1
 
 3+| vessel class
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
@@ -4683,26 +3938,16 @@ An Environmentally Sensitive Sea Area that is shown on the source as a point sym
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -4714,9 +3959,7 @@ An Environmentally Sensitive Sea Area that is shown on the source as a point sym
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -5322,7 +4565,7 @@ h| Rhythms of lights h| F h| Oc h| Oc(2) h| Oc(2+3) h| Iso h| Fl h| Fl(3) h| LFl
 
 |===
 
-[cols="114,22,30,22,38,22,21"]
+[cols="114,22,30,22,38,22,21", options="unnumbered"]
 |===
 h| Rhythms of lights h| Q h| Q(3) h| VQ h| VQ(3) h| UQ h| IUQ
 | *light characteristic* | _4_ | _4_ | _5_ | _5_ | _6_ | _11_
@@ -5330,7 +4573,7 @@ h| Rhythms of lights h| Q h| Q(3) h| VQ h| VQ(3) h| UQ h| IUQ
 
 |===
 
-[cols="114,38,30,54,62,38,54,78,69"]
+[cols="114,38,30,54,62,38,54,78,69", options="unnumbered"]
 |===
 | Rhythms of lights | Mo(K) | FFl | Q(6)+LFl | VQ(6)+LFl | Al.WR | Al.Fl.WR | Al.Fl(2W+1R) | Al.Oc(4)WR
 
@@ -5362,37 +4605,37 @@ If it is required to encode the height above the water surface of a light on a f
 [[sec_19.1.4.1]]
 ===== Night lights
 
-If it is required to encode a night light, it must be done using the attribute *exhibition condition of light*&nbsp;=&nbsp;_4_ (night light) on the light feature.
+If it is required to encode a night light, it must be done using the attribute *exhibition condition of light* = _4_ (night light) on the light feature.
 
 [[sec_19.1.4.2]]
 ===== Unwatched lights (see S-4 -- B-473.1)
 
-This information should not be encoded, but unwatched (unmanned) lights, with no standby or emergency arrangements, may be encoded using attribute *status*&nbsp;=&nbsp;_17_ (unwatched).
+This information should not be encoded, but unwatched (unmanned) lights, with no standby or emergency arrangements, may be encoded using attribute *status* = _17_ (unwatched).
 
 [[sec_19.1.4.3]]
 ===== Occasional lights (see S-4 -- B-473.2)
 
-If it is required to encode an occasional light, it must be done using attribute *status*&nbsp;= _2_ (occasional). If it is required to encode a private light that is not regularly exhibited, it must be done using *status* = _2,8_ (occasional, private).
+If it is required to encode an occasional light, it must be done using attribute *status* = _2_ (occasional). If it is required to encode a private light that is not regularly exhibited, it must be done using *status* = _2,8_ (occasional, private).
 
 [[sec_19.1.4.4]]
 ===== Daytime lights (see S-4 -- B-473.4)
 
-If it is required to encode a light shown throughout 24 hours without change of character, it must be done using attribute *exhibition condition of light*&nbsp;=&nbsp;_1_ (light shown without change of character).
+If it is required to encode a light shown throughout 24 hours without change of character, it must be done using attribute *exhibition condition of light* = _1_ (light shown without change of character).
 
 If it is required to encode a light having characteristics shown by day different from those shown at night, it must be done by encoding two light features sharing the same point spatial instance:
 
-* one light feature with *exhibition condition of light*&nbsp;=&nbsp;_2_ (daytime light),
-* one lightfeature with *exhibition condition of light*&nbsp;=&nbsp;_4_ (night light).
+* one light feature with *exhibition condition of light* = _2_ (daytime light),
+* one lightfeature with *exhibition condition of light* = _4_ (night light).
 
 [[sec_19.1.4.5]]
 ===== Fog lights (see S-4 -- B-473.5)
 
-If it is required to encode a light which is exhibited in fog or conditions of reduced visibility, it must be done using a light feature, with attributes *exhibition condition of light*&nbsp;=&nbsp;_3_ (fog light)and *status*&nbsp;=&nbsp;_2_ (occasional)_._
+If it is required to encode a light which is exhibited in fog or conditions of reduced visibility, it must be done using a light feature, with attributes *exhibition condition of light* = _3_ (fog light)and *status* = _2_ (occasional)_._
 
 If it is required to encode a light having characteristics shown in fog that are different from those shown in conditions of normal visibility, it must be done by encoding two light features sharing the same point spatial instance:
 
-* one light feature with *exhibition condition of light*&nbsp;=&nbsp;_3_ (fog light) and *status*&nbsp;=&nbsp;_2_ (occasional)
-* one light feature with *exhibition condition of light*&nbsp;=&nbsp;_2_ (daytime light) or _4_ (night light) and the complex attribute *information* (see clause 2.4.6), sub-attribute *text*&nbsp;= _Character of the light changes in fog_.
+* one light feature with *exhibition condition of light* = _3_ (fog light) and *status* = _2_ (occasional)
+* one light feature with *exhibition condition of light* = _2_ (daytime light) or _4_ (night light) and the complex attribute *information* (see clause 2.4.6), sub-attribute *text* = _Character of the light changes in fog_.
 
 Note the distinction between fog lights and fog detector lights, which are lights used to automatically determine conditions of visibility which warrant the turning on or off of a sound signal. Fog detector lights must be encoded, where required, using the feature *Light Fog Detector* (see clause 19.4).
 
@@ -5408,7 +4651,7 @@ If a light is activated by calling into a manned station, the attribute *signal 
 
 If it is required to encode a leading light, it must be done using an appropriate light feature, with attribute:
 
-*category of light*&nbsp; = _4,12_ - front leading light
+*category of light*  = _4,12_ - front leading light
 
 _4,13_ - rear leading light
 
@@ -5426,7 +4669,7 @@ Bu__, further investigation must be done in order to determine the true position
 [[sec_19.1.6]]
 ==== Lighthouses (see S-4 -- B-457.3)
 
-If it is required to encode a lighthouse, it must be done using a *Landmark* feature (see clause 7.2), with attributes *category of landmark* = _17_ (tower)and *function* = _33_ (light support)for towers, or using a *Building* feature (see clause 6.2), with the attribute *function*&nbsp;=&nbsp;__33__, for any other shapes.
+If it is required to encode a lighthouse, it must be done using a *Landmark* feature (see clause 7.2), with attributes *category of landmark* = _17_ (tower)and *function* = _33_ (light support)for towers, or using a *Building* feature (see clause 6.2), with the attribute *function* = __33__, for any other shapes.
 
 If it is required to encode the attributes **elevation**, *height* and *vertical length* for a lighthouse, this must be done as described in clause 19.1.3.
 
@@ -5464,7 +4707,7 @@ h| Type h| S-4 h| category of light h| Remarks
 | _18_
 |
 
-| Flood light | B-478.2 | _8_ | Only to encode flood lights that are visible from seaward. The illuminated structure should be encoded using appropriate feature classes, with attribute *status*&nbsp;=&nbsp;_12_ (illuminated) and, if the flood lit colour of the structure is considered important for navigation, complex attribute **information**, sub-attribute *text* indicating the colour; for example, _Purple when flood lit_.
+| Flood light | B-478.2 | _8_ | Only to encode flood lights that are visible from seaward. The illuminated structure should be encoded using appropriate feature classes, with attribute *status* = _12_ (illuminated) and, if the flood lit colour of the structure is considered important for navigation, complex attribute **information**, sub-attribute *text* indicating the colour; for example, _Purple when flood lit_.
 | Synchronized lights
 | B-478.3
 |
@@ -5480,7 +4723,7 @@ h| Type h| S-4 h| category of light h| Remarks
 |
 
 | _11_
-| Only to encode spot lights that are visible from seaward. The illuminated feature should be encoded using appropriate feature classes, with attribute *status*&nbsp;=&nbsp;_12_ (illuminated)
+| Only to encode spot lights that are visible from seaward. The illuminated feature should be encoded using appropriate feature classes, with attribute *status* = _12_ (illuminated)
 
 | Emergency light
 |
@@ -5515,7 +4758,7 @@ Encoders are advised, therefore, that an aid to navigation structure object (for
 [[sec_19.2]]
 === Light all around
 
-[cols="87,114,114,114,114,114,114,114,38,77"]
+[cols="87,114,114,114,114,114,114,114,38,77", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *ALL AROUND LIGHT*. An all around light is a light that is visible over the whole horizon of interest to marine navigation and having no change in the characteristics of the light.
 10+| *[underline]#S-101 Geo Feature:#* *Light All Around (LIGHTS)*
@@ -5569,15 +4812,11 @@ Encoders are advised, therefore, that an aid to navigation structure object (for
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -5592,22 +4831,16 @@ Encoders are advised, therefore, that an aid to navigation structure object (for
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| flare bearing
-2+|
-
-3+|
+2+| 3+|
 
 | IN
 | 0,1
@@ -5630,9 +4863,7 @@ Encoders are advised, therefore, that an aid to navigation structure object (for
 1: high intensity +
 2: low intensity | EN | 0,1
 3+| major light
-2+|
-
-3+|
+2+| 3+|
 
 | BO
 | 0,1
@@ -5643,17 +4874,13 @@ Encoders are advised, therefore, that an aid to navigation structure object (for
 9: no system +
 11: main European inland waterway marking system | EN | 0,1
 3+| multiplicity of features
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,1
 
 3+| multiplicity known
-2+|
-
-3+|
+2+| 3+|
 
 | (S) BO
 | 1,1
@@ -5674,22 +4901,16 @@ Encoders are advised, therefore, that an aid to navigation structure object (for
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| rhythm of light
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 1,1
@@ -5719,9 +4940,7 @@ Encoders are advised, therefore, that an aid to navigation structure object (for
 29: fixed and alternating flashing | (S) EN | 1,1
 3+| signal group
 2+| (SIGGRP)
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,\* (ordered) ^†^
 
 3+| signal period
@@ -5739,17 +4958,13 @@ Encoders are advised, therefore, that an aid to navigation structure object (for
 | 0,\* (ordered)
 
 3+| signal duration
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 1,1
 
 3+| signal status
-2+|
-
-3+|
+2+| 3+|
 1: lit/sound
 2: eclipsed/silent
 | (S) EN
@@ -5810,26 +5025,16 @@ Encoders are advised, therefore, that an aid to navigation structure object (for
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -5841,9 +5046,7 @@ Encoders are advised, therefore, that an aid to navigation structure object (for
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -5900,7 +5103,7 @@ Further guidance for encoding various types and characteristics of lights can be
 [[sec_19.3]]
 === Light sectored
 
-[cols="87,114,114,114,114,114,114,114,38,77"]
+[cols="87,114,114,114,114,114,114,114,38,77", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *SECTOR LIGHT*. A light presenting different appearances (in particular, different colours) over various parts of the horizon of interest to maritime navigation. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Light Sectored (LIGHTS)*
@@ -5945,15 +5148,11 @@ Further guidance for encoding various types and characteristics of lights can be
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -5968,16 +5167,12 @@ Further guidance for encoding various types and characteristics of lights can be
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| height
@@ -6000,17 +5195,13 @@ Further guidance for encoding various types and characteristics of lights can be
 9: no system +
 11: main European inland waterway marking system | EN | 0,1
 3+| multiplicity of features
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,1
 
 3+| multiplicity known
-2+|
-
-3+|
+2+| 3+|
 
 | (S) BO
 | 1,1
@@ -6031,22 +5222,16 @@ Further guidance for encoding various types and characteristics of lights can be
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| sector characteristics
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 1,*
@@ -6075,9 +5260,7 @@ Further guidance for encoding various types and characteristics of lights can be
 28: alternating +
 29: fixed and alternating flashing | (S) EN | 1,1
 3+| light sector
-2+|
-
-3+|
+2+| 3+|
 
 | (S) C
 | 1,*
@@ -6092,33 +5275,25 @@ Further guidance for encoding various types and characteristics of lights can be
 10: violet +
 11: orange | (S) EN | 1,\* (ordered)
 3+| directional character
-2+|
-
-3+|
+2+| 3+|
 
 | (S) C
 | 0,1 ^†^
 
 3+| moiré effect
-2+|
-
-3+|
+2+| 3+|
 
 | (S) BO
 | 0,1
 
 3+| orientation
-2+|
-
-3+|
+2+| 3+|
 
 | (S) C
 | 1,1
 
 3+| orientation uncertainty
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 0,1
@@ -6140,43 +5315,33 @@ Further guidance for encoding various types and characteristics of lights can be
 8: partially obscured +
 9: visible in line of range | (S) EN | 0,*
 3+| sector limit
-2+|
-
-3+|
+2+| 3+|
 
 | (S) C
 | 0,1 ^†^
 
 3+| sector limit one
-2+|
-
-3+|
+2+| 3+|
 
 | (S) C
 | 1,1
 
 3+| sector bearing 2+| _(SECTR1)_ 3+| *sector limit one/sector bearing* ≠ *sector limit two/sector bearing* (_0_ = _360_) | (S) RE | 1,1
 3+| sector line length
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 0,1
 
 3+| sector limit two
-2+|
-
-3+|
+2+| 3+|
 
 | (S) C
 | 1,1
 
 3+| sector bearing 2+| _(SECTR2)_ 3+| *sector limit two/sector bearing* ≠ **sector limit one/sector bearing**; (_0_ = _360_) | (S) RE | 1,1
 3+| sector line length
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 0,1
@@ -6189,9 +5354,7 @@ Further guidance for encoding various types and characteristics of lights can be
 | 0,1
 
 3+| sector information
-2+|
-
-3+|
+2+| 3+|
 
 | (S) C
 | 0,*
@@ -6205,24 +5368,18 @@ Further guidance for encoding various types and characteristics of lights can be
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| sector arc extension
-2+|
-
-3+|
+2+| 3+|
 
 | (S) BO
 | 0,1
 
 3+| signal group
 2+| (SIGGRP)
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,\* (ordered) ^†^
 
 3+| signal period
@@ -6240,17 +5397,13 @@ Further guidance for encoding various types and characteristics of lights can be
 | 0,\* (ordered)
 
 3+| signal duration
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 1,1
 
 3+| signal status
-2+|
-
-3+|
+2+| 3+|
 1: lit/sound
 2: eclipsed/silent
 | (S) EN
@@ -6297,26 +5450,16 @@ Further guidance for encoding various types and characteristics of lights can be
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -6328,9 +5471,7 @@ Further guidance for encoding various types and characteristics of lights can be
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -6375,7 +5516,7 @@ Further guidance for encoding various types and characteristics of lights can be
 
 * The complex attribute **sector characteristics**, sub-complex attribute *light sector* is used to populate each sector for the light, except for sectors in which there is no light exhibited. Where there is a different rhythm of light between sectors (for example, for complex lights), separate instances of *sector characteristics* must be populated.
 * Population of the sub-complex attribute *sector limit* having sub-attributes *sector limit one* = _0_ and *sector limit two* = _360_ (that is, encoding an all around light as a sectored light) is prohibited.
-* If a sector of a sectored light is intended to have a directional function, this must be encoded using the *light sector* complex sub-attribute *directional character*. If the light is intensified in this sector, *light sector* sub-attribute *light visibility*&nbsp;=&nbsp;_4_ (intensified) must be populated. The sub-complex attribute *sector limit* is optional for directional light sectors.
+* If a sector of a sectored light is intended to have a directional function, this must be encoded using the *light sector* complex sub-attribute *directional character*. If the light is intensified in this sector, *light sector* sub-attribute *light visibility* = _4_ (intensified) must be populated. The sub-complex attribute *sector limit* is optional for directional light sectors.
 * The sub-attribute *sector line length* (see clause 27.158) may be used for critical light sectors to extend the sector line when the ECDIS display settings are set to display default sector lines. The intended usage of the ENC dataset must be considered when determining the usage of *sector line length* so as to avoid excessive screen clutter when default sector display is enabled; and consistent display of light sectors across the entire ENC portfolio should also be a consideration when determining the population of this attribute. Where populated, the value of *sector line length* must not exceed the value populated for the sub-attribute *value of nominal range* for the light sector.
 * In some cases the area defined by the intersecting sectors of two discrete sector lights are used to indicate the existence of isolated and sometimes substantial dangers to navigation, the precise position of which may not be known. When default sectors are displayed in ECDIS, the extent and intent of these sectors may not be clearly defined to the Mariner. In order to more clearly indicate these areas, compilers should consider appropriate use of *sector line length* for the relevant sectors in the impacted area. Where it is considered important that the area of possible danger is defined, this should be done by encoding a *Caution Area* feature (see clause 16.10) covering the intersection area. Information relating to the definition of the area by sector lights and a précis of the danger should be encoded using the complex attribute *information* (see clause 2.4.6) for the *Caution Area*.
 * The fairway defined by the succession of navigable areas in the white sectors of a series of *Light Sectored* features may be encoded using the feature *Fairway* (see clause 15.7).
@@ -6394,9 +5535,9 @@ Further guidance for encoding various types and characteristics of lights can be
 image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_7e764576.gif[Shape37,498,198]
 
 
-If an encoded light is obscured in a part of the navigable area of a sector (see Figure 19-2 (A) above) beyond an offshore obstruction, it must be encoded using **Light Sectored**, with each of the sectors (a) -- (c) encoded using the complex attribute *light sector*. The partially obscured sector of (b) must have *light sector* with sub-attributes *light visibility*&nbsp;=&nbsp;_8_ (partially obscured) and sub-attribute *value of nominal range* set to the distance from the light to the obstruction. The sectors in which the light is visible from seaward ((a) and (c)) must be encoded as separate iterations of *light sector*.
+If an encoded light is obscured in a part of the navigable area of a sector (see Figure 19-2 (A) above) beyond an offshore obstruction, it must be encoded using **Light Sectored**, with each of the sectors (a) -- (c) encoded using the complex attribute *light sector*. The partially obscured sector of (b) must have *light sector* with sub-attributes *light visibility* = _8_ (partially obscured) and sub-attribute *value of nominal range* set to the distance from the light to the obstruction. The sectors in which the light is visible from seaward ((a) and (c)) must be encoded as separate iterations of *light sector*.
 
-If there is no navigable water between the light and the obstacle (see (e) in Figure 19-2 (B) above), the masked sector must not have an iteration of *light sector* encoded, unless a faint light is visible in the navigable part of the sector, which should be encoded using **light sector**, with sub-attribute *light visibility*&nbsp;=&nbsp;_3_ (faint). The sectors in which the light is visible from seaward ((d) and (f)) must be encoded as separate iterations of *sector characteristics*.
+If there is no navigable water between the light and the obstacle (see (e) in Figure 19-2 (B) above), the masked sector must not have an iteration of *light sector* encoded, unless a faint light is visible in the navigable part of the sector, which should be encoded using **light sector**, with sub-attribute *light visibility* = _3_ (faint). The sectors in which the light is visible from seaward ((d) and (f)) must be encoded as separate iterations of *sector characteristics*.
 
 [[sec_19.3.1.2]]
 ===== Directional lights (see S-4 -- B-475.7-8)
@@ -6438,7 +5579,7 @@ Oscillating lights which are not IALA should be encoded similar to the above. Fo
 [[sec_19.4]]
 === Light fog detector
 
-[cols="87,114,114,114,114,114,114,114,38,77"]
+[cols="87,114,114,114,114,114,114,114,38,77", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *FOG DETECTOR LIGHT*. A fog detector light is a light used to automatically determine conditions of visibility which warrant the turning on or off of a sound signal. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Light Fog Detector (LIGHTS)*
@@ -6472,15 +5613,11 @@ Oscillating lights which are not IALA should be encoded similar to the above. Fo
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -6495,22 +5632,16 @@ Oscillating lights which are not IALA should be encoded similar to the above. Fo
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| flare bearing
-2+|
-
-3+|
+2+| 3+|
 
 | IN
 | 0,1
@@ -6538,22 +5669,16 @@ Oscillating lights which are not IALA should be encoded similar to the above. Fo
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| rhythm of light
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,1
@@ -6583,9 +5708,7 @@ Oscillating lights which are not IALA should be encoded similar to the above. Fo
 29: fixed and alternating flashing | (S) EN | 1,1
 3+| signal group
 2+| (SIGGRP)
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,\* (ordered) ^†^
 
 3+| signal period
@@ -6603,17 +5726,13 @@ Oscillating lights which are not IALA should be encoded similar to the above. Fo
 | 0,\* (ordered)
 
 3+| signal duration
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 1,1
 
 3+| signal status
-2+|
-
-3+|
+2+| 3+|
 1: lit/sound
 2: eclipsed/silent
 | (S) EN
@@ -6667,26 +5786,16 @@ Oscillating lights which are not IALA should be encoded similar to the above. Fo
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -6698,9 +5807,7 @@ Oscillating lights which are not IALA should be encoded similar to the above. Fo
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -6742,7 +5849,7 @@ Further guidance for encoding various types and characteristics of lights can be
 [[sec_19.5]]
 === Light air obstruction
 
-[cols="87,114,114,114,114,114,114,114,38,77"]
+[cols="87,114,114,114,114,114,114,114,38,77", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *AIR OBSTRUCTION**LIGHT*. An air obstruction light is a light marking an obstacle which constitutes a danger to air navigation. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Light Air Obstruction (LIGHTS)*
@@ -6781,15 +5888,11 @@ Further guidance for encoding various types and characteristics of lights can be
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -6804,22 +5907,16 @@ Further guidance for encoding various types and characteristics of lights can be
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| flare bearing
-2+|
-
-3+|
+2+| 3+|
 
 | IN
 | 0,1
@@ -6849,17 +5946,13 @@ Further guidance for encoding various types and characteristics of lights can be
 8: partially obscured +
 9: visible in line of range | EN | 0,*
 3+| multiplicity of features
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,1
 
 3+| multiplicity known
-2+|
-
-3+|
+2+| 3+|
 
 | (S) BO
 | 1,1
@@ -6880,22 +5973,16 @@ Further guidance for encoding various types and characteristics of lights can be
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| rhythm of light
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,1
@@ -6925,9 +6012,7 @@ Further guidance for encoding various types and characteristics of lights can be
 29: fixed and alternating flashing | (S) EN | 1,1
 3+| signal group
 2+| (SIGGRP)
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,\* (ordered) ^†^
 
 3+| signal period
@@ -6945,17 +6030,13 @@ Further guidance for encoding various types and characteristics of lights can be
 | 0,\* (ordered)
 
 3+| signal duration
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 1,1
 
 3+| signal status
-2+|
-
-3+|
+2+| 3+|
 1: lit/sound
 2: eclipsed/silent
 | (S) EN
@@ -7006,26 +6087,16 @@ Further guidance for encoding various types and characteristics of lights can be
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -7037,9 +6108,7 @@ Further guidance for encoding various types and characteristics of lights can be
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -7083,7 +6152,7 @@ Further guidance for encoding various types and characteristics of lights can be
 [[sec_20.1]]
 === Lateral buoy
 
-[cols="87,114,114,114,114,114,114,114,38,77"]
+[cols="87,114,114,114,114,114,114,114,38,77", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *LATERAL BUOY*. A lateral buoy is used to indicate the port or starboard hand side of the route to be followed. They are generally used for well-defined channels and are used in conjunction with a conventional direction of buoyage. (UKHO NP 735, 5^th^ Edition).
 10+| *[underline]#S-101 Geo Feature:#* *Lateral Buoy (BOYLAT)*
@@ -7143,15 +6212,11 @@ Further guidance for encoding various types and characteristics of lights can be
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -7166,16 +6231,12 @@ Further guidance for encoding various types and characteristics of lights can be
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -7204,16 +6265,12 @@ Further guidance for encoding various types and characteristics of lights can be
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| radar conspicuous
@@ -7293,9 +6350,7 @@ Further guidance for encoding various types and characteristics of lights can be
 32: circle over a triangle pointing up +
 33: other shape (see *shape information*) | (S) EN | 1,1
 3+| shape information
-2+|
-
-3+|
+2+| 3+|
 
 | (S) C
 | 0,*
@@ -7309,9 +6364,7 @@ Further guidance for encoding various types and characteristics of lights can be
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| vertical length
@@ -7330,26 +6383,16 @@ Further guidance for encoding various types and characteristics of lights can be
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -7361,9 +6404,7 @@ Further guidance for encoding various types and characteristics of lights can be
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
@@ -7415,7 +6456,7 @@ Remarks:
 [[sec_20.2]]
 === Cardinal buoy
 
-[cols="87,114,114,114,114,114,114,114,38,77"]
+[cols="87,114,114,114,114,114,114,114,38,77", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *CARDINAL BUOY*. A cardinal buoy is used in conjunction with the compass to indicate where the mariner may find the best navigable water. It is placed in one of the four quadrants (North, East, South and West), bounded by inter-cardinal bearings from the point marked. (UKHO NP 735, 5^th^ Edition).
 10+| *[underline]#S-101 Geo Feature:#* *Cardinal Buoy (BOYCAR)*
@@ -7475,15 +6516,11 @@ Remarks:
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -7498,16 +6535,12 @@ Remarks:
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -7536,16 +6569,12 @@ Remarks:
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| radar conspicuous
@@ -7625,9 +6654,7 @@ Remarks:
 32: circle over a triangle pointing up +
 33: other shape (see *shape information*) | (S) EN | 1,1
 3+| shape information
-2+|
-
-3+|
+2+| 3+|
 
 | (S) C
 | 0,*
@@ -7641,9 +6668,7 @@ Remarks:
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| vertical length
@@ -7662,26 +6687,16 @@ Remarks:
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -7693,9 +6708,7 @@ Remarks:
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
@@ -7741,7 +6754,7 @@ Remarks:
 [[sec_20.3]]
 === Isolated danger buoy
 
-[cols="87,114,114,114,114,114,114,114,38,77"]
+[cols="87,114,114,114,114,114,114,114,38,77", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *ISOLATED DANGER BUOY*. An isolated danger buoy is a buoy moored on or above an isolated danger of limited extent, which has navigable water all around it. (UKHO NP 735, 5^th^ Edition).
 10+| *[underline]#S-101 Geo Feature:#* *Isolated Danger Buoy (BOYISD)*
@@ -7796,15 +6809,11 @@ Remarks:
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -7819,16 +6828,12 @@ Remarks:
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -7857,16 +6862,12 @@ Remarks:
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| radar conspicuous
@@ -7946,9 +6947,7 @@ Remarks:
 32: circle over a triangle pointing up +
 33: other shape (see *shape information*) | (S) EN | 1,1
 3+| shape information
-2+|
-
-3+|
+2+| 3+|
 
 | (S) C
 | 0,*
@@ -7962,9 +6961,7 @@ Remarks:
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| vertical length
@@ -7983,26 +6980,16 @@ Remarks:
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -8014,9 +7001,7 @@ Remarks:
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
@@ -8064,7 +7049,7 @@ Remarks:
 [[sec_20.4]]
 === Safe water buoy
 
-[cols="87,114,114,114,114,114,114,114,38,77"]
+[cols="87,114,114,114,114,114,114,114,38,77", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *SAFE WATER BUOY*. A safe water buoy is used to indicate that there is navigable water around the mark. (UKHO NP 735, 5^th^ Edition).
 10+| *[underline]#S-101 Geo Feature:#* *Safe Water Buoy (BOYSAW)*
@@ -8119,15 +7104,11 @@ Remarks:
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -8142,16 +7123,12 @@ Remarks:
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -8180,16 +7157,12 @@ Remarks:
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| radar conspicuous
@@ -8269,9 +7242,7 @@ Remarks:
 32: circle over a triangle pointing up +
 33: other shape (see *shape information*) | (S) EN | 1,1
 3+| shape information
-2+|
-
-3+|
+2+| 3+|
 
 | (S) C
 | 0,*
@@ -8285,9 +7256,7 @@ Remarks:
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| vertical length
@@ -8306,26 +7275,16 @@ Remarks:
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -8337,9 +7296,7 @@ Remarks:
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
@@ -8389,7 +7346,7 @@ Remarks:
 [[sec_20.5]]
 === Special purpose/general buoy
 
-[cols="183,32,127,31,69,101,171,171,38,77"]
+[cols="183,32,127,31,69,101,171,171,38,77", options="unnumbered"]
 |===
 9+h| IHO Definition: *SPECIAL PURPOSE/GENERAL BUOY*. A special purpose buoy is primarily used to indicate an area or feature, the nature of which is apparent from reference to a chart, Sailing Directions or Notices to Mariners. (UKHO NP 735, 5^th^ Edition). |
 9+| *[underline]#S-101 Geo Feature:#* *Special Purpose/General Buoy (BOYSPP)* |
@@ -8508,15 +7465,11 @@ Remarks:
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -8531,16 +7484,12 @@ Remarks:
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -8569,16 +7518,12 @@ Remarks:
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| radar conspicuous
@@ -8658,9 +7603,7 @@ Remarks:
 32: circle over a triangle pointing up +
 33: other shape (see *shape information*) | (S) EN | 1,1
 3+| shape information
-2+|
-
-3+|
+2+| 3+|
 
 | (S) C
 | 0,*
@@ -8674,9 +7617,7 @@ Remarks:
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| vertical length
@@ -8695,26 +7636,16 @@ Remarks:
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -8726,9 +7657,7 @@ Remarks:
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
@@ -8762,7 +7691,7 @@ If it is required to encode a buoy having the function of a special purpose mark
 
 In the following Table, a blank indicates that the encoder may choose a relevant value for the attribute. The Table contains the most common examples of coding; other coding combinations are possible for *Special Purpose/General Buoy* features.
 
-[cols="732,128,508,124,276,404,457,457,457,457"]
+[cols="732,128,508,124,276,404,457,457,457,457", options="unnumbered"]
 |===
 |
 *Feature*
@@ -9035,7 +7964,7 @@ __**Table 20-1 -- IALA special purpose buoys -- Common types**__
 [[sec_20.6]]
 === Emergency wreck marking buoy
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *EMERGENCY WRECK MARKING BUOY*. An emergency wreck marking buoy is a buoy moored on or above a new wreck, designed to provide a prominent (both visual and radio) and easily identifiable temporary first response. (Adapted from UKHO NP 735, 6^th^ Edition).
 10+| *[underline]#S-101 Geo Feature:#* *Emergency Wreck Marking Buoy*
@@ -9088,15 +8017,11 @@ __**Table 20-1 -- IALA special purpose buoys -- Common types**__
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -9111,16 +8036,12 @@ __**Table 20-1 -- IALA special purpose buoys -- Common types**__
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -9210,9 +8131,7 @@ __**Table 20-1 -- IALA special purpose buoys -- Common types**__
 32: circle over a triangle pointing up +
 33: other shape (see *shape information*) | (S) EN | 1,1
 3+| shape information
-2+|
-
-3+|
+2+| 3+|
 
 | (S) C
 | 0,*
@@ -9226,9 +8145,7 @@ __**Table 20-1 -- IALA special purpose buoys -- Common types**__
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| vertical length
@@ -9247,26 +8164,16 @@ __**Table 20-1 -- IALA special purpose buoys -- Common types**__
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -9278,9 +8185,7 @@ __**Table 20-1 -- IALA special purpose buoys -- Common types**__
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
@@ -9331,7 +8236,7 @@ If it is required to encode a buoy having the function of an emergency wreck mar
 [[sec_20.7]]
 === Installation buoy
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *INSTALLATION BUOY*. An installation buoy is a buoy used for loading tankers with gas or oil. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.20, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Installation Buoy (BOYINB)*
@@ -9389,15 +8294,11 @@ If it is required to encode a buoy having the function of an emergency wreck mar
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -9412,16 +8313,12 @@ If it is required to encode a buoy having the function of an emergency wreck mar
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -9443,16 +8340,12 @@ If it is required to encode a buoy having the function of an emergency wreck mar
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| product 2+| (PRODCT) 3+|
@@ -9488,26 +8381,16 @@ If it is required to encode a buoy having the function of an emergency wreck mar
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -9519,9 +8402,7 @@ If it is required to encode a buoy having the function of an emergency wreck mar
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
@@ -9560,7 +8441,7 @@ If it is required to encode an installation buoy, it must be done using the feat
 [[sec_20.8]]
 === Mooring buoy
 
-[cols="87,114,114,114,114,114,114,114,38,77"]
+[cols="87,114,114,114,114,114,114,114,38,77", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *MOORING BUOY*. A buoy secured to the bottom by permanent moorings with means for mooring a vessel by use of its anchor chain or mooring lines. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Mooring Buoy* __**(MORFAC)**__
@@ -9615,15 +8496,11 @@ If it is required to encode an installation buoy, it must be done using the feat
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -9638,16 +8515,12 @@ If it is required to encode an installation buoy, it must be done using the feat
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -9684,16 +8557,12 @@ If it is required to encode an installation buoy, it must be done using the feat
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| status 2+| (STATUS) 3+|
@@ -9727,26 +8596,16 @@ If it is required to encode an installation buoy, it must be done using the feat
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -9758,9 +8617,7 @@ If it is required to encode an installation buoy, it must be done using the feat
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
@@ -9802,7 +8659,7 @@ If it is required to encode a mooring buoy, it must be done using the feature *M
 [[sec_20.9]]
 === Lateral beacon
 
-[cols="87,114,114,114,114,114,114,114,38,77"]
+[cols="87,114,114,114,114,114,114,114,38,77", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *LATERAL BEACON*. A lateral beacon is used to indicate the port or starboard hand side of the route to be followed. They are generally used for well defined channels and are used in conjunction with a conventional direction of buoyage. (UKHO NP 735, 5^th^ Edition).
 10+| *[underline]#S-101 Geo Feature:#* *Lateral Beacon (BCNLAT)*
@@ -9815,7 +8672,7 @@ If it is required to encode a mooring buoy, it must be done using the feature *M
 1: stake, pole, perch, post
 2: withy +
 3: beacon tower +
-4: lattice beacon5&nbsp;: pile beacon6&nbsp;: cairn7&nbsp;: buoyant beacon | EN | 1,1
+4: lattice beacon5 : pile beacon6 : cairn7 : buoyant beacon | EN | 1,1
 3+| category of lateral mark 2+| (CATLAM) 3+|
 1: port-hand lateral mark
 2: starboard-hand lateral mark
@@ -9869,15 +8726,11 @@ If it is required to encode a mooring buoy, it must be done using the feature *M
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -9892,16 +8745,12 @@ If it is required to encode a mooring buoy, it must be done using the feature *M
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| height
@@ -9938,16 +8787,12 @@ If it is required to encode a mooring buoy, it must be done using the feature *M
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| radar conspicuous
@@ -10030,9 +8875,7 @@ If it is required to encode a mooring buoy, it must be done using the feature *M
 32: circle over a triangle pointing up +
 33: other shape (see *shape information*) | (S) EN | 1,1
 3+| shape information
-2+|
-
-3+|
+2+| 3+|
 
 | (S) C
 | 0,*
@@ -10046,9 +8889,7 @@ If it is required to encode a mooring buoy, it must be done using the feature *M
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| vertical length
@@ -10071,26 +8912,16 @@ If it is required to encode a mooring buoy, it must be done using the feature *M
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -10102,9 +8933,7 @@ If it is required to encode a mooring buoy, it must be done using the feature *M
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
@@ -10159,7 +8988,7 @@ Remarks:
 [[sec_20.10]]
 === Cardinal beacon
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *CARDINAL BEACON*. A cardinal beacon is used in conjunction with the compass to indicate where the mariner may find the best navigable water. It is placed in one of the four quadrants (North, East, South and West), bounded by inter-cardinal bearings from the point marked. (UKHO NP 735, 5^th^ Edition).
 10+| *[underline]#S-101 Geo Feature:#* *Cardinal Beacon (BCNCAR)*
@@ -10172,7 +9001,7 @@ Remarks:
 1: stake, pole, perch, post
 2: withy +
 3: beacon tower +
-4: lattice beacon5&nbsp;: pile beacon6&nbsp;: cairn7&nbsp;: buoyant beacon | EN | 1,1
+4: lattice beacon5 : pile beacon6 : cairn7 : buoyant beacon | EN | 1,1
 3+| category of cardinal mark 2+| (CATCAM) 3+|
 1: north cardinal mark +
 2: east cardinal mark +
@@ -10226,15 +9055,11 @@ Remarks:
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -10249,16 +9074,12 @@ Remarks:
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| height
@@ -10295,16 +9116,12 @@ Remarks:
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| radar conspicuous
@@ -10387,9 +9204,7 @@ Remarks:
 32: circle over a triangle pointing up +
 33: other shape (see *shape information*) | (S) EN | 1,1
 3+| shape information
-2+|
-
-3+|
+2+| 3+|
 
 | (S) C
 | 0,*
@@ -10403,9 +9218,7 @@ Remarks:
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| vertical length
@@ -10428,26 +9241,16 @@ Remarks:
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -10459,9 +9262,7 @@ Remarks:
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
@@ -10510,7 +9311,7 @@ Remarks:
 [[sec_20.11]]
 === Isolated danger beacon
 
-[cols="87,114,114,114,114,114,114,114,38,77"]
+[cols="87,114,114,114,114,114,114,114,38,77", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *ISOLATED DANGER BEACON*. An isolated danger beacon is a beacon erected on an isolated danger of limited extent, which has navigable water all around it. (UKHO NP735, 5^th^ Edition).
 10+| *[underline]#S-101 Geo Feature:#* *Isolated Danger Beacon (BCNISD)*
@@ -10523,7 +9324,7 @@ Remarks:
 1: stake, pole, perch, post
 2: withy +
 3: beacon tower +
-4: lattice beacon5&nbsp;: pile beacon6&nbsp;: cairn7&nbsp;: buoyant beacon | EN | 1,1
+4: lattice beacon5 : pile beacon6 : cairn7 : buoyant beacon | EN | 1,1
 3+| colour 2+| (COLOUR) 3+|
 1: white +
 2: black +
@@ -10572,15 +9373,11 @@ Remarks:
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -10595,16 +9392,12 @@ Remarks:
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| height
@@ -10641,16 +9434,12 @@ Remarks:
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| radar conspicuous
@@ -10733,9 +9522,7 @@ Remarks:
 32: circle over a triangle pointing up +
 33: other shape (see *shape information*) | (S) EN | 1,1
 3+| shape information
-2+|
-
-3+|
+2+| 3+|
 
 | (S) C
 | 0,*
@@ -10749,9 +9536,7 @@ Remarks:
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| vertical length
@@ -10774,26 +9559,16 @@ Remarks:
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -10805,9 +9580,7 @@ Remarks:
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
@@ -10855,7 +9628,7 @@ Remarks:
 [[sec_20.12]]
 === Safe water beacon
 
-[cols="87,114,114,114,114,114,114,114,38,77"]
+[cols="87,114,114,114,114,114,114,114,38,77", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *SAFE WATER BEACON*. A safe water beacon is used to indicate that there is navigable water around the mark. (UKHO NP735, 5^th^ Edition).
 10+| *[underline]#S-101 Geo Feature:#* *Safe Water Beacon (BCNSAW)*
@@ -10868,7 +9641,7 @@ Remarks:
 1: stake, pole, perch, post
 2: withy +
 3: beacon tower +
-4: lattice beacon5&nbsp;: pile beacon6&nbsp;: cairn7&nbsp;: buoyant beacon | EN | 1,1
+4: lattice beacon5 : pile beacon6 : cairn7 : buoyant beacon | EN | 1,1
 3+| colour 2+| (COLOUR) 3+|
 1: white +
 2: black +
@@ -10917,15 +9690,11 @@ Remarks:
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -10940,16 +9709,12 @@ Remarks:
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| height
@@ -10986,16 +9751,12 @@ Remarks:
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| radar conspicuous
@@ -11078,9 +9839,7 @@ Remarks:
 32: circle over a triangle pointing up +
 33: other shape (see *shape information*) | (S) EN | 1,1
 3+| shape information
-2+|
-
-3+|
+2+| 3+|
 
 | (S) C
 | 0,*
@@ -11094,9 +9853,7 @@ Remarks:
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| vertical length
@@ -11119,26 +9876,16 @@ Remarks:
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -11150,9 +9897,7 @@ Remarks:
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
@@ -11200,7 +9945,7 @@ Remarks:
 [[sec_20.13]]
 === Special purpose/general beacon
 
-[cols="178,40,131,41,96,133,133,133,38,77"]
+[cols="178,40,131,41,96,133,133,133,38,77", options="unnumbered"]
 |===
 9+h| IHO Definition: *SPECIAL PURPOSE/GENERAL BEACON*. A special purpose beacon is primarily used to indicate an area or feature, the nature of which is apparent from reference to a chart, Sailing Directions or Notices to Mariners. (UKHO NP 735, 5^th^ Edition). |
 9+| *[underline]#S-101 Geo Feature:#* *Special Purpose/General Beacon (BCNSPP)* |
@@ -11218,7 +9963,7 @@ Remarks:
 1: stake, pole, perch, post
 2: withy +
 3: beacon tower +
-4: lattice beacon5&nbsp;: pile beacon6&nbsp;: cairn7&nbsp;: buoyant beacon | EN | 1,1
+4: lattice beacon5 : pile beacon6 : cairn7 : buoyant beacon | EN | 1,1
 3+| category of special purpose mark 2+| (CATSPM) 3+|
 1: firing danger area mark +
 2: target mark +
@@ -11326,15 +10071,11 @@ Remarks:
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -11349,16 +10090,12 @@ Remarks:
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| height
@@ -11395,16 +10132,12 @@ Remarks:
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| radar conspicuous
@@ -11487,9 +10220,7 @@ Remarks:
 32: circle over a triangle pointing up +
 33: other shape (see *shape information*) | (S) EN | 1,1
 3+| shape information
-2+|
-
-3+|
+2+| 3+|
 
 | (S) C
 | 0,*
@@ -11503,9 +10234,7 @@ Remarks:
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| vertical length
@@ -11528,26 +10257,16 @@ Remarks:
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -11559,9 +10278,7 @@ Remarks:
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
@@ -11596,7 +10313,7 @@ If it is required to encode a beacon having the function of a special purpose ma
 
 In the following Table, a blank indicates that the encoder may choose a relevant value for the attribute. The Table contains the most common examples of coding; other coding combinations are possible.
 
-[cols="890,200,655,205,480,514,514,514,514,514"]
+[cols="890,200,655,205,480,514,514,514,514,514", options="unnumbered"]
 |===
 |
 *Feature*
@@ -11811,7 +10528,7 @@ If it is required to encode a fixed or floating sign or notice board, it must be
 [[sec_20.14]]
 === Daymark
 
-[cols="178,40,96,88,102,127,127,127,38,77"]
+[cols="178,40,96,88,102,127,127,127,38,77", options="unnumbered"]
 |===
 9+h| IHO Definition: *DAYMARK*. The identifying characteristics of an aid to navigation which serve to facilitate its recognition against a daylight viewing background. On those structures that do not by themselves present an adequate viewing area to be seen at the required distance, the aid is made more visible by affixing a daymark to the structure. A daymark so affixed has a distinctive colour and shape depending on the purpose of the aid. (IHO Dictionary -- S-32, Edition 5). |
 9+| *[underline]#S-101 Geo Feature:#* *Daymark (DAYMAR)* |
@@ -11929,15 +10646,11 @@ If it is required to encode a fixed or floating sign or notice board, it must be
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -11952,16 +10665,12 @@ If it is required to encode a fixed or floating sign or notice board, it must be
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| height
@@ -11995,16 +10704,12 @@ If it is required to encode a fixed or floating sign or notice board, it must be
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| radar conspicuous
@@ -12062,9 +10767,7 @@ If it is required to encode a fixed or floating sign or notice board, it must be
 | 0,1
 
 3+| shape information
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,*
@@ -12078,9 +10781,7 @@ If it is required to encode a fixed or floating sign or notice board, it must be
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
@@ -12092,26 +10793,16 @@ If it is required to encode a fixed or floating sign or notice board, it must be
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -12123,9 +10814,7 @@ If it is required to encode a fixed or floating sign or notice board, it must be
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
@@ -12161,7 +10850,7 @@ The term "daymark"may also simply refer to any unlit aid to navigation, particul
 
 In the following Table, a blank indicates that the encoder may choose a relevant value for the attribute. The Table contains the most common examples of coding; other coding combinations are possible.
 
-[cols="445,100,240,220,255,248,248,248,248,248"]
+[cols="445,100,240,220,255,248,248,248,248,248", options="unnumbered"]
 |===
 |
 *Feature*
@@ -12184,7 +10873,7 @@ In the following Table, a blank indicates that the encoder may choose a relevant
 | *Daymark*
 |
 
-| *nature of construction*&nbsp;=_&nbsp;9_
+| *nature of construction* =_ 9_
 |
 |
 |
@@ -12196,7 +10885,7 @@ In the following Table, a blank indicates that the encoder may choose a relevant
 | *Daymark*
 |
 
-| *nature of construction*&nbsp;=_&nbsp;9_
+| *nature of construction* =_ 9_
 |
 |
 |
@@ -12223,7 +10912,7 @@ __**Table 20-3 -- Daymarks -- Examples**__
 [[sec_20.15]]
 === Light float
 
-[cols="87,114,114,114,114,114,114,114,38,77"]
+[cols="87,114,114,114,114,114,114,114,38,77", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *LIGHT FLOAT*. A boat-like structure used instead of a light buoy in waters where strong streams or currents are experienced, or when a greater elevation than that of a light buoy is necessary. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Light Float (LITFLT)*
@@ -12269,15 +10958,11 @@ __**Table 20-3 -- Daymarks -- Examples**__
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -12292,16 +10977,12 @@ __**Table 20-3 -- Daymarks -- Examples**__
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| horizontal length
@@ -12338,16 +11019,12 @@ __**Table 20-3 -- Daymarks -- Examples**__
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| radar conspicuous
@@ -12430,9 +11107,7 @@ __**Table 20-3 -- Daymarks -- Examples**__
 32: circle over a triangle pointing up +
 33: other shape (see *shape information*) | (S) EN | 1,1
 3+| shape information
-2+|
-
-3+|
+2+| 3+|
 
 | (S) C
 | 0,1
@@ -12446,9 +11121,7 @@ __**Table 20-3 -- Daymarks -- Examples**__
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| vertical length
@@ -12471,26 +11144,16 @@ __**Table 20-3 -- Daymarks -- Examples**__
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -12502,9 +11165,7 @@ __**Table 20-3 -- Daymarks -- Examples**__
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
@@ -12545,7 +11206,7 @@ If it is required to encode a light float, it must be done using the feature *Li
 [[sec_20.16]]
 === Light vessel
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *LIGHT VESSEL*. A distinctively marked vessel anchored or moored at a charted point, to serve as an aid to navigation. By night, it displays a characteristic light(s) and is usually equipped with other devices, such as fog signal, submarine sound signal, and radio-beacon, to assist navigation. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Light Vessel (LITVES)*
@@ -12591,15 +11252,11 @@ If it is required to encode a light float, it must be done using the feature *Li
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -12614,16 +11271,12 @@ If it is required to encode a light float, it must be done using the feature *Li
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| horizontal length
@@ -12659,16 +11312,12 @@ If it is required to encode a light float, it must be done using the feature *Li
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| radar conspicuous
@@ -12708,26 +11357,16 @@ If it is required to encode a light float, it must be done using the feature *Li
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -12739,9 +11378,7 @@ If it is required to encode a light float, it must be done using the feature *Li
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
@@ -12784,7 +11421,7 @@ If it is required to encode a light vessel, it must be done using the feature *L
 [[sec_20.17]]
 === Retroreflector
 
-[cols="87,114,114,114,114,114,114,114,38,77"]
+[cols="87,114,114,114,114,114,114,114,38,77", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *RETROREFLECTOR*. A means of distinguishing unlighted marks at night. Retroreflective material is secured to the mark in a particular pattern to reflect back light. (UKHO NP 735, 5^th^ Edition).
 10+| *[underline]#S-101 Geo Feature:#* *Retroreflector (RETRFL)*
@@ -12822,16 +11459,12 @@ If it is required to encode a light vessel, it must be done using the feature *L
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| height
@@ -12857,16 +11490,12 @@ If it is required to encode a light vessel, it must be done using the feature *L
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| status 2+| (STATUS) 3+|
@@ -12882,26 +11511,16 @@ If it is required to encode a light vessel, it must be done using the feature *L
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -12913,9 +11532,7 @@ If it is required to encode a light vessel, it must be done using the feature *L
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -12951,7 +11568,7 @@ If it is required to encode a retroreflector, it must be done using the feature 
 [[sec_20.18]]
 === Radar reflector
 
-[cols="87,114,114,114,114,114,114,114,38,77"]
+[cols="87,114,114,114,114,114,114,114,38,77", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *RADAR REFLECTOR*. A device capable of, or intended for, reflecting radar signals. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Radar Reflector (RADRFL)*
@@ -12969,16 +11586,12 @@ If it is required to encode a retroreflector, it must be done using the feature 
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| height
@@ -13004,16 +11617,12 @@ If it is required to encode a retroreflector, it must be done using the feature 
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| status 2+| (STATUS) 3+|
@@ -13029,26 +11638,16 @@ If it is required to encode a retroreflector, it must be done using the feature 
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -13060,9 +11659,7 @@ If it is required to encode a retroreflector, it must be done using the feature 
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -13097,7 +11694,7 @@ If it is required to encode radar reflectors on curve features (for instance ove
 [[sec_20.19]]
 === Fog signal
 
-[cols="87,114,114,114,114,114,114,114,38,77"]
+[cols="87,114,114,114,114,114,114,114,38,77", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *FOG SIGNAL*. A warning signal transmitted by a vessel, or aid to navigation, during periods of low visibility. Also, the device producing such a signal. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Fog Signal (FOGSIG)*
@@ -13133,15 +11730,11 @@ If it is required to encode radar reflectors on curve features (for instance ove
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -13156,16 +11749,12 @@ If it is required to encode radar reflectors on curve features (for instance ove
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -13184,16 +11773,12 @@ If it is required to encode radar reflectors on curve features (for instance ove
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| signal frequency
@@ -13212,9 +11797,7 @@ If it is required to encode radar reflectors on curve features (for instance ove
 6: call activated | EN | 0,1
 3+| signal group
 2+| (SIGGRP)
-3+|
-
-| TE
+3+| | TE
 | 0,1
 
 3+| signal period
@@ -13232,17 +11815,13 @@ If it is required to encode radar reflectors on curve features (for instance ove
 | 0,\* (ordered)
 
 3+| signal duration
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 1,1
 
 3+| signal status
-2+|
-
-3+|
+2+| 3+|
 1: lit/sound
 2: eclipsed/silent
 | (S) EN
@@ -13272,26 +11851,16 @@ If it is required to encode radar reflectors on curve features (for instance ove
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -13303,9 +11872,7 @@ If it is required to encode radar reflectors on curve features (for instance ove
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -13360,7 +11927,7 @@ It is not required to encode AIS information on ENCs, as ENCs are intended to be
 [[sec_21.2]]
 === Physical AIS aid to navigation
 
-[cols="87,114,114,114,114,114,114,114,38,77"]
+[cols="87,114,114,114,114,114,114,114,38,77", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *PHYSICAL AIS AID TO NAVIGATION*. An Automatic Identification System (AIS) message 21 transmitted from a physical Aid to Navigation, or transmitted from an AIS station for an Aid to Navigation which physically exists. (Adapted from IALA Recommendation A-126).
 10+| *[underline]#S-101 Geo Feature:#* *Physical AIS Aid to Navigation*
@@ -13392,15 +11959,11 @@ It is not required to encode AIS information on ENCs, as ENCs are intended to be
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -13415,16 +11978,12 @@ It is not required to encode AIS information on ENCs, as ENCs are intended to be
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -13450,16 +12009,12 @@ It is not required to encode AIS information on ENCs, as ENCs are intended to be
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| status 2+| (STATUS) 3+|
@@ -13475,26 +12030,16 @@ It is not required to encode AIS information on ENCs, as ENCs are intended to be
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -13506,9 +12051,7 @@ It is not required to encode AIS information on ENCs, as ENCs are intended to be
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -13545,7 +12088,7 @@ If it is required to encode a physical AIS aid to navigation, it must be done us
 [[sec_21.3]]
 === Virtual AIS aid to navigation
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *VIRTUAL AIS AID TO NAVIGATION*. An Automatic Identification System (AIS) message 21 transmitted from an AIS station to simulate on navigation systems an Aid to Navigation which does not physically exist. (Adapted from IALA Recommendation A-126).
 10+| *[underline]#S-101 Geo Feature:#* *Virtual AIS Aid to Navigation* __**(NEWOBJ)**__
@@ -13577,15 +12120,11 @@ If it is required to encode a physical AIS aid to navigation, it must be done us
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -13600,16 +12139,12 @@ If it is required to encode a physical AIS aid to navigation, it must be done us
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -13635,16 +12170,12 @@ If it is required to encode a physical AIS aid to navigation, it must be done us
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| status 2+| (STATUS) 3+|
@@ -13652,9 +12183,7 @@ If it is required to encode a physical AIS aid to navigation, it must be done us
 5: periodic/intermittent
 7: temporary | EN | 0,1
 3+| virtual AIS aid to navigation type
-2+|
-
-3+|
+2+| 3+|
 1: north cardinal +
 2: east cardinal +
 3: south cardinal +
@@ -13679,26 +12208,16 @@ If it is required to encode a physical AIS aid to navigation, it must be done us
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -13710,9 +12229,7 @@ If it is required to encode a physical AIS aid to navigation, it must be done us
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -13750,7 +12267,7 @@ If it is required to encode a virtual AIS aid to navigation, it must be done usi
 [[sec_21.4]]
 === Radio station
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *RADIO STATION*. A place equipped to transmit radio waves. Such a station may be either stationary or mobile, and may also be provided with a radio receiver. (Adapted from IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Radio Station (RDOSTA)*
@@ -13761,9 +12278,7 @@ If it is required to encode a virtual AIS aid to navigation, it must be done usi
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| call sign
 2+| (CALSGN)
-3+|
-
-| TE
+3+| | TE
 | 0,1
 
 3+| category of radio station 2+| (CATROS) 3+|
@@ -13775,9 +12290,7 @@ If it is required to encode a virtual AIS aid to navigation, it must be done usi
 20: AIS base station | EN | 0,*
 3+| communication channel
 2+| (COMCHA)
-3+|
-
-| TE
+3+| | TE
 | 0,*
 
 3+| estimated range of transmission
@@ -13803,15 +12316,11 @@ If it is required to encode a virtual AIS aid to navigation, it must be done usi
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -13826,30 +12335,22 @@ If it is required to encode a virtual AIS aid to navigation, it must be done usi
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| frequency pair
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,1
 
 3+| frequency shore station receives
-2+|
-
-3+|
+2+| 3+|
 
 | (S) IN
 | 0,1
@@ -13877,16 +12378,12 @@ If it is required to encode a virtual AIS aid to navigation, it must be done usi
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| status 2+| (STATUS) 3+|
@@ -13905,26 +12402,16 @@ If it is required to encode a virtual AIS aid to navigation, it must be done usi
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -13936,9 +12423,7 @@ If it is required to encode a virtual AIS aid to navigation, it must be done usi
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -13982,7 +12467,7 @@ If it is required to encode a radio station, it must be done using the feature *
 [[sec_21.4.2]]
 ==== Radio direction-finding stations (see S-4 -- B-483)
 
-If it is required to encode a radio direction-finding station, it must be done using a *Radio Station*feature, with attribute *category of radio station*&nbsp;=&nbsp;_5_ (radio direction-finding station). The identification signal may be encoded using the attribute *call sign*.
+If it is required to encode a radio direction-finding station, it must be done using a *Radio Station*feature, with attribute *category of radio station* = _5_ (radio direction-finding station). The identification signal may be encoded using the attribute *call sign*.
 
 [underline]#Remarks:#
 
@@ -13993,7 +12478,7 @@ If it is required to encode a radio direction-finding station, it must be done u
 [[sec_21.5]]
 === Radar transponder beacon
 
-[cols="87,114,114,114,114,114,114,114,38,77"]
+[cols="87,114,114,114,114,114,114,114,38,77", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *RADAR TRANSPONDER BEACON*. A transponder beacon transmitting a coded signal on radar frequency, permitting an interrogating craft to determine the bearing and range of the transponder. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Radar Transponder Beacon (RTPBCN)*
@@ -14022,15 +12507,11 @@ If it is required to encode a radio direction-finding station, it must be done u
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -14045,16 +12526,12 @@ If it is required to encode a radio direction-finding station, it must be done u
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -14073,16 +12550,12 @@ If it is required to encode a radio direction-finding station, it must be done u
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| radar wave length
@@ -14093,25 +12566,17 @@ If it is required to encode a radio direction-finding station, it must be done u
 | 0,2
 
 3+| radar band
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 1,1
 
 3+| wave length value
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 1,1
 
 3+| sector limit
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,1
@@ -14131,9 +12596,7 @@ If it is required to encode a radio direction-finding station, it must be done u
 | 1,1
 
 3+| sector line length
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 0,1
@@ -14153,18 +12616,14 @@ If it is required to encode a radio direction-finding station, it must be done u
 | 1,1
 
 3+| sector line length
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 0,1
 
 3+| signal group
 2+| (SIGGRP)
-3+|
-
-| TE
+3+| | TE
 | 0,1
 
 3+| signal sequence
@@ -14175,17 +12634,13 @@ If it is required to encode a radio direction-finding station, it must be done u
 | 0,\* (ordered)
 
 3+| signal duration
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 1,1
 
 3+| signal status
-2+|
-
-3+|
+2+| 3+|
 1: lit/sound
 2: eclipsed/silent
 | (S) EN
@@ -14214,26 +12669,16 @@ If it is required to encode a radio direction-finding station, it must be done u
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -14245,9 +12690,7 @@ If it is required to encode a radio direction-finding station, it must be done u
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -14292,7 +12735,7 @@ If it is required to encode a radar beacon, it must be done using the feature *R
 [[sec_22.1]]
 === Pilot boarding place
 
-[cols="87,114,114,114,114,114,114,114,39,76"]
+[cols="87,114,114,114,114,114,114,114,39,76", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *PILOT BOARDING PLACE.* A location offshore where a pilot may board a vessel in preparation to piloting it through local waters. (Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2010).
 10+| *[underline]#S-101 Geo Feature:#* *Pilot Boarding Place (PILBOP)*
@@ -14306,9 +12749,7 @@ If it is required to encode a radar beacon, it must be done using the feature *R
 2: boarding by helicopter +
 3: pilot comes out from shore | EN | 0,1
 3+| category of preference
-2+|
-
-3+|
+2+| 3+|
 1: primary +
 2: alternate +
 | EN
@@ -14316,17 +12757,11 @@ If it is required to encode a radar beacon, it must be done using the feature *R
 
 3+| communication channel
 2+| (COMCHA)
-3+|
-
-| TE
+3+| | TE
 | 0,*
 
 3+| destination
-2+|
-
-3+|
-
-| TE
+2+| 3+| | TE
 | 0,*
 
 3+| feature name
@@ -14345,15 +12780,11 @@ If it is required to encode a radar beacon, it must be done using the feature *R
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -14368,16 +12799,12 @@ If it is required to encode a radar beacon, it must be done using the feature *R
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -14396,22 +12823,16 @@ If it is required to encode a radar beacon, it must be done using the feature *R
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| pilot movement
-2+|
-
-3+|
+2+| 3+|
 1: embarkation +
 2: disembarkation +
 3: pilot change +
@@ -14436,26 +12857,16 @@ If it is required to encode a radar beacon, it must be done using the feature *R
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -14467,9 +12878,7 @@ If it is required to encode a radar beacon, it must be done using the feature *R
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -14504,7 +12913,7 @@ If it is required to encode a pilot boarding place, it must be done using the fe
 [[sec_22.1.2]]
 ==== Pilot stations ashore (see S-4 -- B-491.4)
 
-If it is required to encode a pilot station ashore, it must be done using a *Building* or *Landmark* feature, with attribute *function*&nbsp;=&nbsp;_11_ (pilot office) or _12_ (pilot lookout).
+If it is required to encode a pilot station ashore, it must be done using a *Building* or *Landmark* feature, with attribute *function* = _11_ (pilot office) or _12_ (pilot lookout).
 
 
 [underline]#Distinction:# Pilotage District.
@@ -14513,7 +12922,7 @@ If it is required to encode a pilot station ashore, it must be done using a *Bui
 [[sec_22.2]]
 === Vessel traffic service
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *VESSEL TRAFFIC SERVICE*. The area of any service implemented by a relevant authority primarily designed to improve safety and efficiency of traffic flow and the protection of the environment. It may range from simple information messages, to extensive organisation of the traffic involving national or regional schemes. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Vessel Traffic Service Area* __**(ADMARE)**__
@@ -14538,15 +12947,11 @@ If it is required to encode a pilot station ashore, it must be done using a *Bui
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -14568,26 +12973,16 @@ If it is required to encode a pilot station ashore, it must be done using a *Bui
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -14599,9 +12994,7 @@ If it is required to encode a pilot station ashore, it must be done using a *Bui
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -14632,7 +13025,7 @@ If it is required to encode an area within which a competent authority provides 
 [[sec_22.3]]
 === Coast Guard station
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *COAST GUARD STATION.*A station at which a visual/[[radio]]/[[radar]][[marine]] watch is kept either continuously or at certain times only.(IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Coast Guard Station (CGUSTA)*
@@ -14643,9 +13036,7 @@ If it is required to encode an area within which a competent authority provides 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| communication channel
 2+| (COMCHA)
-3+|
-
-| TE
+3+| | TE
 | 0,*
 
 3+| feature name
@@ -14664,15 +13055,11 @@ If it is required to encode an area within which a competent authority provides 
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -14687,16 +13074,12 @@ If it is required to encode an area within which a competent authority provides 
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -14707,9 +13090,7 @@ If it is required to encode an area within which a competent authority provides 
 | 0,1
 
 3+| is MRCC
-2+|
-
-3+|
+2+| 3+|
 
 | BO
 | 0,1
@@ -14723,16 +13104,12 @@ If it is required to encode an area within which a competent authority provides 
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| status 2+| (STATUS) 3+|
@@ -14750,26 +13127,16 @@ If it is required to encode an area within which a competent authority provides 
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -14781,9 +13148,7 @@ If it is required to encode an area within which a competent authority provides 
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -14823,7 +13188,7 @@ If it is required to encode a Coast Guard station, it must be done using the fea
 [[sec_22.4]]
 === Warning signal station
 
-[cols="87,114,114,114,114,114,114,114,38,77"]
+[cols="87,114,114,114,114,114,114,114,38,77", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *WARNING SIGNAL STATION*. A warning signal station is a place on shore from which warning signals are made to ships at sea. (Adapted from IHO Dictionary -- S-32 and Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2012).
 10+| *[underline]#S-101 Geo Feature:#* *Signal Station Warning (SISTAW)*
@@ -14850,9 +13215,7 @@ If it is required to encode a Coast Guard station, it must be done using the fea
 15: water level gauge | EN | 1,*
 3+| communication channel
 2+| (COMCHA)
-3+|
-
-| TE
+3+| | TE
 | 0,*
 
 3+| feature name
@@ -14871,15 +13234,11 @@ If it is required to encode a Coast Guard station, it must be done using the fea
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -14894,16 +13253,12 @@ If it is required to encode a Coast Guard station, it must be done using the fea
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -14922,16 +13277,12 @@ If it is required to encode a Coast Guard station, it must be done using the fea
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| status 2+| (STATUS) 3+|
@@ -14955,26 +13306,16 @@ If it is required to encode a Coast Guard station, it must be done using the fea
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -14986,9 +13327,7 @@ If it is required to encode a Coast Guard station, it must be done using the fea
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -15025,7 +13364,7 @@ If it is required to encode a warning signal station, it must be done using the 
 [[sec_22.5]]
 === Traffic signal station
 
-[cols="87,114,114,114,114,114,114,114,38,77"]
+[cols="87,114,114,114,114,114,114,114,38,77", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *TRAFFIC SIGNAL STATION*. A traffic signal station is a place on shore from which signals are made to regulate the movement of traffic. (Adapted from IHO Dictionary -- S-32 and S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.155, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Signal Station Traffic (SISTAT)*
@@ -15047,9 +13386,7 @@ If it is required to encode a warning signal station, it must be done using the 
 10: traffic control light | EN | 1,*
 3+| communication channel
 2+| (COMCHA)
-3+|
-
-| TE
+3+| | TE
 | 0,*
 
 3+| feature name
@@ -15068,15 +13405,11 @@ If it is required to encode a warning signal station, it must be done using the 
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -15091,16 +13424,12 @@ If it is required to encode a warning signal station, it must be done using the 
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -15119,16 +13448,12 @@ If it is required to encode a warning signal station, it must be done using the 
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| status 2+| (STATUS) 3+|
@@ -15152,26 +13477,16 @@ If it is required to encode a warning signal station, it must be done using the 
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -15183,9 +13498,7 @@ If it is required to encode a warning signal station, it must be done using the 
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -15229,7 +13542,7 @@ If it is required to encode a traffic signal station, it must be done using the 
 [[sec_22.6]]
 === Rescue station
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *RESCUE STATION*. A place where equipment for saving life at [[sea]] is maintained. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Rescue Station (RSCSTA)*
@@ -15248,9 +13561,7 @@ If it is required to encode a traffic signal station, it must be done using the 
 8: first aid equipment | EN | 0,*
 3+| communication channel
 2+| (COMCHA)
-3+|
-
-| TE
+3+| | TE
 | 0,*
 
 3+| feature name
@@ -15269,15 +13580,11 @@ If it is required to encode a traffic signal station, it must be done using the 
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -15292,16 +13599,12 @@ If it is required to encode a traffic signal station, it must be done using the 
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -15320,16 +13623,12 @@ If it is required to encode a traffic signal station, it must be done using the 
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| status 2+| (STATUS) 3+|
@@ -15351,26 +13650,16 @@ If it is required to encode a traffic signal station, it must be done using the 
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -15382,9 +13671,7 @@ If it is required to encode a traffic signal station, it must be done using the 
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -15423,7 +13710,7 @@ If it is required to encode a rescue station, it must be done using the feature 
 [[sec_22.7]]
 === Harbour facility
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *HARBOUR FACILITY*. A Harbour installation with a service or commercial operation of public interest. (S-57 Edition 3.1, Appendix A -- Chapter 1,Page 1.81, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Harbour Facility (HRBFAC)*
@@ -15449,9 +13736,7 @@ If it is required to encode a rescue station, it must be done using the feature 
 15: pilotage service | EN | 1,*
 3+| communication channel
 2+| (COMCHA)
-3+|
-
-| TE
+3+| | TE
 | 0,*
 
 3+| condition 2+| (CONDTN) 3+|
@@ -15475,15 +13760,11 @@ If it is required to encode a rescue station, it must be done using the feature 
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -15498,16 +13779,12 @@ If it is required to encode a rescue station, it must be done using the feature 
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -15532,16 +13809,12 @@ If it is required to encode a rescue station, it must be done using the feature 
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| product 2+| (PRODCT) 3+|
@@ -15606,25 +13879,19 @@ If it is required to encode a rescue station, it must be done using the feature 
 16: watched +
 17: unwatched | EN | 0,*
 3+| vessel speed limit
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,*
 
 3+| speed limit
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 1,1
 
 3+| speed units
-2+|
-
-3+|
+2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots +
@@ -15632,11 +13899,7 @@ If it is required to encode a rescue station, it must be done using the feature 
 | 1,1
 
 3+| vessel class
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
@@ -15648,26 +13911,16 @@ If it is required to encode a rescue station, it must be done using the feature 
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -15679,9 +13932,7 @@ If it is required to encode a rescue station, it must be done using the feature 
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
@@ -15720,7 +13971,7 @@ If it is required to encode a harbour facility, it must be done using the featur
 [[sec_22.8]]
 === Small craft facility
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *SMALL CRAFT FACILITY*. A place at which a service generally of interest to small craft or pleasure boats is available. (S-57 Edition 3.1, Appendix A -- Chapter 1,Page 1.162, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Small Craft Facility (SMCFAC)*
@@ -15778,15 +14029,11 @@ If it is required to encode a harbour facility, it must be done using the featur
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -15808,16 +14055,12 @@ If it is required to encode a harbour facility, it must be done using the featur
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| status 2+| (STATUS) 3+|
@@ -15843,26 +14086,16 @@ If it is required to encode a harbour facility, it must be done using the featur
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -15874,9 +14107,7 @@ If it is required to encode a harbour facility, it must be done using the featur
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
@@ -15912,7 +14143,7 @@ If it is required to encode a small craft facility, it must be done using the fe
 [[sec_23.1]]
 === Text placement
 
-[cols="672,789,789,789,789,789,789,789,266,539"]
+[cols="672,789,789,789,789,789,789,789,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *TEXT PLACEMENT*. The Text Placement feature is used in association with the Feature Name attribute or a light description to optimize text positioning in ECDIS.
 10+| *S-101 Cartographic Feature:* *Text Placement*
@@ -15922,33 +14153,25 @@ If it is required to encode a small craft facility, it must be done using the fe
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| text offset bearing
-2+|
-
-3+|
+2+| 3+|
 
 | IN
 | 1,1
 
 3+| text offset distance
-2+|
-
-3+|
+2+| 3+|
 
 | IN
 | 1,1
 
 3+| text rotation
-2+|
-
-3+|
+2+| 3+|
 
 | BO
 | 0,1
 
 3+| text type
-2+|
-
-3+|
+2+| 3+|
 1: name +
 2: feature characteristic +
 | EN
@@ -15996,7 +14219,7 @@ NOTE: Where an associated instance of *Text Placement* has not been related to a
 [[sec_24.1]]
 === Contact details
 
-[cols="87,114,114,114,114,114,114,114,38,77"]
+[cols="87,114,114,114,114,114,114,114,38,77", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *CONTACT DETAILS*.
 
@@ -16009,23 +14232,17 @@ Information on how to reach a person or organisation by postal, internet, teleph
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| call sign
 2+| (CALSGN)
-3+|
-
-| TE
+3+| | TE
 | 0,1
 
 3+| communication channel
 2+| (COMCHA)
-3+|
-
-| TE
+3+| | TE
 | 0,*
 
 3+| contact instructions
 2+| _(INFORM)_
-3+|
-
-| TE
+3+| | TE
 | 0,1
 
 3+| fixed date range
@@ -16037,30 +14254,22 @@ Information on how to reach a person or organisation by postal, internet, teleph
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| frequency pair
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,*
 
 3+| frequency shore station receives
-2+|
-
-3+|
+2+| 3+|
 
 | (S) IN
 | 0,1
@@ -16080,19 +14289,13 @@ Information on how to reach a person or organisation by postal, internet, teleph
 | 0,1
 
 3+| online resource
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,*
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| linkage
@@ -16110,33 +14313,21 @@ Information on how to reach a person or organisation by postal, internet, teleph
 | 0,1
 
 3+| telecommunications
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,*
 
 3+| contact instructions
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| telecommunication identifier
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 1,1
 
 3+| telecommunication service
-2+|
-
-3+|
+2+| 3+|
 1: voice +
 2: facsimile +
 3: SMS +
@@ -16173,7 +14364,7 @@ If it is required to encode the contact information (communication channel, call
 [[sec_24.2]]
 === Service hours
 
-[cols="87,114,114,114,114,114,114,114,38,77"]
+[cols="87,114,114,114,114,114,114,114,38,77", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *SERVICE HOURS*. The time when a service is available and known exceptions.
 10+| *S-101 Information Type:* *Service Hours*
@@ -16191,16 +14382,12 @@ If it is required to encode the contact information (communication channel, call
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| periodic date range
@@ -16212,30 +14399,22 @@ If it is required to encode the contact information (communication channel, call
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| schedule by day of week
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 1,*
 
 3+| category of schedule
-2+|
-
-3+|
+2+| 3+|
 1: normal operation +
 2: closure +
 3: unmanned operation +
@@ -16243,17 +14422,13 @@ If it is required to encode the contact information (communication channel, call
 | 0,1
 
 3+| time intervals by day of week
-2+|
-
-3+|
+2+| 3+|
 
 | (S) C
 | 1,*
 
 3+| day of week
-2+|
-
-3+|
+2+| 3+|
 1: Sunday +
 2: Monday +
 3: Tuesday +
@@ -16265,58 +14440,40 @@ If it is required to encode the contact information (communication channel, call
 | 0,7 (ordered) ^†^
 
 3+| day of week is range
-2+|
-
-3+|
+2+| 3+|
 
 | (S) BO
 | 0,1
 
 3+| time of day end
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TI
 | 0,\* (ordered) ^†^
 
 3+| time of day start
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TI
 | 0,\* (ordered) ^†^
 
 3+| information
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -16328,9 +14485,7 @@ If it is required to encode the contact information (communication channel, call
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -16363,7 +14518,7 @@ If it is required to encode the time schedules for the operation of a service (f
 [[sec_24.3]]
 === Non-standard working day
 
-[cols="87,114,114,114,114,114,114,114,38,77"]
+[cols="87,114,114,114,114,114,114,114,38,77", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *NON-STANDARD WORKING DAY*. Days when many services are not available. Often days of festivity or recreation or public holidays when normal working hours are limited, especially a national or religious festival, etc. (S-127 Edition 1.0.0).
 10+| *S-101 Information Type:* *Non-Standard Working Day*
@@ -16380,11 +14535,7 @@ If it is required to encode the time schedules for the operation of a service (f
 | 0,\* ^†^
 
 3+| date variable
-2+|
-
-3+|
-
-| TE
+2+| 3+| | TE
 | 0,\* ^†^
 
 3+| fixed date range
@@ -16396,16 +14547,12 @@ If it is required to encode the time schedules for the operation of a service (f
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| periodic date range
@@ -16417,47 +14564,31 @@ If it is required to encode the time schedules for the operation of a service (f
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| information
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -16469,9 +14600,7 @@ If it is required to encode the time schedules for the operation of a service (f
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -16505,7 +14634,7 @@ If it is required to encode the date(s) when an event, festival or national holi
 [[sec_24.4]]
 === Nautical information
 
-[cols="87,114,114,114,114,114,114,114,38,77"]
+[cols="87,114,114,114,114,114,114,114,38,77", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *NAUTICAL INFORMATION*. Nautical information about a related area or facility.
 10+| *S-101 Information Type:* *Nautical Information*
@@ -16523,16 +14652,12 @@ If it is required to encode the date(s) when an event, festival or national holi
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| periodic date range
@@ -16544,16 +14669,12 @@ If it is required to encode the date(s) when an event, festival or national holi
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| information
@@ -16564,26 +14685,16 @@ If it is required to encode the date(s) when an event, festival or national holi
 | 0,\* ^†^
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -16595,9 +14706,7 @@ If it is required to encode the date(s) when an event, festival or national holi
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1 ^†^
@@ -16631,7 +14740,7 @@ If it is required to encode identical information associated with multiple geo f
 [[sec_24.5]]
 === Spatial quality
 
-[cols="539,808,808,808,808,808,808,808,266,539"]
+[cols="539,808,808,808,808,808,808,808,266,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *SPATIAL QUALITY*. The indication of the quality of the locational information for features in a dataset.
 10+| *S-101 Information Type:* *Spatial Quality*
@@ -16643,9 +14752,7 @@ If it is required to encode identical information associated with multiple geo f
 3+| quality of horizontal measurement 2+| (QUAPOS) 3+|
 4: approximate | EN | 0,1 ^†^
 3+| spatial accuracy
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,\* ^†^
@@ -16659,16 +14766,12 @@ If it is required to encode identical information associated with multiple geo f
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| horizontal position uncertainty
@@ -16679,17 +14782,13 @@ If it is required to encode identical information associated with multiple geo f
 | 0,1
 
 3+| uncertainty fixed
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 1,1
 
 3+| uncertainty variable factor
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 0,1
@@ -16702,17 +14801,13 @@ If it is required to encode identical information associated with multiple geo f
 | 0,1
 
 3+| uncertainty fixed
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 1,1
 
 3+| uncertainty variable factor
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 0,1
@@ -16763,7 +14858,7 @@ NOTE: The association *Spatial Association* (see clause 25.15) is not included i
 
 The tables included in this Section are structured such that each row of the table shows all components of the relationship as they would be included at the association end for the entries included in the "Associated With" column. For example, for the *Two Way Route* end of the *Two-Way Route Aggregation* association (indicated by the red outline included in Figure 25-1 above), the "Role Type" is __Aggregation__; the "Role" is __The Collection__; and the "Multiplicity" is _0,1_ (see clause 25.19):
 
-[cols="68,90,383,69"]
+[cols="68,90,383,69", options="unnumbered"]
 |===
 h| Role Type h| Role h| Associated With h| Multiplicity
 | Aggregation | The Collection | *Two-Way Route* | 0,1
@@ -16815,7 +14910,7 @@ image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_d4a06b72.gif[Shape38,548,270
 
 image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_b67d198d.png["",663,97]
 
-[cols="77,90,366,76"]
+[cols="77,90,366,76", options="unnumbered"]
 |===
 4+| IHO Definition: *TWO-WAY-ROUTE AGGREGATION*. A feature association for the binding between a two-way route and its component features.
 
@@ -16845,7 +14940,7 @@ image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_c13f5fa7.png["",658,86]
 
 image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_4c5d0702.gif[Shape39,141,225]
 
-[cols="64,94,385,67"]
+[cols="64,94,385,67", options="unnumbered"]
 |===
 4+| IHO Definition: *TRAFFIC SPARATION SCHEME AGGREGATION*. A feature association for the binding between a Traffic Separation Scheme or a Traffic Separation Scheme System and its component features.
 
@@ -16876,7 +14971,7 @@ Figure 25-5 below shows the representation of the feature/information associatio
 .Additional Information
 image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_d65eda04.png["",188,319]
 
-[cols="68,90,383,69"]
+[cols="68,90,383,69", options="unnumbered"]
 |===
 4+| IHO Definition: *ADDITIONAL INFORMATION*. A feature association for the binding between at least one instance of a geo feature and an instance of an information type.
 
@@ -16927,7 +15022,7 @@ Each row included in Figure 25-6 above describes a S-101 association instance th
 [[sec_25.1]]
 === Additional information
 
-[cols="69,88,385,67"]
+[cols="69,88,385,67", options="unnumbered"]
 |===
 4+| IHO Definition: *ADDITIONAL INFORMATION*. A feature association for the binding between at least one instance of a geo feature and an instance of an information type.
 
@@ -16969,7 +15064,7 @@ Each row included in Figure 25-6 above describes a S-101 association instance th
 [[sec_25.2]]
 === Aids to navigation association
 
-[cols="68,90,385,66"]
+[cols="68,90,385,66", options="unnumbered"]
 |===
 4+| IHO Definition: *AIDS TO NAVIGATION ASSOCIATION*. A feature association for the binding between navigational aids and the traffic systems (such as routeing measures) that they define.
 
@@ -16992,7 +15087,7 @@ Each row included in Figure 25-6 above describes a S-101 association instance th
 [[sec_25.3]]
 === ASL aggregation
 
-[cols="68,90,383,69"]
+[cols="68,90,383,69", options="unnumbered"]
 |===
 4+| IHO Definition: *ASL AGGREGATION*. A feature association for the binding between an Archipelagic Sea Lane and its component features.
 
@@ -17010,7 +15105,7 @@ Each row included in Figure 25-6 above describes a S-101 association instance th
 [[sec_25.4]]
 === Bridge aggregation
 
-[cols="69,88,385,67"]
+[cols="69,88,385,67", options="unnumbered"]
 |===
 4+| IHO Definition: *BRIDGE AGGREGATION*. A feature association for the binding between a bridge and its component features.
 
@@ -17028,7 +15123,7 @@ Each row included in Figure 25-6 above describes a S-101 association instance th
 [[sec_25.5]]
 === Caution area association
 
-[cols="69,88,385,67"]
+[cols="69,88,385,67", options="unnumbered"]
 |===
 4+| IHO Definition: *CAUTION AREA ASSOCIATION*. A feature association for the binding between a caution area and the traffic systems (such as routeing measures) to which the cautionary information applies.
 
@@ -17045,7 +15140,7 @@ Each row included in Figure 25-6 above describes a S-101 association instance th
 [[sec_25.6]]
 === Deep Water route aggregation
 
-[cols="69,88,385,67"]
+[cols="69,88,385,67", options="unnumbered"]
 |===
 4+| IHO Definition: *DEEP WATER ROUTE AGGREGATION*. A feature association for the binding between a Deep Water route and its component features.
 
@@ -17063,7 +15158,7 @@ Each row included in Figure 25-6 above describes a S-101 association instance th
 [[sec_25.7]]
 === Fairway aggregation
 
-[cols="a,a,a,a"]
+[cols="a,a,a,a", options="unnumbered"]
 |===
 4+| IHO Definition: *FAIRWAY AGGREGATION*. A feature association for the binding between related fairways comprising a fairway system.
 
@@ -17082,7 +15177,7 @@ h| Role Type h| Role h| Associated With h| Multiplicity
 [[sec_25.8]]
 === Fairway auxiliary
 
-[cols="68,71,402,68"]
+[cols="68,71,402,68", options="unnumbered"]
 |===
 4+| IHO Definition: *FAIRWAY AUXILIARY*. A feature association for the binding between a fairway and related features auxiliary to the fairway.
 
@@ -17099,7 +15194,7 @@ h| Role Type h| Role h| Associated With h| Multiplicity
 [[sec_25.9]]
 === Island aggregation
 
-[cols="a,a,a,a"]
+[cols="a,a,a,a", options="unnumbered"]
 |===
 4+| IHO Definition: *ISLAND AGGREGATION*. A feature association for the binding between a named group of islands.
 
@@ -17116,7 +15211,7 @@ h| Role Type h| Role h| Associated With h| Multiplicity
 [[sec_25.10]]
 === Mooring trot aggregation
 
-[cols="64,94,385,67"]
+[cols="64,94,385,67", options="unnumbered"]
 |===
 4+| IHO Definition: *MOORING TROT AGGREGATION*. A feature association for the binding between a mooring trot and its component parts.
 
@@ -17139,7 +15234,7 @@ A *Mooring Trot Aggregation* must, if required, include at least one of any of t
 [[sec_25.11]]
 === Pilotage district association
 
-[cols="64,94,385,67"]
+[cols="64,94,385,67", options="unnumbered"]
 |===
 4+| IHO Definition: *PILOTAGE DISTRICT ASSOCIATION*. A feature association for the binding between a pilotage district and its component pilot boarding places.
 
@@ -17156,7 +15251,7 @@ A *Mooring Trot Aggregation* must, if required, include at least one of any of t
 [[sec_25.12]]
 === Quality of bathymetric data composition
 
-[cols="69,69,404,67"]
+[cols="69,69,404,67", options="unnumbered"]
 |===
 4+| IHO Definition: *QUALITY OF BATHYMETRIC DATA COMPOSITION*. The mandatory association between the quality-related characteristics of bathymetric data and the horizontal position and vertical uncertainties of the data.
 
@@ -17176,7 +15271,7 @@ A *Mooring Trot Aggregation* must, if required, include at least one of any of t
 [[sec_25.13]]
 === Range system aggregation
 
-[cols="69,88,385,67"]
+[cols="69,88,385,67", options="unnumbered"]
 |===
 4+| IHO Definition: *RANGE SYSTEM AGGREGATION*. A feature association for the binding between navigational tracks and the navigational aids that define the tracks.
 
@@ -17194,7 +15289,7 @@ A *Mooring Trot Aggregation* must, if required, include at least one of any of t
 [[sec_25.14]]
 === Roofed Structure Aggregation
 
-[cols="68,81,392,69"]
+[cols="68,81,392,69", options="unnumbered"]
 |===
 4+| IHO Definition: *ROOFED STRUCTURE AGGREGATION*. A feature association for the binding between a roofed structure over navigable water and its supporting features.
 
@@ -17211,7 +15306,7 @@ A *Mooring Trot Aggregation* must, if required, include at least one of any of t
 [[sec_25.15]]
 === Spatial association
 
-[cols="68,71,402,69"]
+[cols="68,71,402,69", options="unnumbered"]
 |===
 4+| IHO Definition: *SPATIAL ASSOCIATION*. An association for the binding between a spatial type and its spatial quality information.
 
@@ -17232,7 +15327,7 @@ A *Mooring Trot Aggregation* must, if required, include at least one of any of t
 [[sec_25.16]]
 === Structure/equipment
 
-[cols="68,81,393,68"]
+[cols="68,81,393,68", options="unnumbered"]
 |===
 4+| IHO Definition: *STRUCTURE/EQUIPMENT*. A feature association for the binding between a navigation aid equipment feature and the structure that supports it.
 
@@ -17298,7 +15393,7 @@ A *Mooring Trot Aggregation* must, if required, include at least one of any of t
 [[sec_25.17]]
 === Text association
 
-[cols="69,98,376,66"]
+[cols="69,98,376,66", options="unnumbered"]
 |===
 4+| IHO Definition: *TEXT ASSOCIATION*. A feature association for the binding between a geo feature and the cartographically positioned location for text.
 
@@ -17315,7 +15410,7 @@ A *Mooring Trot Aggregation* must, if required, include at least one of any of t
 [[sec_25.18]]
 === Traffic Separation Scheme aggregation
 
-[cols="68,90,383,69"]
+[cols="68,90,383,69", options="unnumbered"]
 |===
 4+| IHO Definition: *TRAFFIC SEPARATION SCHEME AGGREGATION*. A feature association for the binding between a Traffic Separation Scheme or a Traffic Separation Scheme System and its component features.
 
@@ -17333,7 +15428,7 @@ A *Mooring Trot Aggregation* must, if required, include at least one of any of t
 [[sec_25.19]]
 === Two-way route aggregation
 
-[cols="68,90,383,69"]
+[cols="68,90,383,69", options="unnumbered"]
 |===
 4+| IHO Definition: *TWO-WAY ROUTE AGGREGATION*. A feature association for the binding between a two-way route and its component features.
 
@@ -17351,7 +15446,7 @@ A *Mooring Trot Aggregation* must, if required, include at least one of any of t
 [[sec_25.20]]
 === Update aggregation
 
-[cols="68,90,383,69"]
+[cols="68,90,383,69", options="unnumbered"]
 |===
 4+| IHO Definition: *UPDATE AGGREGATION*. A feature association for the binding between an Update Information feature and its component Update Information features.
 
@@ -17368,7 +15463,7 @@ A *Mooring Trot Aggregation* must, if required, include at least one of any of t
 [[sec_25.21]]
 === Updated information
 
-[cols="67,72,402,68"]
+[cols="67,72,402,68", options="unnumbered"]
 |===
 4+| IHO Definition: *UPDATED INFORMATION*. A feature association for the binding between an update information metadata feature and updated feature(s) that it identifies.
 
@@ -18968,7 +17063,7 @@ IHO Definition: An instrument used for scientific purposes.
 IHO Definition:Any of various machines having a rotor, usually with vanes or blades, driven by the pressure, momentum, or reactive thrust of a moving fluid, as steam, water, hot gases, or air, either occurring in the form of free jets or as a fluid passing through and entirely filling a housing around the rotor and is located underwater.
 [start=12]
 . ~*active submarine volcano*~
-IHO Definition:An active seabed&nbsp;volcano, which may be submerged or projecting above the water at the chart sounding datum. (Adapted from IHO Dictionary -- S-32).
+IHO Definition:An active seabed volcano, which may be submerged or projecting above the water at the chart sounding datum. (Adapted from IHO Dictionary -- S-32).
 [start=12]
 . ~*shark net*~
 IHO Definition:A submerged net placed around beaches to reduce shark attacks on swimmers.(Wikipedia).
@@ -19163,7 +17258,7 @@ IHO Definition: Pilot boards from a cruising vessel. (S-57 Edition 3.1, Appendix
 IHO Definition: Pilot boards by helicopter which comes out from the shore. (S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.62, November 2000).
 [start=3]
 . ~*pilot comes out from shore*~
-IHO Definition:Pilot embarks from a vessel or disembarks to a vessel&nbsp;which comes out from the shore on request. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.62, November 2000).
+IHO Definition:Pilot embarks from a vessel or disembarks to a vessel which comes out from the shore on request. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.62, November 2000).
 
 [underline]#Remarks:#
 
@@ -19496,7 +17591,7 @@ IHO Definition:An area that needs special protection through action by IMO becau
 IHO Definition:An area near a fairway where vessels can go to clear the way or make an about turn and possibly return to a waiting area when nautical conditions impose it.
 [start=27]
 . ~*port security area*~
-IHO Definition: An area in which defence, law and treaty enforcement, and counter-terrorism activities that fall within the&nbsp;port&nbsp;and maritime domain apply. (Adapted from Wikipedia).
+IHO Definition: An area in which defence, law and treaty enforcement, and counter-terrorism activities that fall within the port and maritime domain apply. (Adapted from Wikipedia).
 [start=27]
 . ~*coral sanctuary*~
 IHO Definition:A place where coral is protected.
@@ -19738,10 +17833,10 @@ IHO Definition: A relatively large natural stream of water. (IHO Dictionary -- S
 IHO Definition: A straight section of a river, especially a navigable river between two bends; or an arm of the sea extending into the land. (Adapted from IHO Dictionary -- S-32).
 [start=2]
 . ~*intertidal cay*~
-IHO Definition: A low, flat&nbsp;island&nbsp;of&nbsp;sand,&nbsp;coral, etc. awash or submerged at high water. (Adapted from IHO Dictionary -- S-32).
+IHO Definition: A low, flat island of sand, coral, etc. awash or submerged at high water. (Adapted from IHO Dictionary -- S-32).
 [start=2]
 . ~*submarine volcano*~
-IHO Definition: A seabed&nbsp;volcano, submerged at the chart sounding datum, which may or may not be active. (IHO Dictionary -- S-32).
+IHO Definition: A seabed volcano, submerged at the chart sounding datum, which may or may not be active. (IHO Dictionary -- S-32).
 
 [underline]#Remarks:#
 
@@ -19762,7 +17857,7 @@ Attribute Type: Enumeration
 IHO Definition: A structure protecting a shore area, harbour, anchorage, or basin from waves. (IHO Dictionary -- S-32).
 [start=2]
 . ~*groyne*~
-IHO Definition: A low artificial wall-like structure of durable material extending from the land to seaward for a particular purpose, such as to protect the&nbsp;coast&nbsp;or to force a&nbsp;current&nbsp;to scour a&nbsp;channel. (IHO Dictionary -- S-32).
+IHO Definition: A low artificial wall-like structure of durable material extending from the land to seaward for a particular purpose, such as to protect the coast or to force a current to scour a channel. (IHO Dictionary -- S-32).
 [start=3]
 . *mole*
 IHO Definition: A form of breakwater alongside which vessels may lie on the sheltered side only; in some cases it may lie entirely within an artificial harbour, permitting vessels to lie along both sides. (S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.84, November 2000).
@@ -20499,7 +18594,7 @@ IHO Definition: Wreck of which any portion of the hull or superstructure is visi
 [[sec_27.74]]
 === category of zone of confidence in data (CATZOC)
 
-[cols="651,100,63,103,123,131"]
+[cols="651,100,63,103,123,131", options="unnumbered"]
 |===
 | IHO Definition: *CATEGORY OF ZONE OF CONFIDENCE IN DATA*. Classification of the zone of confidence in data within an area based on the positional accuracy, survey equipment and coverage.
 
@@ -20529,7 +18624,7 @@ IHO Definition: The quality of the bathymetric data has yet to be assessed. (Ada
 
 ** The full categorisation of each category is as follows:
 
-[cols="25,100,63,103,123,131"]
+[cols="25,100,63,103,123,131", options="unnumbered"]
 |===
 | 1 | 2 2+| 3 | 4 | 5
 
@@ -23510,7 +21605,7 @@ Attribute Type: RealUnit: Defined as an attribute in the ENC Dataset Discovery M
 Attribute Type: Enumeration
 
 . ~**mean low water springs**~
-IHO Definition: The average&nbsp;height&nbsp;of the&nbsp;low waters&nbsp;of&nbsp;spring tides. This&nbsp;level&nbsp;is used as a&nbsp;tidal datum&nbsp;in some areas. (IHO Dictionary -- S-32).
+IHO Definition: The average height of the low waters of spring tides. This level is used as a tidal datum in some areas. (IHO Dictionary -- S-32).
 [start=2]
 . ~*mean lower low water springs*~
 IHO Definition: The average height of lower low water springs at a place. (IHO Dictionary -- S-32).
@@ -25082,7 +23177,7 @@ Sub-attributes:*category of zone of confidence in data* see clause 27.74*fixed d
 [[sec_30.1]]
 === default clearance depth
 
-[cols="651,80,79,96,80,96"]
+[cols="651,80,79,96,80,96", options="unnumbered"]
 |===
 | IHO Definition: *DEFAULT CLEARANCE DEPTH*. The depth value determined for an underwater hazard of unknown depth, based on the depth of the surrounding area.
 
@@ -25558,7 +23653,7 @@ When an ENC Update promulgates information well in advance and uses *fixed* **da
 .. Change to a maintained depth in a dredged area:
 
 *** When information is received from an official or recognised survey authority relating to a dredged area where the dredged depth has changed, the attribute value of *depth range minimum value* for the *Dredged Area* feature should be changed to the value provided by the survey.
-*** Where a *Sounding* feature is encoded in a dredged area to indicate shoaler depths, the&nbsp;attribute value&nbsp;*exposition of sounding* = _2_ (shoaler than the depth of the surrounding depth area) should not be&nbsp;populated (see clauses 11.3.1 and 11.4.1). Where required,&nbsp;the shoal depths should be encoded using **Sounding**,&nbsp;with the appropriate underlying depth information (*Depth Contour* and *Depth Area*) to support the depths. Alternatively, the attribute *depth range maximum value* for the *Dredged Area* may be set to the designed dredged depth for the dredged area and the attribute *depth range minimum value* set to the value of the shoalest depth, or a *Caution Area* feature may be encoded covering the shoaler depth area with the depth information provided using the complex attribute *information* (see clause 2.4.6). Where the shoal depths are close to the edge of the dredged area, the dredged area limit may be adjusted to exclude the shoal depths from the area. See also S-4 -- B-414.5.
+*** Where a *Sounding* feature is encoded in a dredged area to indicate shoaler depths, the attribute value *exposition of sounding* = _2_ (shoaler than the depth of the surrounding depth area) should not be populated (see clauses 11.3.1 and 11.4.1). Where required, the shoal depths should be encoded using **Sounding**, with the appropriate underlying depth information (*Depth Contour* and *Depth Area*) to support the depths. Alternatively, the attribute *depth range maximum value* for the *Dredged Area* may be set to the designed dredged depth for the dredged area and the attribute *depth range minimum value* set to the value of the shoalest depth, or a *Caution Area* feature may be encoded covering the shoaler depth area with the depth information provided using the complex attribute *information* (see clause 2.4.6). Where the shoal depths are close to the edge of the dredged area, the dredged area limit may be adjusted to exclude the shoal depths from the area. See also S-4 -- B-414.5.
 
 [[sec_31.2.3]]
 ==== Preliminary (P) Notices to Mariners (see S-4 -- B-634)
@@ -25625,7 +23720,7 @@ When information is issued as advance notification for an ENC it is necessary to
 [[sec_32.1]]
 === Chart 1 feature
 
-[cols="87,114,114,114,114,114,114,114,38,77"]
+[cols="87,114,114,114,114,114,114,114,38,77", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *CHART 1 FEATURE.* A feature which exists to support the rendering of graphics or text in order to provide additional information that cannot be encoded using other features.
 10+| *[underline]#S-101 Geo Feature:#* *Chart 1 Feature*
@@ -25636,9 +23731,7 @@ When information is issued as advance notification for an ENC it is necessary to
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| drawing instruction
 2+| (SYMINS)
-3+|
-
-| TE
+3+| | TE
 | 0,\* ^†^
 
 3+| feature name
@@ -25657,15 +23750,11 @@ When information is issued as advance notification for an ENC it is necessary to
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN

@@ -37,7 +37,7 @@ g. Where surveys are inadequate, it may be advisable to omit some of the standar
 [[sec_11.3]]
 === Sounding
 
-[cols="192,102,64,158,158,386,351,351,84,154"]
+[cols="192,102,64,158,158,386,351,351,84,154", options="unnumbered"]
 |===
 9+.<h| IHO Definition: *SOUNDING*. Measured or charted [[depth]] of water (may be a drying height), or the measurement of such a [[depth]], which has been reduced to a vertical datum. (Adapted from IHO Dictionary -- S-32). |
 9+| *[underline]#S-101 Geo Feature:#* *Sounding (SOUNDG)* |
@@ -79,7 +79,7 @@ g. Where surveys are inadequate, it may be advisable to omit some of the standar
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| interoperability identifier
 2+|
@@ -134,7 +134,7 @@ g. Where surveys are inadequate, it may be advisable to omit some of the standar
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| headline
 2+|
@@ -156,7 +156,7 @@ g. Where surveys are inadequate, it may be advisable to omit some of the standar
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 9+| *Feature Associations* |
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -164,7 +164,7 @@ g. Where surveys are inadequate, it may be advisable to omit some of the standar
 | The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-9+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+9+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
@@ -282,7 +282,7 @@ h| Sounding h| S-4 h| INT 1 h| quality of horizontal measurement h| quality of v
 [[sec_11.4]]
 === Dredged area
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *DREDGED AREA*. An area of the bottom of a body of water which has been deepened by dredging. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Dredged Area (DRGARE)*
@@ -328,7 +328,7 @@ h| Sounding h| S-4 h| INT 1 h| quality of horizontal measurement h| quality of v
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| interoperability identifier
 2+|
@@ -378,7 +378,7 @@ h| Sounding h| S-4 h| INT 1 h| quality of horizontal measurement h| quality of v
 13: swept by side scan sonar +
 15: found by LIDAR +
 16: synthetic aperture radar +
-17: hyperspectral imagery18&nbsp;: mechanically swept | EN | 0,*
+17: hyperspectral imagery18 : mechanically swept | EN | 0,*
 3+| vertical uncertainty
 2+| _(SOUACC)_
 3+|
@@ -456,7 +456,7 @@ h| Sounding h| S-4 h| INT 1 h| quality of horizontal measurement h| quality of v
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| headline
 2+|
@@ -478,7 +478,7 @@ h| Sounding h| S-4 h| INT 1 h| quality of horizontal measurement h| quality of v
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -487,7 +487,7 @@ h| Sounding h| S-4 h| INT 1 h| quality of horizontal measurement h| quality of v
 | The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
@@ -504,7 +504,7 @@ If it is required to encode dredged areas, this must be done using the feature *
 
 * The attribute *depth range minimum value* must be used to encode the dredged depth for the dredged area. Where required, the attribute *depth range maximum depth* must be used to encode the deeper depth where a range of depths for the dredged area is indicated on the source.
 * The boundary of a dredged area should not have coincident curve geo features encoded, unless part of the boundary corresponds to the shoreline (see clause 5.3.1).
-* Dredged areas are often subject to siltation, resulting in shoaler depths being identified in the dredged area than the designed dredged depth. Where required,&nbsp;the shoal depths should be encoded using **Sounding**,&nbsp;with the appropriate underlying depth information (*Depth Area* and, if required, *Depth Contour*) to support the depths. Alternatively, the attribute *depth range maximum value* for the *Dredged Area* may be set to the designed dredged depth for the dredged area, and the attribute *depth range minimum value* set to the value of the shoalest depth, or a *Caution Area* feature may be encoded covering the shoaler depth area with the depth information provided using the complex attribute *information* (see clause 2.4.6). Where the shoal depths are close to the edge of the dredged area, the dredged area limit may be adjusted to exclude the shoal depths from the surface. See also S-4 -- B-414.5.
+* Dredged areas are often subject to siltation, resulting in shoaler depths being identified in the dredged area than the designed dredged depth. Where required, the shoal depths should be encoded using **Sounding**, with the appropriate underlying depth information (*Depth Area* and, if required, *Depth Contour*) to support the depths. Alternatively, the attribute *depth range maximum value* for the *Dredged Area* may be set to the designed dredged depth for the dredged area, and the attribute *depth range minimum value* set to the value of the shoalest depth, or a *Caution Area* feature may be encoded covering the shoaler depth area with the depth information provided using the complex attribute *information* (see clause 2.4.6). Where the shoal depths are close to the edge of the dredged area, the dredged area limit may be adjusted to exclude the shoal depths from the surface. See also S-4 -- B-414.5.
 * The attribute *source date* may be used to encode the year of the latest control survey for dredged areas where the dredged depth is not maintained. For dredged areas where the dredged depth is maintained, it is not required to indicate the year of dredging.
 * Where the complex attribute *vertical uncertainty* is populated for a *Dredged Area* feature, it must not be equivalent to or degrade the uncertainty indicated by the complex attribute *vertical uncertainty* for the underlying *Quality of Bathymetric Data* Meta feature (see clauses3.8 and 24.5).
 * For additional guidance regarding the encoding of vessel speed limits, see clause 17.4.
@@ -515,7 +515,7 @@ If it is required to encode dredged areas, this must be done using the feature *
 [[sec_11.5]]
 === Swept area
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *SWEPT AREA*. An area that has been determined to be clear of navigational dangers to a specified depth. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Swept Area (SWPARE)*
@@ -566,7 +566,7 @@ If it is required to encode dredged areas, this must be done using the feature *
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| headline
 2+|
@@ -588,7 +588,7 @@ If it is required to encode dredged areas, this must be done using the feature *
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -597,7 +597,7 @@ If it is required to encode dredged areas, this must be done using the feature *
 | The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+10+.<| footnote:crossnote[] For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -627,7 +627,7 @@ Even if the area contains no spot soundings or depth contours, a *Swept Area* fe
 [[sec_11.6]]
 === Depth contour
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *DEPTH CONTOUR*. A line connecting points of equal water depth which is sometimes significantly displaced outside of soundings, symbols, and other chart detail for clarity as well as generalization. Depth contours therefore often represent an approximate location of the line of equal depth as related to the surveyed line delineated on the source. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Depth Contour (DEPCNT)*
@@ -671,7 +671,7 @@ Even if the area contains no spot soundings or depth contours, a *Swept Area* fe
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| headline
 2+|
@@ -693,14 +693,14 @@ Even if the area contains no spot soundings or depth contours, a *Swept Area* fe
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+10+.<| footnote:crossnote[] For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -715,13 +715,13 @@ Supplementary contours, for example at 3, 8, 25, 40, 75 metres and multiples of 
 
 On the larger optimum display scale ENC datasets, for example datasets intended for harbour navigation or berthing; or in areas where vessel under keel clearance is critical, a smaller contour interval may be used (for example 1 metre, or 0.1 metre if it is desired to provide the same depth accuracy as for soundings) in the depth range suitable for the deepest draught vessels that may navigate in the area. Such encoding is intended to best utilize the safety depth indication functionality of the ECDIS.
 
-The boundary of a drying rocky area (see INT1&nbsp;‑&nbsp;J20) or coral reef (see INT1&nbsp;‑&nbsp;J22) may be coincident with the zero metre contour (see '_fg_' in the Figure). If it is required to encode this boundary, it must be done using the feature *Depth Contour* with the attribute *value of depth contour*&nbsp;=&nbsp;_0_.
+The boundary of a drying rocky area (see INT1 - J20) or coral reef (see INT1 - J22) may be coincident with the zero metre contour (see '_fg_' in the Figure). If it is required to encode this boundary, it must be done using the feature *Depth Contour* with the attribute *value of depth contour* = _0_.
 
 On the source, the presentation of contours in areas of steep slope is sometimes generalised so that closely spaced contours are removed to leave a single contour (see '_ab_' in Figure). In such cases, this contour must be encoded using the shallowest depth of the slope.
 
 Wherever possible, contours must be closed, or connected to the border of the dataset, a coastline feature or another contour, in order to define closed areas.
 
-Spatial quality associated with contours may be encoded using the *Spatial Quality* information type, attribute *quality of* **horizontal measurement**&nbsp;(see clause 28.14). This should only be encoded if the spatial quality of the contour(s) is different to that indicated for the overall quality of the bathymetric data in the area as described for the underlying *Quality of Bathymetric Data* Meta feature (see clause 3.8). However, in order to provide an additional indication to the mariner of areas of lower reliability bathymetric data, contours in depths of 30 metres or less may have the attribute *quality of* **horizontal measurement** on the associated *Spatial Quality* information type populated with value _4_ (approximate).
+Spatial quality associated with contours may be encoded using the *Spatial Quality* information type, attribute *quality of* **horizontal measurement** (see clause 28.14). This should only be encoded if the spatial quality of the contour(s) is different to that indicated for the overall quality of the bathymetric data in the area as described for the underlying *Quality of Bathymetric Data* Meta feature (see clause 3.8). However, in order to provide an additional indication to the mariner of areas of lower reliability bathymetric data, contours in depths of 30 metres or less may have the attribute *quality of* **horizontal measurement** on the associated *Spatial Quality* information type populated with value _4_ (approximate).
 
 
 
@@ -739,7 +739,7 @@ Remarks:
 [[sec_11.7]]
 === Depth area
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *DEPTH AREA*. A water area whose depth is within a defined range of values. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.51, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Depth Area (DEPARE)*
@@ -777,7 +777,7 @@ Remarks:
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| headline
 2+|
@@ -799,14 +799,14 @@ Remarks:
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+10+.<| footnote:crossnote[] For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -871,7 +871,7 @@ NOTE: In the case where the shallowest depth in the area is equal to the boundin
 * *depth range maximum value* should take the value of the dataset depth contour immediately deeper than or equal to the value of the sounding. However if the deepest sounding within the area is considered to be the deepest depth of the deep, *depth range maximum value* may be populated with the value of this sounding.
 4. If the shallowest depth is defined by the coastline:
 
-* *depth range minimum value*&nbsp;should take the value of&nbsp;-H.
+* *depth range minimum value* should take the value of -H.
 * *depth range maximum value* should take the value of the shallowest dataset depth contour bounding the area.
 5. If the depth area is bounded by only one depth contour, contains no soundings, and is a shoal:
 
@@ -886,7 +886,7 @@ NOTE: In the case where the shallowest depth in the area is equal to the boundin
 * These areas are optional. See clause 11.7.2 above and associated Figure 11-3.
 8. If the depth area is bounded by complete depth contours, but contains an incomplete (floating) depth contour:
 
-* *depth range minimum value*&nbsp;should take the value of the shallowest depth contour.
+* *depth range minimum value* should take the value of the shallowest depth contour.
 * *depth range maximum value* should take the value of the deepest depth contour.
 NOTE: Where the optional depth areas in paragraph 7 above are encoded, this will result in two discrete *Depth Area* features, one on each side of the encoded optional depth areas. See clause 11.7.2 above and associated Figure 11-3.
 
@@ -914,7 +914,7 @@ Distinction: Depth Contour; Dredged Area; Obstruction; Sea Area/Named Water Area
 [[sec_11.8]]
 === Depth -- no bottom found
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *DEPTH --**NO BOTTOM FOUND*. Upon investigation the bottom was not found at this depth. (Adapted from IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Depth -- No Bottom Found* __**(SOUNDG)**__
@@ -963,7 +963,7 @@ Distinction: Depth Contour; Dredged Area; Obstruction; Sea Area/Named Water Area
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| headline
 2+|
@@ -985,14 +985,14 @@ Distinction: Depth Contour; Dredged Area; Obstruction; Sea Area/Named Water Area
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+10+.<| footnote:crossnote[] For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -1081,7 +1081,7 @@ In some cases satellite imagery provides evidence that existing charted informat
 [[sec_11.10]]
 === Unsurveyed area
 
-[cols="693,847,847,847,847,847,847,847,847,847,684"]
+[cols="693,847,847,847,847,847,847,847,847,847,684", options="unnumbered"]
 |===
 11+.<h| IHO Definition: *UNSURVEYED AREA*. An area where [[hydrographic%20survey]] data is non-existent.(IHO Dictionary -- S-32).
 11+| *[underline]#S-101 Geo Feature:#* *Unsurveyed Area (UNSARE)*
@@ -1120,7 +1120,7 @@ In some cases satellite imagery provides evidence that existing charted informat
 3+|
 
 2+| (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| headline
 2+|
@@ -1142,14 +1142,14 @@ In some cases satellite imagery provides evidence that existing charted informat
 3+|
 
 2+| (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 11+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type 2+h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association 2+| 0,*
 | - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association 2+| 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association 2+| 0,*
-11+.<| ^†^ For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+11+.<| footnote:crossnote[] For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 

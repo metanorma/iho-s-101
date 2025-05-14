@@ -5,7 +5,7 @@
 [[sec_9.1]]
 === Sea area/named water area
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
 |===
 10+| IHO Definition: *SEA AREA/NAMED WATER AREA*. A geographically defined part of the sea or other navigable waters. It may be specified within its limits by its proper name. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.151, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Sea Area/Named Water Area (SEAARE)*

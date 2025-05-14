@@ -575,7 +575,7 @@ If it is required to show seasonality of features, it must be done using the att
 
 Where there is a requirement to indicate the beginning or end date of a seasonal occurrence as the "last day in February", consideration must be given to allowing for the extra day (29^th^ February) added on leap years. Encoding **periodic date range**, sub-attribute *date end* with the value ----_0228_ may result in erroneous indication of seasonality in the ECDIS on the 29^th^ February for leap years, while encoding the value ----_0229_ may similarly result in ECDIS performance issues for non-leap years. Encoders are advised, therefore, that where it is required to encode the end of seasonality as the last day in February, this must be done, similar to any other month of the year, by encoding the value of **periodic date range**, sub-attribute *date end* as --_--02--_. Where the beginning of seasonality is the last day in February, this must be done by encoding the value of **periodic date range**, sub-attribute *date start* in accordance with the next occurrence of the date (--_--0228_ if the next occurrence is a non-leap year or --_--0229_ if the next occurrence is a leap year). The ENC dataset must be amended by ENC Update (see Section 31) where the date is required to be changed. For instance, if the value is --_--0228_ and the next occurrence is a leap year, an ENC Update must be created to amend the date to --_--0229_.
 
-Alternatively, if encoders consider that there is no regulatory requirement to update the start date of a period for leap years, the value of *date start* may be populated as&nbsp;--__--03--__, indicating a beginning date of 01 March each year.
+Alternatively, if encoders consider that there is no regulatory requirement to update the start date of a period for leap years, the value of *date start* may be populated as --__--03--__, indicating a beginning date of 01 March each year.
 
 [[sec_2.4.9]]
 ==== Times
@@ -811,7 +811,7 @@ Each feature instance within an ENC must have a unique universal Feature Object 
 .Heights and elevations
 image::figure-2-2.png[Shape2,528,252]
 
-If it is required to encode the altitude of natural features above a vertical datum (for example hills, coastlines, slopes), with the exception of trees, it must be done using the attribute *elevation* (Figure 2-2&nbsp;(a)).
+If it is required to encode the altitude of natural features above a vertical datum (for example hills, coastlines, slopes), with the exception of trees, it must be done using the attribute *elevation* (Figure 2-2 (a)).
 
 For artificial features (for example landmarks, buildings) or trees:
 
@@ -863,7 +863,7 @@ h| name h| language h| name usage h| Language setting h| Name displayed
 | _P. Grolsch_      | _fra_ | _2_ |                     |
 |===
 
-[cols="^86,^78,^78,^41,^116,^96",options="noheader"]
+[cols="^86,^78,^78,^41,^116,^96",options="noheader,unnumbered"]
 |===
 3+<h| [underline]#S-101 Feature:# Land Area .7+^.^| ►
 2.2+<h| Name displayed in ECDIS (based on display of names enabled and Mariner's selected language settings)
@@ -878,7 +878,7 @@ h| name h| language h| name usage h| Language setting h| Name displayed
 
 |===
 
-[cols="^86,^78,^78,^41,^116,^96",options="noheader"]
+[cols="^86,^78,^78,^41,^116,^96",options="noheader,unnumbered"]
 |===
 3+<h| [underline]#S-101 Feature:# Built-Up Area .8+^.^| ►
 2.2+<h| Name displayed in ECDIS (based on display of names enabled and Mariner's selected language settings)

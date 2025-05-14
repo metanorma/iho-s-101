@@ -5,7 +5,7 @@
 [[sec_4.1]]
 === Magnetic variation
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *MAGNETIC VARIATION*. The angle between the magnetic and geographic meridians at any place, expressed in degrees east or west to indicate the direction of magnetic north from true north. Also called magnetic declination. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Magnetic Variation (MAGVAR)*
@@ -33,9 +33,7 @@
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -45,12 +43,10 @@
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
 3+| headline
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -67,14 +63,14 @@
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+
 |===
 
 [underline]#INT 1 Reference:# B 68, 70-71
@@ -96,7 +92,7 @@ Of the various magnetic data, magnetic variation is the most important element f
 [[sec_4.2]]
 === Local magnetic anomaly
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *LOCAL MAGNETIC ANOMALY*. An anomaly of the magnetic field of the Earth, extending over a relatively small area, due to local magnetic influences. Also called local attraction or magnetic anomaly. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Local Magnetic Anomaly (LOCMAG)*
@@ -127,13 +123,11 @@ Of the various magnetic data, magnetic variation is the most important element f
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| interoperability identifier
 2+|
@@ -144,9 +138,7 @@ Of the various magnetic data, magnetic variation is the most important element f
 
 3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
 3+| value of local magnetic anomaly
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 1,2
@@ -159,13 +151,11 @@ Of the various magnetic data, magnetic variation is the most important element f
 | 1,1
 
 3+| reference direction
-2+|
-
-3+|
+2+| 3+|
 5: east +
 13: west +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnote:crossnote[The sub-attribute *name usage* may be mandatory for certain encoding combinations for instances of complex attribute *feature name*. See clause 2.5.8.]
 
 3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
 3+| information
@@ -176,9 +166,7 @@ Of the various magnetic data, magnetic variation is the most important element f
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -188,12 +176,10 @@ Of the various magnetic data, magnetic variation is the most important element f
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| headline
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -210,7 +196,7 @@ Of the various magnetic data, magnetic variation is the most important element f
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -218,8 +204,8 @@ Of the various magnetic data, magnetic variation is the most important element f
 | The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ The sub-attribute *name usage* may be mandatory for certain encoding combinations for instances of complex attribute *feature name*. See clause 2.5.8.
 
+10+|
 Where there are two instances of the complex attribute **value of local magnetic anomaly**, the sub-attribute *reference direction* is mandatory for each instance.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.

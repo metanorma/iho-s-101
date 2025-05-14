@@ -48,7 +48,7 @@ No remarks.
 [[sec_3.3]]
 === Hierarchy of metadata
 
-The following Table indicates&nbsp;individual feature attributes that supersede Meta feature attributes.
+The following Table indicates individual feature attributes that supersede Meta feature attributes.
 
 [[table_3-1]]
 .Hierarchy of metadata
@@ -124,20 +124,18 @@ It is prohibited to use an attribute on an individual object, if this attribute 
 
 3+| file locator 2+| 3+| | (S) TE | 0,1
 
-3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 ^†^
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnote:crossnote[For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
 3+| headline 2+| 3+| | (S) TE | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 ^†^
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnote:crossnote[]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
-
 |===
 
 [underline]#INT 1 Reference:# M 32.1-2
@@ -159,7 +157,7 @@ Meta features *Quality of Non-bathymetric Data* and *Quality of Bathymetric Data
 [[sec_3.5]]
 === Data coverage
 
-[cols="700,670,665,474,474,474,474,474,210,385"]
+[cols="700,670,665,474,474,474,474,474,210,385", options="unnumbered"]
 |===
 9+.<h| IHO Definition: *DATA COVERAGE*. A geographical area that describes the coverage and extent of spatial objects. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.210, November 2000). |
 9+| *S-101 Metadata Feature:* *Data Coverage (M_COVR)* _*(M_CSCL)*_ |
@@ -174,9 +172,7 @@ Meta features *Quality of Non-bathymetric Data* and *Quality of Bathymetric Data
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| drawing index
-2+|
-
-3+|
+2+| 3+|
 
 | IN
 | 0,1
@@ -205,26 +201,16 @@ Meta features *Quality of Non-bathymetric Data* and *Quality of Bathymetric Data
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
-| 0,1 ^†^
+3+| | (S) TE
+| 0,1 footnote:crossnote[For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -236,16 +222,12 @@ Meta features *Quality of Non-bathymetric Data* and *Quality of Bathymetric Data
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
-| 0,1 ^†^
+3+| | (S) TE
+| 0,1 footnote:crossnote[]
 
 9+| *Feature Associations* |
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-9+.<| ^†^ For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
-
 |===
 
 [underline]#INT 1 Reference:#
@@ -268,28 +250,30 @@ For ENC, in order to provide a consistent relationship between the encoded data 
 
 [[table_3-2]]
 .Maximum, optimum and minimum display scale values
-[cols="980,938,931,593,593,593,593,593,593,593"]
+[cols="980,938,931"]
 |===
-h| maximum display scale .<h| optimum display scale h| minimum display scale | | | | | | |
-.15+.<| Any value | 10,000,000 .<| empty (null) | | | | | | |
-| 3,500,000 | 10,000,000 | | | | | | |
-| 1,500,000 | 3,500,000 | | | | | | |
-| 700,000 | 1,500,000 | | | | | | |
-| 350,000 | 700,000 | | | | | | |
-| 180,000 | 350,000 | | | | | | |
-| 90,000 | 180,000 | | | | | | |
-| 45,000 | 90,000 | | | | | | |
-| 22,000 | 45,000 | | | | | | |
-| 12,000 | 22,000 | | | | | | |
-| 8,000 | 12,000 | | | | | | |
-| 4,000 | 8,000 | | | | | | |
-| 3,000 | 4,000 | | | | | | |
-| 2,000 | 3,000 | | | | | | |
-| 1,000 | 2,000 | | | | | | |
-
+h| maximum display scale h| optimum display scale h| minimum display scale
+.15+^.^| Any value
+| 10,000,000    | empty (null)
+| 3,500,000     | 10,000,000
+| 1,500,000     | 3,500,000
+| 700,000       | 1,500,000
+| 350,000       | 700,000
+| 180,000       | 350,000
+| 90,000        | 180,000
+| 45,000        | 90,000
+| 22,000        | 45,000
+| 12,000        | 22,000
+| 8,000         | 12,000
+| 4,000         | 8,000
+| 3,000         | 4,000
+| 2,000         | 3,000
+| 1,000         | 2,000
 |===
 
-[NOTE: The selection of values for *maximum display scale* and *minimum display scale* for any selected *optimum display scale* are at the discretion of the Data Producer. That is, any value listed for *maximum display scale* and *minimum display scale* above may be selected from any of the listed values, with the only restriction being that *maximum display scale* must be a smaller value than/equal to *optimum display scale* which must be a smaller value than *minimum display scale* (or any value if *minimum display scale* is populated with an empty (null) value).]Typically, only a single *Data Coverage* feature should be used in a dataset. However, if the optimum display scale is different for discrete areas within a single ENC dataset, this must be indicated by encoding separate, non-overlapping *Data Coverage* features, each having a different value populated for *optimum display scale*. Producing Authorities are to note, however, that excessive use of multiple *Data Coverage* features having different values of *optimum display scale* within a single dataset should be avoided. Where different values of *optimum display scale* are used, this should be restricted only to data compiled in order to achieve the intended navigational usage for the entire dataset. Datasets must have the same value for *minimum display scale* for all *Data Coverage* features in the dataset. Datasets may have different values populated for *maximum display scale* for the *Data Coverage* features in the dataset; these values are typically populated as the value corresponding to 2 x the scale (or half the denominator) value populated for *optimum display scale* (this will replicate the corresponding gross overscale indication as implemented in S-57/S-52), but are at the discretion of the Data Producer. For example, the value for *maximum display scale* may be set to the same value as *optimum display scale* to have the "grossly overscaled" warning appear at any larger user selected viewing scale than **optimum display scale**; or populated as the value corresponding to the *minimum display scale* value for the next largest scale dataset(s) in the ENC portfolio.
+NOTE: The selection of values for *maximum display scale* and *minimum display scale* for any selected *optimum display scale* are at the discretion of the Data Producer. That is, any value listed for *maximum display scale* and *minimum display scale* above may be selected from any of the listed values, with the only restriction being that *maximum display scale* must be a smaller value than/equal to *optimum display scale* which must be a smaller value than *minimum display scale* (or any value if *minimum display scale* is populated with an empty (null) value).
+
+Typically, only a single *Data Coverage* feature should be used in a dataset. However, if the optimum display scale is different for discrete areas within a single ENC dataset, this must be indicated by encoding separate, non-overlapping *Data Coverage* features, each having a different value populated for *optimum display scale*. Producing Authorities are to note, however, that excessive use of multiple *Data Coverage* features having different values of *optimum display scale* within a single dataset should be avoided. Where different values of *optimum display scale* are used, this should be restricted only to data compiled in order to achieve the intended navigational usage for the entire dataset. Datasets must have the same value for *minimum display scale* for all *Data Coverage* features in the dataset. Datasets may have different values populated for *maximum display scale* for the *Data Coverage* features in the dataset; these values are typically populated as the value corresponding to 2 x the scale (or half the denominator) value populated for *optimum display scale* (this will replicate the corresponding gross overscale indication as implemented in S-57/S-52), but are at the discretion of the Data Producer. For example, the value for *maximum display scale* may be set to the same value as *optimum display scale* to have the "grossly overscaled" warning appear at any larger user selected viewing scale than **optimum display scale**; or populated as the value corresponding to the *minimum display scale* value for the next largest scale dataset(s) in the ENC portfolio.
 
 Where a series of differing optimum display scale ENC datasets are compiled covering the same geographic area, the smallest scale value populated for *optimum display scale* for *Data Coverage* feature(s) in the dataset should correspond to the **minimum display scale**, where populated, for the next largest optimum display scale ENC dataset. The largest scale value populated for *optimum display scale* for *Data Coverage* feature(s) in the dataset must not be a larger scale value than the *optimum display scale* for the next largest optimum display scale ENC dataset, where such a dataset exists.
 
@@ -306,7 +290,7 @@ Where a series of differing optimum display scale ENC datasets are compiled cove
 [[sec_3.6]]
 === Navigational system of marks
 
-[cols="77,115,115,115,115,115,115,115,41,77"]
+[cols="77,115,115,115,115,115,115,115,41,77", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *NAVIGATIONAL SYSTEM OF MARKS*. An area within which the navigational system of marks has been established in relation to a specific direction. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.214, November 2000).
 10+| *S-101 Metadata Feature:* *Navigational System of Marks* __**(M_NSYS)**__
@@ -335,26 +319,16 @@ Where a series of differing optimum display scale ENC datasets are compiled cove
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
-| 0,1 ^†^
+3+| | (S) TE
+| 0,1 footnote:crossnote[For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -366,16 +340,13 @@ Where a series of differing optimum display scale ENC datasets are compiled cove
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
-| 0,1 ^†^
+3+| | (S) TE
+| 0,1 footnote:crossnote[]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -399,7 +370,7 @@ Individual buoys and beacons may not be part of the general buoyage system. This
 [[sec_3.7]]
 === Local direction of buoyage
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *LOCAL DIRECTION OF BUOYAGE*. An area within which the navigational system of marks has been established in relation to a specific direction. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.214, November 2000).
 10+| *S-101 Metadata Feature:* *Local Direction of Buoyage* __**(M_NSYS)**__
@@ -434,26 +405,16 @@ Individual buoys and beacons may not be part of the general buoyage system. This
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
-| 0,1 ^†^
+3+| | (S) TE
+| 0,1 footnote:crossnote[For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -465,16 +426,13 @@ Individual buoys and beacons may not be part of the general buoyage system. This
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
-| 0,1 ^†^
+3+| | (S) TE
+| 0,1 footnote:crossnote[]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -498,7 +456,7 @@ Within a dataset, there may be some areas where the direction of buoyage is defi
 [[sec_3.8]]
 === Quality of bathymetric data
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *QUALITY OF BATHYMETRIC DATA*. An area within which a uniform assessment of the quality of the bathymetric data exists. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.216, November 2000).
 10+| *S-101 Metadata Feature:* *Quality of Bathymetric Data (M_QUAL)*
@@ -508,9 +466,7 @@ Within a dataset, there may be some areas where the direction of buoyage is defi
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| category of temporal variation
-2+|
-
-3+|
+2+| 3+|
 1: extreme event +
 2: likely to change and significant shoaling expected +
 3: likely to change but significant shoaling not expected +
@@ -520,9 +476,7 @@ Within a dataset, there may be some areas where the direction of buoyage is defi
 | 1,1
 
 3+| data assessment
-2+|
-
-3+|
+2+| 3+|
 1: assessed +
 2: assessed (oceanic)
 3: unassessed +
@@ -544,41 +498,31 @@ Within a dataset, there may be some areas where the direction of buoyage is defi
 | 0,1
 
 3+| features detected
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 1,1
 
 3+| least depth of detected features measured
-2+|
-
-3+|
+2+| 3+|
 
 | (S) BO
 | 1,1
 
 3+| significant features detected
-2+|
-
-3+|
+2+| 3+|
 
 | (S) BO
 | 1,1
 
 3+| size of features detected
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 0,1
 
 3+| full seafloor coverage achieved
-2+|
-
-3+|
+2+| 3+|
 
 | BO
 | 1,1
@@ -599,22 +543,16 @@ Within a dataset, there may be some areas where the direction of buoyage is defi
 
 3+| date end
 2+| _(SUREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(SURSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1
 
 3+| zone of confidence
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 1,*
@@ -631,41 +569,33 @@ Within a dataset, there may be some areas where the direction of buoyage is defi
 
 3+| See clause 2.4.8
 | (S) C
-| 0,1 ^†^
+| 0,1 footnote:crossnote[The sub-complex attribute *fixed date range* is mandatory if more than one instance of the complex attribute *zone of confidence* is encoded.]
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
-| 0,1 ^†^
+3+| | (S) TD
+| 0,1 footnote:crossnote[]
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
-| 0,1 ^†^
+3+| | (S) TD
+| 0,1 footnote:crossnote[]
 
 3+| horizontal position uncertainty
 2+| _(HORACC)_
 3+|
 
 | (S) C
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| uncertainty fixed
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 1,1
 
 3+| uncertainty variable factor
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 0,1
@@ -675,20 +605,16 @@ Within a dataset, there may be some areas where the direction of buoyage is defi
 3+|
 
 | (S) C
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| uncertainty fixed
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 1,1
 
 3+| uncertainty variable factor
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 0,1
@@ -701,26 +627,16 @@ Within a dataset, there may be some areas where the direction of buoyage is defi
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
-| 0,1 ^†^
+3+| | (S) TE
+| 0,1 footnote:crossnote[]
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -732,17 +648,16 @@ Within a dataset, there may be some areas where the direction of buoyage is defi
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
-| 0,1 ^†^
+3+| | (S) TE
+| 0,1 footnote:crossnote[]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
 | - 3+| *Quality of Bathymetric Data Composition* (see clause 25.12) 3+| *Spatial Quality* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ The sub-complex attribute *fixed date range* is mandatory if more than one instance of the complex attribute *zone of confidence* is encoded.
+
+10+|
 
 The sub-complex attributes *horizontal position uncertainty* and *vertical uncertainty* are mandatory if the *Quality of Bathymetric Data* instance is not associated to a *Spatial Quality* instance using the association *Quality of Bathymetric Data Composition*.
 
@@ -797,7 +712,7 @@ NOTE: Figure 3-2 demonstrates the two options for the encoding of the horizontal
 * Wherever possible, meaningful and useful values for the attributes **category of temporal variation**, **full seafloor coverage achieved**, and the complex attribute *features detected* must be used for areas of bathymetry. For areas of unstable seafloors, the complex attribute *survey date range* (*date end*) should be used to indicate the date of the survey of the underlying bathymetric data.
 * As a result of some disasters, for example earthquakes, tsunamis, hurricanes, it is possible that large areas of seafloor have moved and/or become cluttered with dangerous obstructions. Emergency surveys may subsequently be conducted over essential shipping routes and inside harbours. Outside these surveys, all existing detail is now suspect, whatever the quality of the previous surveys. In such cases, the attribute *category of temporal variation* should be reclassified to value _1_ (extreme event), the Boolean attribute *full seafloor coverage achieved* set to __False__; complex attribute **features detected**, Boolean sub-attributes *least depth of detected features measured* and *significant features detected* set to __False__; the *zone of confidence* sub-attribute *category of zone of confidence in data* reclassified to _5_ (zone of confidence D); and the sub-attributes *horizontal position accuracy* (*uncertainty fixed*) and *vertical uncertainty* (*uncertainty fixed*) on *Quality of Bathymetric Data* or the associated *Spatial Quality*populated with an empty (null) value in the affected areas outside the area covered by emergency surveys.
 * To express completeness of bathymetric data, the complex attribute *features detected* must be encoded. *features detected* indicates that a systematic method of exploring the seafloor, or the water column to the depth indicated by population of the attribute **depth range maximum value**, was undertaken to detect significant features. The sub-attributes *size of features detected* and *least depth of detected features measured* must not be encoded unless the sub-attribute *significant features detected* is set to _True_.
-* The mandatory complex attribute *zone of confidence*is used on a *Quality of Bathymetric Data* feature to provide an overall indication of the accuracy of the bathymetric data in the area; and may be used to specify the vertical and horizontal position uncertainty of the depths covered by the surface. Where *category of temporal variation* is set to values _2_ (likely to change and significant shoaling expected) or _3_ (likely to change but significant shoaling not expected), multiple instances of the complex attribute *zone of confidence* should be encoded to provide an indication of the degradation of the overall accuracy as well as the vertical and horizontal position uncertainty of the charted bathymetric information over time.
+* The mandatory complex attribute *zone of confidence* is used on a *Quality of Bathymetric Data* feature to provide an overall indication of the accuracy of the bathymetric data in the area; and may be used to specify the vertical and horizontal position uncertainty of the depths covered by the surface. Where *category of temporal variation* is set to values _2_ (likely to change and significant shoaling expected) or _3_ (likely to change but significant shoaling not expected), multiple instances of the complex attribute *zone of confidence* should be encoded to provide an indication of the degradation of the overall accuracy as well as the vertical and horizontal position uncertainty of the charted bathymetric information over time.
 
 ** Wherever possible, meaningful and useful values of the mandatory sub-attribute *category of zone of confidence in data* should be used (that is, values other than *category of zone of confidence in data* = _6_ (zone of confidence U)) for areas of bathymetry. These values must be determined from the *category of zone of confidence in data* definition table (see clause 27.74) in accordance with the values populated for the attribute **full seafloor coverage achieved**,the complex attribute *features detected* and the sub-complex attributes *horizontal position uncertainty* and *vertical uncertainty* on the *Quality of Bathymetric Data* or the associated *Spatial Quality* (see the following Remarks bullet).
 ** The sub-complex attribute *fixed date range* is used to define the date range(s) where the quality is degraded over time. Where multiple date ranges are specified, the *date start* of an instance must be equal to the *date end* of the previous instance. Within the sequence, the *date start* of the first instance and the *date end* of the last instance should not be populated; the values populated for *fixed date range* must not result in the removal of the indication of bathymetric data quality for an area from the Mariner.
@@ -844,7 +759,7 @@ The vertical and horizontal position uncertainty values populated on the instanc
 [[sec_3.9]]
 === Sounding datum
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *SOUNDING DATUM*. The horizontal plane or tidal datum to which soundings have been reduced. Also called datum for sounding reduction. (Adapted from IHO Dictionary -- S-32).
 10+| *S-101 Metadata Feature:* *Sounding Datum (M_SDAT)*
@@ -892,26 +807,16 @@ The vertical and horizontal position uncertainty values populated on the instanc
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
-| 0,1 ^†^
+3+| | (S) TE
+| 0,1 footnote:crossnote[For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -923,16 +828,13 @@ The vertical and horizontal position uncertainty values populated on the instanc
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
-| 0,1 ^†^
+3+| | (S) TE
+| 0,1 footnote:crossnote[]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -967,7 +869,7 @@ Note, that because every ZCOO value is explicitly linked to sounding datum there
 [[sec_3.10]]
 === Vertical datum of data
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *VERTICAL DATUM OF DATA*. Any level surface (for example Mean Sea Level) taken as a surface of reference to which the elevations within a data set are reduced. Also called datum level, reference level, reference plane, levelling datum, datum for heights. (Adapted from IHO Dictionary -- S-32).
 10+| *S-101 Metadata Feature:* *Vertical Datum of Data (M_VDAT)*
@@ -1007,26 +909,16 @@ Note, that because every ZCOO value is explicitly linked to sounding datum there
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
-| 0,1 ^†^
+3+| | (S) TE
+| 0,1 footnote:crossnote[For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -1038,16 +930,13 @@ Note, that because every ZCOO value is explicitly linked to sounding datum there
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
-| 0,1 ^†^
+3+| | (S) TE
+| 0,1 footnote:crossnote[]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -1062,7 +951,7 @@ The vertical datum of the dataset must be encoded using the Meta feature *Vertic
 
 All parts of the dataset containing data must be covered by *Vertical Datum of Data* features, with the attribute *vertical datum* indicating the vertical (height) datum. *Vertical Datum of Data* features must not overlap.
 
-Various height datums may be used within an ENC. For example, different datums may be used&nbsp;for the following:
+Various height datums may be used within an ENC. For example, different datums may be used for the following:
 
 * altitude of spot heights, height contours, landmarks,
 * elevation of lights,
@@ -1081,7 +970,7 @@ Where different vertical datums are used for the various vertical measurements, 
 [[sec_3.11]]
 === Quality of survey
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *QUALITY OF SURVEY*. An area within which a uniform assessment of the reliability of source survey information exists. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.218, November 2000).
 10+| *S-101 Metadata Feature:* *Quality of Survey (M_SREL)*
@@ -1105,41 +994,31 @@ Where different vertical datums are used for the various vertical measurements, 
 | 0,1
 
 3+| features detected
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,1
 
 3+| least depth of detected features measured
-2+|
-
-3+|
+2+| 3+|
 
 | (S) BO
 | 1,1
 
 3+| significant features detected
-2+|
-
-3+|
+2+| 3+|
 
 | (S) BO
 | 1,1
 
 3+| size of features detected
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 0,1
 
 3+| full seafloor coverage achieved
-2+|
-
-3+|
+2+| 3+|
 
 | BO
 | 0,1
@@ -1152,17 +1031,13 @@ Where different vertical datums are used for the various vertical measurements, 
 | 0,1
 
 3+| line spacing maximum
-2+|
-
-3+|
+2+| 3+|
 
 | IN
 | 0,1
 
 3+| line spacing minimum
-2+|
-
-3+|
+2+| 3+|
 
 | IN
 | 0,1
@@ -1212,16 +1087,12 @@ Where different vertical datums are used for the various vertical measurements, 
 
 3+| date end
 2+| _(SUREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(SURSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1
 
 3+| survey type 2+| (SURTYP) 3+|
@@ -1251,7 +1122,7 @@ Where different vertical datums are used for the various vertical measurements, 
 13: swept by side scan sonar +
 15: found by LIDAR +
 16: synthetic aperture radar +
-17: hyperspectral imagery18&nbsp;: mechanically swept | EN | 0,*
+17: hyperspectral imagery18 : mechanically swept | EN | 0,*
 3+| information
 2+|
 
@@ -1260,26 +1131,16 @@ Where different vertical datums are used for the various vertical measurements, 
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
-| 0,1 ^†^
+3+| | (S) TE
+| 0,1 footnote:crossnote[For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -1291,16 +1152,13 @@ Where different vertical datums are used for the various vertical measurements, 
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
-| 0,1 ^†^
+3+| | (S) TE
+| 0,1 footnote:crossnote[]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -1337,14 +1195,15 @@ The technique of sounding measurement must not be encoded using *technique of ve
 [underline]#Remarks:#
 
 * No remarks.
-[[UOC]]Distinction: Accuracy of Data; Quality of Bathymetric Data.
+
+Distinction: Accuracy of Data; Quality of Bathymetric Data.
 
 [[sec_3.12]]
 === Update information
 
-[cols="356,399,399,399,399,399,399,399,399,172,280"]
+[cols="340,340,340,340,340,340,340,340,340,172,280", options="unnumbered"]
 |===
-11+.<h| IHO Definition: *UPDATE INFORMATION*. The Update Information metadata feature is used to represent a change to the information shown.
+11+h| IHO Definition: *UPDATE INFORMATION*. The Update Information metadata feature is used to represent a change to the information shown.
 11+| *S-101 Metadata Feature:* *Update Information*
 11+| *[underline]#Primitives:#* **Point, Curve, Surface**, *None*
 2+| _Real World_
@@ -1359,20 +1218,16 @@ The technique of sounding measurement must not be encoded using *technique of ve
 
 3+| See clause 2.4.8
 | C
-| 0,1 ^†^
+| 0,1 footnote:crossnote[For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.*fixed date range* and/or *scale minimum* are mandatory if *fixed date range* and/or *scale minimum* are populated for the associated Geo feature, and must be identical to the values populated for the associated Geo feature.]
 
 3+| date end
 3+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1
 
 3+| date start
 3+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1
 
 4+| interoperability identifier
@@ -1383,28 +1238,22 @@ The technique of sounding measurement must not be encoded using *technique of ve
 | 0,1
 
 4+| update number
-2+|
-
-3+|
+2+| 3+|
 
 | IN
 | 1,1
 
 4+| update type
-2+|
-
-3+|
+2+| 3+|
 1: insert +
 2: delete +
 3: modify4: move
 | EN
 | 1,1
 
-3+| scale minimum 3+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1 ^†^
+3+| scale minimum 3+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1 footnote:crossnote[]
 3+| source
-3+|
-
-3+|
+3+| 3+|
 
 | TE
 | 0,1
@@ -1417,26 +1266,16 @@ The technique of sounding measurement must not be encoded using *technique of ve
 | 0,*
 
 3+| file locator
-3+|
-
-3+|
-
-| (S) TE
+3+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 3+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
-| 0,1 ^†^
+3+| | (S) TE
+| 0,1 footnote:crossnote[]
 
 3+| headline
-3+|
-
-3+|
-
-| (S) TE
+3+| 3+| | (S) TE
 | 0,1
 
 3+| language
@@ -1448,18 +1287,16 @@ The technique of sounding measurement must not be encoded using *technique of ve
 
 3+| text
 3+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
-| 0,1 ^†^
+3+| | (S) TE
+| 0,1 footnote:crossnote[]
 
 11+| *Feature Associations*
 | *S-101 Role* 4+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
 | The Update 4+| *Updated Information* (see clause 25.21) 3+| Most Meta features and all Geo features 2+| Association | 0,*
 | The Collection 4+| *Update Aggregation*(see clause 25.20) 3+| *Update Information* 2+| Aggregation | 0,1
 | The Component 4+| *Update Aggregation*(see clause 25.20) 3+| *Update Information* 2+| Association | 0,*
-11+.<| ^†^ For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.*fixed date range* and/or *scale minimum* are mandatory if *fixed date range* and/or *scale minimum* are populated for the associated Geo feature, and must be identical to the values populated for the associated Geo feature.
 
+11+|
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 |===
 

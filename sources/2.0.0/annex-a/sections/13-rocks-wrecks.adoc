@@ -21,7 +21,7 @@ If it is required to encode one or more least depths in such an area, it must be
 [[sec_13.2]]
 === Danger line bordering an area through which navigation is not safe (see S-4 -- B-420.1)
 
-A danger line, bordering an area through which navigation is not safe, should be encoded using an *Obstruction* feature of type surface, with attribute *category of obstruction*&nbsp;=&nbsp;_6_ (foul area).
+A danger line, bordering an area through which navigation is not safe, should be encoded using an *Obstruction* feature of type surface, with attribute *category of obstruction* = _6_ (foul area).
 
 [[sec_13.3]]
 === Doubtful dangers (see S-4 -- B-424)
@@ -172,7 +172,7 @@ The fact that a danger is doubtful should be encoded using the feature attribute
 13: swept by side scan sonar +
 15: found by LIDAR +
 16: synthetic aperture radar +
-17: hyperspectral imagery18&nbsp;: mechanically swept | EN | 0,*
+17: hyperspectral imagery18 : mechanically swept | EN | 0,*
 3+| value of sounding
 2+| (VALSOU)
 3+|
@@ -711,7 +711,7 @@ Historically the criteria used for differentiating between "dangerous" and "non-
 
 Many nations have designated areas around certain wrecks of historical or cultural (for example sea graves) importance to protect the wrecks from unauthorised interference (for example by diving, salvage or anchoring). Such areas should be encoded on the largest optimum display scale ENC data covering the wreck.
 
-If it is required to encode a restricted area around a historic wreck, it must be done using a *Restricted Area* feature (see clause 17.8), with attribute *category of restricted area*&nbsp;=&nbsp;_10_ (historic wreck area).
+If it is required to encode a restricted area around a historic wreck, it must be done using a *Restricted Area* feature (see clause 17.8), with attribute *category of restricted area* = _10_ (historic wreck area).
 
 In addition, the wreck itself should be encoded as a *Wreck*feature, with attribute *status* = _13_ (historic).
 
@@ -1026,7 +1026,7 @@ Foul ground, over which it is safe to navigate but which should be avoided for a
 * For reported, not confirmed obstructions, the date of the report must be populated, where known, using the attribute *reported date*.
 * If the nature of a dangerous underwater feature, dangerous underwater area, or floating feature is not explicitly known, it must be encoded using *Obstruction*.
 * An *Obstruction* feature of type surface must be covered by a surface feature from Skin of the Earth as appropriate.
-* An area containing numerous dangers, through which navigation is not safe at the optimum display scale for the ENC data, should be encoded using an *Obstruction* feature of type surface, with attribute *category of obstruction*&nbsp;=&nbsp;_6_ (foul area).
+* An area containing numerous dangers, through which navigation is not safe at the optimum display scale for the ENC data, should be encoded using an *Obstruction* feature of type surface, with attribute *category of obstruction* = _6_ (foul area).
 * If it is required to encode a submerged *Obstruction* feature where the attribute *value of sounding* is populated with an empty (null) value, but the source information indicates the depth of the feature is within the range of the surrounding depth area, the value *exposition of sounding* = _1_ (within the range of the surrounding depth area) must be populated in order to avoid the unnecessary display of isolated danger symbols in ECDIS.
 * Active submarine volcanos can be a significant navigational hazard; and harmful concentrations of volcanic gases emanating from active submarine volcanos can cover an extensive area (see S-4 -- clause B-428.4). If it is required to encode an active submarine volcano, it must be done using an *Obstruction* feature of type point, with attributes *category of obstruction* = _21_ (active submarine volcano), *exposition of sounding* = _2_ (shoaler than the range of depth of the surrounding depth area) and *quality of vertical measurement* = _2_ (depth or least depth unknown). To indicate the unpredictable nature of the volcano (it may be periodically submerged or extend above the surface), the mandatory attributes *value of sounding* and *water level effect* must be populated with an empty (null) value. In order to raise the level of indication of the hazard in the ECDIS to the Mariner so as to generate an alarm, a small *Depth Area* feature having attribute *depth range minimum value* = _0_ may also be encoded. The area that can be potentially covered by harmful volcanic gases, which may cover an area of up to 10 NM from the volcano, should be encoded using a *Caution Area* feature (see clause 16.10), having the complex attribute *information* (see clause 2.4.6), sub-attributes *text* = _Volcanic activity_ and *file reference* carrying a reference to an appropriate cautionary note similar to:
 _Active submarine volcanos exist in this area. Some volcanos have been reported to erupt breaking the surface of the sea and projecting ashes, other volcanic materials and harmful gases into the air. Changes to charted depths, uplifting of reefs and emerging of volcanic islets may occur throughout the area. Due to the unpredictable nature of these events Mariners are strongly recommended to avoid the area_.
@@ -1396,16 +1396,12 @@ If it is required to encode the possible existence of shoal water as indicated b
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
@@ -1562,16 +1558,12 @@ If it is required to encode a fishing facility it must be done using the feature
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| height
@@ -1597,16 +1589,12 @@ If it is required to encode a fishing facility it must be done using the feature
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| quality of vertical measurement 2+| (QUASOU) 3+|
@@ -1818,7 +1806,7 @@ If it is required to encode a marine farm, it must be done using the feature *Ma
 [[sec_13.10.2]]
 ==== Fish havens (see S-4 -- B- 447.5)
 
-If it is required to encode a fish haven, it must be done using an *Obstruction* feature (see clause 13.6), with attribute *category of obstruction*&nbsp;=&nbsp;_5_ (fish haven).
+If it is required to encode a fish haven, it must be done using an *Obstruction* feature (see clause 13.6), with attribute *category of obstruction* = _5_ (fish haven).
 
 
 [underline]#Distinction:# Fishing Facility; Obstruction.

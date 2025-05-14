@@ -481,7 +481,7 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 [[sec_7.2]]
 === Landmark
 
-[cols="609,794,794,794,794,794,794,794,294,539"]
+[cols="609,794,794,794,794,794,794,794,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *LANDMARK*. Any prominent object at a fixed location on land which can be used in determining a location or a direction. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Landmark (LNDMRK)*
@@ -541,7 +541,7 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | EN | 0,1 ^†^
+6: border stripe | EN | 0,1 footnote:crossnote[]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
@@ -576,13 +576,11 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| function 2+| (FUNCTN) 3+|
 2: harbour-masters office
@@ -646,25 +644,19 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 | 0,1
 
 3+| multiplicity of features
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,1
 
 3+| multiplicity known
-2+|
-
-3+|
+2+| 3+|
 
 | (S) BO
 | 1,1
 
 3+| number of features
-2+|
-
-3+|
+2+| 3+|
 
 | (S) IN
 | 0,1
@@ -715,9 +707,7 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -727,12 +717,10 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| headline
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -749,13 +737,11 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
 3+| in the water
-2+|
-
-3+|
+2+| 3+|
 
 | BO
 | 0,1
@@ -770,7 +756,7 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 | The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ The attribute *colour pattern* is mandatory for landmarks that have more than one value populated for the attribute *colour*.
+10+.<| footnote:crossnote[] The attribute *colour pattern* is mandatory for landmarks that have more than one value populated for the attribute *colour*.
 
 Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
 
@@ -794,7 +780,7 @@ If it is required to encode a landmark (other than a tank, silo or roofed struct
 * For buildings, see clause6.2; for silos, tanks and water towers, see clause7.3. For common encoding combinations, see clause7.1. For wind turbines, see clause7.4. For roofed structures such as boathouses erected or extending over navigable water to provide protection for a vessel or its cargo, see clause 8.7. For flare stacks on offshore platforms, see clause 14.1.1.
 * The feature association *Structure/Equipment* (see clause 25.16) must only be used with *Landmark* features if the main purpose of the structure is to act as an aid to navigation (for example a lighthouse).
 * A water tower must be encoded, where required, using the feature *Silo/Tank* (see clause7.3).
-* A ruined landmark should be encoded in the same way as the feature in good condition, but with attribute *condition*&nbsp;=&nbsp;_2_ (ruined).
+* A ruined landmark should be encoded in the same way as the feature in good condition, but with attribute *condition* = _2_ (ruined).
 * Radio and television masts and towers are likely to be visible over long distances and should be encoded as landmarks, even when well inland. They will usually carry air obstruction lights.
 * To aid identification of landmarks by the Mariner it may be useful to add the height of the top of the structure above ground level (*vertical length*) or above the general height datum (*height*).
 * Buildings constructed as places of worship often form significant landmarks; their size and structure incorporating towers, spires, cupolas, etc often render them conspicuous. These buildings when known to be prominent or conspicuous should be encoded up to several miles inland (see Figure 7-1 below, examples (a) and (b)).
@@ -817,7 +803,7 @@ image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_668be06e.gif[Shape21,624,183
 [[sec_7.3]]
 === Silo/tank
 
-[cols="609,794,794,794,794,794,794,794,294,539"]
+[cols="609,794,794,794,794,794,794,794,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *SILO/TANK*. A large storage structure used for storing loose materials, liquids and/or gases. (Adapted from Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2012).
 10+| *[underline]#S-101 Geo Feature:#* *Silo/Tank (SILTNK)*
@@ -857,7 +843,7 @@ image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_668be06e.gif[Shape21,624,183
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | EN | 0,1 ^†^
+6: border stripe | EN | 0,1 footnote:crossnote[]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
@@ -891,13 +877,11 @@ image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_668be06e.gif[Shape21,624,183
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| height
 2+| (HEIGHT)
@@ -914,25 +898,19 @@ image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_668be06e.gif[Shape21,624,183
 | 0,1
 
 3+| multiplicity of features
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,1
 
 3+| multiplicity known
-2+|
-
-3+|
+2+| 3+|
 
 | (S) BO
 | 1,1
 
 3+| number of features
-2+|
-
-3+|
+2+| 3+|
 
 | (S) IN
 | 0,1
@@ -992,9 +970,7 @@ image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_668be06e.gif[Shape21,624,183
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -1004,12 +980,10 @@ image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_668be06e.gif[Shape21,624,183
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| headline
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -1026,13 +1000,11 @@ image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_668be06e.gif[Shape21,624,183
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
 3+| in the water
-2+|
-
-3+|
+2+| 3+|
 
 | BO
 | 0,1
@@ -1046,7 +1018,7 @@ image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_668be06e.gif[Shape21,624,183
 | The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ The attribute *colour pattern* is mandatory for silos or tanks that have more than one value populated for the attribute *colour*.
+10+.<| footnote:crossnote[] The attribute *colour pattern* is mandatory for silos or tanks that have more than one value populated for the attribute *colour*.
 
 Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
 
@@ -1074,9 +1046,9 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 [[sec_7.4]]
 === Wind turbine
 
-[cols="609,794,794,794,794,794,794,794,294,539"]
+[cols="609,794,794,794,794,794,794,794,294,539", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *WIND TURBINE*. A tower and associated equipment that generates electrical power from&nbsp;wind. They can be sited&nbsp;offshore&nbsp;and may be either fixed or floating. (IHO Dictionary -- S-32).
+10+| [underline]#IHO Definition:# *WIND TURBINE*. A tower and associated equipment that generates electrical power from wind. They can be sited offshore and may be either fixed or floating. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Wind Turbine* __**(LNDMRK)**__
 10+| *[underline]#Primitives:#* *Point*
 
@@ -1103,7 +1075,7 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | EN | 0,1 ^†^
+6: border stripe | EN | 0,1 footnote:crossnote[]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 4: wingless +
@@ -1137,13 +1109,11 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| fixed date range
 2+|
@@ -1154,17 +1124,13 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
-| 0,1 ^†^
+3+| | (S) TD
+| 0,1 footnote:crossnote[]
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
-| 0,1 ^†^
+3+| | (S) TD
+| 0,1 footnote:crossnote[]
 
 3+| height
 2+| (HEIGHT)
@@ -1181,25 +1147,19 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 | 0,1
 
 3+| multiplicity of features
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,1
 
 3+| multiplicity known
-2+|
-
-3+|
+2+| 3+|
 
 | (S) BO
 | 1,1
 
 3+| number of features
-2+|
-
-3+|
+2+| 3+|
 
 | (S) IN
 | 0,1
@@ -1230,9 +1190,7 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 14: public +
 28: buoyed | EN | 0,*
 3+| vertical clearance fixed
-2+|
-
-3+|
+2+| 3+|
 
 | C
 | 0,1
@@ -1252,17 +1210,13 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 | 0,1
 
 3+| uncertainty fixed
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 1,1
 
 3+| uncertainty variable factor
-2+|
-
-3+|
+2+| 3+|
 
 | (S) RE
 | 0,1
@@ -1306,9 +1260,7 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -1318,12 +1270,10 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| headline
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -1340,13 +1290,11 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
 3+| in the water
-2+|
-
-3+|
+2+| 3+|
 
 | BO
 | 0,1
@@ -1359,7 +1307,7 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 | The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ The attribute *colour pattern* is mandatory for bridges that have more than one value populated for the attribute *colour*.
+10+.<| footnote:crossnote[] The attribute *colour pattern* is mandatory for bridges that have more than one value populated for the attribute *colour*.
 
 Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
 
@@ -1385,7 +1333,7 @@ If it is required to encode a wind turbine, it must be done using the feature *W
 * For offshore wind turbines, the Boolean attribute *in the water* must be set to _True_ to indicate that the feature is to be included in the ECDIS Base Display. Where such structures are located in the water it is not required to encode any supporting structures (for example piles).
 * For offshore wind turbines (attribute *in the water* = _True_), the attribute *height* is only relevant for fixed turbines, and is referred to the vertical datum (see clause 2.5.7).
 * For offshore wind turbines, the attribute *vertical length* is only relevant for floating wind turbines, and is referred to the sea level.
-* A ruined wind turbine should be encoded in the same way as the feature in good condition, but with attribute *condition*&nbsp;=&nbsp;_4_ (wingless).
+* A ruined wind turbine should be encoded in the same way as the feature in good condition, but with attribute *condition* = _4_ (wingless).
 * If it is required to encode sites of dismantled offshore wind turbines, this must be done using *Foul Ground* features (see clause 13.7), unless the source indicates that any remaining structure protrudes far enough above the seabed so as to be an obstruction to surface navigation, in which case this must be encoded using an *Obstruction* feature (see clause13.6).
 * If it is required to encode an offshore wind farm, it must be done using the feature *Offshore Production Area* (see clause 14.6). An onshore wind farm must be encoded, where required, using the feature *Production/Storage Area* (see clause7.6).
 * Wind turbines may carry lights (see Section 19) or fog signals (see clause20.19). Where fitted, lights should be encoded as described in Section 19, with the *Wind Turbine* being used as the structure feature for the light equipment feature(s).
@@ -1400,7 +1348,7 @@ If it is required to encode a wind turbine, it must be done using the feature *W
 [[sec_7.5]]
 === Fortified structure
 
-[cols="609,794,794,794,794,794,794,794,294,539"]
+[cols="609,794,794,794,794,794,794,794,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *FORTIFIED STRUCTURE*.
 
@@ -1445,13 +1393,11 @@ A structure that is specifically designed or reinforced to provide for defence f
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| height
 2+| (HEIGHT)
@@ -1509,9 +1455,7 @@ A structure that is specifically designed or reinforced to provide for defence f
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -1521,12 +1465,10 @@ A structure that is specifically designed or reinforced to provide for defence f
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| headline
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -1543,13 +1485,11 @@ A structure that is specifically designed or reinforced to provide for defence f
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
 3+| in the water
-2+|
-
-3+|
+2+| 3+|
 
 | BO
 | 0,1
@@ -1563,7 +1503,7 @@ A structure that is specifically designed or reinforced to provide for defence f
 | The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
@@ -1589,7 +1529,7 @@ If it is required to encode a fortified structure, it must be done using the fea
 [[sec_7.6]]
 === Production/storage area
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *PRODUCTION/STORAGE AREA*. An area on land for the exploitation or storage of natural resources. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.124, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Production/Storage Area (PRDARE)*
@@ -1644,13 +1584,11 @@ If it is required to encode a fortified structure, it must be done using the fea
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| fixed date range
 2+|
@@ -1661,17 +1599,13 @@ If it is required to encode a fortified structure, it must be done using the fea
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
-| 0,1 ^†^
+3+| | (S) TD
+| 0,1 footnote:crossnote[]
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
-| 0,1 ^†^
+3+| | (S) TD
+| 0,1 footnote:crossnote[]
 
 3+| height
 2+| (HEIGHT)
@@ -1743,9 +1677,7 @@ If it is required to encode a fortified structure, it must be done using the fea
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -1755,12 +1687,10 @@ If it is required to encode a fortified structure, it must be done using the fea
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| headline
-2+|
-
-3+|
+2+| 3+|
 
 | (S) TE
 | 0,1
@@ -1777,7 +1707,7 @@ If it is required to encode a fortified structure, it must be done using the fea
 3+|
 
 | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:crossnote[]
 
 3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
 10+| *Feature Associations*
@@ -1786,7 +1716,7 @@ If it is required to encode a fortified structure, it must be done using the fea
 | The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
 
 For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
 

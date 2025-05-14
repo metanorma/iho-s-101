@@ -98,16 +98,12 @@ image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_3bff532f.png["",493,447]
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -157,16 +153,12 @@ image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_3bff532f.png["",493,447]
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| status 2+| (STATUS) 3+|
@@ -466,16 +458,12 @@ If the track to be followed is on a leading line or a bearing, it must be encode
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -508,16 +496,12 @@ If the track to be followed is on a leading line or a bearing, it must be encode
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| quality of vertical measurement 2+| (QUASOU) 3+|
@@ -541,7 +525,7 @@ If the track to be followed is on a leading line or a bearing, it must be encode
 13: swept by side scan sonar +
 15: found by LIDAR +
 16: synthetic aperture radar +
-17: hyperspectral imagery18&nbsp;: mechanically swept | EN | 0,*
+17: hyperspectral imagery18 : mechanically swept | EN | 0,*
 3+| traffic flow 2+| (TRAFIC) 3+|
 1: inbound +
 2: outbound +
@@ -788,7 +772,7 @@ Remarks:
 
 [cols="609,794,794,794,794,794,794,794,294,539"]
 |===
-10+| [underline]#IHO Definition:# *RANGE SYSTEM*. Two or more features in the same horizontal&nbsp;direction, particularly those&nbsp;features&nbsp;so placed as&nbsp;navigational aids&nbsp;to mark any line of importance to vessels, as a&nbsp;channel. The one nearest the observer is the front mark and the one farthest from the observer is the rear mark. (Adapted from IHO Dictionary -- S-32).
+10+| [underline]#IHO Definition:# *RANGE SYSTEM*. Two or more features in the same horizontal direction, particularly those features so placed as navigational aids to mark any line of importance to vessels, as a channel. The one nearest the observer is the front mark and the one farthest from the observer is the rear mark. (Adapted from IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Range System* __**(C_AGGR)**__
 10+| *[underline]#Primitives:#* *Curve, Surface, None*
 
@@ -834,16 +818,12 @@ Remarks:
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -992,16 +972,12 @@ If it is required to encode leading, clearing and transit lines and recommended 
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -1251,16 +1227,12 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -1287,16 +1259,12 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
@@ -1436,16 +1404,12 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -1471,16 +1435,12 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| quality of vertical measurement 2+| (QUASOU) 3+|
@@ -1639,16 +1599,12 @@ A recommended route is a route of undefined width, for the convenience of ships 
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -1845,16 +1801,12 @@ If it is required to encode a two-way route with one-way sections, separate *Two
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -1966,16 +1918,12 @@ To define the complete two-way system, the *Two-Way Route Part* features must be
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -2132,16 +2080,12 @@ Recommended direction of traffic flow is a traffic flow pattern indicating a rec
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| IMO adopted
@@ -2350,16 +2294,12 @@ A complete Deep Water route (DW) consists of one or more areas within which the 
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| IMO adopted
@@ -2622,16 +2562,12 @@ A complete Deep Water route (DW) consists of one or more areas within which the 
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| IMO adopted
@@ -2742,16 +2678,12 @@ If it is required to define a complete Deep Water route (DW) system, the feature
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -2946,16 +2878,12 @@ The feature*Inshore Traffic Zone* must only be used to encode the designated are
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| IMO adopted
@@ -3128,16 +3056,12 @@ Precautionary areas are commonly designated by IMO for certain areas of convergi
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -3315,16 +3239,12 @@ image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_fded47e2.gif[Shape34,308,147
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -3428,16 +3348,12 @@ The feature *Separation Zone or Line* must be used to encode the common boundary
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -3541,16 +3457,12 @@ The feature *Traffic Separation Scheme Boundary* must only be used to encode the
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -3716,16 +3628,12 @@ The feature *Traffic Separation Scheme Crossing* must only be used to encode the
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -3920,16 +3828,12 @@ The feature *Traffic Separation Scheme Roundabout* must only be used to encode t
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| IMO adopted
@@ -4081,16 +3985,12 @@ If it is required to encode a traffic separation scheme (TSS), it must be done u
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -4230,16 +4130,12 @@ Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) state
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -4377,16 +4273,12 @@ Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) state
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -4534,16 +4426,12 @@ To define the complete Archipelagic Sea Lane (ASL) system, the features **Archip
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -4569,16 +4457,12 @@ To define the complete Archipelagic Sea Lane (ASL) system, the features **Archip
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| status 2+| (STATUS) 3+|
@@ -4723,16 +4607,12 @@ Radio reporting points, also called radio calling-in points, have been establish
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -4751,16 +4631,12 @@ Radio reporting points, also called radio calling-in points, have been establish
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| status 2+| (STATUS) 3+|
@@ -5035,16 +4911,12 @@ Radar reference linesare mid-channel lines corresponding to lines incorporated i
 
 3+| date end
 2+| (DATEND)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| date start
 2+| (DATSTA)
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 0,1 ^†^
 
 3+| interoperability identifier
@@ -5209,16 +5081,12 @@ Many large ports have a radar surveillance system covering their approaches to p
 
 3+| date end
 2+| _(PEREND)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| date start
 2+| _(PERSTA)_
-3+|
-
-| (S) TD
+3+| | (S) TD
 | 1,1
 
 3+| status 2+| (STATUS) 3+|

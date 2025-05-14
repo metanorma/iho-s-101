@@ -1,7 +1,7 @@
 
 == Document Control
 
-[cols="61,156,71,71,90,127"]
+[cols="61,156,71,71,90,127", options="unnumbered"]
 |===
 h| Version h| Version Type h| Date h| Approved By h| Signed Off By h| Role
 | 0.0.0 | Editing Committee Draft | Jan 2014 | TSMAD | J. Wootton | DCEG Coordinator
@@ -21,7 +21,7 @@ h| Version h| Version Type h| Date h| Approved By h| Signed Off By h| Role
 
 *Bold* references in the Clauses Affected column indicate the principle sections/clauses that are impacted by the described change.
 
-[cols="^,^"]
+[cols="^,^", options="unnumbered"]
 |===
 h| Change Summary h| Clauses Affected
 
