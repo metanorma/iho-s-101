@@ -15,7 +15,8 @@ NB. In North America the word "range" is used instead of "transit" and "leading 
 To encode a range system, the features **Navigation Line**, *Recommended Track* and the navigational aids features should be associated with the feature *Range System* (see clause15.6) using the association *Range System Aggregation* (see clause 25.13).
 
 
-_*Figure 15-1 -- Range systems*_
+[[fig_15-1]]
+.Range systems
 image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_d9043b2b.gif[Shape30,316,204]
 
 
@@ -371,7 +372,8 @@ none
 __**Table 15-1 -- Navigation lines -- Attribute encoding**__
 
 
-__**Figure 15-4 -- Navigation lines -- Geometry encoding**__
+[[fig_15-4]]
+.Navigation lines -- Geometry encoding
 image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_bace42a2.gif[Shape31,580,299]
 
 
@@ -764,7 +766,8 @@ none
 |===
 __**Table 15-2 -- Recommended tracks -- Attribute encoding**__
 
-__**Figure 15-5 -- Recommended tracks -- Geometry encoding**__
+[[fig_15-5]]
+.Recommended tracks -- Geometry encoding
 image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_cf73ea2c.gif[Shape32,580,299]
 
 
@@ -1775,7 +1778,8 @@ A recommended route is a route of undefined width, for the convenience of ships 
 
 A two way route is a route within defined limits inside which two way traffic is established, aimed at providing safe passage of ships through waters where navigation is difficult or dangerous (IMO Ships Routeing, 2010). It consists of one or more areas within which traffic flows in two directions along one bearing and/or its reciprocal. Such routes are established by regulatory authorities and may be adopted by IMO. IMO-designated two-way routes are listed in IMO publication "__Ships' Routeing__"Part E. When it is required to encode these areas, this must be done using the feature *Two-Way Route Part*. These route parts will generally be two-way, but some may be restricted to one-way traffic flow.
 
-__**Figure 15-6 -- One-way traffic flow in a two-way route**__
+[[fig_15-6]]
+.One-way traffic flow in a two-way route
 image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_bc034dbe.gif[Shape33,359,213]
 
 If it is required to encode a two-way route with one-way sections, separate *Two-Way Route Part* features must be encoded for the different parts, with attribute *traffic flow* = _3_ (one-way) or _4_ (two-way). In one-way sections, the mandatory attribute *orientation value* must indicate the true direction of traffic flow, not its reciprocal. In two-way sections, *orientation value* may indicate either direction of traffic flow. Remarks:
@@ -3276,7 +3280,8 @@ A traffic lane is an area within defined limits in which one-way traffic flow is
 
 * At junctions, other than crossings and roundabouts, a separate *Traffic Separation Scheme Lane Part* feature must be encoded. For this feature, the attribute *orientation value* must be omitted, in order to avoid implying that one lane has priority over another (see INT1 -- M22). Warning text may be encoded using the complex attribute *information* (see clause 2.4.6). In some cases, a precautionary area is established where routes meet or cross (see clause 15.17.1).
 
-_*Figure 15-7 -- Junction*_
+[[fig_15-7]]
+.Junction
 image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_fded47e2.gif[Shape34,308,147]
 
 

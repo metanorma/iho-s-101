@@ -881,7 +881,8 @@ For individual features (wrecks, obstructions etc), or individual/small groups o
 
 The Meta feature *Quality of Bathymetric Data* defines areas within which uniform assessment exists for the quality of bathymetric data, and must be used, where required, to provide an assessment of the overall quality of bathymetric data to the Mariner. Therefore, areas of a dataset containing depth data or bathymetry at optimum display scale 1:700000 and larger must be covered by one or more **Quality of Bathymetric Data**, which may overlap vertically in order to define the quality of bathymetric data at varying depths in the water column.
 
-__**Figure 3-2 -- Adjoining and overlapping Quality of Bathymetric Data features**__
+[[fig_3-2]]
+.Adjoining and overlapping Quality of Bathymetric Data features
 image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_febf43c2.png["",657,402]
 
 Figure 3-2 above demonstrates the encoding for varying quality of bathymetric data in the water column, in this example a mechanically swept area to a depth of 5 metres that has also been previously surveyed using single beam echo sounder to the seabed. For the *Quality of Bathymetric Data* feature that defines the data quality for the swept area, it is important to note that the recommended attribution shown above is intended to provide the highest (best) quality indicator for vessels navigating at a safety depth of less than 5 metres in the area. For vessels navigating at a safety depth of greater than 5 metres in the area, or at any depth outside the area, the lower quality indicator will be provided.

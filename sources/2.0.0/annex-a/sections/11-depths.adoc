@@ -610,7 +610,8 @@ If it is required to encode a swept area, it must be done using the feature *Swe
 
 Spot soundings and depth contours shown in these areas must be encoded using *Sounding* and *Depth Contour* features. A Meta feature *Quality of Bathymetric Data* must be encoded to provide quality information for the *Swept Area* (see clause 3.8). The *depth range maximum* value for the *Quality of Bathymetric Data* feature must be equal to the swept depth (*depth range minimum*) value for the *Swept Area*. The complex attribute*vertical uncertainty* (*uncertainty fixed*) may be used on the *Quality of Bathymetric Data* or on the associated *Spatial* **Quality** feature (see clause 24.5) to specify the uncertainty of the swept depth value, or otherwise must be populated as __0__; *horizontal position uncertainty* (*uncertainty fixed*) on the *Quality of Bathymetric Data* or on the associated *Spatial* **Quality** must be populated as _0_. Where required, a separate *Quality of Bathymetric Data* feature must be encoded to provide depth or positional accuracy information for any underlying bathymetry within the swept area.
 
-__**Figure 11-1 -- Swept areas -- Quality of bathymetric data**__
+[[fig_11-1]]
+.Swept areas -- Quality of bathymetric data
 image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_febf43c2.png["",657,402]
 
 Even if the area contains no spot soundings or depth contours, a *Swept Area* feature must overlap *Depth Area* or *Dredged Area* features. If there is insufficient depth information to allow the attributes *depth range minimum value* and *depth range maximum value* to be encoded on a *Depth Area* or *Dredged Area* feature, *depth range minimum value* should be set to the swept depth and *depth range maximum value* should be set to an empty (null) value.
@@ -724,7 +725,8 @@ Spatial quality associated with contours may be encoded using the *Spatial Quali
 
 
 
-__**Figure 11-2 -- Depth contours**__
+[[fig_11-2]]
+.Depth contours
 image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_e4e67032.gif[Shape25,286,459]
 
 
@@ -829,7 +831,8 @@ Where surfaces are not closed on the source, it may be necessary to close these 
 
 In Figure 11-3 below, the annotation "**min**" equates to the attribute *depth range minimum value* and the annotation "**max**" equates to the attribute *depth range maximum value*.
 
-__**Figure 11-3 -- Geometry of depth areas**__
+[[fig_11-3]]
+.Geometry of depth areas
 image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_7de2693a.gif[Shape26,545,204]
 
 
@@ -848,7 +851,8 @@ If a depth area is adjacent to a non-navigable waterway, a closing curve (that i
 
 In Figure 11-4 below, the annotation "**min**" equates to the attribute *depth range minimum value* and the annotation "**max**" equates to the attribute *depth range maximum value*.
 
-__**Figure 11-4 -- Depth areas**__
+[[fig_11-4]]
+.Depth areas
 image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_d5298855.gif[Shape27,454,442]
 
 **NOTE (a)**: H = Height of the coastline datum above sounding datum, or a rounded value (for example (1) the value of the highest drying contour indicated on the source document; or (2) zero, if the coastline datum is the same as the sounding datum).

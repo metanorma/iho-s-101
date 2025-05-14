@@ -804,7 +804,8 @@ If it is required to encode a landmark (other than a tank, silo or roofed struct
 * When a building is shown as a surface, indicating its true shape, and it is required to encode a prominent feature such as a tower or spire that is part of the structure, two features must be created (see Figure 7-1 (b) below):
 - a *Building* feature of type surface for the main building,
 
-__**Figure 7-1 -- Landmarks**__
+[[fig_7-1]]
+.Landmarks
 image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_668be06e.gif[Shape21,624,183]
 
 - a *Landmark* feature of type point for the prominent feature.

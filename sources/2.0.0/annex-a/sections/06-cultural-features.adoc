@@ -462,7 +462,8 @@ If it is required to encode a building (other than a landmark, tank, silo or roo
 ** a *Building* feature of type surface for the main building,
 ** a *Landmark* feature of type point for the prominent feature.
 
- __**Figure 6-1 -- Landmarks**__
+[[fig_6-1]]
+.Landmarks
 image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_305a76e1.gif[Shape4,624,158]
 
 * If available and considered important for route planning and/or monitoring, the vertical uncertainty associated with encoded vertical clearance values should also be encoded.

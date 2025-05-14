@@ -4839,7 +4839,8 @@ All parts of the dataset containing data must be covered by *Navigational System
 
 Within a dataset, there may be some areas where the direction of buoyage is defined by local rules and must, therefore, be specified. These areas should be encoded asseparate*Local Direction of Buoyage* features (see clause 3.7), with the mandatory attribute *orientation value* indicating the direction of buoyage. *Local Direction of Buoyage* features must not overlap, but in areas where local buoyage directions apply, *Local Direction of Buoyage* features must overlap *Navigational System of Marks* features (see Figure 18-3 below).
 
-_*Figure 18-3 -- Buoyage system and direction*_
+[[fig_18-3]]
+.Buoyage system and direction
 image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_e86edc1e.gif[Shape36,492,210]
 
 Individual buoys and beacons may not be part of the general buoyage system. This should be encoded using the attribute *marks navigational -- system of* on these buoy and beacon features.
@@ -5503,7 +5504,8 @@ Light features located in the water must have a structure feature, generally a b
 The light portrayal rules for ECDIS result in the display of *Light All Around* features with Boolean attribute *major light* = _True_ using a 360 light sector. On land, if no aid to navigation structure object has been encoded at the position of these lights, the Mariner does not have a displayed centre point to take bearings to:
 
 
-_*Figure 19-1 -- Omnidirectional light display in ECDIS*_
+[[fig_19-1]]
+.Omnidirectional light display in ECDIS
 image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_1d999f3.jpg["",602,315]
 
 
@@ -6386,7 +6388,8 @@ Further guidance for encoding various types and characteristics of lights can be
 [[sec_19.3.1.1]]
 ===== Lights obscured by obstructions (see S-4 -- B-475.3)
 
-__**Figure 19-2 -- Obscured light sectors**__
+[[fig_19-2]]
+.Obscured light sectors
 image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_7e764576.gif[Shape37,498,198]
 
 
@@ -7397,7 +7400,8 @@ A preferred channel markis a modified lateral mark, with horizontal colour bands
 
 If it is required to encode a buoy having the function of a lateral mark, it must be done using the feature *Lateral Buoy*.
 
-__**Figure 20-1 -- IALA lateral buoys -- Characteristics**__
+[[fig_20-1]]
+.IALA lateral buoys -- Characteristics
 image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_50e03b92.png["",475,406]
 
 Remarks:
@@ -7722,7 +7726,8 @@ Cardinal marksare used in conjunction with the compass to indicate where a Marin
 
 If it is required to encode a buoy having the function of a cardinal mark, it must be done using the feature *Cardinal Buoy*.
 
-__**Figure 20-2 -- IALA cardinal buoys -- Characteristics**__
+[[fig_20-2]]
+.IALA cardinal buoys -- Characteristics
 image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_67daba42.png["",517,636]
 
 Remarks:
@@ -8042,7 +8047,8 @@ Isolated danger buoysare moored above isolated dangers of limited extent with na
 
 If it is required to encode a buoy having the function of an isolated danger mark, it must be done using the feature *Isolated Danger Buoy*.
 
-__**Figure 20-3 -- IALA isolated danger buoys -- Characteristics**__
+[[fig_20-3]]
+.IALA isolated danger buoys -- Characteristics
 image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_177836fa.png["",549,263]
 
 
@@ -8366,7 +8372,8 @@ To conform to the IALA Maritime Buoyage System (see clause 18.3.1.1), the shape 
 
 If it is required to encode a buoy having the function of a safe water mark, it must be done using the feature *Safe Water Buoy*.
 
-__**Figure 20-4 -- IALA safe water buoys -- Characteristics**__
+[[fig_20-4]]
+.IALA safe water buoys -- Characteristics
 image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_e16dc7b8.png["",664,217]
 
 
@@ -10133,7 +10140,8 @@ A preferred channel beaconis a modified lateral beacon, with horizontal colour b
 
 If it is required to encode a beacon having the function of a lateral mark, it must be done using the feature *Lateral Beacon*.
 
-__**Figure 20-5 -- IALA lateral beacons -- Characteristics**__
+[[fig_20-5]]
+.IALA lateral beacons -- Characteristics
 image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_50e03b92.png["",544,466]
 
 
@@ -10483,7 +10491,8 @@ Cardinal marksare used in conjunction with the compass to indicate where a Marin
 
 If it is required to encode a beacon having the function of a cardinal mark, it must be done using the feature *Cardinal Beacon*.
 
-__**Figure 20-6 -- IALA cardinal beacons -- Characteristics**__
+[[fig_20-6]]
+.IALA cardinal beacons -- Characteristics
 image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_67daba42.png["",508,624]
 
 
@@ -10828,7 +10837,8 @@ Isolated danger beaconsare placed on isolated dangers of limited extent with nav
 
 If it is required to encode a beacon having the function of an isolated danger mark, it must be done using the feature *Isolated Danger Beacon*.
 
-__**Figure 20-7 -- IALA isolated danger beacons -- Characteristics**__
+[[fig_20-7]]
+.IALA isolated danger beacons -- Characteristics
 image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_177836fa.png["",549,263]
 
 Remarks:
@@ -11172,7 +11182,8 @@ Safe water marksare used to indicate there is safe water all around the mark. It
 
 If it is required to encode a beacon having the function of a safe water mark, it must be done using the feature *Safe Water Beacon*.
 
-__**Figure 20-8 -- IALA safe water beacons -- Characteristics**__
+[[fig_20-8]]
+.IALA safe water beacons -- Characteristics
 image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_e16dc7b8.png["",568,184]
 
 Remarks:
