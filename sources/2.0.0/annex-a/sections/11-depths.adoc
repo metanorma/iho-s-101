@@ -20,26 +20,26 @@ d. Even such dangers as drying rocks and islets require generalization in coasta
 
 Some of the principles of depth depiction are summarized below:
 
-a. The least depth over shoals and banks, and over sills (bars) in navigable channels, must be shown. Particular attention should also be paid to full and accurate representation of all other "critical" areas, for example on and adjacent to leading lines, controlling depths in fairways and along recommended tracks, in anchorages, alongside jetties, quays and berths and in the entrances to harbours and basins. Maximum as well as minimum depth should be shown where possible, for example to show the line of deepest water in narrow channels. However, deeper soundings on the sloping side of a bank near to the crest line should not be selected if they could give the impression that there is a deeper passage across the crest between shoaler soundings.
+. The least depth over shoals and banks, and over sills (bars) in navigable channels, must be shown. Particular attention should also be paid to full and accurate representation of all other "critical" areas, for example on and adjacent to leading lines, controlling depths in fairways and along recommended tracks, in anchorages, alongside jetties, quays and berths and in the entrances to harbours and basins. Maximum as well as minimum depth should be shown where possible, for example to show the line of deepest water in narrow channels. However, deeper soundings on the sloping side of a bank near to the crest line should not be selected if they could give the impression that there is a deeper passage across the crest between shoaler soundings.
 
-b. Soundings and contours must be used to complement each other in giving a reasonable representation of the seabed, including all significant breaks of slope.
+. Soundings and contours must be used to complement each other in giving a reasonable representation of the seabed, including all significant breaks of slope.
 
-c. The density of soundings should be determined by the type of seabed. Flat or evenly sloping areas, and banks of unconsolidated sediment, should have a minimum of soundings, fairly evenly spaced, but gradually becoming more widely spaced as the depth increases. Irregular seabed topography should be represented by a denser, and probably irregular, pattern of soundings. A steep gradient should be represented by close contours, undistorted by soundings.
+. The density of soundings should be determined by the type of seabed. Flat or evenly sloping areas, and banks of unconsolidated sediment, should have a minimum of soundings, fairly evenly spaced, but gradually becoming more widely spaced as the depth increases. Irregular seabed topography should be represented by a denser, and probably irregular, pattern of soundings. A steep gradient should be represented by close contours, undistorted by soundings.
 
-d. In changeable areas, where surveys of different dates adjoin and do not match exactly, gaps in the contours may be left to indicate the discontinuity of depth to the navigator.
+. In changeable areas, where surveys of different dates adjoin and do not match exactly, gaps in the contours may be left to indicate the discontinuity of depth to the navigator.
 
-e. Where practicable, soundings on smaller optimum display scale ENCs should be selected from those shown on the larger optimum display scale ENCs.
+. Where practicable, soundings on smaller optimum display scale ENCs should be selected from those shown on the larger optimum display scale ENCs.
 
-f. In areas navigable only at high water, drying heights must be selected according to the same principles as soundings.
+. In areas navigable only at high water, drying heights must be selected according to the same principles as soundings.
 
-g. Where surveys are inadequate, it may be advisable to omit some of the standard contour lines.
+. Where surveys are inadequate, it may be advisable to omit some of the standard contour lines.
 
 [[sec_11.3]]
 === Sounding
 
 [cols="192,102,64,158,158,386,351,351,84,154", options="unnumbered"]
 |===
-9+.<h| IHO Definition: *SOUNDING*. Measured or charted [[depth]] of water (may be a drying height), or the measurement of such a [[depth]], which has been reduced to a vertical datum. (Adapted from IHO Dictionary -- S-32). |
+9+.<h| IHO Definition: *SOUNDING*. Measured or charted depth of water (may be a drying height), or the measurement of such a depth, which has been reduced to a vertical datum. (Adapted from IHO Dictionary -- S-32). |
 9+| *[underline]#S-101 Geo Feature:#* *Sounding (SOUNDG)* |
 9+| *[underline]#Primitives:#* *Pointset* |
 2+| _Real World_
@@ -276,8 +276,6 @@ h| Sounding h| S-4 h| INT 1 h| quality of horizontal measurement h| quality of v
 * For depths indicated as no bottom found, see clause 11.8.
 
 [underline]#Distinction:# Depth Area; Depth -- No Bottom Found; Obstruction; Underwater/Awash Rock; Wreck.
-
-
 
 [[sec_11.4]]
 === Dredged area
@@ -612,7 +610,7 @@ Spot soundings and depth contours shown in these areas must be encoded using *So
 
 [[fig_11-1]]
 .Swept areas -- Quality of bathymetric data
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_febf43c2.png["",657,402]
+image::figure-11-1.png["",657,402]
 
 Even if the area contains no spot soundings or depth contours, a *Swept Area* feature must overlap *Depth Area* or *Dredged Area* features. If there is insufficient depth information to allow the attributes *depth range minimum value* and *depth range maximum value* to be encoded on a *Depth Area* or *Dredged Area* feature, *depth range minimum value* should be set to the swept depth and *depth range maximum value* should be set to an empty (null) value.
 
@@ -723,14 +721,11 @@ Wherever possible, contours must be closed, or connected to the border of the da
 
 Spatial quality associated with contours may be encoded using the *Spatial Quality* information type, attribute *quality of* **horizontal measurement** (see clause 28.14). This should only be encoded if the spatial quality of the contour(s) is different to that indicated for the overall quality of the bathymetric data in the area as described for the underlying *Quality of Bathymetric Data* Meta feature (see clause 3.8). However, in order to provide an additional indication to the mariner of areas of lower reliability bathymetric data, contours in depths of 30 metres or less may have the attribute *quality of* **horizontal measurement** on the associated *Spatial Quality* information type populated with value _4_ (approximate).
 
-
-
 [[fig_11-2]]
 .Depth contours
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_e4e67032.gif[Shape25,286,459]
+image::figure-11-1.png[Shape25,286,459]
 
-
-Remarks:
+[underline]#Remarks:#
 
 * Encoded drying contours must be indicated by negative values for the attribute *value of depth contour*.
 
@@ -833,10 +828,9 @@ In Figure 11-3 below, the annotation "**min**" equates to the attribute *depth r
 
 [[fig_11-3]]
 .Geometry of depth areas
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_7de2693a.gif[Shape26,545,204]
+image::figure-11-3.png[Shape26,545,204]
 
-
-Remarks:
+[underline]#Remarks:#
 
 * For short isolated sections of *Depth Contour* features such as (_fi_), it is up to the producing authority whether to encode the small areas (_efije_ and _fghif_) as separate *Depth Area* features, or to encode only the curve (_fi_) as a floating *Depth Contour* feature within a single *Depth Area* (_abcda_) having attributes *depth range minimum value* = _5_ and *depth range maximum value* = _20_. NOTE: In Figure 11-3, if the optional *Depth Area* features are encoded, the depth area (_abcda_) will be split into two separate *Depth Area* features (_abgea_) and (_jhcdj_), both having *depth range minimum value* = _5_ and *depth range maximum value* = _20_.
 
@@ -853,42 +847,70 @@ In Figure 11-4 below, the annotation "**min**" equates to the attribute *depth r
 
 [[fig_11-4]]
 .Depth areas
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_d5298855.gif[Shape27,454,442]
+image::figure-11-4.png[Shape27,454,442]
 
 **NOTE (a)**: H = Height of the coastline datum above sounding datum, or a rounded value (for example (1) the value of the highest drying contour indicated on the source document; or (2) zero, if the coastline datum is the same as the sounding datum).
 
-In the following clauses, the paragraph numbers refer to the item numbers in Figure 11-4. These clauses do not cover all encoding scenarios.1. If the depth area is bounded by two or more depth contours:
+In the following clauses, the paragraph numbers refer to the item numbers in Figure 11-4. These clauses do not cover all encoding scenarios.
 
+. If the depth area is bounded by two or more depth contours:
++
+--
 * *depth range minimum value* should take the value of the dataset depth contour immediately shallower than the value of *depth range maximum value*.
 * *depth range maximum value* should take the value of the deepest depth contour bounding the area.
-2. If the depth area is only bounded by one depth contour andthe deepest depth is shown by a depth contour, and the shallowest depth is shown by a sounding (an isolated shoal area):
+--
 
+. If the depth area is only bounded by one depth contour andthe deepest depth is shown by a depth contour, and the shallowest depth is shown by a sounding (an isolated shoal area):
++
+--
 * *depth range minimum value* should take the value of the dataset depth contour immediately shallower than the value of the sounding or ‑H. However if the shallowest sounding within the area is considered to be the least depth of the shoal, *depth range minimum value* may be populated with the value of this sounding.
 * *depth range maximum value* should take the value of the depth contour.
-NOTE: In the case where the shallowest depth in the area is equal to the bounding depth contour, both *depth range minimum value* and *depth range maximum value* may be populated with the value of the depth contour.3. If the depth area is only bounded by one depth contour andthe deepest depth is shown by a sounding and the shallowest depth is shown by a depth contour (an isolated deep area):
 
+NOTE: In the case where the shallowest depth in the area is equal to the bounding depth contour, both *depth range minimum value* and *depth range maximum value* may be populated with the value of the depth contour.
+--
+
+. If the depth area is only bounded by one depth contour andthe deepest depth is shown by a sounding and the shallowest depth is shown by a depth contour (an isolated deep area):
++
+--
 * *depth range minimum value* should take the value of the depth contour.
 * *depth range maximum value* should take the value of the dataset depth contour immediately deeper than or equal to the value of the sounding. However if the deepest sounding within the area is considered to be the deepest depth of the deep, *depth range maximum value* may be populated with the value of this sounding.
-4. If the shallowest depth is defined by the coastline:
+--
 
+. If the shallowest depth is defined by the coastline:
++
+--
 * *depth range minimum value* should take the value of -H.
 * *depth range maximum value* should take the value of the shallowest dataset depth contour bounding the area.
-5. If the depth area is bounded by only one depth contour, contains no soundings, and is a shoal:
+--
 
+. If the depth area is bounded by only one depth contour, contains no soundings, and is a shoal:
++
+--
 * *depth range minimum value* should take the value of the dataset depth contour immediately shallower than the value of the depth contour, or -H.
 * *depth range maximum value* should take the value of the depth contour.
-6. If the depth area is bounded by only one depth contour, contains no soundings, and is a deep:
+--
 
+. If the depth area is bounded by only one depth contour, contains no soundings, and is a deep:
++
+--
 * *depth range minimum value* should take the value of the depth contour.
 * *depth range maximum value* should take the value of the standard depth contour immediately deeper than the value of the depth contour.
-7. If the depth area is bounded by an incomplete depth contour on one side (such as in incompletely surveyed area), and a complete depth contour on the other:
+--
 
+. If the depth area is bounded by an incomplete depth contour on one side (such as in incompletely surveyed area), and a complete depth contour on the other:
++
+--
 * These areas are optional. See clause 11.7.2 above and associated Figure 11-3.
-8. If the depth area is bounded by complete depth contours, but contains an incomplete (floating) depth contour:
+--
 
+. If the depth area is bounded by complete depth contours, but contains an incomplete (floating) depth contour:
++
+--
 * *depth range minimum value* should take the value of the shallowest depth contour.
 * *depth range maximum value* should take the value of the deepest depth contour.
+
 NOTE: Where the optional depth areas in paragraph 7 above are encoded, this will result in two discrete *Depth Area* features, one on each side of the encoded optional depth areas. See clause 11.7.2 above and associated Figure 11-3.
+--
 
 [[sec_11.7.4]]
 ==== Rivers, canals, lakes, basins, locks
@@ -908,8 +930,7 @@ An area on the source with the indication "Less water" should be encoded using t
 
 If it is required to encode sandwaves, this must be done using the feature *Sandwave* (see clause 12.4).
 
-Distinction: Depth Contour; Dredged Area; Obstruction; Sea Area/Named Water Area; Sounding; Unsurveyed Area; Wreck.
-
+[underline]#Distinction:# Depth Contour; Dredged Area; Obstruction; Sea Area/Named Water Area; Sounding; Unsurveyed Area; Wreck.
 
 [[sec_11.8]]
 === Depth -- no bottom found

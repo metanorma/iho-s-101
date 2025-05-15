@@ -692,7 +692,9 @@ Tidal stream values encoded in this way should be spring rates; that is, the tid
 S-57 Encoding: Population of attribute TS_TSP0014,PLYMOUTH (DEVONPORT),HW,113,0.1,332,0.6,331,1.1,342,1.0,347,0.7,333,0.5,317,0.3,178,0.3,146,0.6,140,1.0,143,1.1,143, 0.8,138,0.3
 S-101 Encoding: (Complex attributes in italics, encoded values in blue text)
 
-[cols="987,716,716,658,343,716,716,716,716,716", options="unnumbered"]
+[[table_10-1]]
+.Tide Stream Panel Data - Example
+[cols="987,716,716,658,343,716,716,716,716,716"]
 |===
 5+h| *Tidal Stream Panel Data (feature)* | | | | |
 2+| station name 3+| Plymouth (Devonport) | | | | |
@@ -742,7 +744,7 @@ S-101 Encoding: (Complex attributes in italics, encoded values in blue text)
 
 |===
 
-__**Table 10-1 -- Tide Stream Panel Data - Example**__
+
 
 * Where an encoded complex attribute **tidal stream value**, sub-attribute *speed maximum* has a value of zero (indicating slack water), the corresponding sub-attribute *orientation* / *orientation value* must be populated with an empty (null) value.
 

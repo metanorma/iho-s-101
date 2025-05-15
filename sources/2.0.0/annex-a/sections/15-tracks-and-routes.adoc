@@ -14,12 +14,9 @@ NB. In North America the word "range" is used instead of "transit" and "leading 
 
 To encode a range system, the features **Navigation Line**, *Recommended Track* and the navigational aids features should be associated with the feature *Range System* (see clause15.6) using the association *Range System Aggregation* (see clause 25.13).
 
-
 [[fig_15-1]]
 .Range systems
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_d9043b2b.gif[Shape30,316,204]
-
-
+image::figure-15-1.png[Shape30,316,204]
 
 [underline]#Remarks:#
 
@@ -32,7 +29,7 @@ A traffic lane is an area within defined limits in which one way traffic is esta
 
 [[fig_15-2]]
 .Traffic lanes -- Example
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_1d393583.png["",511,232]
+image::figure-15-2.png["",511,232]
 
 [[sec_15.3]]
 === Traffic separation schemes and traffic separation scheme systems (see S-4 -- B-435.1-3)
@@ -61,7 +58,7 @@ To encode a traffic separation scheme (TSS) system, the **Deep Water Route Centr
 
 [[fig_15-3]]
 .Sample Traffic Separation Scheme (TSS) and Deep Water route (DW)
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_3bff532f.png["",493,447]
+image::figure-15-3.png["",493,447]
 
 [underline]#Remarks:#
 
@@ -230,6 +227,8 @@ image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_3bff532f.png["",493,447]
 
 Clearing Linesare important in rocky areas where dangers are not guarded by buoys and where sailing vessels (which are not always able to keep to a direct track) and other small craft may navigate close inshore. Transits marking isolated dangers are based on beacons or other marks which are erected on shore to indicate (approximately, unless there are two pairs of beacons) the position of an isolated danger. Leading lines based on beacons or lights must be encoded where the optimum display scale for the ENC data permits. Leading lines based on natural features should be encoded on the largest optimum display scale ENC data where they appear to be useful, particularly if other navigational aids seem inadequate.If it is required to encode a navigation line, it must be done using the feature *Navigation Line*.The use of *Navigation Line* and *Recommended Track* (see clause 15.5) is defined in more detail in the following Table, and in Figure 15-4 below:
 
+[[table_15-1]]
+.Navigation lines -- Attribute encoding
 [cols="285,1045,480,600,330,452,452,452,452,452"]
 |===
 |
@@ -361,15 +360,13 @@ none
 |
 
 |===
-__**Table 15-1 -- Navigation lines -- Attribute encoding**__
 
 
 [[fig_15-4]]
 .Navigation lines -- Geometry encoding
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_bace42a2.gif[Shape31,580,299]
+image::figure-15-4.png[Shape31,580,299]
 
-
-Remarks:
+[underline]#Remarks:#
 
 * The value populated for the mandatory attribute *orientation value* must be the value of the bearing from seaward.
 * The extent of the navigation line depends on the visibility of the navigational aids.
@@ -385,8 +382,6 @@ If the track to be followed is on a leading line or a bearing, it must be encode
 * All features comprising a measured distance must have the same value populated for the attribute *scale minimum* (see clause2.5.9).
 
 [underline]#Distinction:# Recommended Route Centreline; Recommended Track.
-
-
 
 [[sec_15.5]]
 === Recommended track
@@ -617,6 +612,8 @@ If the track to be followed is on a leading line or a bearing, it must be encode
 
 Recommended tracks and fairways usually comprise a number of sections (sometimes termed "legs") which lead between dangers lying close on both sides of the track or fairway. Tracks commonly include some sections which are leading lines (see clause15.1). The distinction between tracks and fairways, in this context, is that tracks have no specified outer limits and fairways do have specified outer limits.It is important to recognise that it is not the role of cartographers to create "recommended" tracks and other "recommended" routeing measures; such recommendations are made by other authorities. The word "Recommended", used in connection with recommended tracks and other recommended routeing measures usually implies that it has been recommended by a competent authority (such as a port authority within its port limits or a maritime safety authority) and may be adopted by IMO. Occasionally, the recommendation may be based on advice directly from a competent surveyor or established by precedent.Recommended tracks include all channels recommended for hydrographic reasons to lead safely between shoal depths. The use of such tracks is generally left to the discretion of the Mariner and will depend on the vessel's draught, the state of the tide, adequacy of navigational aids and so on.If it is required to encode a recommended track, it must be done using the feature *Recommended Track*.The use of *Navigation Line* and *Recommended Track* is defined in more detail in the following Table, and in Figure 15-5 below.
 
+[[table_15-2]]
+.Recommended tracks -- Attribute encoding
 [cols="285,960,560,600,335,452,452,452,452,452"]
 |===
 |
@@ -748,14 +745,13 @@ none
 |
 
 |===
-__**Table 15-2 -- Recommended tracks -- Attribute encoding**__
+
 
 [[fig_15-5]]
 .Recommended tracks -- Geometry encoding
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_cf73ea2c.gif[Shape32,580,299]
+image::figure-15-5.png[Shape32,580,299]
 
-
-Remarks:
+[underline]#Remarks:#
 
 * The attribute *depth range minimum value* is used to encode the shallowest depth along the track, where required.
 * The attribute *maximum permitted draught* is used to encode the maximum draught permitted on the track, where required.
@@ -764,8 +760,6 @@ Remarks:
 * When the traffic flow along a recommended track is one way (attribute *traffic flow* = __1__, _2_ or _3_), the resultant direction of the line (accounting for the direction of digitising and any subsequent reversal of the line) associated with the *Recommended Track* must be the same as the direction of the traffic flow, in order to ensure the correct representation in the ECDIS of the direction to be followed.
 
 [underline]#Distinction:# Fairway; Navigation Line; Recommended Route Centreline; Recommended Traffic Lane Part.
-
-
 
 [[sec_15.6]]
 === Range system
@@ -1736,7 +1730,7 @@ A two way route is a route within defined limits inside which two way traffic is
 
 [[fig_15-6]]
 .One-way traffic flow in a two-way route
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_bc034dbe.gif[Shape33,359,213]
+image::figure-15-6.png[Shape33,359,213]
 
 If it is required to encode a two-way route with one-way sections, separate *Two-Way Route Part* features must be encoded for the different parts, with attribute *traffic flow* = _3_ (one-way) or _4_ (two-way). In one-way sections, the mandatory attribute *orientation value* must indicate the true direction of traffic flow, not its reciprocal. In two-way sections, *orientation value* may indicate either direction of traffic flow. 
 
@@ -3210,8 +3204,7 @@ A traffic lane is an area within defined limits in which one-way traffic flow is
 
 [[fig_15-7]]
 .Junction
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_fded47e2.gif[Shape34,308,147]
-
+image::figure-15-7.png[Shape34,308,147]
 
 * The orientation of the traffic separation scheme lane part is defined by the centreline of the part and is related to the general direction of traffic flow in the traffic separation lane.
 * For additional guidance regarding the encoding of vessel speed limits, see clause 17.4.

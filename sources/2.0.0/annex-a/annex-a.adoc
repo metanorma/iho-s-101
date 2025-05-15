@@ -1,20 +1,3 @@
-= Annex A - Data Classification and Encoding Guide
-:series: S
-:docnumber: 101
-:doctype: standard
-:edition: 2.0.0
-:language: en
-:published-date: 2024-12-01
-:copyright-year: 2024
-:status: in-force
-:committee: ircc
-:workgroup: ibsc
-:mn-document-class: iho
-:mn-output-extensions: xml,html,doc,pdf,rxl
-:local-cache-only:
-:data-uri-image:
-:imagesdir: images
-
 
 [[sec_16]]
 == Geo Features -- Areas, limits
@@ -32,18 +15,16 @@ The Mariner may be interested in the exact location of international maritime bo
 
 * Where a boundary passes through groups of offshore islands they may wish to know upon which side of the boundary a particular island falls.
 
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_a1161fbc.png["",574,526]
-
 [[sec_16.2]]
 === Maritime jurisdiction areas
 
 [[fig_16-1]]
 .Maritime jurisdiction areas
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_93c09e89.png["",568,404]
+image::figure-16-1.png["",568,404]
 
 [[fig_16-2]]
 .Maritime jurisdiction areas in constrained waters
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_de8ddfa.png["",569,329]
+image::figure-16-2.png["",569,329]
 
 The clauses in Section 16 below provide guidance for the encoding of maritime jurisdiction areas. Occasionally, these "areas" may actually be defined as linear due to international treaties; or the areas may not be fully defined and it may therefore be necessary to encode the boundary as a linear feature (see example at Figure 16-3 below). Clause 2.3 defining features permitted for use in ENC and their geometric primitives allows relevant feature classes relating to maritime jurisdiction areas to be encoded as type curve; however this must only be done in circumstances where it is not possible to encode the feature using geometric primitive surface.
 
@@ -3581,7 +3562,7 @@ For each instance of **information**, at least one of the sub-attributes *file r
 
 If it is required to encode a collision regulations (COLREGs) demarcation line, it must be done using the feature *Collision Regulations Limit*.
 
-Remarks:
+[underline]#Remarks:#
 
 * If it is required to encode the national regulation citation it must be done using the attribute *regulation citation*. The regulation citation is generally the national legal citation for the implementation of an international regulation (for example _33 CFR 26_), as distinct from the title for the regulation, which should be populated in the complex attribute **feature name**, sub-attribute *name* (for example _International Regulations for the Prevention of Collisions at Sea_ -- _Vessel Bridge-to-Bridge Radiotelephone Regulations_.
 
@@ -3697,7 +3678,6 @@ If it is required to encode an area subject to marine pollution regulations as d
 * A short summary of the regulation and a reference to the publication containing the regulation must be included using the complex attribute *information* (see clause 2.4.6).
 
 [underline]#Distinction:# Administration Area.
-
 
 [[sec_17]]
 == Geo Features -- Restricted Areas -- Overview
@@ -4026,24 +4006,7 @@ The encoding of relationships between structure and equipment features is descri
 [[sec_18.2]]
 === Relationships
 
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_d8770ffb.gif[Shape35,288,226]
-A
-
-**Feature Associations**
-
-**Fog Signal**
-
-**Light**
-
-**Marked features**
-
-Equipment Features
-
-Structure Features
-
-**Navigational Aid**
-
-**Structure/Equipment** feature association (see clause 25.16) must be created in order to relate the different features comprising a navigational aid. Where a *Structure/Equipment* feature association is created, there must be only one structure feature related to one or more equipment features. An equipment feature must not be related to more than one structure feature.
+A *Structure/Equipment* feature association (see clause 25.16) must be created in order to relate the different features comprising a navigational aid. Where a *Structure/Equipment* feature association is created, there must be only one structure feature related to one or more equipment features. An equipment feature must not be related to more than one structure feature.
 
 [[fig_18-1]]
 .Navigational aids -- Structure/equipment association
@@ -4055,7 +4018,7 @@ When the nature of the base structure on land is unknown or there is no structur
 
 [[fig_18-2]]
 .Navigational aids -- Structure/equipment feature associations: Real-world examples
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_36764e87.png["",561,240]
+image::figure-18-2.png["",561,240]
 
 In the above real-world examples, the structure and equipment features that make up the navigational aids are point spatial types, and they mustshare the same geographic point spatial type.
 
@@ -4085,7 +4048,7 @@ Within a dataset, there may be some areas where the direction of buoyage is defi
 
 [[fig_18-3]]
 .Buoyage system and direction
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_e86edc1e.gif[Shape36,492,210]
+image::figure-18-3.png[Shape36,492,210]
 
 Individual buoys and beacons may not be part of the general buoyage system. This should be encoded using the attribute *marks navigational -- system of* on these buoy and beacon features.
 
@@ -4747,11 +4710,9 @@ Light features located in the water must have a structure feature, generally a b
 
 The light portrayal rules for ECDIS result in the display of *Light All Around* features with Boolean attribute *major light* = _True_ using a 360 light sector. On land, if no aid to navigation structure object has been encoded at the position of these lights, the Mariner does not have a displayed centre point to take bearings to:
 
-
 [[fig_19-1]]
 .Omnidirectional light display in ECDIS
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_1d999f3.jpg["",602,315]
-
+image::figure-19-1.jpeg["",602,315]
 
 Encoders are advised, therefore, that an aid to navigation structure object (for example **Special Purpose/General Beacon**, *Pile*) should be encoded as a light structure object for all *Light All Around* features on land encoded as major lights, where the nature of the structure object is unknown.
 
@@ -5062,8 +5023,6 @@ Encoders are advised, therefore, that an aid to navigation structure object (for
 | - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
 10+| ^†^ For non-fixed lights (that is, sub-attribute *light characteristic* ≠ _1_ (fixed)), the sub-attributes *signal group* and *signal period* are mandatory.
 
-
-
 |===
 
 Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
@@ -5071,7 +5030,6 @@ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if t
 For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
-
 
 [underline]#INT 1 Reference:# P 1-65
 
@@ -5532,8 +5490,7 @@ Further guidance for encoding various types and characteristics of lights can be
 
 [[fig_19-2]]
 .Obscured light sectors
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_7e764576.gif[Shape37,498,198]
-
+image::figure-19-2.png[Shape37,498,198]
 
 If an encoded light is obscured in a part of the navigable area of a sector (see Figure 19-2 (A) above) beyond an offshore obstruction, it must be encoded using **Light Sectored**, with each of the sectors (a) -- (c) encoded using the complex attribute *light sector*. The partially obscured sector of (b) must have *light sector* with sub-attributes *light visibility* = _8_ (partially obscured) and sub-attribute *value of nominal range* set to the distance from the light to the obstruction. The sectors in which the light is visible from seaward ((a) and (c)) must be encoded as separate iterations of *light sector*.
 
@@ -5572,9 +5529,7 @@ For lights in the IALA A system that are occulting green (to starboard) and red 
 
 Oscillating lights which are not IALA should be encoded similar to the above. For instance, where a light contains white sectors that are occulting and oscillate with increasing period of eclipse to isophased or flashing with increasing deviation from the track defined by the directional light:For the sector to port of the track defined by the directional light:*sector characteristics***:** *light characteristic* = _8_ (Occulting); *colour* = _1_ (White); **sector limit**; *sector* **information** (*text*) = __Light phase decreases as bearing to light increases__For the sector to starboard of the track defined by the directional light:*sector characteristics***:** *light characteristic* = _8_ (Occulting); *colour* = _1_ (White); **sector limit**; *sector* **information** (*text*) = __Light phase increases as bearing to light increases__All other light sectors must be encoded using additional iterations of **sector characteristics**, with sub-attributes (including *light sector* or *directional character*) populated in accordance with the characteristics of the sector.
 
-
 [underline]#Distinction:# Cardinal Beacon; Cardinal Buoy; Emergency Wreck Marking Buoy; Installation Buoy; Isolated Danger Beacon; Isolated Danger Buoy; Lateral Beacon; Lateral Buoy; Light Air Obstruction; Light All Around; Light Float; Light Fog Detector; Light Vessel; Safe Water Beacon; Safe Water Buoy; Special Purpose/General Beacon; Special Purpose/General Buoy.
-
 
 [[sec_19.4]]
 === Light fog detector
@@ -6444,9 +6399,9 @@ If it is required to encode a buoy having the function of a lateral mark, it mus
 
 [[fig_20-1]]
 .IALA lateral buoys -- Characteristics
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_50e03b92.png["",475,406]
+image::figure-20-1.png["",475,406]
 
-Remarks:
+[underline]#Remarks:#
 
 * If it is required to encode a buoy or topmark that has more than one colour, the attributes *colour* and *colour pattern* must be encoded, according to the rules laid out in clause 2.4.10.
 * If it is required to encode the total vertical length, including the topmark and any equipment features (for example light), of the buoy above the water level, it must be done using the attribute *vertical length*.
@@ -6742,9 +6697,9 @@ If it is required to encode a buoy having the function of a cardinal mark, it mu
 
 [[fig_20-2]]
 .IALA cardinal buoys -- Characteristics
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_67daba42.png["",517,636]
+image::figure-20-2.png["",517,636]
 
-Remarks:
+[underline]#Remarks:#
 
 * If it is required to encode a buoy or topmark that has more than one colour, the attributes *colour* and *colour pattern* must be encoded, according to the rules laid out in clause 2.4.10.
 * If it is required to encode the total vertical length, including the topmark and any equipment features (for example light), of the buoy above the water level, it must be done using the attribute *vertical length*.
@@ -7035,11 +6990,9 @@ If it is required to encode a buoy having the function of an isolated danger mar
 
 [[fig_20-3]]
 .IALA isolated danger buoys -- Characteristics
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_177836fa.png["",549,263]
+image::figure-20-3.png["",549,263]
 
-
-
-Remarks:
+[underline]#Remarks:#
 
 * If it is required to encode a buoy or topmark that has more than one colour, the attributes *colour* and *colour pattern* must be encoded, according to the rules laid out in clause 2.4.10.
 * If it is required to encode the total vertical length, including the topmark and any equipment features (for example light), of the buoy above the water level, it must be done using the attribute *vertical length*.
@@ -7332,11 +7285,9 @@ If it is required to encode a buoy having the function of a safe water mark, it 
 
 [[fig_20-4]]
 .IALA safe water buoys -- Characteristics
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_e16dc7b8.png["",664,217]
+image::figure-20-4.png["",664,217]
 
-
-
-Remarks:
+[underline]#Remarks:#
 
 * If it is required to encode a buoy or topmark that has more than one colour, the attributes *colour* and *colour pattern* must be encoded, according to the rules laid out in clause 2.4.10.
 * If it is required to encode the total vertical length, including the topmark and any equipment features (for example light), of the buoy above the water level, it must be done using the attribute *vertical length*.
@@ -7691,6 +7642,8 @@ If it is required to encode a buoy having the function of a special purpose mark
 
 In the following Table, a blank indicates that the encoder may choose a relevant value for the attribute. The Table contains the most common examples of coding; other coding combinations are possible for *Special Purpose/General Buoy* features.
 
+[[table_20-1]]
+.IALA special purpose buoys -- Common types
 [cols="732,128,508,124,276,404,457,457,457,457", options="unnumbered"]
 |===
 |
@@ -7947,7 +7900,7 @@ Q58
 |
 
 |===
-__**Table 20-1 -- IALA special purpose buoys -- Common types**__
+
 
 [underline]#Remarks:#
 
@@ -7958,8 +7911,6 @@ __**Table 20-1 -- IALA special purpose buoys -- Common types**__
 * A buoy deployed as an emergency measure to mark a newly identified danger, such as a wreck, must be encoded using the feature *Emergency Wreck Marking Buoy* (see clause 20.6). A special purpose buoy intended to permanently mark a wreck as a danger must be encoded, where required, as a *Special Purpose/General Buoy* feature, with attribute *category of special purpose mark* = _60_ (wreck mark).
 
 [underline]#Distinction:# Cardinal Buoy; Emergency Wreck Marking Buoy; Installation Buoy; Isolated Danger Buoy; Lateral Buoy; Mooring Buoy; Safe Water Buoy.
-
-
 
 [[sec_20.6]]
 === Emergency wreck marking buoy
@@ -8974,10 +8925,9 @@ If it is required to encode a beacon having the function of a lateral mark, it m
 
 [[fig_20-5]]
 .IALA lateral beacons -- Characteristics
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_50e03b92.png["",544,466]
+image::figure-20-1.png["",544,466]
 
-
-Remarks:
+[underline]#Remarks:#
 
 * If it is required to encode a beacon or topmark that has more than one colour, the attributes *colour* and *colour pattern* must be encoded, according to the rules laid out in clause 2.4.10.
 * For guidance on the encoding of the attributes **elevation**, *height* and *vertical length* see clause 2.5.7. *elevation* applies only to beacons on land. Values populated for *height* and *vertical length* must include the topmark and any equipment features.
@@ -9297,10 +9247,9 @@ If it is required to encode a beacon having the function of a cardinal mark, it 
 
 [[fig_20-6]]
 .IALA cardinal beacons -- Characteristics
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_67daba42.png["",508,624]
+image::figure-20-2.png["",508,624]
 
-
-Remarks:
+[underline]#Remarks:#
 
 * If it is required to encode a beacon or topmark that has more than one colour, the attributes *colour* and *colour pattern* must be encoded, according to the rules laid out in clause 2.4.10.
 * For guidance on the encoding of the attributes **elevation**, *height* and *vertical length* see clause 2.5.7. *elevation* applies only to beacons on land. Values populated for *height* and *vertical length* must include the topmark and any equipment features.
@@ -9609,15 +9558,17 @@ For each instance of **information**, at least one of the sub-attributes *file r
 [[sec_20.11.1]]
 ==== Isolated danger beacons (see S-4 -- B-461.3 and B-467)
 
-Isolated danger beaconsare placed on isolated dangers of limited extent with navigable water all around them. To conform to the IALA Maritime Buoyage System (see clause 18.3.1.1), the body of an isolated danger beacon is black, with one or more red bands. Black double-sphere topmarks are an important feature of isolated danger beacons and carried wherever practicable. The light (if fitted) is white Fl(2).
+Isolated danger beacons are placed on isolated dangers of limited extent with navigable water all around them.
+
+To conform to the IALA Maritime Buoyage System (see clause 18.3.1.1), the body of an isolated danger beacon is black, with one or more red bands. Black double-sphere topmarks are an important feature of isolated danger beacons and carried wherever practicable. The light (if fitted) is white Fl(2).
 
 If it is required to encode a beacon having the function of an isolated danger mark, it must be done using the feature *Isolated Danger Beacon*.
 
 [[fig_20-7]]
 .IALA isolated danger beacons -- Characteristics
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_177836fa.png["",549,263]
+image::figure-20-3.png["",549,263]
 
-Remarks:
+[underline]#Remarks:#
 
 * If it is required to encode a beacon or topmark that has more than one colour, the attributes *colour* and *colour pattern* must be encoded, according to the rules laid out in clause 2.4.10.
 * For guidance on the encoding of the attributes **elevation**, *height* and *vertical length* see clause 2.5.7. *elevation* applies only to beacons on land. Values populated for *height* and *vertical length* must include the topmark and any equipment features.
@@ -9926,15 +9877,17 @@ For each instance of **information**, at least one of the sub-attributes *file r
 [[sec_20.12.1]]
 ==== Safe water beacons (see S-4 -- B-461.3 and B-467)
 
-Safe water marksare used to indicate there is safe water all around the mark. It may be used as a centre-line, mid-channel or landfall beacon, or to mark the best point of passage under a bridge. To conform to the IALA Maritime Buoyage System (see clause 18.3.1.1), the body of the mark has red and white vertical stripes. A red spherical topmark is an important feature and carried wherever practicable. The light (if fitted) is white Oc, Iso, LFl or Mo(A) with a period of 10s.
+Safe water marksare used to indicate there is safe water all around the mark. It may be used as a centre-line, mid-channel or landfall beacon, or to mark the best point of passage under a bridge.
+
+To conform to the IALA Maritime Buoyage System (see clause 18.3.1.1), the body of the mark has red and white vertical stripes. A red spherical topmark is an important feature and carried wherever practicable. The light (if fitted) is white Oc, Iso, LFl or Mo(A) with a period of 10s.
 
 If it is required to encode a beacon having the function of a safe water mark, it must be done using the feature *Safe Water Beacon*.
 
 [[fig_20-8]]
 .IALA safe water beacons -- Characteristics
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_e16dc7b8.png["",568,184]
+image::figure-20-4.png["",568,184]
 
-Remarks:
+[underline]#Remarks:#
 
 * If it is required to encode a beacon or topmark that has more than one colour, the attributes *colour* and *colour pattern* must be encoded, according to the rules laid out in clause 2.4.10.
 * For guidance on the encoding of the attributes **elevation**, *height* and *vertical length* see clause 2.5.7. *elevation* applies only to beacons on land. Values populated for *height* and *vertical length* must include the topmark and any equipment features.
@@ -10313,7 +10266,9 @@ If it is required to encode a beacon having the function of a special purpose ma
 
 In the following Table, a blank indicates that the encoder may choose a relevant value for the attribute. The Table contains the most common examples of coding; other coding combinations are possible.
 
-[cols="890,200,655,205,480,514,514,514,514,514", options="unnumbered"]
+[[table_20-2]]
+.IALA special purpose beacons -- Common types
+[cols="890,200,655,205,480,514,514,514,514,514"]
 |===
 |
 *Feature*
@@ -10500,7 +10455,7 @@ In the following Table, a blank indicates that the encoder may choose a relevant
 
 |===
 
-__**Table 20-2 -- IALA special purpose beacons -- Common types**__
+
 
 [underline]#Remarks:#
 
@@ -10522,8 +10477,6 @@ If it is required to encode a fixed or floating sign or notice board, it must be
 * If it is required to encode the shape and colour of a notice board, it must be done by encoding the board as a *Daymark* feature.
 
 [underline]#Distinction:# Cardinal Beacon; Daymark; Isolated Danger Beacon; Landmark; Lateral Beacon; Safe Water Beacon.
-
-
 
 [[sec_20.14]]
 === Daymark
@@ -10850,7 +10803,9 @@ The term "daymark"may also simply refer to any unlit aid to navigation, particul
 
 In the following Table, a blank indicates that the encoder may choose a relevant value for the attribute. The Table contains the most common examples of coding; other coding combinations are possible.
 
-[cols="445,100,240,220,255,248,248,248,248,248", options="unnumbered"]
+[[table_20-3]]
+.Daymarks -- Examples
+[cols="445,100,240,220,255,248,248,248,248,248"]
 |===
 |
 *Feature*
@@ -10896,7 +10851,7 @@ In the following Table, a blank indicates that the encoder may choose a relevant
 
 |===
 
-__**Table 20-3 -- Daymarks -- Examples**__
+
 
 [underline]#Remarks:#
 
@@ -10906,8 +10861,6 @@ __**Table 20-3 -- Daymarks -- Examples**__
 * If it is required to encode a daymark that has more than one colour, the attributes *colour* and *colour pattern* must be encoded, according to the rules laid out in clause 2.4.10. If the colour pattern for the daymark is complex, it is strongly recommended that an image of the daymark is included, using the attribute *pictorial representation*.
 
 [underline]#Distinction:# Cardinal Beacon; Isolated Danger Beacon; Lateral Beacon; Safe Water Beacon; Special Purpose/General Beacon; Topmark.
-
-
 
 [[sec_20.15]]
 === Light float
@@ -11202,7 +11155,6 @@ If it is required to encode a light float, it must be done using the feature *Li
 
 [underline]#Distinction:# Cardinal Buoy; Emergency Wreck Marking Buoy; Installation Buoy; Isolated Danger Buoy; Lateral Buoy; Light Vessel; Safe Water Buoy; Special Purpose/General Buoy.
 
-
 [[sec_20.16]]
 === Light vessel
 
@@ -11416,7 +11368,6 @@ If it is required to encode a light vessel, it must be done using the feature *L
 * The light on a light vessel is a separate feature, handled as with buoys, beacons, etc.
 
 [underline]#Distinction:# Cardinal Beacon; Cardinal Buoy; Emergency Wreck Marking Buoy; Installation Buoy; Isolated Danger Beacon; Isolated Danger Buoy; Lateral Buoy; Lateral Beacon; Light Float; Safe Water Beacon; Safe Water Buoy; Special Purpose/General Beacon; Special Purpose/General Buoy.
-
 
 [[sec_20.17]]
 === Retroreflector
@@ -11690,7 +11641,6 @@ If it is required to encode radar reflectors on curve features (for instance ove
 
 [underline]#Distinction:# Retroreflector.
 
-
 [[sec_20.19]]
 === Fog signal
 
@@ -11910,7 +11860,6 @@ If it is required to encode a fog signal, it must be done using the feature *Fog
 
 [underline]#Distinction:# Signal Station Warning.
 
-
 [[sec_21]]
 == Geo Features -- Radar, Radio
 
@@ -12083,7 +12032,6 @@ If it is required to encode a physical AIS aid to navigation, it must be done us
 * Where populated, the attribute *estimated range of transmission* for *Physical AIS Aid to Navigation* provides the Mariner with an approximate distance from the position of the aid that the broadcast signal will generate the display of the AIS symbol on the ECDIS.
 
 [underline]#Distinction:# Radar Station; Radio Station; Radio Calling-In Point; Virtual AIS Aid to Navigation.
-
 
 [[sec_21.3]]
 === Virtual AIS aid to navigation
@@ -12260,9 +12208,7 @@ If it is required to encode a virtual AIS aid to navigation, it must be done usi
 * The unique Maritime Mobile Service Identity (MMSI) code for the virtual AIS aid to navigation should be encoded, where known, using the attribute *MMSI code*.
 * Where populated, the attribute *estimated range of transmission* for *Virtual AIS Aid to Navigation* provides the Mariner with an approximate distance from the position of the virtual aid that the broadcast signal will generate the display of the AIS symbol on the ECDIS.
 
-
 [underline]#Distinction:# Physical AIS Aid to Navigation; Radar Station; Radio Station; Radio Calling-In Point.
-
 
 [[sec_21.4]]
 === Radio station
@@ -12728,7 +12674,6 @@ If it is required to encode a radar beacon, it must be done using the feature *R
 
 [underline]#Distinction:# Radar Line; Radar Range; Radar Station.
 
-
 [[sec_22]]
 == Geo Features -- Services
 
@@ -12915,9 +12860,7 @@ If it is required to encode a pilot boarding place, it must be done using the fe
 
 If it is required to encode a pilot station ashore, it must be done using a *Building* or *Landmark* feature, with attribute *function* = _11_ (pilot office) or _12_ (pilot lookout).
 
-
 [underline]#Distinction:# Pilotage District.
-
 
 [[sec_22.2]]
 === Vessel traffic service
@@ -14184,7 +14127,6 @@ If it is required to encode a small craft facility, it must be done using the fe
 10+| *Associated to:* **Administration Area**, **Airport/Airfield**, **Anchor Berth**, **Anchorage Area**, **Archipelagic Sea Lane**, **Archipelagic Sea Lane Area**, **Archipelagic Sea Lane Axis**, **Berth**, **Bollard**, **Bridge**, **Building**, **Built-Up Area**, **Cable Area**, **Cable Overhead**, **Cable Submarine**, **Canal**, **Cardinal Buoy**, **Cardinal Beacon**, **Cargo Transhipment Area**, **Causeway**, **Chart 1 Feature**, **Checkpoint**, **Coast Guard Station**, **Coastline**, **Collision Regulations Limit**, **Continental Shelf Area**, **Conveyor**, **Crane**, **Current -- Non-Gravitational**, **Dam**, **Daymark**, **Deep Water Route**, **Deep Water Route Centreline**, **Deep Water Route Part**, **Distance Mark**, **Dock Area**, **Dolphin**, **Dredged Area**, **Dry Dock**, **Dumping Ground**, **Dyke**, **Emergency Wreck Marking Buoy**, **Fairway**, **Fairway System**, **Fence/Wall**, **Ferry Route**, **Fishery Zone**, **Fishing Facility**, **Fishing Ground**, **Floating Dock**, **Fog Signal**, **Fortified Structure**, **Foul Ground**, **Free Port Area**, **Gate**, **Gridiron**, **Harbour Area (Administrative)**, **Harbour Facility**, **Helipad**, **Hulk**, **Ice Area**, **Information Area**, **Installation Buoy**, **Island Group**, **Isolated Danger Beacon**, **Isolated Danger Buoy**, **Lake**, **Land Area**, **Land Elevation**, **Land Region**, **Landmark**, **Lateral Beacon**, **Lateral Buoy**, **Light Air Obstruction**, **Light All Around**, **Light Float**, **Light Fog Detector**, **Light Sectored**, **Light Vessel**, **Local Magnetic Anomaly**, **Lock Basin**, **Log Pond**, **Marine Farm/Culture**, **Marine Pollution Regulations Area**, **Military Practice Area**, **Mooring Area**, **Mooring Buoy**, **Mooring Trot**, **Obstruction**, **Offshore Platform**, **Offshore Production Area**, **Oil Barrier**, **Physical AIS Aid to Navigation**, **Pile**, **Pilot Boarding Place**, **Pilotage District**, **Pipeline Overhead**, **Pipeline Submarine/On Land**, **Pontoon**, **Precautionary Area**, **Production/Storage Area**, **Pylon/Bridge Support**, **Radar Line**, **Radar Range**, **Radar Station**, **Radar Transponder Beacon**, **Radio Calling-In Point**, **Radio Station**, **Railway**, **Range System**, **Rapids**, **Recommended Route Centreline**, **Recommended Track**, **Rescue Station**, **Restricted Area**, **River**, **Road**, **Runway**, **Safe Water Beacon**, **Safe Water Buoy**, **Sea Area/Named Water Area**, **Seabed Area**, **Seagrass**, **Seaplane Landing Area**, **Shoreline Construction**, **Signal Station Traffic**, **Signal Station Warning**, **Silo/Tank**, **Slope Topline**, **Sloping Ground**, **Small Craft Facility**, **Sounding**, **Span Fixed**, **Span Opening**, **Special Purpose/General Beacon**, **Special Purpose/General Buoy**, **Spring**, **Structure Over Navigable Water**, **Submarine Pipeline Area**, **Submarine Transit Lane**, **Tidal Stream Panel Data**, **Tidal Stream -- Flood/Ebb**, **Tideway**, **Traffic Separation Scheme**, **Tunnel**, **Two-Way Route**, **Underwater/Awash Rock**, **Vegetation**, **Vessel Traffic Service Area**, **Virtual AIS Aid to Navigation**, **Water Turbulence**, **Waterfall**, **Weed/Kelp**, **Wind Turbine**, *Wreck*
 |===
 
-
 INT 1 Reference:
 
 [[sec_23.1.1]]
@@ -14210,8 +14152,6 @@ NOTE: Where an associated instance of *Text Placement* has not been related to a
 * *Text Placement* should normally be associated with features of type point, but may be used for features of type curve and surface.
 
 [underline]#Distinction:#
-
-
 
 [[sec_24]]
 == Information types
@@ -14348,6 +14288,8 @@ Information on how to reach a person or organisation by postal, internet, teleph
 |===
 
 [underline]#INT 1 Reference:#
+
+
 
 [[sec_24.1.1]]
 ==== Contact details
@@ -14852,7 +14794,7 @@ The following diagrams are examples to demonstrate the structure of the feature/
 
 [[fig_25-1]]
 .Two-Way Route Part UML relationship diagram
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_ce7a4ff2.png["",602,324]
+image::figure-25-1.png["",602,324]
 
 NOTE: The association *Spatial Association* (see clause 25.15) is not included in Figure 25-1 above, as this association identifies the relationship between an information type (*Spatial Quality*) and the spatial type to which a feature is bound (that is, the geometry to which the feature is bound, rather than the feature itself).
 
@@ -14906,9 +14848,7 @@ Figure 25-3 below shows the representation of the feature/feature association *T
 
 [[fig_25-3]]
 .Two-Way Route Aggregation
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_d4a06b72.gif[Shape38,548,270]
-
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_b67d198d.png["",663,97]
+image::figure-25-3.png[Shape38,548,270]
 
 [cols="77,90,366,76", options="unnumbered"]
 |===
@@ -14936,9 +14876,7 @@ Figure 25-4 below shows the representation of the feature/feature association *T
 
 [[fig_25-4]]
 .Traffic Separation Scheme Aggregation
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_c13f5fa7.png["",658,86]
-
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_4c5d0702.gif[Shape39,141,225]
+image::figure-25-4.png["",658,86]
 
 [cols="64,94,385,67", options="unnumbered"]
 |===
@@ -14969,7 +14907,7 @@ Figure 25-5 below shows the representation of the feature/information associatio
 
 [[fig_25-5]]
 .Additional Information
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_d65eda04.png["",188,319]
+image::figure-25-5.png["",188,319]
 
 [cols="68,90,383,69", options="unnumbered"]
 |===
@@ -15136,6 +15074,8 @@ Each row included in Figure 25-6 above describes a S-101 association instance th
 | Association | The Component | **Archipelagic Sea Lane**, *Traffic Separation Scheme* | 0,*
 
 |===
+
+
 
 [[sec_25.6]]
 === Deep Water route aggregation
@@ -15606,6 +15546,8 @@ h| IHO Definition: *THE* **UPDATED OBJECT**. A pointer to a feature that has bee
 
 |===
 
+
+
 [[sec_27]]
 == Geo Feature Attribute and Enumerate Descriptions
 
@@ -15811,6 +15753,8 @@ Attribute Type: RealUnit: Defined as an attribute in the ENC dataset metadata: m
 * No remarks.
 
 |===
+
+
 
 [[sec_27.8]]
 === call sign (CALSGN)
@@ -16428,6 +16372,8 @@ IHO Definition: A horn uses compressed air or electricity to vibrate a diaphragm
 
 |===
 
+
+
 [[sec_27.28]]
 === category of fortified structure (CATFOR)
 
@@ -16805,6 +16751,8 @@ IHO Definition:A barrier to check or confine anything in motion; particularly on
 * No remarks.
 
 |===
+
+
 
 [[sec_27.36]]
 === category of lateral mark (CATLAM)
@@ -17448,6 +17396,7 @@ IHO Definition:A radar beacon that may be used (in conjunction with at least one
 * No remarks.
 
 |===
+
 
 [[sec_27.55]]
 === category of radio station (CATROS)
@@ -18396,6 +18345,7 @@ IHO Definition:A surface following buoy used to measure wave activity.
 
 |===
 
+
 [[sec_27.68]]
 === category of structure
 
@@ -18537,6 +18487,8 @@ IHO Definition: A wave that forms over a submerged offshore reef or rock, someti
 
 |===
 
+
+
 [[sec_27.72]]
 === category of weed/kelp (CATWED)
 
@@ -18591,38 +18543,60 @@ IHO Definition: Wreck of which any portion of the hull or superstructure is visi
 
 |===
 
+
+
+
+
 [[sec_27.74]]
 === category of zone of confidence in data (CATZOC)
 
-[cols="651,100,63,103,123,131", options="unnumbered"]
+[cols="1", options="unnumbered"]
 |===
-| IHO Definition: *CATEGORY OF ZONE OF CONFIDENCE IN DATA*. Classification of the zone of confidence in data within an area based on the positional accuracy, survey equipment and coverage.
+a| IHO Definition: *CATEGORY OF ZONE OF CONFIDENCE IN DATA*. Classification of the zone of confidence in data within an area based on the positional accuracy, survey equipment and coverage.
 
 Attribute Type: Enumeration
 
-. ~**zone of confidence A1**~
+. **zone of confidence A1**
++
+--
 IHO Definition: Positional Accuracy +/- 5 metres + 5% depth; Depth Accuracy 0.5 metre + 1% depth; Full area search undertaken. Significant seafloor features detected and depths measured; Controlled, systematic survey, high position and depth accuracy achieved using DGPS or a minimum three high quality lines of position (LOP) and a multibeam, channel or mechanical sweep system. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.107, November 2000).
-[start=2]
-. ~*zone of confidence A2*~
-IHO Definition:~Positional Accuracy +/- 20 metres; Depth Accuracy 1.0 metre + 2% depth; Full area search undertaken. Significant seafloor features detected and depths measured; Controlled, systematic survey achieving position and depth accuracy less than ZOC A1 and using a modern survey echosounder and a sonar or mechanical sweep system.~ (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.107, November 2000).
-[start=3]
-. ~*zone of confidence B*~
-IHO Definition: Positional Accuracy +/- 50 metres; Depth Accuracy 1.0 metre + 2% depth; Full area search not achieved, uncharted features hazardous to surface navigation are not expected but may exist; Controlled, systematic survey achieving similar depth but lesser position accuracies than ZOCA2, using a modern survey echosounder, but no sonar or mechanical sweep system. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.107, November 2000).
-[start=4]
-. ~*zone of confidence C*~
-IHO Definition: Positional Accuracy +/- 500 metres; Depth Accuracy 2.0 metre + 5% depth; Full area search not achieved, depth anomalies may be expected; Low accuracy survey or data collected on an opportunity basis such as soundings on passage. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.107, November 2000).
-[start=5]
-. ~*zone of confidence D*~
-IHO Definition: Positional Accuracy worse than ZOC C; Depth Accuracy worse than ZOC C; Full area search not achieved, large depth anomalies may be expected; Poor quality data or data that cannot be quality assessed due to lack of information. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.107, November 2000).
-[start=6]
-. ~*zone of confidence U*~
-IHO Definition: The quality of the bathymetric data has yet to be assessed. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.107, November 2000).
+--
 
+. *zone of confidence A2*
++
+--
+IHO Definition:~Positional Accuracy +/- 20 metres; Depth Accuracy 1.0 metre + 2% depth; Full area search undertaken. Significant seafloor features detected and depths measured; Controlled, systematic survey achieving position and depth accuracy less than ZOC A1 and using a modern survey echosounder and a sonar or mechanical sweep system.~ (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.107, November 2000).
+--
+
+. *zone of confidence B*
++
+--
+IHO Definition: Positional Accuracy +/- 50 metres; Depth Accuracy 1.0 metre + 2% depth; Full area search not achieved, uncharted features hazardous to surface navigation are not expected but may exist; Controlled, systematic survey achieving similar depth but lesser position accuracies than ZOCA2, using a modern survey echosounder, but no sonar or mechanical sweep system. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.107, November 2000).
+--
+
+. *zone of confidence C*
++
+--
+IHO Definition: Positional Accuracy +/- 500 metres; Depth Accuracy 2.0 metre + 5% depth; Full area search not achieved, depth anomalies may be expected; Low accuracy survey or data collected on an opportunity basis such as soundings on passage. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.107, November 2000).
+--
+
+. *zone of confidence D*
++
+--
+IHO Definition: Positional Accuracy worse than ZOC C; Depth Accuracy worse than ZOC C; Full area search not achieved, large depth anomalies may be expected; Poor quality data or data that cannot be quality assessed due to lack of information. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.107, November 2000).
+--
+. *zone of confidence U*
++
+--
+IHO Definition: The quality of the bathymetric data has yet to be assessed. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.107, November 2000).
+--
 |===
+
 
 [underline]#Remarks:#
 
 ** The full categorisation of each category is as follows:
+
 
 [cols="25,100,63,103,123,131", options="unnumbered"]
 |===
@@ -18830,6 +18804,8 @@ Attribute Type: Text
 
 |===
 
+
+
 [[sec_27.80]]
 === date disused
 
@@ -18981,6 +18957,7 @@ Attribute Type: RealUnit: Metre (m)Precision: 0∙1mMinimum range: -30Maximum ra
 * Where the area dries, the value is negative or zero (0).
 
 |===
+
 
 [[sec_27.88]]
 === depth range minimum value (DRVAL1)
@@ -19134,6 +19111,9 @@ IHO Definition: A light which is only exhibited at night. (S-57 Edition 3.1, App
 
 |===
 
+
+
+
 [[sec_27.96]]
 === exposition of sounding (EXPSOU)
 
@@ -19197,6 +19177,7 @@ TXT and may contain formatted text.
 * The files referenced by this attribute generally contain long text strings.
 
 |===
+
 
 [[sec_27.99]]
 === flare bearing
@@ -21136,6 +21117,9 @@ Example:**+61 2 4223 6500**; **pilsener@beer.com**
 
 |===
 
+
+
+
 [[sec_27.176]]
 === telecommunication service
 
@@ -22385,7 +22369,7 @@ Range closure: Left half-open ray (_minimum <_ _*update number*_)
 
 Example: *1* for Update number 1
 
-Remarks:
+[underline]#Remarks:#
 
 * Leading zeros must not be encoded.
 
@@ -22505,6 +22489,7 @@ Indication:Sub-attributes:*least depth of detected features measured* see clause
 * A feature in this context is meant to be any object, whether manmade or not, projecting above the seafloor, which may be a danger for surface navigation. (Refer to IHO publication S-44). *features detected* does not describe if features were actually detected during a hydrographic survey, but whether the survey had the capacity to detect features.
 
 |===
+
 
 [[sec_29.4]]
 === fixed date range
@@ -22709,6 +22694,7 @@ Sub-attributes:*date end* see clause 27.81*date start* see clause 27.83
 * The sub-attributes *date start* and *date end* must be encoded in the format ----MMDD; using 2 digits for the month (MM) (for example April = 04) and 2 digits for the day (DD). When no specific day is required/known, the values are replaced with dashes (-).
 
 |===
+
 
 [[sec_29.16]]
 === radar wave length _(RADWAL)_
@@ -23177,7 +23163,8 @@ Sub-attributes:*category of zone of confidence in data* see clause 27.74*fixed d
 [[sec_30.1]]
 === default clearance depth
 
-[cols="651,80,79,96,80,96", options="unnumbered"]
+
+[cols="1", options="unnumbered"]
 |===
 | IHO Definition: *DEFAULT CLEARANCE DEPTH*. The depth value determined for an underwater hazard of unknown depth, based on the depth of the surrounding area.
 
@@ -23205,6 +23192,7 @@ The following Tables provide an indication for the values (if relevant) to be po
 *** For features of geometric primitive curve or surface covered by multiple *Depth Area* and/or *Dredged Area* features, the shoalest value of the attribute *depth range minimum value* for the *Depth Area*/*Dredged Area* features.
 
 |===
+
 
 [[table_30.1]]
 .Values for default clearance depth -- Obstruction features
@@ -23462,7 +23450,6 @@ h| _4,_ Unknown
 h| _*-15*_
 
 |===
-
 
 [[sec_30.2]]
 === in the water

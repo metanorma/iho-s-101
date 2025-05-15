@@ -1,5 +1,4 @@
 
-
 [[sec_3]]
 == Metadata Features
 
@@ -140,7 +139,6 @@ It is prohibited to use an attribute on an individual object, if this attribute 
 
 [underline]#INT 1 Reference:# M 32.1-2
 
-
 [[sec_3.4.1]]
 ==== Quality of non-bathymetric data (see S-4 -- B-487.2)
 
@@ -232,7 +230,6 @@ Meta features *Quality of Non-bathymetric Data* and *Quality of Bathymetric Data
 
 [underline]#INT 1 Reference:#
 
-
 [[sec_3.5.1]]
 ==== Coverage
 
@@ -283,7 +280,6 @@ Where a series of differing optimum display scale ENC datasets are compiled cove
 * Where more than one *Data Coverage* feature exists for a dataset, the dataset, when initially loaded, will be displayed in the ECDIS at a display scale corresponding to the largest scale value populated for *optimum display scale*.
 * Where a dataset consists of only one *Data Coverage* feature, the value for the optimum display scale populated in the dataset discovery metadata must be the same as the value populated for *optimum display scale* on the *Data Coverage*.
 * Except for the largest scale dataset coverage, datasets with multiple *Data Coverage* features must not have excessive differences in the values populated for *optimum display scale* between the *Data Coverage* features. Typically, this should be interpreted as there being no more than one scale step value as defined in Table 3-2 above between the *optimum display scale* values in a single dataset.
-
 
 [underline]#Distinction:# 
 
@@ -351,7 +347,6 @@ Where a series of differing optimum display scale ENC datasets are compiled cove
 |===
 
 [underline]#INT 1 Reference:# Q 130
-
 
 [[sec_3.6.1]]
 ==== Buoyage systems (see S-4 -- B-461)
@@ -840,7 +835,6 @@ The vertical and horizontal position uncertainty values populated on the instanc
 
 [underline]#INT 1 Reference:#
 
-
 [[sec_3.9.1]]
 ==== Sounding datum
 
@@ -1196,7 +1190,7 @@ The technique of sounding measurement must not be encoded using *technique of ve
 
 * No remarks.
 
-Distinction: Accuracy of Data; Quality of Bathymetric Data.
+[underline]#Distinction:# Accuracy of Data; Quality of Bathymetric Data.
 
 [[sec_3.12]]
 === Update information

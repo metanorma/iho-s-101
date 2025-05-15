@@ -442,7 +442,7 @@ If it is required to encode a building (other than a landmark, tank, silo or roo
 
 [[fig_6-1]]
 .Landmarks
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_305a76e1.gif[Shape4,624,158]
+image::figure-6-1.png[Shape4,624,158]
 
 * If available and considered important for route planning and/or monitoring, the vertical uncertainty associated with encoded vertical clearance values should also be encoded.
 
@@ -456,7 +456,7 @@ If it is required to encode a harbour office, it must be done using a *Building*
 
 If it is required to encode a transit shed or warehouse, it must be done using a *Building* feature, with attributes *function* = _15_ (transit shed/warehouse), and if it is required, *feature name* (*name*) = name or number of the shed.
 
-Distinction: Built-Up Area; Coast Guard Station; Landmark; Rescue Station; Silo/Tank; Structure Over Navigable Water.
+[underline]#Distinction:# Built-Up Area; Coast Guard Station; Landmark; Rescue Station; Silo/Tank; Structure Over Navigable Water.
 
 [[sec_6.3]]
 === Airport/airfield
@@ -1150,45 +1150,25 @@ The value of the vertical clearance between (high) water level and any fixed ove
 [[sec_6.6.2]]
 ==== Examples of Encoding Common Bridge Types
 
-**Figure 6-2 -- Bascule bridge -- Example**
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_13e3441.gif[Shape5,626,485]
+[[fig_6-2]]
+.Bascule bridge -- Example
+image::figure-6-2.png[Shape5,626,485]
 
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_288ef2ea.gif[Shape6,633,484]
+[[fig_6-3]]
+.Pontoon bridge (opening) -- Example
+image::figure-6-3.png[Shape7,633,345]
 
-**_*Figure 6-3 -- Pontoon bridge (opening) -- Example* _ **
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_17f1d93c.gif[Shape7,633,345]
+[[fig_6-4]]
+.Pontoon bridge (fixed) -- Example
+image::figure-6-4.png[Shape8,633,538]
 
-*Figure 6-4 -- Pontoon bridge (fixed) -- Example*
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_b16ea938.gif[Shape8,633,538]
+[[fig_6-5]]
+.Swing bridge -- Example
+image::figure-6-5.png[Shape10,30,96]
 
-Figure 6-5 -- Swing bridge -- Example**
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_664d8529.gif[Shape10,30,96]
-
-*Figure 6-6 -- Lifting bridge -- Example*
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_cfc0b118.gif[Shape12,240,84]
-
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_2aa98681.gif[Shape9,18,96]
-
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_cfc0b118.gif[Shape11,240,84]
-
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_58c30dd1.gif[Shape13,156,60]
-
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_71c79688.gif[Shape15,626,522]
-
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_936202f3.gif[Shape17,228,169]
-
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_cf064698.gif[Shape16,3,66]
-
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_70c1e748.gif[Shape14,1,54]
-
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_62723c66.gif[Shape18,228,168]
-
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_819b7213.tif["",173,91]
-
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_5e25cb5a.gif[Shape19,113,110]
-
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_7f6d5600.gif[Shape20,128,96]
-
+[[fig_6-6]]
+.Lifting bridge -- Example
+image::figure-6-6.png[Shape12,240,84]
 
 [underline]#Distinction:#  Pipeline Overhead; Pontoon; Pylon/Bridge Support; Span Fixed; Span Opening.
 
@@ -1254,19 +1234,9 @@ image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_7f6d5600.gif[Shape20,128,96]
 | C
 | 1,1
 
-3+| vertical clearance value
-2+| (VERCLR)
-3+|
+3+| vertical clearance value 2+| (VERCLR) 3+| | (S) RE | 1,1
 
-| (S) RE
-| 1,1
-
-3+| vertical uncertainty
-2+| _(VERACC)_
-3+|
-
-| (S) C
-| 0,1
+3+| vertical uncertainty 2+| _(VERACC)_ 3+| | (S) C | 0,1
 
 3+| uncertainty fixed
 2+| 3+|
@@ -1391,10 +1361,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 | C
 | 0,1
 
-3+| date end
-2+| (DATEND)
-3+| | (S) TD
-| 0,1 footnote:crossnote[]
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnote:crossnote[]
 
 3+| date start
 2+| (DATSTA)
@@ -1633,30 +1600,17 @@ The value of the vertical clearance between (high) water level and any opening o
 4: squared +
 5: stripes (direction unknown)
 6: border stripe | EN | 0,1 footnote:crossnote[]
+
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
-5: planned construction | EN | 0,1
-3+| feature name
-2+|
+5: planned construction | EN | 0,1 3+| feature name 2+|
 
-3+| See clause 2.5.8
-| C
-| 0,*
+3+| See clause 2.5.8 | C | 0,*
 
-3+| language
-2+|
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| ISO 639-2/T
-| (S) TE
-| 1,1
-
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
-| 1,1
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|

@@ -1278,7 +1278,7 @@ If it is required to encode a lava flow, it must be done using a *Land Region* f
 
 If the seaward edge of an encoded lava flow area is coincident with the coastline, this edge should also be encoded using a *Coastline* feature (see clause5.3), with attribute *nature of surface* = _11_ (lava). If the source indicates that the lava flow is active, the coastline's spatial type should have the attribute *quality of horizontal measurement* = _4_ (approximate).
 
-Distinction: Land Area; Sea Area/Named Water Area; Slope Topline; Sloping Ground; Vegetation.
+[underline]#Distinction:# Land Area; Sea Area/Named Water Area; Slope Topline; Sloping Ground; Vegetation.
 
 [[sec_5.12]]
 === Vegetation
@@ -1614,7 +1614,7 @@ If it is required to encode the portion of a glacier that is on land, it must be
 
 If the seaward edge of an encoded glacier is coincident with the coastline, this edge should be encoded using a *Coastline* feature, with attribute *category of coastline* = _6_ (glacier, seaward end), and the coastline's spatial type should have the attribute *quality of horizontal measurement* = _4_ (approximate) for the visible coastline.
 
-Distinction: Depth Area; Land Area.
+[underline]#Distinction:# Depth Area; Land Area.
 
 [[sec_5.14]]
 === Sloping ground
@@ -1769,7 +1769,7 @@ If it is required to encode a sand dune or sand hill, it must be done using the 
 
 If it is required to encode the height of a dune or sand hill, a *Land Elevation* feature (see clause 5.6) must also be encoded.
 
-Distinction: Land Elevation; Slope Topline.
+[underline]#Distinction:# Land Elevation; Slope Topline.
 
 [[sec_5.15]]
 === Slope topline

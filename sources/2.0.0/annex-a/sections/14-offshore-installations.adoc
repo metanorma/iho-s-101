@@ -881,7 +881,6 @@ If it is required to encode a submarine or land pipeline, it must be done using 
 
 If it is required to encode diffusers and cribs, this must be done using *Obstruction* features (see clause 13.6), with attribute *category of obstruction* = _3_ (diffuser) or _4_ (crib).
 
-
 [underline]#Distinction:# Pipeline Overhead, Submarine Pipeline Area.
 
 [[sec_14.5]]
@@ -1382,4 +1381,4 @@ If it is required to encode an offshore tanker loading system, it must be done u
 
 If it is required to encode an articulated tower, it must be done using an *Offshore Platform* feature (see clause 14.1), with attribute:*category of offshore platform* - _4_ - articulated loading platform__5__ - single anchor leg mooring__8__ - floating production, storage and off-loading vessel__10__ - navigation, communication and control buoy (which may include storage facilities)
 
-Distinction: Exclusive Economic Zone; Offshore Platform; Wind Turbine.
+[underline]#Distinction:# Exclusive Economic Zone; Offshore Platform; Wind Turbine.

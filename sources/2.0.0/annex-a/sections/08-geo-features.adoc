@@ -902,8 +902,12 @@ These features form the border of the *Land Area* feature.
 [[sec_8.6.2]]
 ==== Artificial coastline (see S-4 – B-313; B-320-322; B-324 and B-329)
 
-If it is required to encode artificial sections of coastlines; or lakeshores, riverbanks, canal banks and basin borders that are navigable at the optimum display scale for the ENC data, this must be done using the feature *Shoreline Construction*. The largest optimum display scale ENC data should make clear whether any shoreline construction along the coastline is intended for ships to berth alongside or not. In most instances, the associated detail (name or berth number, depths alongside, dolphins, cargo sheds, cranes or railway lines), in addition to the usually distinctive outline of such features as piers and jetties, will be sufficient to show that ships may come alongside. For shoreline constructions not intended to berth alongside (such as breakwaters and seawalls), an indication that ships do not go alongside may be given by encoding the sloping sides (for example the intertidal portion of the structure). If there is a possibility of misinterpretation by the Mariner, the danger may be indicated by encoding an *Obstruction* surface feature (see clause 13.6) with the seaward edge running parallel to the shoreline construction. Figure 8-1 below represents a shoreline construction such as a mole, including a berthing facility (INT1 - F12), with a relatively flat top (_abcdlmna_), and sloping sides partly above high water (_nmldefgn_) and partly intertidal (_dopqrhgfed_).__**Fimage::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_8ef71427.gif[Shape22,631,332]
- igure 8-1 – Shoreline constructions**__
+If it is required to encode artificial sections of coastlines; or lakeshores, riverbanks, canal banks and basin borders that are navigable at the optimum display scale for the ENC data, this must be done using the feature *Shoreline Construction*. The largest optimum display scale ENC data should make clear whether any shoreline construction along the coastline is intended for ships to berth alongside or not. In most instances, the associated detail (name or berth number, depths alongside, dolphins, cargo sheds, cranes or railway lines), in addition to the usually distinctive outline of such features as piers and jetties, will be sufficient to show that ships may come alongside. For shoreline constructions not intended to berth alongside (such as breakwaters and seawalls), an indication that ships do not go alongside may be given by encoding the sloping sides (for example the intertidal portion of the structure). If there is a possibility of misinterpretation by the Mariner, the danger may be indicated by encoding an *Obstruction* surface feature (see clause 13.6) with the seaward edge running parallel to the shoreline construction. Figure 8-1 below represents a shoreline construction such as a mole, including a berthing facility (INT1 - F12), with a relatively flat top (_abcdlmna_), and sloping sides partly above high water (_nmldefgn_) and partly intertidal (_dopqrhgfed_).
+
+[[fig_8-1]]
+.Shoreline constructions
+image::figure-8-1.png[Shape22,631,332]
+ 
 
 [underline]#Remarks:#
 
@@ -4223,20 +4227,21 @@ For each instance of **information**, at least one of the sub-attributes *file r
 [[sec_8.23.1]]
 ==== Mooring trots (see S-4 – B-431.6)
 
-**Figure 8-2 – Mooring trot**
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_cb8d5a79.gif[Shape23,360,216]
+[[fig_8-2]]
+.Mooring trot
+image::figure-8-2.png[Shape23,360,216]
 
 A complete mooring trot is composed of ground tackle, mooring cables, buoys and mooring berths on junction cables. The following remarks refer to the annotations in Figure 8-2 above:
 
-(a) Ground tackle should be encoded using *Obstruction* features (see clause 13.6), with attribute *category of obstruction* = _9_ (ground tackle).
+. Ground tackle should be encoded using *Obstruction* features (see clause 13.6), with attribute *category of obstruction* = _9_ (ground tackle).
 
-(b) Mooring cables should be encoded using *Cable Submarine* features (see clause 14.2), with attribute *category of cable* = _6_ (mooring cable).
+. Mooring cables should be encoded using *Cable Submarine* features (see clause 14.2), with attribute *category of cable* = _6_ (mooring cable).
 
-(c) Buoys should be encoded using *Mooring Buoy* features.
+. Buoys should be encoded using *Mooring Buoy* features.
 
-(d) Mooring berths should be encoded using *Berth* features.
+. Mooring berths should be encoded using *Berth* features.
 
-(e) Junction cables should be encoded using *Cable Submarine* features, with attribute *category of cable* = _9_ (junction cable).
+. Junction cables should be encoded using *Cable Submarine* features, with attribute *category of cable* = _9_ (junction cable).
 
 All these features should be aggregated in a *Mooring Trot* feature, using the association *Mooring Trot Aggregation* (see clause 25.10), with the name of the mooring trot being populated using the complex attribute *feature name* for the *Mooring Trot*.
 

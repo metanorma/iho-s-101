@@ -1,5 +1,4 @@
 
-
 [[sec_13]]
 == Geo Features -- Rocks, Wrecks, Foul Ground, Obstructions
 
@@ -12,7 +11,7 @@ Due to possible ECDIS display issues isolated dangers of type point (feature typ
 
 [[fig_13-1]]
 .Area of wrecks
-image::S-101_Annex_A_DCEG_Ed_2.0.0_Final_Clean_html_56aa0f73.gif[Shape29,296,180]
+image::figure-13-1.png[Shape29,296,180]
 
 The area enclosed by the danger line must be encoded using *Wreck* (see clause 13.5) or *Obstruction* (see clause 13.6) features of type surface, with the attribute values, when encoded, reflecting the characteristics of the shallowest point feature encoded in the area. The area must also be covered by *Depth Area* or *Unsurveyed Area* features as appropriate.
 
@@ -269,7 +268,8 @@ Underwater rocks may cover and uncover, may be awash, or may be always underwate
 
 Population of the attributes *quality of* **vertical** **measurement**, **water level effect**, *reported date* and the spatial attribute *quality of horizontal measurement* are described in the Table below:
 
-__**Table 13-2 -- Underwater rocks -- Attribute encoding**__
+[[table_13-2]]
+.Underwater rocks -- Attribute encoding
 [cols="245,51,63,72,134,87,87,87,87,87"]
 |===
 h| Rock or coral reef h| INT 1 h| water level effect h| quality of vertical measurement h| Comment | | | | |
@@ -307,8 +307,7 @@ The spatial attribute *quality of horizontal measurement* should be set to _4_ (
 
 |===
 
-
-Remarks:
+[underline]#Remarks:#
 
 * For rocks which do not cover (islets), see clause5.4.2.
 * All *Underwater/Awash Rock* features should be encoded using one of the above combinations of attributes.
@@ -320,8 +319,6 @@ Remarks:
 * If it is required to encode an *Underwater/Awash Rock* feature where the attribute *value of sounding* is populated with an empty (null) value, but the source information indicates the depth of the feature is within the range of the surrounding depth area, the value *exposition of sounding* = _1_ (within the range of the surrounding depth area) must be populated in order to avoid the unnecessary display of isolated danger symbols in ECDIS.
 
 [underline]#Distinction:# Obstruction; Seabed Area; Sounding; Wreck.
-
-
 
 [[sec_13.5]]
 === Wreck
@@ -537,6 +534,8 @@ Population of the attributes **category of wreck**, *quality of* **vertical** **
 
 In the following Table, the symbol '/' indicates that this attribute is not relevant for the wreck instance and therefore must not be encoded. A blank indicates that the encoder may choose a relevant value for the attribute.
 
+[[table_13-3]]
+.Wrecks -- Attribute encoding
 [cols="621,120,96,144,144,216,225,478,478,478"]
 |===
 h| Wrecks... h| S-4 h| INT 1 h| category of wreck h| water level effect h| quality of vertical measurement h| technique of vertical measurement | | |
@@ -678,7 +677,9 @@ h| Wrecks... h| S-4 h| INT 1 h| category of wreck h| water level effect h| quali
 
 |===
 
-__**Table 13-3 -- Wrecks -- Attribute encoding**__All wrecks should be encoded using one of the above combinations of attributes. \* For a wreck where the least depth is unknown, the attribute value _2_ (depth or least depth unknown) for *quality of vertical measurement* does not apply to the depth of the seabed near the wreck. The provision of more quantitative information for wrecks where possible is particularly important in terms of the portrayal of wrecks in ECDIS, as the classification of wrecks as "dangerous" or "non-dangerous" is not taken into account in ECDIS when symbolizing *Wreck* features outside *Unsurveyed Area*. This often results in wrecks located in *Depth Area* or *Dredged Area* being symbolized as an obstruction to navigation where they are actually non-dangerous. Where the depth of the wreck is unknown, compilers should consider determining an estimated safe clearance value (see S-4 -- B-422.5) and populating *quality of vertical measurement* = _7_ (least depth unknown, safe clearance at value shown).
+
+
+All wrecks should be encoded using one of the above combinations of attributes. \* For a wreck where the least depth is unknown, the attribute value _2_ (depth or least depth unknown) for *quality of vertical measurement* does not apply to the depth of the seabed near the wreck. The provision of more quantitative information for wrecks where possible is particularly important in terms of the portrayal of wrecks in ECDIS, as the classification of wrecks as "dangerous" or "non-dangerous" is not taken into account in ECDIS when symbolizing *Wreck* features outside *Unsurveyed Area*. This often results in wrecks located in *Depth Area* or *Dredged Area* being symbolized as an obstruction to navigation where they are actually non-dangerous. Where the depth of the wreck is unknown, compilers should consider determining an estimated safe clearance value (see S-4 -- B-422.5) and populating *quality of vertical measurement* = _7_ (least depth unknown, safe clearance at value shown).
 
 [underline]#Remarks:#
 
@@ -715,10 +716,7 @@ If it is required to encode a restricted area around a historic wreck, it must b
 
 In addition, the wreck itself should be encoded as a *Wreck*feature, with attribute *status* = _13_ (historic).
 
-
 [underline]#Distinction:# Depth Area; Hulk; Obstruction; Sounding; Underwater/Awash Rock.
-
-
 
 [[sec_13.6]]
 === Obstruction
@@ -983,6 +981,8 @@ Population of the attributes *quality of* **vertical** **measurement**, *techniq
 
 In the following Table, the symbol '/' indicates that this attribute is not relevant for the obstruction instance and therefore must not be encoded. A blank indicates that the encoder may choose a relevant value for the attribute.
 
+[[table_13-4]]
+.Obstructions -- Attribute encoding
 [cols="835,200,360,440,380,557,557,557,557,557"]
 |===
 h| Obstruction... h| INT 1 h| water level effect h| quality of vertical measurement h| technique of vertical measurement | | | | |
@@ -1004,7 +1004,9 @@ h| Obstruction... h| INT 1 h| water level effect h| quality of vertical measurem
 
 |===
 
-__**Table 13-4 -- Obstructions -- Attribute encoding**__All obstructions should be encoded using one of the above combinations of attributes.\* For an obstruction where the least depth is unknown, the attribute value _2_ (depth or least depth unknown) for *quality of vertical measurement* does not apply to the depth of the seabed near the obstruction.
+
+
+All obstructions should be encoded using one of the above combinations of attributes.\* For an obstruction where the least depth is unknown, the attribute value _2_ (depth or least depth unknown) for *quality of vertical measurement* does not apply to the depth of the seabed near the obstruction.
 
 It is important when encoding obstructions to be aware of the distinction between attribute value *category of obstruction* = _6_ (foul area) and foul ground: Foul areas are defined as areas of numerous uncharted dangers to navigation. When encoded on ENC, *Obstruction* features of type surface with attribute *category of obstruction* = _6_ (foul area) will display in the ECDIS "base display" as an obstruction to navigation, with all associated alarms to indicate that it is unsafe for vessels to enter or transit the area.
 
@@ -1807,6 +1809,5 @@ If it is required to encode a marine farm, it must be done using the feature *Ma
 ==== Fish havens (see S-4 -- B- 447.5)
 
 If it is required to encode a fish haven, it must be done using an *Obstruction* feature (see clause 13.6), with attribute *category of obstruction* = _5_ (fish haven).
-
 
 [underline]#Distinction:# Fishing Facility; Obstruction.
