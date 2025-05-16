@@ -24,7 +24,7 @@ S-101 makes use of the following feature types:
 [[sec_2.1.1]]
 ==== Multiple features
 
-On some sources, multiple features in close proximity are generalised to a single feature with a text string indicating the presence of the other features. In such cases, where it is considered that this information may be useful for visual navigation, one feature of the appropriate class should be encoded and the true number of features, if known, must be encoded using the complex attribute **multiplicity of features**, sub-attribute **number of features**, with Boolean sub-attribute *multiplicity known* set to _True_ (see <<sec_27.131>>). If the true number of features is not known, *multiplicity of features* Boolean sub-attribute *multiplicity known* must be populated as _False_. If *multiplicity of features* is not an allowable attribute for the feature, multiplicity may be indicated using the complex attribute **information**, sub-attribute *text* (for example _3 trees_. If the true number of features is not known, the text "__more than one__" should be encoded using *information* (*text*).
+On some sources, multiple features in close proximity are generalised to a single feature with a text string indicating the presence of the other features. In such cases, where it is considered that this information may be useful for visual navigation, one feature of the appropriate class should be encoded and the true number of features, if known, must be encoded using the complex attribute *multiplicity of features*, sub-attribute *number of features*, with Boolean sub-attribute *multiplicity known* set to _True_ (see <<sec_27.131>>). If the true number of features is not known, *multiplicity of features* Boolean sub-attribute *multiplicity known* must be populated as _False_. If *multiplicity of features* is not an allowable attribute for the feature, multiplicity may be indicated using the complex attribute *information*, sub-attribute *text* (for example _3 trees_. If the true number of features is not known, the text "__more than one__" should be encoded using *information* (*text*).
 
 Multiple submerged features in close proximity, which have been generalised to a single feature, should not have the multiplicity indicated unless the multiplicity has some significance to safe navigation. This is so as to minimise the presence of ECDIS "information" symbols, which may contribute to screen clutter (see <<sec_2.4.6>>).
 
@@ -321,8 +321,8 @@ If *opening bridge* = _True_: *category of opening bridge* +
 other cases: none
 | *Cable Overhead*                  | over navigable water, one of: *vertical clearance fixed* or **vertical clearance safe** +
 other cases: none
-| *Cardinal Beacon*                 | **beacon shape**; **category of cardinal mark**; *colour*
-| *Cardinal Buoy*                   | **buoy shape**; **category of cardinal mark**; *colour*
+| *Cardinal Beacon*                 | *beacon shape*; *category of cardinal mark*; *colour*
+| *Cardinal Buoy*                   | *buoy shape*; *category of cardinal mark*; *colour*
 | *Caution Area*                    | at least one of: **information* **; *pictorial representation* *
 | *Contiguous Zone*                 | *nationality* *
 | *Continental Shelf Area*          | *nationality* *
@@ -331,14 +331,14 @@ other cases: none
 | *Current -- Non-Gravitational*    | *orientation*; *speed*
 | *Custom Zone*                     | *nationality* *
 | *Daymark*                         | *colour*; *topmark shape*
-| *Deep Water Route Centreline*     | **based on fixed marks**; **orientation value* **; *traffic flow*
-| *Deep Water Route Part*           | **depth range minimum value**; **orientation value* **; *traffic flow*
+| *Deep Water Route Centreline*     | *based on fixed marks*; **orientation value* **; *traffic flow*
+| *Deep Water Route Part*           | *depth range minimum value*; **orientation value* **; *traffic flow*
 | *Depth Area*                      | **depth range maximum value* **; *depth range minimum value* *
 | *Depth Contour*                   | *value of depth contour* *
 | *Distance Mark*                   | **distance mark visible* **; *measured distance value*
 | *Dolphin*                         | *category of dolphin*
 | *Dredged Area*                    | *depth range minimum value* *
-| *Emergency Wreck Marking Buoy*    | **buoy shape**; *colour*
+| *Emergency Wreck Marking Buoy*    | *buoy shape*; *colour*
 | *Exclusive Economic Zone*         | *nationality* *
 | *Ferry Route*                     | *category of ferry*
 | *Fishery Zone*                    | *nationality* *
@@ -347,27 +347,27 @@ other cases: none
 | *Harbour Facility*                | *category of harbour facility*
 | *Ice Area*                        | *category of ice*
 | *Information Area*                | at least one of: **information* **; *pictorial representation* *
-| *Installation Buoy*               | **buoy shape**; *colour*
+| *Installation Buoy*               | *buoy shape*; *colour*
 | *Island Group*                    | *feature name*
-| *Isolated Danger Beacon*          | **beacon shape**; *colour*
-| *Isolated Danger Buoy*            | **buoy shape**; *colour*
+| *Isolated Danger Beacon*          | *beacon shape*; *colour*
+| *Isolated Danger Buoy*            | *buoy shape*; *colour*
 | *Land Elevation*                  | *elevation* *
-| *Land Region*                     | at least one of: **category of land region**; *feature name*
-| *Landmark*                        | **category of landmark**; *visual prominence*
-| *Lateral Beacon*                  | **beacon shape**; **category of lateral mark**; *colour*
-| *Lateral Buoy*                    | **buoy shape**; **category of lateral mark**; *colour*
-| *Light All Around*                | **colour**; *rhythm of light*
+| *Land Region*                     | at least one of: *category of land region*; *feature name*
+| *Landmark*                        | *category of landmark*; *visual prominence*
+| *Lateral Beacon*                  | *beacon shape*; *category of lateral mark*; *colour*
+| *Lateral Buoy*                    | *buoy shape*; *category of lateral mark*; *colour*
+| *Light All Around*                | *colour*; *rhythm of light*
 | *Light Float*                     | *colour*
 | *Light Sectored*                  | *sector characteristics*
 | *Light Vessel*                    | *colour*
 | *Local Magnetic Anomaly*          | *value of local magnetic anomaly*
-| *Magnetic Variation*              | **reference year for magnetic variation**; **value of annual change in magnetic variation**; *value of magnetic variation* *
+| *Magnetic Variation*              | *reference year for magnetic variation*; *value of annual change in magnetic variation*; *value of magnetic variation* *
 | *Marine Farm/Culture*             | **water level effect** +
-at least one of: **height**; *value of sounding*
+at least one of: *height*; *value of sounding*
 | *Mooring Buoy*                    | *buoy shape*
-| *Navigation Line*                 | **category of navigation line**; *orientation*
-| *Obstruction*                     | **water level effect**; **surrounding depth** +
-one of: **height**; *value of sounding*
+| *Navigation Line*                 | *category of navigation line*; *orientation*
+| *Obstruction*                     | *water level effect*; **surrounding depth** +
+one of: *height*; *value of sounding*
 | *Offshore Platform*               | *water level effect*
 | *Pipeline Overhead*               | over navigable water: **vertical clearance fixed**other cases: none
 | *Precautionary Area*              | *information*
@@ -377,44 +377,44 @@ one of: **height**; *value of sounding*
 | *Radar Transponder Beacon*        | *category of radar transponder beacon*
 | *Radio Calling-In Point*          | *orientation value* (point features only); *traffic flow*
 | *Recommended Route Centreline*    | *based on fixed marks*
-| *Recommended Track*               | **based on fixed marks**; **orientation value**; *traffic flow*
+| *Recommended Track*               | *based on fixed marks*; *orientation value*; *traffic flow*
 | *Recommended Traffic Lane Part*   | *orientation value* *
 | *Restricted Area*                 | *restriction* *
-| *Safe Water Beacon*               | **beacon shape**; *colour*
-| *Safe Water Buoy*                 | **buoy shape**; *colour*
-| *Sea Area/Named Water Area*       | at least one of: **category of sea area**; *feature name*
+| *Safe Water Beacon*               | *beacon shape*; *colour*
+| *Safe Water Buoy*                 | *buoy shape*; *colour*
+| *Sea Area/Named Water Area*       | at least one of: *category of sea area*; *feature name*
 | *Seabed Area*                     | *surface characteristics*
 | *Signal Station Traffic*          | *category of signal station traffic*
 | *Signal Station Warning*          | *category of signal station warning*
 | *Small Craft Facility*            | *category of small craft facility*
 | *Span Fixed*                      | *vertical clearance fixed*
-| *Span Opening*                    | **vertical clearance closed**; *vertical clearance open*
-| *Special Purpose/General Beacon*  | **beacon shape**; **category of special purpose mark**; *colour*
-| *Special Purpose/General Buoy*    | **buoy shape**; **category of special purpose mark**; *colour*
+| *Span Opening*                    | *vertical clearance closed*; *vertical clearance open*
+| *Special Purpose/General Beacon*  | *beacon shape*; *category of special purpose mark*; *colour*
+| *Special Purpose/General Buoy*    | *buoy shape*; *category of special purpose mark*; *colour*
 | *Straight Territorial Sea Baseline*   | *nationality* *
-| *Structure Over Navigable Water*      | **horizontal clearance fixed**; *vertical clearance fixed*
+| *Structure Over Navigable Water*      | *horizontal clearance fixed*; *vertical clearance fixed*
 | *Swept Area*                          | *depth range minimum value* *
 | *Territorial Sea Area*                | *nationality* *
-| *Tidal Stream -- Flood/Ebb*            | **category of tidal stream**; **orientation**; *speed*
-| *Tidal Stream Panel Data*             | **station name**; *tidal stream panel values* *
+| *Tidal Stream -- Flood/Ebb*            | *category of tidal stream*; *orientation*; *speed*
+| *Tidal Stream Panel Data*             | *station name*; *tidal stream panel values* *
 | *Traffic Separation Scheme Lane Part* | *orientation value* (except when the lane part is a junction)
-| *Two-Way Route Part*                  | **orientation value**; *traffic flow*
-| *Underwater/Awash Rock*               | **value of sounding**; **water level effect**; *surrounding depth*
+| *Two-Way Route Part*                  | *orientation value*; *traffic flow*
+| *Underwater/Awash Rock*               | *value of sounding*; *water level effect*; *surrounding depth*
 | *Vegetation*                          | *category of vegetation*
 | *Virtual AIS Aid to Navigation*       | *virtual AIS aid to navigation type* *
 | *Water Turbulence*                    | *category of water turbulence*
-| *Wreck*                               | **water level effect**; **surrounding depth** +
-one of: **category of wreck**; *value of sounding*
+| *Wreck*                               | *water level effect*; **surrounding depth** +
+one of: *category of wreck*; *value of sounding*
 
 2+h| [underline]#METADATA FEATURES#
-| *Data Coverage*                       | **maximum display scale* **; **minimum display scale**; *optimum display scale* *
-| *Local Direction of Buoyage*          | **marks navigational -- system of**; *orientation value* *
+| *Data Coverage*                       | **maximum display scale* **; *minimum display scale*; *optimum display scale* *
+| *Local Direction of Buoyage*          | *marks navigational -- system of*; *orientation value* *
 | *Navigational System of Marks*        | *marks navigational -- system of* *
-| *Quality of Bathymetric Data*         | **category of temporal variation**; **data assessment**; **features detected**; **full seafloor coverage achieved**; *zone of confidence* *
+| *Quality of Bathymetric Data*         | *category of temporal variation*; *data assessment*; *features detected*; *full seafloor coverage achieved*; *zone of confidence* *
 | *Quality of Non-Bathymetric Data*     | *horizontal position uncertainty*
-| *Quality of Survey*                   | **survey authority**; **survey date range**; *survey type*
+| *Quality of Survey*                   | *survey authority*; *survey date range*; *survey type*
 | *Sounding Datum*                      | *vertical datum* *
-| *Update Information*                  | **update number**; *update type*
+| *Update Information*                  | *update number*; *update type*
 | *Vertical Datum of Data*              | *vertical datum* *
 
 2+h| [underline]#CARTOGRAPHIC FEATURES#
@@ -424,7 +424,7 @@ one of: **category of wreck**; *value of sounding*
 | *Nautical Information*                | at least one of: **information* **; *pictorial representation* *
 | *Non-Standard Working Day*            | at least one of: **date fixed* **; *date variable* *
 | *Service Hours*                       | *schedule by day of week* *
-| *Spatial Quality*                     | at least one of: **quality of horizontal measurement**; *spatial accuracy*
+| *Spatial Quality*                     | at least one of: *quality of horizontal measurement*; *spatial accuracy*
 
 2+h| [underline]#ECDIS CHART 1 FEATURES#
 | *Chart 1 Feature*                     | at least one of: *drawing instruction* *; **feature name** *
@@ -435,21 +435,21 @@ one of: **category of wreck**; *value of sounding*
 ====
 Sub-attributes of complex attributes, as well as the complex attribute itself, may also be designated as mandatory (see NOTE 2 below). "Conditional" mandatory attributes are identified in the feature Tables in Sections 3-24 by the superscript ^†^, with qualifying comments included after the attribute list for the relevant feature; and are also indicated in <<table_2-3>> above by the following additional text:
 
-_over navigable water*_:: for **Bridge**, **Cable Overhead**, **Conveyor**, *Pipeline Overhead*
+_over navigable water*_:: for *Bridge*, *Cable Overhead*, *Conveyor*, *Pipeline Overhead*
 
-_at least one of_:: for **Caution Area**, **Information Area**, **Land Region**, **Marine Farm/Culture**, **Sea Area/Named Water Area**, **Nautical Information**, **Non-Standard Working Day**, **Spatial Quality**, *Chart 1 Feature*
+_at least one of_:: for *Caution Area*, *Information Area*, *Land Region*, *Marine Farm/Culture*, *Sea Area/Named Water Area*, *Nautical Information*, *Non-Standard Working Day*, *Spatial Quality*, *Chart 1 Feature*
 
 _if navigable at…._:: for *Gate*
 
-_except when….._:: for **Archipelagic Sea Lane Area**, **Archipelagic Sea Lane Axis**, *Traffic Separation Scheme Lane Part*
+_except when….._:: for *Archipelagic Sea Lane Area*, *Archipelagic Sea Lane Axis*, *Traffic Separation Scheme Lane Part*
 
 _(point features only)_:: for *Radio Calling-In Point*
 
-_one of_:: for **Cable Overhead**, **Obstruction**, *Wreck*
+_one of_:: for *Cable Overhead*, *Obstruction*, *Wreck*
 
-\* __over navigable water__, in the context of ENC encoding, is defined as areas covered by Skin of the Earth features **Depth Area**, **Dredged Area**, or *Unsurveyed Area*.
+\* __over navigable water__, in the context of ENC encoding, is defined as areas covered by Skin of the Earth features *Depth Area*, *Dredged Area*, or *Unsurveyed Area*.
 
-Compilers must consider these conditional circumstances when encoding features for ENC, as well as any additional information given in the feature class descriptions in this document. For example, when encoding a **Cation Area**, the mandatory attributes are _at least one of_*information* or *pictorial representation* -- if the relevant information is textual, *information* must be populated and there is no requirement to populate **pictorial representation**, which therefore should not be populated with an empty (null) value, as it is not mandatory in this case.
+Compilers must consider these conditional circumstances when encoding features for ENC, as well as any additional information given in the feature class descriptions in this document. For example, when encoding a *Cation Area*, the mandatory attributes are _at least one of_*information* or *pictorial representation* -- if the relevant information is textual, *information* must be populated and there is no requirement to populate *pictorial representation*, which therefore should not be populated with an empty (null) value, as it is not mandatory in this case.
 ====
 
 NOTE: For complex attributes, at least one sub-attribute is mandatory (or conditionally mandatory) however mandatory sub-attributes of complex attributes have not been included in <<table_2-3>> above. Where the sub-attribute of a complex is conditionally mandatory (for example, for the feature *Seabed Area*_at least one of_ the sub-attributes *nature of surface* or *nature of surface -- qualifying terms* must be populated for the complex attribute *surface characteristics*), this is indicated by the superscript ^†^ as for the "Conditional" mandatory attributes described in Note 1 above.
@@ -480,7 +480,7 @@ The primary use of ENC is within ECDIS where ENC data is displayed based on the 
 
 *drawing index* -- population of this attribute may assist with the identification of a set of S-101 datasets that are intended to form a seamless presentation, regardless of scale; and identify a hierarchy of such seamless presentations (see <<sec_3.5>> and S-101 Main document clauses 4.6 and 4.7).
 
-**fixed date range**; *periodic date range* -- population of these complex attributes determines when the feature will be added (sub-attribute *date start*) and/or removed (sub-attribute *date end*) from the display in some ECDIS display settings (see <<sec_2.4.8>>).
+*fixed date range*; *periodic date range* -- population of these complex attributes determines when the feature will be added (sub-attribute *date start*) and/or removed (sub-attribute *date end*) from the display in some ECDIS display settings (see <<sec_2.4.8>>).
 
 *information* -- population of this complex attribute will result in the display of the magenta information symbol to highlight additional information to the user.
 
@@ -499,18 +499,18 @@ The primary use of ENC is within ECDIS where ENC data is displayed based on the 
 
 Attributes designated as "ECDIS system" attributes are intended to provide information specific to aiding in portrayal of features in ECDIS in certain circumstances; and should be automatically populated by the ENC production software as required. The population of these attributes are conditional dependant on individual encoding instances including the relationship between an encoded feature and the underlying Skin of the Earth feature(s); and resolution of conflicts in portrayal specific to collocated light features. These attributes are described in Section 30 of this document, and include:
 
-*default clearance depth* (see <<sec_30.1>>) -- this attribute is intended to provide a depth value to the ECDIS to aid in the display of underwater hazards (**Obstruction**, **Underwater/Awash Rock**, *Wreck*) where the actual depth of the underwater hazard is unknown (attribute *value of sounding* populated with an empty (null) value). This value is algorithmically calculated by the production system as required, based on the underlying depth(s) as described in <<sec_30.1>>. For S-101 ENCs, *default clearance depth* must be populated with a value, which must not be an empty (null) value, if the attribute *value of sounding* is populated with an empty (null) value.
+*default clearance depth* (see <<sec_30.1>>) -- this attribute is intended to provide a depth value to the ECDIS to aid in the display of underwater hazards (*Obstruction*, *Underwater/Awash Rock*, *Wreck*) where the actual depth of the underwater hazard is unknown (attribute *value of sounding* populated with an empty (null) value). This value is algorithmically calculated by the production system as required, based on the underlying depth(s) as described in <<sec_30.1>>. For S-101 ENCs, *default clearance depth* must be populated with a value, which must not be an empty (null) value, if the attribute *value of sounding* is populated with an empty (null) value.
 
-*in the water* (see <<sec_30.2>>) -- this Boolean attribute provides an indication to the ECDIS that features that are located in or over navigable water are to be included in the ECDIS Base Display. This attribute is automatically populated by the ENC production software where a structure is located over an area of bathymetry (**Depth Area**, **Dredged Area**, *Unsurveyed Area*).
+*in the water* (see <<sec_30.2>>) -- this Boolean attribute provides an indication to the ECDIS that features that are located in or over navigable water are to be included in the ECDIS Base Display. This attribute is automatically populated by the ENC production software where a structure is located over an area of bathymetry (*Depth Area*, *Dredged Area*, *Unsurveyed Area*).
 
 *sector arc extension* (see <<sec_30.3>>) -- this Boolean attribute provides an indication that a distance beyond the default distance at which a light sector arc will be displayed is required where more than one sector light having overlapping sectors has been encoded. This attribute is automatically calculated and populated as required by the ENC production software. Note that *sector arc extension* is not utilised where light sectors are displayed at the nominal range of the sectors.
 
-*surrounding depth* (see <<sec_30.4>>) -- this attribute defines a depth value for the area surrounding an underwater hazard to aid in the portrayal of isolated dangers in ECDIS, and is based on the *depth range minimum value* for the surrounding *Depth Area*(s). This attribute is automatically calculated and populated as required by the ENC production software. For an area feature covered by more than one **Depth Area**, the value of *surrounding depth* is determined as the depth range minimum value of the deeper of the *Depth**Area* features covering the underwater hazard. For S-101 ENCs, *surrounding depth* must be populated with a value, which must not be an empty (null) value.
+*surrounding depth* (see <<sec_30.4>>) -- this attribute defines a depth value for the area surrounding an underwater hazard to aid in the portrayal of isolated dangers in ECDIS, and is based on the *depth range minimum value* for the surrounding *Depth Area*(s). This attribute is automatically calculated and populated as required by the ENC production software. For an area feature covered by more than one *Depth Area*, the value of *surrounding depth* is determined as the depth range minimum value of the deeper of the *Depth**Area* features covering the underwater hazard. For S-101 ENCs, *surrounding depth* must be populated with a value, which must not be an empty (null) value.
 
 [[sec_2.4.6]]
 ==== Textual information
 
-The complex attribute*information* (see <<sec_29.9>>) contains information as text using the sub-attribute **text**, or the name of an ENC support file using the sub-attribute **file reference**, in English and, optionally, using multiple instances of *information* to encode the information in one or more additional languages; and where bound to the geo feature classes may be used to encode additional textual information specific to a single feature instance. General conventions for the population of *information* for a feature instance are as follows:
+The complex attribute*information* (see <<sec_29.9>>) contains information as text using the sub-attribute *text*, or the name of an ENC support file using the sub-attribute *file reference*, in English and, optionally, using multiple instances of *information* to encode the information in one or more additional languages; and where bound to the geo feature classes may be used to encode additional textual information specific to a single feature instance. General conventions for the population of *information* for a feature instance are as follows:
 
 * Where required, only a single mandatory instance of *information* in English (mandatory sub-attribute *language* = _eng_ or empty (null)) must be encoded.
 * Further optional instances of *information* may also be encoded (sub-attribute *language* populated with the three-letter language code in conformance with ISO 639-2/T) in one or more languages.
@@ -541,13 +541,13 @@ Spatial quality attributes are carried in the information type *Spatial Quality*
 [[sec_2.4.8]]
 ==== Dates
 
-When encoding dates using the attributes **dredged date**, **fixed date range**, **reported date**, **reference year for magnetic variation**, *survey date range* and **swept date**, the following values must apply in conformance to S-100.
+When encoding dates using the attributes *dredged date*, *fixed date range*, *reported date*, *reference year for magnetic variation*, *survey date range* and *swept date*, the following values must apply in conformance to S-100.
 
 * Full date: YYYYMMDD
 * No specific day required: YYYYMM--
 * No specific month required: YYYY----
 
-If it is required to encode periodic/recurring dates using the attributes *date fixed* and **periodic date range**, the following values must apply in conformance to S-100.
+If it is required to encode periodic/recurring dates using the attributes *date fixed* and *periodic date range*, the following values must apply in conformance to S-100.
 
 * No specific year required, same day each year: ----MMDD
 * No specific year required, same month each year: ----MM--
@@ -573,7 +573,7 @@ Where the temporal attributes have been encoded for any feature that is the stru
 
 If it is required to show seasonality of features, it must be done using the attribute *status* = _5_ (periodic/intermittent). If it is required to encode the start and/or end dates of the season, this must be done using the complex attribute *periodic date range* (see clauses 2.4.8 and 29.15).
 
-Where there is a requirement to indicate the beginning or end date of a seasonal occurrence as the "last day in February", consideration must be given to allowing for the extra day (29^th^ February) added on leap years. Encoding **periodic date range**, sub-attribute *date end* with the value ----_0228_ may result in erroneous indication of seasonality in the ECDIS on the 29^th^ February for leap years, while encoding the value ----_0229_ may similarly result in ECDIS performance issues for non-leap years. Encoders are advised, therefore, that where it is required to encode the end of seasonality as the last day in February, this must be done, similar to any other month of the year, by encoding the value of **periodic date range**, sub-attribute *date end* as --_--02--_. Where the beginning of seasonality is the last day in February, this must be done by encoding the value of **periodic date range**, sub-attribute *date start* in accordance with the next occurrence of the date (--_--0228_ if the next occurrence is a non-leap year or --_--0229_ if the next occurrence is a leap year). The ENC dataset must be amended by ENC Update (see Section 31) where the date is required to be changed. For instance, if the value is --_--0228_ and the next occurrence is a leap year, an ENC Update must be created to amend the date to --_--0229_.
+Where there is a requirement to indicate the beginning or end date of a seasonal occurrence as the "last day in February", consideration must be given to allowing for the extra day (29^th^ February) added on leap years. Encoding *periodic date range*, sub-attribute *date end* with the value ----_0228_ may result in erroneous indication of seasonality in the ECDIS on the 29^th^ February for leap years, while encoding the value ----_0229_ may similarly result in ECDIS performance issues for non-leap years. Encoders are advised, therefore, that where it is required to encode the end of seasonality as the last day in February, this must be done, similar to any other month of the year, by encoding the value of *periodic date range*, sub-attribute *date end* as --_--02--_. Where the beginning of seasonality is the last day in February, this must be done by encoding the value of *periodic date range*, sub-attribute *date start* in accordance with the next occurrence of the date (--_--0228_ if the next occurrence is a non-leap year or --_--0229_ if the next occurrence is a leap year). The ENC dataset must be amended by ENC Update (see Section 31) where the date is required to be changed. For instance, if the value is --_--0228_ and the next occurrence is a leap year, an ENC Update must be created to amend the date to --_--0229_.
 
 Alternatively, if encoders consider that there is no regulatory requirement to update the start date of a period for leap years, the value of *date start* may be populated as --__--03--__, indicating a beginning date of 01 March each year.
 
@@ -668,13 +668,13 @@ Clause 11.2 of the S-101 Product Specification Main document specifies the conte
 [[sec_2.4.12.1]]
 ===== Reference to textual ENC support files
 
-The ENC support files referenced by the complex attribute **information**, sub-attribute **file reference**, must be.TXT files, and may contain formatted text. These files should generally be used for longer texts (for example longer chart notes, tables or paragraphs from Nautical Publications), but should not be used to replicate large blocks of text (for example entire chapters of Sailing Directions) that can be found in other Nautical Publications, which may not be suitable for viewing in ECDIS. It is up to the Producing Authority to determine the most suitable means of encoding a particular piece of text. Textual ENC support files must be encoded using the character set defined in ISO 10646-1, in Unicode Transformation Format-8 (UTF-8).
+The ENC support files referenced by the complex attribute *information*, sub-attribute *file reference*, must be.TXT files, and may contain formatted text. These files should generally be used for longer texts (for example longer chart notes, tables or paragraphs from Nautical Publications), but should not be used to replicate large blocks of text (for example entire chapters of Sailing Directions) that can be found in other Nautical Publications, which may not be suitable for viewing in ECDIS. It is up to the Producing Authority to determine the most suitable means of encoding a particular piece of text. Textual ENC support files must be encoded using the character set defined in ISO 10646-1, in Unicode Transformation Format-8 (UTF-8).
 
 The exchange language for textual information should be English. The sub-attribute *language* must be populated with an appropriate value to indicate the language used. Languages other than English may be used as a supplementary option. Generally this means, when a national language is used in the textual attributes, the English translation must also exist.
 
 [underline]#Remarks:#
 
-* Encoders must encode national language ENC support files (files referenced by the sub-attribute *file reference*) using UTF-8 character encoding. This means that the encoding of the characters in these files must match the encoding of other textual national attributes (that is,**feature name**, *information* (*text*) with value other than English populated for sub-attribute *language*) within the dataset.
+* Encoders must encode national language ENC support files (files referenced by the sub-attribute *file reference*) using UTF-8 character encoding. This means that the encoding of the characters in these files must match the encoding of other textual national attributes (that is,*feature name*, *information* (*text*) with value other than English populated for sub-attribute *language*) within the dataset.
 
 [[sec_2.4.12.2]]
 ===== Reference to pictorial ENC support files
@@ -791,7 +791,7 @@ The mandatory attribute *optimum display scale* is used to indicate the intended
 
 An ENC dataset (discovery metadata) and associated *Data Coverage* feature(s) must carry a value for *optimum display scale*. Each *Data Coverage* feature must also carry a value for *maximum display scale* and *minimum display scale.* Values for *optimum display scale* and *minimum display scale* must be taken from the list of values defined in <<table_3-2>> at <<sec_3.5.1>>.
 
-The *Data Coverage* features within a dataset must not overlap, however *Data Coverage* features from different datasets may overlap as long as the *optimum display scale* and *minimum display scale* ranges do not overlap and, if populated, they do not have the same value for the attribute *drawing index*. All *Data Coverage* features within a dataset must have the same value for *minimum display scale* and, if populated, **drawing index**, but portions of a dataset can have a different optimum and maximum display scale, depending on the best scale required for navigation in an area for the purpose of the ENC data.
+The *Data Coverage* features within a dataset must not overlap, however *Data Coverage* features from different datasets may overlap as long as the *optimum display scale* and *minimum display scale* ranges do not overlap and, if populated, they do not have the same value for the attribute *drawing index*. All *Data Coverage* features within a dataset must have the same value for *minimum display scale* and, if populated, *drawing index*, but portions of a dataset can have a different optimum and maximum display scale, depending on the best scale required for navigation in an area for the purpose of the ENC data.
 
 Datasets that share a common minimum display scale will form a seamless presentation when rendered in the end-user system. When datasets do not share a common minimum display scale but are still intended to form a seamless presentation, this should be indicated by using a common drawing index. Datasets with a common minimum display scale or drawing index must not contain overlapping data coverage features.
 
@@ -822,11 +822,11 @@ For artificial features (for example landmarks, buildings) or trees:
 [[sec_2.5.8]]
 ==== Geographic names
 
-If it is required to encode a geographic name, or multiple versions of a geographic name including multiple language versions of the name, it must be done using one of more instances of the complex attribute *feature name* (see <<sec_29.2>>). When possible, existing features (for example **Built-Up Area**, **River**, navigational marks) should be used to carry this information.
+If it is required to encode a geographic name, or multiple versions of a geographic name including multiple language versions of the name, it must be done using one of more instances of the complex attribute *feature name* (see <<sec_29.2>>). When possible, existing features (for example *Built-Up Area*, *River*, navigational marks) should be used to carry this information.
 
-If it is required to encode a geographic name for which there is no existing feature, a specific **Administration Area**, *Sea Area/Named Water Area* or *Land Region* feature must be created (see clauses 16.8, 9.1 and 5.11 respectively). In order to minimise the data volume, these features should, where possible, use the geometry of existing features, for example a *Sea Area/Named Water Area* feature may use the geometry of a *Depth Area* feature.
+If it is required to encode a geographic name for which there is no existing feature, a specific *Administration Area*, *Sea Area/Named Water Area* or *Land Region* feature must be created (see clauses 16.8, 9.1 and 5.11 respectively). In order to minimise the data volume, these features should, where possible, use the geometry of existing features, for example a *Sea Area/Named Water Area* feature may use the geometry of a *Depth Area* feature.
 
-Geographic names can be left in their original language in a non-English iteration of the sub-attribute **name**, or transliterated or transcribed and used in an English iteration of the sub-attribute **name**, in which case the original name should be populated in an additional iteration of *feature name* with the mandatory sub-attribute *language* populated with the relevant three-letter language code in accordance with ISO 639-2/T. Examples of encoding of *feature name* are included in <<table_2-5>> below. General conventions for the population of *feature name* for an encoded feature instance are as follows:
+Geographic names can be left in their original language in a non-English iteration of the sub-attribute *name*, or transliterated or transcribed and used in an English iteration of the sub-attribute *name*, in which case the original name should be populated in an additional iteration of *feature name* with the mandatory sub-attribute *language* populated with the relevant three-letter language code in accordance with ISO 639-2/T. Examples of encoding of *feature name* are included in <<table_2-5>> below. General conventions for the population of *feature name* for an encoded feature instance are as follows:
 
 * Where it is intended that a name of a feature instance is to be displayed in the ECDIS, one or more iterations of *feature name* must be encoded for the feature, with exactly one of these instances having the sub-attribute *name usage* = _1_ (default name display). This should normally be the English version of the name (mandatory attribute *language* = _eng_), however this is at the discretion of the Data Producer.
 * Where only a single instance of *feature name* and having sub-attribute *name usage* = _1_ is encoded for a feature instance, this name will be displayed in both the "default" ECDIS language setting and the "alternate" ECDIS language setting.
@@ -897,10 +897,10 @@ Geographic names should be encoded using *feature name* based on the following c
 
 . Named points or capes that do not contain navigational aids should be encoded as *Land Region* features (of type surface or point), with the geographic name encoded using *feature name*.
 . Named points or capes that contain one navigational aid should be encoded using *feature name* on the structure feature associated with the navigational aid. If more than one navigational aid exists on the point or cape or if the point or cape and the structure feature have different names, a *Land Region* feature (of type surface or point) should be encoded, with the geographic name of the point or cape encoded using *feature name*.
-. A group of hydrographic features (for example **Seabed Area**, **Underwater/Awash Rock**, **Obstruction**, *Sounding*), associated with a particular geographic name, should have the name encoded using *feature name* on a *Sea Area/Named Water Area* feature (of type surface or point). The name should not be encoded on the individual hydrographic features.
+. A group of hydrographic features (for example *Seabed Area*, *Underwater/Awash Rock*, *Obstruction*, *Sounding*), associated with a particular geographic name, should have the name encoded using *feature name* on a *Sea Area/Named Water Area* feature (of type surface or point). The name should not be encoded on the individual hydrographic features.
 . A major island name close to primary shipping corridors should be encoded using *feature name* on the *Land Area* feature delimiting the island.
 . A named island group or archipelago should be encoded using *feature name* on an *Island Group* feature (see <<sec_5.5>>). Where individual islands within the group are named, these should be encoded using *feature name* on the *Land Area* feature delimiting the island.
-. Named features listed in Hydrographic Office's Sailing Directions that may assist in navigation should be encoded using *feature name* on the relevant feature (for example **Land Region**, **Underwater/Awash Rock**, **Seabed Area**, **Sea Area/Named Water Area**, *Obstruction*).
+. Named features listed in Hydrographic Office's Sailing Directions that may assist in navigation should be encoded using *feature name* on the relevant feature (for example *Land Region*, *Underwater/Awash Rock*, *Seabed Area*, *Sea Area/Named Water Area*, *Obstruction*).
 . If it is required to encode an administrative area of international, national, provincial or municipal jurisdiction that may have legal inference, it must be done using an *Administration Area* feature, with the name encoded using *feature name*.
 . If it is required to encode a major city along the coast, it must be done using *Built-Up Area* or *Administration Area* features (see <<sec_6.1>>), with the name encoded using *feature name*.
 . If it is required to encode the name of a navigable river, lake or canal, it must be done using a *Sea Area/Named Water Area* feature, with the name encoded using *feature name*.
@@ -976,7 +976,7 @@ The following notes apply to <<table_2-7>> below:
 . Producers should be prepared to deviate from the step values specified when the significance of the feature dictates, for example the recommended number of steps for a *Light* feature is 4, but there will be circumstances where a *Light* feature is so important that no *scale minimum* value be applied; alternatively, the light could be so minor that a step value of 1 can be applied.
 . *Scale minimum* should only be applied to navigational aids where they contribute to "screen clutter" and where their removal from the display does not constitute a risk to safe navigation.
 . It is generally accepted that features making up a navigational aid will have the same attributes, and therefore features within a *Structure/Equipment* association (see <<sec_25.16>>) should be assigned the same *scale minimum* value.
-. The elements comprising a range system (see <<sec_15.1.1>>) should have the same *scale minimum* value, which should be the value corresponding to the largest step value of the features comprising the range system. For instance, for a range system comprising a **Navigation Line**, *Recommended Track* and navigation aids, the decision may be not to apply *scale minimum* to the navigation aids (in accordance to Note 2 above), in which case the *Navigation Line* and *Recommended Track* should also not have *scale minimum* applied. Similarly, all features comprising a routeing measure (see <<sec_10.2>>) should have the same *scale minimum* value.
+. The elements comprising a range system (see <<sec_15.1.1>>) should have the same *scale minimum* value, which should be the value corresponding to the largest step value of the features comprising the range system. For instance, for a range system comprising a *Navigation Line*, *Recommended Track* and navigation aids, the decision may be not to apply *scale minimum* to the navigation aids (in accordance to Note 2 above), in which case the *Navigation Line* and *Recommended Track* should also not have *scale minimum* applied. Similarly, all features comprising a routeing measure (see <<sec_10.2>>) should have the same *scale minimum* value.
 . Where features having curve or surface geometry extend over multiple *Data Coverage* areas (see <<sec_3.5>>), the value for *scale minimum* should be populated based on the largest scale denominator populated for the attribute *optimum display scale* on the underlying *Data Coverage* areas. The same approach should also be considered for items included in feature associations such as range systems and routeing measures, also taking into account Note 4 above.
 
 [[table_2-7]]
@@ -1000,7 +1000,7 @@ h| FEATURE h| PRIMITIVE h| CONDITION h| scale minimum STEPS
 | *Bridge*                      | Curve/Surface
 | Covered by a surface *Depth Area*, *Dredged Area*, or *Unsurveyed Area* feature | 4
 | *Bridge* | Curve/Surface
-| If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ and covered by a surface **Land Area**, **Dock Area**, or *Lock Basin* feature
+| If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ and covered by a surface *Land Area*, *Dock Area*, or *Lock Basin* feature
 | NOT SET
 | *Bridge*                  | Curve/Surface | | 1
 | *Building* | Point/Surface
@@ -1013,7 +1013,7 @@ h| FEATURE h| PRIMITIVE h| CONDITION h| scale minimum STEPS
 | *Built-up Area*   | Point/Surface |                                               | 1
 | *Cable Area*      | Surface       | If *restriction* defined                      | 3
 | *Cable Area*      | Surface       |                                               | 2
-| *Cable Overhead*  | Curve         | Covered by an area **Depth Area**, **Dredged Area**, or *Unsurveyed Area* feature | 4
+| *Cable Overhead*  | Curve         | Covered by an area *Depth Area*, *Dredged Area*, or *Unsurveyed Area* feature | 4
 | *Cable Overhead*  | Curve         | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
 | *Cable Overhead*  | Curve         | | 1
 | *Cable Submarine* | Curve         | | 3
@@ -1029,7 +1029,7 @@ h| FEATURE h| PRIMITIVE h| CONDITION h| scale minimum STEPS
 | *Collision Regulations Limit* | Curve | | 4
 | *Contiguous Zone* | Curve/Surface | | 3
 | *Continental Shelf Area* | Curve/Surface | | 3
-| *Conveyor* | Curve/Surface | Covered by a surface **Depth Area**, **Dredged Area**, or *Unsurveyed Area* feature | 4
+| *Conveyor* | Curve/Surface | Covered by a surface *Depth Area*, *Dredged Area*, or *Unsurveyed Area* feature | 4
 | *Conveyor* | Curve/Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
 | *Conveyor* | Curve/Surface | | 1
 | *Crane* | Point/Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
@@ -1074,7 +1074,7 @@ h| FEATURE h| PRIMITIVE h| CONDITION h| scale minimum STEPS
 | *Foul Ground* | Point/ Surface | If *value of sounding* > _30_ | 4
 | *Foul Ground* | Point/ Surface | | NOT SET
 | *Free Port Area* | Surface | | 2
-| *Gate* | Point/Curve/Surface | Covered by a surface **Depth Area**, **Dredged Area**, or *Unsurveyed Area* feature | NOT SET
+| *Gate* | Point/Curve/Surface | Covered by a surface *Depth Area*, *Dredged Area*, or *Unsurveyed Area* feature | NOT SET
 | *Gate* | Point/Curve/Surface | | 2
 | *Gridiron* | Surface | | 1
 | *Harbour Area (Administrative)* | Surface | | 3
@@ -1103,7 +1103,7 @@ h| FEATURE h| PRIMITIVE h| CONDITION h| scale minimum STEPS
 | *Light Fog Detector* | Point | If Equipment *scale minimum* should match that of Structure | 4 (see Notes 2, 3 & 4 above) | *Light Sectored* | Point | If Equipment *scale minimum* should match that of Structure | 4 (see Notes 2, 3 & 4 above) | *Light Vessel* | Point | | 4 (see Notes 2, 3 & 4 above)
 | *Local Magnetic Anomaly* | Point/Curve/Surface | | 3
 | *Lock Basin* | Surface | | 1
-| *Log Pond* | Point/Surface | Covered by a surface **Depth Area**, **Dredged Area**, or *Unsurveyed Area* feature | 4 | *Log Pond* | Point/Surface | | 1
+| *Log Pond* | Point/Surface | Covered by a surface *Depth Area*, *Dredged Area*, or *Unsurveyed Area* feature | 4 | *Log Pond* | Point/Surface | | 1
 | *Magnetic Variation* | Point/Curve/Surface | | 1
 | *Marine Farm/Culture* | Point/Curve/Surface | If *exposition of sounding* = _2_ (shoaler than range of the surrounding depth area) and *value of sounding* ≤ _30_ | 4 | *Marine Farm/Culture* | Point/Curve/Surface | If *restriction* defined | 3 | *Marine Farm/Culture* | Point/Curve/Surface | | 1
 | *Marine Pollution Regulations Area* | Surface | | 3
@@ -1122,10 +1122,10 @@ h| FEATURE h| PRIMITIVE h| CONDITION h| scale minimum STEPS
 | *Pile* | Point/Curve/Surface | | 2
 | *Pilot Boarding Place* | Point/Surface | | 3
 | *Pilotage District* | Surface | | 3
-| *Pipeline Overhead* | Curve | Covered by a surface **Depth Area**, **Dredged Area**, or *Unsurveyed Area* feature | 4
+| *Pipeline Overhead* | Curve | Covered by a surface *Depth Area*, *Dredged Area*, or *Unsurveyed Area* feature | 4
 | *Pipeline Overhead* | Curve | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
 | *Pipeline Overhead* | Curve | | 1
-| *Pipeline Submarine/On Land* | Curve | Covered by a surface **Depth Area**, **Dredged Area**, or *Unsurveyed Area* feature | 3
+| *Pipeline Submarine/On Land* | Curve | Covered by a surface *Depth Area*, *Dredged Area*, or *Unsurveyed Area* feature | 3
 | *Pipeline Submarine/On Land* | Curve | | 1
 | *Pontoon* | Curve | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
 | *Pontoon* | Curve | | 2
@@ -1133,7 +1133,7 @@ h| FEATURE h| PRIMITIVE h| CONDITION h| scale minimum STEPS
 | *Precautionary Area* | Point/Surface | | NOT SET
 | *Production/Storage Area* | Point/Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
 | *Production/Storage Area* | Point/Surface | | 1
-| *Pylon/Bridge Support* | Point/Surface | Covered by a surface **Depth Area**, **Dredged Area**, or *Unsurveyed Area* feature | NOT SET
+| *Pylon/Bridge Support* | Point/Surface | Covered by a surface *Depth Area*, *Dredged Area*, or *Unsurveyed Area* feature | NOT SET
 | *Pylon/Bridge Support* | Point/Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
 | *Pylon/Bridge Support* | Point/Surface | | 1
 | *Radar Line* | Curve | | 3
@@ -1194,7 +1194,7 @@ h| FEATURE h| PRIMITIVE h| CONDITION h| scale minimum STEPS
 | *Traffic Separation Scheme Crossing* | Surface | | NOT SET
 | *Traffic Separation Scheme Lane Part* | Surface | | NOT SET
 | *Traffic Separation Scheme Roundabout* | Surface | | NOT SET
-| *Tunnel* | Curve/Surface | Covered by a surface **Depth Area**, **Dredged Area**, or *Unsurveyed Area* feature | 4 | *Tunnel* | Curve/Surface | | 1
+| *Tunnel* | Curve/Surface | Covered by a surface *Depth Area*, *Dredged Area*, or *Unsurveyed Area* feature | 4 | *Tunnel* | Curve/Surface | | 1
 | *Two-Way Route* | Surface | | 4
 | *Two-Way Route Part* | Surface | | NOT SET
 | *Underwater/Awash Rock* | Point | If *value of sounding* > _30_ and *exposition of sounding* ≠ _2_ (shoaler than range of the surrounding depth area) | 4
@@ -1352,7 +1352,7 @@ h| Feature Type h| Comment
 .Traffic Separation Scheme with appropriate masking
 image::figure-2-7.png["",377,264]
 
-To give an indication of the effect of masking in a complex area such as a maritime area containing a TSS, <<fig_2-7>> includes a *Caution Area* feature of type surface which has not had its edges masked. Due to the existence of the magenta "!" symbols within the **Caution Area**, and the fact that the edges of the *Caution Area* are coincident with the outer edge of the TSS, it is possible to further reduce ECDIS display clutter by masking the edges of the *Caution Area*. The resultant ECDIS display can be seen in <<fig_2-8>> below.
+To give an indication of the effect of masking in a complex area such as a maritime area containing a TSS, <<fig_2-7>> includes a *Caution Area* feature of type surface which has not had its edges masked. Due to the existence of the magenta "!" symbols within the *Caution Area*, and the fact that the edges of the *Caution Area* are coincident with the outer edge of the TSS, it is possible to further reduce ECDIS display clutter by masking the edges of the *Caution Area*. The resultant ECDIS display can be seen in <<fig_2-8>> below.
 
 [[fig_2-8]]
 .Traffic Separation Scheme with masked Caution Area
@@ -1437,13 +1437,13 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 10+a|
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 The "^†^" superscript in the Multiplicity column indicates a "conditional" mandatory attribute. See <<sec_2.4.3>>.
 
 [underline]#INT 1 Reference:# The INT 1 location(s) of the Feature -- by INT1 Section and Section Number.*X.X.X**Sub-clause heading(s)* **(see S-4 -- B-YYY.Y)**Introductory remarks. Includes information regarding the real world entity/situation requiring the encoding of the Feature in the ENC, and where required nautical cartographic principles relevant to the Feature to aid the compiler in determining encoding requirements. Specific instructions to encode the feature.
 
-Note that in all sub-clauses feature types and association names are shown in **Bold Capitalised Text**; attributes (complex, sub- and simple) are shown in **bold lower case text**; and attribute values (including enumerate codes) are shown in _italic text_.
+Note that in all sub-clauses feature types and association names are shown in *Bold Capitalised Text*; attributes (complex, sub- and simple) are shown in *bold lower case text*; and attribute values (including enumerate codes) are shown in _italic text_.
 
 [underline]#Remarks:#
 

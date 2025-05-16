@@ -4,7 +4,7 @@
 [[sec_8.1]]
 === Works in progress and projected (see S-4 – B-329)
 
-An ENC can seldom show the exact state of work under construction because it may not be known by the encoder and, even if known, may be expected to change between ENC updates (see Section 31). Where it is possible to provide the Mariner with an indication of the status of work under construction, under reclamation or planned, it must be done using the appropriate feature (for example**Shoreline Construction**, **Causeway**, **Dock Area**, **Dry Dock**, *Pipeline Submarine/On Land*), with the attribute *condition* populated as _1_ (under construction), _3_ (under reclamation) or _5_ (planned construction). Where the encoder wishes to provide such information to the Mariner and the details of the works are not known (nature and extent of the works), this should be done using the feature *Caution Area* (see <<sec_16.10>>), with known details of the works encoded using the complex attribute *information* (see <<sec_2.4.6>>).
+An ENC can seldom show the exact state of work under construction because it may not be known by the encoder and, even if known, may be expected to change between ENC updates (see Section 31). Where it is possible to provide the Mariner with an indication of the status of work under construction, under reclamation or planned, it must be done using the appropriate feature (for example*Shoreline Construction*, *Causeway*, *Dock Area*, *Dry Dock*, *Pipeline Submarine/On Land*), with the attribute *condition* populated as _1_ (under construction), _3_ (under reclamation) or _5_ (planned construction). Where the encoder wishes to provide such information to the Mariner and the details of the works are not known (nature and extent of the works), this should be done using the feature *Caution Area* (see <<sec_16.10>>), with known details of the works encoded using the complex attribute *information* (see <<sec_2.4.6>>).
 
 If it is required to provide the Mariner with an indication of the date to which information regarding the works is current, it must be done using the attribute *reported date* (see <<sec_27.154>>).
 
@@ -24,11 +24,11 @@ Features likely to be prominent from seaward should be encoded as described abov
 
 Works at sea which will extend the coastline seaward, where the line of the future coastline (including piers, etc) is known, must be encoded, where required, as described in <<sec_8.1>> above, using the appropriate features. The existing coastline should remain until the works are completed and the new coastline has been established. The area of reclamation or construction must also be covered by the appropriate feature(s) from the Skin of the Earth. This may be *Depth Area* at commencement of the works, or if the works are planned and have not yet commenced; *Unsurveyed Area* while reclamation/construction is in progress but the area is still covered by water; or *Land Area* where the area of the works has been reclaimed (that is, is always dry).
 
-Works at sea which will be wholly or partly submergedwhen completed, such as training walls or pipelines must be encoded, if required, using the appropriate feature relevant to the completed feature, in accordance with <<sec_8.1>> above. The appropriately attributed depth information, if known, or **Unsurveyed Area**, must cover the works as appropriate.
+Works at sea which will be wholly or partly submergedwhen completed, such as training walls or pipelines must be encoded, if required, using the appropriate feature relevant to the completed feature, in accordance with <<sec_8.1>> above. The appropriately attributed depth information, if known, or *Unsurveyed Area*, must cover the works as appropriate.
 
 Where the extent or nature of the works is unknown, they must be encoded, where required, using the feature *Caution Area* as described in <<sec_8.1>> above.
 
-Because lights and buoys marking the limits of works at sea may be moved without notice, they should be encoded only where it is considered safe to do so. Alternatively, this information may be included by encoding the complex attribute **information**, sub-attribute **text**, for instance, _Outer end marked by red lights_.
+Because lights and buoys marking the limits of works at sea may be moved without notice, they should be encoded only where it is considered safe to do so. Alternatively, this information may be included by encoding the complex attribute *information*, sub-attribute *text*, for instance, _Outer end marked by red lights_.
 
 [[sec_8.2]]
 === Checkpoint
@@ -131,11 +131,11 @@ Because lights and buoys marking the limits of works at sea may be moved without
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+10+.<a| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -148,7 +148,7 @@ If it is required to encode an official place to register, declare and/or check 
 
 [underline]#Remarks:#
 
-* The *Checkpoint* must only be used to encode the function. In addition, if it is required to encode a physical feature (for example building, fence, gate), it must be done using an appropriate feature (for example **Building**, *Landmark*).
+* The *Checkpoint* must only be used to encode the function. In addition, if it is required to encode a physical feature (for example building, fence, gate), it must be done using an appropriate feature (for example *Building*, *Landmark*).
 
 [underline]#Distinction:# Custom Zone.
 
@@ -318,19 +318,19 @@ If it is required to encode an official place to register, declare and/or check 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
-| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| **Bollard**, **Daymark**, **Distance Mark**, **Fog Signal**, **Light All Around**, **Light Fog Detector**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
-| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Bollard*, *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<a| footnote:crossnote[] The attribute *colour pattern* is mandatory for hulks that have more than one value populated for the attribute *colour*.
 
-Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -343,7 +343,7 @@ If it is required to encode a permanently moored ship, it must be done using the
 
 [underline]#Remarks:#
 
-* A *Hulk* feature of type surface must not be bound by curve features *Coastline* or **Shoreline Construction**, unless the edge associated with the curve feature is also the boundary of a *Land Area* feature of type surface.
+* A *Hulk* feature of type surface must not be bound by curve features *Coastline* or *Shoreline Construction*, unless the edge associated with the curve feature is also the boundary of a *Land Area* feature of type surface.
 * If it is required to encode a floating production, storage and off-loading vessel, it must be done using the feature *Offshore Platform* (see <<sec_14.1>>), with attribute *category of offshore platform* = _8_ (floating production, storage and off-loading vessel).
 * If it is required to encode a hulk serving the purpose of a floating breakwater, it must be done using a *Hulk* feature, with attribute *category of hulk* = _5_ (floating breakwater). If it is required to encode a floating breakwater of any other construction, it must be done using the feature *Shoreline Construction* (see <<sec_8.6>>), with attributes *category of shoreline construction* = _1_ (breakwater) and *water level effect* = _7_ (floating).
 
@@ -492,8 +492,8 @@ If it is required to encode a permanently moored ship, it must be done using the
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
-| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| **Bollard**, **Daymark**, **Distance Mark**, **Fog Signal**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
-| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Archipelagic Sea Lane**, **Deep Water Route**, **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Bollard*, *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Archipelagic Sea Lane*, *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
 | The Auxiliary Feature 3+| *Fairway Auxiliary* (see <<sec_25.8>>) 3+| *Fairway* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
@@ -502,11 +502,11 @@ If it is required to encode a permanently moored ship, it must be done using the
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<a| footnote:crossnote[] The attribute *colour pattern* is mandatory for piles that have more than one value populated for the attribute *colour*.
 
-Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -669,11 +669,11 @@ If it is required to encode a pile or post that is not used as a dolphin or an a
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+10+.<a| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -688,7 +688,7 @@ If it is required to encode a dyke, it must be done using the feature *Dyke*.
 
 [underline]#Remarks:#
 
-* If it is required to encode a dyke whose seaward edge is coincident with the coastline, it must be done using **Dyke**, and with a *Shoreline Construction* feature of type curve along its seaward edge, with no value populated for attribute *category of shoreline construction*.
+* If it is required to encode a dyke whose seaward edge is coincident with the coastline, it must be done using *Dyke*, and with a *Shoreline Construction* feature of type curve along its seaward edge, with no value populated for attribute *category of shoreline construction*.
 * When a *Dyke* feature is of type surface, it must be covered by a *Land Area* feature.
 * At large optimum display scales, the dyke crown (the topline of the dyke) may be encoded as a *Slope Topline* feature (see <<sec_5.15>>), with attribute *category of slope* = _2_ (embankment).
 
@@ -874,19 +874,19 @@ If it is required to encode a dyke, it must be done using the feature *Dyke*.
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
-| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| **Daymark**, **Distance Mark**, **Fog Signal**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
-| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<a| footnote:crossnote[] The attribute *colour pattern* is mandatory for shoreline constructions that have more than one value populated for the attribute *colour*.
 
-Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -915,7 +915,7 @@ image::figure-8-1.png[Shape22,631,332]
 * In this example,the shoreline construction surface above the high water line must also be covered by a *Land Area* feature of type surface, and the intertidal shoreline construction surface must also be covered by a *Depth Area*feature of type surface with attribute *depth range minimum value* = -H (see <<sec_11.7.3>>).
 * *Shoreline Construction* features must be broken into their constituent parts where possible, and categorised using attributes such as *category of shoreline construction* and *water level effect* as indicated on the source.
 * If the presence of a feature is only indicated on the source by a textual reference, without a clear symbol (for example 'pier', 'groyne', 'post'), it should be encoded using a *Caution Area*feature (see <<sec_16.10>>) or an *Information Area* feature (see <<sec_16.11>>), with the textual reference encoded using the complex attribute *information* (see <<sec_2.4.6>>). *Caution Area* should be used if the information is considered essential for safe navigation.
-* Intertidal or submerged artificial rock walls, such as training walls that are not attached to the shoreline, must be encoded, if required, as *Shoreline Construction* using the appropriate value for **category of shoreline construction**, and *water level effect* = _3_ (always under water/submerged) or *water level effect* = _4_ (covers and uncovers).
+* Intertidal or submerged artificial rock walls, such as training walls that are not attached to the shoreline, must be encoded, if required, as *Shoreline Construction* using the appropriate value for *category of shoreline construction*, and *water level effect* = _3_ (always under water/submerged) or *water level effect* = _4_ (covers and uncovers).
 
 [underline]#Distinction:# Causeway; Coastline; Dry Dock; Floating Dock; Gridiron; Land Area; Pontoon; Structure Over Navigable Water.
 
@@ -1172,19 +1172,19 @@ image::figure-8-1.png[Shape22,631,332]
 11+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* 2+| *Multiplicity*
 | The Roofed Structure 3+| *Roofed Structure Aggregation* (see <<sec_25.14>>) 3+| *Pylon/Bridge Support* 2+| Aggregation 2+| 0,1
-| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| **Daymark**, **Distance Mark**, **Fog Signal**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition 2+| 0,1
-| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association 2+| 0,*
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition 2+| 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association 2+| 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association 2+| 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition 2+| 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association 2+| 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association 2+| 0,*
 11+.<a| footnote:crossnote[] The sub-attribute *colour pattern* is mandatory for structures over navigable water that have more than one value populated for the sub-attribute *colour*.
 
-Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -1195,12 +1195,12 @@ For each instance of **information**, at least one of the sub-attributes *file r
 
 If it is required to encode a roofed structure that is over or partially extends over navigable water to provide protection for a vessel or its cargo, it must be done using the feature *Structure Over Navigable Water*.
 
-The value of the vertical clearance between (high) water level and any fixed overhead obstruction must always be given, where known, on the largest optimum display scale ENC data intended for navigation under the structure, and for detailed passage planning. The datum above which clearances are given must be a high water level, preferably Highest Astronomical Tide (HAT), where the tide is appreciable. For structures over navigable water, the value for the vertical clearance must be encoded using the complex attribute **vertical clearance fixed**, and sub-attributes populated relevant to the feature, rounded down to the nearest whole metre (unless under 10m, when metres and decimetres may be quoted). In areas where the tidal range is not appreciable the datum above which clearances are given should be Mean Sea Level (MSL).
+The value of the vertical clearance between (high) water level and any fixed overhead obstruction must always be given, where known, on the largest optimum display scale ENC data intended for navigation under the structure, and for detailed passage planning. The datum above which clearances are given must be a high water level, preferably Highest Astronomical Tide (HAT), where the tide is appreciable. For structures over navigable water, the value for the vertical clearance must be encoded using the complex attribute *vertical clearance fixed*, and sub-attributes populated relevant to the feature, rounded down to the nearest whole metre (unless under 10m, when metres and decimetres may be quoted). In areas where the tidal range is not appreciable the datum above which clearances are given should be Mean Sea Level (MSL).
 
 [underline]#Remarks:#
 
-* If it is required to encode the minimum depth for a covered berth or the maximum permitted vessel draught allowed at the berth, this must be done by populating the attributes *minimum berth depth* and **maximum permitted draught**, respectively, for the associated *Berths* feature (see <<sec_8.14>>).
-* Navigable water under the covering structure must be encoded using the features **Depth Area**, *Dredged Area* or *Unsurveyed Area* (and appropriate *Depth Contour* and *Sounding* features) if the waterway is navigable at the optimum display scale for the ENC data, or using the features *Land Area* if the waterway is not navigable at the optimum display scale for the ENC data.
+* If it is required to encode the minimum depth for a covered berth or the maximum permitted vessel draught allowed at the berth, this must be done by populating the attributes *minimum berth depth* and *maximum permitted draught*, respectively, for the associated *Berths* feature (see <<sec_8.14>>).
+* Navigable water under the covering structure must be encoded using the features *Depth Area*, *Dredged Area* or *Unsurveyed Area* (and appropriate *Depth Contour* and *Sounding* features) if the waterway is navigable at the optimum display scale for the ENC data, or using the features *Land Area* if the waterway is not navigable at the optimum display scale for the ENC data.
 * The attribute *height* is used, where required, to encode the height of the highest point on the covering structure (see <<sec_2.5.7>>).
 * The complex attribute *feature name* must only be encoded, if required, where the name of the structure is different to the name of the associated berth.
 * Value _13_ (low water) for attribute *vertical datum* is only applicable to enclosed (inland) waterways; and must not be used to indicate the reference datum for vertical clearances in tidal waters.
@@ -1316,9 +1316,9 @@ The value of the vertical clearance between (high) water level and any fixed ove
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+10+.<a| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -1488,11 +1488,11 @@ If it is required to encode a causeway, it must be done using the feature *Cause
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+10+.<a| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -1507,7 +1507,7 @@ If it is required to encode a non-navigable canal, it must be done using the fea
 
 * If the canal is navigable at the optimum display scale for the ENC data, it must be encoded using the features *Depth Area* or *Dredged Area* (see clauses 11.7 and 11.4), and the canal banks must be encoded using the features *Coastline* or *Shoreline Construction*. The canal must not be encoded as a *Canal* feature. If it is required to encode the name of the canal, it must be done using a *Sea Area/Named Water Area* feature, with attribute *category of sea area* = _51_ (canal).
 * Where the canal is navigable at the optimum display scale for the ENC data, special consideration should be given to encoding features specific to the canal such as minimum depths within the navigable area; overhead clearances; distances along the canal; and locks and lock gates (and any associated traffic signals).
-* If it is required to encode a canal that is not navigable at the optimum display scale for the ENC data, it must be done using **Canal**, covered by a *Land Area* feature. The name of the canal should be encoded using the complex attribute *feature name* on the *Canal* feature.
+* If it is required to encode a canal that is not navigable at the optimum display scale for the ENC data, it must be done using *Canal*, covered by a *Land Area* feature. The name of the canal should be encoded using the complex attribute *feature name* on the *Canal* feature.
 
 [underline]#Distinction:# River; Lake; Tideway.
 
@@ -1662,16 +1662,16 @@ If it is required to encode a non-navigable canal, it must be done using the fea
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
-| The Equipment 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| **Cardinal Beacon**, **Cardinal Buoy**, **Bridge**, **Building**, **Crane**, **Conveyor**, **Daymark**, **Dolphin**, **Emergency Wreck Marking Buoy**, **Fishing Facility**, **Floating Dock**, **Fortified Structure**, **Hulk**, **Installation Buoy**, **Isolated Danger Beacon**, **Isolated Danger Buoy**, **Landmark**, **Lateral Beacon**, **Lateral Buoy**, **Light Float**, **Light Vessel**, **Mooring Buoy**, **Offshore Platform**, **Pile**, **Pipeline Overhead**, **Pontoon**, **Pylon/Bridge Support**, **Safe Water Beacon**, **Safe Water Buoy**, **Shoreline Construction**, **Silo/Tank**, **Span Fixed**, **Span Opening**, **Special Purpose/General Beacon**, **Special Purpose/General Buoy**, **Structure Over Navigable Water**, **Wind Turbine**, *Wreck* 2+| Association | 0,*
+| The Equipment 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Cardinal Beacon*, *Cardinal Buoy*, *Bridge*, *Building*, *Crane*, *Conveyor*, *Daymark*, *Dolphin*, *Emergency Wreck Marking Buoy*, *Fishing Facility*, *Floating Dock*, *Fortified Structure*, *Hulk*, *Installation Buoy*, *Isolated Danger Beacon*, *Isolated Danger Buoy*, *Landmark*, *Lateral Beacon*, *Lateral Buoy*, *Light Float*, *Light Vessel*, *Mooring Buoy*, *Offshore Platform*, *Pile*, *Pipeline Overhead*, *Pontoon*, *Pylon/Bridge Support*, *Safe Water Beacon*, *Safe Water Buoy*, *Shoreline Construction*, *Silo/Tank*, *Span Fixed*, *Span Opening*, *Special Purpose/General Beacon*, *Special Purpose/General Buoy*, *Structure Over Navigable Water*, *Wind Turbine*, *Wreck* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+10+.<a| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -1895,15 +1895,15 @@ If it is required to encode a distance mark, it must be done using the feature *
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<a| footnote:crossnote[] For encoded gates that are navigable at the optimum display scale of the ENC data, the attribute *horizontal clearance open* is mandatory.
 
-Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 The sub-attribute *vertical clearance**value* for the complex attribute *vertical clearance open* is mandatory if the sub-attribute *vertical clearance unlimited* is set to _False_.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -1916,7 +1916,7 @@ If it is required to encode a gate that controls the flow of water, it must be d
 
 [underline]#Remarks:#
 
-* *Gate* of type surface must also be covered by a **Depth Area**, **Dredged Area**, *Unsurveyed Area* or *Land Area* feature.
+* *Gate* of type surface must also be covered by a *Depth Area*, *Dredged Area*, *Unsurveyed Area* or *Land Area* feature.
 * The attribute *depth range minimum value* is used to encode the minimum depth over the sill, where known.
 * Value _13_ (low water) for attribute *vertical datum* is only applicable to enclosed (inland) waterways; and must not be used to indicate the reference datum for vertical clearances in tidal waters.
 * Where the vertical clearance of the gate in the open position is unlimited, the Boolean sub-attribute *vertical clearance unlimited* must be set to _True_.
@@ -2072,11 +2072,11 @@ If it is required to encode a gate that controls the flow of water, it must be d
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<a| footnote:crossnote[] The attribute *colour pattern* is mandatory for dams that have more than one value populated for the attribute *colour*.
 
-Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -2091,7 +2091,7 @@ If it is required to encode a dam, weir or flood barrage, it must be done using 
 
 * *Dam* features must be covered by a *Land Area* feature.
 * The geometry of the dam includes any gates. Gates should be encoded as separate *Gate* features.
-* If it is required to encode a dam whose seaward edge is coincident with the coastline, it must be done using **Dam**, with a *Shoreline Construction* feature of type curve along its seaward edge, with no value populated for the attribute *category of shoreline construction*.
+* If it is required to encode a dam whose seaward edge is coincident with the coastline, it must be done using *Dam*, with a *Shoreline Construction* feature of type curve along its seaward edge, with no value populated for the attribute *category of shoreline construction*.
 * If it is required to encode a submerged weir, it should be done using a *Dam* feature, with attribute *water level effect* = _3_ (always under water/submerged).
 
 [[sec_8.12.2]]
@@ -2310,17 +2310,17 @@ When an encoded flood barrage is inside an area that is not navigable at the opt
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
-| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| **Daymark**, **Distance Mark**, **Fog Signal**, **Light Air Obstruction**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
-| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Deep Water Route**, **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light Air Obstruction*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<a| footnote:crossnote[] The attribute *colour pattern* is mandatory for cranes that have more than one value populated for the attribute *colour*.
 
-Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -2540,13 +2540,13 @@ If it is required to encode a crane, it must be done using the feature *Crane***
 | The Component 3+| *Mooring Trot Aggregation* (see <<sec_25.10>>) 3+| *Mooring Trot* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+10+.<a| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -2738,20 +2738,20 @@ If it is required to encode a berth, it must be done using the feature *Berth*.
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
-| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| **Bollard**, **Daymark**, **Distance Mark**, **Fog Signal**, **Light Air Obstruction**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
-| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Deep Water Route**, **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Bollard*, *Daymark*, *Distance Mark*, *Fog Signal*, *Light Air Obstruction*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<a| footnote:crossnote[] The attribute *colour pattern* is mandatory for dolphins that have more than one value populated for the attribute *colour*.
 
-Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -2904,16 +2904,16 @@ If it is required to encode a dolphin, it must be done using the feature *Dolphi
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
-| The Equipment 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| **Dolphin**, **Fortified Structure**, **Hulk**, **Landmark**, **Offshore Platform**, **Pile**, **Pylon/Bridge Support**, *Shoreline Construction* 2+| Association | 0,*
+| The Equipment 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Dolphin*, *Fortified Structure*, *Hulk*, *Landmark*, *Offshore Platform*, *Pile*, *Pylon/Bridge Support*, *Shoreline Construction* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,1
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] Complex attribute **feature name**,sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+10+.<a| footnote:crossnote[] Complex attribute *feature name*,sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -3123,13 +3123,13 @@ If it is required to encode a bollard, it must be done using the feature *Bollar
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+10+.<a| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -3334,19 +3334,19 @@ If it is required to encode a dry dock, it must be done using the feature *Dry D
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
-| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| **Daymark**, **Distance Mark**, **Fog Signal**, **Light All Around**, **Light Fog Detector**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
-| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<a| footnote:crossnote[] The attribute *colour pattern* is mandatory for floating docks that have more than one value populated for the attribute *colour*.
 
-Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -3359,7 +3359,7 @@ If it is required to encode a floating dock, it must be done using the feature *
 
 [underline]#Remarks:#
 
-* A *Floating Dock* feature must also be covered by **Depth Area**, *Dredged Area* or *Unsurveyed Area* features. The boundary of a *Floating Dock* feature of type surface must not be encoded as a separate feature (*Coastline* or *Shoreline Construction*).
+* A *Floating Dock* feature must also be covered by *Depth Area*, *Dredged Area* or *Unsurveyed Area* features. The boundary of a *Floating Dock* feature of type surface must not be encoded as a separate feature (*Coastline* or *Shoreline Construction*).
 * The attributes *horizontal clearance length* and *horizontal clearance width* are used to encode the regulatory length and width of the navigable part of the floating dock as declared by a competent authority, where known. If required, the minimum physical length and width of the dry dock itself must be populated using the attributes *horizontal length* and *horizontal width*.
 * The attribute *depth range minimum value* is used to encode the shoalest depth of the dock when flooded, and the attribute *maximum permitted draught* is used to encode the maximum draught permitted in the dock, where known.
 
@@ -3515,19 +3515,19 @@ If it is required to encode a floating dock, it must be done using the feature *
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
-| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| **Bollard**, **Daymark**, **Distance Mark**, **Fog Signal**, **Light All Around**, **Light Fog Detector**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Bollard*, *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
 | The Component 3+| *Bridge Aggregation* (see <<sec_25.4>>) 3+| *Bridge* 2+| Association | 0,*
-| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 
-10+.<a| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+10+.<a| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -3540,7 +3540,7 @@ If it is required to encode a pontoon, it must be done using the feature *Pontoo
 
 [underline]#Remarks:#
 
-* A *Pontoon* feature must also be covered by **Depth Area**, *Dredged Area* or *Unsurveyed Area* features. A *Pontoon* feature of type surface must not be bound by curve features *Coastline* or **Shoreline Construction**, unless the edge associated with the curve feature is also the boundary of a *Land Area* feature of type surface.
+* A *Pontoon* feature must also be covered by *Depth Area*, *Dredged Area* or *Unsurveyed Area* features. A *Pontoon* feature of type surface must not be bound by curve features *Coastline* or *Shoreline Construction*, unless the edge associated with the curve feature is also the boundary of a *Land Area* feature of type surface.
 
 [underline]#Distinction:# Bridge; Dolphin; Mooring Buoy; Shoreline Construction.
 
@@ -3726,13 +3726,13 @@ If it is required to encode a pontoon, it must be done using the feature *Pontoo
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+10+.<a| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -3745,11 +3745,11 @@ If it is required to encode a non-navigable dock area, it must be done using the
 
 [underline]#Remarks:#
 
-* If the dock is navigable at the optimum display scale of the ENC data, it must be encoded using the features **Depth Area**, *Dredged Area* or *Unsurveyed Area* (see <<sec_11.7.4>>), and the geo features making up the dock limits must be encoded using appropriate features such as **Coastline**, *Shoreline Construction* or *Gate*. The dock must not be encoded as *Dock Area*. If it is required to encode the name of the dock, it must be done using the feature *Sea Area/Named Water Area*.
-* If it is required to encode a dock which is not navigable at the optimum display scale of the ENC data, it must be done using the feature **Dock Area**, covered by a *Land Area* or *Unsurveyed Area* feature. The name of the dock should be encoded using the complex attribute *feature name* on the *Dock Area*. The boundary of a dock must not be encoded as a separate feature (for example*Coastline, Shoreline Construction*), except for the gate feature (*Gate*) for a wet dock, which may be encoded.
+* If the dock is navigable at the optimum display scale of the ENC data, it must be encoded using the features *Depth Area*, *Dredged Area* or *Unsurveyed Area* (see <<sec_11.7.4>>), and the geo features making up the dock limits must be encoded using appropriate features such as *Coastline*, *Shoreline Construction* or *Gate*. The dock must not be encoded as *Dock Area*. If it is required to encode the name of the dock, it must be done using the feature *Sea Area/Named Water Area*.
+* If it is required to encode a dock which is not navigable at the optimum display scale of the ENC data, it must be done using the feature *Dock Area*, covered by a *Land Area* or *Unsurveyed Area* feature. The name of the dock should be encoded using the complex attribute *feature name* on the *Dock Area*. The boundary of a dock must not be encoded as a separate feature (for example*Coastline, Shoreline Construction*), except for the gate feature (*Gate*) for a wet dock, which may be encoded.
 * The complex attribute *horizontal clearance fixed* is used to encode the size of the entrance to the dock area, where required.
 * The attributes *horizontal clearance length* and *horizontal clearance width* are used to encode the regulatory length and width of the navigable part of the dock area as declared by a competent authority, where known.
-* In a non-tidal basin (wet dock), depths may refer to a sounding datum different from that in open waters. If this area is navigable at the optimum display scale of the ENC data, the value of this datum must be encoded using the Meta feature **Sounding Datum**, with attribute *vertical datum* = _24_ (local datum), co-incident with the area covered by the dock.
+* In a non-tidal basin (wet dock), depths may refer to a sounding datum different from that in open waters. If this area is navigable at the optimum display scale of the ENC data, the value of this datum must be encoded using the Meta feature *Sounding Datum*, with attribute *vertical datum* = _24_ (local datum), co-incident with the area covered by the dock.
 * In reality, smaller named, non-navigable dock areas (at the optimum display scale of the ENC data) may be included in major navigable dock areas, with different names or characteristics. To encode this fact, sea areas (*Sea Area/Named Water Area*) may overlap a *Dock Area*.
 
 [underline]#Distinction:# Berth; Cargo Transhipment Area; Dry Dock; Floating Dock; Gate; Harbour Area (Administrative); Harbour Facility.
@@ -3879,9 +3879,9 @@ If it is required to encode a non-navigable dock area, it must be done using the
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+10+.<a| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -4068,11 +4068,11 @@ If it is required to encode a gridiron, it must be done using the feature *Gridi
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+10+.<a| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.^---^For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.^---^For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -4087,8 +4087,8 @@ If it is required to encode a non-navigable lock basin, it must be done using th
 
 [underline]#Remarks:#
 
-* If the lock is navigable at the optimum display scale of the ENC data, it must be encoded using the features *Depth Area* or *Dredged Area*(see <<sec_11.7.4>>), and the geo features making up the limits of the lock must be encoded using appropriate features such as **Coastline**, *Shoreline Construction* or *Gate*. The lock must not be encoded as *Lock Basin*. If it is required to encode the name of the lock, it must be done using the feature*Sea Area/Named Water Area*.
-* It if is required to encode a lock that is not navigable at the optimum display scale of the ENC data, it must be done using **Lock Basin**, covered by a *Land Area* or *Unsurveyed Area* feature. The name of the lock should be encoded using the complex attribute *feature name* on the *Lock Basin* feature.
+* If the lock is navigable at the optimum display scale of the ENC data, it must be encoded using the features *Depth Area* or *Dredged Area*(see <<sec_11.7.4>>), and the geo features making up the limits of the lock must be encoded using appropriate features such as *Coastline*, *Shoreline Construction* or *Gate*. The lock must not be encoded as *Lock Basin*. If it is required to encode the name of the lock, it must be done using the feature*Sea Area/Named Water Area*.
+* It if is required to encode a lock that is not navigable at the optimum display scale of the ENC data, it must be done using *Lock Basin*, covered by a *Land Area* or *Unsurveyed Area* feature. The name of the lock should be encoded using the complex attribute *feature name* on the *Lock Basin* feature.
 * The gates should be encoded as a *Gate* feature (see <<sec_8.11>>) with attribute *category of gate* = _4_ (lock gate) or _3_ (caisson). For smaller optimum display scale ENC data, a lock may be encoded using *Gate* only, without using *Lock Basin*.
 
 [underline]#Distinction:# Canal; Gate.
@@ -4209,16 +4209,16 @@ A mooring trot is a mooring that is composed of ground tackle, mooring cables, b
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
-| The Collection 3+| *Mooring Trot Aggregation* (see <<sec_25.10>>) 3+| **Berth**, **Cable Submarine**, **Mooring Buoy**, *Obstruction* 2+| Aggregation | 0,1
+| The Collection 3+| *Mooring Trot Aggregation* (see <<sec_25.10>>) 3+| *Berth*, *Cable Submarine*, *Mooring Buoy*, *Obstruction* 2+| Aggregation | 0,1
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+10+.<a| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 

@@ -475,7 +475,7 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 
 [underline]#Remarks:#
 
-* If it is required to encode an offshore landmark (as defined by the attribute *category of landmark*), the ECDIS system attribute *in the water* (see <<sec_30.2>>) must be populated to ensure the feature is always displayed on the ECDIS. Where fitted, lights should be encoded as described in Section 19, with the **Building**, **Wind Turbine**, *Landmark* or *Silo/Tank* being used as the structure feature for the relevant light equipment feature(s) (see <<sec_18.1>>).
+* If it is required to encode an offshore landmark (as defined by the attribute *category of landmark*), the ECDIS system attribute *in the water* (see <<sec_30.2>>) must be populated to ensure the feature is always displayed on the ECDIS. Where fitted, lights should be encoded as described in Section 19, with the *Building*, *Wind Turbine*, *Landmark* or *Silo/Tank* being used as the structure feature for the relevant light equipment feature(s) (see <<sec_18.1>>).
 * For encoding wind turbines, see <<sec_7.4>>.
 
 [[sec_7.2]]
@@ -748,19 +748,19 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| **Daymark**, **Distance Mark**, **Fog Signal**, **Helipad**, **Light Air Obstruction**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
-| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Deep Water Route**, **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Helipad*, *Light Air Obstruction*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
 | The Auxiliary Feature 3+| *Fairway Auxiliary* (see <<sec_25.8>>) 3+| *Fairway* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<| footnote:crossnote[] The attribute *colour pattern* is mandatory for landmarks that have more than one value populated for the attribute *colour*.
 
-Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -1007,18 +1007,18 @@ image::figure-7-1.png[Shape21,624,183]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| **Daymark**, **Distance Mark**, **Fog Signal**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
-| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Deep Water Route**, **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<| footnote:crossnote[] The attribute *colour pattern* is mandatory for silos or tanks that have more than one value populated for the attribute *colour*.
 
-Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -1293,19 +1293,19 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| **Daymark**, **Distance Mark**, **Fog Signal**, **Light Air Obstruction**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
-| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Deep Water Route**, **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light Air Obstruction*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<| footnote:crossnote[] The attribute *colour pattern* is mandatory for bridges that have more than one value populated for the attribute *colour*.
 
-Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -1488,16 +1488,16 @@ A structure that is specifically designed or reinforced to provide for defence f
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| **Bollard**, **Daymark**, **Distance Mark**, **Fog Signal**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
-| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Deep Water Route**, **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Bollard*, *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+10+.<| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -1706,13 +1706,13 @@ If it is required to encode a fortified structure, it must be done using the fea
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+10+.<| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 

@@ -149,11 +149,11 @@ The inclusion of tidal information in ECDIS is optional. As such, for ENC only t
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+10+.<| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -170,7 +170,7 @@ If it is required to encode tidal stream information that is limited to flood an
 
 [underline]#Remarks:#
 
-* Maximum directions and rates (velocities) of tidal streams during springs, where known, must be encoded in knots using the complex attributes *orientation* and **speed**, and should be quoted to one decimal place. In rivers and estuaries where there are permanent currents caused by the flow of river water, such currents must be included in the calculation of the rate. Where the speed of the current in a river or estuary is so variable as to make it impractical to indicate a value, *speed* (sub-attribute *speed maximum*) should be populated with an empty (null) value.
+* Maximum directions and rates (velocities) of tidal streams during springs, where known, must be encoded in knots using the complex attributes *orientation* and *speed*, and should be quoted to one decimal place. In rivers and estuaries where there are permanent currents caused by the flow of river water, such currents must be included in the calculation of the rate. Where the speed of the current in a river or estuary is so variable as to make it impractical to indicate a value, *speed* (sub-attribute *speed maximum*) should be populated with an empty (null) value.
 
 [underline]#Distinction:# Current -- Non-Gravitational; Tidal Stream Panel Data.
 
@@ -337,11 +337,11 @@ If it is required to encode tidal stream information that is limited to flood an
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+10+.<| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -364,7 +364,7 @@ If it is required to encode a non-gravitational current, it must be done using t
 
 [underline]#Remarks:#
 
-* Maximum rates (velocities) of currents, where known, must be encoded in knots using the complex attributes *orientation* and **speed**, and should be quoted to one decimal place. Ideally, the minimum and maximum strengths should be quoted, where known, if the strength varies.
+* Maximum rates (velocities) of currents, where known, must be encoded in knots using the complex attributes *orientation* and *speed*, and should be quoted to one decimal place. Ideally, the minimum and maximum strengths should be quoted, where known, if the strength varies.
 * In tidal waters where the flow of river water alternately reinforces the ebb tidal stream and reduces the flood, the combined effect must be encoded, where required, for the convenience of the navigator; that is, the combined current must be encoded using the features *Tidal Stream -- Flood/Ebb* or *Tidal Stream Panel Data* (see clauses 10.2and 10.5). In restricted waters where tides are negligible, the direction and/or rate of flow should be encoded using *Current -- Non-Gravitational*.
 * Ocean currentsare permanent or seasonal, are somewhat variable in strength and direction, and generally cover broad areas. In cases where the current strength and direction are subject to seasonal variations, this should be indicated using the complex attribute *periodic date range*. This may require multiple *Current -- Non-Gravitational* features with attributes populated in accordance with the seasonal variations to be coincident in the ENC. Where the direction of an ocean current is so variable that it is not practicable to show this information, the complex attribute *orientation* (*orientation value*) must be populated with an empty (null) value.
 * Local weather conditions can produce significant temporary wind-induced currents which cannot be charted. If there is a known hazard, for example if winds from a particular direction have been found to endanger vessels by setting them on to shoals unexpectedly, a cautionary note may be added using the feature *Caution Area* (see <<sec_16.10>>). If considered necessary, the note may refer to further information in other publications, such as Sailing Directions.
@@ -471,9 +471,9 @@ If it is required to encode a non-gravitational current, it must be done using t
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+10+.<| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -487,7 +487,7 @@ If it is required to encode a disturbance of water, it must be done using the fe
 [underline]#Remarks:#
 
 * If it is required to encode a breaker over an off-lying shoal, it must be done using a *Water Turbulence* feature at the same position as the feature causing the breaker (for example*Underwater/Awash Rock*).
-* A *Water Turbulence* feature of type surface must be covered by **Depth Area**, *Dredged Area* or *Unsurveyed Area* features as appropriate.
+* A *Water Turbulence* feature of type surface must be covered by *Depth Area*, *Dredged Area* or *Unsurveyed Area* features as appropriate.
 
 [underline]#Distinction:# Rapids; Waterfall.
 
@@ -664,9 +664,9 @@ If it is required to encode a disturbance of water, it must be done using the fe
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-9+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+9+.<| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -683,7 +683,7 @@ Tidal stream values encoded in this way should be spring rates; that is, the tid
 
 [underline]#Remarks:#
 
-* The mandatory complex attribute *tidal stream panel values* is structured such that, in combination with attributes *station name* and **station number**, the equivalent layout of a paper chart tidal stream panel can be reproduced in an ECDIS Pick Report display. An example of the encoding of a *Tidal Stream Panel Data* feature as compared to the S-57 object class *TS_PAD* is included below:
+* The mandatory complex attribute *tidal stream panel values* is structured such that, in combination with attributes *station name* and *station number*, the equivalent layout of a paper chart tidal stream panel can be reproduced in an ECDIS Pick Report display. An example of the encoding of a *Tidal Stream Panel Data* feature as compared to the S-57 object class *TS_PAD* is included below:
 S-57 Encoding: Population of attribute TS_TSP0014,PLYMOUTH (DEVONPORT),HW,113,0.1,332,0.6,331,1.1,342,1.0,347,0.7,333,0.5,317,0.3,178,0.3,146,0.6,140,1.0,143,1.1,143, 0.8,138,0.3
 S-101 Encoding: (Complex attributes in italics, encoded values in blue text)
 
@@ -741,7 +741,7 @@ S-101 Encoding: (Complex attributes in italics, encoded values in blue text)
 
 
 
-* Where an encoded complex attribute **tidal stream value**, sub-attribute *speed maximum* has a value of zero (indicating slack water), the corresponding sub-attribute *orientation* / *orientation value* must be populated with an empty (null) value.
+* Where an encoded complex attribute *tidal stream value*, sub-attribute *speed maximum* has a value of zero (indicating slack water), the corresponding sub-attribute *orientation* / *orientation value* must be populated with an empty (null) value.
 
 [underline]#Distinction:# Current -- Non-Gravitational; Tidal Stream -- Flood/Ebb.
 

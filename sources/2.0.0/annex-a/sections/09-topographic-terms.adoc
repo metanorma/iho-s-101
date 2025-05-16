@@ -107,9 +107,9 @@
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 |===
 
-Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 [underline]#INT 1 Reference:#
 
@@ -121,7 +121,7 @@ Undersea features and sea areas in general, including intertidal areas, may be i
 [underline]#Remarks:#
 
 * This feature has a use similar to that of the feature *Land Region* (see <<sec_5.11>>), but for the sea.
-* A *Sea Area/Named Water Area* feature of type surface should be bounded, if possible, by existing curves used by other features (for example **Depth Contour**, *Coastline*). If necessary, however, this surface may be bounded by other curves created to close the surface, or to describe a new surface.
+* A *Sea Area/Named Water Area* feature of type surface should be bounded, if possible, by existing curves used by other features (for example *Depth Contour*, *Coastline*). If necessary, however, this surface may be bounded by other curves created to close the surface, or to describe a new surface.
 * *Sea Area/Named Water Area* features of type surface may overlap.
 * Inactive submarine volcanos must be encoded, if required, as *Sea Area* with *category of sea area* = _56_ (submarine volcano). Active submarine volcanos must be encoded, if required, using an *Obstruction* feature (see <<sec_13.6>>).
 * For additional guidance on encoding geographic names, see <<sec_2.5.8>>.

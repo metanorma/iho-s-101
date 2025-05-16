@@ -43,7 +43,7 @@
 3+|
 
 | (S) TE
-| 0,1 footnote:crossnote[For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.]
+| 0,1 footnote:crossnote[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
 3+| headline
 2+| 3+|
@@ -206,9 +206,9 @@ Of the various magnetic data, magnetic variation is the most important element f
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 
 10+|
-Where there are two instances of the complex attribute **value of local magnetic anomaly**, the sub-attribute *reference direction* is mandatory for each instance.
+Where there are two instances of the complex attribute *value of local magnetic anomaly*, the sub-attribute *reference direction* is mandatory for each instance.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 |===
 
 [underline]#INT 1 Reference:# B 82.1-2

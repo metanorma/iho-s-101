@@ -164,9 +164,9 @@ Some of the principles of depth depiction are summarized below:
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-9+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+9+.<| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -183,7 +183,7 @@ As the sounding multiplication factor (CMFZ) for ENC is 10, soundings may be enc
 
 For soundings surrounded by a danger line, see clauses 13.1 and 13.2.
 
-Population of the attributes *quality of* **vertical** **measurement**, *reported date* and the spatial attribute *quality of horizontal measurement* are described in the Table below:
+Population of the attributes *quality of vertical measurement*, *reported date* and the spatial attribute *quality of horizontal measurement* are described in the Table below:
 
 [[table_11-1]]
 .Soundings -- Attribute encoding
@@ -212,8 +212,8 @@ h| Sounding h| S-4 h| INT 1 h| quality of horizontal measurement h| quality of v
 
 * Encoders are advised to use caution when considering encoding soundings that are shoaler than the range of depth of the surrounding depth area, as *Sounding* features will not be displayed when utilising some ECDIS display settings. Where it is considered that a sounding that is shoaler than the range of depth of the surrounding depth area may be a hazard to navigation, encoders should preferably conduct further investigation of source material in order to encode additional depth contour and depth area information more relevant to the sounding. Alternatively, encoders may consider using an alternate feature (for example*Obstruction*) to encode the depth.
 * The attribute *technique of vertical measurement* must only be populated for *Sounding* features if it is different from the value of *technique of vertical measurement* encoded on an overlapping *Quality of Survey* feature (see <<sec_3.11>>); and the information is considered to be important to navigation.
-* Where *Sounding* features are covered by the Meta feature **Quality of Survey**, the attribute *quality of vertical measurement* must not be populated unless different from the value of *quality of vertical measurement* populated for the *Quality of Survey*.
-* An instance of the information type *Spatial Quality* (see <<sec_25.4>>) may be associated to the sounding geometry, using the association **Spatial Association**, to indicate, where required, that the horizontal position and/or the vertical uncertainty for the sounding(s) is of different (higher or lower) accuracy than indicated by the underlying *Quality of Bathymetric Data* Meta feature (see <<sec_3.8>>). See also <<sec_3.8.1.3>>(Sounding uncertainty).
+* Where *Sounding* features are covered by the Meta feature *Quality of Survey*, the attribute *quality of vertical measurement* must not be populated unless different from the value of *quality of vertical measurement* populated for the *Quality of Survey*.
+* An instance of the information type *Spatial Quality* (see <<sec_25.4>>) may be associated to the sounding geometry, using the association *Spatial Association*, to indicate, where required, that the horizontal position and/or the vertical uncertainty for the sounding(s) is of different (higher or lower) accuracy than indicated by the underlying *Quality of Bathymetric Data* Meta feature (see <<sec_3.8>>). See also <<sec_3.8.1.3>>(Sounding uncertainty).
 * Where a named isolated shoal is indicated in the dataset by a single encoded sounding, the name of the shoal must be encoded, where required, using the complex attribute *feature name* on the *Sounding* feature. Where the named isolated shoal is indicated by two or more soundings (and possibly other submerged features), the name of the shoal must be encoded, where required, using a *Sea Area/Named Water Area* feature (see clauses 2.5.8 and 9.1).
 * Encoders must exercise caution when using the option to group soundings; particularly where they are included in an ENC Update as this may impact negatively on ECDIS performance regarding Mariner interrogation of Updates. When grouping soundings in an ENC dataset, creation of excessively large sounding groups should be avoided so as to reduce the impact when a sounding is to be removed by ENC Update; and new soundings to be added by ENC Update should not be added to already existing sounding groups.
 * For depths indicated as no bottom found, see <<sec_11.8>>.
@@ -428,9 +428,9 @@ h| Sounding h| S-4 h| INT 1 h| quality of horizontal measurement h| quality of v
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+10+.<| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -445,7 +445,7 @@ If it is required to encode dredged areas, this must be done using the feature *
 
 * The attribute *depth range minimum value* must be used to encode the dredged depth for the dredged area. Where required, the attribute *depth range maximum depth* must be used to encode the deeper depth where a range of depths for the dredged area is indicated on the source.
 * The boundary of a dredged area should not have coincident curve geo features encoded, unless part of the boundary corresponds to the shoreline (see <<sec_5.3.1>>).
-* Dredged areas are often subject to siltation, resulting in shoaler depths being identified in the dredged area than the designed dredged depth. Where required, the shoal depths should be encoded using **Sounding**, with the appropriate underlying depth information (*Depth Area* and, if required, *Depth Contour*) to support the depths. Alternatively, the attribute *depth range maximum value* for the *Dredged Area* may be set to the designed dredged depth for the dredged area, and the attribute *depth range minimum value* set to the value of the shoalest depth, or a *Caution Area* feature may be encoded covering the shoaler depth area with the depth information provided using the complex attribute *information* (see <<sec_2.4.6>>). Where the shoal depths are close to the edge of the dredged area, the dredged area limit may be adjusted to exclude the shoal depths from the surface. See also S-4 -- B-414.5.
+* Dredged areas are often subject to siltation, resulting in shoaler depths being identified in the dredged area than the designed dredged depth. Where required, the shoal depths should be encoded using *Sounding*, with the appropriate underlying depth information (*Depth Area* and, if required, *Depth Contour*) to support the depths. Alternatively, the attribute *depth range maximum value* for the *Dredged Area* may be set to the designed dredged depth for the dredged area, and the attribute *depth range minimum value* set to the value of the shoalest depth, or a *Caution Area* feature may be encoded covering the shoaler depth area with the depth information provided using the complex attribute *information* (see <<sec_2.4.6>>). Where the shoal depths are close to the edge of the dredged area, the dredged area limit may be adjusted to exclude the shoal depths from the surface. See also S-4 -- B-414.5.
 * The attribute *source date* may be used to encode the year of the latest control survey for dredged areas where the dredged depth is not maintained. For dredged areas where the dredged depth is maintained, it is not required to indicate the year of dredging.
 * Where the complex attribute *vertical uncertainty* is populated for a *Dredged Area* feature, it must not be equivalent to or degrade the uncertainty indicated by the complex attribute *vertical uncertainty* for the underlying *Quality of Bathymetric Data* Meta feature (see clauses3.8 and 24.5).
 * For additional guidance regarding the encoding of vessel speed limits, see <<sec_17.4>>.
@@ -538,7 +538,7 @@ If it is required to encode dredged areas, this must be done using the feature *
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| footnote:crossnote[] For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+10+.<| footnote:crossnote[] For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -641,7 +641,7 @@ Even if the area contains no spot soundings or depth contours, a *Swept Area* fe
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| footnote:crossnote[] For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+10+.<| footnote:crossnote[] For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -744,7 +744,7 @@ image::figure-11-1.png[Shape25,286,459]
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| footnote:crossnote[] For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+10+.<| footnote:crossnote[] For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -860,9 +860,9 @@ NOTE: Where the optional depth areas in paragraph 7 above are encoded, this will
 [[sec_11.7.4]]
 ==== Rivers, canals, lakes, basins, locks
 
-Where these areas are navigable at the optimum display scale for the ENC data, they must be encoded using the Skin of the Earth features **Depth Area**, *Dredged Area* or **Unsurveyed Area**, and coastline-type features *Coastline* or *Shoreline Construction*. If it is required to encode the nature and name of the area, it must be done using the feature *Sea Area/Named Water Area*.
+Where these areas are navigable at the optimum display scale for the ENC data, they must be encoded using the Skin of the Earth features *Depth Area*, *Dredged Area* or *Unsurveyed Area*, and coastline-type features *Coastline* or *Shoreline Construction*. If it is required to encode the nature and name of the area, it must be done using the feature *Sea Area/Named Water Area*.
 
-Where these areas are required and are not navigable at the optimum display scale for the ENC data, they must be encoded using the features **River**, *Canal* or *Lake*. These features must be covered by *Land Area*features.
+Where these areas are required and are not navigable at the optimum display scale for the ENC data, they must be encoded using the features *River*, *Canal* or *Lake*. These features must be covered by *Land Area*features.
 
 [[sec_11.7.5]]
 ==== Areas of continual change (see S-4 -- B-416)
@@ -958,7 +958,7 @@ If it is required to encode sandwaves, this must be done using the feature *Sand
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| footnote:crossnote[] For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+10+.<| footnote:crossnote[] For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -1032,7 +1032,7 @@ The "very narrow area" should be at least 0.3mm in width at optimum display scal
 
 [underline]#Remarks:#
 
-* An indication of the purpose of the *Unsurveyed Area* may be done by population of the complex attribute *information* (see <<sec_2.4.6>>), sub-attribute **text**, for example _Discontinuity between surveys_.
+* An indication of the purpose of the *Unsurveyed Area* may be done by population of the complex attribute *information* (see <<sec_2.4.6>>), sub-attribute *text*, for example _Discontinuity between surveys_.
 * In order to provide an indication to the Mariner of the more reliable encoded bathymetry in an area of continually changing depth, the defining attributes should be downgraded for the *Quality of Bathymetric Data* feature (see <<sec_3.8>>) corresponding to the less reliable (or older) data.
 
 [[sec_11.9.4]]
@@ -1115,7 +1115,7 @@ In some cases satellite imagery provides evidence that existing charted informat
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association 2+| 0,*
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association 2+| 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association 2+| 0,*
-11+.<| footnote:crossnote[] For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+11+.<| footnote:crossnote[] For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -1128,7 +1128,7 @@ Unsurveyed areasmay be defined as those within which there is no available data 
 
 Areas with little or no bathymetric survey information must be encoded using the feature *Unsurveyed Area*.
 
-The area must also be covered, where required, by *Quality of Bathymetric Data* features (see <<sec_3.8>>), with attributes *category of temporal variation* = _6_ (unassessed), *data assessment* = _1_ (assessed), *features detected* (*least depth of detected features measured* and *significant features detected*) = _False_ and *full seafloor coverage achieved* = __False__; and (if encoded on *Quality of Bathymetric Data*)*horizontal position uncertainty* (*uncertainty fixed*) = [empty (null] and *vertical uncertainty* (*uncertainty fixed*) = [empty (null)]. If encoded on an instance of the information type *Spatial Quality* (see <<sec_24.5>>) associated to the **Quality of Bathymetric Data**, the horizontal position and vertical accuracies must be encoded as attributes *horizontal position uncertainty* (*uncertainty fixed*) = [empty (null] and *vertical uncertainty* (*uncertainty fixed*) = [empty (null)].
+The area must also be covered, where required, by *Quality of Bathymetric Data* features (see <<sec_3.8>>), with attributes *category of temporal variation* = _6_ (unassessed), *data assessment* = _1_ (assessed), *features detected* (*least depth of detected features measured* and *significant features detected*) = _False_ and *full seafloor coverage achieved* = __False__; and (if encoded on *Quality of Bathymetric Data*)*horizontal position uncertainty* (*uncertainty fixed*) = [empty (null] and *vertical uncertainty* (*uncertainty fixed*) = [empty (null)]. If encoded on an instance of the information type *Spatial Quality* (see <<sec_24.5>>) associated to the *Quality of Bathymetric Data*, the horizontal position and vertical accuracies must be encoded as attributes *horizontal position uncertainty* (*uncertainty fixed*) = [empty (null] and *vertical uncertainty* (*uncertainty fixed*) = [empty (null)].
 
 [underline]#Remarks:#
 
