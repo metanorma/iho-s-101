@@ -475,8 +475,8 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 
 [underline]#Remarks:#
 
-* If it is required to encode an offshore landmark (as defined by the attribute *category of landmark*), the ECDIS system attribute *in the water* (see clause 30.2) must be populated to ensure the feature is always displayed on the ECDIS. Where fitted, lights should be encoded as described in Section 19, with the **Building**, **Wind Turbine**, *Landmark* or *Silo/Tank* being used as the structure feature for the relevant light equipment feature(s) (see clause 18.1).
-* For encoding wind turbines, see clause 7.4.
+* If it is required to encode an offshore landmark (as defined by the attribute *category of landmark*), the ECDIS system attribute *in the water* (see <<sec_30.2>>) must be populated to ensure the feature is always displayed on the ECDIS. Where fitted, lights should be encoded as described in Section 19, with the **Building**, **Wind Turbine**, *Landmark* or *Silo/Tank* being used as the structure feature for the relevant light equipment feature(s) (see <<sec_18.1>>).
+* For encoding wind turbines, see <<sec_7.4>>.
 
 [[sec_7.2]]
 === Landmark
@@ -557,7 +557,7 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -639,7 +639,7 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -677,7 +677,7 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 | BO
 | 0,1
 
-3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
 2: occasional +
 4: not in use +
@@ -698,11 +698,11 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 1: visually conspicuous +
 2: not visually conspicuous +
 3: prominent | EN | 1,1
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -739,7 +739,7 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 | (S) TE
 | 0,1 footnote:crossnote[]
 
-3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 3+| in the water
 2+| 3+|
 
@@ -748,17 +748,17 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Structure 3+| *Structure/Equipment* (see clause 25.16) 3+| **Daymark**, **Distance Mark**, **Fog Signal**, **Helipad**, **Light Air Obstruction**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
-| The Component 3+| *Aids to Navigation Association* (see clause 25.2) 3+| **Deep Water Route**, **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
-| The Component 3+| *Range System Aggregation* (see clause 25.13) 3+| *Range System* 2+| Association | 0,*
-| The Auxiliary Feature 3+| *Fairway Auxiliary* (see clause 25.8) 3+| *Fairway* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| **Daymark**, **Distance Mark**, **Fog Signal**, **Helipad**, **Light Air Obstruction**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Deep Water Route**, **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
+| The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
+| The Auxiliary Feature 3+| *Fairway Auxiliary* (see <<sec_25.8>>) 3+| *Fairway* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<| footnote:crossnote[] The attribute *colour pattern* is mandatory for landmarks that have more than one value populated for the attribute *colour*.
 
-Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
@@ -777,17 +777,17 @@ If it is required to encode a landmark (other than a tank, silo or roofed struct
 
 [underline]#Remarks:#
 
-* For buildings, see clause6.2; for silos, tanks and water towers, see clause7.3. For common encoding combinations, see clause7.1. For wind turbines, see clause7.4. For roofed structures such as boathouses erected or extending over navigable water to provide protection for a vessel or its cargo, see clause 8.7. For flare stacks on offshore platforms, see clause 14.1.1.
-* The feature association *Structure/Equipment* (see clause 25.16) must only be used with *Landmark* features if the main purpose of the structure is to act as an aid to navigation (for example a lighthouse).
-* A water tower must be encoded, where required, using the feature *Silo/Tank* (see clause7.3).
+* For buildings, see <<sec_6.2>>; for silos, tanks and water towers, see <<sec_7.3>>. For common encoding combinations, see <<sec_7.1>>. For wind turbines, see <<sec_7.4>>. For roofed structures such as boathouses erected or extending over navigable water to provide protection for a vessel or its cargo, see <<sec_8.7>>. For flare stacks on offshore platforms, see <<sec_14.1.1>>.
+* The feature association *Structure/Equipment* (see <<sec_25.16>>) must only be used with *Landmark* features if the main purpose of the structure is to act as an aid to navigation (for example a lighthouse).
+* A water tower must be encoded, where required, using the feature *Silo/Tank* (see <<sec_7.3>>).
 * A ruined landmark should be encoded in the same way as the feature in good condition, but with attribute *condition* = _2_ (ruined).
 * Radio and television masts and towers are likely to be visible over long distances and should be encoded as landmarks, even when well inland. They will usually carry air obstruction lights.
 * To aid identification of landmarks by the Mariner it may be useful to add the height of the top of the structure above ground level (*vertical length*) or above the general height datum (*height*).
-* Buildings constructed as places of worship often form significant landmarks; their size and structure incorporating towers, spires, cupolas, etc often render them conspicuous. These buildings when known to be prominent or conspicuous should be encoded up to several miles inland (see Figure 7-1 below, examples (a) and (b)).
+* Buildings constructed as places of worship often form significant landmarks; their size and structure incorporating towers, spires, cupolas, etc often render them conspicuous. These buildings when known to be prominent or conspicuous should be encoded up to several miles inland (see <<fig_7-1>> below, examples (a) and (b)).
 * The attribute *category of special purpose mark* should only be used if the *Landmark*is used as the front or rear lead for a transit, clearing line or measured distance, or for a leading line. Values for *category of special purpose mark* such as _16_ (leading mark), _17_ (measured distance mark) or _41_ (clearing mark) in particular should be used for these purposes.
-* Values *category of landmark* = _26_ (bridge) and _27_ (dam) must only be used if the feature is encoded using point geometry; and must not be encoded over navigable water. Bridges and dams encoded using curve or surface geometry must be encoded using features *Bridge* (see clause 6.6) and *Dam* (see clause 8.12) respectively.
+* Values *category of landmark* = _26_ (bridge) and _27_ (dam) must only be used if the feature is encoded using point geometry; and must not be encoded over navigable water. Bridges and dams encoded using curve or surface geometry must be encoded using features *Bridge* (see <<sec_6.6>>) and *Dam* (see <<sec_8.12>>) respectively.
 * For landmarks located in navigable water, the Boolean attribute *in the water* must be set to _True_ to indicate that the feature is to be included in the ECDIS Base Display. Where such structures are located in the water it is not required to encode any supporting structures (for example piles).
-* When a building is shown as a surface, indicating its true shape, and it is required to encode a prominent feature such as a tower or spire that is part of the structure, two features must be created (see Figure 7-1 (b) below):
+* When a building is shown as a surface, indicating its true shape, and it is required to encode a prominent feature such as a tower or spire that is part of the structure, two features must be created (see <<fig_7-1>> (b) below):
 - a *Building* feature of type surface for the main building,
 
 [[fig_7-1]]
@@ -854,7 +854,7 @@ image::figure-7-1.png[Shape21,624,183]
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -889,7 +889,7 @@ image::figure-7-1.png[Shape21,624,183]
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -941,7 +941,7 @@ image::figure-7-1.png[Shape21,624,183]
 | BO
 | 0,1
 
-3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
 4: not in use +
 12: illuminated +
@@ -957,11 +957,11 @@ image::figure-7-1.png[Shape21,624,183]
 1: visually conspicuous +
 2: not visually conspicuous +
 3: prominent | EN | 0,1
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -998,7 +998,7 @@ image::figure-7-1.png[Shape21,624,183]
 | (S) TE
 | 0,1 footnote:crossnote[]
 
-3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 3+| in the water
 2+| 3+|
 
@@ -1007,16 +1007,16 @@ image::figure-7-1.png[Shape21,624,183]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Structure 3+| *Structure/Equipment* (see clause 25.16) 3+| **Daymark**, **Distance Mark**, **Fog Signal**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
-| The Component 3+| *Aids to Navigation Association* (see clause 25.2) 3+| **Deep Water Route**, **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
-| The Component 3+| *Range System Aggregation* (see clause 25.13) 3+| *Range System* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| **Daymark**, **Distance Mark**, **Fog Signal**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Deep Water Route**, **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
+| The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<| footnote:crossnote[] The attribute *colour pattern* is mandatory for silos or tanks that have more than one value populated for the attribute *colour*.
 
-Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
@@ -1033,8 +1033,8 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 
 [underline]#Remarks:#
 
-* For buildings, see clause6.2; for landmarks, see clause7.2. For common encoding combinations, see clause 7.1. For roofed structures such as boathouses erected or extending over navigable water to provide protection for a vessel or its cargo, see clause 8.7.
-* Groups of silos or tanks (tank farm) in close proximity must be encoded, where required, using the feature *Production/Storage Area* (see clause7.6). Individual, visually conspicuous silos, or tanks within a tank farm, may be encoded as *Silo/Tank* within the *Production/Storage Area*. Multiple silos contained within a single structure may be indicated using the complex attribute *multiplicity of features*.
+* For buildings, see <<sec_6.2>>; for landmarks, see <<sec_7.2>>. For common encoding combinations, see <<sec_7.1>>. For roofed structures such as boathouses erected or extending over navigable water to provide protection for a vessel or its cargo, see <<sec_8.7>>.
+* Groups of silos or tanks (tank farm) in close proximity must be encoded, where required, using the feature *Production/Storage Area* (see <<sec_7.6>>). Individual, visually conspicuous silos, or tanks within a tank farm, may be encoded as *Silo/Tank* within the *Production/Storage Area*. Multiple silos contained within a single structure may be indicated using the complex attribute *multiplicity of features*.
 * For tanks or silos located in or over navigable water, the Boolean attribute *in the water* must be set to _True_ to indicate that the feature is to be included in the ECDIS Base Display. Where such structures are located in the water it is not required to encode any supporting structures (for example piles).
 
 [underline]#Distinction:# Building; Landmark; Production/Storage Area.
@@ -1082,7 +1082,7 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -1110,7 +1110,7 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -1134,7 +1134,7 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -1169,7 +1169,7 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 | BO
 | 0,1
 
-3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
@@ -1243,11 +1243,11 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 3+| water level effect 2+| (WATLEV) 3+|
 2: always dry +
 7: floating | EN | 0,1
-3+| scale minimum 2+| (SCAMIN) 3+| See clause2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -1284,7 +1284,7 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 | (S) TE
 | 0,1 footnote:crossnote[]
 
-3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 3+| in the water
 2+| 3+|
 
@@ -1293,15 +1293,15 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Structure 3+| *Structure/Equipment* (see clause 25.16) 3+| **Daymark**, **Distance Mark**, **Fog Signal**, **Light Air Obstruction**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
-| The Component 3+| *Aids to Navigation Association* (see clause 25.2) 3+| **Deep Water Route**, **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| **Daymark**, **Distance Mark**, **Fog Signal**, **Light Air Obstruction**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Deep Water Route**, **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<| footnote:crossnote[] The attribute *colour pattern* is mandatory for bridges that have more than one value populated for the attribute *colour*.
 
-Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
 
@@ -1323,17 +1323,17 @@ If it is required to encode a wind turbine, it must be done using the feature *W
 * The attribute *elevation* is only applicable for wind turbines on land.
 * To aid identification of wind turbines on land by the Mariner it may be useful to add the height of the top of the structure above ground level (*vertical length*) or above the general height datum (*height*).
 * For offshore wind turbines, the Boolean attribute *in the water* must be set to _True_ to indicate that the feature is to be included in the ECDIS Base Display. Where such structures are located in the water it is not required to encode any supporting structures (for example piles).
-* For offshore wind turbines (attribute *in the water* = _True_), the attribute *height* is only relevant for fixed turbines, and is referred to the vertical datum (see clause 2.5.7).
+* For offshore wind turbines (attribute *in the water* = _True_), the attribute *height* is only relevant for fixed turbines, and is referred to the vertical datum (see <<sec_2.5.7>>).
 * For offshore wind turbines, the attribute *vertical length* is only relevant for floating wind turbines, and is referred to the sea level.
 * A ruined wind turbine should be encoded in the same way as the feature in good condition, but with attribute *condition* = _4_ (wingless).
-* If it is required to encode sites of dismantled offshore wind turbines, this must be done using *Foul Ground* features (see clause 13.7), unless the source indicates that any remaining structure protrudes far enough above the seabed so as to be an obstruction to surface navigation, in which case this must be encoded using an *Obstruction* feature (see clause13.6).
-* If it is required to encode an offshore wind farm, it must be done using the feature *Offshore Production Area* (see clause 14.6). An onshore wind farm must be encoded, where required, using the feature *Production/Storage Area* (see clause7.6).
-* Wind turbines may carry lights (see Section 19) or fog signals (see clause20.19). Where fitted, lights should be encoded as described in Section 19, with the *Wind Turbine* being used as the structure feature for the light equipment feature(s).
+* If it is required to encode sites of dismantled offshore wind turbines, this must be done using *Foul Ground* features (see <<sec_13.7>>), unless the source indicates that any remaining structure protrudes far enough above the seabed so as to be an obstruction to surface navigation, in which case this must be encoded using an *Obstruction* feature (see <<sec_13.6>>).
+* If it is required to encode an offshore wind farm, it must be done using the feature *Offshore Production Area* (see <<sec_14.6>>). An onshore wind farm must be encoded, where required, using the feature *Production/Storage Area* (see <<sec_7.6>>).
+* Wind turbines may carry lights (see Section 19) or fog signals (see <<sec_20.19>>). Where fitted, lights should be encoded as described in Section 19, with the *Wind Turbine* being used as the structure feature for the light equipment feature(s).
 * Value _13_ (low water) for attribute *vertical datum* is only applicable to enclosed (inland) waterways; and must not be used to indicate the reference datum for vertical clearances in tidal waters.
 
 * If available and considered important for route planning and/or monitoring, the vertical uncertainty associated with encoded vertical clearance values should also be encoded.
 
-* For encoding offshore safety zones around offshore wind turbines, see clause14.1.3.
+* For encoding offshore safety zones around offshore wind turbines, see <<sec_14.1.3>>.
 
 [underline]#Distinction:# Building; Daymark; Landmark; Offshore Platform;Offshore Production Area; Pylon/Bridge Support; Silo/Tank; Special Purpose/General Beacon.
 
@@ -1366,7 +1366,7 @@ A structure that is specifically designed or reinforced to provide for defence f
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -1401,7 +1401,7 @@ A structure that is specifically designed or reinforced to provide for defence f
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -1418,7 +1418,7 @@ A structure that is specifically designed or reinforced to provide for defence f
 | BO
 | 0,1
 
-3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
 4: not in use +
 7: temporary +
@@ -1438,11 +1438,11 @@ A structure that is specifically designed or reinforced to provide for defence f
 1: visually conspicuous +
 2: not visually conspicuous +
 3: prominent | EN | 0,1
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -1479,7 +1479,7 @@ A structure that is specifically designed or reinforced to provide for defence f
 | (S) TE
 | 0,1 footnote:crossnote[]
 
-3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 3+| in the water
 2+| 3+|
 
@@ -1488,14 +1488,14 @@ A structure that is specifically designed or reinforced to provide for defence f
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Structure 3+| *Structure/Equipment* (see clause 25.16) 3+| **Bollard**, **Daymark**, **Distance Mark**, **Fog Signal**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
-| The Component 3+| *Aids to Navigation Association* (see clause 25.2) 3+| **Deep Water Route**, **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
-| The Component 3+| *Range System Aggregation* (see clause 25.13) 3+| *Range System* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| **Bollard**, **Daymark**, **Distance Mark**, **Fog Signal**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Deep Water Route**, **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
+| The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
@@ -1513,7 +1513,7 @@ If it is required to encode a fortified structure, it must be done using the fea
 [underline]#Remarks:#
 
 * If it is required to encode a Martello tower, it must be done using *Fortified Structure* with attribute *category of fort* = _5_ (fortified tower).
-* Where fitted, lights should be encoded as described in Section 19, with the *Fortified Structure* being used as the structure feature for the relevant light equipment feature(s) (see clause 18.1).
+* Where fitted, lights should be encoded as described in Section 19, with the *Fortified Structure* being used as the structure feature for the relevant light equipment feature(s) (see <<sec_18.1>>).
 * For fortified structures located in navigable water, the Boolean attribute *in the water* must be set to _True_ to indicate that the feature is to be included in the ECDIS Base Display. Where such structures are located in the water it is not required to encode any supporting structures (for example piles).
 
 [underline]#Distinction:# Building; Fence/Wall; Landmark.
@@ -1557,7 +1557,7 @@ If it is required to encode a fortified structure, it must be done using the fea
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -1585,7 +1585,7 @@ If it is required to encode a fortified structure, it must be done using the fea
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -1609,7 +1609,7 @@ If it is required to encode a fortified structure, it must be done using the fea
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -1645,7 +1645,7 @@ If it is required to encode a fortified structure, it must be done using the fea
 | BO
 | 0,1
 
-3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
 4: not in use +
 12: illuminated | EN | 0,*
@@ -1660,11 +1660,11 @@ If it is required to encode a fortified structure, it must be done using the fea
 1: visually conspicuous +
 2: not visually conspicuous +
 3: prominent | EN | 0,1
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -1701,14 +1701,14 @@ If it is required to encode a fortified structure, it must be done using the fea
 | (S) TE
 | 0,1 footnote:crossnote[]
 
-3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
 
@@ -1729,6 +1729,6 @@ If it is required to encode production or storage area, it must be done using th
 
 * If there are individual buildings or equipment features contained within this area, they should be encoded as separate features such as **Building****, Crane,** *Landmark*or *Silo/Tank* within the *Production/Storage Area* feature of type surface if the optimum display scale of the ENC data permits.
 
-* If visible from seaward, a quarry face should be encoded as for a cliff (see clause 5.1), with attribute *category of slope* = _6_ (cliff).
+* If visible from seaward, a quarry face should be encoded as for a cliff (see <<sec_5.1>>), with attribute *category of slope* = _6_ (cliff).
 
 [underline]#Distinction:# Free Port Area; Offshore Production Area.

@@ -49,7 +49,7 @@ Maintenance:: Changes to S-101 Annex A; Data Classification and Encoding Guide a
 [[sec_1.3.1]]
 ==== Terms and definitions
 
-See S-101 Product Specification Main document, clause 1.3.2.
+See S-101 Product Specification Main document, <<sec_1.3.2>>.
 
 [[sec_1.3.2]]
 ==== Abbreviations

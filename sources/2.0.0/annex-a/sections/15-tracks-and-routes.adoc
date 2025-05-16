@@ -12,7 +12,7 @@ NB. In North America the word "range" is used instead of "transit" and "leading 
 [[sec_15.1.1]]
 ==== Range systems - relationship
 
-To encode a range system, the features **Navigation Line**, *Recommended Track* and the navigational aids features should be associated with the feature *Range System* (see clause15.6) using the association *Range System Aggregation* (see clause 25.13).
+To encode a range system, the features **Navigation Line**, *Recommended Track* and the navigational aids features should be associated with the feature *Range System* (see <<sec_15.6>>) using the association *Range System Aggregation* (see <<sec_25.13>>).
 
 [[fig_15-1]]
 .Range systems
@@ -20,7 +20,7 @@ image::figure-15-1.png[Shape30,316,204]
 
 [underline]#Remarks:#
 
-* All features comprising a range system must have the same value populated for the attribute *scale minimum* (see clause2.5.9).
+* All features comprising a range system must have the same value populated for the attribute *scale minimum* (see <<sec_2.5.9>>).
 
 [[sec_15.2]]
 === Traffic Lanes
@@ -44,17 +44,17 @@ If it is required to encode a traffic separation scheme, it must be done using:
 
 - Deep Water routes (DW -- a route within defined limits which has been accurately surveyed for clearance of sea bottom and submerged obstacles as indicated on the chart (IMO Ships' Routeing)). Deep Water routes are encoded using **Deep Water Route Centreline**; *Deep Water Route Part* and *Deep Water Route* features (see clauses15.13to 15.15);
 
-- *Inshore Traffic Zone* (see clause 15.16);
+- *Inshore Traffic Zone* (see <<sec_15.16>>);
 
-- *Precautionary Area*(see clause 15.17);
+- *Precautionary Area*(see <<sec_15.17>>);
 
 - **Separation Zone or Line**, **Traffic Separation Scheme Boundary**, **Traffic Separation Scheme Crossing**, **Traffic Separation Scheme Lane Part**, *Traffic Separation Scheme Roundabout* and *Traffic Separation Scheme* (see clauses 15.18to15.23); and
 
 - Navigational aids features (see Sections 18 to 21).
 
-For guidance on provision of advance notification of changes to traffic separation schemes, see clause 31.1.1.
+For guidance on provision of advance notification of changes to traffic separation schemes, see <<sec_31.1.1>>.
 
-To encode a traffic separation scheme (TSS) system, the **Deep Water Route Centreline**, **Deep Water Route Part**, **Inshore Traffic Zone**, **Precautionary Area**, **Separation Zone or Line**, **Traffic Separation Scheme Boundary**, **Traffic Separation Scheme Crossing**, **Traffic Separation Scheme Lane Part**, *Traffic Separation Scheme Roundabout* features must be associated with the *Traffic Separation Scheme* (see clause15.23) using the association *Traffic Separation Scheme Aggregation* (see clause 25.18). The *Traffic Separation Scheme* may additionally be associated to the aids to navigation marking the components of the Scheme (if they are stated in the regulation defining the TSS or Deep Water route) using the association *Aids to Navigation Association* (see clause 25.2). Where it is required to indicate the name of the complete TSS, this must be done using the attribute feature name for the *Traffic Separation Scheme*. Where it is required to populate textual information for the TSS, this should be done using the complex attribute *information* (see clause 2.4.6) for the *Traffic Separation Scheme*.
+To encode a traffic separation scheme (TSS) system, the **Deep Water Route Centreline**, **Deep Water Route Part**, **Inshore Traffic Zone**, **Precautionary Area**, **Separation Zone or Line**, **Traffic Separation Scheme Boundary**, **Traffic Separation Scheme Crossing**, **Traffic Separation Scheme Lane Part**, *Traffic Separation Scheme Roundabout* features must be associated with the *Traffic Separation Scheme* (see <<sec_15.23>>) using the association *Traffic Separation Scheme Aggregation* (see <<sec_25.18>>). The *Traffic Separation Scheme* may additionally be associated to the aids to navigation marking the components of the Scheme (if they are stated in the regulation defining the TSS or Deep Water route) using the association *Aids to Navigation Association* (see <<sec_25.2>>). Where it is required to indicate the name of the complete TSS, this must be done using the attribute feature name for the *Traffic Separation Scheme*. Where it is required to populate textual information for the TSS, this should be done using the complex attribute *information* (see <<sec_2.4.6>>) for the *Traffic Separation Scheme*.
 
 [[fig_15-3]]
 .Sample Traffic Separation Scheme (TSS) and Deep Water route (DW)
@@ -62,15 +62,15 @@ image::figure-15-3.png["",493,447]
 
 [underline]#Remarks:#
 
-* Traffic separation scheme systems may be included with other routeing measures such as Deep Water or two-way routes, or another traffic separation scheme system, to comprise a complete traffic routeing system. To encode the relationship between routeing measures, the named association defining each routeing measure within the system (or the relevant feature if the routeing measure consists of a single feature) may be associated using a *Traffic Separation Scheme Aggregation* to form a hierarchical relationship (see clause25.18). The individual elements comprising different routeing measures must not be aggregated into a single named association.
-* All features comprising a TSS, TSS system or deep water route must have the same value populated for the attribute *scale minimum* (see clause 2.5.9).
+* Traffic separation scheme systems may be included with other routeing measures such as Deep Water or two-way routes, or another traffic separation scheme system, to comprise a complete traffic routeing system. To encode the relationship between routeing measures, the named association defining each routeing measure within the system (or the relevant feature if the routeing measure consists of a single feature) may be associated using a *Traffic Separation Scheme Aggregation* to form a hierarchical relationship (see <<sec_25.18>>). The individual elements comprising different routeing measures must not be aggregated into a single named association.
+* All features comprising a TSS, TSS system or deep water route must have the same value populated for the attribute *scale minimum* (see <<sec_2.5.9>>).
 
 [[sec_15.4]]
 === Navigation line
 
-[cols="87,209,96,120,66,101,101,101,42,77"]
+[cols="87,209,96,120,66,101,101,101,42,77",options="unnumbered"]
 |===
-9+.<h| IHO Definition: *NAVIGATION LINE*. A straight line extending towards an area of navigational interest and generally generated by two navigational aids or one navigational aid and a bearing. (Service Hydrographique et Oceanographique de la Marine, France). |
+9+| [underline]#IHO Definition:# *NAVIGATION LINE*. A straight line extending towards an area of navigational interest and generally generated by two navigational aids or one navigational aid and a bearing. (Service Hydrographique et Oceanographique de la Marine, France). |
 9+| *[underline]#S-101 Geo Feature:#* *Navigation Line (NAVLNE)* |
 9+| *[underline]#Primitives:#* *Curve* |
 2+| _Real World_
@@ -89,7 +89,7 @@ image::figure-15-3.png["",493,447]
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -106,7 +106,7 @@ image::figure-15-3.png["",493,447]
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -144,7 +144,7 @@ image::figure-15-3.png["",493,447]
 3+| periodic date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,*
 
@@ -165,11 +165,11 @@ image::figure-15-3.png["",493,447]
 7: temporary +
 8: private +
 14: public | EN | 0,*
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -212,10 +212,10 @@ image::figure-15-3.png["",493,447]
 
 9+| *Feature Associations* |
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Component 3+| *Range System Aggregation* (see clause 25.13) 3+| *Range System* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+| The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 9+.<| ^†^ For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
@@ -225,7 +225,7 @@ image::figure-15-3.png["",493,447]
 [[sec_15.4.1]]
 ==== Navigation lines (see S-4 -- B-433)
 
-Clearing Linesare important in rocky areas where dangers are not guarded by buoys and where sailing vessels (which are not always able to keep to a direct track) and other small craft may navigate close inshore. Transits marking isolated dangers are based on beacons or other marks which are erected on shore to indicate (approximately, unless there are two pairs of beacons) the position of an isolated danger. Leading lines based on beacons or lights must be encoded where the optimum display scale for the ENC data permits. Leading lines based on natural features should be encoded on the largest optimum display scale ENC data where they appear to be useful, particularly if other navigational aids seem inadequate.If it is required to encode a navigation line, it must be done using the feature *Navigation Line*.The use of *Navigation Line* and *Recommended Track* (see clause 15.5) is defined in more detail in the following Table, and in Figure 15-4 below:
+Clearing Linesare important in rocky areas where dangers are not guarded by buoys and where sailing vessels (which are not always able to keep to a direct track) and other small craft may navigate close inshore. Transits marking isolated dangers are based on beacons or other marks which are erected on shore to indicate (approximately, unless there are two pairs of beacons) the position of an isolated danger. Leading lines based on beacons or lights must be encoded where the optimum display scale for the ENC data permits. Leading lines based on natural features should be encoded on the largest optimum display scale ENC data where they appear to be useful, particularly if other navigational aids seem inadequate.If it is required to encode a navigation line, it must be done using the feature *Navigation Line*.The use of *Navigation Line* and *Recommended Track* (see <<sec_15.5>>) is defined in more detail in the following Table, and in <<fig_15-4>> below:
 
 [[table_15-1]]
 .Navigation lines -- Attribute encoding
@@ -375,20 +375,20 @@ image::figure-15-4.png[Shape31,580,299]
 [[sec_15.4.2]]
 ==== Measured distances (see S-4 -- B-458)
 
-If the track to be followed is on a leading line or a bearing, it must be encoded in the way described in the Table and Figure 15-4 above (cases 1 or 4). If the track is not on a leading line or bearing, it must be encoded only as a *Navigation Line* feature with the attribute *category of navigation line* being set to an empty (null) value. In either case, if it is required to encode the measured distance, it must be done using the attribute *measured distance*.If it is required to encode the transit lines, they must be done using *Navigation Line* features, with *category of navigation line* = _2_ (transit line).If it is required to encode the beacons, they must be done using *Special Purpose/General Beacon* features, with attribute *category of special purpose mark* = _17_ (measured distance mark).On occasions, one or more of the transits used for the measured distance may incorporate an existing landmark as the front or rear mark. In this case, if *Landmark* is encoded, *category of special purpose mark* = _17_ must also be populated.Where the entire measured distance system exists within a single dataset, each transit line with its beacons must be associated with the feature *Range System* (see clause15.6) using the association *Range System Aggregation* (see clause 25.13). These two associations and the track to be followed must be associated with another instance of *Range System* to form a hierarchical relationship.
+If the track to be followed is on a leading line or a bearing, it must be encoded in the way described in the Table and <<fig_15-4>> above (cases 1 or 4). If the track is not on a leading line or bearing, it must be encoded only as a *Navigation Line* feature with the attribute *category of navigation line* being set to an empty (null) value. In either case, if it is required to encode the measured distance, it must be done using the attribute *measured distance*.If it is required to encode the transit lines, they must be done using *Navigation Line* features, with *category of navigation line* = _2_ (transit line).If it is required to encode the beacons, they must be done using *Special Purpose/General Beacon* features, with attribute *category of special purpose mark* = _17_ (measured distance mark).On occasions, one or more of the transits used for the measured distance may incorporate an existing landmark as the front or rear mark. In this case, if *Landmark* is encoded, *category of special purpose mark* = _17_ must also be populated.Where the entire measured distance system exists within a single dataset, each transit line with its beacons must be associated with the feature *Range System* (see <<sec_15.6>>) using the association *Range System Aggregation* (see <<sec_25.13>>). These two associations and the track to be followed must be associated with another instance of *Range System* to form a hierarchical relationship.
 
 [underline]#Remarks:#
 
-* All features comprising a measured distance must have the same value populated for the attribute *scale minimum* (see clause2.5.9).
+* All features comprising a measured distance must have the same value populated for the attribute *scale minimum* (see <<sec_2.5.9>>).
 
 [underline]#Distinction:# Recommended Route Centreline; Recommended Track.
 
 [[sec_15.5]]
 === Recommended track
 
-[cols="87,192,112,120,67,101,101,101,42,77"]
+[cols="87,192,112,120,67,101,101,101,42,77",options="unnumbered"]
 |===
-9+.<h| IHO Definition: *RECOMMENDED TRACK*. A route which has been specially examined to ensure so far as possible that it is free of dangers and along which ships are advised to navigate. (IMO Ships' Routeing). |
+9+| [underline]#IHO Definition:# *RECOMMENDED TRACK*. A route which has been specially examined to ensure so far as possible that it is free of dangers and along which ships are advised to navigate. (IMO Ships' Routeing). |
 9+| *[underline]#S-101 Geo Feature:#* *Recommended Track (RECTRC)* |
 9+| *[underline]#Primitives:#* *Curve* |
 2+| _Real World_
@@ -417,7 +417,7 @@ If the track to be followed is on a leading line or a bearing, it must be encode
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -447,7 +447,7 @@ If the track to be followed is on a leading line or a bearing, it must be encode
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -464,7 +464,7 @@ If the track to be followed is on a leading line or a bearing, it must be encode
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -485,7 +485,7 @@ If the track to be followed is on a leading line or a bearing, it must be encode
 3+| periodic date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,*
 
@@ -549,11 +549,11 @@ If the track to be followed is on a leading line or a bearing, it must be encode
 | (S) RE
 | 0,1
 
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -596,12 +596,12 @@ If the track to be followed is on a leading line or a bearing, it must be encode
 
 9+| *Feature Associations* |
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Component 3+| *Range System Aggregation* (see clause 25.13) 3+| *Range System* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-9+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+| The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+9+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -610,7 +610,7 @@ If the track to be followed is on a leading line or a bearing, it must be encode
 [[sec_15.5.1]]
 ==== Recommended tracks (see S-4 -- B-432.1; B-434 and B-434.1-4)
 
-Recommended tracks and fairways usually comprise a number of sections (sometimes termed "legs") which lead between dangers lying close on both sides of the track or fairway. Tracks commonly include some sections which are leading lines (see clause15.1). The distinction between tracks and fairways, in this context, is that tracks have no specified outer limits and fairways do have specified outer limits.It is important to recognise that it is not the role of cartographers to create "recommended" tracks and other "recommended" routeing measures; such recommendations are made by other authorities. The word "Recommended", used in connection with recommended tracks and other recommended routeing measures usually implies that it has been recommended by a competent authority (such as a port authority within its port limits or a maritime safety authority) and may be adopted by IMO. Occasionally, the recommendation may be based on advice directly from a competent surveyor or established by precedent.Recommended tracks include all channels recommended for hydrographic reasons to lead safely between shoal depths. The use of such tracks is generally left to the discretion of the Mariner and will depend on the vessel's draught, the state of the tide, adequacy of navigational aids and so on.If it is required to encode a recommended track, it must be done using the feature *Recommended Track*.The use of *Navigation Line* and *Recommended Track* is defined in more detail in the following Table, and in Figure 15-5 below.
+Recommended tracks and fairways usually comprise a number of sections (sometimes termed "legs") which lead between dangers lying close on both sides of the track or fairway. Tracks commonly include some sections which are leading lines (see <<sec_15.1>>). The distinction between tracks and fairways, in this context, is that tracks have no specified outer limits and fairways do have specified outer limits.It is important to recognise that it is not the role of cartographers to create "recommended" tracks and other "recommended" routeing measures; such recommendations are made by other authorities. The word "Recommended", used in connection with recommended tracks and other recommended routeing measures usually implies that it has been recommended by a competent authority (such as a port authority within its port limits or a maritime safety authority) and may be adopted by IMO. Occasionally, the recommendation may be based on advice directly from a competent surveyor or established by precedent.Recommended tracks include all channels recommended for hydrographic reasons to lead safely between shoal depths. The use of such tracks is generally left to the discretion of the Mariner and will depend on the vessel's draught, the state of the tide, adequacy of navigational aids and so on.If it is required to encode a recommended track, it must be done using the feature *Recommended Track*.The use of *Navigation Line* and *Recommended Track* is defined in more detail in the following Table, and in <<fig_15-5>> below.
 
 [[table_15-2]]
 .Recommended tracks -- Attribute encoding
@@ -755,7 +755,7 @@ image::figure-15-5.png[Shape32,580,299]
 
 * The attribute *depth range minimum value* is used to encode the shallowest depth along the track, where required.
 * The attribute *maximum permitted draught* is used to encode the maximum draught permitted on the track, where required.
-* The recommended track is that portion of a navigation line (see clause15.4) that a ship should use for navigation (see Figure 15-5 above).
+* The recommended track is that portion of a navigation line (see <<sec_15.4>>) that a ship should use for navigation (see <<fig_15-5>> above).
 * In the case of a two-way recommended track, only one value of orientation is encoded (in the mandatory attribute *orientation value*); the other value can be deduced (that is, the value in *orientation value* + 180 degrees). The value of orientation encoded on *orientation value* should be the value of the bearing from seaward. If it is not possible to define a seaward direction, the value that is less than 180° should be used.
 * When the traffic flow along a recommended track is one way (attribute *traffic flow* = __1__, _2_ or _3_), the resultant direction of the line (accounting for the direction of digitising and any subsequent reversal of the line) associated with the *Recommended Track* must be the same as the direction of the traffic flow, in order to ensure the correct representation in the ECDIS of the direction to be followed.
 
@@ -764,7 +764,7 @@ image::figure-15-5.png[Shape32,580,299]
 [[sec_15.6]]
 === Range system
 
-[cols="609,794,794,794,794,794,794,794,294,539"]
+[cols="609,794,794,794,794,794,794,794,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *RANGE SYSTEM*. Two or more features in the same horizontal direction, particularly those features so placed as navigational aids to mark any line of importance to vessels, as a channel. The one nearest the observer is the front mark and the one farthest from the observer is the rear mark. (Adapted from IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Range System* __**(C_AGGR)**__
@@ -776,7 +776,7 @@ image::figure-15-5.png[Shape32,580,299]
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -806,7 +806,7 @@ image::figure-15-5.png[Shape32,580,299]
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -823,7 +823,7 @@ image::figure-15-5.png[Shape32,580,299]
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -835,11 +835,11 @@ image::figure-15-5.png[Shape32,580,299]
 | RE
 | 0,1
 
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -882,14 +882,14 @@ image::figure-15-5.png[Shape32,580,299]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Collection 3+| *Range System Aggregation* (see clause 25.13) 3+| **Cardinal Beacon**, **Building**, **Daymark**, **Dolphin**, **Fortified Structure**, **Isolated Danger Beacon**, **Landmark**, **Lateral Beacon**, **Light All Around**, **Light Sectored**, **Navigation Line**, **Pile**, **Radar Transponder Beacon**, **Range System**, **Recommended Route Centreline**, **Recommended Track**, **Safe Water Beacon**, **Silo/Tank**, *Special Purpose/General Beacon* 2+| Aggregation | 0,1
-| The Component 3+| *Range System Aggregation* (see clause 25.13) 3+| *Range System* 2+| Association | 0,*
-| The Auxiliary Feature 3+| *Fairway Auxiliary* (see clause 25.8) 3+| *Fairway* 2+| Aggregation | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+| The Collection 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| **Cardinal Beacon**, **Building**, **Daymark**, **Dolphin**, **Fortified Structure**, **Isolated Danger Beacon**, **Landmark**, **Lateral Beacon**, **Light All Around**, **Light Sectored**, **Navigation Line**, **Pile**, **Radar Transponder Beacon**, **Range System**, **Recommended Route Centreline**, **Recommended Track**, **Safe Water Beacon**, **Silo/Tank**, *Special Purpose/General Beacon* 2+| Aggregation | 0,1
+| The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
+| The Auxiliary Feature 3+| *Fairway Auxiliary* (see <<sec_25.8>>) 3+| *Fairway* 2+| Aggregation | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -898,12 +898,12 @@ image::figure-15-5.png[Shape32,580,299]
 [[sec_15.6.1]]
 ==== Range systems (see S4 -- B-433)
 
-If it is required to encode leading, clearing and transit lines and recommended tracks, it must be done using the features *Navigation Line* and *Recommended Track* (see clauses15.4and 15.5), and related point navigational aids features (see Sections 18-21). This applies for visual and radio navigational aids.To encode a range system, the features **Navigation Line**, **Recommended Route Centreline**, *Recommended Track* and the navigational aids features should be associated with the feature *Range System* using the association *Range System Aggregation* (see clause 25.13).
+If it is required to encode leading, clearing and transit lines and recommended tracks, it must be done using the features *Navigation Line* and *Recommended Track* (see clauses15.4and 15.5), and related point navigational aids features (see Sections 18-21). This applies for visual and radio navigational aids.To encode a range system, the features **Navigation Line**, **Recommended Route Centreline**, *Recommended Track* and the navigational aids features should be associated with the feature *Range System* using the association *Range System Aggregation* (see <<sec_25.13>>).
 
 [underline]#Remarks:#
 
 * The name of the range system may be populated using the complex attribute *feature name*. Where it is required for the name to be displayed in the ECDIS, the *Range System* must be encoded using curve or surface geometry. The extent of the geometry of the *Range System* should utilise the geometry of the components of the system so as to cover its full extent.
-* All features comprising a range system must have the same value populated for the attribute *scale minimum* (see clause 2.5.9).
+* All features comprising a range system must have the same value populated for the attribute *scale minimum* (see <<sec_2.5.9>>).
 * Multiple *Range System* features may be further aggregated hierarchically using the association *Range System Aggregation* to define a higher level range system.
 
 [underline]#Distinction:#
@@ -911,7 +911,7 @@ If it is required to encode leading, clearing and transit lines and recommended 
 [[sec_15.7]]
 === Fairway
 
-[cols="609,794,794,794,794,794,794,794,294,539"]
+[cols="609,794,794,794,794,794,794,794,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *FAIRWAY*.That part of a river, harbour and so on, where the main navigable channel for vessels of larger size lies. It is also the usual course followed by vessels entering or leaving harbours, called "ship channel". (International Maritime Dictionary, 2^nd^ Edition).
 10+| *[underline]#S-101 Geo Feature:#* *Fairway (FAIRWY)*
@@ -930,7 +930,7 @@ If it is required to encode leading, clearing and transit lines and recommended 
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -960,7 +960,7 @@ If it is required to encode leading, clearing and transit lines and recommended 
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -977,7 +977,7 @@ If it is required to encode leading, clearing and transit lines and recommended 
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -1095,11 +1095,11 @@ If it is required to encode leading, clearing and transit lines and recommended 
 | (S) TE
 | 0,1
 
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -1142,13 +1142,13 @@ If it is required to encode leading, clearing and transit lines and recommended 
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Component 3+| *Fairway Aggregation* (see clause 25.7) 3+| *Fairway System* 2+| Association | 1,*
-| The Primary Feature 3+| *Fairway Auxiliary* (see clause 25.8) 3+| **Cardinal Beacon**, **Cardinal Buoy**, **Caution Area**, **Daymark**, **Dredged Area**, **Isolated Danger Beacon**, **Isolated Danger Buoy**, **Lateral Beacon**, **Lateral Buoy**, **Light Float**, **Light Vessel**, **Landmark**, **Pile**, **Range System**, **Recommended Route Centreline**, **Recommended Track**, **Restricted Area**, **Safe Water Beacon**, **Safe Water Buoy**, **Special Purpose/General Beacon**, **Special Purpose/General Buoy**, *Swept Area* 2+| Aggregation | 0,1
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+| The Component 3+| *Fairway Aggregation* (see <<sec_25.7>>) 3+| *Fairway System* 2+| Association | 1,*
+| The Primary Feature 3+| *Fairway Auxiliary* (see <<sec_25.8>>) 3+| **Cardinal Beacon**, **Cardinal Buoy**, **Caution Area**, **Daymark**, **Dredged Area**, **Isolated Danger Beacon**, **Isolated Danger Buoy**, **Lateral Beacon**, **Lateral Buoy**, **Light Float**, **Light Vessel**, **Landmark**, **Pile**, **Range System**, **Recommended Route Centreline**, **Recommended Track**, **Restricted Area**, **Safe Water Beacon**, **Safe Water Buoy**, **Special Purpose/General Beacon**, **Special Purpose/General Buoy**, *Swept Area* 2+| Aggregation | 0,1
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -1162,18 +1162,18 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 [underline]#Remarks:#
 
 * The attribute *depth range minimum value* is used to encode the shallowest depth in the fairway, where known.
-* The attribute *maximum permitted draught* is permitted on *Fairway* only where the *Fairway* defines the entire system (that is, the *Fairway* has not been associated with other *Fairway* features and the feature *Fairway System* (see clause 15.8) to define a complete fairway system).
+* The attribute *maximum permitted draught* is permitted on *Fairway* only where the *Fairway* defines the entire system (that is, the *Fairway* has not been associated with other *Fairway* features and the feature *Fairway System* (see <<sec_15.8>>) to define a complete fairway system).
 
-* For additional guidance regarding the encoding of vessel speed limits, see clause 17.4.
-* Where beacons or buoys marking a fairway are offset from the actual fairway limits, this should be indicated using the complex attribute *information* (see clause 2.4.6).
-* To encode a complete fairway system, the *Fairway* features may be associated with the feature *Fairway System* using the association *Fairway Aggregation* (see clause 25.7). The navigational aids features defining a fairway section may be associated with the *Fairway* using the association *Fairway Auxiliary* (see clause 25.8). Where it is required to indicate the name of a complete fairway system, this should be done using the complex attribute *feature name* for the *Fairway System* feature; or on a single *Fairway* feature where this feature defines the entire system. Where it is required to encode textual information for the fairway system, this should be done using the complex attribute *information*.
+* For additional guidance regarding the encoding of vessel speed limits, see <<sec_17.4>>.
+* Where beacons or buoys marking a fairway are offset from the actual fairway limits, this should be indicated using the complex attribute *information* (see <<sec_2.4.6>>).
+* To encode a complete fairway system, the *Fairway* features may be associated with the feature *Fairway System* using the association *Fairway Aggregation* (see <<sec_25.7>>). The navigational aids features defining a fairway section may be associated with the *Fairway* using the association *Fairway Auxiliary* (see <<sec_25.8>>). Where it is required to indicate the name of a complete fairway system, this should be done using the complex attribute *feature name* for the *Fairway System* feature; or on a single *Fairway* feature where this feature defines the entire system. Where it is required to encode textual information for the fairway system, this should be done using the complex attribute *information*.
 
 [underline]#Distinction:# Deep Water Route Centreline; Deep Water Route Part; Traffic Separation Scheme Lane Part.
 
 [[sec_15.8]]
 === Fairway system
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *FAIRWAY SYSTEM*.That part of a river, harbour and so on, where the main navigable channel for vessels of larger size lies. It is also the usual course followed by vessels entering or leaving harbours, called "ship channel". (International Maritime Dictionary, 2^nd^ Edition) fairway system is an aggregation of connected fairway features making up a complex fairway system.
 10+| *[underline]#S-101 Geo Feature:#* *Fairway System* __**(C_AGGR)**__
@@ -1185,7 +1185,7 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -1215,7 +1215,7 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -1232,7 +1232,7 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -1247,7 +1247,7 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 3+| periodic date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,*
 
@@ -1261,11 +1261,11 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 3+| | (S) TD
 | 1,1
 
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -1308,13 +1308,13 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Collection 3+| *Fairway Aggregation* (see clause 25.7) 3+| *Fairway* 2+| Aggregation | 0,1
-| The Collection 3+| *Aids to Navigation Association* (see clause 25.2) 3+| **Building**, **Bridge**, **Cardinal Beacon**, **Cardinal Buoy**, **Conveyor**, **Crane**, **Daymark**, **Dolphin**, **Emergency Wreck Marking Buoy**, **Fishing Facility**, **Floating Dock**, **Fortified Structure**, **Hulk**, **Isolated Danger Beacon**, **Isolated Danger Buoy**, **Landmark**, **Lateral Beacon**, **Lateral Buoy**, **Light Float**, **Light Vessel**, **Mooring Buoy**, **Offshore Platform**, **Pile**, **Pipeline Overhead**, **Pontoon**, **Pylon/Bridge Support**, **Safe Water Beacon**, **Safe Water Buoy**, **Shoreline Construction**, **Silo/Tank**, **Span Fixed**, **Span Opening**, **Special Purpose/General Beacon**, **Special Purpose/General Buoy**, **Structure Over Navigable Water**, *Wind Turbine* 2+| Aggregation | 0,1
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+| The Collection 3+| *Fairway Aggregation* (see <<sec_25.7>>) 3+| *Fairway* 2+| Aggregation | 0,1
+| The Collection 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Building**, **Bridge**, **Cardinal Beacon**, **Cardinal Buoy**, **Conveyor**, **Crane**, **Daymark**, **Dolphin**, **Emergency Wreck Marking Buoy**, **Fishing Facility**, **Floating Dock**, **Fortified Structure**, **Hulk**, **Isolated Danger Beacon**, **Isolated Danger Buoy**, **Landmark**, **Lateral Beacon**, **Lateral Buoy**, **Light Float**, **Light Vessel**, **Mooring Buoy**, **Offshore Platform**, **Pile**, **Pipeline Overhead**, **Pontoon**, **Pylon/Bridge Support**, **Safe Water Beacon**, **Safe Water Buoy**, **Shoreline Construction**, **Silo/Tank**, **Span Fixed**, **Span Opening**, **Special Purpose/General Beacon**, **Special Purpose/General Buoy**, **Structure Over Navigable Water**, *Wind Turbine* 2+| Aggregation | 0,1
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -1323,20 +1323,20 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 [[sec_15.8.1]]
 ==== Fairway systems (see S-4 -- B-432.1(c) and B-434.5)
 
-A fairway, sometimes called Ship Channel, is the main navigable channel in the approaches to, or within, a river or harbour. Fairways which are designated by a regulatory authority are treated as Routeing Measures.A fairway system is composed of two or more *Fairway* features that comprise a complex fairway routeing system, for instance a long fairway comprising several bends. To define the complete fairway system, the *Fairway* features must be aggregated in a *Fairway System* feature, using the association *Fairway Aggregation* (see clause 25.7).
+A fairway, sometimes called Ship Channel, is the main navigable channel in the approaches to, or within, a river or harbour. Fairways which are designated by a regulatory authority are treated as Routeing Measures.A fairway system is composed of two or more *Fairway* features that comprise a complex fairway routeing system, for instance a long fairway comprising several bends. To define the complete fairway system, the *Fairway* features must be aggregated in a *Fairway System* feature, using the association *Fairway Aggregation* (see <<sec_25.7>>).
 
 [underline]#Remarks:#
 
 * The name of the complete fairway system must be populated using the complex attribute *feature name*. Where it is required for the name to be displayed in the ECDIS, the *Fairway System* must be encoded using surface geometry. The extent of the geometry of the *Fairway System* should utilise the geometry of the components of the system so as to cover its full extent.
-* All features comprising a fairway system must have the same value populated for the attribute *scale minimum* (see clause2.5.9).
-* Where it is required to populate textual information for the fairway system, this should be done using the complex attribute *information* (see clause 2.4.6), or if the information is considered essential for safe navigation, using a *Caution Area* feature (see clause16.10).
+* All features comprising a fairway system must have the same value populated for the attribute *scale minimum* (see <<sec_2.5.9>>).
+* Where it is required to populate textual information for the fairway system, this should be done using the complex attribute *information* (see <<sec_2.4.6>>), or if the information is considered essential for safe navigation, using a *Caution Area* feature (see <<sec_16.10>>).
 
 [underline]#Distinction:# Deep Water Route; Traffic Separation Scheme; Two-Way Route.
 
 [[sec_15.9]]
 === Recommended route centreline
 
-[cols="609,794,794,794,794,794,794,794,294,539"]
+[cols="609,794,794,794,794,794,794,794,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *RECOMMENDED ROUTE CENTRELINE*. The recommended route centreline indicates the "centreline" of a recommended route. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.137, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Recommended Route Centreline (RCRTCL)*
@@ -1362,7 +1362,7 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -1392,7 +1392,7 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -1409,7 +1409,7 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -1423,7 +1423,7 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 3+| periodic date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,*
 
@@ -1486,11 +1486,11 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 | (S) RE
 | 0,1
 
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -1533,13 +1533,13 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Component 3+| *Range System Aggregation* (see clause 25.13) 3+| *Range System* 2+| Association | 0,*
-| The Auxiliary Feature 3+| *Fairway Auxiliary* (see clause 25.8) 3+| *Fairway* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+| The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
+| The Auxiliary Feature 3+| *Fairway Auxiliary* (see <<sec_25.8>>) 3+| *Fairway* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -1548,7 +1548,7 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 [[sec_15.9.1]]
 ==== Recommended routes (see S-4 -- B-435.4)
 
-A recommended route is a route of undefined width, for the convenience of ships in transit, which is often marked by centreline buoys. (IMO Ships Routeing, 2010). IMO-designated recommended routes are listed in IMO publication "__Ships' Routeing__"Part E. This type of routeing measure was adopted to include such features as the "transit routes" (through former minefields) in the entrances to the Baltic Sea. In contrast to recommended tracks (see clause15.5), there is usually ample sea-room for vessels to keep well starboard (to the right) of the centreline.If it is required to encode the centreline of a recommended route, it must be done using the feature *Recommended Route Centreline*.
+A recommended route is a route of undefined width, for the convenience of ships in transit, which is often marked by centreline buoys. (IMO Ships Routeing, 2010). IMO-designated recommended routes are listed in IMO publication "__Ships' Routeing__"Part E. This type of routeing measure was adopted to include such features as the "transit routes" (through former minefields) in the entrances to the Baltic Sea. In contrast to recommended tracks (see <<sec_15.5>>), there is usually ample sea-room for vessels to keep well starboard (to the right) of the centreline.If it is required to encode the centreline of a recommended route, it must be done using the feature *Recommended Route Centreline*.
 
 [underline]#Remarks:#
 
@@ -1561,7 +1561,7 @@ A recommended route is a route of undefined width, for the convenience of ships 
 [[sec_15.10]]
 === Two-way route part
 
-[cols="609,794,794,794,794,794,794,794,294,539"]
+[cols="609,794,794,794,794,794,794,794,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *TWO-WAY ROUTE PART*. An area of a two-way route within which traffic flow is generally along one bearing (and possibly its reciprocal). (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.193, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Two-Way Route Part (TWRTPT)*
@@ -1587,7 +1587,7 @@ A recommended route is a route of undefined width, for the convenience of ships 
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -1604,7 +1604,7 @@ A recommended route is a route of undefined width, for the convenience of ships 
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -1665,11 +1665,11 @@ A recommended route is a route of undefined width, for the convenience of ships 
 | (S) RE
 | 0,1
 
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -1712,11 +1712,11 @@ A recommended route is a route of undefined width, for the convenience of ships 
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Component 3+| *Two-Way Route Aggregation* (see clause 25.19) 3+| *Two-Way Route* 2+| Association | 1,*
-| The Component 3+| *Traffic Separation Scheme Aggregation* (see clause 25.18) 3+| *Traffic Separation Scheme* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+| The Component 3+| *Two-Way Route Aggregation* (see <<sec_25.19>>) 3+| *Two-Way Route* 2+| Association | 1,*
+| The Component 3+| *Traffic Separation Scheme Aggregation* (see <<sec_25.18>>) 3+| *Traffic Separation Scheme* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<| ^†^ For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
@@ -1738,16 +1738,16 @@ If it is required to encode a two-way route with one-way sections, separate *Two
 
 * The orientation of the two-way route part is defined by the centreline of the part and is related to the general direction of the two-way route.
 * The attribute *depth range minimum value* is used to encode the shallowest depth on the part, where required.
-* To encode a complete Two-way route, the *Two-Way Route Part* features must be associated with the feature *Two-Way Route* (see clause15.11) using the association *Two-Way Route Aggregation* (see clause 25.19). Where it is required to indicate the name of a complete two-way route, this should be done using the complex attribute *feature name* for the *Two-Way Route* feature. Where it is required to encode textual information for the complete two-way route, this should be done using the complex attribute *information* (see clause 2.4.6) for the *Two-Way Route* feature.
-* All *Two-Way Route Part* features comprising a complete two-way route must have the same value populated for the attribute *scale minimum* (see clause 2.5.9).
-* Two-way routes may be included with other routeing measures such as traffic separation schemes to comprise a complete traffic routeing system. To encode the relationship between routeing measures, the feature defining each routeing measure within the system (or the relevant feature if the routeing measure consists of a single feature) may be associated with the feature *Traffic Separation Scheme* (see clause 15.23) using the *Traffic Separation Scheme Aggregation* (see clause25.18) to form a hierarchical relationship. The individual elements comprising different routeing measures must not be collected into a single *Traffic Separation Scheme* feature.
+* To encode a complete Two-way route, the *Two-Way Route Part* features must be associated with the feature *Two-Way Route* (see <<sec_15.11>>) using the association *Two-Way Route Aggregation* (see <<sec_25.19>>). Where it is required to indicate the name of a complete two-way route, this should be done using the complex attribute *feature name* for the *Two-Way Route* feature. Where it is required to encode textual information for the complete two-way route, this should be done using the complex attribute *information* (see <<sec_2.4.6>>) for the *Two-Way Route* feature.
+* All *Two-Way Route Part* features comprising a complete two-way route must have the same value populated for the attribute *scale minimum* (see <<sec_2.5.9>>).
+* Two-way routes may be included with other routeing measures such as traffic separation schemes to comprise a complete traffic routeing system. To encode the relationship between routeing measures, the feature defining each routeing measure within the system (or the relevant feature if the routeing measure consists of a single feature) may be associated with the feature *Traffic Separation Scheme* (see <<sec_15.23>>) using the *Traffic Separation Scheme Aggregation* (see <<sec_25.18>>) to form a hierarchical relationship. The individual elements comprising different routeing measures must not be collected into a single *Traffic Separation Scheme* feature.
 
 [underline]#Distinction:# Deep Water Route Part; Recommended Traffic Lane Part; Traffic Separation Scheme Lane Part.
 
 [[sec_15.11]]
 === Two-way route
 
-[cols="609,794,794,794,794,794,794,794,294,539"]
+[cols="609,794,794,794,794,794,794,794,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *TWO-WAY ROUTE*. A route within defined limits inside which two way traffic is established, aimed at providing safe passage of ships through waters where navigation is difficult or dangerous. (IMO Ships' Routeing).
 10+| *[underline]#S-101 Geo Feature:#* *Two-Way Route*
@@ -1759,7 +1759,7 @@ If it is required to encode a two-way route with one-way sections, separate *Two
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -1789,7 +1789,7 @@ If it is required to encode a two-way route with one-way sections, separate *Two
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -1806,7 +1806,7 @@ If it is required to encode a two-way route with one-way sections, separate *Two
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -1818,11 +1818,11 @@ If it is required to encode a two-way route with one-way sections, separate *Two
 | RE
 | 0,1
 
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -1865,14 +1865,14 @@ If it is required to encode a two-way route with one-way sections, separate *Two
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Collection 3+| *Two-Way Route Aggregation* (see clause 25.19) 3+| *Two-Way Route Part* 2+| Aggregation | 0,1
-| The Component 3+| *Traffic Separation Scheme Aggregation* (see clause 25.18) 3+| *Traffic Separation Scheme* 2+| Association | 0,*
-| The Collection 3+| *Aids to Navigation Association* (see clause 25.2) 3+| **Building**, **Bridge**, **Cardinal Beacon**, **Cardinal Buoy**, **Conveyor**, **Crane**, **Daymark**, **Dolphin**, **Emergency Wreck Marking Buoy**, **Fishing Facility**, **Floating Dock**, **Fortified Structure**, **Hulk**, **Isolated Danger Beacon**, **Isolated Danger Buoy**, **Landmark**, **Lateral Beacon**, **Lateral Buoy**, **Light Float**, **Light Vessel**, **Mooring Buoy**, **Offshore Platform**, **Pile**, **Pipeline Overhead**, **Pontoon**, **Pylon/Bridge Support**, **Safe Water Beacon**, **Safe Water Buoy**, **Shoreline Construction**, **Silo/Tank**, **Span Fixed**, **Span Opening**, **Special Purpose/General Beacon**, **Special Purpose/General Buoy**, **Structure Over Navigable Water**, *Wind Turbine* 2+| Aggregation | 0,1
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+| The Collection 3+| *Two-Way Route Aggregation* (see <<sec_25.19>>) 3+| *Two-Way Route Part* 2+| Aggregation | 0,1
+| The Component 3+| *Traffic Separation Scheme Aggregation* (see <<sec_25.18>>) 3+| *Traffic Separation Scheme* 2+| Association | 0,*
+| The Collection 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Building**, **Bridge**, **Cardinal Beacon**, **Cardinal Buoy**, **Conveyor**, **Crane**, **Daymark**, **Dolphin**, **Emergency Wreck Marking Buoy**, **Fishing Facility**, **Floating Dock**, **Fortified Structure**, **Hulk**, **Isolated Danger Beacon**, **Isolated Danger Buoy**, **Landmark**, **Lateral Beacon**, **Lateral Buoy**, **Light Float**, **Light Vessel**, **Mooring Buoy**, **Offshore Platform**, **Pile**, **Pipeline Overhead**, **Pontoon**, **Pylon/Bridge Support**, **Safe Water Beacon**, **Safe Water Buoy**, **Shoreline Construction**, **Silo/Tank**, **Span Fixed**, **Span Opening**, **Special Purpose/General Beacon**, **Special Purpose/General Buoy**, **Structure Over Navigable Water**, *Wind Turbine* 2+| Aggregation | 0,1
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -1886,15 +1886,15 @@ To define the complete two-way system, the *Two-Way Route Part* features must be
 [underline]#Remarks:#
 
 * The name of the two-way route, where required, must be populated using the complex attribute *feature name*. Where it is required for the name to be displayed in the ECDIS, the *Two-Way Route* must be encoded using surface geometry. The extent of the geometry of the *Two-Way Route* should utilise the geometry of the components of the route so as to cover its full extent.
-* All features comprising a two-way route must have the same value populated for the attribute *scale minimum* (see clause2.5.9).
-* Where it is required to populate textual information for the two-way route, this should be done using the complex attribute *information* (see clause 2.4.6) for the **Two-Way Route**; or if the information is considered essential for safe navigation, using a *Caution Area* feature (see clause16.10).
+* All features comprising a two-way route must have the same value populated for the attribute *scale minimum* (see <<sec_2.5.9>>).
+* Where it is required to populate textual information for the two-way route, this should be done using the complex attribute *information* (see <<sec_2.4.6>>) for the **Two-Way Route**; or if the information is considered essential for safe navigation, using a *Caution Area* feature (see <<sec_16.10>>).
 
 [underline]#Distinction:# Deep Water Route; Fairway System; Traffic Separation Scheme; Two-Way Route Part.
 
 [[sec_15.12]]
 === Recommended traffic lane part
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *RECOMMENDED TRAFFIC LANE PART*. A traffic flow pattern indicating a recommended directional movement of traffic where it is impractical or unnecessary to adopt an established direction of traffic flow. (IMO Ships' Routeing).
 10+| *[underline]#S-101 Geo Feature:#* *Recommended Traffic Lane Part (RCTLPT)*
@@ -1906,7 +1906,7 @@ To define the complete two-way system, the *Two-Way Route Part* features must be
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -1923,7 +1923,7 @@ To define the complete two-way system, the *Two-Way Route Part* features must be
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -1938,11 +1938,11 @@ To define the complete two-way system, the *Two-Way Route Part* features must be
 1: permanent +
 6: reserved +
 9: mandatory | EN | 0,*
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -1985,9 +1985,9 @@ To define the complete two-way system, the *Two-Way Route Part* features must be
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<| ^†^ For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
@@ -2012,7 +2012,7 @@ Recommended direction of traffic flow is a traffic flow pattern indicating a rec
 [[sec_15.13]]
 === Deep water route centreline
 
-[cols="609,794,794,794,794,794,794,794,294,539"]
+[cols="609,794,794,794,794,794,794,794,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *DEEP WATER ROUTE CENTRELINE*. The Deep Water route centreline indicates the centreline of a route, the width of which is not explicitly defined. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.49, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Deep Water Route Centreline (DWRTCL)*
@@ -2038,7 +2038,7 @@ Recommended direction of traffic flow is a traffic flow pattern indicating a rec
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -2068,7 +2068,7 @@ Recommended direction of traffic flow is a traffic flow pattern indicating a rec
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -2092,7 +2092,7 @@ Recommended direction of traffic flow is a traffic flow pattern indicating a rec
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -2154,11 +2154,11 @@ Recommended direction of traffic flow is a traffic flow pattern indicating a rec
 | (S) RE
 | 0,1
 
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -2201,13 +2201,13 @@ Recommended direction of traffic flow is a traffic flow pattern indicating a rec
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Component 3+| *Deep Water Route Aggregation* (see clause 25.6) 3+| *Deep Water Route* 2+| Association | 0,*
-| The Component 3+| *Traffic Separation Scheme Aggregation* (see clause 25.18) 3+| *Traffic Separation Scheme* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+| The Component 3+| *Deep Water Route Aggregation* (see <<sec_25.6>>) 3+| *Deep Water Route* 2+| Association | 0,*
+| The Component 3+| *Traffic Separation Scheme Aggregation* (see <<sec_25.18>>) 3+| *Traffic Separation Scheme* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -2222,10 +2222,10 @@ A complete Deep Water route (DW) consists of one or more areas within which the 
 
 * In the case of a deep water route centreline, only one value of orientation is encoded (in the mandatory attribute *orientation value*); the other value can be deduced (that is, the value in *orientation value* + 180 degrees). The value of orientation encoded on *orientation value* should be the value of the bearing from seaward. If it is not possible to define a seaward direction, the value that is less than 180° should be used.
 * When the traffic flow is one way (attribute *traffic flow* = __1__, _2_ or _3_), the resultant direction of the line (accounting for the direction of digitising and any subsequent reversal of the line) associated with the *Deep Water Route Centreline* must be the same as the direction of traffic flow, in order to ensure the correct representation in the ECDIS of the direction to be followed.
-* The complex attribute *feature name*should only be used if the individual feature is not included in an association (see clause15.15.1).
-* To encode a complete Deep Water route, the **Deep Water Route Centreline**,*Deep Water Route Part* features, and the navigational aids features (if they are stated in the regulation defining the DW), may be associated with the feature *Deep Water Route* (see clause15.15) using the associations *Deep Water Route Aggregation* (see clause 25.6) and *Aids to Navigation Association* (see clause25.2). Where it is required to indicate the name of a complete DW, this should be done using the complex attribute *feature name* for the *Deep Water Route* feature; or on a single *Deep Water Route Centreline* feature where this feature defines the entire DW. Where it is required to encode textual information for the DW, this should be done using the complex attribute *information* (see clause 2.4.6) for the *Deep Water Route* feature; or on a single *Deep Water Route Centreline* feature where this feature defines the entire DW.
+* The complex attribute *feature name*should only be used if the individual feature is not included in an association (see <<sec_15.15.1>>).
+* To encode a complete Deep Water route, the **Deep Water Route Centreline**,*Deep Water Route Part* features, and the navigational aids features (if they are stated in the regulation defining the DW), may be associated with the feature *Deep Water Route* (see <<sec_15.15>>) using the associations *Deep Water Route Aggregation* (see <<sec_25.6>>) and *Aids to Navigation Association* (see <<sec_25.2>>). Where it is required to indicate the name of a complete DW, this should be done using the complex attribute *feature name* for the *Deep Water Route* feature; or on a single *Deep Water Route Centreline* feature where this feature defines the entire DW. Where it is required to encode textual information for the DW, this should be done using the complex attribute *information* (see <<sec_2.4.6>>) for the *Deep Water Route* feature; or on a single *Deep Water Route Centreline* feature where this feature defines the entire DW.
 * Deep Water routes, unlike dredged areas, are likely to be designated in offshore waters outside the immediate supervision of harbour authorities (although some do form the outer approaches to deep water ports). No least depth quoted can be fully guaranteed in most cases. Least depths within the route should be encoded by soundings as elsewhere on the ENC dataset so that the navigator will not assume that the depths are continually monitored. However, in those cases where a hydrographic authority feels confident to guarantee the existence of a minimum depth of water in a DW route, it must be populated using the attribute *depth range minimum value*.
-* Deep water routes may be included with other routeing measures such as traffic separation schemes to comprise a complete traffic routeing system. To encode the relationship between routeing measures, the feature defining each routeing measure within the system (or the relevant feature if the routeing measure consists of a single feature) may be associated with the feature *Traffic Separation Scheme* (see clause 15.23) using the *Traffic Separation Scheme Aggregation* (see clause 25.18) to form a hierarchical relationship. The individual elements comprising different routeing measures must not be collected into a single *Traffic Separation Scheme* feature.
+* Deep water routes may be included with other routeing measures such as traffic separation schemes to comprise a complete traffic routeing system. To encode the relationship between routeing measures, the feature defining each routeing measure within the system (or the relevant feature if the routeing measure consists of a single feature) may be associated with the feature *Traffic Separation Scheme* (see <<sec_15.23>>) using the *Traffic Separation Scheme Aggregation* (see <<sec_25.18>>) to form a hierarchical relationship. The individual elements comprising different routeing measures must not be collected into a single *Traffic Separation Scheme* feature.
 * IMO-designated Deep Water routes are listed in IMO publication "__Ships' Routeing__"Part C. Where *Deep Water Route Centreline* features are included in the associations *Deep Water Route Aggregation* or **Traffic Separation Scheme Aggregation**, the attribute *IMO adopted* must not be populated for the *Deep Water Route Centreline* features.
 
 [underline]#Distinction:# Deep Water Route Part.
@@ -2233,7 +2233,7 @@ A complete Deep Water route (DW) consists of one or more areas within which the 
 [[sec_15.14]]
 === Deep water route part
 
-[cols="609,794,794,794,794,794,794,794,294,539"]
+[cols="609,794,794,794,794,794,794,794,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *DEEP WATER ROUTE PART*. An area of a deep water route within which ships proceed in the same direction.
 10+| *[underline]#S-101 Geo Feature:#* *Deep Water Route Part (DWRTPT)*
@@ -2252,7 +2252,7 @@ A complete Deep Water route (DW) consists of one or more areas within which the 
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -2282,7 +2282,7 @@ A complete Deep Water route (DW) consists of one or more areas within which the 
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -2306,7 +2306,7 @@ A complete Deep Water route (DW) consists of one or more areas within which the 
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -2427,11 +2427,11 @@ A complete Deep Water route (DW) consists of one or more areas within which the 
 | (S) TE
 | 0,1
 
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -2474,13 +2474,13 @@ A complete Deep Water route (DW) consists of one or more areas within which the 
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Component 3+| *Deep Water Route Aggregation* (see clause 25.6) 3+| *Deep Water Route* 2+| Association | 0,*
-| The Component 3+| *Traffic Separation Scheme Aggregation* (see clause 25.18) 3+| *Traffic Separation Scheme* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+| The Component 3+| *Deep Water Route Aggregation* (see <<sec_25.6>>) 3+| *Deep Water Route* 2+| Association | 0,*
+| The Component 3+| *Traffic Separation Scheme Aggregation* (see <<sec_25.18>>) 3+| *Traffic Separation Scheme* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -2493,14 +2493,14 @@ A complete Deep Water route (DW) consists of one or more areas within which the 
 
 [underline]#Remarks:#
 
-* For additional guidance regarding the encoding of vessel speed limits, see clause 17.4.
-* The complex attribute *feature name*should only be used if the individual feature is not included in an association (see clause 15.15.1).
+* For additional guidance regarding the encoding of vessel speed limits, see <<sec_17.4>>.
+* The complex attribute *feature name*should only be used if the individual feature is not included in an association (see <<sec_15.15.1>>).
 * The route must be covered by *Depth Area* or *Dredged Area*features.
 * A Deep Water route part may overlap a *Traffic Separation Scheme Lane Part* feature.
-* To encode a complete Deep Water route, the **Deep Water Route Centreline**,*Deep Water Route Part* features, and the navigational aids features (if they are stated in the regulation defining the DW), may be associated with the feature *Deep Water Route* (see clause 15.15) using the associations *Deep Water Route Aggregation* (see clause 25.6) and *Aids to Navigation Association* (see clause25.2). Where it is required to indicate the name of a complete DW, this should be done using the complex attribute *feature name* for the *Deep Water Route* feature; or on a single *Deep Water Route Part* feature where this feature defines the entire DW. Where it is required to encode textual information for the DW, this should be done using the complex attribute *information* (see clause 2.4.6) for the *Deep Water Route* feature; or on a single *Deep Water Route Part* feature where this feature defines the entire DW.
+* To encode a complete Deep Water route, the **Deep Water Route Centreline**,*Deep Water Route Part* features, and the navigational aids features (if they are stated in the regulation defining the DW), may be associated with the feature *Deep Water Route* (see <<sec_15.15>>) using the associations *Deep Water Route Aggregation* (see <<sec_25.6>>) and *Aids to Navigation Association* (see <<sec_25.2>>). Where it is required to indicate the name of a complete DW, this should be done using the complex attribute *feature name* for the *Deep Water Route* feature; or on a single *Deep Water Route Part* feature where this feature defines the entire DW. Where it is required to encode textual information for the DW, this should be done using the complex attribute *information* (see <<sec_2.4.6>>) for the *Deep Water Route* feature; or on a single *Deep Water Route Part* feature where this feature defines the entire DW.
 * Deep Water routes, unlike dredged areas, are likely to be designated in offshore waters outside the immediate supervision of harbour authorities (although some do form the outer approaches to deep water ports). No least depth quoted can be fully guaranteed in most cases. Least depths within the route should be encoded by soundings as elsewhere on the ENC dataset so that the navigator will not assume that the depths are continually monitored. However, in those cases where a hydrographic authority feels confident to guarantee the existence of a minimum depth of water in a DW route, it must be populated using the attribute *depth range minimum value*.
 * The orientation of the Deep Water route part is defined by the centreline of the part and is related to the general direction of traffic flow in the Deep Water route.
-* Deep water routes may be included with other routeing measures such as traffic separation schemes to comprise a complete traffic routeing system. To encode the relationship between routeing measures, the feature defining each routeing measure within the system (or the relevant feature if the routeing measure consists of a single feature) may be associated with the feature *Traffic Separation Scheme* (see clause 15.23) using the *Traffic Separation Scheme Aggregation* (see clause 25.18) to form a hierarchical relationship. The individual elements comprising different routeing measures must not be collected into a single *Traffic Separation Scheme* feature.
+* Deep water routes may be included with other routeing measures such as traffic separation schemes to comprise a complete traffic routeing system. To encode the relationship between routeing measures, the feature defining each routeing measure within the system (or the relevant feature if the routeing measure consists of a single feature) may be associated with the feature *Traffic Separation Scheme* (see <<sec_15.23>>) using the *Traffic Separation Scheme Aggregation* (see <<sec_25.18>>) to form a hierarchical relationship. The individual elements comprising different routeing measures must not be collected into a single *Traffic Separation Scheme* feature.
 * IMO-designated Deep Water routes are listed in IMO publication "__Ships' Routeing__"Part C. Where *Deep Water Route Part* features are included in the associations *Deep Water Route Aggregation* or **Traffic Separation Scheme Aggregation**, the attribute *IMO adopted* must not be populated for the *Deep Water Route Part* features.
 
 [underline]#Distinction:# Deep Water Route Centreline; Two-Way Route Part.
@@ -2508,7 +2508,7 @@ A complete Deep Water route (DW) consists of one or more areas within which the 
 [[sec_15.15]]
 === Deep Water route
 
-[cols="609,794,794,794,794,794,794,794,294,539"]
+[cols="609,794,794,794,794,794,794,794,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *DEEP WATER ROUTE*. A route within defined limits which has been accurately surveyed for clearance of sea bottom and submerged obstacles as indicated on the chart. (IMO Ships' Routeing).
 10+| *[underline]#S-101 Geo Feature:#* *Deep Water Route* __**(C_AGGR)**__
@@ -2520,7 +2520,7 @@ A complete Deep Water route (DW) consists of one or more areas within which the 
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -2550,7 +2550,7 @@ A complete Deep Water route (DW) consists of one or more areas within which the 
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -2574,15 +2574,15 @@ A complete Deep Water route (DW) consists of one or more areas within which the 
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -2625,14 +2625,14 @@ A complete Deep Water route (DW) consists of one or more areas within which the 
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Collection 3+| *Deep Water Route Aggregation* (see clause 25.6) 3+| *Deep Water Route* 2+| Aggregation | 0,1
-| The Component 3+| *Traffic Separation Scheme Aggregation* (see clause 25.18) 3+| *Traffic Separation Scheme* 2+| Association | 0,*
-| The Collection 3+| *Aids to Navigation Association* (see clause 25.2) 3+| **Building**, **Cardinal Beacon**, **Cardinal Buoy**, **Crane**, **Daymark**, **Dolphin**, **Emergency Wreck Marking Buoy**, **Fishing Facility**, **Fortified Structure**, **Isolated Danger Beacon**, **Isolated Danger Buoy**, **Landmark**, **Lateral Beacon**, **Lateral Buoy**, **Light Float**, **Light Vessel**, **Mooring Buoy**, **Offshore Platform**, **Pile**, **Safe Water Beacon**, **Safe Water Buoy**, **Silo/Tank**, **Special Purpose/General Beacon**, **Special Purpose/General Buoy**, *Wind Turbine* 2+| Aggregation | 0,1
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,1
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+| The Collection 3+| *Deep Water Route Aggregation* (see <<sec_25.6>>) 3+| *Deep Water Route* 2+| Aggregation | 0,1
+| The Component 3+| *Traffic Separation Scheme Aggregation* (see <<sec_25.18>>) 3+| *Traffic Separation Scheme* 2+| Association | 0,*
+| The Collection 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Building**, **Cardinal Beacon**, **Cardinal Buoy**, **Crane**, **Daymark**, **Dolphin**, **Emergency Wreck Marking Buoy**, **Fishing Facility**, **Fortified Structure**, **Isolated Danger Beacon**, **Isolated Danger Buoy**, **Landmark**, **Lateral Beacon**, **Lateral Buoy**, **Light Float**, **Light Vessel**, **Mooring Buoy**, **Offshore Platform**, **Pile**, **Safe Water Beacon**, **Safe Water Buoy**, **Silo/Tank**, **Special Purpose/General Beacon**, **Special Purpose/General Buoy**, *Wind Turbine* 2+| Aggregation | 0,1
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,1
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -2641,20 +2641,20 @@ A complete Deep Water route (DW) consists of one or more areas within which the 
 [[sec_15.15.1]]
 ==== Deep Water routes (see S4 -- B-435.3)
 
-If it is required to define a complete Deep Water route (DW) system, the features **Deep Water Route Centreline**, *Deep Water Route Part* and any associated navigation aids must be associated with the feature *Deep Water Route* using the associations *Deep Water Route Aggregation* (see clause25.6) and *Aids to Navigation Association* (see clause25.2)
+If it is required to define a complete Deep Water route (DW) system, the features **Deep Water Route Centreline**, *Deep Water Route Part* and any associated navigation aids must be associated with the feature *Deep Water Route* using the associations *Deep Water Route Aggregation* (see <<sec_25.6>>) and *Aids to Navigation Association* (see <<sec_25.2>>)
 
 [underline]#Remarks:#
 
 * The name of the DW, where known, must be populated using the complex attribute *feature name*. Where it is required for the name to be displayed in the ECDIS, the *Deep Water Route* must be encoded using surface geometry. The extent of the geometry of the *Deep Water Route* should utilise the geometry of the components of the route so as to cover its full extent.
-* All features comprising a Deep Water route must have the same value populated for the attribute *scale minimum* (see clause2.5.9).
-* Where it is required to populate textual information for the DW, this should be done using the complex attribute *information* (see clause 2.4.6) for the **Deep Water Route**; or if the information is considered essential for safe navigation, using a *Caution Area* feature (see clause 16.10).
+* All features comprising a Deep Water route must have the same value populated for the attribute *scale minimum* (see <<sec_2.5.9>>).
+* Where it is required to populate textual information for the DW, this should be done using the complex attribute *information* (see <<sec_2.4.6>>) for the **Deep Water Route**; or if the information is considered essential for safe navigation, using a *Caution Area* feature (see <<sec_16.10>>).
 
 [underline]#Distinction:# Fairway System; Traffic Separation Scheme; Two-Way Route.
 
 [[sec_15.16]]
 === Inshore traffic zone
 
-[cols="609,794,794,794,794,794,794,794,294,539"]
+[cols="609,794,794,794,794,794,794,794,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *INSHORE TRAFFIC ZONE*. A routeing measure comprising a designated area between the landward boundary of a traffic separation scheme and the adjacent coast, to be used in accordance with the provisions of the International Regulations for Preventing Collisions at Sea. (Adapted from IMO Ships' Routeing).
 10+| *[underline]#S-101 Geo Feature:#* *Inshore Traffic Zone (ISTZNE)*
@@ -2666,7 +2666,7 @@ If it is required to define a complete Deep Water route (DW) system, the feature
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -2683,7 +2683,7 @@ If it is required to define a complete Deep Water route (DW) system, the feature
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -2752,11 +2752,11 @@ If it is required to define a complete Deep Water route (DW) system, the feature
 | (S) TE
 | 0,1
 
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -2799,10 +2799,10 @@ If it is required to define a complete Deep Water route (DW) system, the feature
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Component 3+| *Traffic Separation Scheme Aggregation* (see clause 25.18) 3+| *Traffic Separation Scheme* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+| The Component 3+| *Traffic Separation Scheme Aggregation* (see <<sec_25.18>>) 3+| *Traffic Separation Scheme* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<| ^†^ For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
@@ -2816,15 +2816,15 @@ The feature*Inshore Traffic Zone* must only be used to encode the designated are
 
 [underline]#Remarks:#
 
-* For additional guidance regarding the encoding of vessel speed limits, see clause 17.4.
-* Inshore traffic zones are used to exclude most classes of through traffic. Traffic in an inshore traffic zone is separated from traffic in the adjacent traffic lane by a separation zone or line (see clause15.19). An inshore traffic zone may be adjacent to a precautionary area (see clause15.17).
+* For additional guidance regarding the encoding of vessel speed limits, see <<sec_17.4>>.
+* Inshore traffic zones are used to exclude most classes of through traffic. Traffic in an inshore traffic zone is separated from traffic in the adjacent traffic lane by a separation zone or line (see <<sec_15.19>>). An inshore traffic zone may be adjacent to a precautionary area (see <<sec_15.17>>).
 
 [underline]#Distinction:# Precautionary Area; Separation Zone or Line; Traffic Separation Scheme Crossing; Traffic Separation Scheme Lane Part; Traffic Separation Scheme Roundabout.
 
 [[sec_15.17]]
 === Precautionary area
 
-[cols="609,794,794,794,794,794,794,794,294,539"]
+[cols="609,794,794,794,794,794,794,794,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *PRECAUTIONARY AREA*. A routeing measure comprising an area within defined limits where ships must navigate with particular caution and within which the direction of traffic flow may be recommended. (IMO Ships' Routeing).
 10+| *[underline]#S-101 Geo Feature:#* *Precautionary Area (PRCARE)*
@@ -2836,7 +2836,7 @@ The feature*Inshore Traffic Zone* must only be used to encode the designated are
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -2866,7 +2866,7 @@ The feature*Inshore Traffic Zone* must only be used to encode the designated are
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -2890,7 +2890,7 @@ The feature*Inshore Traffic Zone* must only be used to encode the designated are
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -2957,11 +2957,11 @@ The feature*Inshore Traffic Zone* must only be used to encode the designated are
 | (S) TE
 | 0,1
 
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 1,*
 
@@ -3004,12 +3004,12 @@ The feature*Inshore Traffic Zone* must only be used to encode the designated are
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Component 3+| *Traffic Separation Scheme Aggregation* (see clause 25.18) 3+| *Traffic Separation Scheme* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+| The Component 3+| *Traffic Separation Scheme Aggregation* (see <<sec_25.18>>) 3+| *Traffic Separation Scheme* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -3022,8 +3022,8 @@ Precautionary areas are commonly designated by IMO for certain areas of convergi
 
 [underline]#Remarks:#
 
-* To encode the relevant cautionary information, this must be done using the complex attribute *information* (see clause 2.4.6).
-* For additional guidance regarding the encoding of vessel speed limits, see clause 17.4.
+* To encode the relevant cautionary information, this must be done using the complex attribute *information* (see <<sec_2.4.6>>).
+* For additional guidance regarding the encoding of vessel speed limits, see <<sec_17.4>>.
 * A *Precautionary Area* feature may overlap other features encoded for the traffic separation scheme (for example**Traffic Separation Scheme Roundabout**, **Traffic Separation Scheme Lane Part****,** *Traffic Separation Scheme Crossing*).
 * Where a *Precautionary Area* feature is included in the association **Traffic Separation Scheme Aggregation**, the attribute *IMO adopted* must not be populated for the *Precautionary Area* feature.
 
@@ -3032,7 +3032,7 @@ Precautionary areas are commonly designated by IMO for certain areas of convergi
 [[sec_15.18]]
 === Traffic separation scheme lane part
 
-[cols="609,794,794,794,794,794,794,794,294,539"]
+[cols="609,794,794,794,794,794,794,794,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *TRAFFIC SEPARATION SCHEME LANE PART*. An area within defined limits in which one-way traffic is established. Natural obstacles, including those forming separation zones, may constitute a boundary. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Traffic Separation Scheme Lane Part (TSSLPT)*
@@ -3044,7 +3044,7 @@ Precautionary areas are commonly designated by IMO for certain areas of convergi
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -3061,7 +3061,7 @@ Precautionary areas are commonly designated by IMO for certain areas of convergi
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -3136,11 +3136,11 @@ Precautionary areas are commonly designated by IMO for certain areas of convergi
 | (S) TE
 | 0,1
 
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -3183,10 +3183,10 @@ Precautionary areas are commonly designated by IMO for certain areas of convergi
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Component 3+| *Traffic Separation Scheme Aggregation* (see clause 25.18) 3+| *Traffic Separation Scheme* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+| The Component 3+| *Traffic Separation Scheme Aggregation* (see <<sec_25.18>>) 3+| *Traffic Separation Scheme* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<| ^†^ The attribute *orientation value* is mandatory for all *Traffic Separation Scheme Lane Part* features, unless the part is a junction.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
@@ -3200,21 +3200,21 @@ A traffic lane is an area within defined limits in which one-way traffic flow is
 
 [underline]#Remarks:#
 
-* At junctions, other than crossings and roundabouts, a separate *Traffic Separation Scheme Lane Part* feature must be encoded. For this feature, the attribute *orientation value* must be omitted, in order to avoid implying that one lane has priority over another (see INT1 -- M22). Warning text may be encoded using the complex attribute *information* (see clause 2.4.6). In some cases, a precautionary area is established where routes meet or cross (see clause 15.17.1).
+* At junctions, other than crossings and roundabouts, a separate *Traffic Separation Scheme Lane Part* feature must be encoded. For this feature, the attribute *orientation value* must be omitted, in order to avoid implying that one lane has priority over another (see INT1 -- M22). Warning text may be encoded using the complex attribute *information* (see <<sec_2.4.6>>). In some cases, a precautionary area is established where routes meet or cross (see <<sec_15.17.1>>).
 
 [[fig_15-7]]
 .Junction
 image::figure-15-7.png[Shape34,308,147]
 
 * The orientation of the traffic separation scheme lane part is defined by the centreline of the part and is related to the general direction of traffic flow in the traffic separation lane.
-* For additional guidance regarding the encoding of vessel speed limits, see clause 17.4.
+* For additional guidance regarding the encoding of vessel speed limits, see <<sec_17.4>>.
 
 [underline]#Distinction:# Recommended Traffic Lane Part; Separation Zone or Line; Traffic Separation Scheme Boundary; Traffic Separation Scheme Crossing; Traffic Separation Scheme Roundabout.
 
 [[sec_15.19]]
 === Separation zone or line
 
-[cols="609,794,794,794,794,794,794,794,294,539"]
+[cols="609,794,794,794,794,794,794,794,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *SEPARATION ZONE OR LINE*. A zone or line separating the traffic lanes in which ships are proceeding in opposite, or nearly opposite directions; or separating a traffic lane from the adjacent sea area; or separating traffic lanes designated for particular classes of ships proceeding in the same direction. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* **Separation Zone or Line (**__**TSELNE**__**,** _*TSEZNE*_**)**
@@ -3226,7 +3226,7 @@ image::figure-15-7.png[Shape34,308,147]
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -3243,7 +3243,7 @@ image::figure-15-7.png[Shape34,308,147]
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -3252,11 +3252,11 @@ image::figure-15-7.png[Shape34,308,147]
 3: recommended +
 9: mandatory +
 28: buoyed | EN | 0,*
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -3299,10 +3299,10 @@ image::figure-15-7.png[Shape34,308,147]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Component 3+| *Traffic Separation Scheme Aggregation* (see clause 25.18) 3+| *Traffic Separation Scheme* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+| The Component 3+| *Traffic Separation Scheme Aggregation* (see <<sec_25.18>>) 3+| *Traffic Separation Scheme* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<| ^†^ For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
@@ -3323,7 +3323,7 @@ The feature *Separation Zone or Line* must be used to encode the common boundary
 [[sec_15.20]]
 === Traffic separation scheme boundary
 
-[cols="609,794,794,794,794,794,794,794,294,539"]
+[cols="609,794,794,794,794,794,794,794,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *TRAFFIC SEPARATION SCHEME BOUNDARY*. The outer limit of a traffic lane part or a traffic separation scheme roundabout. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.185, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Traffic Separation Scheme Boundary (TSSBND)*
@@ -3335,7 +3335,7 @@ The feature *Separation Zone or Line* must be used to encode the common boundary
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -3352,7 +3352,7 @@ The feature *Separation Zone or Line* must be used to encode the common boundary
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -3361,11 +3361,11 @@ The feature *Separation Zone or Line* must be used to encode the common boundary
 3: recommended +
 9: mandatory +
 28: buoyed | EN | 0,*
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -3408,10 +3408,10 @@ The feature *Separation Zone or Line* must be used to encode the common boundary
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Component 3+| *Traffic Separation Scheme Aggregation* (see clause 25.18) 3+| *Traffic Separation Scheme* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+| The Component 3+| *Traffic Separation Scheme Aggregation* (see <<sec_25.18>>) 3+| *Traffic Separation Scheme* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<| ^†^ For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
@@ -3432,7 +3432,7 @@ The feature *Traffic Separation Scheme Boundary* must only be used to encode the
 [[sec_15.21]]
 === Traffic separation scheme crossing
 
-[cols="609,794,794,794,794,794,794,794,294,539"]
+[cols="609,794,794,794,794,794,794,794,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *TRAFFIC SEPARATION SCHEME CROSSING*. A defined area where traffic lanes cross. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.186, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Traffic Separation Scheme Crossing (TSSCRS)*
@@ -3444,7 +3444,7 @@ The feature *Traffic Separation Scheme Boundary* must only be used to encode the
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -3461,7 +3461,7 @@ The feature *Traffic Separation Scheme Boundary* must only be used to encode the
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -3528,11 +3528,11 @@ The feature *Traffic Separation Scheme Boundary* must only be used to encode the
 | (S) TE
 | 0,1
 
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -3575,10 +3575,10 @@ The feature *Traffic Separation Scheme Boundary* must only be used to encode the
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Component 3+| *Traffic Separation Scheme Aggregation* (see clause 25.18) 3+| *Traffic Separation Scheme* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+| The Component 3+| *Traffic Separation Scheme Aggregation* (see <<sec_25.18>>) 3+| *Traffic Separation Scheme* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<| ^†^ For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
@@ -3592,18 +3592,18 @@ The feature *Traffic Separation Scheme Crossing* must only be used to encode the
 
 [underline]#Remarks:#
 
-* For additional guidance regarding the encoding of vessel speed limits, see clause 17.4.
-* Junctions other than crossings and roundabouts should be encoded using the feature *Traffic Separation Scheme Lane Part* (see clause 15.18).
+* For additional guidance regarding the encoding of vessel speed limits, see <<sec_17.4>>.
+* Junctions other than crossings and roundabouts should be encoded using the feature *Traffic Separation Scheme Lane Part* (see <<sec_15.18>>).
 
 * A *Traffic Separation Scheme Crossing* feature must not overlap a *Separation Zone or Line* feature of type surface at its centre.
-* In some cases, a precautionary area is established where routes meet or cross (see clause 15.17.1).
+* In some cases, a precautionary area is established where routes meet or cross (see <<sec_15.17.1>>).
 
 [underline]#Distinction:# Separation Zone or Line; Traffic Separation Scheme Boundary; Traffic Separation Scheme Lane Part; Traffic Separation Scheme Roundabout.
 
 [[sec_15.22]]
 === Traffic separation scheme roundabout
 
-[cols="609,794,794,794,794,794,794,794,294,539"]
+[cols="609,794,794,794,794,794,794,794,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *TRAFFIC SEPARATION SCHEME ROUNDABOUT*. A routeing measure comprising a separation point or circular separation zone and a circular traffic lane within defined limits. Traffic within the roundabout is separated by moving in a counter-clockwise direction around the separation point or zone. (IMO Ships' Routeing).
 10+| *[underline]#S-101 Geo Feature:#* *Traffic Separation Scheme Roundabout (TSSRON)*
@@ -3615,7 +3615,7 @@ The feature *Traffic Separation Scheme Crossing* must only be used to encode the
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -3632,7 +3632,7 @@ The feature *Traffic Separation Scheme Crossing* must only be used to encode the
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -3699,11 +3699,11 @@ The feature *Traffic Separation Scheme Crossing* must only be used to encode the
 | (S) TE
 | 0,1
 
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -3746,10 +3746,10 @@ The feature *Traffic Separation Scheme Crossing* must only be used to encode the
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Component 3+| *Traffic Separation Scheme Aggregation* (see clause 25.18) 3+| *Traffic Separation Scheme* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+| The Component 3+| *Traffic Separation Scheme Aggregation* (see <<sec_25.18>>) 3+| *Traffic Separation Scheme* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<| ^†^ For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
@@ -3763,17 +3763,17 @@ The feature *Traffic Separation Scheme Roundabout* must only be used to encode t
 
 [underline]#Remarks:#
 
-* For additional guidance regarding the encoding of vessel speed limits, see clause 17.4.
-* Junctions other than crossings and roundabouts should be encoded using the feature *Traffic Separation Scheme Lane Part* (see clause 15.18).
+* For additional guidance regarding the encoding of vessel speed limits, see <<sec_17.4>>.
+* Junctions other than crossings and roundabouts should be encoded using the feature *Traffic Separation Scheme Lane Part* (see <<sec_15.18>>).
 * A *Traffic Separation Scheme Roundabout* feature must not overlap a *Separation Zone or Line* feature of type surface at its centre.
-* In some cases, a precautionary area is established where routes meet or cross (see clause 15.17.1).
+* In some cases, a precautionary area is established where routes meet or cross (see <<sec_15.17.1>>).
 
 [underline]#Distinction:# Separation Zone or Line; Traffic Separation Scheme Boundary; Traffic Separation Scheme Crossing; Traffic Separation Scheme Lane Part.
 
 [[sec_15.23]]
 === Traffic separation scheme
 
-[cols="609,794,794,794,794,794,794,794,294,539"]
+[cols="609,794,794,794,794,794,794,794,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *TRAFFIC SEPARATION SCHEME*. A routeing measure aimed at the separation of opposing streams of traffic by appropriate means and by the establishment of traffic lanes. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Traffic Separation Scheme*
@@ -3785,7 +3785,7 @@ The feature *Traffic Separation Scheme Roundabout* must only be used to encode t
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -3815,7 +3815,7 @@ The feature *Traffic Separation Scheme Roundabout* must only be used to encode t
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -3839,7 +3839,7 @@ The feature *Traffic Separation Scheme Roundabout* must only be used to encode t
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -3851,11 +3851,11 @@ The feature *Traffic Separation Scheme Roundabout* must only be used to encode t
 | RE
 | 0,1
 
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -3898,15 +3898,15 @@ The feature *Traffic Separation Scheme Roundabout* must only be used to encode t
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Collection 3+| *Traffic Separation Scheme Aggregation* (see clause 25.18) 3+| **Deep Water Route**, **Deep Water Route Centreline**, **Deep Water Route Part**, **Inshore Traffic Zone**, **Precautionary Area**, __**Restricted Area**__, **Separation Zone or Line**, **Traffic Separation Scheme**, **Traffic Separation Scheme Boundary**, **Traffic Separation Scheme Crossing**, **Traffic Separation Scheme Lane Part**, **Traffic Separation Scheme Roundabout**, **Two-Way Route**, *Two-Way Route Part* 2+| Aggregation | 0,1
-| The Component 3+| *Traffic Separation Scheme Aggregation* (see clause 25.18) 3+| *Traffic Separation Scheme* 2+| Association | 0,*
-| The Collection 3+| *Aids to Navigation Association* (see clause 25.2) 3+| **Building**, **Bridge**, **Cardinal Beacon**, **Cardinal Buoy**, **Conveyor**, **Crane**, **Daymark**, **Dolphin**, **Emergency Wreck Marking Buoy**, **Fishing Facility**, **Floating Dock**, **Fortified Structure**, **Hulk**, **Isolated Danger Beacon**, **Isolated Danger Buoy**, **Landmark**, **Lateral Beacon**, **Lateral Buoy**, **Light Float**, **Light Vessel**, **Mooring Buoy**, **Offshore Platform**, **Pile**, **Pipeline Overhead**, **Pontoon**, **Pylon/Bridge Support**, **Safe Water Beacon**, **Safe Water Buoy**, **Shoreline Construction**, **Silo/Tank**, **Span Fixed**, **Span Opening**, **Special Purpose/General Beacon**, **Special Purpose/General Buoy**, **Structure Over Navigable Water**, *Wind Turbine* 2+| Aggregation | 0,1
-| The Component 3+| *Caution Area Association* (see clause 25.5) 3+| *Caution Area* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+| The Collection 3+| *Traffic Separation Scheme Aggregation* (see <<sec_25.18>>) 3+| **Deep Water Route**, **Deep Water Route Centreline**, **Deep Water Route Part**, **Inshore Traffic Zone**, **Precautionary Area**, __**Restricted Area**__, **Separation Zone or Line**, **Traffic Separation Scheme**, **Traffic Separation Scheme Boundary**, **Traffic Separation Scheme Crossing**, **Traffic Separation Scheme Lane Part**, **Traffic Separation Scheme Roundabout**, **Two-Way Route**, *Two-Way Route Part* 2+| Aggregation | 0,1
+| The Component 3+| *Traffic Separation Scheme Aggregation* (see <<sec_25.18>>) 3+| *Traffic Separation Scheme* 2+| Association | 0,*
+| The Collection 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Building**, **Bridge**, **Cardinal Beacon**, **Cardinal Buoy**, **Conveyor**, **Crane**, **Daymark**, **Dolphin**, **Emergency Wreck Marking Buoy**, **Fishing Facility**, **Floating Dock**, **Fortified Structure**, **Hulk**, **Isolated Danger Beacon**, **Isolated Danger Buoy**, **Landmark**, **Lateral Beacon**, **Lateral Buoy**, **Light Float**, **Light Vessel**, **Mooring Buoy**, **Offshore Platform**, **Pile**, **Pipeline Overhead**, **Pontoon**, **Pylon/Bridge Support**, **Safe Water Beacon**, **Safe Water Buoy**, **Shoreline Construction**, **Silo/Tank**, **Span Fixed**, **Span Opening**, **Special Purpose/General Beacon**, **Special Purpose/General Buoy**, **Structure Over Navigable Water**, *Wind Turbine* 2+| Aggregation | 0,1
+| The Component 3+| *Caution Area Association* (see <<sec_25.5>>) 3+| *Caution Area* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -3915,14 +3915,14 @@ The feature *Traffic Separation Scheme Roundabout* must only be used to encode t
 [[sec_15.23.1]]
 ==== Traffic separation schemes (see S4 -- B-435.1-3)
 
-If it is required to encode a traffic separation scheme (TSS), it must be done using:- Deep Water routes (DW -- a route within defined limits which has been accurately surveyed for clearance of sea bottom and submerged obstacles as indicated on the chart. (IMO Ships Routeing, 2010)). Deep Water routes are encoded using **Deep Water Route Centreline**, *Deep Water Route Part* and *Deep Water Route* features (see clauses15.13 to 15.15);- *Inshore Traffic Zone* (see clause15.16);- *Precautionary Area*(see clause 15.17);- **Separation Zone or Line**, **Traffic Separation Scheme Boundary**, **Traffic Separation Scheme Crossing**, **Traffic Separation Scheme Lane Part**, *Traffic Separation Scheme Roundabout* (see clauses 15.18to 15.22); and- Navigational aids features (see Sections18 to 21).To define the complete traffic separation scheme system, these features must be associated with the feature *Traffic Separation Scheme* using the association *Traffic Separation Scheme Aggregation* (see clause25.18); and any associated aids to navigation should be associated with the *Traffic Separation Scheme* using the association *Aids to Navigation Association* (see clause 25.2).
+If it is required to encode a traffic separation scheme (TSS), it must be done using:- Deep Water routes (DW -- a route within defined limits which has been accurately surveyed for clearance of sea bottom and submerged obstacles as indicated on the chart. (IMO Ships Routeing, 2010)). Deep Water routes are encoded using **Deep Water Route Centreline**, *Deep Water Route Part* and *Deep Water Route* features (see clauses15.13 to 15.15);- *Inshore Traffic Zone* (see <<sec_15.16>>);- *Precautionary Area*(see <<sec_15.17>>);- **Separation Zone or Line**, **Traffic Separation Scheme Boundary**, **Traffic Separation Scheme Crossing**, **Traffic Separation Scheme Lane Part**, *Traffic Separation Scheme Roundabout* (see clauses 15.18to 15.22); and- Navigational aids features (see Sections18 to 21).To define the complete traffic separation scheme system, these features must be associated with the feature *Traffic Separation Scheme* using the association *Traffic Separation Scheme Aggregation* (see <<sec_25.18>>); and any associated aids to navigation should be associated with the *Traffic Separation Scheme* using the association *Aids to Navigation Association* (see <<sec_25.2>>).
 
 [underline]#Remarks:#
 
 * The name of the TSS must be populated using the complex attribute *feature name*. Where it is required for the name to be displayed in the ECDIS, the *Traffic Separation Scheme* must be encoded using surface geometry. The extent of the geometry of the *Traffic Separation Scheme* should utilise the geometry of the components of the scheme so as to cover its full extent.
-* Where it is required to encode an IMO declared Area to be Avoided within a TSS, this must be done using the feature *Restricted Area* (see clause 17.8), with attribute *restriction* = _14_ (area to be avoided).
-* Where it is required to populate textual information for the TSS, this should be done using the complex attribute *information* (see clause 2.4.6) for the **Traffic Separation Scheme**; or if the information is considered essential for safe navigation, using a *Caution Area* feature (see clause16.10).
-* All features comprising a traffic separation scheme must have the same value populated for the attribute *scale minimum* (see clause2.5.9).
+* Where it is required to encode an IMO declared Area to be Avoided within a TSS, this must be done using the feature *Restricted Area* (see <<sec_17.8>>), with attribute *restriction* = _14_ (area to be avoided).
+* Where it is required to populate textual information for the TSS, this should be done using the complex attribute *information* (see <<sec_2.4.6>>) for the **Traffic Separation Scheme**; or if the information is considered essential for safe navigation, using a *Caution Area* feature (see <<sec_16.10>>).
+* All features comprising a traffic separation scheme must have the same value populated for the attribute *scale minimum* (see <<sec_2.5.9>>).
 * Multiple *Traffic Separation Scheme* features may be further aggregated hierarchically using the association *Traffic Separation Scheme Aggregation* to define a higher TSS.
 
 [underline]#Distinction:# Deep Water Route; Fairway System; Two-Way Route.
@@ -3930,7 +3930,7 @@ If it is required to encode a traffic separation scheme (TSS), it must be done u
 [[sec_15.24]]
 === Archipelagic Sea Lane area
 
-[cols="609,794,794,794,794,794,794,794,294,539"]
+[cols="609,794,794,794,794,794,794,794,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *ARCHIPELAGIC SEA LANE AREA*. Sea lanes designated by an archipelagic State for the passage of ships and aircraft. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Archipelagic Sea Lane Area (ARCSLN)*
@@ -3942,7 +3942,7 @@ If it is required to encode a traffic separation scheme (TSS), it must be done u
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -3972,7 +3972,7 @@ If it is required to encode a traffic separation scheme (TSS), it must be done u
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -3989,7 +3989,7 @@ If it is required to encode a traffic separation scheme (TSS), it must be done u
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -4000,11 +4000,11 @@ If it is required to encode a traffic separation scheme (TSS), it must be done u
 | TE
 | 0,1 ^†^
 
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -4047,12 +4047,12 @@ If it is required to encode a traffic separation scheme (TSS), it must be done u
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Component 3+| *ASL Aggregation* (see clause 25.3) 3+| *Archipelagic Sea Lane* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.The attribute *nationality* is mandatory if *Archipelagic Sea Lane Area* is not associated with the feature *Archipelagic Sea Lane* using the association *ASL Aggregation*.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+| The Component 3+| *ASL Aggregation* (see <<sec_25.3>>) 3+| *Archipelagic Sea Lane* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.The attribute *nationality* is mandatory if *Archipelagic Sea Lane Area* is not associated with the feature *Archipelagic Sea Lane* using the association *ASL Aggregation*.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -4061,13 +4061,13 @@ If it is required to encode a traffic separation scheme (TSS), it must be done u
 [[sec_15.24.1]]
 ==== Archipelagic Sea Lane area (see S-4 -- B-435.10)
 
-Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) states that: "an archipelagic State may designate sea lanes ..., suitable for the continuous and expeditious passage of foreign ships ... through ... its archipelagic waters and the adjacent Territorial Sea. ... All ships ... enjoy the right of archipelagic sea lanes passage in such sea lanes ... [which] include all normal passage routes used as routes for international navigation … through archipelagic waters". (Note: references to aircraft and air routes in UNCLOS have been omitted in these extracts from Article 53). (IHO S-4 B-435.10, C-51 Appendix 2 Part II).Any archipelagic State which wishes to designate Archipelagic Sea Lanes (ASL) must propose them to IMO for adoption as ASL including all normal passage routes and navigational channels as required by UNCLOS. ASL are adopted by IMO in accordance with the relevant provisions of UNCLOS.If it is required to encode an Archipelagic Sea Lane, it must be done using *Archipelagic Sea Lane Area* and/or *Archipelagic Sea Lane Axis* (see clause15.25) features, and possibly navigational aids features.The unique character of Archipelagic Sea Lanes (ASLs) is specified by UNCLOS Article 53 and Part H, General Provision of IMO Ships Routeing. Further information is provided in the IHO publication C-51 (Manual on Technical Aspects of the United Nations Convention on the Law of the Sea).The encoding of relationships between these features is defined in clause 15.27.
+Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) states that: "an archipelagic State may designate sea lanes ..., suitable for the continuous and expeditious passage of foreign ships ... through ... its archipelagic waters and the adjacent Territorial Sea. ... All ships ... enjoy the right of archipelagic sea lanes passage in such sea lanes ... [which] include all normal passage routes used as routes for international navigation … through archipelagic waters". (Note: references to aircraft and air routes in UNCLOS have been omitted in these extracts from Article 53). (IHO S-4 B-435.10, C-51 Appendix 2 Part II).Any archipelagic State which wishes to designate Archipelagic Sea Lanes (ASL) must propose them to IMO for adoption as ASL including all normal passage routes and navigational channels as required by UNCLOS. ASL are adopted by IMO in accordance with the relevant provisions of UNCLOS.If it is required to encode an Archipelagic Sea Lane, it must be done using *Archipelagic Sea Lane Area* and/or *Archipelagic Sea Lane Axis* (see <<sec_15.25>>) features, and possibly navigational aids features.The unique character of Archipelagic Sea Lanes (ASLs) is specified by UNCLOS Article 53 and Part H, General Provision of IMO Ships Routeing. Further information is provided in the IHO publication C-51 (Manual on Technical Aspects of the United Nations Convention on the Law of the Sea).The encoding of relationships between these features is defined in <<sec_15.27>>.
 
 [underline]#Remarks:#
 
 * The feature *Archipelagic Sea Lane Area* encodes the area of an Archipelagic Sea Lane.
-* In some cases only accurate information on the axes (**Archipelagic Sea Lane Axis**, see clause15.25) may be available and in such cases the extents of the ASL (*Archipelagic Sea Lane Area*) may not be able to be encoded.
-* To encode an Archipelagic Sea Lane (ASL) system, the **Archipelagic Sea Lane Area****,** *Archipelagic Sea Lane Axis* features, and any navigational aids features (if they are stated in the regulation defining the ASL), may be associated with the feature *Archipelagic Sea Lane* (see clause15.26) using the associations *ASL Aggregation* (see clause25.3) and *Aids to Navigation Association* (see clause25.2). Where the association *ASL Aggregation* has been created, it is not required to populate the attribute *nationality* on *Archipelagic Sea Lane Area*. Where it is required to indicate the name of a complete ASL system, this should be done using the complex attribute *feature name* for the *Archipelagic Sea Lane* feature. Where it is required to encode textual information for the ASL, this should be done using the complex attribute *information* (see clause 2.4.6).
+* In some cases only accurate information on the axes (**Archipelagic Sea Lane Axis**, see <<sec_15.25>>) may be available and in such cases the extents of the ASL (*Archipelagic Sea Lane Area*) may not be able to be encoded.
+* To encode an Archipelagic Sea Lane (ASL) system, the **Archipelagic Sea Lane Area****,** *Archipelagic Sea Lane Axis* features, and any navigational aids features (if they are stated in the regulation defining the ASL), may be associated with the feature *Archipelagic Sea Lane* (see <<sec_15.26>>) using the associations *ASL Aggregation* (see <<sec_25.3>>) and *Aids to Navigation Association* (see <<sec_25.2>>). Where the association *ASL Aggregation* has been created, it is not required to populate the attribute *nationality* on *Archipelagic Sea Lane Area*. Where it is required to indicate the name of a complete ASL system, this should be done using the complex attribute *feature name* for the *Archipelagic Sea Lane* feature. Where it is required to encode textual information for the ASL, this should be done using the complex attribute *information* (see <<sec_2.4.6>>).
 * Traffic within an ASL is not separated, except in any traffic separation schemes which may be designated in an ASL for the safe passage of ships.
 
 [underline]#Distinction:# Administration Area; Archipelagic Sea Lane; Archipelagic Sea Lane Axis; Caution Area; Fairway; Inshore Traffic Zone; Recommended Traffic Lane Part; Restricted Area; Separation Zone or Line; Submarine Transit Lane; Traffic Separation Scheme Lane Part; Two-Way Route Part.
@@ -4075,7 +4075,7 @@ Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) state
 [[sec_15.25]]
 === Archipelagic Sea Lane Axis
 
-[cols="609,794,794,794,794,794,794,794,294,539"]
+[cols="609,794,794,794,794,794,794,794,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *ARCHIPELAGIC SEA LANE AXIS*. The reference line used to determine the maximum extents of an Archipelagic Sea Lane. It may not indicate the deepest water nor any recommended route or track. (Adapted from United Nations Convention on the Law of the Sea (UNCLOS)).
 10+| *[underline]#S-101 Geo Feature:#* *Archipelagic Sea Lane Axis (ASLXIS)*
@@ -4087,7 +4087,7 @@ Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) state
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -4117,7 +4117,7 @@ Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) state
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -4134,7 +4134,7 @@ Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) state
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -4145,11 +4145,11 @@ Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) state
 | TE
 | 0,1 ^†^
 
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -4192,12 +4192,12 @@ Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) state
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Component 3+| *ASL Aggregation* (see clause 25.3) 3+| *Archipelagic Sea Lane* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.The attribute *nationality* is mandatory if *Archipelagic Sea Lane Axis* is not associated with the feature *Archipelagic Sea Lane* using the association *ASL Aggregation*.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+| The Component 3+| *ASL Aggregation* (see <<sec_25.3>>) 3+| *Archipelagic Sea Lane* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.The attribute *nationality* is mandatory if *Archipelagic Sea Lane Axis* is not associated with the feature *Archipelagic Sea Lane* using the association *ASL Aggregation*.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -4210,15 +4210,15 @@ Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) state
 
 [underline]#Remarks:#
 
-* To encode an Archipelagic Sea Lane (ASL) system, the **Archipelagic Sea Lane Area****,** *Archipelagic Sea Lane Axis* features, and any navigational aids features (if they are stated in the regulation defining the ASL), may be associated with the feature *Archipelagic Sea Lane* (see clause15.26) using the associations *ASL Aggregation* (see clause 25.3) and *Aids to Navigation Association* (see clause25.2). Where the association *ASL Aggregation* has been created, it is not required to populate the attribute *nationality* on *Archipelagic Sea Lane Axis*. Where it is required to indicate the name of a complete ASL system, this should be done using the complex attribute *feature name* for the *Archipelagic Sea Lane* feature. Where it is required to encode textual information for the ASL, this should be done using the complex attribute *information* (see clause 2.4.6).
-* All features comprising an ASL system must have the same value populated for the attribute *scale minimum* (see clause2.5.9).
+* To encode an Archipelagic Sea Lane (ASL) system, the **Archipelagic Sea Lane Area****,** *Archipelagic Sea Lane Axis* features, and any navigational aids features (if they are stated in the regulation defining the ASL), may be associated with the feature *Archipelagic Sea Lane* (see <<sec_15.26>>) using the associations *ASL Aggregation* (see <<sec_25.3>>) and *Aids to Navigation Association* (see <<sec_25.2>>). Where the association *ASL Aggregation* has been created, it is not required to populate the attribute *nationality* on *Archipelagic Sea Lane Axis*. Where it is required to indicate the name of a complete ASL system, this should be done using the complex attribute *feature name* for the *Archipelagic Sea Lane* feature. Where it is required to encode textual information for the ASL, this should be done using the complex attribute *information* (see <<sec_2.4.6>>).
+* All features comprising an ASL system must have the same value populated for the attribute *scale minimum* (see <<sec_2.5.9>>).
 
 [underline]#Distinction:# Administration Area; Archipelagic Sea Lane; Archipelagic Sea Lane Area; Caution Area; Deep Water Route Centreline; Fairway; Inshore Traffic Zone; Navigation Line; Recommended Route Centreline; Recommended Track; Recommended Traffic Lane Part; Restricted Area; Separation Zone or Line; Submarine Transit Lane; Traffic Separation Scheme Lane Part; Two-Way Route Part.
 
 [[sec_15.26]]
 === Archipelagic Sea Lane
 
-[cols="609,794,794,794,794,794,794,794,294,539"]
+[cols="609,794,794,794,794,794,794,794,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *ARCHIPELAGIC SEA LANE*. Sea lanes designated by an archipelagic State for the passage of ships and aircraft. The Archipelagic Sea Lane aggregates all component parts of an Archipelagic Sea Lane system. (Adapted from IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Archipelagic Sea Lane* __**(C_AGGR)**__
@@ -4230,7 +4230,7 @@ Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) state
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -4260,7 +4260,7 @@ Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) state
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -4277,7 +4277,7 @@ Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) state
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -4288,11 +4288,11 @@ Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) state
 | TE
 | 1,1
 
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -4335,14 +4335,14 @@ Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) state
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Collection 3+| *ASL Aggregation* (see clause 25.3) 3+| **Archipelagic Sea Lane Area**, *Archipelagic Sea Lane Axis* 2+| Aggregation | 0,1
-| The Collection 3+| *Aids to Navigation Association* (see clause 25.2) 3+| **Cardinal Beacon**, **Cardinal Buoy**, **Daymark**, **Emergency Wreck Marking Buoy**, **Isolated Danger Beacon**, **Isolated Danger Buoy**, **Lateral Beacon**, **Lateral Buoy**, **Light Float**, **Light Vessel**, **Pile**, **Safe Water Beacon**, **Safe Water Buoy**, **Special Purpose/General Beacon**, *Special Purpose/General Buoy* 2+| Aggregation | 0,1
-| The Component 3+| *Caution Area Association* (see clause 25.5) 3+| *Caution Area* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+| The Collection 3+| *ASL Aggregation* (see <<sec_25.3>>) 3+| **Archipelagic Sea Lane Area**, *Archipelagic Sea Lane Axis* 2+| Aggregation | 0,1
+| The Collection 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Cardinal Beacon**, **Cardinal Buoy**, **Daymark**, **Emergency Wreck Marking Buoy**, **Isolated Danger Beacon**, **Isolated Danger Buoy**, **Lateral Beacon**, **Lateral Buoy**, **Light Float**, **Light Vessel**, **Pile**, **Safe Water Beacon**, **Safe Water Buoy**, **Special Purpose/General Beacon**, *Special Purpose/General Buoy* 2+| Aggregation | 0,1
+| The Component 3+| *Caution Area Association* (see <<sec_25.5>>) 3+| *Caution Area* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -4356,15 +4356,15 @@ To define the complete Archipelagic Sea Lane (ASL) system, the features **Archip
 [underline]#Remarks:#
 
 * The name of the ASL must be populated using the complex attribute *feature name*. Where it is required for the name to be displayed in the ECDIS, the *Archipelagic Sea Lane* must be encoded using surface geometry. The extent of the geometry of the *Archipelagic Sea Lane* should utilise the geometry of the components of the system so as to cover its full extent.
-* All features comprising an Archipelagic Sea Lane must have the same value populated for the attribute *scale minimum* (see clause2.5.9).
-* Where it is required to populate textual information for the ASL, this should be done using the complex attribute *information* (see clause 2.4.6) for the **Archipelagic Sea Lane**; or if the information is considered essential for safe navigation, using a *Caution Area* feature (see clause16.10).
+* All features comprising an Archipelagic Sea Lane must have the same value populated for the attribute *scale minimum* (see <<sec_2.5.9>>).
+* Where it is required to populate textual information for the ASL, this should be done using the complex attribute *information* (see <<sec_2.4.6>>) for the **Archipelagic Sea Lane**; or if the information is considered essential for safe navigation, using a *Caution Area* feature (see <<sec_16.10>>).
 
 [underline]#Distinction:# Administration Area; Archipelagic Sea Lane Area; Archipelagic Sea Lane Axis; Caution Area; Fairway; Fairway System; Inshore Traffic Zone; Restricted Area; Separation Zone or Line; Submarine Transit Lane; Traffic Separation Scheme Lane Part; Two-Way Route; Two-Way Route Part.
 
 [[sec_15.27]]
 === Radio calling-in point
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *RADIO CALLING-IN POINT*. A designated position at which vessels are required to report to a Traffic Control Centre. Also called reporting point or radio reporting point. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Radio Calling-In Point (RDOCAL)*
@@ -4383,7 +4383,7 @@ To define the complete Archipelagic Sea Lane (ASL) system, the features **Archip
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -4413,7 +4413,7 @@ To define the complete Archipelagic Sea Lane (ASL) system, the features **Archip
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -4430,7 +4430,7 @@ To define the complete Archipelagic Sea Lane (ASL) system, the features **Archip
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -4444,7 +4444,7 @@ To define the complete Archipelagic Sea Lane (ASL) system, the features **Archip
 3+| periodic date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,*
 
@@ -4471,11 +4471,11 @@ To define the complete Archipelagic Sea Lane (ASL) system, the features **Archip
 2: outbound +
 3: one-way
 4: two-way | EN | 1,1
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -4518,11 +4518,11 @@ To define the complete Archipelagic Sea Lane (ASL) system, the features **Archip
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ For radio calling-in points of type point, the attribute *orientation value* is mandatory.Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| ^†^ For radio calling-in points of type point, the attribute *orientation value* is mandatory.Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -4537,17 +4537,17 @@ Radio reporting points, also called radio calling-in points, have been establish
 
 * Each *Radio Calling-In Point*feature of type point must carry at least one orientation, using the attribute *orientation value*. If it is required to encode the reciprocal orientation, to indicate that a bearing and its opposite apply to a *Radio Calling-In Point* feature, it must be done using attribute *traffic flow* = _4_ (two-way). If the same position is used for another orientation (not opposite) of traffic flow, a second *orientation value* attribute must be encoded.
 * The complex attribute **feature name**, sub-attribute *name*is used to encode the name and/or alphanumeric designator of the *Radio Calling-In Point*.
-* The complex attribute *information* (see clause 2.4.6) is used to provide additional information, where required. For example, if the requirement to report by radio relates to certain classes of vessels only.
+* The complex attribute *information* (see <<sec_2.4.6>>) is used to provide additional information, where required. For example, if the requirement to report by radio relates to certain classes of vessels only.
 * *Radio Calling-In Point* features of type curve must be encoded such that resultant direction of the line (accounting for the direction of digitising and any subsequent reversal of the curve) is related such that the direction of traffic that is required to report is to the right. For curve features, it is not required to populate *orientation value*.
-* If it is required to encode the area of a Vessel Traffic Service (VTS) containing radio reporting points or requiring periodic position reporting, this should be done using the feature *Vessel Traffic Service Area* (see clause 22.2).
-* Each VHF-channel should be indicated using the attribute *communication channel* (see clause 27.77). Alternately, if the same VHF-channel(s) apply to multiple features in the dataset, this should be indicated through an associated instance of the information type **Contact Details**, attribute *communication channel* (see clause24.1).
+* If it is required to encode the area of a Vessel Traffic Service (VTS) containing radio reporting points or requiring periodic position reporting, this should be done using the feature *Vessel Traffic Service Area* (see <<sec_22.2>>).
+* Each VHF-channel should be indicated using the attribute *communication channel* (see <<sec_27.77>>). Alternately, if the same VHF-channel(s) apply to multiple features in the dataset, this should be indicated through an associated instance of the information type **Contact Details**, attribute *communication channel* (see <<sec_24.1>>).
 
 [underline]#Distinction:# Radio Station; Pilot Boarding Place; Vessel Traffic Service Area.
 
 [[sec_15.28]]
 === Ferry route
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *FERRY ROUTE*. A route in a body of water where a ferry crosses from one shoreline to another. (Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2010).
 10+| *[underline]#S-101 Geo Feature:#* *Ferry Route (FERYRT)*
@@ -4564,7 +4564,7 @@ Radio reporting points, also called radio calling-in points, have been establish
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -4594,7 +4594,7 @@ Radio reporting points, also called radio calling-in points, have been establish
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -4611,14 +4611,14 @@ Radio reporting points, also called radio calling-in points, have been establish
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
 3+| periodic date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,*
 
@@ -4642,11 +4642,11 @@ Radio reporting points, also called radio calling-in points, have been establish
 8: private +
 9: mandatory +
 14: public | EN | 0,*
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -4689,11 +4689,11 @@ Radio reporting points, also called radio calling-in points, have been establish
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -4711,14 +4711,14 @@ If it is required to encode a ferry route, it must be done using the feature *Fe
 
 [underline]#Remarks:#
 
-* Long distance ferrieswhich have routes varying with weather, tide and traffic should not generally be encoded, although the terminals should be shown on appropriate optimum display scale ENC datasets, using the feature *Harbour Facility* (see clause22.7), with attribute *category of harbour facility* = _1_ (RoRo-terminal) or _3_ (ferry terminal).
+* Long distance ferrieswhich have routes varying with weather, tide and traffic should not generally be encoded, although the terminals should be shown on appropriate optimum display scale ENC datasets, using the feature *Harbour Facility* (see <<sec_22.7>>), with attribute *category of harbour facility* = _1_ (RoRo-terminal) or _3_ (ferry terminal).
 
 [underline]#Distinction:#
 
 [[sec_15.29]]
 === Radar line
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *RADAR LINE*. Recommended tracks along which ships can be guided by coastal radar stations in the event of bad visibility. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Radar Line (RADLNE)*
@@ -4730,7 +4730,7 @@ If it is required to encode a ferry route, it must be done using the feature *Fe
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -4760,7 +4760,7 @@ If it is required to encode a ferry route, it must be done using the feature *Fe
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -4777,11 +4777,11 @@ If it is required to encode a ferry route, it must be done using the feature *Fe
 3: recommended +
 4: not in use +
 7: temporary | EN | 0,*
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -4824,11 +4824,11 @@ If it is required to encode a ferry route, it must be done using the feature *Fe
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -4842,14 +4842,14 @@ Radar reference linesare mid-channel lines corresponding to lines incorporated i
 [underline]#Remarks:#
 
 * The value of orientation encoded on the mandatory attribute *orientation value* should be the value of the bearing from seaward. If it is not possible to define a seaward direction, the value that is less than 180° should be used.
-* If it is required to encode the area of a VTS containing radar lines, this should be done using the feature *Vessel Traffic Service Area* (see clause 22.2).
+* If it is required to encode the area of a VTS containing radar lines, this should be done using the feature *Vessel Traffic Service Area* (see <<sec_22.2>>).
 
 [underline]#Distinction:# Radar Range; Recommended Track; Vessel Traffic Service Area.
 
 [[sec_15.30]]
 === Radar range
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *RADAR RANGE*. Indicates the coverage of a sea area by a radar surveillance station. Inside this area a vessel may request shore-based radar assistance, particularly in poor visibility. (Adapted from Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2010).
 10+| *[underline]#S-101 Geo Feature:#* *Radar Range (RADRNG)*
@@ -4868,7 +4868,7 @@ Radar reference linesare mid-channel lines corresponding to lines incorporated i
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -4898,7 +4898,7 @@ Radar reference linesare mid-channel lines corresponding to lines incorporated i
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -4915,7 +4915,7 @@ Radar reference linesare mid-channel lines corresponding to lines incorporated i
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -4924,11 +4924,11 @@ Radar reference linesare mid-channel lines corresponding to lines incorporated i
 2: occasional +
 4: not in use +
 7: temporary | EN | 0,*
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -4971,11 +4971,11 @@ Radar reference linesare mid-channel lines corresponding to lines incorporated i
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -4988,14 +4988,14 @@ Many large ports have a radar surveillance system covering their approaches to p
 
 [underline]#Remarks:#
 
-* Each VHF-channel should be indicated, using the attribute *communication channel* (see clause27.77). Alternately, if the same VHF-channel(s) apply to multiple features in the dataset, this should be indicated through an associated instance of the information type **Contact Details**, attribute *communication channel* (see clause 24.1).
+* Each VHF-channel should be indicated, using the attribute *communication channel* (see <<sec_27.77>>). Alternately, if the same VHF-channel(s) apply to multiple features in the dataset, this should be indicated through an associated instance of the information type **Contact Details**, attribute *communication channel* (see <<sec_24.1>>).
 
 [underline]#Distinction:# Radar Line; Vessel Traffic Service Area.
 
 [[sec_15.31]]
 === Radar station
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *RADAR STATION*. A station with a transmitter emitting pulses of ultra-high frequency radio waves which are reflected by solid objects and are detected upon their return to the sending station. (International Maritime Dictionary, 2^nd^ Edition).
 10+| *[underline]#S-101 Geo Feature:#* *Radar Station (RADSTA)*
@@ -5024,7 +5024,7 @@ Many large ports have a radar surveillance system covering their approaches to p
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -5061,14 +5061,14 @@ Many large ports have a radar surveillance system covering their approaches to p
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
 3+| periodic date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,*
 
@@ -5095,11 +5095,11 @@ Many large ports have a radar surveillance system covering their approaches to p
 | RE
 | 0,1
 
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -5142,11 +5142,11 @@ Many large ports have a radar surveillance system covering their approaches to p
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -5162,6 +5162,6 @@ If it is required to encode a radar station, it must be done using the feature *
 * Coast radar stations are shore-based stations which the Mariner can contact by radio to obtain a position. These stations are being increasingly replaced by other position-fixing methods.
 * The *Radar Station* must only be used to encode the technical equipment itself, independent of the building or structure in which it is installed. If it is required to encode the building or structure (for example mast, tower, radar dome) it must be done using an appropriate feature (for example**Building**, *Landmark*). There is no requirement to establish a Structure/Equipment association between the *Radar Station* feature and the structure in which it is installed.
 * The attribute *height* is used to encode the height of the emitting part of the radar, where known.
-* Each VHF-channel should be indicated, using the attribute *communication channel* (see clause27.77). Alternately, if the same VHF-channel(s) apply to multiple features in the dataset, this should be indicated through an associated instance of the information type **Contact Details**, attribute *communication channel* (see clause 24.1).
+* Each VHF-channel should be indicated, using the attribute *communication channel* (see <<sec_27.77>>). Alternately, if the same VHF-channel(s) apply to multiple features in the dataset, this should be indicated through an associated instance of the information type **Contact Details**, attribute *communication channel* (see <<sec_24.1>>).
 
 [underline]#Distinction:# Radar Line; Radar Range; Radar Transponder Beacon.

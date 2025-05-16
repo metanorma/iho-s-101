@@ -13,7 +13,7 @@ Due to possible ECDIS display issues isolated dangers of type point (feature typ
 .Area of wrecks
 image::figure-13-1.png[Shape29,296,180]
 
-The area enclosed by the danger line must be encoded using *Wreck* (see clause 13.5) or *Obstruction* (see clause 13.6) features of type surface, with the attribute values, when encoded, reflecting the characteristics of the shallowest point feature encoded in the area. The area must also be covered by *Depth Area* or *Unsurveyed Area* features as appropriate.
+The area enclosed by the danger line must be encoded using *Wreck* (see <<sec_13.5>>) or *Obstruction* (see <<sec_13.6>>) features of type surface, with the attribute values, when encoded, reflecting the characteristics of the shallowest point feature encoded in the area. The area must also be covered by *Depth Area* or *Unsurveyed Area* features as appropriate.
 
 If it is required to encode one or more least depths in such an area, it must be done using a point feature for each of the depths, in addition to the surface feature.
 
@@ -84,14 +84,14 @@ The fact that a danger is doubtful should be encoded using the feature attribute
 [underline]#Remarks:#
 
 * The same notions of approximate or doubtful positions and doubtful existence also apply to features other than dangers (for example landmarks, buoys).
-* The text "Discoloured water" on the source indicates the probable existence of shallow water. This must be encoded, where required, using a *Discoloured Water* feature (see clause 13.8).
+* The text "Discoloured water" on the source indicates the probable existence of shallow water. This must be encoded, where required, using a *Discoloured Water* feature (see <<sec_13.8>>).
 
 [[sec_13.4]]
 === Underwater/awash rock
 
 [cols="735,153,189,216,402,316,316,316,126,231"]
 |===
-9+.<h| IHO Definition: *UNDERWATER/AWASH ROCK*. A concreted mass of stony material or coral which dries, is awash or is below the water surface. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.194, November 2000). |
+9+| [underline]#IHO Definition:# *UNDERWATER/AWASH ROCK*. A concreted mass of stony material or coral which dries, is awash or is below the water surface. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.194, November 2000). |
 9+| *[underline]#S-101 Geo Feature:#* *Underwater/Awash Rock (UWTROC)* |
 9+| *[underline]#Primitives:#* *Point* |
 2+| _Real World_
@@ -109,7 +109,7 @@ The fact that a danger is doubtful should be encoded using the feature attribute
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -139,7 +139,7 @@ The fact that a danger is doubtful should be encoded using the feature attribute
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -154,7 +154,7 @@ The fact that a danger is doubtful should be encoded using the feature attribute
 7: least depth unknown, safe clearance at value shown
 8: value reported (not surveyed)
 9: value reported (not confirmed) | EN | 0,*
-3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
 18: existence doubtful | EN | 0,1
 3+| technique of vertical measurement 2+| (TECSOU) 3+|
@@ -183,11 +183,11 @@ The fact that a danger is doubtful should be encoded using the feature attribute
 3: always under water/ submerged
 4: covers and uncovers +
 5: awash | EN | 1,1
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -231,7 +231,7 @@ The fact that a danger is doubtful should be encoded using the feature attribute
 3+| default clearance depth
 2+|
 
-3+| See clause 30.1
+3+| See <<sec_30.1>>
 | RE
 | 0,1 ^†^
 
@@ -245,11 +245,11 @@ The fact that a danger is doubtful should be encoded using the feature attribute
 
 9+| *Feature Associations* |
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-9+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+9+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5>>.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
@@ -270,52 +270,30 @@ Population of the attributes *quality of* **vertical** **measurement**, **water 
 
 [[table_13-2]]
 .Underwater rocks -- Attribute encoding
-[cols="245,51,63,72,134,87,87,87,87,87"]
+[cols="245,51,63,72,134"]
 |===
-h| Rock or coral reef h| INT 1 h| water level effect h| quality of vertical measurement h| Comment | | | | |
-| Covers and uncovers, depth unknown | K11 | _4_ | _2_ or _<undefined></undefined>_ | See Remarks below for population of the attribute *exposition of sounding*. | | | | |
-| Covers and uncovers, depth known | K11 | _4_ | any value except __2__; or _<undefined>_ | Negative value for *value of sounding* | | | | |
-| Awash
-| K12
-| _5_
-|
+h| Rock or coral reef h| INT 1 h| water level effect h| quality of vertical measurement h| Comment
 
-|
-
-|
-|
-|
-|
-|
-
-| Always submerged, depth unknown | K13 | _3_ | _2_ or _<undefined>_ | See Remarks below for population of the attribute *exposition of sounding*. | | | | |
-| Always submerged, depth known
-| K14
-| _3_
-| any value except __2__; or _<undefined>_
-|
-
-|
-|
-|
-|
-|
-
+| Covers and uncovers, depth unknown | K11 | _4_ | _2_ or _<undefined></undefined>_ | See Remarks below for population of the attribute *exposition of sounding*.
+| Covers and uncovers, depth known | K11 | _4_ | any value except __2__; or _<undefined>_ | Negative value for *value of sounding*
+| Awash | K12 | _5_ | |
+| Always submerged, depth unknown | K13 | _3_ | _2_ or _<undefined>_ | See Remarks below for population of the attribute *exposition of sounding*.
+| Always submerged, depth known | K14 | _3_ | any value except __2__; or _<undefined>_ |
 | Reported, not confirmed | I3.1,3.2 | _3,4_ or _5_ | _9_ | If available, the year reported should be encoded in *reported date*.
 
-The spatial attribute *quality of horizontal measurement* should be set to _4_ (approximate). | | | | |
+The spatial attribute *quality of horizontal measurement* should be set to _4_ (approximate).
 
 |===
 
 [underline]#Remarks:#
 
-* For rocks which do not cover (islets), see clause5.4.2.
+* For rocks which do not cover (islets), see <<sec_5.4.2>>.
 * All *Underwater/Awash Rock* features should be encoded using one of the above combinations of attributes.
 * The minimum depth, if known, over any submerged rock, must be encoded using the attribute *value of sounding*. Where *value of sounding* is populated with an empty (null) value, display of the rock in ECDIS as an underwater hazard, in accordance with the Mariner's selected safety depth, will be dependent on the value populated for the ECDIS "system" attribute *default clearance depth* (see clauses 2.4.5.1, 30.1 and 8^th^ bullet below).
-* An instance of the information type *Spatial Quality* (see clause 25.4) may be associated to the rock point geometry, using the association **Spatial Association**, to indicate, where required, that the horizontal position and/or the vertical uncertainty for the rock is of different (higher or lower) accuracy than indicated by the underlaying *Quality of Bathymetric Data* Meta feature (see clause 3.8). Where *Spatial Quality* is associated to the rock and*value of sounding* is populated with an empty (null) value, the value for the attribute *vertical uncertainty* (*uncertainty fixed*) on the associated **Spatial Quality**, where required, must also be populated as empty (null). See also clause3.8.1.3(Sounding uncertainty).
+* An instance of the information type *Spatial Quality* (see <<sec_25.4>>) may be associated to the rock point geometry, using the association **Spatial Association**, to indicate, where required, that the horizontal position and/or the vertical uncertainty for the rock is of different (higher or lower) accuracy than indicated by the underlaying *Quality of Bathymetric Data* Meta feature (see <<sec_3.8>>). Where *Spatial Quality* is associated to the rock and*value of sounding* is populated with an empty (null) value, the value for the attribute *vertical uncertainty* (*uncertainty fixed*) on the associated **Spatial Quality**, where required, must also be populated as empty (null). See also <<sec_3.8.1.3>>(Sounding uncertainty).
 * Where *Underwater/Awash Rock* is encoded, there must be no *Sounding* feature encoded coincident.
-* For area rock and coral reef features, see clause 12.1.1.
-* When a group of rocks is surrounded by a danger line, each rock should be encoded as a separate*Underwater/Awash Rock* feature covered by an obstruction area feature (*Obstruction* -- see clause13.6).
+* For area rock and coral reef features, see <<sec_12.1.1>>.
+* When a group of rocks is surrounded by a danger line, each rock should be encoded as a separate*Underwater/Awash Rock* feature covered by an obstruction area feature (*Obstruction* -- see <<sec_13.6>>).
 * If it is required to encode an *Underwater/Awash Rock* feature where the attribute *value of sounding* is populated with an empty (null) value, but the source information indicates the depth of the feature is within the range of the surrounding depth area, the value *exposition of sounding* = _1_ (within the range of the surrounding depth area) must be populated in order to avoid the unnecessary display of isolated danger symbols in ECDIS.
 
 [underline]#Distinction:# Obstruction; Seabed Area; Sounding; Wreck.
@@ -323,9 +301,9 @@ The spatial attribute *quality of horizontal measurement* should be set to _4_ (
 [[sec_13.5]]
 === Wreck
 
-[cols="207,40,32,48,48,72,75,359,42,77"]
+[cols="207,40,32,48,48,72,75,359,42,77",options="unnumbered"]
 |===
-9+.<h| IHO Definition: *WRECK*. The ruined remains of a stranded or sunken vessel which has been rendered useless. (IHO Dictionary -- S-32). |
+9+| [underline]#IHO Definition:# *WRECK*. The ruined remains of a stranded or sunken vessel which has been rendered useless. (IHO Dictionary -- S-32). |
 9+| *[underline]#S-101 Geo Feature:#* *Wreck (WRECKS)* |
 9+| *[underline]#Primitives:#* *Point, Surface* |
 2+| _Real World_
@@ -350,7 +328,7 @@ The spatial attribute *quality of horizontal measurement* should be set to _4_ (
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -387,7 +365,7 @@ The spatial attribute *quality of horizontal measurement* should be set to _4_ (
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -407,7 +385,7 @@ The spatial attribute *quality of horizontal measurement* should be set to _4_ (
 | BO
 | 0,1
 
-3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
 7: temporary +
 13: historic +
@@ -445,11 +423,11 @@ The spatial attribute *quality of horizontal measurement* should be set to _4_ (
 3: always under water/ submerged
 4: covers and uncovers +
 5: awash | EN | 1,1
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -490,11 +468,11 @@ The spatial attribute *quality of horizontal measurement* should be set to _4_ (
 | (S) TE
 | 0,1 ^†^
 
-3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 3+| default clearance depth
 2+|
 
-3+| See clause 30.1
+3+| See <<sec_30.1>>
 | RE
 | 0,1 ^†^
 
@@ -508,14 +486,14 @@ The spatial attribute *quality of horizontal measurement* should be set to _4_ (
 
 9+| *Feature Associations* |
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Structure 3+| *Structure/Equipment* (see clause 25.16) 3+| **Daymark**, **Distance Mark**, **Fog Signal**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| **Daymark**, **Distance Mark**, **Fog Signal**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 9+.<| ^†^ Exactly one of the attributes *category of wreck* or *value of sounding* must be populated; *category of wreck* is mandatory if the attribute *height* has been populated with a value.
 
-Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
@@ -530,7 +508,7 @@ The ECDIS "system" attribute *default clearance depth* must be populated with a 
 
 Wrecks must be encoded to whatever depth they are considered to be of interest, also taking account of the needs of submarines and fishing vessels where appropriate, but not generally in water deeper than 2000m. (Trawling regularly takes place in depths of 400m and occasionally in depths as great as 2000m).
 
-Population of the attributes **category of wreck**, *quality of* **vertical** **measurement**, *technique of vertical measurement* and *water level effect* are described in Table 13-3 below.
+Population of the attributes **category of wreck**, *quality of* **vertical** **measurement**, *technique of vertical measurement* and *water level effect* are described in <<table_13-3>> below.
 
 In the following Table, the symbol '/' indicates that this attribute is not relevant for the wreck instance and therefore must not be encoded. A blank indicates that the encoder may choose a relevant value for the attribute.
 
@@ -686,9 +664,9 @@ All wrecks should be encoded using one of the above combinations of attributes. 
 * Only one of the attributes *category of wreck* or *value of sounding* must be populated, not both.
 * The attribute *height* is only relevant for wrecks having attribute *water level effect* = _1_ (partly submerged at high water) or _2_ (always dry). Where *height* is populated, the attribute *value of sounding* must not be populated.
 * The minimum depth, if known, over any submerged wreck, must be encoded using the attribute *value of sounding*. Where *value of sounding* is populated with an empty (null) value, display of the wreck in ECDIS as an underwater hazard, in accordance with the Mariner's selected safety depth, will be dependent on the value populated for the ECDIS "system" attribute *default clearance depth* (see clauses 2.4.5.1 and 30.1 and 8^th^ bullet below).
-* An instance of the information type *Spatial Quality* (see clause 25.4) may be associated to the wreck geometry, using the association **Spatial Association**, to indicate, where required, that the horizontal position and/or the vertical uncertainty for the wreck is of different (higher or lower) accuracy than indicated by the underlying *Quality of Bathymetric Data* Meta feature (see clause 3.8). Where *Spatial Quality* is associated to the wreck and*height* (when *water level effect* = _1_ (partly submerged at high water) or _2_ (always dry)) or *value of sounding* is populated with an empty (null) value, the value for the complex attribute *vertical uncertainty* (*uncertainty fixed*) on the associated **Spatial Quality**, where required, must also be populated as empty (null). See also clause 3.8.1.3 (Sounding uncertainty).
+* An instance of the information type *Spatial Quality* (see <<sec_25.4>>) may be associated to the wreck geometry, using the association **Spatial Association**, to indicate, where required, that the horizontal position and/or the vertical uncertainty for the wreck is of different (higher or lower) accuracy than indicated by the underlying *Quality of Bathymetric Data* Meta feature (see <<sec_3.8>>). Where *Spatial Quality* is associated to the wreck and*height* (when *water level effect* = _1_ (partly submerged at high water) or _2_ (always dry)) or *value of sounding* is populated with an empty (null) value, the value for the complex attribute *vertical uncertainty* (*uncertainty fixed*) on the associated **Spatial Quality**, where required, must also be populated as empty (null). See also <<sec_3.8.1.3>> (Sounding uncertainty).
 * For reported, not confirmed wrecks, the date of the report must be populated, where known, using the attribute *reported date*.
-* The distributed remains of a wreck must be encoded, where required, as a *Wreck* feature with attribute *category of wreck* = _3_ (distributed remains of wreck). Even though the wreck may be safe for surface vessels to navigate over the wreck, it must not be encoded as foul ground (see clause13.7).
+* The distributed remains of a wreck must be encoded, where required, as a *Wreck* feature with attribute *category of wreck* = _3_ (distributed remains of wreck). Even though the wreck may be safe for surface vessels to navigate over the wreck, it must not be encoded as foul ground (see <<sec_13.7>>).
 * When encoding a *Wreck* feature, the attributes populated should adhere to the guidance in S-4 clause B-422. Where possible, this includes the population of the attributes *value of sounding* and *quality of vertical measurement* where the depth of a wreck is known, or the depth is unknown but an estimated safe clearance can be determined. Where the depth is known, or the depth is unknown but an estimated safe clearance has been determined, it is not required to populate the attribute *category of wreck* = _1_ (non-dangerous wreck) or _2_ (dangerous wreck), as the Mariner has the quantitative information in order to determine whether the wreck may be dangerous to their type of vessel.
 * If it is required to encode a submerged *Wreck* feature where the attribute *value of sounding* is populated with an empty (null) value, but the source information indicates the depth of the feature is within the range of the surrounding depth area, the value *exposition of sounding* = _1_ (within the range of the surrounding depth area) must be populated in order to avoid the unnecessary display of isolated danger symbols in ECDIS.
 * For wrecks visible or partly visible at sounding datum, the height or drying height should be encoded, if known. This helps to distinguish wrecks which are always visible from wrecks which are only visible at low tide.
@@ -699,8 +677,8 @@ All wrecks should be encoded using one of the above combinations of attributes. 
 Soundings and heights are often given inside a wreck to show the highest points of the hull or superstructure(for example mast, funnel). If it is required to encode such features, they must be done using:
 
 * A *Wreck* feature of type surface with all populated attributes applying to the highest point of the wreck.
-* *Land Elevation* features of type point to encode the features of the wreck that are always dry; the type of each feature (for example mast, funnel) may be encoded using the complex attribute *information* (see clause 2.4.6).
-* *Sounding* features to encode the features of wrecks which are always submerged, or cover and uncover; the type of each feature (for example mast, funnel) may be encoded using the complex attribute *information* (see clause 2.4.6), which means that these soundings must be encoded individually.
+* *Land Elevation* features of type point to encode the features of the wreck that are always dry; the type of each feature (for example mast, funnel) may be encoded using the complex attribute *information* (see <<sec_2.4.6>>).
+* *Sounding* features to encode the features of wrecks which are always submerged, or cover and uncover; the type of each feature (for example mast, funnel) may be encoded using the complex attribute *information* (see <<sec_2.4.6>>), which means that these soundings must be encoded individually.
 
 [[sec_13.5.1.2]]
 ===== Changing criteria for wrecks
@@ -712,7 +690,7 @@ Historically the criteria used for differentiating between "dangerous" and "non-
 
 Many nations have designated areas around certain wrecks of historical or cultural (for example sea graves) importance to protect the wrecks from unauthorised interference (for example by diving, salvage or anchoring). Such areas should be encoded on the largest optimum display scale ENC data covering the wreck.
 
-If it is required to encode a restricted area around a historic wreck, it must be done using a *Restricted Area* feature (see clause 17.8), with attribute *category of restricted area* = _10_ (historic wreck area).
+If it is required to encode a restricted area around a historic wreck, it must be done using a *Restricted Area* feature (see <<sec_17.8>>), with attribute *category of restricted area* = _10_ (historic wreck area).
 
 In addition, the wreck itself should be encoded as a *Wreck*feature, with attribute *status* = _13_ (historic).
 
@@ -723,7 +701,7 @@ In addition, the wreck itself should be encoded as a *Wreck*feature, with attrib
 
 [cols="167,40,72,88,76,146,146,146,42,77"]
 |===
-9+.<h| IHO Definition: *OBSTRUCTION.* In marine navigation, anything that hinders or prevents movement, particularly anything that endangers or prevents passage of a vessel. The term is usually used to refer to an isolated danger to navigation, such as a sunken rock or pinnacle. (IHO Dictionary -- S-32). |
+9+| [underline]#IHO Definition:# *OBSTRUCTION.* In marine navigation, anything that hinders or prevents movement, particularly anything that endangers or prevents passage of a vessel. The term is usually used to refer to an isolated danger to navigation, such as a sunken rock or pinnacle. (IHO Dictionary -- S-32). |
 9+| *[underline]#S-101 Geo Feature:#* *Obstruction (OBSTRN)* |
 9+| *[underline]#Primitives:#* *Point, Curve, Surface* |
 2+| _Real World_
@@ -768,7 +746,7 @@ In addition, the wreck itself should be encoded as a *Wreck*feature, with attrib
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -805,7 +783,7 @@ In addition, the wreck itself should be encoded as a *Wreck*feature, with attrib
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -846,7 +824,7 @@ In addition, the wreck itself should be encoded as a *Wreck*feature, with attrib
 7: least depth unknown, safe clearance at value shown
 8: value reported (not surveyed)
 9: value reported (not confirmed) | EN | 0,*
-3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 4: not in use +
@@ -893,11 +871,11 @@ In addition, the wreck itself should be encoded as a *Wreck*feature, with attrib
 4: covers and uncovers +
 5: awash +
 7: floating | EN | 1,1
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -941,7 +919,7 @@ In addition, the wreck itself should be encoded as a *Wreck*feature, with attrib
 3+| default clearance depth
 2+|
 
-3+| See clause 30.1
+3+| See <<sec_30.1>>
 | RE
 | 0,1 ^†^
 
@@ -955,14 +933,14 @@ In addition, the wreck itself should be encoded as a *Wreck*feature, with attrib
 
 9+| *Feature Associations* |
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Component 3+| *Mooring Trot Aggregation* (see clause 25.10) 3+| *Mooring Trot* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+| The Component 3+| *Mooring Trot Aggregation* (see <<sec_25.10>>) 3+| *Mooring Trot* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 9+.<| ^†^ Exactly one of the attributes *height* or *value of* **sounding** must be populated.
 
-Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
@@ -977,7 +955,7 @@ The ECDIS "system" attribute *default clearance depth* must be populated with a 
 
 If it is required to encode features considered to be an obstruction or hazard to surface navigation that cannot be encoded using any other S-101 specific feature (for example **Underwater Rock**, *Wreck*), it must be done using the feature *Obstruction*.
 
-Population of the attributes *quality of* **vertical** **measurement**, *technique of vertical measurement* and *water level effect* are described in Table 13-4 below.
+Population of the attributes *quality of* **vertical** **measurement**, *technique of vertical measurement* and *water level effect* are described in <<table_13-4>> below.
 
 In the following Table, the symbol '/' indicates that this attribute is not relevant for the obstruction instance and therefore must not be encoded. A blank indicates that the encoder may choose a relevant value for the attribute.
 
@@ -1010,11 +988,11 @@ All obstructions should be encoded using one of the above combinations of attrib
 
 It is important when encoding obstructions to be aware of the distinction between attribute value *category of obstruction* = _6_ (foul area) and foul ground: Foul areas are defined as areas of numerous uncharted dangers to navigation. When encoded on ENC, *Obstruction* features of type surface with attribute *category of obstruction* = _6_ (foul area) will display in the ECDIS "base display" as an obstruction to navigation, with all associated alarms to indicate that it is unsafe for vessels to enter or transit the area.
 
-Foul ground is defined as an area over which it is safe to navigate but which should be avoided for anchoring, taking the ground or ground fishing. When encoded on ENC, *Foul Ground* features (see clause 13.7) of type surface will display in the ECDIS "other" display as a "foul area of seabed safe for navigation but not for anchoring", indicating to the Mariner that it is safe to enter or transit the area but hazardous to take the ground or undertake other subsurface activities.
+Foul ground is defined as an area over which it is safe to navigate but which should be avoided for anchoring, taking the ground or ground fishing. When encoded on ENC, *Foul Ground* features (see <<sec_13.7>>) of type surface will display in the ECDIS "other" display as a "foul area of seabed safe for navigation but not for anchoring", indicating to the Mariner that it is safe to enter or transit the area but hazardous to take the ground or undertake other subsurface activities.
 
 In some cases areas on the source indicated to be foul ground have been misinterpreted as foul areas, which has resulted in encoding in ENC of *Obstruction* with *category of obstruction* = _6_ (foul area). This encoding results in the incorrect indication in the ECDIS that the area is unsafe for navigation, which is potentially confusing to the Mariner.
 
-Foul ground, over which it is safe to navigate but which should be avoided for anchoring, taking the ground or ground fishing, should be encoded using a *Foul Ground* feature (see clause 13.7). Although the source may depict a "Foul Area", it should be determined whether it is in fact "Foul Ground" before encoding the appropriate feature.
+Foul ground, over which it is safe to navigate but which should be avoided for anchoring, taking the ground or ground fishing, should be encoded using a *Foul Ground* feature (see <<sec_13.7>>). Although the source may depict a "Foul Area", it should be determined whether it is in fact "Foul Ground" before encoding the appropriate feature.
 
 [underline]#Remarks:#
 
@@ -1024,30 +1002,30 @@ Foul ground, over which it is safe to navigate but which should be avoided for a
 * The attribute *height* must be populated for *Obstruction* features having attribute *water level effect* = _1_ (partly submerged at high water) or _2_ (always dry).
 * *Obstruction* features having attribute *water level effect* = _7_ (floating) must have the attribute *height* populated with an empty (null) value.
 * The attribute *vertical length* is used to populate the distance of an obstruction above the seabed; or the height of a floating obstruction above the sea surface.
-* An instance of the information type *Spatial Quality* (see clause 25.4) may be associated to the obstruction geometry, using the association **Spatial Association**, to indicate, where required, that the horizontal position and/or the vertical uncertainty for the obstruction is of different (higher or lower) accuracy than indicated by the underlying *Quality of Bathymetric Data* Meta feature (see clause 3.8). Where *Spatial Quality* is associated to the obstruction and*height* or *value of sounding* is populated with an empty (null) value, the value for the attribute *vertical uncertainty* (*uncertainty fixed*) on the associated **Spatial Quality**, where required, must also be populated as empty (null). See also clause 3.8.1.3 (Sounding uncertainty).
+* An instance of the information type *Spatial Quality* (see <<sec_25.4>>) may be associated to the obstruction geometry, using the association **Spatial Association**, to indicate, where required, that the horizontal position and/or the vertical uncertainty for the obstruction is of different (higher or lower) accuracy than indicated by the underlying *Quality of Bathymetric Data* Meta feature (see <<sec_3.8>>). Where *Spatial Quality* is associated to the obstruction and*height* or *value of sounding* is populated with an empty (null) value, the value for the attribute *vertical uncertainty* (*uncertainty fixed*) on the associated **Spatial Quality**, where required, must also be populated as empty (null). See also <<sec_3.8.1.3>> (Sounding uncertainty).
 * For reported, not confirmed obstructions, the date of the report must be populated, where known, using the attribute *reported date*.
 * If the nature of a dangerous underwater feature, dangerous underwater area, or floating feature is not explicitly known, it must be encoded using *Obstruction*.
 * An *Obstruction* feature of type surface must be covered by a surface feature from Skin of the Earth as appropriate.
 * An area containing numerous dangers, through which navigation is not safe at the optimum display scale for the ENC data, should be encoded using an *Obstruction* feature of type surface, with attribute *category of obstruction* = _6_ (foul area).
 * If it is required to encode a submerged *Obstruction* feature where the attribute *value of sounding* is populated with an empty (null) value, but the source information indicates the depth of the feature is within the range of the surrounding depth area, the value *exposition of sounding* = _1_ (within the range of the surrounding depth area) must be populated in order to avoid the unnecessary display of isolated danger symbols in ECDIS.
-* Active submarine volcanos can be a significant navigational hazard; and harmful concentrations of volcanic gases emanating from active submarine volcanos can cover an extensive area (see S-4 -- clause B-428.4). If it is required to encode an active submarine volcano, it must be done using an *Obstruction* feature of type point, with attributes *category of obstruction* = _21_ (active submarine volcano), *exposition of sounding* = _2_ (shoaler than the range of depth of the surrounding depth area) and *quality of vertical measurement* = _2_ (depth or least depth unknown). To indicate the unpredictable nature of the volcano (it may be periodically submerged or extend above the surface), the mandatory attributes *value of sounding* and *water level effect* must be populated with an empty (null) value. In order to raise the level of indication of the hazard in the ECDIS to the Mariner so as to generate an alarm, a small *Depth Area* feature having attribute *depth range minimum value* = _0_ may also be encoded. The area that can be potentially covered by harmful volcanic gases, which may cover an area of up to 10 NM from the volcano, should be encoded using a *Caution Area* feature (see clause 16.10), having the complex attribute *information* (see clause 2.4.6), sub-attributes *text* = _Volcanic activity_ and *file reference* carrying a reference to an appropriate cautionary note similar to:
+* Active submarine volcanos can be a significant navigational hazard; and harmful concentrations of volcanic gases emanating from active submarine volcanos can cover an extensive area (see S-4 -- clause B-428.4). If it is required to encode an active submarine volcano, it must be done using an *Obstruction* feature of type point, with attributes *category of obstruction* = _21_ (active submarine volcano), *exposition of sounding* = _2_ (shoaler than the range of depth of the surrounding depth area) and *quality of vertical measurement* = _2_ (depth or least depth unknown). To indicate the unpredictable nature of the volcano (it may be periodically submerged or extend above the surface), the mandatory attributes *value of sounding* and *water level effect* must be populated with an empty (null) value. In order to raise the level of indication of the hazard in the ECDIS to the Mariner so as to generate an alarm, a small *Depth Area* feature having attribute *depth range minimum value* = _0_ may also be encoded. The area that can be potentially covered by harmful volcanic gases, which may cover an area of up to 10 NM from the volcano, should be encoded using a *Caution Area* feature (see <<sec_16.10>>), having the complex attribute *information* (see <<sec_2.4.6>>), sub-attributes *text* = _Volcanic activity_ and *file reference* carrying a reference to an appropriate cautionary note similar to:
 _Active submarine volcanos exist in this area. Some volcanos have been reported to erupt breaking the surface of the sea and projecting ashes, other volcanic materials and harmful gases into the air. Changes to charted depths, uplifting of reefs and emerging of volcanic islets may occur throughout the area. Due to the unpredictable nature of these events Mariners are strongly recommended to avoid the area_.
 
-Inactive submarine volcanos must be encoded, if required, using a *Sea Area* feature (see clause 9.1).
+Inactive submarine volcanos must be encoded, if required, using a *Sea Area* feature (see <<sec_9.1>>).
 
-* Platforms which have been cut-off above the seabed must be encoded as **Obstruction**, while platforms which have been cut-off to the level of the seabed should be encoded as *Foul Ground* (see clause13.7).
+* Platforms which have been cut-off above the seabed must be encoded as **Obstruction**, while platforms which have been cut-off to the level of the seabed should be encoded as *Foul Ground* (see <<sec_13.7>>).
 * In certain circumstances where an obstruction is always dry (for example cribs), it must be covered by a *Land Area* feature.
-* Features that are considered to be subsurface Fish Aggregating Devices (FAD) must be encoded as **Obstruction**,with *category of obstruction* = _5_ (fish haven), unless the feature is a vessel that has been deliberately sunk to perform the function of a fish haven, which should be encoded as a *Wreck* feature (see clause 13.5).
-* If it is required to encode a subsurface ocean data acquisition system (ODAS), whether on the seabed or suspended in the water column by a subsurface float, it must be done using *Obstruction* with *category of obstruction* = _14_ (subsurface ocean data acquisition system (ODAS)). An ODAS buoy must be encoded as a *Special Purpose/General Buoy* feature (see clause 20.5).
+* Features that are considered to be subsurface Fish Aggregating Devices (FAD) must be encoded as **Obstruction**,with *category of obstruction* = _5_ (fish haven), unless the feature is a vessel that has been deliberately sunk to perform the function of a fish haven, which should be encoded as a *Wreck* feature (see <<sec_13.5>>).
+* If it is required to encode a subsurface ocean data acquisition system (ODAS), whether on the seabed or suspended in the water column by a subsurface float, it must be done using *Obstruction* with *category of obstruction* = _14_ (subsurface ocean data acquisition system (ODAS)). An ODAS buoy must be encoded as a *Special Purpose/General Buoy* feature (see <<sec_20.5>>).
 
 [[sec_13.6.1.1]]
 ===== Mangroves (see S-4 -- B-312.4)
 
-Where the source indicates that a mangrove area is in the intertidal area, an *Obstruction* feature of type area, with attribute *category of obstruction* = _23_ (mangrove) should be encoded on top of the portion of the intertidal area (*Depth Area* with attributes *depth range minimum value* = _-H_ and *depth range maximum value* = _0_ -- see clause11.7.3) where the mangrove coverage exists. The mandatory attribute *water level effect* should be populated with _1_ (partially submerged at high water); and the conditional mandatory attribute *height* populated with the approximate altitude of the highest point of the top of the mangroves if known or an empty (null) value if not. The seaward spatial type(s) of the mangrove area should be associated to an instance of the information type *Spatial Quality* (see clause 24.5) having the attribute *quality of horizontal measurement* = _4_ (approximate). The landward edge of the mangrove area representing the high water line should be encoded as *Coastline* (see clause5.3), having no value populated for the attribute **category of coastline**, and no value for *quality of horizontal measurement* on the related spatial type(s).
+Where the source indicates that a mangrove area is in the intertidal area, an *Obstruction* feature of type area, with attribute *category of obstruction* = _23_ (mangrove) should be encoded on top of the portion of the intertidal area (*Depth Area* with attributes *depth range minimum value* = _-H_ and *depth range maximum value* = _0_ -- see <<sec_11.7.3>>) where the mangrove coverage exists. The mandatory attribute *water level effect* should be populated with _1_ (partially submerged at high water); and the conditional mandatory attribute *height* populated with the approximate altitude of the highest point of the top of the mangroves if known or an empty (null) value if not. The seaward spatial type(s) of the mangrove area should be associated to an instance of the information type *Spatial Quality* (see <<sec_24.5>>) having the attribute *quality of horizontal measurement* = _4_ (approximate). The landward edge of the mangrove area representing the high water line should be encoded as *Coastline* (see <<sec_5.3>>), having no value populated for the attribute **category of coastline**, and no value for *quality of horizontal measurement* on the related spatial type(s).
 
 If it is required to encode an individual mangrove tree within the intertidal area, this must be done using an *Obstruction* feature of type point, with attribute *category of obstruction* = _23_ (mangrove).
 
-Where mangrove areas are required to be generalised on smaller optimum display scale ENC datasets such that the seaward edge of the mangrove only is to be indicated as the "apparent" coastline, this must be done using the feature *Coastline* (see clause 5.3).
+Where mangrove areas are required to be generalised on smaller optimum display scale ENC datasets such that the seaward edge of the mangrove only is to be indicated as the "apparent" coastline, this must be done using the feature *Coastline* (see <<sec_5.3>>).
 
 [underline]#Remarks:#
 
@@ -1070,7 +1048,7 @@ Where mangrove areas are required to be generalised on smaller optimum display s
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -1100,7 +1078,7 @@ Where mangrove areas are required to be generalised on smaller optimum display s
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -1113,7 +1091,7 @@ Where mangrove areas are required to be generalised on smaller optimum display s
 7: least depth unknown, safe clearance at value shown
 8: value reported (not surveyed)
 9: value reported (not confirmed) | EN | 0,*
-3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
 13: historic +
 18: existence doubtful +
@@ -1164,11 +1142,11 @@ Where mangrove areas are required to be generalised on smaller optimum display s
 | (S) RE
 | 0,1
 
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -1211,11 +1189,11 @@ Where mangrove areas are required to be generalised on smaller optimum display s
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
@@ -1226,27 +1204,27 @@ For each instance of **information**, at least one of the sub-attributes *file r
 [[sec_13.7.1]]
 ==== Foul ground (see S-4 -- B-422.9)
 
-If it is required to encode an area where seabed operations are unsafe, but over which it is safe to navigate for surface vessels, it must be done using the feature *Foul Ground*. Such areas are distinct from the feature **Obstruction**, attribute *category of obstruction* = _6_ (foul area), where navigation is considered to be unsafe for surface vessels (see clause 13.6).
+If it is required to encode an area where seabed operations are unsafe, but over which it is safe to navigate for surface vessels, it must be done using the feature *Foul Ground*. Such areas are distinct from the feature **Obstruction**, attribute *category of obstruction* = _6_ (foul area), where navigation is considered to be unsafe for surface vessels (see <<sec_13.6>>).
 
 It is important when encoding foul ground to be aware of the distinction between foul ground and the feature **Obstruction**, attribute *category of obstruction* = _6_ (foul area) : Foul ground is defined as an area over which it is safe to navigate but which should be avoided for anchoring, taking the ground or ground fishing. When encoded on ENC, *Foul Ground* features of type surface will display in the ECDIS "other" display as a "foul area of seabed safe for navigation but not for anchoring", indicating to the Mariner that it is safe to enter or transit the area but hazardous to take the ground or undertake other subsurface activities.
 
 Foul areas are defined as areas of numerous uncharted dangers to navigation. When encoded on ENC, *Obstruction* features of type surface with attribute *category of obstruction* = _6_ (foul area) will display in the ECDIS "base display" as an obstruction to navigation, with all associated alarms to indicate that it is unsafe for vessels to enter or transit the area.
 
-It is recommended that if there is any doubt as to whether a feature should be encoded as *Obstruction* or **Foul Ground**, preference should be given to encoding the feature as *Obstruction* (see clause 13.6).
+It is recommended that if there is any doubt as to whether a feature should be encoded as *Obstruction* or **Foul Ground**, preference should be given to encoding the feature as *Obstruction* (see <<sec_13.6>>).
 
 [underline]#Remarks:#
 
 * For reported, not confirmed foul ground, the date of the report must be populated, where known, using the attribute *reported date*.
 * A *Foul Ground* feature of type surface must be covered by a surface feature from Skin of the Earth as appropriate (**Depth Area**, *Dredged Area* or *Unsurveyed Area*).
-* Platforms which have been cut-off to the level of the seabed should be encoded as **Foul Ground**, while platforms which have been cut-off above the seabed must be encoded as *Obstruction* (see clause13.6).
-* The distributed remains of wrecks must be encoded using the feature *Wreck* (see clause13.5), and must not be encoded as *Foul Ground*.
+* Platforms which have been cut-off to the level of the seabed should be encoded as **Foul Ground**, while platforms which have been cut-off above the seabed must be encoded as *Obstruction* (see <<sec_13.6>>).
+* The distributed remains of wrecks must be encoded using the feature *Wreck* (see <<sec_13.5>>), and must not be encoded as *Foul Ground*.
 
 [underline]#Distinction:# Depth Area; Fishing Facility; Marine Farm/Culture; Obstruction; Seabed Area; Underwater/Awash Rock; Water Turbulence; Wreck.
 
 [[sec_13.8]]
 === Discoloured water
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *DISCOLOURED WATER*. Unnatural coloured areas in the sea which may or may not indicate the existence of shoals. (NOAA -- Nautical Chart Manual, Volume 1).
 10+| *[underline]#S-101 Geo Feature:#* *Discoloured Water* __**(CTNARE)**__
@@ -1258,16 +1236,16 @@ It is recommended that if there is any doubt as to whether a feature should be e
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
-3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -1310,9 +1288,9 @@ It is recommended that if there is any doubt as to whether a feature should be e
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<| ^†^ For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
@@ -1334,7 +1312,7 @@ If it is required to encode the possible existence of shoal water as indicated b
 [[sec_13.9]]
 === Fishing facility
 
-[cols="609,794,794,794,794,794,794,794,294,539"]
+[cols="609,794,794,794,794,794,794,794,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *FISHING FACILITY*. A structure for fishing purposes which can be an obstruction to ships in general. The position of these structures may vary frequently over time. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.70, November 2000, as amended).
 10+| *[underline]#S-101 Geo Feature:#* *Fishing Facility (FSHFAC)*
@@ -1355,7 +1333,7 @@ If it is required to encode the possible existence of shoal water as indicated b
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -1385,14 +1363,14 @@ If it is required to encode the possible existence of shoal water as indicated b
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
 3+| periodic date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,*
 
@@ -1406,7 +1384,7 @@ If it is required to encode the possible existence of shoal water as indicated b
 3+| | (S) TD
 | 1,1
 
-3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 4: not in use +
@@ -1424,11 +1402,11 @@ If it is required to encode the possible existence of shoal water as indicated b
 | RE
 | 0,1
 
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -1471,13 +1449,13 @@ If it is required to encode the possible existence of shoal water as indicated b
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Structure 3+| *Structure/Equipment* (see clause 25.16) 3+| **Daymark**, **Distance Mark**, **Fog Signal**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
-| The Component 3+| *Aids to Navigation Association* (see clause 25.2) 3+| **Deep Water Route**, **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| **Daymark**, **Distance Mark**, **Fog Signal**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Deep Water Route**, **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
@@ -1495,15 +1473,15 @@ If it is required to encode a fishing facility it must be done using the feature
 [underline]#Remarks:#
 
 * The attribute *vertical length* is used to populate the distance of the facility above the seabed.
-* Certain types of fishing facilities such as tunny nets in deep water may be an obstruction to navigation. If *Fishing Facility* features are considered to be an obstruction or hazard to navigation, they should also be encoded with an *Obstruction* feature (see clause 13.6). Although this is contrary to ENC encoding principles (that is, double encoding), this solution is recommended for portraying dangers to navigation of this nature in the ECDIS.
-* Floating fish aggregating devices (FAD) must be encoded, where required, as *Special Purpose/General Buoy* features (see clause 20.5). Subsurface FADs (fish havens) must be encoded, where required, as *Obstruction* features (see clause 13.6).
+* Certain types of fishing facilities such as tunny nets in deep water may be an obstruction to navigation. If *Fishing Facility* features are considered to be an obstruction or hazard to navigation, they should also be encoded with an *Obstruction* feature (see <<sec_13.6>>). Although this is contrary to ENC encoding principles (that is, double encoding), this solution is recommended for portraying dangers to navigation of this nature in the ECDIS.
+* Floating fish aggregating devices (FAD) must be encoded, where required, as *Special Purpose/General Buoy* features (see <<sec_20.5>>). Subsurface FADs (fish havens) must be encoded, where required, as *Obstruction* features (see <<sec_13.6>>).
 
 [underline]#Distinction:# Marine Farm/Culture; Obstruction.
 
 [[sec_13.10]]
 === Marine farm/culture
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *MARINE FARM/CULTURE*. An assemblage of cages, nets, rafts and floats or posts where fish, including shellfish, are artificially cultivated. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Marine Farm/Culture (MARCUL)*
@@ -1524,7 +1502,7 @@ If it is required to encode a fishing facility it must be done using the feature
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -1554,7 +1532,7 @@ If it is required to encode a fishing facility it must be done using the feature
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -1578,14 +1556,14 @@ If it is required to encode a fishing facility it must be done using the feature
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
 3+| periodic date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,*
 
@@ -1727,11 +1705,11 @@ If it is required to encode a fishing facility it must be done using the feature
 4: covers and uncovers +
 5: awash +
 7: floating | EN | 1,1
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -1774,13 +1752,13 @@ If it is required to encode a fishing facility it must be done using the feature
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<| ^†^ Exactly one of the attributes *height* or *value of* **sounding** must be populated.
 
-Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
 
@@ -1800,14 +1778,14 @@ If it is required to encode a marine farm, it must be done using the feature *Ma
 [underline]#Remarks:#
 
 * When it is required to encode the minimum depth of the feature, the attributes *exposition of sounding* and *quality of vertical measurement* and the mandatory attribute *value of sounding* must be used. When a *Marine Farm/Culture* feature covers an area of the seafloor at the optimum display scale of the data, the value of the attribute *value of sounding* represents the minimum depth, if known, over any structure used to form or support the marine farm, or within the area of the marine farm itself. The mandatory attribute *water level effect* must be used to encode the water level of the shallowest section of the area, if partly or completely under water.
-* For additional guidance regarding the encoding of vessel speed limits, see clause 17.4.
+* For additional guidance regarding the encoding of vessel speed limits, see <<sec_17.4>>.
 * The attribute *height* must be populated for *Marine Farm/Culture* features having attribute *water level effect* = _1_ (partly submerged at high water) or _2_ (always dry).
 * The attribute *vertical length* is used to populate the distance of the marine farm above the seabed.
-* Where required, ground tackle associated with marine farms must be encoded as *Obstruction* features (see clause 13.6).
+* Where required, ground tackle associated with marine farms must be encoded as *Obstruction* features (see <<sec_13.6>>).
 
 [[sec_13.10.2]]
 ==== Fish havens (see S-4 -- B- 447.5)
 
-If it is required to encode a fish haven, it must be done using an *Obstruction* feature (see clause 13.6), with attribute *category of obstruction* = _5_ (fish haven).
+If it is required to encode a fish haven, it must be done using an *Obstruction* feature (see <<sec_13.6>>), with attribute *category of obstruction* = _5_ (fish haven).
 
 [underline]#Distinction:# Fishing Facility; Obstruction.

@@ -5,7 +5,7 @@
 [[sec_14.1]]
 === Offshore platform
 
-[cols="609,794,794,794,794,794,794,794,294,539"]
+[cols="609,794,794,794,794,794,794,794,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *OFFSHORE PLATFORM*. A permanent offshore structure, either fixed or floating. (Adapted from IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Offshore Platform (OFSPLF)*
@@ -54,7 +54,7 @@
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -84,7 +84,7 @@
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -115,7 +115,7 @@
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -133,7 +133,7 @@
 | BO
 | 0,1
 
-3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
@@ -153,11 +153,11 @@
 1: visually conspicuous +
 2: not visually conspicuous +
 3: prominent | EN | 0,1
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -198,18 +198,18 @@
 | (S) TE
 | 0,1 ^†^
 
-3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Structure 3+| *Structure/Equipment* (see clause 25.16) 3+| **Bollard**, **Daymark**, **Distance Mark**, **Fog Signal**, **Helipad**, **Light Air Obstruction**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
-| The Component 3+| *Aids to Navigation Association* (see clause 25.2) 3+| **Deep Water Route**, **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| **Bollard**, **Daymark**, **Distance Mark**, **Fog Signal**, **Helipad**, **Light Air Obstruction**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Deep Water Route**, **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<| ^†^ The attribute *colour pattern* is mandatory for offshore platforms that have more than one value populated for the attribute *colour*.
 
-Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
 
@@ -230,10 +230,10 @@ If it is required to encode a permanent offshore platform, it must be done using
 
 [underline]#Remarks:#
 
-* The attribute *height* is only relevant for fixed platforms, and is referred to the vertical datum (see clause2.5.7).
+* The attribute *height* is only relevant for fixed platforms, and is referred to the vertical datum (see <<sec_2.5.7>>).
 * The attribute *vertical length* is only relevant for floating platforms, and is referred to the sea level.
-* If it is required to encode sites of dismantled platforms, this must be done using *Foul Ground* features (see clause 13.7), unless the source indicates that any remaining structure protrudes far enough above the seabed so as to be an obstruction to surface navigation, in which case this must be encoded using an *Obstruction* feature (see clause13.6).
-* Platforms may carry lights (see Section 19), fog signals (see clause 20.19), helicopter landing pads (see clause 6.5) and flare stacks. Where fitted, lights should be encoded as described in Section 19, with the *Offshore Platform* being used as the structure feature for the light equipment feature(s).
+* If it is required to encode sites of dismantled platforms, this must be done using *Foul Ground* features (see <<sec_13.7>>), unless the source indicates that any remaining structure protrudes far enough above the seabed so as to be an obstruction to surface navigation, in which case this must be encoded using an *Obstruction* feature (see <<sec_13.6>>).
+* Platforms may carry lights (see Section 19), fog signals (see <<sec_20.19>>), helicopter landing pads (see <<sec_6.5>>) and flare stacks. Where fitted, lights should be encoded as described in Section 19, with the *Offshore Platform* being used as the structure feature for the light equipment feature(s).
 
 [[sec_14.1.2]]
 ==== Wellheads (see S-4 -- B-445.1)
@@ -242,14 +242,14 @@ In the course of developing an oil or gas field, numerous wells may be drilled. 
 
 A submerged wellheadis a submarine structure projecting some distance above the seafloor and capping a temporarily abandoned (or "suspended") oil or gas well. Their associated pipes and other equipment usually project some 2 - 6 metres, but in some cases as much as 15 metres, above the seafloor. Some may be covered by steel cages to avoid snagging trawling gear. In certain instances, a wellhead may project above the sea surface. Wellheads must be encoded on at least the largest optimum display scale ENC data, together with associated buoys, as a hazard to fishing and, dependent on depth, as a hazard to deep-draught vessels and towed structures.
 
-If it is required to encode wellheads, this must be done using *Obstruction* features of type point (see clause 13.6), with attributes:*category of obstruction*- _2_ - wellhead**height****status**- _4_ - not in use (disused)**value of sounding****vertical length**- vertical length of the wellhead above the seabed**water level effect**- _2_ - always dry (for wellheads that protrude at high water)_3_ - always under water/submerged
+If it is required to encode wellheads, this must be done using *Obstruction* features of type point (see <<sec_13.6>>), with attributes:*category of obstruction*- _2_ - wellhead**height****status**- _4_ - not in use (disused)**value of sounding****vertical length**- vertical length of the wellhead above the seabed**water level effect**- _2_ - always dry (for wellheads that protrude at high water)_3_ - always under water/submerged
 
 [[sec_14.1.3]]
 ==== Offshore safety zones (see S-4 -- B-445.6)
 
 Under UNCLOS, a coastal State may establish safety zones around artificial islands, installations and structures in their EEZ and on their continental shelf. These installations include drilling rigs, production platforms, wellheads, moorings and other associated structures. Safety zones normally extend 500 metres from the outermost points of the installations. Within these zones, appropriate measures can be taken to ensure the safety of navigation and of the installations.
 
-If it is required to encode an offshore safety zone, it must be done using a *Restricted Area* feature (see clause 17.8), with attribute *category of restricted area* = _1_ (offshore safety zone).
+If it is required to encode an offshore safety zone, it must be done using a *Restricted Area* feature (see <<sec_17.8>>), with attribute *category of restricted area* = _1_ (offshore safety zone).
 
 [[sec_14.1.4]]
 ==== Offshore flare stacks (see S-4 -- B-445.2)
@@ -260,14 +260,14 @@ If it is required to indicate the presence of a flare stack on an offshore platf
 
 [underline]#Remarks:#
 
-* Flare stacks on land must be encoded, if required, using a *Landmark* feature (see clause7.2).
+* Flare stacks on land must be encoded, if required, using a *Landmark* feature (see <<sec_7.2>>).
 
 [underline]#Distinction:# Hulk; Landmark; Installation Buoy; Offshore Production Area; Wind Turbine.
 
 [[sec_14.2]]
 === Submarine cable
 
-[cols="609,794,794,794,794,794,794,794,294,539"]
+[cols="609,794,794,794,794,794,794,794,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *SUBMARINE CABLE*. An assembly of wires or fibres, or a wire rope or chain, which has been laid underwater or buried beneath the seafloor. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Cable Submarine (CBLSUB)*
@@ -294,7 +294,7 @@ If it is required to indicate the presence of a flare stack on an offshore platf
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -324,7 +324,7 @@ If it is required to indicate the presence of a flare stack on an offshore platf
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -341,7 +341,7 @@ If it is required to indicate the presence of a flare stack on an offshore platf
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -350,11 +350,11 @@ If it is required to indicate the presence of a flare stack on an offshore platf
 4: not in use +
 13: historic +
 18: existence doubtful | EN | 0,*
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -397,12 +397,12 @@ If it is required to indicate the presence of a flare stack on an offshore platf
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Component 3+| *Mooring Trot Aggregation* (see clause 25.10) 3+| *Mooring Trot* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+| The Component 3+| *Mooring Trot Aggregation* (see <<sec_25.10>>) 3+| *Mooring Trot* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
 
@@ -430,17 +430,17 @@ If it is required to encode a submarine cable, it must be done using the feature
 * If the buried depth varies along the cable, the cable must be encoded as several features.
 * Telecommunications cables such as telephone and optic fibre cable must be populated, where required, by populating attribute *category of cable* = _10_ (telecommunications cable).
 * Where a cable is disused, it should be encoded with the attribute *status* = _4_ (not in use), and the attribute *category of cable* should not be encoded. Few disused cables are recovered and so to encode them all would lead to clutter in the data. Also, accurate records of their positions are likely to be incomplete (some cables having been cut or dragged out of position), so there is a case for encoding them very selectively. Where disused cables traverse possible anchorages or where there is known seabed activity, for example trawling grounds, they should be encoded on the largest optimum display scale ENC data covering the area, provided they do not obscure more important information.
-* In certain circumstances, high voltage power cables may cause a deviation in a ship's magnetic compass; in these cases, where reports have been received, they should be treated as local magnetic anomalies (see clause4.2).
-* If it is required to provide the contact details of cable owners/operators (in cases of damage to a cable or for reparation for loss of an anchor in order to avoid such damage), this must be done using an associated instance of the information type *Contact Details* (see clause 24.1).
+* In certain circumstances, high voltage power cables may cause a deviation in a ship's magnetic compass; in these cases, where reports have been received, they should be treated as local magnetic anomalies (see <<sec_4.2>>).
+* If it is required to provide the contact details of cable owners/operators (in cases of damage to a cable or for reparation for loss of an anchor in order to avoid such damage), this must be done using an associated instance of the information type *Contact Details* (see <<sec_24.1>>).
 * Cables, buried so deep that they are not vulnerable to damage from anchoring, should not be encoded (so that Mariners are not unnecessarily inhibited from anchoring or fishing). In marginal cases they may be encoded as *Cable Submarine* with the nominal depth to which they are buried encoded using the attribute *buried depth*.
-* For encoding cables for mooring trots, see clause 8.23.
+* For encoding cables for mooring trots, see <<sec_8.23>>.
 
 [underline]#Distinction:# Cable Overhead; Cable Area.
 
 [[sec_14.3]]
 === Submarine cable area
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *SUBMARINE CABLE AREA*. An area which contains one or more submarine cables. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.70, November 2000, as amended).
 10+| *[underline]#S-101 Geo Feature:#* *Cable Area (CBLARE)*
@@ -456,7 +456,7 @@ If it is required to encode a submarine cable, it must be done using the feature
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -486,7 +486,7 @@ If it is required to encode a submarine cable, it must be done using the feature
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -503,7 +503,7 @@ If it is required to encode a submarine cable, it must be done using the feature
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -568,11 +568,11 @@ If it is required to encode a submarine cable, it must be done using the feature
 | (S) TE
 | 0,1
 
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -615,11 +615,11 @@ If it is required to encode a submarine cable, it must be done using the feature
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
 
@@ -641,16 +641,16 @@ If it is required to encode a submarine cable area, it must be done using the fe
 [underline]#Remarks:#
 
 * Where populated, the attribute *status* must only be used to encode the status of the area and not the status of the cables in the area.
-* For additional guidance regarding the encoding of vessel speed limits, see clause 17.4.
+* For additional guidance regarding the encoding of vessel speed limits, see <<sec_17.4>>.
 * The outer limits of a cable area must enclose the area in which anchoring and certain forms of fishing are prohibited or inadvisable; that is, the limits must lie a safe distance beyond the actual lines of the outermost cables.
-* If it is required to provide the contact details of cable owners/operators (in cases of damage to a cable or for reparation for loss of an anchor in order to avoid such damage), this must be done using an associated instance of the information type *Contact Details* (see clause 24.1).
+* If it is required to provide the contact details of cable owners/operators (in cases of damage to a cable or for reparation for loss of an anchor in order to avoid such damage), this must be done using an associated instance of the information type *Contact Details* (see <<sec_24.1>>).
 
 [underline]#Distinction:# Cable Overhead; Cable Submarine.
 
 [[sec_14.4]]
 === Pipeline
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *PIPELINE*. A connected set of pipes for conveying liquids, slurries, or gases. (Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2012).
 10+| *[underline]#S-101 Geo Feature:#* *Pipeline Submarine/On Land (PIPSOL)*
@@ -681,7 +681,7 @@ If it is required to encode a submarine cable area, it must be done using the fe
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -711,7 +711,7 @@ If it is required to encode a submarine cable area, it must be done using the fe
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -728,7 +728,7 @@ If it is required to encode a submarine cable area, it must be done using the fe
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -765,7 +765,7 @@ If it is required to encode a submarine cable area, it must be done using the fe
 9: milk +
 18: liquefied natural gas +
 19: liquefied petroleum gas | EN | 0,*
-3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| restriction 2+| (RESTRN) 3+|
 1: anchoring prohibited +
 3: fishing prohibited +
@@ -791,11 +791,11 @@ If it is required to encode a submarine cable area, it must be done using the fe
 4: not in use +
 7: temporary +
 12: illuminated | EN | 0,*
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -836,14 +836,14 @@ If it is required to encode a submarine cable area, it must be done using the fe
 | (S) TE
 | 0,1 ^†^
 
-3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
 
@@ -866,27 +866,27 @@ If it is required to encode a submarine or land pipeline, it must be done using 
 
 [underline]#Remarks:#
 
-* A pipeline that extends vertically from the seabed must be encoded, if required, as an *Obstruction* feature (see clause 13.6). A vertical pipeline on land must be encoded, if required, as a *Landmark* feature (see clause 7.2).
+* A pipeline that extends vertically from the seabed must be encoded, if required, as an *Obstruction* feature (see <<sec_13.6>>). A vertical pipeline on land must be encoded, if required, as a *Landmark* feature (see <<sec_7.2>>).
 * If the buried depth varies along a submerged pipeline, the pipeline must be encoded as several features.
 * The attributes *depth range minimum value* and *depth range maximum value* are used to encode the shallowest and deepest depth over the pipeline.
-* Where a bubble curtain pipeline is intended for the retention of oil, this must be encoded as an *Oil Barrier* feature (see clause 16.21), with attribute *category of oil barrier* = _1_ (oil retention -- high pressure pipe).
+* Where a bubble curtain pipeline is intended for the retention of oil, this must be encoded as an *Oil Barrier* feature (see <<sec_16.21>>), with attribute *category of oil barrier* = _1_ (oil retention -- high pressure pipe).
 * Where a pipeline is disused, it should be encoded with the attribute *status* = _4_ (not in use), and the attributes *category of pipeline/pipe* and *product* should not be encoded.
-* The term "sub-surface pipeline" is used to describe a pipeline that is "floating" in the water column (see S-4 -- B-444.9). If it is required to encode a sub-surface pipeline, this should be done using a *Pipeline Submarine/On Land* feature, with the attribute *depth range minimum value* populated with the minimum design depth over the pipeline. The attribute *depth range maximum value* may be populated with the maximum design depth over the pipeline. A picture file may be referenced using the attribute *pictorial representation* (see clause 2.4.12.2) if it is considered useful, for example a schematic diagram showing the clearances along the pipeline.
-* If it is required to provide the contact details of submerged pipeline owners/operators (in cases of damage to a pipeline or for reparation for loss of an anchor in order to avoid such damage), this must be done using an associated instance of the information type *Contact Details* (see clause 24.1).
+* The term "sub-surface pipeline" is used to describe a pipeline that is "floating" in the water column (see S-4 -- B-444.9). If it is required to encode a sub-surface pipeline, this should be done using a *Pipeline Submarine/On Land* feature, with the attribute *depth range minimum value* populated with the minimum design depth over the pipeline. The attribute *depth range maximum value* may be populated with the maximum design depth over the pipeline. A picture file may be referenced using the attribute *pictorial representation* (see <<sec_2.4.12.2>>) if it is considered useful, for example a schematic diagram showing the clearances along the pipeline.
+* If it is required to provide the contact details of submerged pipeline owners/operators (in cases of damage to a pipeline or for reparation for loss of an anchor in order to avoid such damage), this must be done using an associated instance of the information type *Contact Details* (see <<sec_24.1>>).
 * Submarine pipes, buried so deep that they are not vulnerable to damage from anchoring, should not be encoded (so that Mariners are not unnecessarily inhibited from anchoring or fishing). In marginal cases they may be encoded as *Pipeline Submarine/On Land* with the nominal depth to which they are buried encoded using the attribute *buried depth*.
 * Buried pipelines on land should not be encoded.
 
 [[sec_14.4.2]]
 ==== Diffusers, cribs
 
-If it is required to encode diffusers and cribs, this must be done using *Obstruction* features (see clause 13.6), with attribute *category of obstruction* = _3_ (diffuser) or _4_ (crib).
+If it is required to encode diffusers and cribs, this must be done using *Obstruction* features (see <<sec_13.6>>), with attribute *category of obstruction* = _3_ (diffuser) or _4_ (crib).
 
 [underline]#Distinction:# Pipeline Overhead, Submarine Pipeline Area.
 
 [[sec_14.5]]
 === Submarine pipeline area
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *SUBMARINE PIPELINE AREA*. An area containing one or more submarine pipelines. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.118, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Submarine Pipeline Area (PIPARE)*
@@ -904,7 +904,7 @@ If it is required to encode diffusers and cribs, this must be done using *Obstru
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -934,7 +934,7 @@ If it is required to encode diffusers and cribs, this must be done using *Obstru
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -951,7 +951,7 @@ If it is required to encode diffusers and cribs, this must be done using *Obstru
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -1030,11 +1030,11 @@ If it is required to encode diffusers and cribs, this must be done using *Obstru
 | (S) TE
 | 0,1
 
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -1077,11 +1077,11 @@ If it is required to encode diffusers and cribs, this must be done using *Obstru
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
 
@@ -1105,15 +1105,15 @@ If it is required to encode a submarine pipeline area, it must be done using the
 * Where populated, the attribute *status* must only be used to encode the status of the area and not the status of the pipelines in the area.
 * The outer limits of a pipeline area must correspond to the area in which anchoring, trawling and dredging are prohibited or inadvisable; that is, the limits must lie at a safe distance beyond the actual lines of the outermost pipes.
 * Where a pipeline area is disused, the *Submarine Pipeline Area* should be encoded with the attribute *status* = _4_ (not in use), and the attributes *category of pipeline/pipe* and *product* should not be encoded.
-* For additional guidance regarding the encoding of vessel speed limits, see clause 17.4.
-* If it is required to provide the contact details of submerged pipeline owners/operators (in cases of damage to a pipeline or for reparation for loss of an anchor in order to avoid such damage), this must be done using an associated instance of the information type *Contact Details* (see clause 24.1).
+* For additional guidance regarding the encoding of vessel speed limits, see <<sec_17.4>>.
+* If it is required to provide the contact details of submerged pipeline owners/operators (in cases of damage to a pipeline or for reparation for loss of an anchor in order to avoid such damage), this must be done using an associated instance of the information type *Contact Details* (see <<sec_24.1>>).
 
 [underline]#Distinction:# Pipeline Overhead; Pipeline Submarine/On Land.
 
 [[sec_14.6]]
 === Offshore production area
 
-[cols="539,804,804,804,804,804,804,804,294,539"]
+[cols="539,804,804,804,804,804,804,804,294,539",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *OFFSHORE PRODUCTION AREA*. An area at sea within which there are production facilities. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.113, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Offshore Production Area (OSPARE)*
@@ -1137,7 +1137,7 @@ If it is required to encode a submarine pipeline area, it must be done using the
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -1167,7 +1167,7 @@ If it is required to encode a submarine pipeline area, it must be done using the
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -1191,7 +1191,7 @@ If it is required to encode a submarine pipeline area, it must be done using the
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -1210,7 +1210,7 @@ If it is required to encode a submarine pipeline area, it must be done using the
 | BO
 | 0,1
 
-3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| restriction 2+| (RESTRN) 3+|
 1: anchoring prohibited +
 2: anchoring restricted +
@@ -1297,11 +1297,11 @@ If it is required to encode a submarine pipeline area, it must be done using the
 3: always under water/ submerged
 4: covers and uncovers +
 7: floating | EN | 0,1
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -1344,11 +1344,11 @@ If it is required to encode a submarine pipeline area, it must be done using the
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| ^†^ Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
 
@@ -1367,18 +1367,18 @@ If it is required to encode an offshore production area, it must be done using t
 
 [underline]#Remarks:#
 
-* For additional guidance regarding the encoding of vessel speed limits, see clause 17.4.
-* General information about a wind farm such as blade diameter and blade vertical clearance should be encoded, if required, using the complex attribute *information* (see clause 2.4.6). If it is required to encode individual offshore wind turbines, it should be done using a *Wind Turbine* feature (see clause 7.4).
-* If it is required to encode individual wave energy devices or underwater turbines within a wave or current farm (or turbine field), it should be done using an *Obstruction* feature (see clause 13.6) or, if there are associated surface structures, using appropriate features, for example*Offshore Platform* or *Special Purpose/General Beacon* (see clauses 14.1 and 20.12). The extent and nature of any restricted area related to the feature should be encoded using a *Restricted Area* feature(see clause17.8).
-* If it is required to encode an offshore development area, it should be done using an *Offshore Production Area* feature, with attributes *category of offshore production area* and *product* populated with the appropriate value; and *condition* = _1_ (under construction). A note describing the activities taking place within the area may be included using the complex attribute *information* (see clause 2.4.6). At the conclusion of the development of the area, the attribute *condition* and any associated note can then be removed from the feature.
+* For additional guidance regarding the encoding of vessel speed limits, see <<sec_17.4>>.
+* General information about a wind farm such as blade diameter and blade vertical clearance should be encoded, if required, using the complex attribute *information* (see <<sec_2.4.6>>). If it is required to encode individual offshore wind turbines, it should be done using a *Wind Turbine* feature (see <<sec_7.4>>).
+* If it is required to encode individual wave energy devices or underwater turbines within a wave or current farm (or turbine field), it should be done using an *Obstruction* feature (see <<sec_13.6>>) or, if there are associated surface structures, using appropriate features, for example*Offshore Platform* or *Special Purpose/General Beacon* (see clauses 14.1 and 20.12). The extent and nature of any restricted area related to the feature should be encoded using a *Restricted Area* feature(see <<sec_17.8>>).
+* If it is required to encode an offshore development area, it should be done using an *Offshore Production Area* feature, with attributes *category of offshore production area* and *product* populated with the appropriate value; and *condition* = _1_ (under construction). A note describing the activities taking place within the area may be included using the complex attribute *information* (see <<sec_2.4.6>>). At the conclusion of the development of the area, the attribute *condition* and any associated note can then be removed from the feature.
 
 [[sec_14.6.2]]
 ==== Offshore tanker loading systems (see S-4 -- B-445.4)
 
 Although the oil and gas from some fields are sent ashore by submarine pipeline, a variety of mooring systems have been developed for use in deep water and in the vicinity of certain ports, to allow the loading of large vessels and the permanent mooring of floating storage vessels or units. These offshore systems include large mooring buoys, designed for mooring vessels up to 500,000 tonnes, and platforms on structures fixed at their lower ends to the seafloor. They allow a vessel to moor forward or aft to them, and to swing to the wind or stream. Those which are fixed are termed Single Point Moorings(SPM). Those which are a form of mooring buoy are termed Single Buoy Moorings(SBM). Like production platforms, SPM and SBM normally have lights and fog signals.
 
-If it is required to encode an offshore tanker loading system, it must be done using the feature *Installation Buoy* (see clause 20.7).
+If it is required to encode an offshore tanker loading system, it must be done using the feature *Installation Buoy* (see <<sec_20.7>>).
 
-If it is required to encode an articulated tower, it must be done using an *Offshore Platform* feature (see clause 14.1), with attribute:*category of offshore platform* - _4_ - articulated loading platform__5__ - single anchor leg mooring__8__ - floating production, storage and off-loading vessel__10__ - navigation, communication and control buoy (which may include storage facilities)
+If it is required to encode an articulated tower, it must be done using an *Offshore Platform* feature (see <<sec_14.1>>), with attribute:*category of offshore platform* - _4_ - articulated loading platform__5__ - single anchor leg mooring__8__ - floating production, storage and off-loading vessel__10__ - navigation, communication and control buoy (which may include storage facilities)
 
 [underline]#Distinction:# Exclusive Economic Zone; Offshore Platform; Wind Turbine.

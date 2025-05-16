@@ -28,7 +28,7 @@
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -63,7 +63,7 @@
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -74,16 +74,16 @@
 | BO
 | 0,1
 
-3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
 2: not visually conspicuous +
 3: prominent | EN | 0,1
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -120,7 +120,7 @@
 | (S) TE
 | 0,1 footnote:crossnote[]
 
-3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 3+| in the water
 2+| 3+|
 
@@ -129,11 +129,11 @@
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 |===
@@ -151,10 +151,10 @@ If it is required to encode a built-up area, it must be done using the feature *
 
 * A built-up area crossed by curve features (for example roads, streets, railways) should not be divided into multiple features, unless separate sections of the built-up area have at least one different attribute value.
 * However, for presentation purposes, a built-up area of type surface crossed by a river or canal of type surface must be divided into several features, with the built-up area features not overlapping the river or canal feature. A built-up area of type surface should not overlap a lake, dock or lock basin feature of type surface.
-* Several buildings or built-up areas may be referred to by the same settlement, village or town name on the source. In such cases, the individual buildings or built-up areas should be encoded as separate unnamed features, using the features *Building* or **Built-Up Area**, and additionally, an *Administration Area* feature (see clause 16.8) covering the whole named area should be created with the name encoded using the attribute *feature name*. The encoded *Administration Area* feature should also have the attribute *jurisdiction* = _3_ (national sub-division).
+* Several buildings or built-up areas may be referred to by the same settlement, village or town name on the source. In such cases, the individual buildings or built-up areas should be encoded as separate unnamed features, using the features *Building* or **Built-Up Area**, and additionally, an *Administration Area* feature (see <<sec_16.8>>) covering the whole named area should be created with the name encoded using the attribute *feature name*. The encoded *Administration Area* feature should also have the attribute *jurisdiction* = _3_ (national sub-division).
 * *Built-Up Area* should be covered by *Land Area* features of type surface, or be coincident with *Land Area* features of type point.
 * Where the source indicates that a built-up area extends into navigable water (over *Depth Area* or *Unsurveyed Area* object(s)), the *Built-Up Area* should be extended over the water area and the Boolean attribute *in the water* must be set to _True_ to indicate that the feature is to be included in the ECDIS Base Display. The actual coastline should be encoded as **coastline**, having no value populated for *category of coastline*. There is no requirement to split the *Built-Up Area* into two separate features where it crosses the coastline; or to encode the "apparent" coastline (seaward edge of the built-up[ area). Underlying bathymetry (depth contours, soundings) may be encoded as required. Exceptionally, encoders may extend the underlying *Land Area* and *Coastline* features seaward to the "apparent" coastline. This encoding should be considered for generalization purposes on smaller scale ENCs. Where the built-up area extends over navigable water it is not required to encode any supporting structures (for example piles, stilts).
-* For encoding individual buildings over navigable water, see clause6.2.1.
+* For encoding individual buildings over navigable water, see <<sec_6.2.1>>.
 
 [underline]#Distinction:# Building; Landmark; Railway; Road.
 
@@ -211,7 +211,7 @@ If it is required to encode a built-up area, it must be done using the feature *
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -293,7 +293,7 @@ If it is required to encode a built-up area, it must be done using the feature *
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -329,7 +329,7 @@ If it is required to encode a built-up area, it must be done using the feature *
 | BO
 | 0,1
 
-3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
 4: not in use +
 7: temporary +
@@ -348,11 +348,11 @@ If it is required to encode a built-up area, it must be done using the feature *
 1: visually conspicuous +
 2: not visually conspicuous +
 3: prominent | EN | 0,1
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -389,7 +389,7 @@ If it is required to encode a built-up area, it must be done using the feature *
 | (S) TE
 | 0,1 footnote:crossnote[]
 
-3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 3+| in the water
 2+| 3+|
 
@@ -398,16 +398,16 @@ If it is required to encode a built-up area, it must be done using the feature *
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Structure 3+| *Structure/Equipment* (see clause 25.16) 3+| **Daymark**, **Distance Mark**, **Fog Signal**, **Helipad**, **Light Air Obstruction**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
-| The Component 3+| *Aids to Navigation Association* (see clause 25.2) 3+| **Deep Water Route**, **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
-| The Component 3+| *Range System Aggregation* (see clause 25.13) 3+| *Range System* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| **Daymark**, **Distance Mark**, **Fog Signal**, **Helipad**, **Light Air Obstruction**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Deep Water Route**, **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
+| The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<| footnote:crossnote[] The sub-attribute *colour pattern* is mandatory for buildings that have more than one value populated for the sub-attribute *colour*.
 
-Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 |===
@@ -431,12 +431,12 @@ If it is required to encode a building (other than a landmark, tank, silo or roo
 
 [underline]#Remarks:#
 
-* For landmarks, see clause 7.2; for silos, tanks and water towers, see clause7.3. For common encoding combinations, see clause7.1. For roofed structures such as boathouses erected or extending over navigable water to provide protection for a vessel or its cargo, see clause 8.7.
-* The feature association *Structure/Equipment* (see clause25.16) must only be used with *Building* features if the main purpose of the building is to act as an aid to navigation (for example a lighthouse).
+* For landmarks, see <<sec_7.2>>; for silos, tanks and water towers, see <<sec_7.3>>. For common encoding combinations, see <<sec_7.1>>. For roofed structures such as boathouses erected or extending over navigable water to provide protection for a vessel or its cargo, see <<sec_8.7>>.
+* The feature association *Structure/Equipment* (see <<sec_25.16>>) must only be used with *Building* features if the main purpose of the building is to act as an aid to navigation (for example a lighthouse).
 * A ruined building should be encoded in the same way as the feature in good condition, but with attribute *condition* = _2_ (ruined).
 * For an encoded *Building* feature located in navigable water, the Boolean attribute *in the water* must be set to _True_ to indicate that the feature is to be included in the ECDIS Base Display. Where such structures are located in the water it is not required to encode any supporting structures (for example piles, stilts).
-* If it is required to encode vertical and/or horizontal clearances and any other information relevant for allowing vessels to enter or berth beneath/within the structure, this must be done by encoding the structure using the feature *Structure Over Navigable Water* (see clause 8.7).
-* When a building is shown as a surface, indicating its true shape, and it is required to encode a prominent feature such as a tower or spire that is part of the structure, two features must be created (see Figure 6-1 below):
+* If it is required to encode vertical and/or horizontal clearances and any other information relevant for allowing vessels to enter or berth beneath/within the structure, this must be done by encoding the structure using the feature *Structure Over Navigable Water* (see <<sec_8.7>>).
+* When a building is shown as a surface, indicating its true shape, and it is required to encode a prominent feature such as a tower or spire that is part of the structure, two features must be created (see <<fig_6-1>> below):
 ** a *Building* feature of type surface for the main building,
 ** a *Landmark* feature of type point for the prominent feature.
 
@@ -489,7 +489,7 @@ A defined area on land (including any buildings, installations and equipment) in
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -517,11 +517,11 @@ A defined area on land (including any buildings, installations and equipment) in
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
-3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
@@ -532,11 +532,11 @@ A defined area on land (including any buildings, installations and equipment) in
 8: private +
 12: illuminated +
 14: public | EN | 0,*
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -573,14 +573,14 @@ A defined area on land (including any buildings, installations and equipment) in
 | (S) TE
 | 0,1 footnote:crossnote[]
 
-3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 |===
@@ -600,7 +600,7 @@ For ENC data at smaller optimum display scales, an airport should be encoded as 
 
 * If individual buildings are visually conspicuous, they must be encoded as separate features.
 * If it is required to encode the control tower, it must be done using a *Landmark* feature, with attributes *function* = _39_ (control) and *category of landmark* = _17_ (tower). If it is required to encode other buildings, thismust be done using the feature *Building*.
-* If it is required to encode a seaplane landing area, it must be done using the feature *Seaplane Landing Area* (see clause 16.5).
+* If it is required to encode a seaplane landing area, it must be done using the feature *Seaplane Landing Area* (see <<sec_16.5>>).
 * For navigational aids associated with air navigation, and air obstruction lights, see clauses related to navigational aids.
 
 [underline]#Distinction:# Helipad; Runway; Seaplane Landing Area.
@@ -625,7 +625,7 @@ For ENC data at smaller optimum display scales, an airport should be encoded as 
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -653,7 +653,7 @@ For ENC data at smaller optimum display scales, an airport should be encoded as 
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -667,7 +667,7 @@ For ENC data at smaller optimum display scales, an airport should be encoded as 
 3+| periodic date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,*
 
@@ -681,7 +681,7 @@ For ENC data at smaller optimum display scales, an airport should be encoded as 
 3+| | (S) TD
 | 1,1
 
-3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
@@ -692,11 +692,11 @@ For ENC data at smaller optimum display scales, an airport should be encoded as 
 8: private +
 12: illuminated +
 14: public | EN | 0,*
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -735,11 +735,11 @@ For ENC data at smaller optimum display scales, an airport should be encoded as 
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 |===
@@ -756,7 +756,7 @@ For larger optimum display scale ENC data, an airport should be encoded using a 
 [underline]#Remarks:#
 
 * Two or more crossing runways may be encoded as one surface.
-* If it is required to encode a seaplane landing area, it must be done using the feature *Seaplane Landing Area* (see clause 16.5).
+* If it is required to encode a seaplane landing area, it must be done using the feature *Seaplane Landing Area* (see <<sec_16.5>>).
 * For navigational aids associated with air navigation, and air obstruction lights, see clauses related to navigational aids.
 
 [underline]#Distinction:# Airport/Airfield; Helipad; Seaplane Landing Area.
@@ -781,7 +781,7 @@ For larger optimum display scale ENC data, an airport should be encoded using a 
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -809,7 +809,7 @@ For larger optimum display scale ENC data, an airport should be encoded using a 
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -823,7 +823,7 @@ For larger optimum display scale ENC data, an airport should be encoded using a 
 3+| periodic date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,*
 
@@ -837,7 +837,7 @@ For larger optimum display scale ENC data, an airport should be encoded using a 
 3+| | (S) TD
 | 1,1
 
-3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
@@ -848,11 +848,11 @@ For larger optimum display scale ENC data, an airport should be encoded using a 
 8: private +
 12: illuminated +
 14: public | EN | 0,*
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -891,12 +891,12 @@ For larger optimum display scale ENC data, an airport should be encoded using a 
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Equipment 3+| *Structure/Equipment* (see clause 25.16) 3+| **Building**, **Landmark**, *Offshore Platform* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+| The Equipment 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| **Building**, **Landmark**, *Offshore Platform* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 |===
@@ -910,9 +910,9 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 
 [underline]#Remarks:#
 
-* Heliports must be encoded, where required, using the feature *Airport/Airfield* (see clause 6.3). Where a heliport has been encoded, there is no requirement to indicate the individual helipads using *Helipad*.
-* If it is required to encode an area where helicopters may set down on water, it must be done using the feature *Seaplane Landing Area* (see clause 16.5).
-* Where a *Helipad* feature has been encoded as part of an offshore platform, it must be associated to the *Offshore Platform* feature (see clause 14.1) using the association *Structure/Equipment* (see clause 25.16).
+* Heliports must be encoded, where required, using the feature *Airport/Airfield* (see <<sec_6.3>>). Where a heliport has been encoded, there is no requirement to indicate the individual helipads using *Helipad*.
+* If it is required to encode an area where helicopters may set down on water, it must be done using the feature *Seaplane Landing Area* (see <<sec_16.5>>).
+* Where a *Helipad* feature has been encoded as part of an offshore platform, it must be associated to the *Offshore Platform* feature (see <<sec_14.1>>) using the association *Structure/Equipment* (see <<sec_25.16>>).
 * For navigational aids associated with air navigation, and air obstruction lights, see clauses related to navigational aids.
 
 [underline]#Distinction:# Airport/Airfield; Runway; Seaplane Landing Area.
@@ -973,7 +973,7 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -1001,7 +1001,7 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -1025,7 +1025,7 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -1049,7 +1049,7 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 | BO
 | 0,1
 
-3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
@@ -1061,11 +1061,11 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 1: visually conspicuous +
 2: not visually conspicuous +
 3: prominent | EN | 0,1
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -1102,23 +1102,23 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 | (S) TE
 | 0,1 footnote:crossnote[]
 
-3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Collection 3+| *Bridge Aggregation* (see clause 25.4) 3+| **Span Fixed**, **Span Opening**, **Pontoon**, *Pylon/Bridge Support* 2+| Aggregation | 0,1
-| The Structure 3+| *Structure/Equipment* (see clause 25.16) 3+| **Daymark**, **Distance Mark**, **Fog Signal**, **Light Air Obstruction**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
-| The Component 3+| *Aids to Navigation Association* (see clause 25.2) 3+| **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+| The Collection 3+| *Bridge Aggregation* (see <<sec_25.4>>) 3+| **Span Fixed**, **Span Opening**, **Pontoon**, *Pylon/Bridge Support* 2+| Aggregation | 0,1
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| **Daymark**, **Distance Mark**, **Fog Signal**, **Light Air Obstruction**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<| footnote:crossnote[] For bridges encoded over navigable water, the attribute *opening bridge* is mandatory.
 
 The attribute *category of opening bridge* is mandatory if *opening bridge* = _True_.
 
 The sub-attribute *colour pattern* is mandatory for bridges that have more than one value populated for the sub-attribute *colour*.
 
-Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
 
@@ -1130,7 +1130,7 @@ For each instance of **information**, at least one of the sub-attributes *file r
 [[sec_6.6.1]]
 ==== Bridges (see S4 -- B-381)
 
-If it is required to encode a bridge, it should be done using the feature *Bridge*. Bridges may be encoded over water that is navigable or non-navigable at the optimum display scale of the ENC data. Where the bridge is encoded over navigable water, associated features such as spans, pylons and pontoons of the bridge must be associated with the *Bridge* feature using the association *Bridge Aggregation* (see clause25.4) (that is, the *Bridge* feature has geometry of type curve or surface, or has no geometry). Where the bridge is encoded over non-navigable water, then it must be encoded, where required, using a *Bridge* feature having no component features (that is, the *Bridge* feature has geometry of type curve or surface); or as a *Landmark* feature (see clause 7.2) if the bridge has geometry of type point.
+If it is required to encode a bridge, it should be done using the feature *Bridge*. Bridges may be encoded over water that is navigable or non-navigable at the optimum display scale of the ENC data. Where the bridge is encoded over navigable water, associated features such as spans, pylons and pontoons of the bridge must be associated with the *Bridge* feature using the association *Bridge Aggregation* (see <<sec_25.4>>) (that is, the *Bridge* feature has geometry of type curve or surface, or has no geometry). Where the bridge is encoded over non-navigable water, then it must be encoded, where required, using a *Bridge* feature having no component features (that is, the *Bridge* feature has geometry of type curve or surface); or as a *Landmark* feature (see <<sec_7.2>>) if the bridge has geometry of type point.
 
 The value of the vertical clearance between (high) water level and any fixed overhead obstruction must always be given, where known, on the largest optimum display scale ENC data intended for navigation under the bridge, and for detailed passage planning. The datum above which clearances are given must be a high water level, preferably Highest Astronomical Tide (HAT), where the tide is appreciable. For bridges over navigable water, the value for the vertical clearance(s) must be encoded using the features *Span Fixed* or *Span Opening* (see clauses6.7and 6.8), with the clearance(s) populated using the complex attributes **vertical clearance fixed**, *vertical clearance closed* and/or **vertical clearance open**, and sub-attributes populated relevant to the span. In areas where the tidal range is not appreciable the datum above which clearances are given should be Mean Sea Level (MSL).
 
@@ -1139,12 +1139,12 @@ The value of the vertical clearance between (high) water level and any fixed ove
 * If it is required to encode the name of a bridge over navigable water, the *Bridge* should be encoded using geometry of type curve or surface, associated with all relevant components of the bridge using the association *Bridge Aggregation*. The extent of the geometry of the *Bridge* should utilise the geometry of all the components of the bridge so as to cover its full extent.
 * If it is required to encode the extent of an unnamed bridge over navigable water, this may be done using a *Bridge* feature having no geometry, associated with all relevant components of the bridge using the association *Bridge Aggregation*.
 * Water under a bridge must be encoded using the features **Depth Area**, *Dredged Area* or *Unsurveyed Area* (and appropriate *Depth Contour* and *Sounding* features) if the waterway is navigable at the optimum display scale for the ENC data, or using the feature *Land Area* if the waterway is not navigable at the optimum display scale for the ENC data.
-* When there is a fixed vertical clearance, closed vertical clearance, or open vertical clearance given for a bridge, it should be applied only to the portion of the bridge to which the clearance refers, using the features *Span Fixed* or *Span Opening* (see clauses6.7and 6.8). All encoded bridge spans must be associated with the *Bridge* feature using the association *Bridge Aggregation* (see clause25.4). See examples in the Figures below. If there are no vertical clearances given for a bridge and it is over water that is navigable at the optimum display scale of the ENC data, a single *Span Fixed* or *Span Opening* feature must be encoded covering the area of the bridge, having mandatory vertical clearance attributes populated with an empty (null) value.
-* The attribute *height* is used, where required, to encode the height of the highest point on the bridge structure (see clause2.5.7).
+* When there is a fixed vertical clearance, closed vertical clearance, or open vertical clearance given for a bridge, it should be applied only to the portion of the bridge to which the clearance refers, using the features *Span Fixed* or *Span Opening* (see clauses6.7and 6.8). All encoded bridge spans must be associated with the *Bridge* feature using the association *Bridge Aggregation* (see <<sec_25.4>>). See examples in the Figures below. If there are no vertical clearances given for a bridge and it is over water that is navigable at the optimum display scale of the ENC data, a single *Span Fixed* or *Span Opening* feature must be encoded covering the area of the bridge, having mandatory vertical clearance attributes populated with an empty (null) value.
+* The attribute *height* is used, where required, to encode the height of the highest point on the bridge structure (see <<sec_2.5.7>>).
 * If it is required to encode a bridge for which part or the entire span is moved aside or backwards, it must be done using a *Bridge* feature, with attributes *opening bridge* = _True_ and *category of opening bridge* = _7_ (drawbridge).
 * If it is required to encode a pontoon bridge where a pontoon section may be temporarily removed or rotated so as to allow passage of vessels, this must be done using a *Bridge* feature, with attributes *bridge construction* = _3_ (pontoon bridge), *opening bridge* = _True_ and *category of opening bridge* = _3_ (swing bridge).
-* If it is required to encode a distance mark that is included on or associated with a bridge, this must be done using the feature *Distance Mark* (see clause8.10).
-* In navigable water, bridge supports must be encoded, where possible, using a *Pylon/Bridge Support* feature (see clause 6.12), with attribute *category of pylon* = _4_ (bridge/pylon tower) or _5_ (bridge pier); or if the bridge is a pontoon bridge as *Pontoon* features (see clause 8.19).
+* If it is required to encode a distance mark that is included on or associated with a bridge, this must be done using the feature *Distance Mark* (see <<sec_8.10>>).
+* In navigable water, bridge supports must be encoded, where possible, using a *Pylon/Bridge Support* feature (see <<sec_6.12>>), with attribute *category of pylon* = _4_ (bridge/pylon tower) or _5_ (bridge pier); or if the bridge is a pontoon bridge as *Pontoon* features (see <<sec_8.19>>).
 * It is not mandatory to encode roads or railways on bridges.
 
 [[sec_6.6.2]]
@@ -1187,7 +1187,7 @@ image::figure-6-6.png[Shape12,240,84]
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -1224,7 +1224,7 @@ image::figure-6-6.png[Shape12,240,84]
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -1266,11 +1266,11 @@ image::figure-6-6.png[Shape12,240,84]
 29: nearly highest high water +
 30: highest astronomical tide +
 44: baltic sea chart datum 2000 | EN | 0,1
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -1307,16 +1307,16 @@ image::figure-6-6.png[Shape12,240,84]
 | (S) TE
 | 0,1 footnote:crossnote[]
 
-3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Component 3+| *Bridge Aggregation* (see clause 25.4) 3+| *Bridge* 2+| Association | 0,*
-| The Structure 3+| *Structure/Equipment* (see clause 25.16) 3+| **Daymark**, **Distance Mark**, **Fog Signal**, **Light Air Obstruction**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
-| The Component 3+| *Aids to Navigation Association* (see clause 25.2) 3+| **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+| The Component 3+| *Bridge Aggregation* (see <<sec_25.4>>) 3+| *Bridge* 2+| Association | 0,*
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| **Daymark**, **Distance Mark**, **Fog Signal**, **Light Air Obstruction**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<| footnote:crossnote[] For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
@@ -1327,7 +1327,7 @@ For each instance of **information**, at least one of the sub-attributes *file r
 [[sec_6.7.1]]
 ==== Span fixed
 
-If it is required to encode the clearance characteristics (vertical or horizontal) for any fixed part of a bridge between piers or supports, it must be done using the feature **Span Fixed**, which must be associated with the feature *Bridge* (see clause6.6) using the association *Bridge Aggregation* (see clause25.4). See clause6.6for examples of *Span Fixed* features aggregated to *Bridge*.
+If it is required to encode the clearance characteristics (vertical or horizontal) for any fixed part of a bridge between piers or supports, it must be done using the feature **Span Fixed**, which must be associated with the feature *Bridge* (see <<sec_6.6>>) using the association *Bridge Aggregation* (see <<sec_25.4>>). See <<sec_6.6>>for examples of *Span Fixed* features aggregated to *Bridge*.
 
 The value of the vertical clearance between (high) water level and any fixed overhead obstruction must always be given, where known, on the largest optimum display scale ENC data intended for navigation under the overhead obstruction, and for detailed passage planning. The datum above which clearances are given must be a high water level, preferably Highest Astronomical Tide (HAT), where the tide is appreciable. Clearances must be populated using the complex attribute *vertical clearance fixed* and sub-attributes populated relevant to the feature, rounded down to the nearest whole metre (unless under 10m, when metres and decimetres may be quoted). In areas where the tidal range is not appreciable the datum above which clearances are given should be Mean Sea Level (MSL).
 
@@ -1336,7 +1336,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 * *Span Fixed* features should only be encoded if the span is entirely or partly over navigable water at the optimum display scale for the ENC data.
 * Where the optimum display scale of the ENC data is such that individual spans on a fixed bridge over navigable water cannot be indicated, the entire bridge should be covered by a single *Span Fixed* feature, having attributes populated according to the most navigationally important span.
 * Value _13_ (low water) for attribute *vertical datum* is only applicable to enclosed (inland) waterways; and must not be used to indicate the reference datum for vertical clearances in tidal waters.
-* Where encoded, an associated instance of the cartographic feature *Text Placement* (see clause 23.1) relates to the positioning of the vertical and/or horizontal clearances for the span, where encoded.
+* Where encoded, an associated instance of the cartographic feature *Text Placement* (see <<sec_23.1>>) relates to the positioning of the vertical and/or horizontal clearances for the span, where encoded.
 
 * If available and considered important for route planning and/or monitoring, the vertical uncertainty associated with encoded vertical clearance values should also be encoded.
 
@@ -1357,7 +1357,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -1391,7 +1391,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -1481,11 +1481,11 @@ The value of the vertical clearance between (high) water level and any fixed ove
 29: nearly highest high water +
 30: highest astronomical tide +
 44: baltic sea chart datum 2000 | EN | 0,1
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -1522,16 +1522,16 @@ The value of the vertical clearance between (high) water level and any fixed ove
 | (S) TE
 | 0,1 footnote:crossnote[]
 
-3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Component 3+| *Bridge Aggregation* (see clause 25.4) 3+| *Bridge* 2+| Association | 0,*
-| The Structure 3+| *Structure/Equipment* (see clause 25.16) 3+| **Daymark**, **Distance Mark**, **Fog Signal**, **Light Air Obstruction**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
-| The Component 3+| *Aids to Navigation Association* (see clause 25.2) 3+| **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+| The Component 3+| *Bridge Aggregation* (see <<sec_25.4>>) 3+| *Bridge* 2+| Association | 0,*
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| **Daymark**, **Distance Mark**, **Fog Signal**, **Light Air Obstruction**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<| footnote:crossnote[] For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 The sub-attribute *vertical clearance value* for the complex attribute *vertical clearance open* is mandatory if the sub-attribute *vertical clearance unlimited* is set to _False_.
@@ -1544,7 +1544,7 @@ For each instance of **information**, at least one of the sub-attributes *file r
 [[sec_6.8.1]]
 ==== Span opening
 
-If it is required to encode the clearance characteristics (vertical or horizontal) for an opening part of a bridge between piers or supports, it must be done using the feature **Span Opening**, which must be associated with the feature *Bridge* (see clause6.6) using the association *Bridge Aggregation* (see clause25.4). See clause6.6for examples of *Span Opening* features used in conjunction with *Bridge* features.
+If it is required to encode the clearance characteristics (vertical or horizontal) for an opening part of a bridge between piers or supports, it must be done using the feature **Span Opening**, which must be associated with the feature *Bridge* (see <<sec_6.6>>) using the association *Bridge Aggregation* (see <<sec_25.4>>). See <<sec_6.6>>for examples of *Span Opening* features used in conjunction with *Bridge* features.
 
 The value of the vertical clearance between (high) water level and any opening overhead obstruction must always be given, where known, on the largest optimum display scale ENC data intended for navigation under the overhead obstruction, and for detailed passage planning. The datum above which clearances are given must be a high water level, preferably Highest Astronomical Tide (HAT), where the tide is appreciable. Clearances must be populated using the complex attributes *vertical clearance closed* and *vertical clearance open* for the span and sub-attributes populated relevant to the feature, rounded down to the nearest whole metre (unless under 10m, when metres and decimetres may be quoted). In areas where the tidal range is not appreciable the datum above which clearances are given should be Mean Sea Level (MSL).
 
@@ -1554,9 +1554,9 @@ The value of the vertical clearance between (high) water level and any opening o
 * Where the optimum display scale of the ENC data is such that individual spans over navigable water cannot be indicated, the entire bridge should be covered by a single *Span Opening* feature, having attributes populated according to the opening span.
 
 * The complex attributes *vertical clearance closed* and *vertical clearance open* must be encoded for both the opening (vertical open) and closed (vertical closed) clearance values. Where the open vertical clearance is unlimited, the Boolean sub-attribute *vertical clearance unlimited* must be set to _True_.
-* Where it is required to encode time schedule information relating to the opening and closing times for the span, including any scheduled closure times or amended schedules for festivals or national holidays, this should be done using an associated instance of the information types *Service Hours* (see clause 24.2) and/or *Non-Standard Working Day* (see clause 24.3).
+* Where it is required to encode time schedule information relating to the opening and closing times for the span, including any scheduled closure times or amended schedules for festivals or national holidays, this should be done using an associated instance of the information types *Service Hours* (see <<sec_24.2>>) and/or *Non-Standard Working Day* (see <<sec_24.3>>).
 * Value _13_ (low water) for attribute *vertical datum* is only applicable to enclosed (inland) waterways; and must not be used to indicate the reference datum for vertical clearances in tidal waters.
-* Where encoded, an associated instance of the cartographic feature *Text Placement* (see clause 23.1) relates to the positioning of the vertical and/or horizontal clearances for the span, where encoded.
+* Where encoded, an associated instance of the cartographic feature *Text Placement* (see <<sec_23.1>>) relates to the positioning of the vertical and/or horizontal clearances for the span, where encoded.
 
 * If available and considered important for route planning and/or monitoring, the vertical uncertainty associated with encoded vertical clearance values should also be encoded.
 
@@ -1606,7 +1606,7 @@ The value of the vertical clearance between (high) water level and any opening o
 2: ruined +
 5: planned construction | EN | 0,1 3+| feature name 2+|
 
-3+| See clause 2.5.8 | C | 0,*
+3+| See <<sec_2.5.8>> | C | 0,*
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
@@ -1622,7 +1622,7 @@ The value of the vertical clearance between (high) water level and any opening o
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -1646,7 +1646,7 @@ The value of the vertical clearance between (high) water level and any opening o
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -1697,7 +1697,7 @@ The value of the vertical clearance between (high) water level and any opening o
 | BO
 | 0,1
 
-3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
 4: not in use +
 12: illuminated | EN | 0,*
@@ -1760,11 +1760,11 @@ The value of the vertical clearance between (high) water level and any opening o
 1: visually conspicuous +
 2: not visually conspicuous +
 3: prominent | EN | 0,1
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -1801,18 +1801,18 @@ The value of the vertical clearance between (high) water level and any opening o
 | (S) TE
 | 0,1 footnote:crossnote[]
 
-3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Structure 3+| *Structure/Equipment* (see clause 25.16) 3+| **Daymark**, **Distance Mark**, **Fog Signal**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
-| The Component 3+| *Aids to Navigation Association* (see clause 25.2) 3+| **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| **Daymark**, **Distance Mark**, **Fog Signal**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, **Non-Standard Working Day**, **Service Hours**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<| footnote:crossnote[] The attribute *colour pattern* is mandatory for conveyors that have more than one value populated for the attribute *colour*.
 
-Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
 
@@ -1833,7 +1833,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 [underline]#Remarks:#
 
 * If it is required to encode an overhead cable car, it must be done using a *Conveyor* feature, with attribute *category of conveyor* = _1_ (aerial cableway).
-* In navigable water, conveyor supports must be encoded, where possible, using a *Pylon/Bridge Support* feature (see clause6.11), with attribute *category of pylon* = _3_ (aerial cableway pylon).
+* In navigable water, conveyor supports must be encoded, where possible, using a *Pylon/Bridge Support* feature (see <<sec_6.11>>), with attribute *category of pylon* = _3_ (aerial cableway pylon).
 * Value _13_ (low water) for attribute *vertical datum* is only applicable to enclosed (inland) waterways; and must not be used to indicate the reference datum for vertical clearances in tidal waters.
 
 * If available and considered important for route planning and/or monitoring, the vertical uncertainty associated with encoded vertical clearance values should also be encoded.
@@ -1862,7 +1862,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -1886,7 +1886,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -1914,7 +1914,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -1943,7 +1943,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 | BO
 | 0,1
 
-3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 4: not in use +
@@ -2035,11 +2035,11 @@ The value of the vertical clearance between (high) water level and any fixed ove
 1: visually conspicuous +
 2: not visually conspicuous +
 3: prominent | EN | 0,1
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -2078,16 +2078,16 @@ The value of the vertical clearance between (high) water level and any fixed ove
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Structure 3+| *Structure/Equipment* (see clause 25.16) 3+| *Radar Reflector* 2+| Composition | 0,1
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Radar Reflector* 2+| Composition | 0,1
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<| footnote:crossnote[] For overhead cables over navigable water, one of the attributes *vertical clearance fixed* or *vertical clearance safe* must be populated.
 
 At least one of the sub-attributes *date end* or *date start* must be populated.
 
-Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 |===
@@ -2105,9 +2105,9 @@ For power cables or transmission lines carrying very high voltages, an additiona
 
 [underline]#Remarks:#
 
-* If it is required to encode telepheric cables, this must be done using *Conveyor* features (see clause 6.8), with attribute CATCON = _1_ (aerial cableway).
-* Where a cable has radar reflectors at known positions, they must be encoded as separate *Radar Reflector* features (see clause 20.18). If the whole cable is radar conspicuous, the optimum display scale for the ENC data is too small to show individual reflectors, or the positions of the radar reflectors are not known, the *Cable Overhead* should be encoded with attribute *radar conspicuous*.
-* In navigable water, overhead cable supports must be encoded, where possible, using a *Pylon/Bridge Support* feature (see clause6.12), with attribute *category of pylon* = _1_ or _2_.
+* If it is required to encode telepheric cables, this must be done using *Conveyor* features (see <<sec_6.8>>), with attribute CATCON = _1_ (aerial cableway).
+* Where a cable has radar reflectors at known positions, they must be encoded as separate *Radar Reflector* features (see <<sec_20.18>>). If the whole cable is radar conspicuous, the optimum display scale for the ENC data is too small to show individual reflectors, or the positions of the radar reflectors are not known, the *Cable Overhead* should be encoded with attribute *radar conspicuous*.
+* In navigable water, overhead cable supports must be encoded, where possible, using a *Pylon/Bridge Support* feature (see <<sec_6.12>>), with attribute *category of pylon* = _1_ or _2_.
 * Value _13_ (low water) for attribute *vertical datum* is only applicable to enclosed (inland) waterways; and must not be used to indicate the reference datum for vertical clearances in tidal waters.
 
 * If available and considered important for route planning and/or monitoring, the vertical uncertainty associated with encoded vertical clearance values should also be encoded.
@@ -2119,16 +2119,14 @@ For power cables or transmission lines carrying very high voltages, an additiona
 
 [cols="154,201,201,201,201,201,201,201,201,84,154", options="unnumbered"]
 |===
-11+.<h| IHO Definition: *OVERHEAD PIPELINE*. A string of interconnected pipes, supported by pylons and passing over or nearby navigable waters, used for the transport of matter, nowadays mainly oil or gas. (Adapted from IHO Dictionary -- S-32 and S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.119, November 2000).
+11+| [underline]#IHO Definition:# *OVERHEAD PIPELINE*. A string of interconnected pipes, supported by pylons and passing over or nearby navigable waters, used for the transport of matter, nowadays mainly oil or gas. (Adapted from IHO Dictionary -- S-32 and S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.119, November 2000).
 11+| *[underline]#S-101 Geo Feature:#* *Pipeline Overhead (PIPOHD)*
 11+| *[underline]#Primitives:#* *Curve*
-3+| _Real World_
 
-4+| _Paper Chart Symbol_
+3+| _Real World_  4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
-4+| _ECDIS Symbol_
+4+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 
-4+| *S-101 Attribute* 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 4+| category of pipeline/pipe 2+| (CATPIP) 3+|
 2: outfall pipe  +
 3: intake pipe +
@@ -2140,7 +2138,7 @@ For power cables or transmission lines carrying very high voltages, an additiona
 4+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -2168,7 +2166,7 @@ For power cables or transmission lines carrying very high voltages, an additiona
 4+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -2185,7 +2183,7 @@ For power cables or transmission lines carrying very high voltages, an additiona
 4+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -2225,7 +2223,7 @@ For power cables or transmission lines carrying very high voltages, an additiona
 | BO
 | 0,1
 
-4+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
+4+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 4+| status 2+| (STATUS) 3+|
 1: permanent +
 4: not in use +
@@ -2283,11 +2281,11 @@ For power cables or transmission lines carrying very high voltages, an additiona
 1: visually conspicuous +
 2: not visually conspicuous +
 3: prominent | EN | 0,1
-4+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+4+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 4+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -2326,17 +2324,17 @@ For power cables or transmission lines carrying very high voltages, an additiona
 
 11+| *Feature Associations*
 2+| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-2+| The Structure 3+| *Structure/Equipment* (see clause 25.16) 3+| *Radar Reflector* 2+| Composition | 0,1
-2+| The Component 3+| *Aids to Navigation Association* (see clause 25.2) 3+| **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
-2+| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 4+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-2+| - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
-2+| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+2+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Radar Reflector* 2+| Composition | 0,1
+2+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
+2+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 4+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+2+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
+2+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 11+.<| footnote:crossnote[] For overhead pipelines over navigable water, the attribute *vertical clearance fixed* is mandatory.
 
 At least one of the sub-attributes *date end* or *date start* must be populated.
 
-Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 |===
@@ -2353,8 +2351,8 @@ The value of the vertical clearance between (high) water level and any fixed ove
 [underline]#Remarks:#
 
 * Where an overhead pipeline is disused, it should be encoded with the attribute *status* = _4_ (not in use), and the attributes *category of pipe* and *product* must not be encoded.
-* Where a pipeline has radar reflectors at known positions, they must be encoded as separate *Radar Reflector* features (see clause20.18). If the whole pipeline is radar conspicuous, the optimum display scale for the ENC data is too small to show individual reflectors, or the positions of the radar reflectors are not known, the *Pipeline Overhead* should be encoded with attribute *radar conspicuous*.
-* In navigable water, overhead pipeline supports must be encoded, where possible, using a *Pylon/Bridge Support* feature (see clause6.12), with attribute *category of pylon* = _6_ (pipeline pylon).
+* Where a pipeline has radar reflectors at known positions, they must be encoded as separate *Radar Reflector* features (see <<sec_20.18>>). If the whole pipeline is radar conspicuous, the optimum display scale for the ENC data is too small to show individual reflectors, or the positions of the radar reflectors are not known, the *Pipeline Overhead* should be encoded with attribute *radar conspicuous*.
+* In navigable water, overhead pipeline supports must be encoded, where possible, using a *Pylon/Bridge Support* feature (see <<sec_6.12>>), with attribute *category of pylon* = _6_ (pipeline pylon).
 * Value _13_ (low water) for attribute *vertical datum* is only applicable to enclosed (inland) waterways; and must not be used to indicate the reference datum for vertical clearances in tidal waters.
 
 * If available and considered important for route planning and/or monitoring, the vertical uncertainty associated with encoded vertical clearance values should also be encoded.
@@ -2408,7 +2406,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -2436,7 +2434,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 3+| fixed date range
 2+|
 
-3+| See clause 2.4.8
+3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -2460,7 +2458,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -2495,7 +2493,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 | BO
 | 0,1
 
-3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
 4: not in use +
 12: illuminated | EN | 0,*
@@ -2517,11 +2515,11 @@ The value of the vertical clearance between (high) water level and any fixed ove
 4: covers and uncovers +
 5: awash +
 6: subject to inundation or flooding | EN | 0,1
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -2558,20 +2556,20 @@ The value of the vertical clearance between (high) water level and any fixed ove
 | (S) TE
 | 0,1 footnote:crossnote[]
 
-3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Component 3+| *Bridge Aggregation* (see clause 25.4) 3+| *Bridge* 2+| Association | 0,*
-| The Structure 3+| *Structure/Equipment* (see clause 25.16) 3+| **Bollard**, **Daymark**, **Distance Mark**, **Fog Signal**, **Light Air Obstruction**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
-| The Component 3+| *Aids to Navigation Association* (see clause 25.2) 3+| **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
-| The Roofed Support 3+| *Roofed Structure Aggregation* (see clause 25.14) 3+| *Structure Over Navigable Water* 2+| Association | 0,*
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+| The Component 3+| *Bridge Aggregation* (see <<sec_25.4>>) 3+| *Bridge* 2+| Association | 0,*
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| **Bollard**, **Daymark**, **Distance Mark**, **Fog Signal**, **Light Air Obstruction**, **Light All Around**, **Light Fog Detector**, **Light Sectored**, **Physical AIS Aid to Navigation**, **Radar Transponder Beacon**, **Retroreflector**, **Signal Station Traffic**, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| **Fairway System**, **Traffic Separation Scheme**, *Two-Way Route* 2+| Association | 0,*
+| The Roofed Support 3+| *Roofed Structure Aggregation* (see <<sec_25.14>>) 3+| *Structure Over Navigable Water* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<| footnote:crossnote[] The attribute *colour pattern* is mandatory for pylons that have more than one value populated for the attribute *colour*.
 
-Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **fixed date range**, at least one of the sub-attributes *date end* or *date start* must be populated.
 
@@ -2588,7 +2586,7 @@ The actual position of pylons supporting bridges, pipelines and cables must be i
 
 [underline]#Remarks:#
 
-* A *Pylon/Bridge Support* feature of type surface with attribute *water level effect* = __1__, _2_ or _6_ must be covered by a *Land Area* feature of type surface (see clause 5.4).
+* A *Pylon/Bridge Support* feature of type surface with attribute *water level effect* = __1__, _2_ or _6_ must be covered by a *Land Area* feature of type surface (see <<sec_5.4>>).
 
 [underline]#Distinction:# Landmark.
 
@@ -2643,7 +2641,7 @@ The actual position of pylons supporting bridges, pipelines and cables must be i
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -2678,7 +2676,7 @@ The actual position of pylons supporting bridges, pipelines and cables must be i
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -2696,7 +2694,7 @@ The actual position of pylons supporting bridges, pipelines and cables must be i
 | BO
 | 0,1
 
-3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 7: temporary +
@@ -2713,11 +2711,11 @@ The actual position of pylons supporting bridges, pipelines and cables must be i
 1: visually conspicuous +
 2: not visually conspicuous +
 3: prominent | EN | 0,1
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -2756,13 +2754,13 @@ The actual position of pylons supporting bridges, pipelines and cables must be i
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<| footnote:crossnote[] The attribute *colour pattern* is mandatory for fences or walls that have more than one value populated for the attribute *colour*.
 
-Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
@@ -2800,7 +2798,7 @@ If it is required to encode a fence or wall, it must be done using the feature *
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -2835,11 +2833,11 @@ If it is required to encode a fence or wall, it must be done using the feature *
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
-3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 4: not in use +
@@ -2847,11 +2845,11 @@ If it is required to encode a fence or wall, it must be done using the feature *
 12: illuminated +
 13: historic +
 14: public | EN | 0,*
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -2890,13 +2888,13 @@ If it is required to encode a fence or wall, it must be done using the feature *
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 10+.<| footnote:crossnote[] For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 |===
 
@@ -2944,7 +2942,7 @@ If it is required to encode a railway, it must be done using the feature *Railwa
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -2972,14 +2970,14 @@ If it is required to encode a railway, it must be done using the feature *Railwa
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
 3+| nature of construction 2+| (NATCON) 3+|
 4: hard surfaced +
 5: unsurfaced | EN | 0,*
-3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 4: not in use +
@@ -2989,11 +2987,11 @@ If it is required to encode a railway, it must be done using the feature *Railwa
 12: illuminated +
 13: historic +
 14: public | EN | 0,*
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -3032,11 +3030,11 @@ If it is required to encode a railway, it must be done using the feature *Railwa
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
@@ -3078,7 +3076,7 @@ If it is required to encode a road or track, it must be done using the feature *
 3+| feature name
 2+|
 
-3+| See clause 2.5.8
+3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
@@ -3126,11 +3124,11 @@ If it is required to encode a road or track, it must be done using the feature *
 3+| interoperability identifier
 2+|
 
-3+| MRN (see clause 27.114)
+3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
-3+| reported date 2+| _(SORDAT)_ 3+| See clause 2.4.8 | TD | 0,1
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 3: recommended +
@@ -3186,11 +3184,11 @@ If it is required to encode a road or track, it must be done using the feature *
 29: nearly highest high water +
 30: highest astronomical tide +
 44: baltic sea chart datum 2000 | EN | 0,1
-3+| scale minimum 2+| (SCAMIN) 3+| See clause 2.5.9 | IN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+|
 
-3+| See clause 2.4.6
+3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
@@ -3227,14 +3225,14 @@ If it is required to encode a road or track, it must be done using the feature *
 | (S) TE
 | 0,1 footnote:crossnote[]
 
-3+| pictorial representation 2+| (PICREP) 3+| See clause 2.4.12.2 | TE | 0,1
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
-| The Updated Object 3+| *Updated Information* (see clause 25.21) 3+| *Update Information* 2+| Association | 0,*
-| The Position Provider 3+| *Text Association* (see clause 25.17). 3+| *Text Placement* 2+| Composition | 0,1
-| - 3+| *Additional Information* (see clause 25.1) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
-| - 3+| *Spatial Association* (see clause 25.15) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See clause 2.5.8.
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| **Contact Details**, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+10+.<| footnote:crossnote[] Complex attribute **feature name**, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of **information**, at least one of the sub-attributes *file reference* or *text* must be populated.
 
@@ -3249,8 +3247,8 @@ If it is required to encode a tunnel, it must be done using the feature *Tunnel*
 
 [underline]#Remarks:#
 
-* If there is a waterway inside the tunnel, and the waterway is navigable at the optimum display scale for the ENC data, it must be encoded as if it were a navigable canal (see clause 8.9.1), using the features *Depth Area* or *Dredged Area* in conjunction with the *Tunnel* feature. There must be no *Land Area* feature in the area covering the waterway.
-* If it is required to encode a waterway inside a tunnel that is not navigable at the optimum display scale for the ENC data, it must be done using the feature *Canal* (see clause 8.9) in conjunction with the *Tunnel* feature. A *Land Area* feature must cover the tunnel. The complex attributes *horizontal clearance**fixed* and *vertical clearance fixed* mustnot be encoded on the *Tunnel* feature in this case.
+* If there is a waterway inside the tunnel, and the waterway is navigable at the optimum display scale for the ENC data, it must be encoded as if it were a navigable canal (see <<sec_8.9.1>>), using the features *Depth Area* or *Dredged Area* in conjunction with the *Tunnel* feature. There must be no *Land Area* feature in the area covering the waterway.
+* If it is required to encode a waterway inside a tunnel that is not navigable at the optimum display scale for the ENC data, it must be done using the feature *Canal* (see <<sec_8.9>>) in conjunction with the *Tunnel* feature. A *Land Area* feature must cover the tunnel. The complex attributes *horizontal clearance**fixed* and *vertical clearance fixed* mustnot be encoded on the *Tunnel* feature in this case.
 * If it is required to encode a tunnel that has no waterway inside it (but a railway, road etc), only the *Tunnel* feature must be encoded (the section of railway or road inside the tunnel must not be encoded), covered by **Land Area**, **Depth Area**, *Dredged Area* or *Unsurveyed Area* features as appropriate. The complex attributes *horizontal clearance**fixed* and *vertical clearance fixed* mustnot be encoded on the *Tunnel* feature in this case.
 * Value _13_ (low water) for attribute *vertical datum* is only applicable to enclosed (inland) waterways; and must not be used to indicate the reference datum for vertical clearances in tidal waters.
 
