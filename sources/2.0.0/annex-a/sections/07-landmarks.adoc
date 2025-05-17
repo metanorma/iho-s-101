@@ -1559,7 +1559,8 @@ If it is required to encode a fortified structure, it must be done using the fea
 6: timber yard +
 7: factory area +
 8: tank farm +
-9: wind farm10: slag heap/spoil heap
+9: wind farm +
+10: slag heap/spoil heap +
 11: production plant +
 12: solar farm | EN | 1,1
 3+| condition 2+| (CONDTN) 3+|

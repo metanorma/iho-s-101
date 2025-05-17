@@ -289,7 +289,7 @@ The spatial attribute *quality of horizontal measurement* should be set to _4_ (
 
 * For rocks which do not cover (islets), see <<sec_5.4.2>>.
 * All *Underwater/Awash Rock* features should be encoded using one of the above combinations of attributes.
-* The minimum depth, if known, over any submerged rock, must be encoded using the attribute *value of sounding*. Where *value of sounding* is populated with an empty (null) value, display of the rock in ECDIS as an underwater hazard, in accordance with the Mariner's selected safety depth, will be dependent on the value populated for the ECDIS "system" attribute *default clearance depth* (see clauses 2.4.5.1, 30.1 and 8^th^ bullet below).
+* The minimum depth, if known, over any submerged rock, must be encoded using the attribute *value of sounding*. Where *value of sounding* is populated with an empty (null) value, display of the rock in ECDIS as an underwater hazard, in accordance with the Mariner's selected safety depth, will be dependent on the value populated for the ECDIS "system" attribute *default clearance depth* (see <<sec_2.4.5.1;and!sec_30.1>> and 8^th^ bullet below).
 * An instance of the information type *Spatial Quality* (see <<sec_25.4>>) may be associated to the rock point geometry, using the association *Spatial Association*, to indicate, where required, that the horizontal position and/or the vertical uncertainty for the rock is of different (higher or lower) accuracy than indicated by the underlaying *Quality of Bathymetric Data* Meta feature (see <<sec_3.8>>). Where *Spatial Quality* is associated to the rock and*value of sounding* is populated with an empty (null) value, the value for the attribute *vertical uncertainty* (*uncertainty fixed*) on the associated *Spatial Quality*, where required, must also be populated as empty (null). See also <<sec_3.8.1.3>>(Sounding uncertainty).
 * Where *Underwater/Awash Rock* is encoded, there must be no *Sounding* feature encoded coincident.
 * For area rock and coral reef features, see <<sec_12.1.1>>.
@@ -655,15 +655,13 @@ h| Wrecks... h| S-4 h| INT 1 h| category of wreck h| water level effect h| quali
 
 |===
 
-
-
 All wrecks should be encoded using one of the above combinations of attributes. \* For a wreck where the least depth is unknown, the attribute value _2_ (depth or least depth unknown) for *quality of vertical measurement* does not apply to the depth of the seabed near the wreck. The provision of more quantitative information for wrecks where possible is particularly important in terms of the portrayal of wrecks in ECDIS, as the classification of wrecks as "dangerous" or "non-dangerous" is not taken into account in ECDIS when symbolizing *Wreck* features outside *Unsurveyed Area*. This often results in wrecks located in *Depth Area* or *Dredged Area* being symbolized as an obstruction to navigation where they are actually non-dangerous. Where the depth of the wreck is unknown, compilers should consider determining an estimated safe clearance value (see S-4 -- B-422.5) and populating *quality of vertical measurement* = _7_ (least depth unknown, safe clearance at value shown).
 
 [underline]#Remarks:#
 
 * Only one of the attributes *category of wreck* or *value of sounding* must be populated, not both.
 * The attribute *height* is only relevant for wrecks having attribute *water level effect* = _1_ (partly submerged at high water) or _2_ (always dry). Where *height* is populated, the attribute *value of sounding* must not be populated.
-* The minimum depth, if known, over any submerged wreck, must be encoded using the attribute *value of sounding*. Where *value of sounding* is populated with an empty (null) value, display of the wreck in ECDIS as an underwater hazard, in accordance with the Mariner's selected safety depth, will be dependent on the value populated for the ECDIS "system" attribute *default clearance depth* (see clauses 2.4.5.1 and 30.1 and 8^th^ bullet below).
+* The minimum depth, if known, over any submerged wreck, must be encoded using the attribute *value of sounding*. Where *value of sounding* is populated with an empty (null) value, display of the wreck in ECDIS as an underwater hazard, in accordance with the Mariner's selected safety depth, will be dependent on the value populated for the ECDIS "system" attribute *default clearance depth* (see <<sec_2.4.5.1;and!sec_30.1>> and 8^th^ bullet below).
 * An instance of the information type *Spatial Quality* (see <<sec_25.4>>) may be associated to the wreck geometry, using the association *Spatial Association*, to indicate, where required, that the horizontal position and/or the vertical uncertainty for the wreck is of different (higher or lower) accuracy than indicated by the underlying *Quality of Bathymetric Data* Meta feature (see <<sec_3.8>>). Where *Spatial Quality* is associated to the wreck and*height* (when *water level effect* = _1_ (partly submerged at high water) or _2_ (always dry)) or *value of sounding* is populated with an empty (null) value, the value for the complex attribute *vertical uncertainty* (*uncertainty fixed*) on the associated *Spatial Quality*, where required, must also be populated as empty (null). See also <<sec_3.8.1.3>> (Sounding uncertainty).
 * For reported, not confirmed wrecks, the date of the report must be populated, where known, using the attribute *reported date*.
 * The distributed remains of a wreck must be encoded, where required, as a *Wreck* feature with attribute *category of wreck* = _3_ (distributed remains of wreck). Even though the wreck may be safe for surface vessels to navigate over the wreck, it must not be encoded as foul ground (see <<sec_13.7>>).
@@ -982,8 +980,6 @@ h| Obstruction... h| INT 1 h| water level effect h| quality of vertical measurem
 
 |===
 
-
-
 All obstructions should be encoded using one of the above combinations of attributes.\* For an obstruction where the least depth is unknown, the attribute value _2_ (depth or least depth unknown) for *quality of vertical measurement* does not apply to the depth of the seabed near the obstruction.
 
 It is important when encoding obstructions to be aware of the distinction between attribute value *category of obstruction* = _6_ (foul area) and foul ground: Foul areas are defined as areas of numerous uncharted dangers to navigation. When encoded on ENC, *Obstruction* features of type surface with attribute *category of obstruction* = _6_ (foul area) will display in the ECDIS "base display" as an obstruction to navigation, with all associated alarms to indicate that it is unsafe for vessels to enter or transit the area.
@@ -997,7 +993,7 @@ Foul ground, over which it is safe to navigate but which should be avoided for a
 [underline]#Remarks:#
 
 * Only one of the attributes *height* or *value of sounding* must be populated, not both.
-* The minimum depth, if known, over any submerged obstruction, must be encoded using the attribute *value of sounding*. Where *value of sounding* is populated with an empty (null) value, display of the obstruction in ECDIS as an underwater hazard, in accordance with the Mariner's selected safety depth, will be dependent on the value populated for the ECDIS "system" attribute *default clearance depth* (see clauses 2.4.5.1 and 30.1 and 12^th^ bullet below).
+* The minimum depth, if known, over any submerged obstruction, must be encoded using the attribute *value of sounding*. Where *value of sounding* is populated with an empty (null) value, display of the obstruction in ECDIS as an underwater hazard, in accordance with the Mariner's selected safety depth, will be dependent on the value populated for the ECDIS "system" attribute *default clearance depth* (see <<sec_2.4.5.1;and!sec_30.1>> and 12^th^ bullet below).
 * Where obstructions such as fish havens have a declared maximum authorised draught for vessels passing over the feature, this must be populated, where known, using the attribute *maximum permitted draught*.
 * The attribute *height* must be populated for *Obstruction* features having attribute *water level effect* = _1_ (partly submerged at high water) or _2_ (always dry).
 * *Obstruction* features having attribute *water level effect* = _7_ (floating) must have the attribute *height* populated with an empty (null) value.

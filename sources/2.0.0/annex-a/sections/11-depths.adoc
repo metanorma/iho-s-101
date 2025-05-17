@@ -186,7 +186,7 @@ The geometry of soundings and no bottom found depths (see <<sec_11.8>>) is held 
 
 As the sounding multiplication factor (CMFZ) for ENC is 10, soundings may be encoded to one decimal place of a metre. Drying soundings must be indicated by a negative value.
 
-For soundings surrounded by a danger line, see clauses 13.1 and 13.2.
+For soundings surrounded by a danger line, see <<sec_13.1;and!sec_13.2>>.
 
 Population of the attributes *quality of vertical measurement*, *reported date* and the spatial attribute *quality of horizontal measurement* are described in the Table below:
 
@@ -219,7 +219,7 @@ h| Sounding h| S-4 h| INT 1 h| quality of horizontal measurement h| quality of v
 * The attribute *technique of vertical measurement* must only be populated for *Sounding* features if it is different from the value of *technique of vertical measurement* encoded on an overlapping *Quality of Survey* feature (see <<sec_3.11>>); and the information is considered to be important to navigation.
 * Where *Sounding* features are covered by the Meta feature *Quality of Survey*, the attribute *quality of vertical measurement* must not be populated unless different from the value of *quality of vertical measurement* populated for the *Quality of Survey*.
 * An instance of the information type *Spatial Quality* (see <<sec_25.4>>) may be associated to the sounding geometry, using the association *Spatial Association*, to indicate, where required, that the horizontal position and/or the vertical uncertainty for the sounding(s) is of different (higher or lower) accuracy than indicated by the underlying *Quality of Bathymetric Data* Meta feature (see <<sec_3.8>>). See also <<sec_3.8.1.3>>(Sounding uncertainty).
-* Where a named isolated shoal is indicated in the dataset by a single encoded sounding, the name of the shoal must be encoded, where required, using the complex attribute *feature name* on the *Sounding* feature. Where the named isolated shoal is indicated by two or more soundings (and possibly other submerged features), the name of the shoal must be encoded, where required, using a *Sea Area/Named Water Area* feature (see clauses 2.5.8 and 9.1).
+* Where a named isolated shoal is indicated in the dataset by a single encoded sounding, the name of the shoal must be encoded, where required, using the complex attribute *feature name* on the *Sounding* feature. Where the named isolated shoal is indicated by two or more soundings (and possibly other submerged features), the name of the shoal must be encoded, where required, using a *Sea Area/Named Water Area* feature (see <<sec_2.5.8;and!sec_9.1>>).
 * Encoders must exercise caution when using the option to group soundings; particularly where they are included in an ENC Update as this may impact negatively on ECDIS performance regarding Mariner interrogation of Updates. When grouping soundings in an ENC dataset, creation of excessively large sounding groups should be avoided so as to reduce the impact when a sounding is to be removed by ENC Update; and new soundings to be added by ENC Update should not be added to already existing sounding groups.
 * For depths indicated as no bottom found, see <<sec_11.8>>.
 
@@ -457,7 +457,7 @@ If it is required to encode dredged areas, this must be done using the feature *
 * The boundary of a dredged area should not have coincident curve geo features encoded, unless part of the boundary corresponds to the shoreline (see <<sec_5.3.1>>).
 * Dredged areas are often subject to siltation, resulting in shoaler depths being identified in the dredged area than the designed dredged depth. Where required, the shoal depths should be encoded using *Sounding*, with the appropriate underlying depth information (*Depth Area* and, if required, *Depth Contour*) to support the depths. Alternatively, the attribute *depth range maximum value* for the *Dredged Area* may be set to the designed dredged depth for the dredged area, and the attribute *depth range minimum value* set to the value of the shoalest depth, or a *Caution Area* feature may be encoded covering the shoaler depth area with the depth information provided using the complex attribute *information* (see <<sec_2.4.6>>). Where the shoal depths are close to the edge of the dredged area, the dredged area limit may be adjusted to exclude the shoal depths from the surface. See also S-4 -- B-414.5.
 * The attribute *source date* may be used to encode the year of the latest control survey for dredged areas where the dredged depth is not maintained. For dredged areas where the dredged depth is maintained, it is not required to indicate the year of dredging.
-* Where the complex attribute *vertical uncertainty* is populated for a *Dredged Area* feature, it must not be equivalent to or degrade the uncertainty indicated by the complex attribute *vertical uncertainty* for the underlying *Quality of Bathymetric Data* Meta feature (see clauses3.8 and 24.5).
+* Where the complex attribute *vertical uncertainty* is populated for a *Dredged Area* feature, it must not be equivalent to or degrade the uncertainty indicated by the complex attribute *vertical uncertainty* for the underlying *Quality of Bathymetric Data* Meta feature (see <<sec_3.8;and!sec_24.5>>).
 * For additional guidance regarding the encoding of vessel speed limits, see <<sec_17.4>>.
 * *Dredged Area* features are part of the Skin of the Earth.
 
@@ -674,7 +674,7 @@ Spatial quality associated with contours may be encoded using the *Spatial Quali
 
 [[fig_11-2]]
 .Depth contours
-image::figure-11-1.png[Shape25,286,459]
+image::figure-11-1.png[286,459]
 
 [underline]#Remarks:#
 
@@ -778,7 +778,7 @@ In <<fig_11-3>> below, the annotation "**min**" equates to the attribute *depth 
 
 [[fig_11-3]]
 .Geometry of depth areas
-image::figure-11-3.png[Shape26,545,204]
+image::figure-11-3.png[545,204]
 
 [underline]#Remarks:#
 
@@ -799,7 +799,7 @@ In <<fig_11-4>> below, the annotation "**min**" equates to the attribute *depth 
 
 [[fig_11-4]]
 .Depth areas
-image::figure-11-4.png[Shape27,454,442]
+image::figure-11-4.png[454,442]
 
 **NOTE (a)**: H = Height of the coastline datum above sounding datum, or a rounded value (for example (1) the value of the highest drying contour indicated on the source document; or (2) zero, if the coastline datum is the same as the sounding datum).
 
@@ -1121,7 +1121,6 @@ In some cases satellite imagery provides evidence that existing charted informat
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association 2+| 0,*
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association 2+| 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association 2+| 0,*
-
 
 |===
 

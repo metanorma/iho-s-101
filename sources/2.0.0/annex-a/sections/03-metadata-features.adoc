@@ -29,7 +29,7 @@ If it is required to encode the uncertainty of a horizontal clearance (complex a
 
 *horizontal distance uncertainty* applies only to *horizontal clearance fixed* and *horizontal clearance open*. There is no attribute to express the accuracy of the attributes *horizontal length* and *horizontal width*.
 
-*horizontal distance uncertainty* and *quality of horizontal measurement* must not be applied to the spatial type of any geo feature if they are identical to the *horizontal distance uncertainty* and *quality of horizontal measurement* values of the underlying Meta feature. *horizontal position uncertainty* must not be applied to the spatial type of any geo feature if it is identical to the *horizontal position uncertainty* value(s) of the underlying Meta feature, except for *Sounding* and *Underwater/Awash Rock* features; and *Foul Ground*, *Marine Farm/Culture*, *Obstruction* and *Wreck* features of type point (see clauses 3.8.1.3, 11.3, 13.4-7 and 13.10).
+*horizontal distance uncertainty* and *quality of horizontal measurement* must not be applied to the spatial type of any geo feature if they are identical to the *horizontal distance uncertainty* and *quality of horizontal measurement* values of the underlying Meta feature. *horizontal position uncertainty* must not be applied to the spatial type of any geo feature if it is identical to the *horizontal position uncertainty* value(s) of the underlying Meta feature, except for *Sounding* and *Underwater/Awash Rock* features; and *Foul Ground*, *Marine Farm/Culture*, *Obstruction* and *Wreck* features of type point (see <<sec_3.8.1.3;and!sec_11.3>> and <<sec_13.4;to!sec_13.7>> and <<sec_13.10>>).
 
 *quality of horizontal measurement* gives qualitative information, whereas *horizontal position uncertainty* gives quantitative information.
 
@@ -165,7 +165,6 @@ Meta features *Quality of Non-bathymetric Data* and *Quality of Bathymetric Data
 10+| *S-101 Metadata Feature:* *Data Coverage (M_COVR)* _*(M_CSCL)*_
 10+| *[underline]#Primitives:#* *Surface*
 3+| _Real World_ 4+| _Paper Chart Symbol_ 3+| _ECDIS Symbol_
-
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| drawing index
@@ -647,11 +646,7 @@ Within a dataset, there may be some areas where the direction of buoyage is defi
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 
-10+|
-
-
 |===
-
 
 [[three_eight]]
 [NOTE]
@@ -665,8 +660,6 @@ For each instance of fixed date range, at least one of the sub-attributes *date 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 --
 
-
-
 [underline]#INT 1 Reference:#
 
 [[sec_3.8.1]]
@@ -677,7 +670,7 @@ Information about quality, reliability and uncertainty of bathymetric data is gi
 * the Meta feature *Quality of Bathymetric Data* and, if required, an associated instance of the Information type *Spatial Quality* (see <<sec_24.5>>) for an overall assessment of the quality of bathymetric data;
 * the Meta feature *Quality of Survey* for additional information about individual surveys (see <<sec_3.11>>);
 * the attributes *quality of vertical measurement* and *technique of vertical measurement* on groups of soundings or individual features;
-* the attributes *horizontal* *position uncertainty*, *quality of horizontal measurement* and *vertical uncertainty* on the spatial types (see clauses 2.4.7 and 24.5).
+* the attributes *horizontal* *position uncertainty*, *quality of horizontal measurement* and *vertical uncertainty* on the spatial types (see <<sec_2.4.7;and!sec_24.5>>).
 Bathymetric data quality comprises the following:
 
 ** completeness of data (for example, seafloor coverage);
@@ -1248,7 +1241,8 @@ The technique of sounding measurement must not be encoded using *technique of ve
 2+| 3+|
 1: insert +
 2: delete +
-3: modify4: move
+3: modify +
+4: move
 | EN
 | 1,1
 
@@ -1310,7 +1304,6 @@ For each instance of *fixed date range*, at least one of the sub-attributes *dat
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 --
-
 
 [underline]#INT 1 Reference:#
 

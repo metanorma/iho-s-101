@@ -45,7 +45,7 @@ Because lights and buoys marking the limits of works at sea may be moved without
 4+a| _ECDIS Symbol_
 
 3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
-3+| category of checkpoint 2+| (CATCHP) 3+| 1 : custom | EN | 0,1
+3+| category of checkpoint 2+| (CATCHP) 3+| 1: custom | EN | 0,1
 3+| feature name
 2+a|
 
@@ -70,7 +70,9 @@ Because lights and buoys marking the limits of works at sea may be moved without
 3+| name usage
 2+a|
 
-3+| 1 : default name display2 : alternate name display
+3+|
+1: default name display +
+2 : alternate name display
 | (S) EN
 | 0,1 footnoteblock:[eight_two]
 
@@ -81,7 +83,13 @@ Because lights and buoys marking the limits of works at sea may be moved without
 | URN
 | 0,1
 
-3+| status 2+| (STATUS) 3+| 1 : permanent2 : occasional5 : periodic/intermittent7 : temporary9 : mandatory12 : illuminated | EN | 0,*
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+5: periodic/intermittent +
+7: temporary +
+9: mandatory
+12 : illuminated | EN | 0,*
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+a|
@@ -172,10 +180,39 @@ If it is required to encode an official place to register, declare and/or check 
 4+a| _ECDIS Symbol_
 
 3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
-3+| category of hulk 2+| (CATHLK) 3+| 1 : floating restaurant2 : historic ship3 : floating museum4 : floating accommodation5 : floating breakwater6 : casino7 : training vessel | EN | 0,*
-3+| colour 2+| (COLOUR) 3+| 1 : white2 : black3 : red4 : green5 : blue6 : yellow7 : grey8 : brown9 : amber10 : violet11 : orange12 : magenta13 : pink | EN | 0,\* (ordered)
-3+| colour pattern 2+| (COLPAT) 3+| 1 : horizontal stripes2 : vertical stripes3 : diagonal stripes4 : squared5 : stripes (direction unknown)6 : border stripe | EN | 0,1 footnoteblock:[eight_three]
-3+| condition 2+| (CONDTN) 3+| 1 : under construction2 : ruined5 : planned construction | EN | 0,1
+3+| category of hulk 2+| (CATHLK) 3+|
+1: floating restaurant +
+2: historic ship +
+3: floating museum +
+4: floating accommodation +
+5: floating breakwater +
+6: casino +
+7: training vessel | EN | 0,*
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | EN | 0,\* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | EN | 0,1 footnoteblock:[eight_three]
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+2: ruined +
+5: planned construction | EN | 0,1
 3+| feature name
 2+a|
 
@@ -200,7 +237,9 @@ If it is required to encode an official place to register, declare and/or check 
 3+| name usage
 2+a|
 
-3+| 1 : default name display2 : alternate name display
+3+|
+1: default name display +
+2: alternate name display
 | (S) EN
 | 0,1 footnoteblock:[eight_three]
 
@@ -274,7 +313,10 @@ If it is required to encode an official place to register, declare and/or check 
 | RE
 | 0,1
 
-3+| visual prominence 2+| (CONVIS) 3+| 1 : visually conspicuous2 : not visually conspicuous3 : prominent | EN | 0,1
+3+| visual prominence 2+| (CONVIS) 3+|
+1: visually conspicuous +
+2: not visually conspicuous +
+3: prominent | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+a|
@@ -374,10 +416,39 @@ If it is required to encode a permanently moored ship, it must be done using the
 4+a| _ECDIS Symbol_
 
 3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
-3+| category of pile 2+| (CATPLE) 3+| 1 : stake3 : post4 : tripodal5 : piling6 : area of piles7 : pipe8 : mooring post | EN | 0,1
-3+| colour 2+| (COLOUR) 3+| 1 : white2 : black3 : red4 : green5 : blue6 : yellow7 : grey8 : brown9 : amber10 : violet11 : orange12 : magenta13 : pink | EN | 0,\* (ordered)
-3+| colour pattern 2+| (COLPAT) 3+| 1 : horizontal stripes2 : vertical stripes3 : diagonal stripes4 : squared5 : stripes (direction unknown)6 : border stripe | EN | 0,1 footnoteblock:[eight_four]
-3+| condition 2+| (CONDTN) 3+| 1 : under construction2 : ruined5 : planned construction | EN | 0,1
+3+| category of pile 2+| (CATPLE) 3+|
+1: stake +
+3: post +
+4: tripodal +
+5: piling +
+6: area of piles +
+7: pipe +
+8: mooring post | EN | 0,1
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | EN | 0,\* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | EN | 0,1 footnoteblock:[eight_four]
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+2: ruined +
+5: planned construction | EN | 0,1
 3+| feature name
 2+a|
 
@@ -402,7 +473,9 @@ If it is required to encode a permanently moored ship, it must be done using the
 3+| name usage
 2+a|
 
-3+| 1 : default name display2 : alternate name display
+3+|
+1: default name display +
+2: alternate name display
 | (S) EN
 | 0,1 footnoteblock:[eight_four]
 
@@ -445,7 +518,14 @@ If it is required to encode a permanently moored ship, it must be done using the
 | 0,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
-3+| status 2+| (STATUS) 3+| 1 : permanent4 : not in use6 : reserved7 : temporary8 : private12 : illuminated14 : public | EN | 0,*
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+4: not in use +
+6: reserved +
+7: temporary +
+8: private +
+12: illuminated +
+14: public | EN | 0,*
 3+| vertical length
 2+| (VERLEN)
 3+a|
@@ -453,7 +533,10 @@ If it is required to encode a permanently moored ship, it must be done using the
 | RE
 | 0,1
 
-3+| visual prominence 2+| (CONVIS) 3+| 1 : visually conspicuous2 : not visually conspicuous3 : prominent | EN | 0,1
+3+| visual prominence 2+| (CONVIS) 3+|
+1: visually conspicuous +
+2: not visually conspicuous +
+3: prominent | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+a|
@@ -556,7 +639,11 @@ If it is required to encode a pile or post that is not used as a dolphin or an a
 4+a| _ECDIS Symbol_
 
 3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
-3+| condition 2+| (CONDTN) 3+| 1 : under construction2 : ruined3 : under reclamation5 : planned construction | EN | 0,1
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+2: ruined +
+3: under reclamation +
+5: planned construction | EN | 0,1
 3+| feature name
 2+a|
 
@@ -581,7 +668,9 @@ If it is required to encode a pile or post that is not used as a dolphin or an a
 3+| name usage
 2+a|
 
-3+| 1 : default name display2 : alternate name display
+3+|
+1: default name display +
+2: alternate name display
 | (S) EN
 | 0,1 footnoteblock:[eight_five]
 
@@ -616,7 +705,14 @@ If it is required to encode a pile or post that is not used as a dolphin or an a
 | URN
 | 0,1
 
-3+| nature of construction 2+| (NATCON) 3+| 1 : masonry2 : concreted3 : loose boulders4 : hard surfaced5 : unsurfaced6 : wooden7 : metal | EN | 0,*
+3+| nature of construction 2+| (NATCON) 3+|
+1: masonry +
+2: concreted +
+3: loose boulders +
+4: hard surfaced +
+5: unsurfaced +
+6: wooden +
+7: metal | EN | 0,*
 3+| radar conspicuous
 2+| (CONRAD)
 3+a|
@@ -632,7 +728,10 @@ If it is required to encode a pile or post that is not used as a dolphin or an a
 | RE
 | 0,1
 
-3+| visual prominence 2+| (CONVIS) 3+| 1 : visually conspicuous2 : not visually conspicuous3 : prominent | EN | 0,1
+3+| visual prominence 2+| (CONVIS) 3+|
+1: visually conspicuous +
+2: not visually conspicuous +
+3: prominent | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+a|
@@ -729,9 +828,46 @@ If it is required to encode a dyke, it must be done using the feature *Dyke*.
 4+a| _ECDIS Symbol_
 
 3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
-3+| category of shoreline construction 2+| (CATSLC) 3+| 1 : breakwater2 : groyne3 : mole4 : pier (jetty)5 : promenade pier6 : wharf7 : training wall8 : rip rap9 : revetment10 : sea wall11 : landing steps12 : ramp13 : slipway14 : fender15 : solid face wharf16 : open face wharf17 : log ramp20 : swimming facility22 : quay23 : tie-up wall | EN | 0,1
-3+| colour 2+| (COLOUR) 3+| 1 : white2 : black3 : red4 : green5 : blue6 : yellow7 : grey8 : brown9 : amber10 : violet11 : orange12 : magenta13 : pink | EN | 0,\* (ordered)
-3+| colour pattern 2+| (COLPAT) 3+| 1 : horizontal stripes2 : vertical stripes3 : diagonal stripes4 : squared5 : stripes (direction unknown)6 : border stripe | EN | 0,1 footnoteblock:[eight_six]
+3+| category of shoreline construction 2+| (CATSLC) 3+|
+1: breakwater +
+2: groyne +
+3: mole +
+4: pier (jetty)5 : promenade pier +
+6: wharf +
+7: training wall +
+8: rip rap +
+9: revetment +
+10: sea wall +
+11: landing steps +
+12: ramp +
+13: slipway +
+14: fender +
+15: solid face wharf +
+16: open face wharf +
+17: log ramp +
+20: swimming facility +
+22: quay +
+23: tie-up wall | EN | 0,1
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | EN | 0,\* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown)6 : border stripe | EN | 0,1 footnoteblock:[eight_six]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
@@ -761,7 +897,9 @@ If it is required to encode a dyke, it must be done using the feature *Dyke*.
 3+| name usage
 2+a|
 
-3+| 1 : default name display2 : alternate name display
+3+|
+1: default name display +
+2: alternate name display
 | (S) EN
 | 0,1 footnoteblock:[eight_six]
 
@@ -832,7 +970,16 @@ If it is required to encode a dyke, it must be done using the feature *Dyke*.
 | URN
 | 0,1
 
-3+| nature of construction 2+| (NATCON) 3+| 1 : masonry2 : concreted3 : loose boulders4 : hard surfaced5 : unsurfaced6 : wooden7 : metal8 : glass reinforced plastic11 : latticed | EN | 0,*
+3+| nature of construction 2+| (NATCON) 3+|
+1: masonry +
+2: concreted +
+3: loose boulders +
+4: hard surfaced +
+5: unsurfaced +
+6: wooden +
+7: metal +
+8: glass reinforced plastic +
+11: latticed | EN | 0,*
 3+| radar conspicuous
 2+| (CONRAD)
 3+a|
@@ -841,7 +988,18 @@ If it is required to encode a dyke, it must be done using the feature *Dyke*.
 | 0,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
-3+| status 2+| (STATUS) 3+| 1 : permanent2 : occasional3 : recommended4 : not in use6 : reserved7 : temporary8 : private12 : illuminated13 : historic14 : public28 : buoyed | EN | 0,*
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+3: recommended +
+4: not in use +
+6: reserved +
+7: temporary +
+8: private +
+12: illuminated +
+13: historic +
+14: public +
+28: buoyed | EN | 0,*
 3+| vertical length
 2+| (VERLEN)
 3+a|
@@ -849,8 +1007,18 @@ If it is required to encode a dyke, it must be done using the feature *Dyke*.
 | RE
 | 0,1
 
-3+| visual prominence 2+| (CONVIS) 3+| 1 : visually conspicuous2 : not visually conspicuous3 : prominent | EN | 0,1
-3+| water level effect 2+| (WATLEV) 3+| 1 : partly submerged at high water2 : always dry3 : always under water/ submerged4 : covers and uncovers5 : awash6 : subject to inundation or flooding7 : floating | EN | 0,1
+3+| visual prominence 2+| (CONVIS) 3+|
+1: visually conspicuous +
+2: not visually conspicuous +
+3: prominent | EN | 0,1
+3+| water level effect 2+| (WATLEV) 3+|
+1: partly submerged at high water +
+2: always dry +
+3: always under water/ submerged +
+4: covers and uncovers +
+5: awash +
+6: subject to inundation or flooding +
+7: floating | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+a|
@@ -935,7 +1103,7 @@ If it is required to encode artificial sections of coastlines; or lakeshores, ri
 
 [[fig_8-1]]
 .Shoreline constructions
-image::figure-8-1.png[Shape22,631,332]
+image::figure-8-1.png[631,332]
  
 
 [underline]#Remarks:#
@@ -966,13 +1134,39 @@ image::figure-8-1.png[Shape22,631,332]
 3+| category of structure
 2+a|
 
-3+| 1 : boathouse2 : covered bulk terminal3 : covered wharf4 : covered service terminal5 : covered passenger terminal
+3+|
+1: boathouse +
+2: covered bulk terminal +
+3: covered wharf +
+4: covered service terminal +
+5: covered passenger terminal
 2+| EN
 | 0,*
 
-3+| colour 2+| (COLOUR) 3+| 1 : white2 : black3 : red4 : green5 : blue6 : yellow7 : grey8 : brown9 : amber10 : violet11 : orange12 : magenta13 : pink 2+| EN | 0,\* (ordered)
-3+| colour pattern 2+| (COLPAT) 3+| 1 : horizontal stripes2 : vertical stripes3 : diagonal stripes4 : squared5 : stripes (direction unknown)6 : border stripe 2+| EN | 0,1 footnoteblock:[eight_seven]
-3+| condition 2+| (CONDTN) 3+| 1 : under construction2 : ruined5 : planned construction 2+| EN | 0,1
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink 2+| EN | 0,\* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown)6 : border stripe 2+| EN | 0,1 footnoteblock:[eight_seven]
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+2: ruined +
+5: planned construction 2+| EN | 0,1
 3+| feature name
 2+a|
 
@@ -998,7 +1192,9 @@ image::figure-8-1.png[Shape22,631,332]
 3+| name usage
 2+a|
 
-3+| 1 : default name display2 : alternate name display
+3+|
+1: default name display +
+2: alternate name display
 2+| (S) EN
 | 0,1 footnoteblock:[eight_seven]
 
@@ -1073,7 +1269,14 @@ image::figure-8-1.png[Shape22,631,332]
 2+| URN
 | 0,1
 
-3+| nature of construction 2+| (NATCON) 3+| 1 : masonry2 : concreted6 : wooden7 : metal8 : glass reinforced plastic11 : latticed12 : glass 2+| EN | 0,*
+3+| nature of construction 2+| (NATCON) 3+|
+1: masonry +
+2: concreted +
+6: wooden +
+7: metal +
+8: glass reinforced plastic +
+11: latticed +
+12: glass 2+| EN | 0,*
 3+| periodic date range
 2+a|
 
@@ -1095,7 +1298,12 @@ image::figure-8-1.png[Shape22,631,332]
 2+| (S) TD
 | 1,1
 
-3+| product 2+| (PRODCT) 3+| 7 : chemicals12 : iron ingots13 : salt21 : cement22 : grain25 : clay 2+| EN | 0,1
+3+| product 2+| (PRODCT) 3+| 7 : chemicals +
+12: iron ingots +
+13: salt +
+21: cement +
+22: grain +
+25: clay 2+| EN | 0,1
 3+| radar conspicuous
 2+| (CONRAD)
 3+a|
@@ -1104,7 +1312,14 @@ image::figure-8-1.png[Shape22,631,332]
 | 0,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> 2+| TD | 0,1
-3+| status 2+| (STATUS) 3+| 1 : permanent4 : not in use5 : periodic/intermittent7 : temporary8 : private12 : illuminated14 : public 2+| EN | 0,*
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+4: not in use +
+5: periodic/intermittent +
+7: temporary +
+8: private +
+12: illuminated +
+14: public 2+| EN | 0,*
 3+| vertical clearance fixed
 2+a|
 
@@ -1143,7 +1358,21 @@ image::figure-8-1.png[Shape22,631,332]
 2+| (S) RE
 | 0,1
 
-3+| vertical datum 2+| (VERDAT) 3+| 3 : mean sea level13 : low water16 : mean high water17 : mean high water springs18 : high water19 : approximate mean sea level20 : high water springs21 : mean higher high water24 : local datum25 : international great lakes datum 198526 : mean water level28 : higher high water large tide29 : nearly highest high water30 : highest astronomical tide44 : baltic sea chart datum 2000 2+| EN | 0,1
+3+| vertical datum 2+| (VERDAT) 3+|
+3 : mean sea level +
+13: low water +
+16: mean high water +
+17: mean high water springs +
+18: high water +
+19: approximate mean sea level +
+20: high water springs +
+21: mean higher high water +
+24: local datum +
+25: international great lakes datum 198526 : mean water level +
+28: higher high water large tide +
+29: nearly highest high water +
+30: highest astronomical tide +
+44: baltic sea chart datum 2000 2+| EN | 0,1
 3+| vertical length
 2+| (VERLEN)
 3+a|
@@ -1151,7 +1380,10 @@ image::figure-8-1.png[Shape22,631,332]
 2+| RE
 | 0,1
 
-3+| visual prominence 2+| (CONVIS) 3+| 1 : visually conspicuous2 : not visually conspicuous3 : prominent 2+| EN | 0,1
+3+| visual prominence 2+| (CONVIS) 3+|
+1: visually conspicuous +
+2: not visually conspicuous +
+3: prominent 2+| EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> 2+| IN | 0,1
 3+| information
 2+a|
@@ -1221,7 +1453,6 @@ For each instance of *fixed date range*, at least one of the sub-attributes *dat
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-
 --
 
 [underline]#INT 1 Reference:# D 20-24
@@ -1261,7 +1492,11 @@ The value of the vertical clearance between (high) water level and any fixed ove
 4+a| _ECDIS Symbol_
 
 3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
-3+| condition 2+| (CONDTN) 3+| 1 : under construction2 : ruined3 : under reclamation5 : planned construction | EN | 0,1
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+2: ruined +
+3: under reclamation +
+5: planned construction | EN | 0,1
 3+| feature name
 2+a|
 
@@ -1286,7 +1521,9 @@ The value of the vertical clearance between (high) water level and any fixed ove
 3+| name usage
 2+a|
 
-3+| 1 : default name display2 : alternate name display
+3+|
+1: default name display +
+2: alternate name display
 | (S) EN
 | 0,1 footnoteblock:[eight_eight]
 
@@ -1297,10 +1534,28 @@ The value of the vertical clearance between (high) water level and any fixed ove
 | URN
 | 0,1
 
-3+| nature of construction 2+| (NATCON) 3+| 1 : masonry2 : concreted3 : loose boulders4 : hard surfaced5 : unsurfaced6 : wooden7 : metal | EN | 0,*
+3+| nature of construction 2+| (NATCON) 3+|
+1: masonry +
+2: concreted +
+3: loose boulders +
+4: hard surfaced +
+5: unsurfaced +
+6: wooden +
+7: metal | EN | 0,*
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
-3+| status 2+| (STATUS) 3+| 1 : permanent7 : temporary8 : private12 : illuminated14 : public | EN | 0,*
-3+| water level effect 2+| (WATLEV) 3+| 1 : partly submerged at high water2 : always dry3 : always under water/ submerged4 : covers and uncovers5 : awash6 : subject to inundation or flooding | EN | 0,1
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+7: temporary +
+8: private +
+12: illuminated +
+14: public | EN | 0,*
+3+| water level effect 2+| (WATLEV) 3+|
+1: partly submerged at high water +
+2: always dry +
+3: always under water/ submerged +
+4: covers and uncovers +
+5: awash +
+6: subject to inundation or flooding | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+a|
@@ -1362,7 +1617,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-
 --
 
 [underline]#INT 1 Reference:# F 3
@@ -1395,8 +1649,15 @@ If it is required to encode a causeway, it must be done using the feature *Cause
 4+a| _ECDIS Symbol_
 
 3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
-3+| category of canal 2+| (CATCAN) 3+| 1 : transportation2 : drainage3 : irrigation | EN | 0,1
-3+| condition 2+| (CONDTN) 3+| 1 : under construction2 : ruined3 : under reclamation5 : planned construction | EN | 0,1
+3+| category of canal 2+| (CATCAN) 3+|
+1: transportation +
+2: drainage +
+3: irrigation | EN | 0,1
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+2: ruined +
+3: under reclamation +
+5: planned construction | EN | 0,1
 3+| feature name
 2+a|
 
@@ -1421,7 +1682,9 @@ If it is required to encode a causeway, it must be done using the feature *Cause
 3+| name usage
 2+a|
 
-3+| 1 : default name display2 : alternate name display
+3+|
+1: default name display +
+2: alternate name display
 | (S) EN
 | 0,1 footnoteblock:[eight_nine]
 
@@ -1479,7 +1742,14 @@ If it is required to encode a causeway, it must be done using the feature *Cause
 | 0,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
-3+| status 2+| (STATUS) 3+| 1 : permanent3 : recommended4 : not in use5 : periodic/intermittent6 : reserved8 : private14 : public | EN | 0,*
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+3: recommended +
+4: not in use +
+5: periodic/intermittent +
+6: reserved +
+8: private +
+14: public | EN | 0,*
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+a|
@@ -1543,7 +1813,6 @@ For each instance of *fixed date range*, at least one of the sub-attributes *dat
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-
 --
 
 [underline]#INT 1 Reference:# F 40
@@ -1555,7 +1824,7 @@ If it is required to encode a non-navigable canal, it must be done using the fea
 
 [underline]#Remarks:#
 
-* If the canal is navigable at the optimum display scale for the ENC data, it must be encoded using the features *Depth Area* or *Dredged Area* (see clauses 11.7 and 11.4), and the canal banks must be encoded using the features *Coastline* or *Shoreline Construction*. The canal must not be encoded as a *Canal* feature. If it is required to encode the name of the canal, it must be done using a *Sea Area/Named Water Area* feature, with attribute *category of sea area* = _51_ (canal).
+* If the canal is navigable at the optimum display scale for the ENC data, it must be encoded using the features *Depth Area* or *Dredged Area* (see <<sec_11.7;and!sec_11.4>>), and the canal banks must be encoded using the features *Coastline* or *Shoreline Construction*. The canal must not be encoded as a *Canal* feature. If it is required to encode the name of the canal, it must be done using a *Sea Area/Named Water Area* feature, with attribute *category of sea area* = _51_ (canal).
 * Where the canal is navigable at the optimum display scale for the ENC data, special consideration should be given to encoding features specific to the canal such as minimum depths within the navigable area; overhead clearances; distances along the canal; and locks and lock gates (and any associated traffic signals).
 * If it is required to encode a canal that is not navigable at the optimum display scale for the ENC data, it must be done using *Canal*, covered by a *Land Area* feature. The name of the canal should be encoded using the complex attribute *feature name* on the *Canal* feature.
 
@@ -1607,7 +1876,9 @@ If it is required to encode a non-navigable canal, it must be done using the fea
 3+| name usage
 2+a|
 
-3+| 1 : default name display2 : alternate name display
+3+|
+1: default name display +
+2: alternate name display
 | (S) EN
 | 0,1 footnoteblock:[eight_ten]
 
@@ -1645,7 +1916,11 @@ If it is required to encode a non-navigable canal, it must be done using the fea
 3+| distance unit of measurement
 2+a|
 
-3+| 1 : metres2 : yards3 : kilometres4 : statute miles5: nautical miles
+3+|
+1: metres +
+2: yards +
+3: kilometres +
+4: statute miles5: nautical miles
 | (S) EN
 | 1,1
 
@@ -1729,7 +2004,6 @@ For each instance of *fixed date range*, at least one of the sub-attributes *dat
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-
 --
 
 [underline]#INT 1 Reference:# B 25.1-2
@@ -1764,8 +2038,16 @@ If it is required to encode a distance mark, it must be done using the feature *
 4+a| _ECDIS Symbol_
 
 3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
-3+| category of gate 2+| (CATGAT) 3+| 2 : flood barrage gate3 : caisson4 : lock gate5 : dyke gate6 : sluice | EN | 0,1
-3+| condition 2+| (CONDTN) 3+| 1 : under construction2 : ruined5 : planned construction | EN | 0,1
+3+| category of gate 2+| (CATGAT) 3+|
+2: flood barrage gate +
+3: caisson +
+4: lock gate +
+5: dyke gate +
+6: sluice | EN | 0,1
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+2: ruined +
+5: planned construction | EN | 0,1
 3+| depth range minimum value
 2+| (DRVAL1)
 3+a|
@@ -1797,7 +2079,9 @@ If it is required to encode a distance mark, it must be done using the feature *
 3+| name usage
 2+a|
 
-3+| 1 : default name display2 : alternate name display
+3+|
+1: default name display +
+2: alternate name display
 | (S) EN
 | 0,1 footnoteblock:[eight_eleven]
 
@@ -1830,9 +2114,22 @@ If it is required to encode a distance mark, it must be done using the feature *
 | URN
 | 0,1
 
-3+| nature of construction 2+| (NATCON) 3+| 1 : masonry2 : concreted6 : wooden7 : metal | EN | 0,*
-3+| quality of vertical measurement 2+| (QUASOU) 3+| 2 : depth or least depth unknown3 : doubtful sounding4 : unreliable sounding6 : least depth known7 : least depth unknown, safe clearance at value shown | EN | 0,*
-3+| status 2+| (STATUS) 3+| 1 : permanent4 : not in use6 : reserved16 : watched17 : unwatched | EN | 0,*
+3+| nature of construction 2+| (NATCON) 3+|
+1: masonry +
+2: concreted +
+6: wooden +
+7: metal | EN | 0,*
+3+| quality of vertical measurement 2+| (QUASOU) 3+| 2 : depth or least depth unknown +
+3: doubtful sounding +
+4: unreliable sounding +
+6: least depth known +
+7: least depth unknown, safe clearance at value shown | EN | 0,*
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+4: not in use +
+6: reserved +
+16: watched +
+17: unwatched | EN | 0,*
 3+| vertical clearance open
 2+a|
 
@@ -1879,7 +2176,20 @@ If it is required to encode a distance mark, it must be done using the feature *
 | (S) RE
 | 0,1
 
-3+| vertical datum 2+| (VERDAT) 3+| 3 : mean sea level13 : low water16 : mean high water17 : mean high water springs18 : high water19 : approximate mean sea level20 : high water springs21 : mean higher high water24 : local datum25 : international great lakes datum 198526 : mean water level28 : higher high water large tide29 : nearly highest high water30 : highest astronomical tide44 : baltic sea chart datum 2000 | EN | 0,1
+3+| vertical datum 2+| (VERDAT) 3+| 3 : mean sea level +
+13: low water +
+16: mean high water +
+17: mean high water springs +
+18: high water +
+19: approximate mean sea level +
+20: high water springs +
+21: mean higher high water +
+24: local datum +
+25: international great lakes datum 198526 : mean water level +
+28: higher high water large tide +
+29: nearly highest high water +
+30: highest astronomical tide +
+44: baltic sea chart datum 2000 | EN | 0,1
 3+| vertical uncertainty
 2+| _(SOUACC)_
 3+a|
@@ -1967,8 +2277,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 The sub-attribute *vertical clearance**value* for the complex attribute *vertical clearance open* is mandatory if the sub-attribute *vertical clearance unlimited* is set to _False_.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# F 27, 41.1-2, 42-43
@@ -2002,10 +2310,35 @@ If it is required to encode a gate that controls the flow of water, it must be d
 4+a| _ECDIS Symbol_
 
 3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
-3+| category of dam 2+| (CATDAM) 3+| 1 : weir2 : dam3 : flood barrage | EN | 0,1
-3+| colour 2+| (COLOUR) 3+| 1 : white2 : black3 : red4 : green5 : blue6 : yellow7 : grey8 : brown9 : amber10 : violet11 : orange12 : magenta13 : pink | EN | 0,\* (ordered)
-3+| colour pattern 2+| (COLPAT) 3+| 1 : horizontal stripes2 : vertical stripes3 : diagonal stripes4 : squared5 : stripes (direction unknown)6 : border stripe | EN | 0,1 footnoteblock:[eight_twelve]
-3+| condition 2+| (CONDTN) 3+| 1 : under construction2 : ruined3 : under reclamation5 : planned construction | EN | 0,1
+3+| category of dam 2+| (CATDAM) 3+|
+1: weir +
+2: dam +
+3: flood barrage | EN | 0,1
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | EN | 0,\* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown)6 : border stripe | EN | 0,1 footnoteblock:[eight_twelve]
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+2: ruined +
+3: under reclamation +
+5: planned construction | EN | 0,1
 3+| feature name
 2+a|
 
@@ -2030,7 +2363,9 @@ If it is required to encode a gate that controls the flow of water, it must be d
 3+| name usage
 2+a|
 
-3+| 1 : default name display2 : alternate name display
+3+|
+1: default name display +
+2: alternate name display
 | (S) EN
 | 0,1 footnoteblock:[eight_twelve]
 
@@ -2065,7 +2400,12 @@ If it is required to encode a gate that controls the flow of water, it must be d
 | URN
 | 0,1
 
-3+| nature of construction 2+| (NATCON) 3+| 1 : masonry2 : concreted3 : loose boulders6 : wooden7 : metal | EN | 0,*
+3+| nature of construction 2+| (NATCON) 3+|
+1: masonry +
+2: concreted +
+3: loose boulders +
+6: wooden +
+7: metal | EN | 0,*
 3+| radar conspicuous
 2+| (CONRAD)
 3+a|
@@ -2073,7 +2413,14 @@ If it is required to encode a gate that controls the flow of water, it must be d
 | BO
 | 0,1
 
-3+| status 2+| (STATUS) 3+| 1 : permanent2 : occasional6 : reserved7 : temporary8 : private14 : public28 : buoyed | EN | 0,*
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+6: reserved +
+7: temporary +
+8: private +
+14: public +
+28: buoyed | EN | 0,*
 3+| vertical length
 2+| (VERLEN)
 3+a|
@@ -2081,8 +2428,15 @@ If it is required to encode a gate that controls the flow of water, it must be d
 | RE
 | 0,1
 
-3+| visual prominence 2+| (CONVIS) 3+| 1 : visually conspicuous2 : not visually conspicuous3 : prominent | EN | 0,1
-3+| water level effect 2+| (WATLEV) 3+| 1 : partly submerged at high water2 : always dry3 : always under water/submerged6 : subject to inundation or flooding | EN | 0,1
+3+| visual prominence 2+| (CONVIS) 3+|
+1: visually conspicuous +
+2: not visually conspicuous +
+3: prominent | EN | 0,1
+3+| water level effect 2+| (WATLEV) 3+|
+1: partly submerged at high water +
+2: always dry +
+3: always under water/submerged +
+6: subject to inundation or flooding | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+a|
@@ -2148,7 +2502,6 @@ For each instance of *fixed date range*, at least one of the sub-attributes *dat
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-
 --
 
 [underline]#INT 1 Reference:# F 43, 44
@@ -2193,10 +2546,36 @@ When an encoded flood barrage is inside an area that is not navigable at the opt
 4+a| _ECDIS Symbol_
 
 3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
-3+| category of crane 2+| (CATCRN) 3+| 2 : container crane/gantry3 : sheerlegs4 : travelling crane5 : A-frame6 : goliath crane | EN | 0,1
-3+| colour 2+| (COLOUR) 3+| 1 : white2 : black3 : red4 : green5 : blue6 : yellow7 : grey8 : brown9 : amber10 : violet11 : orange12 : magenta13 : pink | EN | 0,\* (ordered)
-3+| colour pattern 2+| (COLPAT) 3+| 1 : horizontal stripes2 : vertical stripes3 : diagonal stripes4 : squared5 : stripes (direction unknown)6 : border stripe | EN | 0,1 footnoteblock:[eight_thirteen]
-3+| condition 2+| (CONDTN) 3+| 1 : under construction2 : ruined5 : planned construction | EN | 0,1
+3+| category of crane 2+| (CATCRN) 3+| 2 : container crane/gantry +
+3: sheerlegs +
+4: travelling crane +
+5: A-frame +
+6: goliath crane | EN | 0,1
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | EN | 0,\* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6 : border stripe | EN | 0,1 footnoteblock:[eight_thirteen]
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+2: ruined +
+5: planned construction | EN | 0,1
 3+| feature name
 2+a|
 
@@ -2221,7 +2600,9 @@ When an encoded flood barrage is inside an area that is not navigable at the opt
 3+| name usage
 2+a|
 
-3+| 1 : default name display2 : alternate name display
+3+|
+1: default name display +
+2: alternate name display
 | (S) EN
 | 0,1 footnoteblock:[eight_thirteen]
 
@@ -2277,7 +2658,11 @@ When an encoded flood barrage is inside an area that is not navigable at the opt
 | 0,1
 
 3+| radius 2+| (RADIUS) 3+| Metres | RE | 0,1
-3+| status 2+| (STATUS) 3+| 1 : permanent4 : not in use6 : reserved12 : illuminated | EN | 0,*
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+4: not in use +
+6: reserved +
+12: illuminated | EN | 0,*
 3+| vertical clearance fixed
 2+a|
 
@@ -2316,7 +2701,20 @@ When an encoded flood barrage is inside an area that is not navigable at the opt
 | (S) RE
 | 0,1
 
-3+| vertical datum 2+| (VERDAT) 3+| 3 : mean sea level13 : low water16 : mean high water17 : mean high water springs18 : high water19 : approximate mean sea level20 : high water springs21 : Mean higher high water24 : local datum25 : international great lakes datum 198526 : mean water level28 : higher high water large tide29 : nearly highest high water30 : highest astronomical tide44 : baltic sea chart datum 2000 | EN | 0,1
+3+| vertical datum 2+| (VERDAT) 3+| 3 : mean sea level +
+13: low water +
+16: mean high water +
+17: mean high water springs +
+18: high water +
+19: approximate mean sea level +
+20: high water springs +
+21: Mean higher high water +
+24: local datum +
+25: international great lakes datum 198526 : mean water level +
+28: higher high water large tide +
+29: nearly highest high water +
+30: highest astronomical tide +
+44: baltic sea chart datum 2000 | EN | 0,1
 3+| vertical length
 2+| (VERLEN)
 3+a|
@@ -2324,7 +2722,10 @@ When an encoded flood barrage is inside an area that is not navigable at the opt
 | RE
 | 0,1
 
-3+| visual prominence 2+| (CONVIS) 3+| 1 : visually conspicuous2 : not visually conspicuous3 : prominent | EN | 0,1
+3+| visual prominence 2+| (CONVIS) 3+|
+1: visually conspicuous +
+2: not visually conspicuous +
+3: prominent | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+a|
@@ -2399,7 +2800,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-
 --
 
 [underline]#INT 1 Reference:# F 53.1-3
@@ -2440,7 +2840,22 @@ If it is required to encode a crane, it must be done using the feature *Crane***
 3+| category of cargo
 2+a|
 
-3+| 1 : bulk2 : container3 : general4 : liquid5 : passenger6 : livestock7 : dangerous or hazardous8 : heavy lift9 : ballast10 : dry bulk cargo11 : liquid bulk cargo12 : reefer container cargo13 : Ro-Ro cargo14 : project cargo15 : break bulk cargo
+3+|
+1: bulk +
+2: container +
+3: general +
+4: liquid +
+5: passenger +
+6: livestock +
+7: dangerous or hazardous +
+8: heavy lift +
+9: ballast +
+10: dry bulk cargo +
+11: liquid bulk cargo +
+12: reefer container cargo +
+13: Ro-Ro cargo +
+14: project cargo +
+15: break bulk cargo
 | EN
 | 0,*
 
@@ -2468,7 +2883,9 @@ If it is required to encode a crane, it must be done using the feature *Crane***
 3+| name usage
 2+a|
 
-3+| 1 : default name display2 : alternate name display
+3+|
+1: default name display +
+2: alternate name display
 | (S) EN
 | 0,1 footnoteblock:[eight_fourteen]
 
@@ -2543,8 +2960,16 @@ If it is required to encode a crane, it must be done using the feature *Crane***
 3+a| | (S) TD
 | 1,1
 
-3+| quality of vertical measurement 2+| (QUASOU) 3+| 1 : depth known2 : depth or least depth unknown | EN | 0,*
-3+| status 2+| (STATUS) 3+| 1 : permanent2 : occasional5 : periodic/intermittent7 : temporary9 : mandatory12 : illuminated | EN | 0,*
+3+| quality of vertical measurement 2+| (QUASOU) 3+|
+1: depth known +
+2: depth or least depth unknown | EN | 0,*
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+5: periodic/intermittent +
+7: temporary +
+9: mandatory +
+12: illuminated | EN | 0,*
 3+| vertical uncertainty
 2+| _(SOUACC)_
 3+a|
@@ -2632,7 +3057,6 @@ For each instance of *fixed date range*, at least one of the sub-attributes *dat
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-
 --
 
 [underline]#INT 1 Reference:# F 12, 19
@@ -2670,10 +3094,36 @@ If it is required to encode a berth, it must be done using the feature *Berth*.
 4+a| _ECDIS Symbol_
 
 3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
-3+| category of dolphin 2+| _(CATMOR)_ 3+| 1 : mooring dolphin2 : deviation dolphin3 : berthing dolphin4 : fender or breasting dolphin | EN | 1,*
-3+| colour 2+| (COLOUR) 3+| 1 : white2 : black3 : red4 : green5 : blue6 : yellow7 : grey8 : brown9 : amber10 : violet11 : orange12 : magenta13 : pink | EN | 0,\* (ordered)
-3+| colour pattern 2+| (COLPAT) 3+| 1 : horizontal stripes2 : vertical stripes3 : diagonal stripes4 : squared5 : stripes (direction unknown)6 : border stripe | EN | 0,1 footnoteblock:[eight_fifteen]
-3+| condition 2+| (CONDTN) 3+| 1 : under construction2 : ruined5 : planned construction | EN | 0,1
+3+| category of dolphin 2+| _(CATMOR)_ 3+|
+1: mooring dolphin +
+2: deviation dolphin +
+3: berthing dolphin +
+4: fender or breasting dolphin | EN | 1,*
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | EN | 0,\* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6 : border stripe | EN | 0,1 footnoteblock:[eight_fifteen]
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+2: ruined +
+5: planned construction | EN | 0,1
 3+| elevation
 2+| (ELEVAT)
 3+a|
@@ -2705,7 +3155,9 @@ If it is required to encode a berth, it must be done using the feature *Berth*.
 3+| name usage
 2+a|
 
-3+| 1 : default name display2 : alternate name display
+3+|
+1: default name display +
+2: alternate name display
 | (S) EN
 | 0,1 footnoteblock:[eight_fifteen]
 
@@ -2740,7 +3192,11 @@ If it is required to encode a berth, it must be done using the feature *Berth*.
 | URN
 | 0,1
 
-3+| nature of construction 2+| (NATCON) 3+| 1 : masonry2 : concreted6 : wooden7 : metal | EN | 0,*
+3+| nature of construction 2+| (NATCON) 3+|
+1: masonry +
+2: concreted +
+6: wooden +
+7: metal | EN | 0,*
 3+| periodic date range
 2+a|
 
@@ -2766,7 +3222,18 @@ If it is required to encode a berth, it must be done using the feature *Berth*.
 | 0,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
-3+| status 2+| (STATUS) 3+| 1 : permanent2 : occasional3 : recommended4 : not in use5 : intermittent6 : reserved7 : temporary8 : private12 : illuminated14 : public18 : existence doubtful | EN | 0,*
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+3: recommended +
+4: not in use +
+5: intermittent +
+6: reserved +
+7: temporary +
+8: private +
+12: illuminated +
+14: public +
+18: existence doubtful | EN | 0,*
 3+| vertical length
 2+| (VERLEN)
 3+a|
@@ -2774,7 +3241,10 @@ If it is required to encode a berth, it must be done using the feature *Berth*.
 | RE
 | 0,1
 
-3+| visual prominence 2+| (CONVIS) 3+| 1 : visually conspicuous2 : not visually conspicuous3 : prominent | EN | 0,1
+3+| visual prominence 2+| (CONVIS) 3+|
+1: visually conspicuous +
+2: not visually conspicuous +
+3: prominent | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+a|
@@ -2844,7 +3314,6 @@ For each instance of *fixed date range*, at least one of the sub-attributes *dat
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-
 --
 
 [underline]#INT 1 Reference:# F 20,21
@@ -2856,7 +3325,7 @@ If it is required to encode a dolphin, it must be done using the feature *Dolphi
 
 [underline]#Remarks:#
 
-* If it is required to encode a dolphin beacon, this must be done using a beacon feature (see clauses 20.9-13), or a *Pile* feature (see <<sec_8.4>>).
+* If it is required to encode a dolphin beacon, this must be done using a beacon feature (see <<sec_20.9;to!sec_20.13>>), or a *Pile* feature (see <<sec_8.4>>).
 * Dolphins that are disused and/or have fallen into disrepair must be encoded, where required, using *Obstruction* or *Pile* features.
 
 [underline]#Distinction:# Pile; Shoreline Construction; Special Purpose/General beacon; Special Purpose/General Buoy.
@@ -2876,7 +3345,10 @@ If it is required to encode a dolphin, it must be done using the feature *Dolphi
 4+a| _ECDIS Symbol_
 
 3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
-3+| condition 2+| (CONDTN) 3+| 1 : under construction2 : ruined5 : planned construction | EN | 0,1
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+2: ruined +
+5: planned construction | EN | 0,1
 3+| feature name
 2+a|
 
@@ -2901,7 +3373,9 @@ If it is required to encode a dolphin, it must be done using the feature *Dolphi
 3+| name usage
 2+a|
 
-3+| 1 : default name display2 : alternate name display
+3+|
+1: default name display +
+2: alternate name display
 | (S) EN
 | 0,1 footnoteblock:[eight_sixteen]
 
@@ -2947,7 +3421,15 @@ If it is required to encode a dolphin, it must be done using the feature *Dolphi
 | 1,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
-3+| status 2+| (STATUS) 3+| 1 : permanent3 : recommended4 : not in use6 : reserved7 : temporary8 : private12 : illuminated14 : public | EN | 0,*
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+3: recommended +
+4: not in use +
+6: reserved +
+7: temporary +
+8: private +
+12: illuminated +
+14: public | EN | 0,*
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+a|
@@ -3013,7 +3495,6 @@ For each instance of *fixed date range*, at least one of the sub-attributes *dat
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-
 --
 
 [underline]#INT 1 Reference:#
@@ -3045,7 +3526,11 @@ If it is required to encode a bollard, it must be done using the feature *Bollar
 4+a| _ECDIS Symbol_
 
 3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
-3+| condition 2+| (CONDTN) 3+| 1 : under construction2 : ruined3 : under reclamation5 : planned construction | EN | 0,1
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+2: ruined +
+3: under reclamation +
+5: planned construction | EN | 0,1
 3+| depth range minimum value
 2+| (DRVAL1)
 3+a|
@@ -3084,7 +3569,9 @@ If it is required to encode a bollard, it must be done using the feature *Bollar
 3+| name usage
 2+a|
 
-3+| 1 : default name display2 : alternate name display
+3+|
+1: default name display +
+2: alternate name display
 | (S) EN
 | 0,1 footnoteblock:[eight_seventeen]
 
@@ -3148,8 +3635,19 @@ If it is required to encode a bollard, it must be done using the feature *Bollar
 | RE
 | 0,1
 
-3+| quality of vertical measurement 2+| (QUASOU) 3+| 2 : depth or least depth unknown3 : doubtful sounding4 : unreliable sounding6 : least depth known7 : least depth unknown, safe clearance at value shown8 : value reported (not surveyed)9 : value reported (not confirmed) | EN | 0,*
-3+| status 2+| (STATUS) 3+| 1 : permanent4 : not in use6 : reserved8 : private12 : illuminated14 : public | EN | 0,*
+3+| quality of vertical measurement 2+| (QUASOU) 3+| 2 : depth or least depth unknown +
+3: doubtful sounding +
+4: unreliable sounding +
+6: least depth known +
+7: least depth unknown, safe clearance at value shown +
+8: value reported (not surveyed)9 : value reported (not confirmed) | EN | 0,*
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+4: not in use +
+6: reserved +
+8: private +
+12: illuminated +
+14: public | EN | 0,*
 3+| vertical uncertainty
 2+| _(SOUACC)_
 3+a|
@@ -3236,7 +3734,6 @@ For each instance of *fixed date range*, at least one of the sub-attributes *dat
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-
 --
 
 [underline]#INT 1 Reference:# F 25
@@ -3271,9 +3768,30 @@ If it is required to encode a dry dock, it must be done using the feature *Dry D
 4+a| _ECDIS Symbol_
 
 3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
-3+| colour 2+| (COLOUR) 3+| 1 : white2 : black3 : red4 : green5 : blue6 : yellow7 : grey8 : brown9 : amber10 : violet11 : orange12 : magenta13 : pink | EN | 0,\* (ordered)
-3+| colour pattern 2+| (COLPAT) 3+| 1 : horizontal stripes2 : vertical stripes3 : diagonal stripes4 : squared5 : stripes (direction unknown)6 : border stripe | EN | 0,1 footnoteblock:[eight_eighteen]
-3+| condition 2+| (CONDTN) 3+| 1 : under construction2 : ruined5 : planned construction | EN | 0,1
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | EN | 0,\* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown)6 : border stripe | EN | 0,1 footnoteblock:[eight_eighteen]
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+2: ruined +
+5: planned construction | EN | 0,1
 3+| depth range minimum value
 2+| (DRVAL1)
 3+a|
@@ -3305,7 +3823,9 @@ If it is required to encode a dry dock, it must be done using the feature *Dry D
 3+| name usage
 2+a|
 
-3+| 1 : default name display2 : alternate name display
+3+|
+1: default name display +
+2: alternate name display
 | (S) EN
 | 0,1 footnoteblock:[eight_eighteen]
 
@@ -3383,7 +3903,13 @@ If it is required to encode a dry dock, it must be done using the feature *Dry D
 | BO
 | 0,1
 
-3+| status 2+| (STATUS) 3+| 1 : permanent4 : not in use6 : reserved7 : temporary8 : private12 : illuminated | EN | 0,*
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+4: not in use +
+6: reserved +
+7: temporary +
+8: private +
+12: illuminated | EN | 0,*
 3+| vertical length
 2+| (VERLEN)
 3+a|
@@ -3391,7 +3917,10 @@ If it is required to encode a dry dock, it must be done using the feature *Dry D
 | RE
 | 0,1
 
-3+| visual prominence 2+| (CONVIS) 3+| 1 : visually conspicuous2 : not visually conspicuous3 : prominent | EN | 0,1
+3+| visual prominence 2+| (CONVIS) 3+|
+1: visually conspicuous +
+2: not visually conspicuous +
+3: prominent | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+a|
@@ -3460,7 +3989,6 @@ For each instance of *fixed date range*, at least one of the sub-attributes *dat
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-
 --
 
 [underline]#INT 1 Reference:# F 26
@@ -3493,7 +4021,10 @@ If it is required to encode a floating dock, it must be done using the feature *
 4+a| _ECDIS Symbol_
 
 3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
-3+| condition 2+| (CONDTN) 3+| 1 : under construction2 : ruined5 : planned construction | EN | 0,1
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+2: ruined +
+5: planned construction | EN | 0,1
 3+| feature name
 2+a|
 
@@ -3518,7 +4049,9 @@ If it is required to encode a floating dock, it must be done using the feature *
 3+| name usage
 2+a|
 
-3+| 1 : default name display2 : alternate name display
+3+|
+1: default name display +
+2: alternate name display
 | (S) EN
 | 0,1 footnoteblock:[eight_nineteen]
 
@@ -3570,7 +4103,16 @@ If it is required to encode a floating dock, it must be done using the feature *
 3+a| | (S) TD
 | 1,1
 
-3+| status 2+| (STATUS) 3+| 1 : permanent2 : occasional4 : not in use5 : periodic/intermittent6 : reserved7 : temporary8 : private12 : illuminated14 : public | EN | 0,*
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+4: not in use +
+5: periodic/intermittent +
+6: reserved +
+7: temporary +
+8: private +
+12: illuminated +
+14: public | EN | 0,*
 3+| vertical length
 2+| (VERLEN)
 3+a|
@@ -3578,7 +4120,10 @@ If it is required to encode a floating dock, it must be done using the feature *
 | RE
 | 0,1
 
-3+| visual prominence 2+| (CONVIS) 3+| 1 : visually conspicuous2 : not visually conspicuous3 : prominent | EN | 0,1
+3+| visual prominence 2+| (CONVIS) 3+|
+1: visually conspicuous +
+2: not visually conspicuous +
+3: prominent | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+a|
@@ -3636,7 +4181,6 @@ If it is required to encode a floating dock, it must be done using the feature *
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 
-
 |===
 
 [[eight_nineteen]]
@@ -3647,7 +4191,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
 
 --
 
@@ -3680,7 +4223,11 @@ If it is required to encode a pontoon, it must be done using the feature *Pontoo
 
 3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
 3+| category of dock 2+| (CATDOC) 3+| 1: tidal2: wet dock | EN | 0,1
-3+| condition 2+| (CONDTN) 3+| 1 : under construction2 : ruined3 : under reclamation5 : planned construction | EN | 0,1
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+2: ruined +
+3: under reclamation +
+5: planned construction | EN | 0,1
 3+| feature name
 2+a|
 
@@ -3705,7 +4252,9 @@ If it is required to encode a pontoon, it must be done using the feature *Pontoo
 3+| name usage
 2+a|
 
-3+| 1 : default name display2 : alternate name display
+3+|
+1: default name display +
+2: alternate name display
 | (S) EN
 | 0,1 footnoteblock:[eight_twenty]
 
@@ -3796,7 +4345,12 @@ If it is required to encode a pontoon, it must be done using the feature *Pontoo
 3+a| | (S) TD
 | 1,1
 
-3+| status 2+| (STATUS) 3+| 1 : permanent4 : not in use6 : reserved8 : private14 : public | EN | 0,*
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+4: not in use +
+6: reserved +
+8: private +
+14: public | EN | 0,*
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+a|
@@ -3860,7 +4414,6 @@ For each instance of *fixed date range*, at least one of the sub-attributes *dat
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-
 --
 
 [underline]#INT 1 Reference:# F 27, 28
@@ -3920,7 +4473,9 @@ If it is required to encode a non-navigable dock area, it must be done using the
 3+| name usage
 2+a|
 
-3+| 1 : default name display2 : alternate name display
+3+|
+1: default name display +
+2: alternate name display
 | (S) EN
 | 0,1 footnoteblock:[eight_twenty-one]
 
@@ -3945,8 +4500,19 @@ If it is required to encode a non-navigable dock area, it must be done using the
 | URN
 | 0,1
 
-3+| nature of construction 2+| (NATCON) 3+| 1 : masonry2 : concreted6 : wooden7 : metal11 : latticed | EN | 0,*
-3+| status 2+| (STATUS) 3+| 1 : permanent4 : not in use6 : reserved8 : private14 : public28 : buoyed | EN | 0,*
+3+| nature of construction 2+| (NATCON) 3+|
+1: masonry +
+2: concreted +
+6: wooden +
+7: metal +
+11: latticed | EN | 0,*
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+4: not in use +
+6: reserved +
+8: private +
+14: public +
+28: buoyed | EN | 0,*
 3+| vertical length
 2+| (VERLEN)
 3+a|
@@ -3954,7 +4520,10 @@ If it is required to encode a non-navigable dock area, it must be done using the
 | RE
 | 0,1
 
-3+| water level effect 2+| (WATLEV) 3+| 1 : partly submerged at high water4 : covers and uncovers5 : awash | EN | 0,1
+3+| water level effect 2+| (WATLEV) 3+|
+1: partly submerged at high water +
+4: covers and uncovers +
+5: awash | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+a|
@@ -4016,7 +4585,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-
 --
 
 [underline]#INT 1 Reference:# F 24
@@ -4071,7 +4639,9 @@ If it is required to encode a gridiron, it must be done using the feature *Gridi
 3+| name usage
 2+a|
 
-3+| 1 : default name display2 : alternate name display
+3+|
+1: default name display +
+2: alternate name display
 | (S) EN
 | 0,1 footnoteblock:[eight_twenty-two]
 
@@ -4152,7 +4722,15 @@ If it is required to encode a gridiron, it must be done using the feature *Gridi
 3+a| | (S) TD
 | 1,1
 
-3+| status 2+| (STATUS) 3+| 1 : permanent4 : not in use6 : reserved8 : private13 : historic14 : public16 : watched17 : unwatched | EN | 0,*
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+4: not in use +
+6: reserved +
+8: private +
+13: historic +
+14: public +
+16: watched +
+17: unwatched | EN | 0,*
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+a|
@@ -4214,7 +4792,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.^---^For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-
 --
 
 [underline]#INT 1 Reference:# F 41.1
@@ -4275,7 +4852,9 @@ A mooring trot is a mooring that is composed of ground tackle, mooring cables, b
 3+| name usage
 2+a|
 
-3+| 1 : default name display2 : alternate name display
+3+|
+1: default name display +
+2: alternate name display
 | (S) EN
 | 0,1 footnoteblock:[eight_twenty-three]
 
@@ -4367,7 +4946,6 @@ For each instance of *fixed date range*, at least one of the sub-attributes *dat
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-
 --
 
 [underline]#INT 1 Reference:# Q 42
@@ -4377,7 +4955,7 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 
 [[fig_8-2]]
 .Mooring trot
-image::figure-8-2.png[Shape23,360,216]
+image::figure-8-2.png[360,216]
 
 A complete mooring trot is composed of ground tackle, mooring cables, buoys and mooring berths on junction cables. The following remarks refer to the annotations in <<fig_8-2>> above:
 

@@ -36,7 +36,7 @@ If it is required to encode a non-coastal cliff, it must be done using the featu
 [[sec_5.2]]
 === Cuttings and embankments (see S-4 -- B-363.2 and B-364.1)
 
-If it is required to encode cuttings and embankments, this must be done in the same way as cliffs; using *Sloping Ground* and/or *Slope Topline* features (see clauses5.14 and 5.15), with attribute *category of slope* = _1_ (cutting) or _2_ (embankment).
+If it is required to encode cuttings and embankments, this must be done in the same way as cliffs; using *Sloping Ground* and/or *Slope Topline* features (see <<sec_5.14;and!sec_5.15>>), with attribute *category of slope* = _1_ (cutting) or _2_ (embankment).
 
 [underline]#Remarks:#
 
@@ -184,7 +184,6 @@ If it is required to encode cuttings and embankments, this must be done in the s
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-
 
 |===
 
@@ -483,8 +482,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 --
-
-
 
 [underline]#INT 1 Reference:#
 
@@ -1309,7 +1306,7 @@ If it is required to describe the natural scenery of the land, or to give the ge
 [underline]#Remarks:#
 
 * This feature has a use similar to that of the feature *Sea Area/Named Water Area* (see <<sec_9.1>>), but for the land.
-* Sand dunes, hills and cliffs must be encoded, where required, using the feature classes *Sloping Ground* and/or *Slope Topline* (see clauses 5.14and 5.15).
+* Sand dunes, hills and cliffs must be encoded, where required, using the feature classes *Sloping Ground* and/or *Slope Topline* (see <<sec_5.14;and!sec_5.15>>).
 * A *Land Region* surface should be bounded, if possible, by existing curves used by other features (for example*Coastline*). If necessary, however, this surface may be bounded by other curves created to close the surface, or to describe a new surface.
 * For named capes, points, peninsulas and other types of *Land Region* where there is no specific value for the attribute *category of land region*, the generic term "Cape", "Point", "Peninsula", etc may be included on the complex attribute *feature name*, unless the name has been populated on an underlying *Land Area*, in which case *Land Region* should not be encoded.
 * *Land Region* features of type surface may overlap.
@@ -1504,7 +1501,7 @@ If it is required to encode an isolated tree used as a landmark, it must be done
 [underline]#Remarks:#
 
 * The attribute *height* is used to encode the approximate altitude of the highest point of the top of the vegetation. Where the source shows an island with the approximate height of the top of the vegetation above height datum (see INT1 - C14), a *Vegetation* feature should be encoded co-incident with the *Land Area* feature of the island, with attribute *height* corresponding to the value shown on the source.
-* Where it is required to encode a mangrove area or tree located in the intertidal area, this should be done using the feature *Obstruction* (see clauses 13.6 and 13.6.1.1), with attribute *category of obstruction* = _23_ (mangrove). Where it is required to encode the generalised seaward edge only of a mangrove area to represent the "apparent" coastline, this must be done using the feature *Coastline* (see <<sec_5.3>>).
+* Where it is required to encode a mangrove area or tree located in the intertidal area, this should be done using the feature *Obstruction* (see <<sec_13.6;and!sec_13.6.1.1>>), with attribute *category of obstruction* = _23_ (mangrove). Where it is required to encode the generalised seaward edge only of a mangrove area to represent the "apparent" coastline, this must be done using the feature *Coastline* (see <<sec_5.3>>).
 
 [underline]#Distinction:# Seabed Area; Seagrass; Weed/Kelp.
 

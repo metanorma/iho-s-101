@@ -454,7 +454,7 @@ If it is required to encode a building (other than a landmark, tank, silo or roo
 
 [[fig_6-1]]
 .Landmarks
-image::figure-6-1.png[Shape4,624,158]
+image::figure-6-1.png[624,158]
 
 * If available and considered important for route planning and/or monitoring, the vertical uncertainty associated with encoded vertical clearance values should also be encoded.
 
@@ -1145,7 +1145,6 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 |===
 
-
 [[six_six]]
 [NOTE]
 --
@@ -1169,14 +1168,14 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 
 If it is required to encode a bridge, it should be done using the feature *Bridge*. Bridges may be encoded over water that is navigable or non-navigable at the optimum display scale of the ENC data. Where the bridge is encoded over navigable water, associated features such as spans, pylons and pontoons of the bridge must be associated with the *Bridge* feature using the association *Bridge Aggregation* (see <<sec_25.4>>) (that is, the *Bridge* feature has geometry of type curve or surface, or has no geometry). Where the bridge is encoded over non-navigable water, then it must be encoded, where required, using a *Bridge* feature having no component features (that is, the *Bridge* feature has geometry of type curve or surface); or as a *Landmark* feature (see <<sec_7.2>>) if the bridge has geometry of type point.
 
-The value of the vertical clearance between (high) water level and any fixed overhead obstruction must always be given, where known, on the largest optimum display scale ENC data intended for navigation under the bridge, and for detailed passage planning. The datum above which clearances are given must be a high water level, preferably Highest Astronomical Tide (HAT), where the tide is appreciable. For bridges over navigable water, the value for the vertical clearance(s) must be encoded using the features *Span Fixed* or *Span Opening* (see clauses6.7and 6.8), with the clearance(s) populated using the complex attributes *vertical clearance fixed*, *vertical clearance closed* and/or *vertical clearance open*, and sub-attributes populated relevant to the span. In areas where the tidal range is not appreciable the datum above which clearances are given should be Mean Sea Level (MSL).
+The value of the vertical clearance between (high) water level and any fixed overhead obstruction must always be given, where known, on the largest optimum display scale ENC data intended for navigation under the bridge, and for detailed passage planning. The datum above which clearances are given must be a high water level, preferably Highest Astronomical Tide (HAT), where the tide is appreciable. For bridges over navigable water, the value for the vertical clearance(s) must be encoded using the features *Span Fixed* or *Span Opening* (see <<sec_6.7;and!sec_6.8>>), with the clearance(s) populated using the complex attributes *vertical clearance fixed*, *vertical clearance closed* and/or *vertical clearance open*, and sub-attributes populated relevant to the span. In areas where the tidal range is not appreciable the datum above which clearances are given should be Mean Sea Level (MSL).
 
 [underline]#Remarks:#
 
 * If it is required to encode the name of a bridge over navigable water, the *Bridge* should be encoded using geometry of type curve or surface, associated with all relevant components of the bridge using the association *Bridge Aggregation*. The extent of the geometry of the *Bridge* should utilise the geometry of all the components of the bridge so as to cover its full extent.
 * If it is required to encode the extent of an unnamed bridge over navigable water, this may be done using a *Bridge* feature having no geometry, associated with all relevant components of the bridge using the association *Bridge Aggregation*.
 * Water under a bridge must be encoded using the features *Depth Area*, *Dredged Area* or *Unsurveyed Area* (and appropriate *Depth Contour* and *Sounding* features) if the waterway is navigable at the optimum display scale for the ENC data, or using the feature *Land Area* if the waterway is not navigable at the optimum display scale for the ENC data.
-* When there is a fixed vertical clearance, closed vertical clearance, or open vertical clearance given for a bridge, it should be applied only to the portion of the bridge to which the clearance refers, using the features *Span Fixed* or *Span Opening* (see clauses6.7and 6.8). All encoded bridge spans must be associated with the *Bridge* feature using the association *Bridge Aggregation* (see <<sec_25.4>>). See examples in the Figures below. If there are no vertical clearances given for a bridge and it is over water that is navigable at the optimum display scale of the ENC data, a single *Span Fixed* or *Span Opening* feature must be encoded covering the area of the bridge, having mandatory vertical clearance attributes populated with an empty (null) value.
+* When there is a fixed vertical clearance, closed vertical clearance, or open vertical clearance given for a bridge, it should be applied only to the portion of the bridge to which the clearance refers, using the features *Span Fixed* or *Span Opening* (see <<sec_6.7;and!sec_6.8>>). All encoded bridge spans must be associated with the *Bridge* feature using the association *Bridge Aggregation* (see <<sec_25.4>>). See examples in the Figures below. If there are no vertical clearances given for a bridge and it is over water that is navigable at the optimum display scale of the ENC data, a single *Span Fixed* or *Span Opening* feature must be encoded covering the area of the bridge, having mandatory vertical clearance attributes populated with an empty (null) value.
 * The attribute *height* is used, where required, to encode the height of the highest point on the bridge structure (see <<sec_2.5.7>>).
 * If it is required to encode a bridge for which part or the entire span is moved aside or backwards, it must be done using a *Bridge* feature, with attributes *opening bridge* = _True_ and *category of opening bridge* = _7_ (drawbridge).
 * If it is required to encode a pontoon bridge where a pontoon section may be temporarily removed or rotated so as to allow passage of vessels, this must be done using a *Bridge* feature, with attributes *bridge construction* = _3_ (pontoon bridge), *opening bridge* = _True_ and *category of opening bridge* = _3_ (swing bridge).
@@ -1189,23 +1188,23 @@ The value of the vertical clearance between (high) water level and any fixed ove
 
 [[fig_6-2]]
 .Bascule bridge -- Example
-image::figure-6-2.png[Shape5,626,485]
+image::figure-6-2.png[626,485]
 
 [[fig_6-3]]
 .Pontoon bridge (opening) -- Example
-image::figure-6-3.png[Shape7,633,345]
+image::figure-6-3.png[633,345]
 
 [[fig_6-4]]
 .Pontoon bridge (fixed) -- Example
-image::figure-6-4.png[Shape8,633,538]
+image::figure-6-4.png[633,538]
 
 [[fig_6-5]]
 .Swing bridge -- Example
-image::figure-6-5.png[Shape10,30,96]
+image::figure-6-5.png[30,96]
 
 [[fig_6-6]]
 .Lifting bridge -- Example
-image::figure-6-6.png[Shape12,240,84]
+image::figure-6-6.png[240,84]
 
 [underline]#Distinction:#  Pipeline Overhead; Pontoon; Pylon/Bridge Support; Span Fixed; Span Opening.
 

@@ -360,7 +360,7 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_10.3.1]]
 ==== Current data (see S-4 -- B-408)
 
-The term "current(s)" in this document is used to describe water movements which are generally constant in direction, and are not dependent on astronomical conditions (that is, are non-gravitational). A current is described by the direction towards which it is running. For tidal streams, see clauses10.2and 10.5.
+The term "current(s)" in this document is used to describe water movements which are generally constant in direction, and are not dependent on astronomical conditions (that is, are non-gravitational). A current is described by the direction towards which it is running. For tidal streams, see <<sec_10.2;and!sec_10.5>>.
 
 Currents occur as:
 
@@ -375,7 +375,7 @@ If it is required to encode a non-gravitational current, it must be done using t
 [underline]#Remarks:#
 
 * Maximum rates (velocities) of currents, where known, must be encoded in knots using the complex attributes *orientation* and *speed*, and should be quoted to one decimal place. Ideally, the minimum and maximum strengths should be quoted, where known, if the strength varies.
-* In tidal waters where the flow of river water alternately reinforces the ebb tidal stream and reduces the flood, the combined effect must be encoded, where required, for the convenience of the navigator; that is, the combined current must be encoded using the features *Tidal Stream -- Flood/Ebb* or *Tidal Stream Panel Data* (see clauses 10.2and 10.5). In restricted waters where tides are negligible, the direction and/or rate of flow should be encoded using *Current -- Non-Gravitational*.
+* In tidal waters where the flow of river water alternately reinforces the ebb tidal stream and reduces the flood, the combined effect must be encoded, where required, for the convenience of the navigator; that is, the combined current must be encoded using the features *Tidal Stream -- Flood/Ebb* or *Tidal Stream Panel Data* (see <<sec_10.2;and!sec_10.5>>). In restricted waters where tides are negligible, the direction and/or rate of flow should be encoded using *Current -- Non-Gravitational*.
 * Ocean currentsare permanent or seasonal, are somewhat variable in strength and direction, and generally cover broad areas. In cases where the current strength and direction are subject to seasonal variations, this should be indicated using the complex attribute *periodic date range*. This may require multiple *Current -- Non-Gravitational* features with attributes populated in accordance with the seasonal variations to be coincident in the ENC. Where the direction of an ocean current is so variable that it is not practicable to show this information, the complex attribute *orientation* (*orientation value*) must be populated with an empty (null) value.
 * Local weather conditions can produce significant temporary wind-induced currents which cannot be charted. If there is a known hazard, for example if winds from a particular direction have been found to endanger vessels by setting them on to shoals unexpectedly, a cautionary note may be added using the feature *Caution Area* (see <<sec_16.10>>). If considered necessary, the note may refer to further information in other publications, such as Sailing Directions.
 
@@ -758,8 +758,6 @@ S-101 Encoding: (Complex attributes in italics, encoded values in blue text)
 3+| time relative to tide | 6
 
 |===
-
-
 
 * Where an encoded complex attribute *tidal stream value*, sub-attribute *speed maximum* has a value of zero (indicating slack water), the corresponding sub-attribute *orientation* / *orientation value* must be populated with an empty (null) value.
 
