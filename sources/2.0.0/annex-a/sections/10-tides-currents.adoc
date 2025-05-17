@@ -43,7 +43,7 @@ The inclusion of tidal information in ECDIS is optional. As such, for ENC only t
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[ten_two]
 
 3+| fixed date range
 2+|
@@ -55,12 +55,12 @@ The inclusion of tidal information in ECDIS is optional. As such, for ENC only t
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[ten_two]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[ten_two]
 
 3+| interoperability identifier
 2+|
@@ -121,7 +121,7 @@ The inclusion of tidal information in ECDIS is optional. As such, for ENC only t
 3+|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[ten_two]
 
 3+| headline
 2+| 3+|
@@ -141,7 +141,7 @@ The inclusion of tidal information in ECDIS is optional. As such, for ENC only t
 3+|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[ten_two]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -149,13 +149,18 @@ The inclusion of tidal information in ECDIS is optional. As such, for ENC only t
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+|===
+
+[[ten_two]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-|===
+--
 
 [underline]#INT 1 Reference:# H 40, 41
 
@@ -212,7 +217,7 @@ If it is required to encode tidal stream information that is limited to flood an
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[ten_three]
 
 3+| fixed date range
 2+|
@@ -224,12 +229,12 @@ If it is required to encode tidal stream information that is limited to flood an
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[ten_three]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[ten_three]
 
 3+| interoperability identifier
 2+|
@@ -309,7 +314,7 @@ If it is required to encode tidal stream information that is limited to flood an
 3+|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[ten_three]
 
 3+| headline
 2+| 3+|
@@ -329,7 +334,7 @@ If it is required to encode tidal stream information that is limited to flood an
 3+|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[ten_three]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -337,13 +342,18 @@ If it is required to encode tidal stream information that is limited to flood an
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+|===
+
+[[ten_three]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-|===
+--
 
 [underline]#INT 1 Reference:# H 42, 43
 
@@ -415,7 +425,7 @@ If it is required to encode a non-gravitational current, it must be done using t
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[ten_four]
 
 3+| interoperability identifier
 2+|
@@ -443,7 +453,7 @@ If it is required to encode a non-gravitational current, it must be done using t
 3+|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[ten_four]
 
 3+| headline
 2+| 3+|
@@ -463,7 +473,7 @@ If it is required to encode a non-gravitational current, it must be done using t
 3+|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[ten_four]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -471,11 +481,16 @@ If it is required to encode a non-gravitational current, it must be done using t
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
-
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[ten_four]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# H 44, 45; K 17
 
@@ -529,7 +544,7 @@ If it is required to encode a disturbance of water, it must be done using the fe
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[ten_five]
 
 3+| interoperability identifier
 2+|
@@ -636,7 +651,7 @@ If it is required to encode a disturbance of water, it must be done using the fe
 3+|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[ten_five]
 
 3+| headline
 2+| 3+|
@@ -656,7 +671,7 @@ If it is required to encode a disturbance of water, it must be done using the fe
 3+|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[ten_five]
 
 9+| *Feature Associations* |
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -664,11 +679,16 @@ If it is required to encode a disturbance of water, it must be done using the fe
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-9+.<| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
-
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[ten_five]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# H 31,46
 

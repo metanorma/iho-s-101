@@ -72,7 +72,7 @@ Because lights and buoys marking the limits of works at sea may be moved without
 
 3+| 1 : default name display2 : alternate name display
 | (S) EN
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_two]
 
 3+| interoperability identifier
 2+a|
@@ -103,7 +103,7 @@ Because lights and buoys marking the limits of works at sea may be moved without
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_two]
 
 3+| headline
 2+a|
@@ -125,7 +125,7 @@ Because lights and buoys marking the limits of works at sea may be moved without
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_two]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
@@ -133,11 +133,16 @@ Because lights and buoys marking the limits of works at sea may be moved without
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
-
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[eight_two]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:#
 
@@ -169,7 +174,7 @@ If it is required to encode an official place to register, declare and/or check 
 3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
 3+| category of hulk 2+| (CATHLK) 3+| 1 : floating restaurant2 : historic ship3 : floating museum4 : floating accommodation5 : floating breakwater6 : casino7 : training vessel | EN | 0,*
 3+| colour 2+| (COLOUR) 3+| 1 : white2 : black3 : red4 : green5 : blue6 : yellow7 : grey8 : brown9 : amber10 : violet11 : orange12 : magenta13 : pink | EN | 0,\* (ordered)
-3+| colour pattern 2+| (COLPAT) 3+| 1 : horizontal stripes2 : vertical stripes3 : diagonal stripes4 : squared5 : stripes (direction unknown)6 : border stripe | EN | 0,1 footnote:crossnote[]
+3+| colour pattern 2+| (COLPAT) 3+| 1 : horizontal stripes2 : vertical stripes3 : diagonal stripes4 : squared5 : stripes (direction unknown)6 : border stripe | EN | 0,1 footnoteblock:[eight_three]
 3+| condition 2+| (CONDTN) 3+| 1 : under construction2 : ruined5 : planned construction | EN | 0,1
 3+| feature name
 2+a|
@@ -197,7 +202,7 @@ If it is required to encode an official place to register, declare and/or check 
 
 3+| 1 : default name display2 : alternate name display
 | (S) EN
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_three]
 
 3+| fixed date range
 2+a|
@@ -209,12 +214,12 @@ If it is required to encode an official place to register, declare and/or check 
 3+| date end
 2+| (DATEND)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_three]
 
 3+| date start
 2+| (DATSTA)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_three]
 
 3+| horizontal length
 2+| (HORLEN)
@@ -291,7 +296,7 @@ If it is required to encode an official place to register, declare and/or check 
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_three]
 
 3+| headline
 2+a|
@@ -313,7 +318,7 @@ If it is required to encode an official place to register, declare and/or check 
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_three]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+| *Feature Associations*
@@ -324,15 +329,20 @@ If it is required to encode an official place to register, declare and/or check 
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] The attribute *colour pattern* is mandatory for hulks that have more than one value populated for the attribute *colour*.
+
+|===
+
+[[eight_three]]
+[NOTE]
+--
+The attribute *colour pattern* is mandatory for hulks that have more than one value populated for the attribute *colour*.
 
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-|===
+--
 
 [underline]#INT 1 Reference:# F 34
 
@@ -366,7 +376,7 @@ If it is required to encode a permanently moored ship, it must be done using the
 3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
 3+| category of pile 2+| (CATPLE) 3+| 1 : stake3 : post4 : tripodal5 : piling6 : area of piles7 : pipe8 : mooring post | EN | 0,1
 3+| colour 2+| (COLOUR) 3+| 1 : white2 : black3 : red4 : green5 : blue6 : yellow7 : grey8 : brown9 : amber10 : violet11 : orange12 : magenta13 : pink | EN | 0,\* (ordered)
-3+| colour pattern 2+| (COLPAT) 3+| 1 : horizontal stripes2 : vertical stripes3 : diagonal stripes4 : squared5 : stripes (direction unknown)6 : border stripe | EN | 0,1 footnote:crossnote[]
+3+| colour pattern 2+| (COLPAT) 3+| 1 : horizontal stripes2 : vertical stripes3 : diagonal stripes4 : squared5 : stripes (direction unknown)6 : border stripe | EN | 0,1 footnoteblock:[eight_four]
 3+| condition 2+| (CONDTN) 3+| 1 : under construction2 : ruined5 : planned construction | EN | 0,1
 3+| feature name
 2+a|
@@ -394,7 +404,7 @@ If it is required to encode a permanently moored ship, it must be done using the
 
 3+| 1 : default name display2 : alternate name display
 | (S) EN
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_four]
 
 3+| fixed date range
 2+a|
@@ -406,12 +416,12 @@ If it is required to encode a permanently moored ship, it must be done using the
 3+| date end
 2+| (DATEND)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_four]
 
 3+| date start
 2+| (DATSTA)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_four]
 
 3+| height
 2+| (HEIGHT)
@@ -465,7 +475,7 @@ If it is required to encode a permanently moored ship, it must be done using the
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_four]
 
 3+| headline
 2+a|
@@ -487,7 +497,7 @@ If it is required to encode a permanently moored ship, it must be done using the
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_four]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+| *Feature Associations*
@@ -500,15 +510,20 @@ If it is required to encode a permanently moored ship, it must be done using the
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] The attribute *colour pattern* is mandatory for piles that have more than one value populated for the attribute *colour*.
+
+|===
+
+[[eight_four]]
+[NOTE]
+--
+The attribute *colour pattern* is mandatory for piles that have more than one value populated for the attribute *colour*.
 
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-|===
+--
 
 [underline]#INT 1 Reference:# F 22
 
@@ -568,7 +583,7 @@ If it is required to encode a pile or post that is not used as a dolphin or an a
 
 3+| 1 : default name display2 : alternate name display
 | (S) EN
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_five]
 
 3+| fixed date range
 2+a|
@@ -580,12 +595,12 @@ If it is required to encode a pile or post that is not used as a dolphin or an a
 3+| date end
 2+| (DATEND)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_five]
 
 3+| date start
 2+| (DATSTA)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_five]
 
 3+| height
 2+| (HEIGHT)
@@ -639,7 +654,7 @@ If it is required to encode a pile or post that is not used as a dolphin or an a
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_five]
 
 3+| headline
 2+a|
@@ -661,7 +676,7 @@ If it is required to encode a pile or post that is not used as a dolphin or an a
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_five]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
@@ -669,13 +684,18 @@ If it is required to encode a pile or post that is not used as a dolphin or an a
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+|===
+
+[[eight_five]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-|===
+--
 
 [underline]#INT 1 Reference:# F 1
 
@@ -711,8 +731,12 @@ If it is required to encode a dyke, it must be done using the feature *Dyke*.
 3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
 3+| category of shoreline construction 2+| (CATSLC) 3+| 1 : breakwater2 : groyne3 : mole4 : pier (jetty)5 : promenade pier6 : wharf7 : training wall8 : rip rap9 : revetment10 : sea wall11 : landing steps12 : ramp13 : slipway14 : fender15 : solid face wharf16 : open face wharf17 : log ramp20 : swimming facility22 : quay23 : tie-up wall | EN | 0,1
 3+| colour 2+| (COLOUR) 3+| 1 : white2 : black3 : red4 : green5 : blue6 : yellow7 : grey8 : brown9 : amber10 : violet11 : orange12 : magenta13 : pink | EN | 0,\* (ordered)
-3+| colour pattern 2+| (COLPAT) 3+| 1 : horizontal stripes2 : vertical stripes3 : diagonal stripes4 : squared5 : stripes (direction unknown)6 : border stripe | EN | 0,1 footnote:crossnote[]
-3+| condition 2+| (CONDTN) 3+| 1 : under construction2 : ruined3 : under reclamation5 : planned construction | EN | 0,1
+3+| colour pattern 2+| (COLPAT) 3+| 1 : horizontal stripes2 : vertical stripes3 : diagonal stripes4 : squared5 : stripes (direction unknown)6 : border stripe | EN | 0,1 footnoteblock:[eight_six]
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+2: ruined +
+3: under reclamation +
+5: planned construction | EN | 0,1
 3+| feature name
 2+a|
 
@@ -739,7 +763,7 @@ If it is required to encode a dyke, it must be done using the feature *Dyke*.
 
 3+| 1 : default name display2 : alternate name display
 | (S) EN
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_six]
 
 3+| fixed date range
 2+a|
@@ -751,12 +775,12 @@ If it is required to encode a dyke, it must be done using the feature *Dyke*.
 3+| date end
 2+| (DATEND)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_six]
 
 3+| date start
 2+| (DATSTA)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_six]
 
 3+| height
 2+| (HEIGHT)
@@ -848,7 +872,7 @@ If it is required to encode a dyke, it must be done using the feature *Dyke*.
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_six]
 
 3+| headline
 2+a|
@@ -870,7 +894,7 @@ If it is required to encode a dyke, it must be done using the feature *Dyke*.
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_six]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
@@ -880,15 +904,20 @@ If it is required to encode a dyke, it must be done using the feature *Dyke*.
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] The attribute *colour pattern* is mandatory for shoreline constructions that have more than one value populated for the attribute *colour*.
+
+|===
+
+[[eight_six]]
+[NOTE]
+--
+The attribute *colour pattern* is mandatory for shoreline constructions that have more than one value populated for the attribute *colour*.
 
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-|===
+--
 
 [underline]#INT 1 Reference:# F 2.1, 2.2, 4.1-6.3, 12-15, 23, 30-33.2
 
@@ -911,7 +940,7 @@ image::figure-8-1.png[Shape22,631,332]
 
 [underline]#Remarks:#
 
-* Each of the three surface parts of the example shoreline construction above may be encoded as separate *Shoreline Construction* features of type surface; the masked curve (_ang_) must be encoded; and, if part of the *Shoreline Construction*boundary has a different characteristic (for example (_bc_) attribute *category of shoreline construction* = _6_ or _15_), it should be encoded as a separate *Shoreline Construction* feature of type curve. Alternatively, all the boundaries of the components of the shoreline construction may be encoded as *Shoreline Construction* features of type curve.
+* Each of the three surface parts of the example shoreline construction above may be encoded as separate *Shoreline Construction* features of type surface; the masked curve (_ang_) must be encoded; and, if part of the *Shoreline Construction* boundary has a different characteristic (for example (_bc_) attribute *category of shoreline construction* = _6_ or _15_), it should be encoded as a separate *Shoreline Construction* feature of type curve. Alternatively, all the boundaries of the components of the shoreline construction may be encoded as *Shoreline Construction* features of type curve.
 * In this example,the shoreline construction surface above the high water line must also be covered by a *Land Area* feature of type surface, and the intertidal shoreline construction surface must also be covered by a *Depth Area*feature of type surface with attribute *depth range minimum value* = -H (see <<sec_11.7.3>>).
 * *Shoreline Construction* features must be broken into their constituent parts where possible, and categorised using attributes such as *category of shoreline construction* and *water level effect* as indicated on the source.
 * If the presence of a feature is only indicated on the source by a textual reference, without a clear symbol (for example 'pier', 'groyne', 'post'), it should be encoded using a *Caution Area*feature (see <<sec_16.10>>) or an *Information Area* feature (see <<sec_16.11>>), with the textual reference encoded using the complex attribute *information* (see <<sec_2.4.6>>). *Caution Area* should be used if the information is considered essential for safe navigation.
@@ -942,7 +971,7 @@ image::figure-8-1.png[Shape22,631,332]
 | 0,*
 
 3+| colour 2+| (COLOUR) 3+| 1 : white2 : black3 : red4 : green5 : blue6 : yellow7 : grey8 : brown9 : amber10 : violet11 : orange12 : magenta13 : pink 2+| EN | 0,\* (ordered)
-3+| colour pattern 2+| (COLPAT) 3+| 1 : horizontal stripes2 : vertical stripes3 : diagonal stripes4 : squared5 : stripes (direction unknown)6 : border stripe 2+| EN | 0,1 footnote:crossnote[]
+3+| colour pattern 2+| (COLPAT) 3+| 1 : horizontal stripes2 : vertical stripes3 : diagonal stripes4 : squared5 : stripes (direction unknown)6 : border stripe 2+| EN | 0,1 footnoteblock:[eight_seven]
 3+| condition 2+| (CONDTN) 3+| 1 : under construction2 : ruined5 : planned construction 2+| EN | 0,1
 3+| feature name
 2+a|
@@ -971,7 +1000,7 @@ image::figure-8-1.png[Shape22,631,332]
 
 3+| 1 : default name display2 : alternate name display
 2+| (S) EN
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_seven]
 
 3+| fixed date range
 2+a|
@@ -985,14 +1014,14 @@ image::figure-8-1.png[Shape22,631,332]
 3+a|
 
 2+| (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_seven]
 
 3+| date start
 2+| (DATSTA)
 3+a|
 
 2+| (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_seven]
 
 3+| height
 2+| (HEIGHT)
@@ -1144,7 +1173,7 @@ image::figure-8-1.png[Shape22,631,332]
 3+a|
 
 2+| (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_seven]
 
 3+| headline
 2+a|
@@ -1166,7 +1195,7 @@ image::figure-8-1.png[Shape22,631,332]
 3+a|
 
 2+| (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_seven]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> 2+| TE | 0,1
 11+| *Feature Associations*
@@ -1178,7 +1207,13 @@ image::figure-8-1.png[Shape22,631,332]
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition 2+| 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association 2+| 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association 2+| 0,*
-11+.<a| footnote:crossnote[] The sub-attribute *colour pattern* is mandatory for structures over navigable water that have more than one value populated for the sub-attribute *colour*.
+
+|===
+
+[[eight_seven]]
+[NOTE]
+--
+The sub-attribute *colour pattern* is mandatory for structures over navigable water that have more than one value populated for the sub-attribute *colour*.
 
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
@@ -1186,7 +1221,8 @@ For each instance of *fixed date range*, at least one of the sub-attributes *dat
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-|===
+
+--
 
 [underline]#INT 1 Reference:# D 20-24
 
@@ -1252,7 +1288,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 
 3+| 1 : default name display2 : alternate name display
 | (S) EN
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_eight]
 
 3+| interoperability identifier
 2+a|
@@ -1286,7 +1322,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_eight]
 
 3+| headline
 2+a|
@@ -1308,7 +1344,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_eight]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
@@ -1316,11 +1352,18 @@ The value of the vertical clearance between (high) water level and any fixed ove
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+|===
+
+[[eight_eight]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-|===
+
+--
 
 [underline]#INT 1 Reference:# F 3
 
@@ -1380,7 +1423,7 @@ If it is required to encode a causeway, it must be done using the feature *Cause
 
 3+| 1 : default name display2 : alternate name display
 | (S) EN
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_nine]
 
 3+| fixed date range
 2+a|
@@ -1392,12 +1435,12 @@ If it is required to encode a causeway, it must be done using the feature *Cause
 3+| date end
 2+| (DATEND)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_nine]
 
 3+| date start
 2+| (DATSTA)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_nine]
 
 3+| horizontal clearance fixed
 2+a|
@@ -1458,7 +1501,7 @@ If it is required to encode a causeway, it must be done using the feature *Cause
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_nine]
 
 3+| headline
 2+a|
@@ -1480,7 +1523,7 @@ If it is required to encode a causeway, it must be done using the feature *Cause
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_nine]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
@@ -1488,13 +1531,20 @@ If it is required to encode a causeway, it must be done using the feature *Cause
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+|===
+
+[[eight_nine]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-|===
+
+--
 
 [underline]#INT 1 Reference:# F 40
 
@@ -1559,7 +1609,7 @@ If it is required to encode a non-navigable canal, it must be done using the fea
 
 3+| 1 : default name display2 : alternate name display
 | (S) EN
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_ten]
 
 3+| fixed date range
 2+a|
@@ -1571,12 +1621,12 @@ If it is required to encode a non-navigable canal, it must be done using the fea
 3+| date end
 2+| (DATEND)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_ten]
 
 3+| date start
 2+| (DATSTA)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_ten]
 
 3+| interoperability identifier
 2+a|
@@ -1636,7 +1686,7 @@ If it is required to encode a non-navigable canal, it must be done using the fea
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_ten]
 
 3+| headline
 2+a|
@@ -1658,7 +1708,7 @@ If it is required to encode a non-navigable canal, it must be done using the fea
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_ten]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
@@ -1667,13 +1717,20 @@ If it is required to encode a non-navigable canal, it must be done using the fea
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+|===
+
+[[eight_ten]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-|===
+
+--
 
 [underline]#INT 1 Reference:# B 25.1-2
 
@@ -1742,7 +1799,7 @@ If it is required to encode a distance mark, it must be done using the feature *
 
 3+| 1 : default name display2 : alternate name display
 | (S) EN
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_eleven]
 
 3+| horizontal clearance open
 2+a|
@@ -1750,7 +1807,7 @@ If it is required to encode a distance mark, it must be done using the feature *
 3+a|
 
 | C
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_eleven]
 
 3+| horizontal clearance value
 2+| _(HORCLR)_
@@ -1797,7 +1854,7 @@ If it is required to encode a distance mark, it must be done using the feature *
 3+a|
 
 | (S) RE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_eleven]
 
 3+| vertical uncertainty
 2+| _(VERACC)_
@@ -1867,7 +1924,7 @@ If it is required to encode a distance mark, it must be done using the feature *
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_eleven]
 
 3+| headline
 2+a|
@@ -1889,7 +1946,7 @@ If it is required to encode a distance mark, it must be done using the feature *
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_eleven]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
@@ -1897,7 +1954,13 @@ If it is required to encode a distance mark, it must be done using the feature *
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] For encoded gates that are navigable at the optimum display scale of the ENC data, the attribute *horizontal clearance open* is mandatory.
+
+|===
+
+[[eight_eleven]]
+[NOTE]
+--
+For encoded gates that are navigable at the optimum display scale of the ENC data, the attribute *horizontal clearance open* is mandatory.
 
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
@@ -1905,7 +1968,8 @@ The sub-attribute *vertical clearance**value* for the complex attribute *vertica
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-|===
+
+--
 
 [underline]#INT 1 Reference:# F 27, 41.1-2, 42-43
 
@@ -1940,7 +2004,7 @@ If it is required to encode a gate that controls the flow of water, it must be d
 3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
 3+| category of dam 2+| (CATDAM) 3+| 1 : weir2 : dam3 : flood barrage | EN | 0,1
 3+| colour 2+| (COLOUR) 3+| 1 : white2 : black3 : red4 : green5 : blue6 : yellow7 : grey8 : brown9 : amber10 : violet11 : orange12 : magenta13 : pink | EN | 0,\* (ordered)
-3+| colour pattern 2+| (COLPAT) 3+| 1 : horizontal stripes2 : vertical stripes3 : diagonal stripes4 : squared5 : stripes (direction unknown)6 : border stripe | EN | 0,1 footnote:crossnote[]
+3+| colour pattern 2+| (COLPAT) 3+| 1 : horizontal stripes2 : vertical stripes3 : diagonal stripes4 : squared5 : stripes (direction unknown)6 : border stripe | EN | 0,1 footnoteblock:[eight_twelve]
 3+| condition 2+| (CONDTN) 3+| 1 : under construction2 : ruined3 : under reclamation5 : planned construction | EN | 0,1
 3+| feature name
 2+a|
@@ -1968,7 +2032,7 @@ If it is required to encode a gate that controls the flow of water, it must be d
 
 3+| 1 : default name display2 : alternate name display
 | (S) EN
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_twelve]
 
 3+| fixed date range
 2+a|
@@ -1980,12 +2044,12 @@ If it is required to encode a gate that controls the flow of water, it must be d
 3+| date end
 2+| (DATEND)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_twelve]
 
 3+| date start
 2+| (DATSTA)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_twelve]
 
 3+| height
 2+| (HEIGHT)
@@ -2040,7 +2104,7 @@ If it is required to encode a gate that controls the flow of water, it must be d
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_twelve]
 
 3+| headline
 2+a|
@@ -2062,7 +2126,7 @@ If it is required to encode a gate that controls the flow of water, it must be d
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_twelve]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
@@ -2070,7 +2134,13 @@ If it is required to encode a gate that controls the flow of water, it must be d
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] The attribute *colour pattern* is mandatory for dams that have more than one value populated for the attribute *colour*.
+
+|===
+
+[[eight_twelve]]
+[NOTE]
+--
+The attribute *colour pattern* is mandatory for dams that have more than one value populated for the attribute *colour*.
 
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
@@ -2078,7 +2148,8 @@ For each instance of *fixed date range*, at least one of the sub-attributes *dat
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-|===
+
+--
 
 [underline]#INT 1 Reference:# F 43, 44
 
@@ -2124,7 +2195,7 @@ When an encoded flood barrage is inside an area that is not navigable at the opt
 3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
 3+| category of crane 2+| (CATCRN) 3+| 2 : container crane/gantry3 : sheerlegs4 : travelling crane5 : A-frame6 : goliath crane | EN | 0,1
 3+| colour 2+| (COLOUR) 3+| 1 : white2 : black3 : red4 : green5 : blue6 : yellow7 : grey8 : brown9 : amber10 : violet11 : orange12 : magenta13 : pink | EN | 0,\* (ordered)
-3+| colour pattern 2+| (COLPAT) 3+| 1 : horizontal stripes2 : vertical stripes3 : diagonal stripes4 : squared5 : stripes (direction unknown)6 : border stripe | EN | 0,1 footnote:crossnote[]
+3+| colour pattern 2+| (COLPAT) 3+| 1 : horizontal stripes2 : vertical stripes3 : diagonal stripes4 : squared5 : stripes (direction unknown)6 : border stripe | EN | 0,1 footnoteblock:[eight_thirteen]
 3+| condition 2+| (CONDTN) 3+| 1 : under construction2 : ruined5 : planned construction | EN | 0,1
 3+| feature name
 2+a|
@@ -2152,7 +2223,7 @@ When an encoded flood barrage is inside an area that is not navigable at the opt
 
 3+| 1 : default name display2 : alternate name display
 | (S) EN
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_thirteen]
 
 3+| height
 2+| (HEIGHT)
@@ -2275,7 +2346,7 @@ When an encoded flood barrage is inside an area that is not navigable at the opt
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_thirteen]
 
 3+| headline
 2+a|
@@ -2297,7 +2368,7 @@ When an encoded flood barrage is inside an area that is not navigable at the opt
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_thirteen]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 3+| in the water
@@ -2316,13 +2387,20 @@ When an encoded flood barrage is inside an area that is not navigable at the opt
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] The attribute *colour pattern* is mandatory for cranes that have more than one value populated for the attribute *colour*.
+
+|===
+
+[[eight_thirteen]]
+[NOTE]
+--
+The attribute *colour pattern* is mandatory for cranes that have more than one value populated for the attribute *colour*.
 
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-|===
+
+--
 
 [underline]#INT 1 Reference:# F 53.1-3
 
@@ -2392,7 +2470,7 @@ If it is required to encode a crane, it must be done using the feature *Crane***
 
 3+| 1 : default name display2 : alternate name display
 | (S) EN
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_fourteen]
 
 3+| fixed date range
 2+a|
@@ -2404,12 +2482,12 @@ If it is required to encode a crane, it must be done using the feature *Crane***
 3+| date end
 2+| (DATEND)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_fourteen]
 
 3+| date start
 2+| (DATSTA)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_fourteen]
 
 3+| horizontal clearance length
 2+a|
@@ -2511,7 +2589,7 @@ If it is required to encode a crane, it must be done using the feature *Crane***
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_fourteen]
 
 3+| headline
 2+a|
@@ -2533,7 +2611,7 @@ If it is required to encode a crane, it must be done using the feature *Crane***
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_fourteen]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
@@ -2542,13 +2620,20 @@ If it is required to encode a crane, it must be done using the feature *Crane***
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+|===
+
+[[eight_fourteen]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-|===
+
+--
 
 [underline]#INT 1 Reference:# F 12, 19
 
@@ -2587,7 +2672,7 @@ If it is required to encode a berth, it must be done using the feature *Berth*.
 3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
 3+| category of dolphin 2+| _(CATMOR)_ 3+| 1 : mooring dolphin2 : deviation dolphin3 : berthing dolphin4 : fender or breasting dolphin | EN | 1,*
 3+| colour 2+| (COLOUR) 3+| 1 : white2 : black3 : red4 : green5 : blue6 : yellow7 : grey8 : brown9 : amber10 : violet11 : orange12 : magenta13 : pink | EN | 0,\* (ordered)
-3+| colour pattern 2+| (COLPAT) 3+| 1 : horizontal stripes2 : vertical stripes3 : diagonal stripes4 : squared5 : stripes (direction unknown)6 : border stripe | EN | 0,1 footnote:crossnote[]
+3+| colour pattern 2+| (COLPAT) 3+| 1 : horizontal stripes2 : vertical stripes3 : diagonal stripes4 : squared5 : stripes (direction unknown)6 : border stripe | EN | 0,1 footnoteblock:[eight_fifteen]
 3+| condition 2+| (CONDTN) 3+| 1 : under construction2 : ruined5 : planned construction | EN | 0,1
 3+| elevation
 2+| (ELEVAT)
@@ -2622,7 +2707,7 @@ If it is required to encode a berth, it must be done using the feature *Berth*.
 
 3+| 1 : default name display2 : alternate name display
 | (S) EN
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_fifteen]
 
 3+| fixed date range
 2+a|
@@ -2634,12 +2719,12 @@ If it is required to encode a berth, it must be done using the feature *Berth*.
 3+| date end
 2+| (DATEND)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_fifteen]
 
 3+| date start
 2+| (DATSTA)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_fifteen]
 
 3+| height
 2+| (HEIGHT)
@@ -2711,7 +2796,7 @@ If it is required to encode a berth, it must be done using the feature *Berth*.
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_fifteen]
 
 3+| headline
 2+a|
@@ -2733,7 +2818,7 @@ If it is required to encode a berth, it must be done using the feature *Berth*.
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_fifteen]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+| *Feature Associations*
@@ -2745,7 +2830,13 @@ If it is required to encode a berth, it must be done using the feature *Berth*.
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] The attribute *colour pattern* is mandatory for dolphins that have more than one value populated for the attribute *colour*.
+
+|===
+
+[[eight_fifteen]]
+[NOTE]
+--
+The attribute *colour pattern* is mandatory for dolphins that have more than one value populated for the attribute *colour*.
 
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
@@ -2753,7 +2844,8 @@ For each instance of *fixed date range*, at least one of the sub-attributes *dat
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-|===
+
+--
 
 [underline]#INT 1 Reference:# F 20,21
 
@@ -2811,7 +2903,7 @@ If it is required to encode a dolphin, it must be done using the feature *Dolphi
 
 3+| 1 : default name display2 : alternate name display
 | (S) EN
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_sixteen]
 
 3+| fixed date range
 2+a|
@@ -2823,12 +2915,12 @@ If it is required to encode a dolphin, it must be done using the feature *Dolphi
 3+| date end
 2+| (DATEND)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_sixteen]
 
 3+| date start
 2+| (DATSTA)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_sixteen]
 
 3+| interoperability identifier
 2+a|
@@ -2877,7 +2969,7 @@ If it is required to encode a dolphin, it must be done using the feature *Dolphi
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_sixteen]
 
 3+| headline
 2+a|
@@ -2899,7 +2991,7 @@ If it is required to encode a dolphin, it must be done using the feature *Dolphi
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_sixteen]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+| *Feature Associations*
@@ -2909,13 +3001,20 @@ If it is required to encode a dolphin, it must be done using the feature *Dolphi
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] Complex attribute *feature name*,sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+|===
+
+[[eight_sixteen]]
+[NOTE]
+--
+Complex attribute *feature name*,sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-|===
+
+--
 
 [underline]#INT 1 Reference:#
 
@@ -2987,7 +3086,7 @@ If it is required to encode a bollard, it must be done using the feature *Bollar
 
 3+| 1 : default name display2 : alternate name display
 | (S) EN
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_seventeen]
 
 3+| fixed date range
 2+a|
@@ -2999,12 +3098,12 @@ If it is required to encode a bollard, it must be done using the feature *Bollar
 3+| date end
 2+| (DATEND)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_seventeen]
 
 3+| date start
 2+| (DATSTA)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_seventeen]
 
 3+| horizontal clearance length
 2+a|
@@ -3095,7 +3194,7 @@ If it is required to encode a bollard, it must be done using the feature *Bollar
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_seventeen]
 
 3+| headline
 2+a|
@@ -3117,7 +3216,7 @@ If it is required to encode a bollard, it must be done using the feature *Bollar
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_seventeen]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
@@ -3125,13 +3224,20 @@ If it is required to encode a bollard, it must be done using the feature *Bollar
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+|===
+
+[[eight_seventeen]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-|===
+
+--
 
 [underline]#INT 1 Reference:# F 25
 
@@ -3166,7 +3272,7 @@ If it is required to encode a dry dock, it must be done using the feature *Dry D
 
 3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
 3+| colour 2+| (COLOUR) 3+| 1 : white2 : black3 : red4 : green5 : blue6 : yellow7 : grey8 : brown9 : amber10 : violet11 : orange12 : magenta13 : pink | EN | 0,\* (ordered)
-3+| colour pattern 2+| (COLPAT) 3+| 1 : horizontal stripes2 : vertical stripes3 : diagonal stripes4 : squared5 : stripes (direction unknown)6 : border stripe | EN | 0,1 footnote:crossnote[]
+3+| colour pattern 2+| (COLPAT) 3+| 1 : horizontal stripes2 : vertical stripes3 : diagonal stripes4 : squared5 : stripes (direction unknown)6 : border stripe | EN | 0,1 footnoteblock:[eight_eighteen]
 3+| condition 2+| (CONDTN) 3+| 1 : under construction2 : ruined5 : planned construction | EN | 0,1
 3+| depth range minimum value
 2+| (DRVAL1)
@@ -3201,7 +3307,7 @@ If it is required to encode a dry dock, it must be done using the feature *Dry D
 
 3+| 1 : default name display2 : alternate name display
 | (S) EN
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_eighteen]
 
 3+| fixed date range
 2+a|
@@ -3213,12 +3319,12 @@ If it is required to encode a dry dock, it must be done using the feature *Dry D
 3+| date end
 2+| (DATEND)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_eighteen]
 
 3+| date start
 2+| (DATSTA)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_eighteen]
 
 3+| horizontal clearance length
 2+a|
@@ -3307,7 +3413,7 @@ If it is required to encode a dry dock, it must be done using the feature *Dry D
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_eighteen]
 
 3+| headline
 2+a|
@@ -3329,7 +3435,7 @@ If it is required to encode a dry dock, it must be done using the feature *Dry D
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_eighteen]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+| *Feature Associations*
@@ -3340,7 +3446,13 @@ If it is required to encode a dry dock, it must be done using the feature *Dry D
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] The attribute *colour pattern* is mandatory for floating docks that have more than one value populated for the attribute *colour*.
+
+|===
+
+[[eight_eighteen]]
+[NOTE]
+--
+The attribute *colour pattern* is mandatory for floating docks that have more than one value populated for the attribute *colour*.
 
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
@@ -3348,7 +3460,8 @@ For each instance of *fixed date range*, at least one of the sub-attributes *dat
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-|===
+
+--
 
 [underline]#INT 1 Reference:# F 26
 
@@ -3407,7 +3520,7 @@ If it is required to encode a floating dock, it must be done using the feature *
 
 3+| 1 : default name display2 : alternate name display
 | (S) EN
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_nineteen]
 
 3+| fixed date range
 2+a|
@@ -3419,12 +3532,12 @@ If it is required to encode a floating dock, it must be done using the feature *
 3+| date end
 2+| (DATEND)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_nineteen]
 
 3+| date start
 2+| (DATSTA)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_nineteen]
 
 3+| interoperability identifier
 2+a|
@@ -3487,7 +3600,7 @@ If it is required to encode a floating dock, it must be done using the feature *
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_nineteen]
 
 3+| headline
 2+a|
@@ -3509,7 +3622,7 @@ If it is required to encode a floating dock, it must be done using the feature *
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_nineteen]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 
@@ -3523,13 +3636,20 @@ If it is required to encode a floating dock, it must be done using the feature *
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 
-10+.<a| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+|===
+
+[[eight_nineteen]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-|===
+
+--
 
 [underline]#INT 1 Reference:# F 16
 
@@ -3587,7 +3707,7 @@ If it is required to encode a pontoon, it must be done using the feature *Pontoo
 
 3+| 1 : default name display2 : alternate name display
 | (S) EN
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_twenty]
 
 3+| fixed date range
 2+a|
@@ -3599,12 +3719,12 @@ If it is required to encode a pontoon, it must be done using the feature *Pontoo
 3+| date end
 2+| (DATEND)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_twenty]
 
 3+| date start
 2+| (DATSTA)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_twenty]
 
 3+| horizontal clearance fixed
 2+a|
@@ -3698,7 +3818,7 @@ If it is required to encode a pontoon, it must be done using the feature *Pontoo
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_twenty]
 
 3+| headline
 2+a|
@@ -3720,7 +3840,7 @@ If it is required to encode a pontoon, it must be done using the feature *Pontoo
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_twenty]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
@@ -3728,13 +3848,20 @@ If it is required to encode a pontoon, it must be done using the feature *Pontoo
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+|===
+
+[[eight_twenty]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-|===
+
+--
 
 [underline]#INT 1 Reference:# F 27, 28
 
@@ -3795,7 +3922,7 @@ If it is required to encode a non-navigable dock area, it must be done using the
 
 3+| 1 : default name display2 : alternate name display
 | (S) EN
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_twenty-one]
 
 3+| horizontal length
 2+| (HORLEN)
@@ -3849,7 +3976,7 @@ If it is required to encode a non-navigable dock area, it must be done using the
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_twenty-one]
 
 3+| headline
 2+a|
@@ -3871,7 +3998,7 @@ If it is required to encode a non-navigable dock area, it must be done using the
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_twenty-one]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
@@ -3879,11 +4006,18 @@ If it is required to encode a non-navigable dock area, it must be done using the
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+|===
+
+[[eight_twenty-one]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-|===
+
+--
 
 [underline]#INT 1 Reference:# F 24
 
@@ -3939,7 +4073,7 @@ If it is required to encode a gridiron, it must be done using the feature *Gridi
 
 3+| 1 : default name display2 : alternate name display
 | (S) EN
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_twenty-two]
 
 3+| fixed date range
 2+a|
@@ -3951,12 +4085,12 @@ If it is required to encode a gridiron, it must be done using the feature *Gridi
 3+| date end
 2+| (DATEND)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_twenty-two]
 
 3+| date start
 2+| (DATSTA)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_twenty-two]
 
 3+| horizontal clearance fixed
 2+a|
@@ -4040,7 +4174,7 @@ If it is required to encode a gridiron, it must be done using the feature *Gridi
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_twenty-two]
 
 3+| headline
 2+a|
@@ -4062,7 +4196,7 @@ If it is required to encode a gridiron, it must be done using the feature *Gridi
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_twenty-two]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
@@ -4070,11 +4204,18 @@ If it is required to encode a gridiron, it must be done using the feature *Gridi
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+|===
+
+[[eight_twenty-two]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.^---^For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-|===
+
+--
 
 [underline]#INT 1 Reference:# F 41.1
 
@@ -4136,7 +4277,7 @@ A mooring trot is a mooring that is composed of ground tackle, mooring cables, b
 
 3+| 1 : default name display2 : alternate name display
 | (S) EN
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_twenty-three]
 
 3+| fixed date range
 2+a|
@@ -4148,12 +4289,12 @@ A mooring trot is a mooring that is composed of ground tackle, mooring cables, b
 3+| date end
 2+| (DATEND)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_twenty-three]
 
 3+| date start
 2+| (DATSTA)
 3+a| | (S) TD
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_twenty-three]
 
 3+| interoperability identifier
 2+a|
@@ -4183,7 +4324,7 @@ A mooring trot is a mooring that is composed of ground tackle, mooring cables, b
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_twenty-three]
 
 3+| headline
 2+a|
@@ -4205,7 +4346,7 @@ A mooring trot is a mooring that is composed of ground tackle, mooring cables, b
 3+a|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eight_twenty-three]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
@@ -4214,13 +4355,20 @@ A mooring trot is a mooring that is composed of ground tackle, mooring cables, b
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<a| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+|===
+
+[[eight_twenty-three]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
-|===
+
+--
 
 [underline]#INT 1 Reference:# Q 42
 

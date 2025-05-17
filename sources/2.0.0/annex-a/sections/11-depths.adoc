@@ -79,7 +79,7 @@ Some of the principles of depth depiction are summarized below:
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eleven_three]
 
 3+| interoperability identifier
 2+|
@@ -134,7 +134,7 @@ Some of the principles of depth depiction are summarized below:
 3+|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eleven_three]
 
 3+| headline
 2+|
@@ -156,7 +156,7 @@ Some of the principles of depth depiction are summarized below:
 3+|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eleven_three]
 
 9+| *Feature Associations* |
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -164,11 +164,16 @@ Some of the principles of depth depiction are summarized below:
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-9+.<| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
-
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[eleven_three]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# I 10, 14, 15
 
@@ -269,7 +274,7 @@ h| Sounding h| S-4 h| INT 1 h| quality of horizontal measurement h| quality of v
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eleven_four]
 
 3+| interoperability identifier
 2+|
@@ -397,7 +402,7 @@ h| Sounding h| S-4 h| INT 1 h| quality of horizontal measurement h| quality of v
 3+|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eleven_four]
 
 3+| headline
 2+|
@@ -419,7 +424,7 @@ h| Sounding h| S-4 h| INT 1 h| quality of horizontal measurement h| quality of v
 3+|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnoteblock:[eleven_four]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -428,11 +433,16 @@ h| Sounding h| S-4 h| INT 1 h| quality of horizontal measurement h| quality of v
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| footnote:crossnote[] Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
-
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[eleven_four]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# I 20-23
 
@@ -507,7 +517,7 @@ If it is required to encode dredged areas, this must be done using the feature *
 3+|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnote:eleven_five[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
 3+| headline
 2+|
@@ -529,7 +539,7 @@ If it is required to encode dredged areas, this must be done using the feature *
 3+|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnote:eleven_five[]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -538,7 +548,6 @@ If it is required to encode dredged areas, this must be done using the feature *
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| footnote:crossnote[] For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -612,7 +621,7 @@ Even if the area contains no spot soundings or depth contours, a *Swept Area* fe
 3+|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnote:eleven_six[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
 3+| headline
 2+|
@@ -634,14 +643,13 @@ Even if the area contains no spot soundings or depth contours, a *Swept Area* fe
 3+|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnote:eleven_six[]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| footnote:crossnote[] For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -715,7 +723,7 @@ image::figure-11-1.png[Shape25,286,459]
 3+|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnote:eleven_seven[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
 3+| headline
 2+|
@@ -737,14 +745,13 @@ image::figure-11-1.png[Shape25,286,459]
 3+|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnote:eleven_seven[]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| footnote:crossnote[] For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -929,7 +936,7 @@ If it is required to encode sandwaves, this must be done using the feature *Sand
 3+|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnote:eleven_eight[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
 3+| headline
 2+|
@@ -951,14 +958,13 @@ If it is required to encode sandwaves, this must be done using the feature *Sand
 3+|
 
 | (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnote:eleven_eight[]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| footnote:crossnote[] For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -1086,7 +1092,7 @@ In some cases satellite imagery provides evidence that existing charted informat
 3+|
 
 2+| (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnote:eleven_ten[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
 3+| headline
 2+|
@@ -1108,14 +1114,14 @@ In some cases satellite imagery provides evidence that existing charted informat
 3+|
 
 2+| (S) TE
-| 0,1 footnote:crossnote[]
+| 0,1 footnote:eleven_ten[]
 
 11+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type 2+h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association 2+| 0,*
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association 2+| 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association 2+| 0,*
-11+.<| footnote:crossnote[] For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+
 
 |===
 
