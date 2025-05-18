@@ -198,8 +198,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# N 10, 12.1-9, 14; Q 44
@@ -367,8 +365,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# Q 44
@@ -510,8 +506,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# N 11.1, 11.2
@@ -663,8 +657,6 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# N 13
@@ -815,8 +807,6 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# N 23, 24, 62.1, 62.2
@@ -888,19 +878,19 @@ If it is required to encode a dredging area, it must be done using a *Restricted
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display | (S) EN | 0,1 footnoteblock:[]
+2: alternate name display | (S) EN | 0,1 footnoteblock:[sixteen_eight]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_eight]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_eight]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -988,7 +978,7 @@ If it is required to encode a dredging area, it must be done using a *Restricted
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_eight]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -1001,7 +991,7 @@ If it is required to encode a dredging area, it must be done using a *Restricted
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_eight]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -1012,7 +1002,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[sixteen_eight]]
 [NOTE]
 --
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
@@ -1020,8 +1010,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# N 30-33
@@ -1083,7 +1071,7 @@ If it is required to encode a military practice area, it must be done using the 
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_nine]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -1104,7 +1092,7 @@ If it is required to encode a military practice area, it must be done using the 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_nine]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -1117,7 +1105,7 @@ If it is required to encode a military practice area, it must be done using the 
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_nine]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+h| Feature Associations
@@ -1129,14 +1117,12 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[sixteen_nine]]
 [NOTE]
 --
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# N 40, 41
@@ -1183,19 +1169,19 @@ If it is required to encode a named international or national territory, it must
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_ten]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_ten]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_ten]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -1273,7 +1259,7 @@ If it is required to encode a named international or national territory, it must
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_ten]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -1286,7 +1272,7 @@ If it is required to encode a named international or national territory, it must
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_ten]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -1297,7 +1283,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[sixteen_ten]]
 [NOTE]
 --
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
@@ -1305,8 +1291,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# N 64
@@ -1346,12 +1330,12 @@ If it is required to encode a cargo transhipment area, it must be done using the
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_eleven]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_eleven]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -1374,7 +1358,7 @@ If it is required to encode a cargo transhipment area, it must be done using the
 5: periodic/intermittent
 7: temporary | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,\* footnoteblock:[]
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,\* footnoteblock:[sixteen_eleven]
 
 3+| file locator
 2+| 3+| | (S) TE
@@ -1383,7 +1367,7 @@ If it is required to encode a cargo transhipment area, it must be done using the
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_eleven]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -1396,9 +1380,9 @@ If it is required to encode a cargo transhipment area, it must be done using the
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_eleven]
 
-3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1 footnoteblock:[]
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1 footnoteblock:[sixteen_eleven]
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Collection 3+| *Caution Area Association* (see <<sec_25.5>>) 3+| *Archipelagic Sea Lane*, *Traffic Separation Scheme* 2+| Aggregation | 0,1
@@ -1409,7 +1393,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[sixteen_eleven]]
 [NOTE]
 --
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
@@ -1417,8 +1401,6 @@ For each instance of *fixed date range*, at least one of the sub-attributes *dat
 At least one of the attributes *information* or *pictorial representation* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:#
@@ -1466,19 +1448,19 @@ If it is required to identify an area in which the Mariner must be aware of circ
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_twelve]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_twelve]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_twelve]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -1498,7 +1480,7 @@ If it is required to identify an area in which the Mariner must be aware of circ
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,\* footnoteblock:[]
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,\* footnoteblock:[sixteen_twelve]
 
 3+| file locator
 2+| 3+| | (S) TE
@@ -1507,7 +1489,7 @@ If it is required to identify an area in which the Mariner must be aware of circ
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_twelve]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -1520,9 +1502,9 @@ If it is required to identify an area in which the Mariner must be aware of circ
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_twelve]
 
-3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1 footnoteblock:[]
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1 footnoteblock:[sixteen_twelve]
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
@@ -1532,7 +1514,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[sixteen_twelve]]
 [NOTE]
 --
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
@@ -1542,8 +1524,6 @@ For each instance of *fixed date range*, at least one of the sub-attributes *dat
 At least one of the attributes *information* or *pictorial representation* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:#
@@ -1577,12 +1557,12 @@ If it is required to encode information which may be of use to the Mariner, but 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_thirteen]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_thirteen]
 
 3+| in dispute
 2+| 3+| | BO | 0,1
@@ -1606,7 +1586,7 @@ If it is required to encode information which may be of use to the Mariner, but 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_thirteen]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -1619,7 +1599,7 @@ If it is required to encode information which may be of use to the Mariner, but 
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_thirteen]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -1629,14 +1609,12 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[sixteen_thirteen]]
 [NOTE]
 --
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# N 44
@@ -1683,7 +1661,7 @@ If it is required to encode the Contiguous Zone, it must be done using the featu
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_fourteen]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -1704,7 +1682,7 @@ If it is required to encode the Contiguous Zone, it must be done using the featu
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_fourteen]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -1717,7 +1695,7 @@ If it is required to encode the Contiguous Zone, it must be done using the featu
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_fourteen]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -1728,14 +1706,12 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[sixteen_fourteen]]
 [NOTE]
 --
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# N 46
@@ -1921,7 +1897,7 @@ If it is required to encode an Exclusive Economic Zone (EEZ), it must be done us
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_seventeen]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -1947,7 +1923,7 @@ If it is required to encode an Exclusive Economic Zone (EEZ), it must be done us
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_seventeen]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -1960,7 +1936,7 @@ If it is required to encode an Exclusive Economic Zone (EEZ), it must be done us
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_seventeen]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -1971,14 +1947,12 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[sixteen_seventeen]]
 [NOTE]
 --
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# N 45
@@ -2025,7 +1999,7 @@ If it is required to encode a fishery zone, it must be done using the feature *F
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_eighteen]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -2107,7 +2081,7 @@ If it is required to encode a fishery zone, it must be done using the feature *F
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_eighteen]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -2120,7 +2094,7 @@ If it is required to encode a fishery zone, it must be done using the feature *F
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_eighteen]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -2131,14 +2105,12 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[sixteen_eighteen]]
 [NOTE]
 --
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:#
@@ -2182,7 +2154,7 @@ If it is required to encode a fishing ground, it must be done using the feature 
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_nineteen]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -2203,7 +2175,7 @@ If it is required to encode a fishing ground, it must be done using the feature 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_nineteen]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -2216,7 +2188,7 @@ If it is required to encode a fishing ground, it must be done using the feature 
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_nineteen]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -2227,14 +2199,12 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[sixteen_nineteen]]
 [NOTE]
 --
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:#
@@ -2278,7 +2248,7 @@ If it is required to encode a free port area, it must be done using the feature 
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_twenty]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -2300,7 +2270,7 @@ If it is required to encode a free port area, it must be done using the feature 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_twenty]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -2313,7 +2283,7 @@ If it is required to encode a free port area, it must be done using the feature 
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_twenty]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -2324,14 +2294,12 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[sixteen_twenty]]
 [NOTE]
 --
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# N 49
@@ -2378,7 +2346,7 @@ If it is required to encode an administrative harbour area, it must be done usin
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_twentyone]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -2413,7 +2381,7 @@ If it is required to encode an administrative harbour area, it must be done usin
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_twentyone]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -2426,7 +2394,7 @@ If it is required to encode an administrative harbour area, it must be done usin
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_twentyone]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -2437,14 +2405,12 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[sixteen_twentyone]]
 [NOTE]
 --
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# N 61
@@ -2484,7 +2450,7 @@ If it is required to encode a log pond (also known as booming ground), it must b
 
 3+| language 2+| 3+| ISO 639-2/T
 | (S) TE
-| 1,1 footnoteblock:[]
+| 1,1 footnoteblock:[sixteen_twentytwo]
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
@@ -2496,7 +2462,7 @@ If it is required to encode a log pond (also known as booming ground), it must b
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_twentytwo]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
@@ -2532,7 +2498,7 @@ If it is required to encode a log pond (also known as booming ground), it must b
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_twentytwo]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -2545,7 +2511,7 @@ If it is required to encode a log pond (also known as booming ground), it must b
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_twentytwo]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -2556,7 +2522,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[sixteen_twentytwo]]
 [NOTE]
 --
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
@@ -2564,8 +2530,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# F 29
@@ -2808,7 +2772,7 @@ If it is required to encode a Territorial Sea area, it must be done using the fe
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_twentyfive]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -2873,7 +2837,7 @@ If it is required to encode a Territorial Sea area, it must be done using the fe
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_twentyfive]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -2886,7 +2850,7 @@ If it is required to encode a Territorial Sea area, it must be done using the fe
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_twentyfive]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -2897,14 +2861,12 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[sixteen_twentyfive]]
 [NOTE]
 --
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# N 33
@@ -2955,7 +2917,7 @@ If it is required to encode a submarine transit lane, it must be done using the 
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_twentysix]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -2971,7 +2933,7 @@ If it is required to encode a submarine transit lane, it must be done using the 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_twentysix]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -2984,7 +2946,7 @@ If it is required to encode a submarine transit lane, it must be done using the 
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_twentysix]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -2996,14 +2958,12 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[sixteen_twentysix]]
 [NOTE]
 --
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:#
@@ -3050,19 +3010,19 @@ If it is required to encode the area within which regulations regarding pilotage
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_twentyseven]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_twentyseven]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_twentyseven]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -3094,7 +3054,7 @@ If it is required to encode the area within which regulations regarding pilotage
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_twentyseven]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -3107,7 +3067,7 @@ If it is required to encode the area within which regulations regarding pilotage
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_twentyseven]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -3118,7 +3078,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[sixteen_twentyseven]]
 [NOTE]
 --
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
@@ -3126,8 +3086,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:#
@@ -3171,7 +3129,7 @@ If it is required to encode a collision regulations (COLREGs) demarcation line, 
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_twentyeight]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -3182,7 +3140,7 @@ If it is required to encode a collision regulations (COLREGs) demarcation line, 
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,\* footnoteblock:[]
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,\* footnoteblock:[sixteen_twentyeight]
 
 3+| file locator
 2+| 3+| | (S) TE
@@ -3191,7 +3149,7 @@ If it is required to encode a collision regulations (COLREGs) demarcation line, 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_twentyeight]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -3204,7 +3162,7 @@ If it is required to encode a collision regulations (COLREGs) demarcation line, 
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[sixteen_twentyeight]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -3215,7 +3173,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[sixteen_twentyeight]]
 [NOTE]
 --
 Mandatory if not associated to an instance of the information type *Nautical Information*.
@@ -3223,8 +3181,6 @@ Mandatory if not associated to an instance of the information type *Nautical Inf
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:#
@@ -3356,19 +3312,19 @@ An Environmentally Sensitive Sea Area that is shown on the source as a point sym
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[seventeen_eight]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[seventeen_eight]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[seventeen_eight]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -3456,7 +3412,7 @@ An Environmentally Sensitive Sea Area that is shown on the source as a point sym
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[seventeen_eight]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -3469,7 +3425,7 @@ An Environmentally Sensitive Sea Area that is shown on the source as a point sym
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[seventeen_eight]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -3482,7 +3438,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[seventeen_eight]]
 [NOTE]
 --
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
@@ -3490,8 +3446,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# L 3; M 29.1; N 2.1-2, 20-22, 25, 31, 34, 63
@@ -4309,19 +4263,19 @@ Encoders are advised, therefore, that an aid to navigation structure object (for
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[nineteen_two]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[nineteen_two]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[nineteen_two]
 
 3+| flare bearing
 2+| 3+| | IN | 0,1
@@ -4396,9 +4350,9 @@ Encoders are advised, therefore, that an aid to navigation structure object (for
 3+| signal group
 2+| (SIGGRP)
 3+| | (S) TE
-| 0,\* (ordered) footnote:nineteen_two[For non-fixed lights (that is, sub-attribute *light characteristic* ≠ _1_ (fixed)), the sub-attributes *signal group* and *signal period* are mandatory.]
+| 0,\* (ordered) footnoteblock:[nineteen_two]
 
-3+| signal period 2+| (SIGPER) 3+| | (S) RE | 0,1 footnote:nineteen_two[]
+3+| signal period 2+| (SIGPER) 3+| | (S) RE | 0,1 footnoteblock:[nineteen_two]
 
 3+| signal sequence
 2+| _(SIGSEQ)_ 3+| | (S) C
@@ -4463,7 +4417,7 @@ Encoders are advised, therefore, that an aid to navigation structure object (for
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnote:nineteen_two[]
+| 0,1 footnoteblock:[nineteen_two]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -4476,7 +4430,7 @@ Encoders are advised, therefore, that an aid to navigation structure object (for
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnote:nineteen_two[]
+| 0,1 footnoteblock:[nineteen_two]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -4492,11 +4446,17 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
+[[nineteen_two]]
+[NOTE]
+--
+For non-fixed lights (that is, sub-attribute *light characteristic* ≠ _1_ (fixed)), the sub-attributes *signal group* and *signal period* are mandatory.
+
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# P 1-65
 
@@ -4940,19 +4900,19 @@ Oscillating lights which are not IALA should be encoded similar to the above. Fo
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[nineteen_four]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[nineteen_four]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[nineteen_four]
 
 3+| flare bearing
 2+| 3+| | IN | 0,1
@@ -5005,11 +4965,11 @@ Oscillating lights which are not IALA should be encoded similar to the above. Fo
 3+| signal group
 2+| (SIGGRP)
 3+| | (S) TE
-| 0,\* (ordered) footnoteblock:[]
+| 0,\* (ordered) footnoteblock:[nineteen_four]
 
 3+| signal period
 2+| (SIGPER) 3+| | (S) RE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[nineteen_four]
 
 3+| signal sequence
 2+| _(SIGSEQ)_ 3+| | (S) C
@@ -5071,7 +5031,7 @@ Oscillating lights which are not IALA should be encoded similar to the above. Fo
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[nineteen_four]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -5084,7 +5044,7 @@ Oscillating lights which are not IALA should be encoded similar to the above. Fo
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[nineteen_four]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -5096,7 +5056,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[nineteen_four]]
 [NOTE]
 --
 For non-fixed lights (that is, sub-attribute *light characteristic* ≠ _1_ (fixed)), the sub-attributes *signal group* and *signal period* are mandatory.
@@ -5106,8 +5066,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# P 62
@@ -5171,19 +5129,19 @@ Further guidance for encoding various types and characteristics of lights can be
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[nineteen_five]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[nineteen_five]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[nineteen_five]
 
 3+| flare bearing
 2+| 3+| | IN | 0,1
@@ -5257,11 +5215,11 @@ Further guidance for encoding various types and characteristics of lights can be
 3+| signal group
 2+| (SIGGRP)
 3+| | (S) TE
-| 0,\* (ordered) footnoteblock:[]
+| 0,\* (ordered) footnoteblock:[nineteen_five]
 
 3+| signal period
 2+| (SIGPER) 3+| | (S) RE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[nineteen_five]
 
 3+| signal sequence
 2+| _(SIGSEQ)_ 3+| | (S) C
@@ -5320,7 +5278,7 @@ Further guidance for encoding various types and characteristics of lights can be
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[nineteen_five]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -5333,7 +5291,7 @@ Further guidance for encoding various types and characteristics of lights can be
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[nineteen_five]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -5345,7 +5303,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[nineteen_five]]
 [NOTE]
 --
 For non-fixed lights (that is, sub-attribute *light characteristic* ≠ _1_ (fixed)), the sub-attributes *signal group* and *signal period* are mandatory.
@@ -5355,8 +5313,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# P 61.2
@@ -5426,7 +5382,7 @@ Further guidance for encoding various types and characteristics of lights can be
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | EN | 0,1 footnoteblock:[]
+6: border stripe | EN | 0,1 footnoteblock:[twenty_one]
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
 3+| language 2+| 3+| ISO 639-2/T
@@ -5443,19 +5399,19 @@ Further guidance for encoding various types and characteristics of lights can be
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_one]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_one]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_one]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -5516,7 +5472,7 @@ Further guidance for encoding various types and characteristics of lights can be
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | (S) EN | 0,1 footnoteblock:[]
+6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_one]
 3+| topmark/daymark shape 2+| (TOPSHP) 3+|
 1: cone (point up)
 2: cone (point down)
@@ -5577,7 +5533,7 @@ Further guidance for encoding various types and characteristics of lights can be
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_one]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -5590,7 +5546,7 @@ Further guidance for encoding various types and characteristics of lights can be
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_one]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+h| Feature Associations
@@ -5605,7 +5561,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twenty_one]]
 [NOTE]
 --
 The attribute/sub-attribute *colour pattern* is mandatory for buoys/topmarks that have more than one value populated for the attribute/sub-attribute *colour*.
@@ -5615,8 +5571,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# Q 130.1
@@ -5691,7 +5645,7 @@ image::figure-20-1.png["",475,406]
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | EN | 0,1 footnoteblock:[]
+6: border stripe | EN | 0,1 footnoteblock:[twenty_two]
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
 3+| language 2+| 3+| ISO 639-2/T
@@ -5708,19 +5662,19 @@ image::figure-20-1.png["",475,406]
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_two]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_two]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_two]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -5781,7 +5735,7 @@ image::figure-20-1.png["",475,406]
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | (S) EN | 0,1 footnoteblock:[]
+6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_two]
 3+| topmark/daymark shape 2+| (TOPSHP) 3+|
 1: cone (point up)
 2: cone (point down)
@@ -5842,7 +5796,7 @@ image::figure-20-1.png["",475,406]
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_two]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -5855,7 +5809,7 @@ image::figure-20-1.png["",475,406]
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_two]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+h| Feature Associations
@@ -5870,7 +5824,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twenty_two]]
 [NOTE]
 --
 The attribute/sub-attribute *colour pattern* is mandatory for buoys/topmarks that have more than one value populated for the attribute/sub-attribute *colour*.
@@ -5880,8 +5834,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# Q 130.3
@@ -5945,7 +5897,7 @@ image::figure-20-2.png["",517,636]
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | EN | 0,1 footnoteblock:[]
+6: border stripe | EN | 0,1 footnoteblock:[twenty_three]
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
 3+| language 2+| 3+| ISO 639-2/T
@@ -5962,19 +5914,19 @@ image::figure-20-2.png["",517,636]
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_three]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_three]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_three]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -6035,7 +5987,7 @@ image::figure-20-2.png["",517,636]
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | (S) EN | 0,1 footnoteblock:[]
+6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_three]
 3+| topmark/daymark shape 2+| (TOPSHP) 3+|
 1: cone (point up)
 2: cone (point down)
@@ -6096,7 +6048,7 @@ image::figure-20-2.png["",517,636]
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_three]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -6109,7 +6061,7 @@ image::figure-20-2.png["",517,636]
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_three]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+h| Feature Associations
@@ -6134,8 +6086,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# Q 130.4
@@ -6199,7 +6149,7 @@ image::figure-20-3.png["",549,263]
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | EN | 0,1 footnoteblock:[]
+6: border stripe | EN | 0,1 footnoteblock:[twenty_four]
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
 3+| language 2+| 3+| ISO 639-2/T
@@ -6216,19 +6166,19 @@ image::figure-20-3.png["",549,263]
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_four]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_four]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_four]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -6289,7 +6239,7 @@ image::figure-20-3.png["",549,263]
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | (S) EN | 0,1 footnoteblock:[]
+6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_four]
 3+| topmark/daymark shape 2+| (TOPSHP) 3+|
 1: cone (point up)
 2: cone (point down)
@@ -6350,7 +6300,7 @@ image::figure-20-3.png["",549,263]
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_four]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -6363,7 +6313,7 @@ image::figure-20-3.png["",549,263]
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_four]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+h| Feature Associations
@@ -6378,7 +6328,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twenty_four]]
 [NOTE]
 --
 The attribute/sub-attribute *colour pattern* is mandatory for buoys/topmarks that have more than one value populated for the attribute/sub-attribute *colour*.
@@ -6388,8 +6338,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# Q 130.5
@@ -6519,7 +6467,7 @@ image::figure-20-4.png["",664,217]
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | EN | 0,1 footnoteblock:[]
+6: border stripe | EN | 0,1 footnoteblock:[twenty_five]
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
 3+| language 2+| 3+| ISO 639-2/T
@@ -6536,19 +6484,19 @@ image::figure-20-4.png["",664,217]
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_five]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_five]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_five]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -6609,7 +6557,7 @@ image::figure-20-4.png["",664,217]
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | (S) EN | 0,1 footnoteblock:[]
+6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_five]
 3+| topmark/daymark shape 2+| (TOPSHP) 3+|
 1: cone (point up)
 2: cone (point down)
@@ -6670,7 +6618,7 @@ image::figure-20-4.png["",664,217]
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_five]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -6683,7 +6631,7 @@ image::figure-20-4.png["",664,217]
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_five]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 9+h| Feature Associations |
@@ -6698,7 +6646,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twenty_five]]
 [NOTE]
 --
 The attribute/sub-attribute *colour pattern* is mandatory for buoys/topmarks that have more than one value populated for the attribute/sub-attribute *colour*.
@@ -6708,8 +6656,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# Q 50-62, 130.6
@@ -7031,7 +6977,7 @@ Q58
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | EN | 0,1 footnoteblock:[]
+6: border stripe | EN | 0,1 footnoteblock:[twenty_six]
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
 3+| language 2+| 3+| ISO 639-2/T
@@ -7048,19 +6994,19 @@ Q58
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_six]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_six]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_six]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -7102,7 +7048,7 @@ Q58
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | (S) EN | 0,1 footnoteblock:[]
+6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_six]
 3+| topmark/daymark shape 2+| (TOPSHP) 3+|
 1: cone (point up)
 2: cone (point down)
@@ -7163,7 +7109,7 @@ Q58
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_six]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -7176,7 +7122,7 @@ Q58
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_six]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+h| Feature Associations
@@ -7189,7 +7135,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twenty_six]]
 [NOTE]
 --
 The attribute/sub-attribute *colour pattern* is mandatory for buoys/topmarks that have more than one value populated for the attribute/sub-attribute *colour*.
@@ -7199,8 +7145,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# Q 130.7
@@ -7274,7 +7218,7 @@ If it is required to encode a buoy having the function of an emergency wreck mar
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | EN | 0,1 footnoteblock:[]
+6: border stripe | EN | 0,1 footnoteblock:[twenty_seven]
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
 3+| language 2+| 3+| ISO 639-2/T
@@ -7291,19 +7235,19 @@ If it is required to encode a buoy having the function of an emergency wreck mar
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_seven]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_seven]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_seven]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -7354,7 +7298,7 @@ If it is required to encode a buoy having the function of an emergency wreck mar
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_seven]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -7367,7 +7311,7 @@ If it is required to encode a buoy having the function of an emergency wreck mar
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_seven]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+h| Feature Associations
@@ -7380,7 +7324,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twenty_seven]]
 [NOTE]
 --
 The attribute *colour pattern* is mandatory for buoys that have more than one value populated for the attribute *colour*.
@@ -7390,8 +7334,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# L 16
@@ -7450,7 +7392,7 @@ If it is required to encode an installation buoy, it must be done using the feat
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | EN | 0,1 footnoteblock:[]
+6: border stripe | EN | 0,1 footnoteblock:[twenty_seven]
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
 3+| language 2+| 3+| ISO 639-2/T
@@ -7467,19 +7409,19 @@ If it is required to encode an installation buoy, it must be done using the feat
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_seven]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_seven]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_seven]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -7531,7 +7473,7 @@ If it is required to encode an installation buoy, it must be done using the feat
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_seven]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -7544,7 +7486,7 @@ If it is required to encode an installation buoy, it must be done using the feat
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_seven]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+h| Feature Associations
@@ -7558,7 +7500,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twenty_seven]]
 [NOTE]
 --
 The attribute *colour pattern* is mandatory for buoys that have more than one value populated for the attribute *colour*.
@@ -7568,8 +7510,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# Q 40-45
@@ -7634,7 +7574,7 @@ If it is required to encode a mooring buoy, it must be done using the feature *M
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | EN | 0,1 footnoteblock:[]
+6: border stripe | EN | 0,1 footnoteblock:[twenty_nine]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
@@ -7658,19 +7598,19 @@ If it is required to encode a mooring buoy, it must be done using the feature *M
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_nine]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_nine]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_nine]
 
 3+| height
 2+| (HEIGHT) 3+| | RE | 0,1
@@ -7738,7 +7678,7 @@ If it is required to encode a mooring buoy, it must be done using the feature *M
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | (S) EN | 0,1 footnoteblock:[]
+6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_nine]
 3+| topmark/daymark shape 2+| (TOPSHP) 3+|
 1: cone (point up)
 2: cone (point down)
@@ -7803,7 +7743,7 @@ If it is required to encode a mooring buoy, it must be done using the feature *M
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_nine]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -7816,7 +7756,7 @@ If it is required to encode a mooring buoy, it must be done using the feature *M
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_nine]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+h| Feature Associations
@@ -7832,7 +7772,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twenty_nine]]
 [NOTE]
 --
 The attribute/sub-attribute *colour pattern* is mandatory for beacons/topmarks that have more than one value populated for the attribute/sub-attribute *colour*.
@@ -7842,8 +7782,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# Q 91-92, 130.1
@@ -7918,7 +7856,7 @@ image::figure-20-1.png["",544,466]
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | EN | 0,1 footnoteblock:[]
+6: border stripe | EN | 0,1 footnoteblock:[twenty_ten]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
@@ -7942,19 +7880,19 @@ image::figure-20-1.png["",544,466]
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_ten]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_ten]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_ten]
 
 3+| height
 2+| (HEIGHT) 3+| | RE | 0,1
@@ -8022,7 +7960,7 @@ image::figure-20-1.png["",544,466]
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | (S) EN | 0,1 footnoteblock:[]
+6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_ten]
 3+| topmark/daymark shape 2+| (TOPSHP) 3+|
 1: cone (point up)
 2: cone (point down)
@@ -8087,7 +8025,7 @@ image::figure-20-1.png["",544,466]
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_ten]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -8100,7 +8038,7 @@ image::figure-20-1.png["",544,466]
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_ten]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+h| Feature Associations
@@ -8116,7 +8054,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twenty_ten]]
 [NOTE]
 --
 The attribute/sub-attribute *colour pattern* is mandatory for beacons/topmarks that have more than one value populated for the attribute/sub-attribute *colour*.
@@ -8126,8 +8064,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# Q 130.3
@@ -8191,7 +8127,7 @@ image::figure-20-2.png["",508,624]
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | EN | 0,1 footnoteblock:[]
+6: border stripe | EN | 0,1 footnoteblock:[twenty_eleven]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
@@ -8215,19 +8151,19 @@ image::figure-20-2.png["",508,624]
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_eleven]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_eleven]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_eleven]
 
 3+| height
 2+| (HEIGHT) 3+| | RE | 0,1
@@ -8295,7 +8231,7 @@ image::figure-20-2.png["",508,624]
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | (S) EN | 0,1 footnoteblock:[]
+6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_eleven]
 3+| topmark/daymark shape 2+| (TOPSHP) 3+|
 1: cone (point up)
 2: cone (point down)
@@ -8360,7 +8296,7 @@ image::figure-20-2.png["",508,624]
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_eleven]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -8373,7 +8309,7 @@ image::figure-20-2.png["",508,624]
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_eleven]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+h| Feature Associations
@@ -8389,7 +8325,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twenty_eleven]]
 [NOTE]
 --
 The attribute/sub-attribute *colour pattern* is mandatory for beacons/topmarks that have more than one value populated for the attribute/sub-attribute *colour*.
@@ -8399,8 +8335,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# IQ 130.4
@@ -8466,7 +8400,7 @@ image::figure-20-3.png["",549,263]
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | EN | 0,1 footnoteblock:[]
+6: border stripe | EN | 0,1 footnoteblock:[twenty_twelve]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
@@ -8490,19 +8424,19 @@ image::figure-20-3.png["",549,263]
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_twelve]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_twelve]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_twelve]
 
 3+| height
 2+| (HEIGHT) 3+| | RE | 0,1
@@ -8570,7 +8504,7 @@ image::figure-20-3.png["",549,263]
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | (S) EN | 0,1 footnoteblock:[]
+6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_twelve]
 3+| topmark/daymark shape 2+| (TOPSHP) 3+|
 1: cone (point up)
 2: cone (point down)
@@ -8635,7 +8569,7 @@ image::figure-20-3.png["",549,263]
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_twelve]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -8648,7 +8582,7 @@ image::figure-20-3.png["",549,263]
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_twelve]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+h| Feature Associations
@@ -8664,7 +8598,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twenty_twelve]]
 [NOTE]
 --
 The attribute/sub-attribute *colour pattern* is mandatory for beacons/topmarks that have more than one value populated for the attribute/sub-attribute *colour*.
@@ -8674,8 +8608,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# Q 130.5
@@ -8805,7 +8737,7 @@ image::figure-20-4.png["",568,184]
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | EN | 0,1 footnoteblock:[]
+6: border stripe | EN | 0,1 footnoteblock:[twenty_thirteen]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
@@ -8829,19 +8761,19 @@ image::figure-20-4.png["",568,184]
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_thirteen]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_thirteen]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_thirteen]
 
 3+| height
 2+| (HEIGHT) 3+| | RE | 0,1
@@ -8909,7 +8841,7 @@ image::figure-20-4.png["",568,184]
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | (S) EN | 0,1 footnoteblock:[]
+6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_thirteen]
 3+| topmark/daymark shape 2+| (TOPSHP) 3+|
 1: cone (point up)
 2: cone (point down)
@@ -8974,7 +8906,7 @@ image::figure-20-4.png["",568,184]
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_thirteen]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -8987,7 +8919,7 @@ image::figure-20-4.png["",568,184]
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_thirteen]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 9+h| Feature Associations |
@@ -9003,7 +8935,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twenty_thirteen]]
 [NOTE]
 --
 The attribute/sub-attribute *colour pattern* is mandatory for beacons/topmarks that have more than one value populated for the attribute/sub-attribute *colour*.
@@ -9013,8 +8945,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# Q 130.6
@@ -9335,7 +9265,7 @@ If it is required to encode a fixed or floating sign or notice board, it must be
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | EN | 0,1 footnoteblock:[]
+6: border stripe | EN | 0,1 footnoteblock:[twenty_fourteen]
 3+| elevation
 2+| (ELEVAT) 3+| | RE | 0,1
 
@@ -9355,19 +9285,19 @@ If it is required to encode a fixed or floating sign or notice board, it must be
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_fourteen]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_fourteen]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_fourteen]
 
 3+| height
 2+| (HEIGHT) 3+| | RE | 0,1
@@ -9464,7 +9394,7 @@ If it is required to encode a fixed or floating sign or notice board, it must be
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_fourteen]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -9477,7 +9407,7 @@ If it is required to encode a fixed or floating sign or notice board, it must be
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_fourteen]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 9+h| Feature Associations |
@@ -9494,7 +9424,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twenty_fourteen]]
 [NOTE]
 --
 The attribute *colour pattern* is mandatory for daymarks that have more than one value populated for the attribute *colour*.
@@ -9504,8 +9434,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# Q 101
@@ -9608,7 +9536,7 @@ In the following Table, a blank indicates that the encoder may choose a relevant
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | EN | 0,1 footnoteblock:[]
+6: border stripe | EN | 0,1 footnoteblock:[twenty_fifteen]
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
 3+| language 2+| 3+| ISO 639-2/T
@@ -9625,19 +9553,19 @@ In the following Table, a blank indicates that the encoder may choose a relevant
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_fifteen]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_fifteen]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_fifteen]
 
 3+| horizontal length
 2+| (HORLEN) 3+| | RE | 0,1
@@ -9701,7 +9629,7 @@ In the following Table, a blank indicates that the encoder may choose a relevant
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | (S) EN | 0,1 footnoteblock:[]
+6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_fifteen]
 3+| topmark/daymark shape 2+| (TOPSHP) 3+|
 1: cone (point up)
 2: cone (point down)
@@ -9766,7 +9694,7 @@ In the following Table, a blank indicates that the encoder may choose a relevant
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_fifteen]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -9779,7 +9707,7 @@ In the following Table, a blank indicates that the encoder may choose a relevant
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_fifteen]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+h| Feature Associations
@@ -9794,7 +9722,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twenty_fifteen]]
 [NOTE]
 --
 The attribute/sub-attribute *colour pattern* is mandatory for light floats/topmarks that have more than one value populated for the attribute/sub-attribute *colour*.
@@ -9804,8 +9732,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# Q 30
@@ -9854,7 +9780,7 @@ If it is required to encode a light float, it must be done using the feature *Li
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | EN | 0,1 footnoteblock:[]
+6: border stripe | EN | 0,1 footnoteblock:[twenty_sixteen]
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
 3+| language 2+| 3+| ISO 639-2/T
@@ -9871,19 +9797,19 @@ If it is required to encode a light float, it must be done using the feature *Li
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_sixteen]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_sixteen]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_sixteen]
 
 3+| horizontal length
 2+| (HORLEN) 3+| | RE | 0,1
@@ -9940,7 +9866,7 @@ If it is required to encode a light float, it must be done using the feature *Li
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_sixteen]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -9953,7 +9879,7 @@ If it is required to encode a light float, it must be done using the feature *Li
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_sixteen]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+h| Feature Associations
@@ -9968,7 +9894,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twenty_sixteen]]
 [NOTE]
 --
 The attribute *colour pattern* is mandatory for light vessels that have more than one value populated for the attribute *colour*.
@@ -9978,8 +9904,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# P 6
@@ -10029,18 +9953,18 @@ If it is required to encode a light vessel, it must be done using the feature *L
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | EN | 0,1 footnoteblock:[]
+6: border stripe | EN | 0,1 footnoteblock:[twenty_seventeen]
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_seventeen]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_seventeen]
 
 3+| height
 2+| (HEIGHT) 3+| | RE | 0,1
@@ -10075,7 +9999,7 @@ If it is required to encode a light vessel, it must be done using the feature *L
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_seventeen]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -10088,7 +10012,7 @@ If it is required to encode a light vessel, it must be done using the feature *L
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_seventeen]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -10099,7 +10023,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twenty_seventeen]]
 [NOTE]
 --
 The attribute *colour pattern* is mandatory for retroreflectors that have more than one value populated for the attribute *colour*.
@@ -10107,8 +10031,6 @@ The attribute *colour pattern* is mandatory for retroreflectors that have more t
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# Q 6
@@ -10144,12 +10066,12 @@ If it is required to encode a retroreflector, it must be done using the feature 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_eighteen]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_eighteen]
 
 3+| height
 2+| (HEIGHT) 3+| | RE | 0,1
@@ -10184,7 +10106,7 @@ If it is required to encode a retroreflector, it must be done using the feature 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_eighteen]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -10197,7 +10119,7 @@ If it is required to encode a retroreflector, it must be done using the feature 
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_eighteen]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -10208,14 +10130,12 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twenty_eighteen]]
 [NOTE]
 --
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# S 4
@@ -10273,19 +10193,19 @@ If it is required to encode radar reflectors on curve features (for instance ove
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_nineteen]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_nineteen]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_nineteen]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -10356,7 +10276,7 @@ If it is required to encode radar reflectors on curve features (for instance ove
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_nineteen]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -10369,7 +10289,7 @@ If it is required to encode radar reflectors on curve features (for instance ove
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twenty_nineteen]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -10381,7 +10301,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twenty_nineteen]]
 [NOTE]
 --
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
@@ -10389,8 +10309,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:#R 1, 10-16, 20-22
@@ -10457,19 +10375,19 @@ It is not required to encode AIS information on ENCs, as ENCs are intended to be
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyone_two]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyone_two]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyone_two]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -10505,7 +10423,7 @@ It is not required to encode AIS information on ENCs, as ENCs are intended to be
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyone_two]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -10518,7 +10436,7 @@ It is not required to encode AIS information on ENCs, as ENCs are intended to be
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyone_two]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -10530,7 +10448,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twentyone_two]]
 [NOTE]
 --
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
@@ -10538,8 +10456,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# S 17
@@ -10588,19 +10504,19 @@ If it is required to encode a physical AIS aid to navigation, it must be done us
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyone_three]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyone_three]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyone_three]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -10653,7 +10569,7 @@ If it is required to encode a physical AIS aid to navigation, it must be done us
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyone_three]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -10666,7 +10582,7 @@ If it is required to encode a physical AIS aid to navigation, it must be done us
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyone_three]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -10677,7 +10593,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twentyone_three]]
 [NOTE]
 --
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
@@ -10685,8 +10601,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# S 18
@@ -10753,19 +10667,19 @@ If it is required to encode a virtual AIS aid to navigation, it must be done usi
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyone_four]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyone_four]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyone_four]
 
 3+| frequency pair
 2+| 3+| | C | 0,1
@@ -10811,7 +10725,7 @@ If it is required to encode a virtual AIS aid to navigation, it must be done usi
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyone_four]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -10824,7 +10738,7 @@ If it is required to encode a virtual AIS aid to navigation, it must be done usi
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyone_four]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -10835,7 +10749,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twentyone_four]]
 [NOTE]
 --
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
@@ -10843,8 +10757,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# S 10-16
@@ -10914,19 +10826,19 @@ If it is required to encode a radio direction-finding station, it must be done u
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyone_five]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyone_five]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyone_five]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -11021,7 +10933,7 @@ If it is required to encode a radio direction-finding station, it must be done u
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyone_five]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -11034,7 +10946,7 @@ If it is required to encode a radio direction-finding station, it must be done u
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyone_five]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -11047,7 +10959,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twentyone_five]]
 [NOTE]
 --
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
@@ -11055,8 +10967,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:#S 2-3
@@ -11132,19 +11042,19 @@ NOTE: All features comprising a range system must have the same value populated 
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_one]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_one]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_one]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -11189,7 +11099,7 @@ NOTE: All features comprising a range system must have the same value populated 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_one]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -11202,7 +11112,7 @@ NOTE: All features comprising a range system must have the same value populated 
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_one]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -11214,7 +11124,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twentytwo_one]]
 [NOTE]
 --
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
@@ -11222,8 +11132,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# T 1.1-4
@@ -11275,7 +11183,7 @@ If it is required to encode a pilot station ashore, it must be done using a *Bui
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_two]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -11291,7 +11199,7 @@ If it is required to encode a pilot station ashore, it must be done using a *Bui
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_two]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -11304,7 +11212,7 @@ If it is required to encode a pilot station ashore, it must be done using a *Bui
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_two]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -11315,14 +11223,12 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twentytwo_two]]
 [NOTE]
 --
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:#
@@ -11371,19 +11277,19 @@ If it is required to encode an area within which a competent authority provides 
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_three]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_three]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_three]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -11420,7 +11326,7 @@ If it is required to encode an area within which a competent authority provides 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_three]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -11433,7 +11339,7 @@ If it is required to encode an area within which a competent authority provides 
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_three]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -11444,7 +11350,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twentytwo_three]]
 [NOTE]
 --
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
@@ -11452,8 +11358,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# T 10, 11
@@ -11525,19 +11429,19 @@ If it is required to encode a Coast Guard station, it must be done using the fea
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_four]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_four]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_four]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -11577,7 +11481,7 @@ If it is required to encode a Coast Guard station, it must be done using the fea
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_four]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -11590,7 +11494,7 @@ If it is required to encode a Coast Guard station, it must be done using the fea
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_four]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -11602,7 +11506,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twentytwo_four]]
 [NOTE]
 --
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
@@ -11610,8 +11514,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# T 20, 26, 28-36
@@ -11674,19 +11576,19 @@ If it is required to encode a warning signal station, it must be done using the 
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_five]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_five]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_five]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -11726,7 +11628,7 @@ If it is required to encode a warning signal station, it must be done using the 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_five]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -11739,7 +11641,7 @@ If it is required to encode a warning signal station, it must be done using the 
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_five]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -11751,7 +11653,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twentytwo_five]]
 [NOTE]
 --
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
@@ -11759,8 +11661,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# T 21-25.2
@@ -11827,19 +11727,19 @@ If it is required to encode a traffic signal station, it must be done using the 
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_six]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_six]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_six]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -11877,7 +11777,7 @@ If it is required to encode a traffic signal station, it must be done using the 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_six]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -11890,7 +11790,7 @@ If it is required to encode a traffic signal station, it must be done using the 
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_six]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -11901,7 +11801,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twentytwo_six]]
 [NOTE]
 --
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
@@ -11909,8 +11809,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# T 12-14
@@ -11985,19 +11883,19 @@ If it is required to encode a rescue station, it must be done using the feature 
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_seven]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_seven]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_seven]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -12111,7 +12009,7 @@ If it is required to encode a rescue station, it must be done using the feature 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_seven]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -12124,7 +12022,7 @@ If it is required to encode a rescue station, it must be done using the feature 
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_seven]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+h| Feature Associations
@@ -12136,7 +12034,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twentytwo_seven]]
 [NOTE]
 --
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
@@ -12144,8 +12042,6 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# F 10, 11.1, 50
@@ -12227,7 +12123,7 @@ If it is required to encode a harbour facility, it must be done using the featur
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_eight]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
@@ -12269,7 +12165,7 @@ If it is required to encode a harbour facility, it must be done using the featur
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_eight]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -12282,7 +12178,7 @@ If it is required to encode a harbour facility, it must be done using the featur
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentytwo_eight]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+h| Feature Associations
@@ -12294,14 +12190,12 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twentytwo_eight]]
 [NOTE]
 --
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:# E 37.1-2; F 11.3, 19.2; Q 45
@@ -12519,12 +12413,12 @@ If it is required to encode the contact information (communication channel, call
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyfour_two]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyfour_two]
 
 3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
 
@@ -12563,7 +12457,7 @@ If it is required to encode the contact information (communication channel, call
 6: Friday +
 7: Saturday +
 | (S) EN
-| 0,7 (ordered) footnoteblock:[]
+| 0,7 (ordered) footnoteblock:[twentyfour_two]
 
 3+| day of week is range
 2+| 3+| | (S) BO
@@ -12571,11 +12465,11 @@ If it is required to encode the contact information (communication channel, call
 
 3+| time of day end
 2+| 3+| | (S) TI
-| 0,\* (ordered) footnoteblock:[]
+| 0,\* (ordered) footnoteblock:[twentyfour_two]
 
 3+| time of day start
 2+| 3+| | (S) TI
-| 0,\* (ordered) footnoteblock:[]
+| 0,\* (ordered) footnoteblock:[twentyfour_two]
 
 3+| information
 2+| 3+| | C | 0,*
@@ -12587,7 +12481,7 @@ If it is required to encode the contact information (communication channel, call
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyfour_two]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -12600,7 +12494,7 @@ If it is required to encode the contact information (communication channel, call
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyfour_two]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -12609,7 +12503,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twentyfour_two]]
 [NOTE]
 --
 For each instance of *time intervals by day of week*, at least one of the sub-attributes *day of week*, *time of day start* or *time of day end* must be populated. Where populated, the number of instances of *time of day start* must be the same as the number of instances of *time of day end*.
@@ -12617,8 +12511,6 @@ For each instance of *time intervals by day of week*, at least one of the sub-at
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:#
@@ -12650,23 +12542,23 @@ If it is required to encode the time schedules for the operation of a service (f
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| date fixed 2+| 3+| See <<sec_2.4.8>>
 | TD
-| 0,\* footnoteblock:[]
+| 0,\* footnoteblock:[twentyfour_three]
 
 3+| date variable
 2+| 3+| | TE
-| 0,\* footnoteblock:[]
+| 0,\* footnoteblock:[twentyfour_three]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyfour_three]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyfour_three]
 
 3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
 
@@ -12690,7 +12582,7 @@ If it is required to encode the time schedules for the operation of a service (f
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyfour_three]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -12703,7 +12595,7 @@ If it is required to encode the time schedules for the operation of a service (f
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyfour_three]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -12712,7 +12604,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twentyfour_three]]
 [NOTE]
 --
 At least one of the attributes *date fixed* or *date variable* must be populated.
@@ -12720,8 +12612,6 @@ At least one of the attributes *date fixed* or *date variable* must be populated
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:#
@@ -12757,12 +12647,12 @@ If it is required to encode the date(s) when an event, festival or national holi
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyfour_four]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyfour_four]
 
 3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
 
@@ -12776,7 +12666,7 @@ If it is required to encode the date(s) when an event, festival or national holi
 3+| | (S) TD
 | 1,1
 
-3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,\* footnoteblock:[]
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,\* footnoteblock:[twentyfour_four]
 
 3+| file locator
 2+| 3+| | (S) TE
@@ -12785,7 +12675,7 @@ If it is required to encode the date(s) when an event, festival or national holi
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyfour_four]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -12798,9 +12688,9 @@ If it is required to encode the date(s) when an event, festival or national holi
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyfour_four]
 
-3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1 footnoteblock:[]
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1 footnoteblock:[twentyfour_four]
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Information 3+| *Additional Information* (see <<sec_25.1>>). 3+| See next row 2+| Association | 0,1
@@ -12808,7 +12698,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[twentyfour_four]]
 [NOTE]
 --
 At least one of the attributes *information* or *pictorial representation* must be populated.
@@ -12816,8 +12706,6 @@ At least one of the attributes *information* or *pictorial representation* must 
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-
 --
 
 [underline]#INT 1 Reference:#
@@ -12848,23 +12736,23 @@ If it is required to encode identical information associated with multiple geo f
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| quality of horizontal measurement 2+| (QUAPOS) 3+|
-4: approximate | EN | 0,1 footnoteblock:[]
+4: approximate | EN | 0,1 footnoteblock:[twentyfour_five]
 3+| spatial accuracy
-2+| 3+| | C | 0,\* footnoteblock:[]
+2+| 3+| | C | 0,\* footnoteblock:[twentyfour_five]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>>
 | (S) C
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyfour_five]
 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyfour_five]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[twentyfour_five]
 
 3+| horizontal position uncertainty
 2+| _(POSACC)_ 3+| | (S) C
@@ -12894,13 +12782,18 @@ If it is required to encode identical information associated with multiple geo f
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Quality Information 3+| *Quality of Bathymetric Data Composition* (see <<sec_25.12>>) 3+| *Quality of Bathymetric Data* 2+| Association | 0,1
 | The Quality Information 3+| *Spatial Association* (see <<sec_25.15>>). 3+| Spatial types (see <<sec_2.4.7>>) 2+| Association | 0,1
-10+| footnoteblock:[]At least one of the attributes *quality of horizontal measurement* or *spatial accuracy* must be encoded.
+
+|===
+
+[[twentyfour_five]]
+[NOTE]
+--
+At least one of the attributes *quality of horizontal measurement* or *spatial accuracy* must be encoded.
 
 The sub-complex attribute *fixed date range* is mandatory if more than one instance of the complex attribute *spatial accuracy* is encoded.
 
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
-
-|===
+--
 
 [underline]#INT 1 Reference:#
 
@@ -21815,9 +21708,9 @@ When information is issued as advance notification for an ENC it is necessary to
 3+| drawing instruction
 2+| (SYMINS)
 3+| | TE
-| 0,\* footnoteblock:[]
+| 0,\* footnoteblock:[thirtytwo_one]
 
-3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,\* footnoteblock:[]
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,\* footnoteblock:[thirtytwo_one]
 
 3+| language 2+| 3+| ISO 639-2/T
 | (S) TE
@@ -21833,7 +21726,7 @@ When information is issued as advance notification for an ENC it is necessary to
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 footnoteblock:[]
+| 0,1 footnoteblock:[thirtytwo_one]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -21841,14 +21734,12 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 |===
 
-[[]]
+[[thirtytwo_one]]
 [NOTE]
 --
 At least one of the attributes *drawing instruction* or *feature name* must be populated.
 
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
-
-
 --
 
 [underline]#INT 1 Reference:#
