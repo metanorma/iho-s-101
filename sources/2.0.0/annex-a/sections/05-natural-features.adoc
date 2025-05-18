@@ -73,30 +73,21 @@ If it is required to encode cuttings and embankments, this must be done in the s
 13: pink | EN | 0,*
 3+| elevation
 2+| (ELEVAT)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
@@ -107,9 +98,7 @@ If it is required to encode cuttings and embankments, this must be done in the s
 | 0,1 footnoteblock:[five_three]
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -128,53 +117,38 @@ If it is required to encode cuttings and embankments, this must be done in the s
 17: shells | EN | 0,*
 3+| radar conspicuous
 2+| (CONRAD)
-3+|
-
-| BO
-| 0,1
+3+| | BO | 0,1
 
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
 2: not visually conspicuous +
 3: prominent | EN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[five_three]
 
 3+| headline
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[five_three]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
@@ -240,24 +214,18 @@ A steep coast may give a good radar return and is useful for visual identificati
 3: under reclamation +
 5: planned construction | EN | 0,1
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
@@ -268,9 +236,7 @@ A steep coast may give a good radar return and is useful for visual identificati
 | 0,1 footnoteblock:[five_four]
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -279,43 +245,31 @@ A steep coast may give a good radar return and is useful for visual identificati
 18: existence doubtful | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[five_four]
 
 3+| headline
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[five_four]
 
 10+| *Feature Associations*
@@ -389,24 +343,18 @@ A point feature must be encoded using:
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 1,*
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
@@ -417,51 +365,37 @@ A point feature must be encoded using:
 | 0,1 footnoteblock:[five_five]
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[five_five]
 
 3+| headline
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[five_five]
 
 10+| *Feature Associations*
@@ -512,30 +446,21 @@ If it is required to encode the name of a group of islands, it must be done usin
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| elevation
 2+| (ELEVAT)
-3+|
-
-| RE
-| 1,1
+3+| | RE | 1,1
 
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
@@ -546,9 +471,7 @@ If it is required to encode the name of a group of islands, it must be done usin
 | 0,1 footnoteblock:[five_six]
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -558,43 +481,31 @@ If it is required to encode the name of a group of islands, it must be done usin
 3: prominent | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[five_six]
 
 3+| headline
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[five_six]
 
 10+| *Feature Associations*
@@ -651,24 +562,18 @@ If it is required to encode a height contour or spot height, it must be done usi
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
@@ -679,9 +584,7 @@ If it is required to encode a height contour or spot height, it must be done usi
 | 0,1 footnoteblock:[five_seven]
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -689,43 +592,31 @@ If it is required to encode a height contour or spot height, it must be done usi
 5: periodic/intermittent | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[five_seven]
 
 3+| headline
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[five_seven]
 
 10+| *Feature Associations*
@@ -777,24 +668,18 @@ If it is required to encode a non-navigable river, stream or creek, it must be d
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
@@ -805,58 +690,41 @@ If it is required to encode a non-navigable river, stream or creek, it must be d
 | 0,1 footnoteblock:[five_eight]
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
 3+| vertical length
 2+| (VERLEN)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[five_eight]
 
 3+| headline
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[five_eight]
 
 10+| *Feature Associations*
@@ -902,24 +770,18 @@ If it is required to encode rapids within a river, it must be done using the fea
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
@@ -930,18 +792,13 @@ If it is required to encode rapids within a river, it must be done using the fea
 | 0,1 footnoteblock:[five_nine]
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
 3+| vertical length
 2+| (VERLEN)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
@@ -949,43 +806,31 @@ If it is required to encode rapids within a river, it must be done using the fea
 3: prominent | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[five_nine]
 
 3+| headline
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[five_nine]
 
 10+| *Feature Associations*
@@ -1032,30 +877,21 @@ If it is required to encode a waterfall within a river, it must be done using th
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| elevation
 2+| (ELEVAT)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
@@ -1066,9 +902,7 @@ If it is required to encode a waterfall within a river, it must be done using th
 | 0,1 footnoteblock:[five_ten]
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -1076,43 +910,31 @@ If it is required to encode a waterfall within a river, it must be done using th
 5: periodic/intermittent | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[five_ten]
 
 3+| headline
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[five_ten]
 
 10+| *Feature Associations*
@@ -1185,24 +1007,18 @@ If it is required to encode a non-navigable lake, it must be done using the feat
 20: cay +
 21: wadi | EN | 0,\* footnoteblock:[five_eleven]
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,\* footnoteblock:[five_eleven]
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
@@ -1213,9 +1029,7 @@ If it is required to encode a non-navigable lake, it must be done using the feat
 | 0,1 footnoteblock:[five_eleven]
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -1238,43 +1052,31 @@ If it is required to encode a non-navigable lake, it must be done using the feat
 6: subject to inundation or flooding | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[five_eleven]
 
 3+| headline
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[five_eleven]
 
 10+| *Feature Associations*
@@ -1364,30 +1166,21 @@ If the seaward edge of an encoded lava flow area is coincident with the coastlin
 22: filao tree | EN | 1,1
 3+| elevation
 2+| (ELEVAT)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
@@ -1399,24 +1192,16 @@ If the seaward edge of an encoded lava flow area is coincident with the coastlin
 
 3+| height
 2+| (HEIGHT)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
 3+| vertical length
 2+| (VERLEN)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
@@ -1424,43 +1209,31 @@ If the seaward edge of an encoded lava flow area is coincident with the coastlin
 3: prominent | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[five_twelve]
 
 3+| headline
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[five_twelve]
 
 10+| *Feature Associations*
@@ -1523,30 +1296,21 @@ If it is required to encode an isolated tree used as a landmark, it must be done
 8: polar ice | EN | 1,1
 3+| elevation
 2+| (ELEVAT)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
@@ -1558,22 +1322,15 @@ If it is required to encode an isolated tree used as a landmark, it must be done
 
 3+| height
 2+| (HEIGHT)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
 3+| periodic date range
-2+|
-
-3+| See <<sec_2.4.8>>
+2+| 3+| See <<sec_2.4.8>>
 | C
 | 0,*
 
@@ -1595,10 +1352,7 @@ If it is required to encode an isolated tree used as a landmark, it must be done
 18: existence doubtful | EN | 0,*
 3+| vertical length
 2+| (VERLEN)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
@@ -1606,43 +1360,31 @@ If it is required to encode an isolated tree used as a landmark, it must be done
 3: prominent | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[five_thirteen]
 
 3+| headline
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[five_thirteen]
 
 10+| *Feature Associations*
@@ -1714,24 +1456,18 @@ If the seaward edge of an encoded glacier is coincident with the coastline, this
 11: orange +
 13: pink | EN | 0,*
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
@@ -1742,9 +1478,7 @@ If the seaward edge of an encoded glacier is coincident with the coastline, this
 | 0,1 footnoteblock:[five_fourteen]
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -1757,10 +1491,7 @@ If the seaward edge of an encoded glacier is coincident with the coastline, this
 11: lava | EN | 0,*
 3+| radar conspicuous
 2+| (CONRAD)
-3+|
-
-| BO
-| 0,1
+3+| | BO | 0,1
 
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
@@ -1768,43 +1499,31 @@ If the seaward edge of an encoded glacier is coincident with the coastline, this
 3: prominent | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[five_fourteen]
 
 3+| headline
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[five_fourteen]
 
 10+| *Feature Associations*
@@ -1872,30 +1591,21 @@ If it is required to encode the height of a dune or sand hill, a *Land Elevation
 13: pink | EN | 0,*
 3+| elevation
 2+| (ELEVAT)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
@@ -1906,9 +1616,7 @@ If it is required to encode the height of a dune or sand hill, a *Land Elevation
 | 0,1 footnoteblock:[five_fifteen]
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -1921,10 +1629,7 @@ If it is required to encode the height of a dune or sand hill, a *Land Elevation
 11: lava | EN | 0,*
 3+| radar conspicuous
 2+| (CONRAD)
-3+|
-
-| BO
-| 0,1
+3+| | BO | 0,1
 
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
@@ -1932,43 +1637,31 @@ If it is required to encode the height of a dune or sand hill, a *Land Elevation
 3: prominent | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[five_fifteen]
 
 3+| headline
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[five_fifteen]
 
 10+| *Feature Associations*
@@ -2014,24 +1707,18 @@ If it is required to encode the upper marking of a prominent or visually conspic
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
@@ -2042,51 +1729,37 @@ If it is required to encode the upper marking of a prominent or visually conspic
 | 0,1 footnoteblock:[five_sixteen]
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[five_sixteen]
 
 3+| headline
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[five_sixteen]
 
 10+| *Feature Associations*

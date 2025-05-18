@@ -52,39 +52,29 @@
 2: ruined +
 5: planned construction | EN | 0,1
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
 | 0,1 ^†^
 
 3+| fixed date range
-2+|
-
-3+| See <<sec_2.4.8>>
+2+| 3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -100,22 +90,14 @@
 
 3+| flare stack
 2+| _*(LNDMRK)*_
-3+|
-
-| BO
-| 0,1
+3+| | BO | 0,1
 
 3+| height
 2+| (HEIGHT)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -128,10 +110,7 @@
 23: electricity | EN | 0,*
 3+| radar conspicuous
 2+| (CONRAD)
-3+|
-
-| BO
-| 0,1
+3+| | BO | 0,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
@@ -144,10 +123,7 @@
 28: buoyed | EN | 0,*
 3+| vertical length
 2+| (VERLEN)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
@@ -155,47 +131,31 @@
 3: prominent | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
@@ -278,10 +238,7 @@ If it is required to indicate the presence of a flare stack on an offshore platf
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| buried depth
 2+| (BURDEP)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| category of cable 2+| (CATCBL) 3+|
 1: power line +
@@ -292,39 +249,29 @@ If it is required to indicate the presence of a flare stack on an offshore platf
 1: under construction +
 5: planned construction | EN | 0,1
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
 | 0,1 ^†^
 
 3+| fixed date range
-2+|
-
-3+| See <<sec_2.4.8>>
+2+| 3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -339,9 +286,7 @@ If it is required to indicate the presence of a flare stack on an offshore platf
 | 0,1 ^†^
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -352,47 +297,31 @@ If it is required to indicate the presence of a flare stack on an offshore platf
 18: existence doubtful | EN | 0,*
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -454,39 +383,29 @@ If it is required to encode a submarine cable, it must be done using the feature
 7: ferry +
 10: telecommunications cable | EN | 0,*
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
 | 0,1 ^†^
 
 3+| fixed date range
-2+|
-
-3+| See <<sec_2.4.8>>
+2+| 3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -501,9 +420,7 @@ If it is required to encode a submarine cable, it must be done using the feature
 | 0,1 ^†^
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -523,7 +440,7 @@ If it is required to encode a submarine cable, it must be done using the feature
 14: area to be avoided +
 16: discharging prohibited +
 17: discharging restricted +
-18: industrial or mineral exploration/development prohibited
+18: industrial or mineral exploration/development prohibited +
 20: drilling prohibited +
 23: cargo transhipment (lightening) prohibited
 24: dragging prohibited +
@@ -535,25 +452,14 @@ If it is required to encode a submarine cable, it must be done using the feature
 7: temporary +
 13: historic | EN | 0,*
 3+| vessel speed limit
-2+|
-
-3+|
-
-| C
-| 0,*
+2+| 3+| | C | 0,*
 
 3+| speed limit
-2+|
-
-3+|
-
-| (S) RE
+2+| 3+| | (S) RE
 | 1,1
 
 3+| speed units
-2+|
-
-3+|
+2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots +
@@ -561,56 +467,36 @@ If it is required to encode a submarine cable, it must be done using the feature
 | 1,1
 
 3+| vessel class
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -661,10 +547,7 @@ If it is required to encode a submarine cable area, it must be done using the fe
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| buried depth
 2+| (BURDEP)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| category of pipeline/pipe 2+| (CATPIP) 3+|
 2: outfall pipe +
@@ -679,39 +562,29 @@ If it is required to encode a submarine cable area, it must be done using the fe
 3+| depth range minimum value 2+| (DRVAL1) 3+| DRVAL1 <= DRVAL2 | RE | 0,1
 3+| depth range maximum value 2+| (DRVAL2) 3+| DRVAL2 >= DRVAL1 | RE | 0,1
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
 | 0,1 ^†^
 
 3+| fixed date range
-2+|
-
-3+| See <<sec_2.4.8>>
+2+| 3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -726,34 +599,19 @@ If it is required to encode a submarine cable area, it must be done using the fe
 | 0,1 ^†^
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
 3+| multiplicity of features
-2+|
-
-3+|
-
-| C
-| 0,1
+2+| 3+| | C | 0,1
 
 3+| multiplicity known
-2+|
-
-3+|
-
-| (S) BO
+2+| 3+| | (S) BO
 | 1,1
 
 3+| number of features
-2+|
-
-3+|
-
-| (S) IN
+2+| 3+| | (S) IN
 | 0,1
 
 3+| product 2+| (PRODCT) 3+|
@@ -779,7 +637,7 @@ If it is required to encode a submarine cable area, it must be done using the fe
 14: area to be avoided +
 16: discharging prohibited +
 17: discharging restricted +
-18: industrial or mineral exploration/development prohibited
+18: industrial or mineral exploration/development prohibited +
 20: drilling prohibited +
 23: cargo transhipment (lightening) prohibited
 24: dragging prohibited +
@@ -793,47 +651,31 @@ If it is required to encode a submarine cable area, it must be done using the fe
 12: illuminated | EN | 0,*
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
@@ -902,39 +744,29 @@ If it is required to encode diffusers and cribs, this must be done using *Obstru
 5: bubbler system +
 6: supply pipe | EN | 0,*
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
 | 0,1 ^†^
 
 3+| fixed date range
-2+|
-
-3+| See <<sec_2.4.8>>
+2+| 3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -949,9 +781,7 @@ If it is required to encode diffusers and cribs, this must be done using *Obstru
 | 0,1 ^†^
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -981,7 +811,7 @@ If it is required to encode diffusers and cribs, this must be done using *Obstru
 15: construction prohibited +
 16: discharging prohibited +
 17: discharging restricted +
-18: industrial or mineral exploration/development prohibited
+18: industrial or mineral exploration/development prohibited +
 19: industrial or mineral exploration/development restricted
 20: drilling prohibited +
 21: drilling restricted +
@@ -997,25 +827,14 @@ If it is required to encode diffusers and cribs, this must be done using *Obstru
 4: not in use +
 7: temporary | EN | 0,*
 3+| vessel speed limit
-2+|
-
-3+|
-
-| C
-| 0,*
+2+| 3+| | C | 0,*
 
 3+| speed limit
-2+|
-
-3+|
-
-| (S) RE
+2+| 3+| | (S) RE
 | 1,1
 
 3+| speed units
-2+|
-
-3+|
+2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots +
@@ -1023,56 +842,36 @@ If it is required to encode diffusers and cribs, this must be done using *Obstru
 | 1,1
 
 3+| vessel class
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -1135,39 +934,29 @@ If it is required to encode a submarine pipeline area, it must be done using the
 4: wingless +
 5: planned construction | EN | 0,1
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
 | 0,1 ^†^
 
 3+| fixed date range
-2+|
-
-3+| See <<sec_2.4.8>>
+2+| 3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -1183,15 +972,10 @@ If it is required to encode a submarine pipeline area, it must be done using the
 
 3+| height
 2+| (HEIGHT)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -1205,10 +989,7 @@ If it is required to encode a submarine pipeline area, it must be done using the
 23: electricity | EN | 0,*
 3+| radar conspicuous
 2+| (CONRAD)
-3+|
-
-| BO
-| 0,1
+3+| | BO | 0,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| restriction 2+| (RESTRN) 3+|
@@ -1229,8 +1010,8 @@ If it is required to encode a submarine pipeline area, it must be done using the
 15: construction prohibited +
 16: discharging prohibited +
 17: discharging restricted +
-18: industrial or mineral exploration/development prohibited
-19: industrial or mineral exploration/development restricted
+18: industrial or mineral exploration/development prohibited +
+19: industrial or mineral exploration/development restricted +
 20: drilling prohibited +
 21: drilling restricted +
 22: removal of historical artefacts prohibited +
@@ -1249,31 +1030,17 @@ If it is required to encode a submarine pipeline area, it must be done using the
 28: buoyed | EN | 0,*
 3+| vertical length
 2+| (VERLEN)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| vessel speed limit
-2+|
-
-3+|
-
-| C
-| 0,*
+2+| 3+| | C | 0,*
 
 3+| speed limit
-2+|
-
-3+|
-
-| (S) RE
+2+| 3+| | (S) RE
 | 1,1
 
 3+| speed units
-2+|
-
-3+|
+2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots +
@@ -1281,11 +1048,7 @@ If it is required to encode a submarine pipeline area, it must be done using the
 | 1,1
 
 3+| vessel class
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| visual prominence 2+| (CONVIS) 3+|
@@ -1299,47 +1062,31 @@ If it is required to encode a submarine pipeline area, it must be done using the
 7: floating | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*

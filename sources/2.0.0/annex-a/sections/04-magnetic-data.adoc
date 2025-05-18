@@ -15,9 +15,7 @@
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -26,43 +24,31 @@
 3+.<| value of magnetic variation 2+.<| (VALMAG) 3+| +/- degrees. Positive (unsigned) value indicates easterly. Negative value indicates westerly .<| RE .<| 1,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnote:four_one[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
 3+| headline
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnote:four_one[]
 
 10+| *Feature Associations*
@@ -102,24 +88,18 @@ Of the various magnetic data, magnetic variation is the most important element f
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
@@ -130,24 +110,17 @@ Of the various magnetic data, magnetic variation is the most important element f
 | 0,1 footnoteblock:[four_two]
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
-3+| value of local magnetic anomaly
-2+| 3+|
 
-| C
-| 1,2
+3+| value of local magnetic anomaly 2+| 3+| | C | 1,2
 
 3+| magnetic anomaly value
 2+| (VALLMA)
-3+|
-
-| (S) RE
+3+| | (S) RE
 | 1,1
 
 3+| reference direction
@@ -159,43 +132,31 @@ Of the various magnetic data, magnetic variation is the most important element f
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[four_two]
 
 3+| headline
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[four_two]
 
 10+| *Feature Associations*
@@ -204,8 +165,6 @@ Of the various magnetic data, magnetic variation is the most important element f
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-
-10+|
 
 |===
 

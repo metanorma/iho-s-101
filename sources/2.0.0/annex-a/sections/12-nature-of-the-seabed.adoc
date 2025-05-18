@@ -17,33 +17,25 @@
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity |
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,*
 |
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 |
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 |
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
@@ -51,20 +43,13 @@
 |
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 |
 
 3+| surface characteristics
-2+|
-
-3+|
-
-| C
-| 1,\* (ordered)
+2+| 3+| | C | 1,\* (ordered)
 |
 
 3+| nature of surface 2+| (NATSUR) 3+|
@@ -93,11 +78,7 @@
 9: calcareous +
 10: hard | (S) EN | 0,3 ^†^ |
 3+| underlying layer
-2+|
-
-3+|
-
-| (S) IN
+2+| 3+| | (S) IN
 | 0,1
 |
 
@@ -107,52 +88,36 @@
 5: awash | EN | 0,1 |
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1 |
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 |
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 |
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 |
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 |
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 |
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 |
 
@@ -466,85 +431,59 @@ h| - Qualifying Terms .2+h| __1__fine .2+h| __2__medium .2+h| __3__coarse .2+h| 
 2: seaweed +
 4: sargasso | EN | 0,1
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
 | 0,1 ^†^
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -585,85 +524,59 @@ If it is required to encode marine weed or kelp, it must be done using the featu
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
 | 0,1 ^†^
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -705,62 +618,41 @@ If it is required to encode seagrass, it must be done using the feature *Seagras
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
 3+| vertical length
 2+| (VERLEN)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*
@@ -803,85 +695,59 @@ If it is required to encode sandwaves, this must be done using the feature *Sand
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
-2+|
-
-3+|
+2+| 3+|
 1: default name display +
 2: alternate name display +
 | (S) EN
 | 0,1 ^†^
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 3+| headline
-2+|
-
-3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 ^†^
 
 10+| *Feature Associations*

@@ -549,30 +549,21 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 5: planned construction | EN | 0,1
 3+| elevation
 2+| (ELEVAT)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
@@ -631,34 +622,22 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 48: pumping station | EN | 0,*
 3+| height
 2+| (HEIGHT)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
 3+| multiplicity of features
-2+| 3+|
-
-| C
-| 0,1
+2+| 3+| | C | 0,1
 
 3+| multiplicity known
-2+| 3+|
-
-| (S) BO
+2+| 3+| | (S) BO
 | 1,1
 
 3+| number of features
-2+| 3+|
-
-| (S) IN
+2+| 3+| | (S) IN
 | 0,1
 
 3+| nature of construction 2+| (NATCON) 3+|
@@ -672,10 +651,7 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 12: glass | EN | 0,*
 3+| radar conspicuous
 2+| (CONRAD)
-3+|
-
-| BO
-| 0,1
+3+| | BO | 0,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
@@ -689,10 +665,7 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 14: public | EN | 0,*
 3+| vertical length
 2+| (VERLEN)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
@@ -700,51 +673,36 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 3: prominent | EN | 1,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[seven_two]
 
 3+| headline
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[seven_two]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 3+| in the water
-2+| 3+|
-
-| BO
-| 0,1
+2+| 3+| | BO | 0,1
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -857,24 +815,18 @@ image::figure-7-1.png[Shape21,624,183]
 3+| elevation 2+| (ELEVAT) 3+| | RE | 0,1
 
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
@@ -886,34 +838,22 @@ image::figure-7-1.png[Shape21,624,183]
 
 3+| height
 2+| (HEIGHT)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
 3+| multiplicity of features
-2+| 3+|
-
-| C
-| 0,1
+2+| 3+| | C | 0,1
 
 3+| multiplicity known
-2+| 3+|
-
-| (S) BO
+2+| 3+| | (S) BO
 | 1,1
 
 3+| number of features
-2+| 3+|
-
-| (S) IN
+2+| 3+| | (S) IN
 | 0,1
 
 3+| nature of construction 2+| (NATCON) 3+|
@@ -941,10 +881,7 @@ image::figure-7-1.png[Shape21,624,183]
 24: ice | EN | 0,*
 3+| radar conspicuous
 2+| (CONRAD)
-3+|
-
-| BO
-| 0,1
+3+| | BO | 0,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
@@ -953,10 +890,7 @@ image::figure-7-1.png[Shape21,624,183]
 13: historic | EN | 0,*
 3+| vertical length
 2+| (VERLEN)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
@@ -964,51 +898,36 @@ image::figure-7-1.png[Shape21,624,183]
 3: prominent | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[seven_three]
 
 3+| headline
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[seven_three]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 3+| in the water
-2+| 3+|
-
-| BO
-| 0,1
+2+| 3+| | BO | 0,1
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -1090,24 +1009,18 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 3+| elevation 2+| (ELEVAT) 3+| | RE | 0,1
 
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
@@ -1118,9 +1031,7 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 | 0,1 footnoteblock:[seven_four]
 
 3+| fixed date range
-2+|
-
-3+| See <<sec_2.4.8>>
+2+| 3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -1136,34 +1047,22 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 
 3+| height
 2+| (HEIGHT)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
 3+| multiplicity of features
-2+| 3+|
-
-| C
-| 0,1
+2+| 3+| | C | 0,1
 
 3+| multiplicity known
-2+| 3+|
-
-| (S) BO
+2+| 3+| | (S) BO
 | 1,1
 
 3+| number of features
-2+| 3+|
-
-| (S) IN
+2+| 3+| | (S) IN
 | 0,1
 
 3+| nature of construction 2+| (NATCON) 3+|
@@ -1174,10 +1073,7 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 11: latticed | EN | 0,*
 3+| radar conspicuous
 2+| (CONRAD)
-3+|
-
-| BO
-| 0,1
+3+| | BO | 0,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
@@ -1192,35 +1088,24 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 14: public +
 28: buoyed | EN | 0,*
 3+| vertical clearance fixed
-2+| 3+|
-
-| C
-| 0,1
+2+| 3+| | C | 0,1
 
 3+| vertical clearance value
 2+| (VERCLR)
-3+|
-
-| (S) RE
+3+| | (S) RE
 | 1,1
 
 3+| vertical uncertainty
 2+| _(VERACC)_
-3+|
-
-| (S) RE
+3+| | (S) RE
 | 0,1
 
 3+| uncertainty fixed
-2+| 3+|
-
-| (S) RE
+2+| 3+| | (S) RE
 | 1,1
 
 3+| uncertainty variable factor
-2+| 3+|
-
-| (S) RE
+2+| 3+| | (S) RE
 | 0,1
 
 3+| vertical datum 2+| (VERDAT) 3+|
@@ -1241,10 +1126,7 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 44: baltic sea chart datum 2000 | EN | 0,1
 3+| vertical length
 2+| (VERLEN)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
@@ -1255,51 +1137,36 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 7: floating | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[seven_four]
 
 3+| headline
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[seven_four]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 3+| in the water
-2+| 3+|
-
-| BO
-| 0,1
+2+| 3+| | BO | 0,1
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -1379,24 +1246,18 @@ A structure that is specifically designed or reinforced to provide for defence f
 1: under construction +
 2: ruined | EN | 0,1
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
@@ -1408,15 +1269,10 @@ A structure that is specifically designed or reinforced to provide for defence f
 
 3+| height
 2+| (HEIGHT)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -1428,10 +1284,7 @@ A structure that is specifically designed or reinforced to provide for defence f
 7: metal | EN | 0,*
 3+| radar conspicuous
 2+| (CONRAD)
-3+|
-
-| BO
-| 0,1
+3+| | BO | 0,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
@@ -1444,10 +1297,7 @@ A structure that is specifically designed or reinforced to provide for defence f
 28: buoyed | EN | 0,*
 3+| vertical length
 2+| (VERLEN)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
@@ -1455,51 +1305,36 @@ A structure that is specifically designed or reinforced to provide for defence f
 3: prominent | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[seven_five]
 
 3+| headline
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[seven_five]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 3+| in the water
-2+| 3+|
-
-| BO
-| 0,1
+2+| 3+| | BO | 0,1
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -1570,30 +1405,21 @@ If it is required to encode a fortified structure, it must be done using the fea
 5: planned construction | EN | 0,1
 3+| elevation
 2+| (ELEVAT)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| feature name
-2+|
-
-3+| See <<sec_2.5.8>>
+2+| 3+| See <<sec_2.5.8>>
 | C
 | 0,*
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| name
 2+| _(OBJNAM) (NOBJNM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 1,1
 
 3+| name usage
@@ -1604,9 +1430,7 @@ If it is required to encode a fortified structure, it must be done using the fea
 | 0,1 footnoteblock:[seven_six]
 
 3+| fixed date range
-2+|
-
-3+| See <<sec_2.4.8>>
+2+| 3+| See <<sec_2.4.8>>
 | C
 | 0,1
 
@@ -1622,15 +1446,10 @@ If it is required to encode a fortified structure, it must be done using the fea
 
 3+| height
 2+| (HEIGHT)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| interoperability identifier
-2+|
-
-3+| MRN (see <<sec_27.114>>)
+2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
 
@@ -1661,10 +1480,7 @@ If it is required to encode a fortified structure, it must be done using the fea
 25: clay | EN | 0,*
 3+| radar conspicuous
 2+| (CONRAD)
-3+|
-
-| BO
-| 0,1
+3+| | BO | 0,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
@@ -1672,10 +1488,7 @@ If it is required to encode a fortified structure, it must be done using the fea
 12: illuminated | EN | 0,*
 3+| vertical length
 2+| (VERLEN)
-3+|
-
-| RE
-| 0,1
+3+| | RE | 0,1
 
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
@@ -1683,43 +1496,31 @@ If it is required to encode a fortified structure, it must be done using the fea
 3: prominent | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
-2+|
-
-3+| See <<sec_2.4.6>>
+2+| 3+| See <<sec_2.4.6>>
 | C
 | 0,*
 
 3+| file locator
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[seven_six]
 
 3+| headline
-2+| 3+|
-
-| (S) TE
+2+| 3+| | (S) TE
 | 0,1
 
 3+| language
-2+|
-
-3+| ISO 639-2/T
+2+| 3+| ISO 639-2/T
 | (S) TE
 | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
-3+|
-
-| (S) TE
+3+| | (S) TE
 | 0,1 footnoteblock:[seven_six]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
