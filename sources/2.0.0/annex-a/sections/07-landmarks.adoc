@@ -481,7 +481,7 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 [[sec_7.2]]
 === Landmark
 
-[cols="609,794,794,794,794,794,794,794,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *LANDMARK*. Any prominent object at a fixed location on land which can be used in determining a location or a direction. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Landmark (LNDMRK)*
@@ -551,20 +551,11 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 2+| (ELEVAT)
 3+| | RE | 0,1
 
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -624,10 +615,7 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 2+| (HEIGHT)
 3+| | RE | 0,1
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| multiplicity of features
 2+| 3+| | C | 0,1
@@ -671,41 +659,31 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 1: visually conspicuous +
 2: not visually conspicuous +
 3: prominent | EN | 1,1
+
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
+
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
 3+| file locator
 2+| 3+| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[seven_two]
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[seven_two]
 
 3+| headline
 2+| 3+| | (S) TE
 | 0,1
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[seven_two]
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[seven_two]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 3+| in the water
 2+| 3+| | BO | 0,1
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Helipad*, *Light Air Obstruction*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
 | The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
@@ -747,7 +725,7 @@ If it is required to encode a landmark (other than a tank, silo or roofed struct
 * Radio and television masts and towers are likely to be visible over long distances and should be encoded as landmarks, even when well inland. They will usually carry air obstruction lights.
 * To aid identification of landmarks by the Mariner it may be useful to add the height of the top of the structure above ground level (*vertical length*) or above the general height datum (*height*).
 * Buildings constructed as places of worship often form significant landmarks; their size and structure incorporating towers, spires, cupolas, etc often render them conspicuous. These buildings when known to be prominent or conspicuous should be encoded up to several miles inland (see <<fig_7-1>> below, examples (a) and (b)).
-* The attribute *category of special purpose mark* should only be used if the *Landmark*is used as the front or rear lead for a transit, clearing line or measured distance, or for a leading line. Values for *category of special purpose mark* such as _16_ (leading mark), _17_ (measured distance mark) or _41_ (clearing mark) in particular should be used for these purposes.
+* The attribute *category of special purpose mark* should only be used if the *Landmark* is used as the front or rear lead for a transit, clearing line or measured distance, or for a leading line. Values for *category of special purpose mark* such as _16_ (leading mark), _17_ (measured distance mark) or _41_ (clearing mark) in particular should be used for these purposes.
 * Values *category of landmark* = _26_ (bridge) and _27_ (dam) must only be used if the feature is encoded using point geometry; and must not be encoded over navigable water. Bridges and dams encoded using curve or surface geometry must be encoded using features *Bridge* (see <<sec_6.6>>) and *Dam* (see <<sec_8.12>>) respectively.
 * For landmarks located in navigable water, the Boolean attribute *in the water* must be set to _True_ to indicate that the feature is to be included in the ECDIS Base Display. Where such structures are located in the water it is not required to encode any supporting structures (for example piles).
 * When a building is shown as a surface, indicating its true shape, and it is required to encode a prominent feature such as a tower or spire that is part of the structure, two features must be created (see <<fig_7-1>> (b) below):
@@ -766,7 +744,7 @@ image::figure-7-1.png[Shape21,624,183]
 [[sec_7.3]]
 === Silo/tank
 
-[cols="609,794,794,794,794,794,794,794,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *SILO/TANK*. A large storage structure used for storing loose materials, liquids and/or gases. (Adapted from Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2012).
 10+| *[underline]#S-101 Geo Feature:#* *Silo/Tank (SILTNK)*
@@ -814,20 +792,11 @@ image::figure-7-1.png[Shape21,624,183]
 
 3+| elevation 2+| (ELEVAT) 3+| | RE | 0,1
 
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -840,10 +809,7 @@ image::figure-7-1.png[Shape21,624,183]
 2+| (HEIGHT)
 3+| | RE | 0,1
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| multiplicity of features
 2+| 3+| | C | 0,1
@@ -896,41 +862,31 @@ image::figure-7-1.png[Shape21,624,183]
 1: visually conspicuous +
 2: not visually conspicuous +
 3: prominent | EN | 0,1
+
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
+
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
 3+| file locator
 2+| 3+| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[seven_three]
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[seven_three]
 
 3+| headline
 2+| 3+| | (S) TE
 | 0,1
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[seven_three]
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[seven_three]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 3+| in the water
 2+| 3+| | BO | 0,1
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
 | The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
@@ -971,7 +927,7 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 [[sec_7.4]]
 === Wind turbine
 
-[cols="609,794,794,794,794,794,794,794,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *WIND TURBINE*. A tower and associated equipment that generates electrical power from wind. They can be sited offshore and may be either fixed or floating. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Wind Turbine* __**(LNDMRK)**__
@@ -1008,20 +964,11 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 
 3+| elevation 2+| (ELEVAT) 3+| | RE | 0,1
 
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -1030,29 +977,17 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 | (S) EN
 | 0,1 footnoteblock:[seven_four]
 
-3+| fixed date range
-2+| 3+| See <<sec_2.4.8>>
-| C
-| 0,1
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
-3+| date end
-2+| (DATEND)
-3+| | (S) TD
-| 0,1 footnoteblock:[seven_four]
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[seven_four]
 
-3+| date start
-2+| (DATSTA)
-3+| | (S) TD
-| 0,1 footnoteblock:[seven_four]
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[seven_four]
 
 3+| height
 2+| (HEIGHT)
 3+| | RE | 0,1
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| multiplicity of features
 2+| 3+| | C | 0,1
@@ -1090,15 +1025,9 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 3+| vertical clearance fixed
 2+| 3+| | C | 0,1
 
-3+| vertical clearance value
-2+| (VERCLR)
-3+| | (S) RE
-| 1,1
+3+| vertical clearance value 2+| (VERCLR) 3+| | (S) RE | 1,1
 
-3+| vertical uncertainty
-2+| _(VERACC)_
-3+| | (S) RE
-| 0,1
+3+| vertical uncertainty 2+| _(VERACC)_ 3+| | (S) RE | 0,1
 
 3+| uncertainty fixed
 2+| 3+| | (S) RE
@@ -1135,41 +1064,31 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 3+| water level effect 2+| (WATLEV) 3+|
 2: always dry +
 7: floating | EN | 0,1
+
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
+
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
 3+| file locator
 2+| 3+| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[seven_four]
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[seven_four]
 
 3+| headline
 2+| 3+| | (S) TE
 | 0,1
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[seven_four]
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[seven_four]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 3+| in the water
 2+| 3+| | BO | 0,1
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light Air Obstruction*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
 | The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
@@ -1222,7 +1141,7 @@ If it is required to encode a wind turbine, it must be done using the feature *W
 [[sec_7.5]]
 === Fortified structure
 
-[cols="609,794,794,794,794,794,794,794,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *FORTIFIED STRUCTURE*.
 
@@ -1245,20 +1164,11 @@ A structure that is specifically designed or reinforced to provide for defence f
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined | EN | 0,1
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -1271,10 +1181,7 @@ A structure that is specifically designed or reinforced to provide for defence f
 2+| (HEIGHT)
 3+| | RE | 0,1
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| nature of construction 2+| (NATCON) 3+|
 1: masonry +
@@ -1303,41 +1210,31 @@ A structure that is specifically designed or reinforced to provide for defence f
 1: visually conspicuous +
 2: not visually conspicuous +
 3: prominent | EN | 0,1
+
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
+
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
 3+| file locator
 2+| 3+| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[seven_five]
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[seven_five]
 
 3+| headline
 2+| 3+| | (S) TE
 | 0,1
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[seven_five]
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[seven_five]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 3+| in the water
 2+| 3+| | BO | 0,1
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Bollard*, *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
 | The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
@@ -1376,7 +1273,7 @@ If it is required to encode a fortified structure, it must be done using the fea
 [[sec_7.6]]
 === Production/storage area
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *PRODUCTION/STORAGE AREA*. An area on land for the exploitation or storage of natural resources. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.124, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Production/Storage Area (PRDARE)*
@@ -1407,20 +1304,11 @@ If it is required to encode a fortified structure, it must be done using the fea
 2+| (ELEVAT)
 3+| | RE | 0,1
 
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -1429,29 +1317,17 @@ If it is required to encode a fortified structure, it must be done using the fea
 | (S) EN
 | 0,1 footnoteblock:[seven_six]
 
-3+| fixed date range
-2+| 3+| See <<sec_2.4.8>>
-| C
-| 0,1
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
-3+| date end
-2+| (DATEND)
-3+| | (S) TD
-| 0,1 footnoteblock:[seven_six]
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[seven_six]
 
-3+| date start
-2+| (DATSTA)
-3+| | (S) TD
-| 0,1 footnoteblock:[seven_six]
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[seven_six]
 
 3+| height
 2+| (HEIGHT)
 3+| | RE | 0,1
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| product 2+| (PRODCT) 3+|
 1: oil +
@@ -1494,38 +1370,24 @@ If it is required to encode a fortified structure, it must be done using the fea
 1: visually conspicuous +
 2: not visually conspicuous +
 3: prominent | EN | 0,1
+
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
-| 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[seven_six]
+3+| file locator 2+| 3+| | (S) TE | 0,1
 
-3+| headline
-2+| 3+| | (S) TE
-| 0,1
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[seven_six]
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| headline 2+| 3+| | (S) TE | 0,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[seven_six]
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[seven_six]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
@@ -1554,7 +1416,7 @@ If it is required to encode production or storage area, it must be done using th
 
 [underline]#Remarks:#
 
-* If there are individual buildings or equipment features contained within this area, they should be encoded as separate features such as **Building****, Crane,** *Landmark*or *Silo/Tank* within the *Production/Storage Area* feature of type surface if the optimum display scale of the ENC data permits.
+* If there are individual buildings or equipment features contained within this area, they should be encoded as separate features such as *Building*, *Crane*, *Landmark* or *Silo/Tank* within the *Production/Storage Area* feature of type surface if the optimum display scale of the ENC data permits.
 
 * If visible from seaward, a quarry face should be encoded as for a cliff (see <<sec_5.1>>), with attribute *category of slope* = _6_ (cliff).
 

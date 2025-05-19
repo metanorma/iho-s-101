@@ -37,34 +37,20 @@ Some of the principles of depth depiction are summarized below:
 [[sec_11.3]]
 === Sounding
 
-[cols="192,102,64,158,158,386,351,351,84,154", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
-9+| [underline]#IHO Definition:# *SOUNDING*. Measured or charted depth of water (may be a drying height), or the measurement of such a depth, which has been reduced to a vertical datum. (Adapted from IHO Dictionary -- S-32). |
-9+| *[underline]#S-101 Geo Feature:#* *Sounding (SOUNDG)* |
-9+| *[underline]#Primitives:#* *Pointset* |
-2+| _Real World_
+10+| [underline]#IHO Definition:# *SOUNDING*. Measured or charted depth of water (may be a drying height), or the measurement of such a depth, which has been reduced to a vertical datum. (Adapted from IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Sounding (SOUNDG)*
+10+| *[underline]#Primitives:#* *Pointset*
 
-4+| _Paper Chart Symbol_
-
-3+| _ECDIS Symbol_
-
-|
+3+| _Real World_ 4+| _Paper Chart Symbol_ 3+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -73,10 +59,7 @@ Some of the principles of depth depiction are summarized below:
 | (S) EN
 | 0,1 footnoteblock:[eleven_three]
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| quality of vertical measurement 2+| (QUASOU) 3+|
 1: depth known +
@@ -104,36 +87,24 @@ Some of the principles of depth depiction are summarized below:
 17: hyperspectral imagery +
 18: mechanically swept | EN | 0,*
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
 3+| file locator
 2+| 3+| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[eleven_three]
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[eleven_three]
 
 3+| headline
 2+| 3+| | (S) TE
 | 0,1
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[eleven_three]
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[eleven_three]
 
-9+| *Feature Associations* |
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
@@ -189,7 +160,7 @@ h| Sounding h| S-4 h| INT 1 h| quality of horizontal measurement h| quality of v
 
 [underline]#Remarks:#
 
-* Encoders are advised to use caution when considering encoding soundings that are shoaler than the range of depth of the surrounding depth area, as *Sounding* features will not be displayed when utilising some ECDIS display settings. Where it is considered that a sounding that is shoaler than the range of depth of the surrounding depth area may be a hazard to navigation, encoders should preferably conduct further investigation of source material in order to encode additional depth contour and depth area information more relevant to the sounding. Alternatively, encoders may consider using an alternate feature (for example*Obstruction*) to encode the depth.
+* Encoders are advised to use caution when considering encoding soundings that are shoaler than the range of depth of the surrounding depth area, as *Sounding* features will not be displayed when utilising some ECDIS display settings. Where it is considered that a sounding that is shoaler than the range of depth of the surrounding depth area may be a hazard to navigation, encoders should preferably conduct further investigation of source material in order to encode additional depth contour and depth area information more relevant to the sounding. Alternatively, encoders may consider using an alternate feature (for example *Obstruction*) to encode the depth.
 * The attribute *technique of vertical measurement* must only be populated for *Sounding* features if it is different from the value of *technique of vertical measurement* encoded on an overlapping *Quality of Survey* feature (see <<sec_3.11>>); and the information is considered to be important to navigation.
 * Where *Sounding* features are covered by the Meta feature *Quality of Survey*, the attribute *quality of vertical measurement* must not be populated unless different from the value of *quality of vertical measurement* populated for the *Quality of Survey*.
 * An instance of the information type *Spatial Quality* (see <<sec_25.4>>) may be associated to the sounding geometry, using the association *Spatial Association*, to indicate, where required, that the horizontal position and/or the vertical uncertainty for the sounding(s) is of different (higher or lower) accuracy than indicated by the underlying *Quality of Bathymetric Data* Meta feature (see <<sec_3.8>>). See also <<sec_3.8.1.3>>(Sounding uncertainty).
@@ -202,7 +173,7 @@ h| Sounding h| S-4 h| INT 1 h| quality of horizontal measurement h| quality of v
 [[sec_11.4]]
 === Dredged area
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *DREDGED AREA*. An area of the bottom of a body of water which has been deepened by dredging. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Dredged Area (DRGARE)*
@@ -211,26 +182,14 @@ h| Sounding h| S-4 h| INT 1 h| quality of horizontal measurement h| quality of v
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| depth range maximum value 2+| (DRVAL2) 3+| DRVAL2 >= DRVAL1 | RE | 0,1
-3+| depth range minimum value 2+| (DRVAL1) 3+| DRVAL1 <= DRVAL2 | RE | 1,1
-3+| dredged date
-2+| _(SORDAT)_
+3+| depth range maximum value 2+| (DRVAL2) 3+| DRVAL2 >= DRVAL1 | RE | 0,1 3+| depth range minimum value 2+| (DRVAL1) 3+| DRVAL1 <= DRVAL2 | RE | 1,1 3+| dredged date 2+| _(SORDAT)_
 3+| | TD | 0,1
 
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -239,10 +198,7 @@ h| Sounding h| S-4 h| INT 1 h| quality of horizontal measurement h| quality of v
 | (S) EN
 | 0,1 footnoteblock:[eleven_four]
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| maximum permitted draught
 2+| 3+| | RE | 0,1
@@ -312,36 +268,24 @@ h| Sounding h| S-4 h| INT 1 h| quality of horizontal measurement h| quality of v
 2+| 3+| | (S) TE
 | 0,1
 
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
 3+| file locator
 2+| 3+| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[eleven_four]
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[eleven_four]
 
 3+| headline
 2+| 3+| | (S) TE
 | 0,1
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[eleven_four]
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[eleven_four]
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Auxiliary Feature 3+| *Fairway Auxiliary* (see <<sec_25.8>>) 3+| *Fairway* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
@@ -380,7 +324,7 @@ If it is required to encode dredged areas, this must be done using the feature *
 [[sec_11.5]]
 === Swept area
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *SWEPT AREA*. An area that has been determined to be clear of navigational dangers to a specified depth. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Swept Area (SWPARE)*
@@ -393,46 +337,31 @@ If it is required to encode dredged areas, this must be done using the feature *
 2+| (DRVAL1)
 3+| | RE | 1,1
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| swept date
 2+| _(SORDAT)_
 3+| | TD | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
 3+| file locator
 2+| 3+| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnote:eleven_five[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnote:eleven_five[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
 3+| headline
 2+| 3+| | (S) TE
 | 0,1
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnote:eleven_five[]
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnote:eleven_five[]
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Auxiliary Feature 3+| *Fairway Auxiliary* (see <<sec_25.8>>) 3+| *Fairway* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
@@ -448,7 +377,7 @@ If it is required to encode dredged areas, this must be done using the feature *
 
 If it is required to encode a swept area, it must be done using the feature *Swept Area*.
 
-Spot soundings and depth contours shown in these areas must be encoded using *Sounding* and *Depth Contour* features. A Meta feature *Quality of Bathymetric Data* must be encoded to provide quality information for the *Swept Area* (see <<sec_3.8>>). The *depth range maximum* value for the *Quality of Bathymetric Data* feature must be equal to the swept depth (*depth range minimum*) value for the *Swept Area*. The complex attribute*vertical uncertainty* (*uncertainty fixed*) may be used on the *Quality of Bathymetric Data* or on the associated *Spatial* **Quality** feature (see <<sec_24.5>>) to specify the uncertainty of the swept depth value, or otherwise must be populated as __0__; *horizontal position uncertainty* (*uncertainty fixed*) on the *Quality of Bathymetric Data* or on the associated *Spatial* **Quality** must be populated as _0_. Where required, a separate *Quality of Bathymetric Data* feature must be encoded to provide depth or positional accuracy information for any underlying bathymetry within the swept area.
+Spot soundings and depth contours shown in these areas must be encoded using *Sounding* and *Depth Contour* features. A Meta feature *Quality of Bathymetric Data* must be encoded to provide quality information for the *Swept Area* (see <<sec_3.8>>). The *depth range maximum* value for the *Quality of Bathymetric Data* feature must be equal to the swept depth (*depth range minimum*) value for the *Swept Area*. The complex attribute *vertical uncertainty* (*uncertainty fixed*) may be used on the *Quality of Bathymetric Data* or on the associated *Spatial* **Quality** feature (see <<sec_24.5>>) to specify the uncertainty of the swept depth value, or otherwise must be populated as __0__; *horizontal position uncertainty* (*uncertainty fixed*) on the *Quality of Bathymetric Data* or on the associated *Spatial* **Quality** must be populated as _0_. Where required, a separate *Quality of Bathymetric Data* feature must be encoded to provide depth or positional accuracy information for any underlying bathymetry within the swept area.
 
 [[fig_11-1]]
 .Swept areas -- Quality of bathymetric data
@@ -467,7 +396,7 @@ Even if the area contains no spot soundings or depth contours, a *Swept Area* fe
 [[sec_11.6]]
 === Depth contour
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *DEPTH CONTOUR*. A line connecting points of equal water depth which is sometimes significantly displaced outside of soundings, symbols, and other chart detail for clarity as well as generalization. Depth contours therefore often represent an approximate location of the line of equal depth as related to the surveyed line delineated on the source. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Depth Contour (DEPCNT)*
@@ -476,46 +405,31 @@ Even if the area contains no spot soundings or depth contours, a *Swept Area* fe
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| value of depth contour
 2+| (VALDCO)
 3+| | RE | 1,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
 3+| file locator
 2+| 3+| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnote:eleven_six[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnote:eleven_six[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
 3+| headline
 2+| 3+| | (S) TE
 | 0,1
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnote:eleven_six[]
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnote:eleven_six[]
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
@@ -554,7 +468,7 @@ image::figure-11-1.png[286,459]
 [[sec_11.7]]
 === Depth area
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *DEPTH AREA*. A water area whose depth is within a defined range of values. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.51, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Depth Area (DEPARE)*
@@ -565,41 +479,26 @@ image::figure-11-1.png[286,459]
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| depth range maximum value 2+| (DRVAL2) 3+| DRVAL2 > DRVAL1 | RE | 1,1
 3+| depth range minimum value 2+| (DRVAL1) 3+| DRVAL1 < DRVAL2 | RE | 1,1
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
 3+| file locator
 2+| 3+| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnote:eleven_seven[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnote:eleven_seven[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
 3+| headline
 2+| 3+| | (S) TE
 | 0,1
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnote:eleven_seven[]
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnote:eleven_seven[]
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
@@ -720,7 +619,7 @@ NOTE: Where the optional depth areas in paragraph 7 above are encoded, this will
 
 Where these areas are navigable at the optimum display scale for the ENC data, they must be encoded using the Skin of the Earth features *Depth Area*, *Dredged Area* or *Unsurveyed Area*, and coastline-type features *Coastline* or *Shoreline Construction*. If it is required to encode the nature and name of the area, it must be done using the feature *Sea Area/Named Water Area*.
 
-Where these areas are required and are not navigable at the optimum display scale for the ENC data, they must be encoded using the features *River*, *Canal* or *Lake*. These features must be covered by *Land Area*features.
+Where these areas are required and are not navigable at the optimum display scale for the ENC data, they must be encoded using the features *River*, *Canal* or *Lake*. These features must be covered by *Land Area* features.
 
 [[sec_11.7.5]]
 ==== Areas of continual change (see S-4 -- B-416)
@@ -738,7 +637,7 @@ If it is required to encode sandwaves, this must be done using the feature *Sand
 [[sec_11.8]]
 === Depth -- no bottom found
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *DEPTH --**NO BOTTOM FOUND*. Upon investigation the bottom was not found at this depth. (Adapted from IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Depth -- No Bottom Found* __**(SOUNDG)**__
@@ -747,10 +646,7 @@ If it is required to encode sandwaves, this must be done using the feature *Sand
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| technique of vertical measurement 2+| (TECSOU) 3+|
 1: found by echo sounder +
@@ -765,36 +661,24 @@ If it is required to encode sandwaves, this must be done using the feature *Sand
 17: hyperspectral imagery +
 18: mechanically swept | EN | 0,*
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
 3+| file locator
 2+| 3+| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnote:eleven_eight[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnote:eleven_eight[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
 3+| headline
 2+| 3+| | (S) TE
 | 0,1
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnote:eleven_eight[]
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnote:eleven_eight[]
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
@@ -891,48 +775,30 @@ In some cases satellite imagery provides evidence that existing charted informat
 11+| [underline]#IHO Definition:# *UNSURVEYED AREA*. An area where [[hydrographic%20survey]] data is non-existent.(IHO Dictionary -- S-32).
 11+| *[underline]#S-101 Geo Feature:#* *Unsurveyed Area (UNSARE)*
 11+| *[underline]#Primitives:#* *Surface*
-2+| _Real World_
 
-4+| _Paper Chart Symbol_
-
-5+| _ECDIS Symbol_
+2+| _Real World_ 4+| _Paper Chart Symbol_ 5+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value 2+h| Type h| Multiplicity
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-2+| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) 2+| URN | 0,1
 
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-2+| C
-| 0,*
+3+| information 2+| 3+| See <<sec_2.4.6>> 2+| C | 0,*
 
 3+| file locator
 2+| 3+| 2+| (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| 2+| (S) TE
-| 0,1 footnote:eleven_ten[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| 2+| (S) TE | 0,1 footnote:eleven_ten[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
 3+| headline
 2+| 3+| 2+| (S) TE
 | 0,1
 
-3+| language
-2+| 3+| ISO 639-2/T
-2+| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T 2+| (S) TE | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| 2+| (S) TE
-| 0,1 footnote:eleven_ten[]
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| 2+| (S) TE | 0,1 footnote:eleven_ten[]
 
 11+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type 2+h| Multiplicity
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type 2+h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association 2+| 0,*
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association 2+| 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association 2+| 0,*

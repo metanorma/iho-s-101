@@ -4,7 +4,7 @@
 [[sec_8.1]]
 === Works in progress and projected (see S-4 – B-329)
 
-An ENC can seldom show the exact state of work under construction because it may not be known by the encoder and, even if known, may be expected to change between ENC updates (see Section 31). Where it is possible to provide the Mariner with an indication of the status of work under construction, under reclamation or planned, it must be done using the appropriate feature (for example*Shoreline Construction*, *Causeway*, *Dock Area*, *Dry Dock*, *Pipeline Submarine/On Land*), with the attribute *condition* populated as _1_ (under construction), _3_ (under reclamation) or _5_ (planned construction). Where the encoder wishes to provide such information to the Mariner and the details of the works are not known (nature and extent of the works), this should be done using the feature *Caution Area* (see <<sec_16.10>>), with known details of the works encoded using the complex attribute *information* (see <<sec_2.4.6>>).
+An ENC can seldom show the exact state of work under construction because it may not be known by the encoder and, even if known, may be expected to change between ENC updates (see Section 31). Where it is possible to provide the Mariner with an indication of the status of work under construction, under reclamation or planned, it must be done using the appropriate feature (for example *Shoreline Construction*, *Causeway*, *Dock Area*, *Dry Dock*, *Pipeline Submarine/On Land*), with the attribute *condition* populated as _1_ (under construction), _3_ (under reclamation) or _5_ (planned construction). Where the encoder wishes to provide such information to the Mariner and the details of the works are not known (nature and extent of the works), this should be done using the feature *Caution Area* (see <<sec_16.10>>), with known details of the works encoded using the complex attribute *information* (see <<sec_2.4.6>>).
 
 If it is required to provide the Mariner with an indication of the date to which information regarding the works is current, it must be done using the attribute *reported date* (see <<sec_27.154>>).
 
@@ -33,7 +33,7 @@ Because lights and buoys marking the limits of works at sea may be moved without
 [[sec_8.2]]
 === Checkpoint
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *CHECKPOINT*. An official location at which to register, declare and/or inspect goods and/or people. (Adapted from Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2010).
 10+| *[underline]#S-101 Geo Feature:#* *Checkpoint (CHKPNT)*
@@ -125,8 +125,8 @@ Because lights and buoys marking the limits of works at sea may be moved without
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_two]
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
@@ -158,7 +158,7 @@ If it is required to encode an official place to register, declare and/or check 
 [[sec_8.3]]
 === Hulk
 
-[cols="609,794,794,794,794,794,794,794,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *HULK*. The hull of a wrecked or condemned ship, from which the fittings and superstructure have usually been removed, which is moored in a permanent position or grounded. It may be abandoned or put to some other use. (Adapted from IHO Dictionary – S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Hulk (HULKES)*
@@ -294,6 +294,7 @@ If it is required to encode an official place to register, declare and/or check 
 | 0,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+
 3+| vertical length
 2+| (VERLEN)
 3+a|
@@ -343,8 +344,8 @@ If it is required to encode an official place to register, declare and/or check 
 | 0,1 footnoteblock:[eight_three]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
 | The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Bollard*, *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
 | The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
@@ -384,7 +385,7 @@ If it is required to encode a permanently moored ship, it must be done using the
 [[sec_8.4]]
 === Pile
 
-[cols="609,794,794,794,794,794,794,794,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *PILE*. A long heavy timber or section of steel, wood, concrete, etc., forced into the earth or seafloor to serve as a support, as for a pier, or to resist lateral pressure; or as a free standing pole within a marine environment. (IHO Dictionary – S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Pile (PILPNT)*
@@ -553,8 +554,8 @@ If it is required to encode a permanently moored ship, it must be done using the
 | 0,1 footnoteblock:[eight_four]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
 | The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Bollard*, *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
 | The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Archipelagic Sea Lane*, *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
@@ -587,17 +588,17 @@ If it is required to encode a pile or post that is not used as a dolphin or an a
 
 [underline]#Remarks:#
 
-* Stumps of piles or posts that are dangerous to navigation must be encoded, where required, using *Obstruction*features (see <<sec_13.6>>), with attribute *category of obstruction* = _1_ (snag/stump), and must not be encoded using *Pile*.
+* Stumps of piles or posts that are dangerous to navigation must be encoded, where required, using *Obstruction* features (see <<sec_13.6>>), with attribute *category of obstruction* = _1_ (snag/stump), and must not be encoded using *Pile*.
 * *Pile* of type curve must only be used for *Pile* having *category of pile* = _5_ (piling), which is sometimes termed "row of piles" or "sheet piling". Point primitive may be used to encode piling for smaller optimum display scale ENC data.
 * *Pile* of type surface must only be used for *Pile* having *category of pile* = _6_ (area of piles). Point primitive may be used to encode an area of piles for smaller optimum display scale ENC data.
-* Stakes and posts that are identified on the source to serve the purpose of aids to navigation must be encoded, where required, using the appropriate beacon feature (for example*Special Purpose/General Beacon*), with attribute *beacon shape* = _1_ (stake, pole, perch, post).
+* Stakes and posts that are identified on the source to serve the purpose of aids to navigation must be encoded, where required, using the appropriate beacon feature (for example *Special Purpose/General Beacon*), with attribute *beacon shape* = _1_ (stake, pole, perch, post).
 
 [underline]#Distinction:# Cardinal Beacon; Dolphin; Isolated Danger Beacon; Lateral Beacon; Obstruction; Safe Water Beacon; Special Purpose/General Beacon.
 
 [[sec_8.5]]
 === Dyke
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *DYKE*. A dyke (or dike) is an artificial embankment to contain or hold back water. (Adapted from IHO Dictionary – S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Dyke (DYKCON)*
@@ -681,20 +682,12 @@ If it is required to encode a pile or post that is not used as a dolphin or an a
 5: unsurfaced +
 6: wooden +
 7: metal | EN | 0,*
-3+| radar conspicuous
-2+| (CONRAD)
-3+a|
 
-| BO
-| 0,1
+3+| radar conspicuous 2+| (CONRAD) 3+a| | BO | 0,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
-3+| vertical length
-2+| (VERLEN)
-3+a|
 
-| RE
-| 0,1
+3+| vertical length 2+| (VERLEN) 3+a| | RE | 0,1
 
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
@@ -737,8 +730,8 @@ If it is required to encode a pile or post that is not used as a dolphin or an a
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_five]
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
@@ -776,7 +769,7 @@ If it is required to encode a dyke, it must be done using the feature *Dyke*.
 [[sec_8.6]]
 === Shoreline construction
 
-[cols="609,794,794,794,794,794,794,794,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *SHORELINE CONSTRUCTION*. A fixed artificial structure in the water and/or adjoining the land. It may also refer to features such as training walls, which are not necessarily connected to, nor form part of the shoreline. (S-57 Edition 3.1, Appendix A – Chapter 1, Page 1.154, November 2000, as amended).
 10+| *[underline]#S-101 Geo Feature:#* *Shoreline Construction (SLCONS)*
@@ -1010,8 +1003,8 @@ If it is required to encode a dyke, it must be done using the feature *Dyke*.
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_six]
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
 | The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
 | The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
@@ -1055,9 +1048,9 @@ image::figure-8-1.png[631,332]
 [underline]#Remarks:#
 
 * Each of the three surface parts of the example shoreline construction above may be encoded as separate *Shoreline Construction* features of type surface; the masked curve (_ang_) must be encoded; and, if part of the *Shoreline Construction* boundary has a different characteristic (for example (_bc_) attribute *category of shoreline construction* = _6_ or _15_), it should be encoded as a separate *Shoreline Construction* feature of type curve. Alternatively, all the boundaries of the components of the shoreline construction may be encoded as *Shoreline Construction* features of type curve.
-* In this example,the shoreline construction surface above the high water line must also be covered by a *Land Area* feature of type surface, and the intertidal shoreline construction surface must also be covered by a *Depth Area*feature of type surface with attribute *depth range minimum value* = -H (see <<sec_11.7.3>>).
+* In this example,the shoreline construction surface above the high water line must also be covered by a *Land Area* feature of type surface, and the intertidal shoreline construction surface must also be covered by a *Depth Area* feature of type surface with attribute *depth range minimum value* = -H (see <<sec_11.7.3>>).
 * *Shoreline Construction* features must be broken into their constituent parts where possible, and categorised using attributes such as *category of shoreline construction* and *water level effect* as indicated on the source.
-* If the presence of a feature is only indicated on the source by a textual reference, without a clear symbol (for example 'pier', 'groyne', 'post'), it should be encoded using a *Caution Area*feature (see <<sec_16.10>>) or an *Information Area* feature (see <<sec_16.11>>), with the textual reference encoded using the complex attribute *information* (see <<sec_2.4.6>>). *Caution Area* should be used if the information is considered essential for safe navigation.
+* If the presence of a feature is only indicated on the source by a textual reference, without a clear symbol (for example 'pier', 'groyne', 'post'), it should be encoded using a *Caution Area* feature (see <<sec_16.10>>) or an *Information Area* feature (see <<sec_16.11>>), with the textual reference encoded using the complex attribute *information* (see <<sec_2.4.6>>). *Caution Area* should be used if the information is considered essential for safe navigation.
 * Intertidal or submerged artificial rock walls, such as training walls that are not attached to the shoreline, must be encoded, if required, as *Shoreline Construction* using the appropriate value for *category of shoreline construction*, and *water level effect* = _3_ (always under water/submerged) or *water level effect* = _4_ (covers and uncovers).
 
 [underline]#Distinction:# Causeway; Coastline; Dry Dock; Floating Dock; Gridiron; Land Area; Pontoon; Structure Over Navigable Water.
@@ -1377,7 +1370,7 @@ image::figure-8-1.png[631,332]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> 2+| TE | 0,1
 11+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* 2+| *Multiplicity*
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* 2+| *Multiplicity*
 | The Roofed Structure 3+| *Roofed Structure Aggregation* (see <<sec_25.14>>) 3+| *Pylon/Bridge Support* 2+| Aggregation 2+| 0,1
 | The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition 2+| 0,1
 | The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association 2+| 0,*
@@ -1426,7 +1419,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 [[sec_8.8]]
 === Causeway
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *CAUSEWAY*. A raised way across low or wet ground or water. (IHO Dictionary – S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Causeway (CAUSWY)*
@@ -1537,8 +1530,8 @@ The value of the vertical clearance between (high) water level and any fixed ove
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_eight]
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
@@ -1573,7 +1566,7 @@ If it is required to encode a causeway, it must be done using the feature *Cause
 [[sec_8.9]]
 === Canal
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *CANAL*. An artificial waterway with no flow, or a controlled flow, used for navigation, or for draining or irrigating land (ditch). (IHO Dictionary – S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Canal (CANALS)*
@@ -1717,8 +1710,8 @@ If it is required to encode a causeway, it must be done using the feature *Cause
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_nine]
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
@@ -1755,7 +1748,7 @@ If it is required to encode a non-navigable canal, it must be done using the fea
 [[sec_8.10]]
 === Distance mark
 
-[cols="609,794,794,794,794,794,794,794,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *DISTANCE MARK*. A distance mark indicates the distance measured from an origin and consists of either a solid visible structure or a distinct location without special installation. Usually found on canals. (S-57 Edition 3.1, Appendix A – Chapter 1, Page 1.55, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Distance Mark (DISMAR)*
@@ -1893,8 +1886,8 @@ If it is required to encode a non-navigable canal, it must be done using the fea
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_ten]
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
 | The Equipment 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Cardinal Beacon*, *Cardinal Buoy*, *Bridge*, *Building*, *Crane*, *Conveyor*, *Daymark*, *Dolphin*, *Emergency Wreck Marking Buoy*, *Fishing Facility*, *Floating Dock*, *Fortified Structure*, *Hulk*, *Installation Buoy*, *Isolated Danger Beacon*, *Isolated Danger Buoy*, *Landmark*, *Lateral Beacon*, *Lateral Buoy*, *Light Float*, *Light Vessel*, *Mooring Buoy*, *Offshore Platform*, *Pile*, *Pipeline Overhead*, *Pontoon*, *Pylon/Bridge Support*, *Safe Water Beacon*, *Safe Water Buoy*, *Shoreline Construction*, *Silo/Tank*, *Span Fixed*, *Span Opening*, *Special Purpose/General Beacon*, *Special Purpose/General Buoy*, *Structure Over Navigable Water*, *Wind Turbine*, *Wreck* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
@@ -1934,7 +1927,7 @@ If it is required to encode a distance mark, it must be done using the feature *
 [[sec_8.11]]
 === Gate
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *GATE*. A structure that may be swung, drawn, or lowered to block an entrance or passageway on a watercourse. (Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2012).
 10+| *[underline]#S-101 Geo Feature:#* *Gate (GATCON)*
@@ -2140,8 +2133,8 @@ If it is required to encode a distance mark, it must be done using the feature *
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_eleven]
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
@@ -2180,7 +2173,7 @@ If it is required to encode a gate that controls the flow of water, it must be d
 [[sec_8.12]]
 === Dam
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *DAM*. A barrier to check or confine anything in motion; particularly one constructed to hold back water and raise its level to form a reservoir, or to prevent flooding. (IHO Dictionary – S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Dam (DAMCON)*
@@ -2354,8 +2347,8 @@ If it is required to encode a gate that controls the flow of water, it must be d
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_twelve]
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
@@ -2393,7 +2386,7 @@ If it is required to encode a dam, weir or flood barrage, it must be done using 
 [[sec_8.12.2]]
 ==== Flood barrages (see S-4 –B-326.7)
 
-If it is required to encode the fixed part of a flood barrage, and the flood barrage is inside an area which is navigable at the optimum display scale for the data, it must be done using a *Dam* feature, with attribute *category of dam* = _3_ (flood barrage), and must be covered by a *Land Area*feature. If it is required to encode the opening part of the flood barrage, it must be done using a *Gate* feature, with attribute *category of gate* = _2_ (flood barrage gate), and must be covered by a *Depth Area*feature.
+If it is required to encode the fixed part of a flood barrage, and the flood barrage is inside an area which is navigable at the optimum display scale for the data, it must be done using a *Dam* feature, with attribute *category of dam* = _3_ (flood barrage), and must be covered by a *Land Area* feature. If it is required to encode the opening part of the flood barrage, it must be done using a *Gate* feature, with attribute *category of gate* = _2_ (flood barrage gate), and must be covered by a *Depth Area* feature.
 
 When an encoded flood barrage is inside an area that is not navigable at the optimum display scale for the ENC data, the gates need not be encoded. In this case, the *Dam* feature must go all the way across the river or lake.
 
@@ -2406,7 +2399,7 @@ When an encoded flood barrage is inside an area that is not navigable at the opt
 [[sec_8.13]]
 === Crane
 
-[cols="609,794,794,794,794,794,794,794,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *CRANE*. A machine for lifting, shifting and lowering objects or materials by means of a swinging boom or with a lifting apparatus supported on an overhead track. (Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2010).
 10+| *[underline]#S-101 Geo Feature:#* *Crane (CRANES)*
@@ -2630,8 +2623,8 @@ When an encoded flood barrage is inside an area that is not navigable at the opt
 | BO
 | 0,1
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
 | The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light Air Obstruction*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
 | The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
@@ -2675,7 +2668,7 @@ If it is required to encode a crane, it must be done using the feature *Crane***
 [[sec_8.14]]
 === Berth
 
-[cols="609,794,794,794,794,794,794,794,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *BERTH*. A place, generally named or numbered, where a vessel may moor or anchor. (IHO Dictionary – S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Berth (BERTHS)*
@@ -2874,8 +2867,8 @@ If it is required to encode a crane, it must be done using the feature *Crane***
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_fourteen]
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
 | The Component 3+| *Mooring Trot Aggregation* (see <<sec_25.10>>) 3+| *Mooring Trot* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
@@ -2918,7 +2911,7 @@ If it is required to encode a berth, it must be done using the feature *Berth*.
 [[sec_8.15]]
 === Dolphin
 
-[cols="609,794,794,794,794,794,794,794,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *DOLPHIN*. A post or group of posts, used for mooring or warping a vessel, or as an aid to navigation. The dolphin may be in the water, on a wharf or on the beach. (Adapted from IHO Dictionary – S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Dolphin* __**(MORFAC)**__
@@ -3117,8 +3110,8 @@ If it is required to encode a berth, it must be done using the feature *Berth*.
 | 0,1 footnoteblock:[eight_fifteen]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
 | The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Bollard*, *Daymark*, *Distance Mark*, *Fog Signal*, *Light Air Obstruction*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
 | The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
@@ -3159,7 +3152,7 @@ If it is required to encode a dolphin, it must be done using the feature *Dolphi
 [[sec_8.16]]
 === Bollard
 
-[cols="609,794,794,794,794,794,794,794,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *BOLLARD*. Small shaped post, mounted on a wharf or dolphin used to secure ship's lines. (IHO Dictionary – S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Bollard* __**(MORFAC)**__
@@ -3292,8 +3285,8 @@ If it is required to encode a dolphin, it must be done using the feature *Dolphi
 | 0,1 footnoteblock:[eight_sixteen]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
 | The Equipment 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Dolphin*, *Fortified Structure*, *Hulk*, *Landmark*, *Offshore Platform*, *Pile*, *Pylon/Bridge Support*, *Shoreline Construction* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,1
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
@@ -3330,7 +3323,7 @@ If it is required to encode a bollard, it must be done using the feature *Bollar
 [[sec_8.17]]
 === Dry dock
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *DRY DOCK*. An artificial basin fitted with a gate or caisson, into which vessels can be floated and the water pumped out to expose the vessel's bottom. Also called graving dock. (IHO Dictionary – S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Dry Dock (DRYDOC)*
@@ -3518,8 +3511,8 @@ If it is required to encode a bollard, it must be done using the feature *Bollar
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_seventeen]
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
@@ -3558,7 +3551,7 @@ If it is required to encode a dry dock, it must be done using the feature *Dry D
 [[sec_8.18]]
 === Floating dock
 
-[cols="609,794,794,794,794,794,794,794,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *FLOATING DOCK*. A form of dry dock consisting of a floating structure of one or more sections which can be partly submerged by controlled flooding to receive a vessel, then raised by pumping out the water so that the vessel's bottom can be exposed. (IHO Dictionary – S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Floating Dock (FLODOC)*
@@ -3759,8 +3752,8 @@ If it is required to encode a dry dock, it must be done using the feature *Dry D
 | 0,1 footnoteblock:[eight_eighteen]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
 | The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
 | The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
@@ -3801,7 +3794,7 @@ If it is required to encode a floating dock, it must be done using the feature *
 [[sec_8.19]]
 === Pontoon
 
-[cols="609,794,794,794,794,794,794,794,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *PONTOON*. A floating structure, usually rectangular in shape which serves as landing, pier head, bridge support, etc. (Adapted from IHO Dictionary – S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Pontoon (PONTON)*
@@ -3953,8 +3946,8 @@ If it is required to encode a floating dock, it must be done using the feature *
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
 | The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Bollard*, *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
 | The Component 3+| *Bridge Aggregation* (see <<sec_25.4>>) 3+| *Bridge* 2+| Association | 0,*
 | The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
@@ -3992,7 +3985,7 @@ If it is required to encode a pontoon, it must be done using the feature *Pontoo
 [[sec_8.20]]
 === Dock area
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *DOCK AREA*. An artificially enclosed area within which ships may moor and which may have gates to regulate water level. (S-57 Edition 3.1, Appendix A – Chapter 1, Page 1.56, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Dock Area (DOCARE)*
@@ -4164,8 +4157,8 @@ If it is required to encode a pontoon, it must be done using the feature *Pontoo
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_twenty]
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
@@ -4194,7 +4187,7 @@ If it is required to encode a non-navigable dock area, it must be done using the
 [underline]#Remarks:#
 
 * If the dock is navigable at the optimum display scale of the ENC data, it must be encoded using the features *Depth Area*, *Dredged Area* or *Unsurveyed Area* (see <<sec_11.7.4>>), and the geo features making up the dock limits must be encoded using appropriate features such as *Coastline*, *Shoreline Construction* or *Gate*. The dock must not be encoded as *Dock Area*. If it is required to encode the name of the dock, it must be done using the feature *Sea Area/Named Water Area*.
-* If it is required to encode a dock which is not navigable at the optimum display scale of the ENC data, it must be done using the feature *Dock Area*, covered by a *Land Area* or *Unsurveyed Area* feature. The name of the dock should be encoded using the complex attribute *feature name* on the *Dock Area*. The boundary of a dock must not be encoded as a separate feature (for example*Coastline, Shoreline Construction*), except for the gate feature (*Gate*) for a wet dock, which may be encoded.
+* If it is required to encode a dock which is not navigable at the optimum display scale of the ENC data, it must be done using the feature *Dock Area*, covered by a *Land Area* or *Unsurveyed Area* feature. The name of the dock should be encoded using the complex attribute *feature name* on the *Dock Area*. The boundary of a dock must not be encoded as a separate feature (for example *Coastline, Shoreline Construction*), except for the gate feature (*Gate*) for a wet dock, which may be encoded.
 * The complex attribute *horizontal clearance fixed* is used to encode the size of the entrance to the dock area, where required.
 * The attributes *horizontal clearance length* and *horizontal clearance width* are used to encode the regulatory length and width of the navigable part of the dock area as declared by a competent authority, where known.
 * In a non-tidal basin (wet dock), depths may refer to a sounding datum different from that in open waters. If this area is navigable at the optimum display scale of the ENC data, the value of this datum must be encoded using the Meta feature *Sounding Datum*, with attribute *vertical datum* = _24_ (local datum), co-incident with the area covered by the dock.
@@ -4205,7 +4198,7 @@ If it is required to encode a non-navigable dock area, it must be done using the
 [[sec_8.21]]
 === Gridiron
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *GRIDIRON*. A structure in the intertidal zone serving as a support for vessels at low stages of the tide to permit work on the exposed portion of the vessel's hull. (IHO Dictionary – S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Gridiron (GRIDRN)*
@@ -4327,8 +4320,8 @@ If it is required to encode a non-navigable dock area, it must be done using the
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_twenty-one]
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
@@ -4361,7 +4354,7 @@ If it is required to encode a gridiron, it must be done using the feature *Gridi
 [[sec_8.22]]
 === Lock basin
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *LOCK BASIN*. A wet dock in a waterway, permitting a ship to pass from one level to another. (IHO Dictionary – S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Lock Basin (LOKBSN)*
@@ -4520,8 +4513,8 @@ If it is required to encode a gridiron, it must be done using the feature *Gridi
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_twenty-two]
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
@@ -4549,7 +4542,7 @@ If it is required to encode a non-navigable lock basin, it must be done using th
 
 [underline]#Remarks:#
 
-* If the lock is navigable at the optimum display scale of the ENC data, it must be encoded using the features *Depth Area* or *Dredged Area*(see <<sec_11.7.4>>), and the geo features making up the limits of the lock must be encoded using appropriate features such as *Coastline*, *Shoreline Construction* or *Gate*. The lock must not be encoded as *Lock Basin*. If it is required to encode the name of the lock, it must be done using the feature*Sea Area/Named Water Area*.
+* If the lock is navigable at the optimum display scale of the ENC data, it must be encoded using the features *Depth Area* or *Dredged Area*(see <<sec_11.7.4>>), and the geo features making up the limits of the lock must be encoded using appropriate features such as *Coastline*, *Shoreline Construction* or *Gate*. The lock must not be encoded as *Lock Basin*. If it is required to encode the name of the lock, it must be done using the feature *Sea Area/Named Water Area*.
 * It if is required to encode a lock that is not navigable at the optimum display scale of the ENC data, it must be done using *Lock Basin*, covered by a *Land Area* or *Unsurveyed Area* feature. The name of the lock should be encoded using the complex attribute *feature name* on the *Lock Basin* feature.
 * The gates should be encoded as a *Gate* feature (see <<sec_8.11>>) with attribute *category of gate* = _4_ (lock gate) or _3_ (caisson). For smaller optimum display scale ENC data, a lock may be encoded using *Gate* only, without using *Lock Basin*.
 
@@ -4558,7 +4551,7 @@ If it is required to encode a non-navigable lock basin, it must be done using th
 [[sec_8.23]]
 === Mooring trot
 
-[cols="609,794,794,794,794,794,794,794,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *MOORING TROT*. A mooring is a place where a vessel may be secured. (IHI Dictionary – S-32).
 
@@ -4661,8 +4654,8 @@ A mooring trot is a mooring that is composed of ground tackle, mooring cables, b
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_twenty-three]
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+| *Type* | *Multiplicity*
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
 | The Collection 3+| *Mooring Trot Aggregation* (see <<sec_25.10>>) 3+| *Berth*, *Cable Submarine*, *Mooring Buoy*, *Obstruction* 2+| Aggregation | 0,1
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1

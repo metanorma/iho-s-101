@@ -5,7 +5,7 @@
 [[sec_4.1]]
 === Magnetic variation
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *MAGNETIC VARIATION*. The angle between the magnetic and geographic meridians at any place, expressed in degrees east or west to indicate the direction of magnetic north from true north. Also called magnetic declination. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Magnetic Variation (MAGVAR)*
@@ -14,45 +14,26 @@
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| reference year for magnetic variation 2+| (RYRMGV) 3+| See <<sec_2.4.8>> (YYYY----) | TD | 1,1
 3+.<| value of annual change in magnetic variation 2+.<| (VALACM) 3+| +/- minutes. Positive (unsigned) value indicates easterly. Negative value indicates westerly .<| RE .<| 1,1
 3+.<| value of magnetic variation 2+.<| (VALMAG) 3+| +/- degrees. Positive (unsigned) value indicates easterly. Negative value indicates westerly .<| RE .<| 1,1
-3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1 3+| information 2+| 3+| See <<sec_2.4.6>> | C
 | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
-| 0,1
+3+| file locator 2+| 3+| | (S) TE | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnote:four_one[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnote:four_one[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
-3+| headline
-2+| 3+| | (S) TE
-| 0,1
+3+| headline 2+| 3+| | (S) TE | 0,1
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnote:four_one[]
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnote:four_one[]
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
@@ -78,7 +59,7 @@ Of the various magnetic data, magnetic variation is the most important element f
 [[sec_4.2]]
 === Local magnetic anomaly
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *LOCAL MAGNETIC ANOMALY*. An anomaly of the magnetic field of the Earth, extending over a relatively small area, due to local magnetic influences. Also called local attraction or magnetic anomaly. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Local Magnetic Anomaly (LOCMAG)*
@@ -87,20 +68,11 @@ Of the various magnetic data, magnetic variation is the most important element f
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -109,19 +81,13 @@ Of the various magnetic data, magnetic variation is the most important element f
 | (S) EN
 | 0,1 footnoteblock:[four_two]
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 
 3+| value of local magnetic anomaly 2+| 3+| | C | 1,2
 
-3+| magnetic anomaly value
-2+| (VALLMA)
-3+| | (S) RE
-| 1,1
+3+| magnetic anomaly value 2+| (VALLMA) 3+| | (S) RE | 1,1
 
 3+| reference direction
 2+| 3+|
@@ -130,37 +96,21 @@ Of the various magnetic data, magnetic variation is the most important element f
 | (S) EN
 | 0,1 footnoteblock:[four_two]
 
-3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1 3+| information 2+| 3+| See <<sec_2.4.6>> | C
 | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
-| 0,1
+3+| file locator 2+| 3+| | (S) TE | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[four_two]
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[four_two]
 
-3+| headline
-2+| 3+| | (S) TE
-| 0,1
+3+| headline 2+| 3+| | (S) TE | 0,1
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[four_two]
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[four_two]
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*

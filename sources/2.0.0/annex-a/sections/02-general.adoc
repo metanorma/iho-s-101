@@ -449,11 +449,11 @@ _one of_:: for *Cable Overhead*, *Obstruction*, *Wreck*
 
 \* __over navigable water__, in the context of ENC encoding, is defined as areas covered by Skin of the Earth features *Depth Area*, *Dredged Area*, or *Unsurveyed Area*.
 
-Compilers must consider these conditional circumstances when encoding features for ENC, as well as any additional information given in the feature class descriptions in this document. For example, when encoding a *Cation Area*, the mandatory attributes are _at least one of_*information* or *pictorial representation* -- if the relevant information is textual, *information* must be populated and there is no requirement to populate *pictorial representation*, which therefore should not be populated with an empty (null) value, as it is not mandatory in this case.
+Compilers must consider these conditional circumstances when encoding features for ENC, as well as any additional information given in the feature class descriptions in this document. For example, when encoding a *Cation Area*, the mandatory attributes are _at least one of_ *information* or *pictorial representation* -- if the relevant information is textual, *information* must be populated and there is no requirement to populate *pictorial representation*, which therefore should not be populated with an empty (null) value, as it is not mandatory in this case.
 ====
 
 [[note_2_table_2-3]]
-NOTE: For complex attributes, at least one sub-attribute is mandatory (or conditionally mandatory) however mandatory sub-attributes of complex attributes have not been included in <<table_2-3>> above. Where the sub-attribute of a complex is conditionally mandatory (for example, for the feature *Seabed Area*_at least one of_ the sub-attributes *nature of surface* or *nature of surface -- qualifying terms* must be populated for the complex attribute *surface characteristics*), this is indicated by the superscript ^†^ as for the "Conditional" mandatory attributes described in Note 1 above.
+NOTE: For complex attributes, at least one sub-attribute is mandatory (or conditionally mandatory) however mandatory sub-attributes of complex attributes have not been included in <<table_2-3>> above. Where the sub-attribute of a complex is conditionally mandatory (for example, for the feature *Seabed Area* _at least one of_ the sub-attributes *nature of surface* or *nature of surface -- qualifying terms* must be populated for the complex attribute *surface characteristics*), this is indicated by the superscript ^†^ as for the "Conditional" mandatory attributes described in Note 1 above.
 
 NOTE: The attribute *colour pattern* is mandatory for any feature (except lights features) that has more than one value populated for the attribute *colour*.
 
@@ -511,7 +511,7 @@ Attributes designated as "ECDIS system" attributes are intended to provide infor
 [[sec_2.4.6]]
 ==== Textual information
 
-The complex attribute*information* (see <<sec_29.9>>) contains information as text using the sub-attribute *text*, or the name of an ENC support file using the sub-attribute *file reference*, in English and, optionally, using multiple instances of *information* to encode the information in one or more additional languages; and where bound to the geo feature classes may be used to encode additional textual information specific to a single feature instance. General conventions for the population of *information* for a feature instance are as follows:
+The complex attribute *information* (see <<sec_29.9>>) contains information as text using the sub-attribute *text*, or the name of an ENC support file using the sub-attribute *file reference*, in English and, optionally, using multiple instances of *information* to encode the information in one or more additional languages; and where bound to the geo feature classes may be used to encode additional textual information specific to a single feature instance. General conventions for the population of *information* for a feature instance are as follows:
 
 * Where required, only a single mandatory instance of *information* in English (mandatory sub-attribute *language* = _eng_ or empty (null)) must be encoded.
 * Further optional instances of *information* may also be encoded (sub-attribute *language* populated with the three-letter language code in conformance with ISO 639-2/T) in one or more languages.
@@ -537,7 +537,7 @@ Spatial attribute types must contain referenced geometry and may be associated w
 .Spatial Quality information type
 image::figure-2-1.jpeg["",505,514]
 
-Spatial quality attributes are carried in the information type *Spatial Quality* (see <<sec_24.5>>). Only point, multipoint and curve geometry and the Meta feature *Quality of Bathymetric Data*can be associated with *Spatial Quality*. Currently no use case for associating surfaces with spatial quality attributes is known, therefore this is prohibited; however it is allowable for *Spatial Quality* to be associated with the curves comprising the spatial edges (boundaries) of surface features. Vertical uncertainty is prohibited for curves as this dimension is not supported by curves.
+Spatial quality attributes are carried in the information type *Spatial Quality* (see <<sec_24.5>>). Only point, multipoint and curve geometry and the Meta feature *Quality of Bathymetric Data* can be associated with *Spatial Quality*. Currently no use case for associating surfaces with spatial quality attributes is known, therefore this is prohibited; however it is allowable for *Spatial Quality* to be associated with the curves comprising the spatial edges (boundaries) of surface features. Vertical uncertainty is prohibited for curves as this dimension is not supported by curves.
 
 [[sec_2.4.8]]
 ==== Dates
@@ -601,7 +601,7 @@ _183059_ to represent a local time of 30 minutes and 59 seconds after 6 o'clock 
 [[sec_2.4.9.1]]
 ===== Schedules
 
-If it is required to indicate the time schedule associated with any feature, it must be encoded using the information types *Service Hours* (see <<sec_24.2>>) or*Non-Standard Working Day* (see <<sec_24.3>>). *Service**Hours* is used to indicate the regular operational schedule and/or times of closure for a service related to a feature. *Non-Standard Working Day* is used to indicate specific days of the year when normal working hours are limited, and may not be related to the Gregorian calendar.
+If it is required to indicate the time schedule associated with any feature, it must be encoded using the information types *Service Hours* (see <<sec_24.2>>) or *Non-Standard Working Day* (see <<sec_24.3>>). *Service**Hours* is used to indicate the regular operational schedule and/or times of closure for a service related to a feature. *Non-Standard Working Day* is used to indicate specific days of the year when normal working hours are limited, and may not be related to the Gregorian calendar.
 
 ====
 A feature service is available under normal operation status 24 hours/day on Monday and Wednesday and from 08:00 to 16:00 (local time -- note the format for local time without specified offset to UTC in <<sec_2.4.9>> above) from Thursday to Saturday. The service is not available on public holidays and the 05 of August of each year.
@@ -1374,7 +1374,7 @@ In the example above it is also possible to mask the areas of water turbulence (
 
 *X.X* [red]#Red#Clause heading#
 
-[cols="80,80,80,80,80,80,80,80,50,77",options="unnumbered"]
+[cols="10",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *FEATURE:* Definition. (Authority for definition).
 10+| *[underline]#S-101 Geo Feature:#* *Feature (S-57 Acronym)* S-101 feature type, name and corresponding S-57 acronym

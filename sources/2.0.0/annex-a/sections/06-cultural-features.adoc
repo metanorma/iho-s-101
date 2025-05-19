@@ -5,7 +5,7 @@
 [[sec_6.1]]
 === Built-up area
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *BUILT-UP AREA.* An area of land or construction over the water containing a concentration of buildings and/or other structures. (Adapted from Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2010).
 10+| *[underline]#S-101 Geo Feature:#* *Built-Up Area (BUAARE)*
@@ -21,24 +21,17 @@
 4: town +
 5: city +
 6: holiday village | EN | 0,1
+
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
 5: planned construction | EN | 0,1
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -47,61 +40,46 @@
 | (S) EN
 | 0,1 footnoteblock:[six_one]
 
-3+| height
-2+| (HEIGHT)
-3+| | RE | 0,1
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
 
-3+| radar conspicuous
-2+| (CONRAD)
-3+| | BO | 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
+
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
 2: not visually conspicuous +
 3: prominent | EN | 0,1
+
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
-| 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[six_one]
+3+| file locator 2+| 3+| | (S) TE | 0,1
 
-3+| headline
-2+| 3+| | (S) TE
-| 0,1
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[six_one]
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| headline 2+| 3+| | (S) TE | 0,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[six_one]
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[six_one]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
+
 3+| in the water
 2+| 3+| | BO | 0,1
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 
@@ -138,7 +116,7 @@ If it is required to encode a built-up area, it must be done using the feature *
 [[sec_6.2]]
 === Building
 
-[cols="609,794,794,794,794,794,794,794,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *BUILDING*. A free-standing self-supporting construction that is roofed, usually walled, and is intended for human occupancy (for example: a place of work or recreation) and/or habitation. (Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2010).
 10+| *[underline]#S-101 Geo Feature:#* *Building (BUISGL)*
@@ -153,6 +131,7 @@ If it is required to encode a built-up area, it must be done using the feature *
 7: cylindrical +
 8: spherical +
 9: cubic | EN | 0,1
+
 3+| colour 2+| (COLOUR) 3+|
 1: white +
 2: black +
@@ -178,24 +157,15 @@ If it is required to encode a built-up area, it must be done using the feature *
 1: under construction +
 2: ruined +
 5: planned construction | EN | 0,1
-3+| elevation
-2+| (ELEVAT)
-3+| | RE | 0,1
 
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
+3+| elevation 2+| (ELEVAT) 3+| | RE | 0,1
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -251,25 +221,18 @@ If it is required to encode a built-up area, it must be done using the feature *
 46: ore crusher +
 47: boathouse +
 48: pumping station | EN | 0,*
-3+| height
-2+| (HEIGHT)
-3+| | RE | 0,1
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| multiplicity of features
 2+| 3+| | C | 0,1
 
-3+| multiplicity known
-2+| 3+| | (S) BO
-| 1,1
 
-3+| number of features
-2+| 3+| | (S) IN
-| 0,1
+3+| multiplicity known 2+| 3+| | (S) BO | 1,1
+
+3+| number of features 2+| 3+| | (S) IN | 0,1
 
 3+| nature of construction 2+| (NATCON) 3+|
 1: masonry +
@@ -278,11 +241,11 @@ If it is required to encode a built-up area, it must be done using the feature *
 7: metal +
 8: glass reinforced plastic +
 12: glass | EN | 0,*
-3+| radar conspicuous
-2+| (CONRAD)
-3+| | BO | 0,1
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
+
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+
 3+| status 2+| (STATUS) 3+|
 4: not in use +
 7: temporary +
@@ -290,54 +253,43 @@ If it is required to encode a built-up area, it must be done using the feature *
 12: illuminated +
 13: historic +
 14: public | EN | 0,*
-3+| vertical length
-2+| (VERLEN)
-3+| | RE | 0,1
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
+
 
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
 2: not visually conspicuous +
 3: prominent | EN | 0,1
+
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
-| 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[six_two]
+3+| file locator 2+| 3+| | (S) TE | 0,1
 
-3+| headline
-2+| 3+| | (S) TE
-| 0,1
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[six_two]
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| headline 2+| 3+| | (S) TE | 0,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[six_two]
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[six_two]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
+
 3+| in the water
 2+| 3+| | BO | 0,1
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Helipad*, *Light Air Obstruction*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+
 | The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 
@@ -402,7 +354,7 @@ If it is required to encode a transit shed or warehouse, it must be done using a
 [[sec_6.3]]
 === Airport/airfield
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *AIRPORT/AIRFIELD*.
 
@@ -427,20 +379,12 @@ A defined area on land (including any buildings, installations and equipment) in
 2: ruined +
 3: under reclamation +
 5: planned construction | EN | 0,1
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -449,12 +393,10 @@ A defined area on land (including any buildings, installations and equipment) in
 | (S) EN
 | 0,1 footnoteblock:[six_three]
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
@@ -466,39 +408,26 @@ A defined area on land (including any buildings, installations and equipment) in
 12: illuminated +
 14: public | EN | 0,*
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
-| 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[six_three]
+3+| file locator 2+| 3+| | (S) TE | 0,1
 
-3+| headline
-2+| 3+| | (S) TE
-| 0,1
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[six_three]
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| headline 2+| 3+| | (S) TE | 0,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[six_three]
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[six_three]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 
@@ -535,7 +464,7 @@ For ENC data at smaller optimum display scales, an airport should be encoded as 
 [[sec_6.4]]
 === Runway
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *RUNWAY*. A defined area, on a land aerodrome, prepared for the landing and take-off run of aircraft. (Adapted from IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Runway (RUNWAY)*
@@ -549,32 +478,19 @@ For ENC data at smaller optimum display scales, an airport should be encoded as 
 2: ruined +
 3: under reclamation +
 5: planned construction | EN | 0,1
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
-| 0,1 footnoteblock:[six_four]
+2: alternate name display | (S) EN | 0,1 footnoteblock:[six_four]
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| nature of construction 2+| (NATCON) 3+|
 1: masonry +
@@ -583,22 +499,14 @@ For ENC data at smaller optimum display scales, an airport should be encoded as 
 5: unsurfaced +
 6: wooden +
 7: metal | EN | 0,*
-3+| periodic date range
-2+| 3+| See <<sec_2.4.8>>
-| C
-| 0,*
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
 
-3+| date end
-2+| _(PEREND)_
-3+| | (S) TD
-| 1,1
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
 
-3+| date start
-2+| _(PERSTA)_
-3+| | (S) TD
-| 1,1
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
@@ -610,38 +518,24 @@ For ENC data at smaller optimum display scales, an airport should be encoded as 
 12: illuminated +
 14: public | EN | 0,*
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
-| 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[six_four]
+3+| file locator 2+| 3+| | (S) TE | 0,1
 
-3+| headline
-2+| 3+| | (S) TE
-| 0,1
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[six_four]
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| headline 2+| 3+| | (S) TE | 0,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[six_four]
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[six_four]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 
@@ -675,7 +569,7 @@ For larger optimum display scale ENC data, an airport should be encoded using a 
 [[sec_6.5]]
 === Helipad
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *HELIPAD*. A site on which helicopters may land and take off. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Helipad* __**(RUNWAY)**__
@@ -689,20 +583,12 @@ For larger optimum display scale ENC data, an airport should be encoded using a 
 2: ruined +
 3: under reclamation +
 5: planned construction | EN | 0,1
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -711,10 +597,7 @@ For larger optimum display scale ENC data, an airport should be encoded using a 
 | (S) EN
 | 0,1 footnoteblock:[six_five]
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| nature of construction 2+| (NATCON) 3+|
 1: masonry +
@@ -723,22 +606,14 @@ For larger optimum display scale ENC data, an airport should be encoded using a 
 5: unsurfaced +
 6: wooden +
 7: metal | EN | 0,*
-3+| periodic date range
-2+| 3+| See <<sec_2.4.8>>
-| C
-| 0,*
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
 
-3+| date end
-2+| _(PEREND)_
-3+| | (S) TD
-| 1,1
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
 
-3+| date start
-2+| _(PERSTA)_
-3+| | (S) TD
-| 1,1
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
@@ -750,39 +625,25 @@ For larger optimum display scale ENC data, an airport should be encoded using a 
 12: illuminated +
 14: public | EN | 0,*
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
-| 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[six_five]
+3+| file locator 2+| 3+| | (S) TE | 0,1
 
-3+| headline
-2+| 3+| | (S) TE
-| 0,1
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[six_five]
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| headline 2+| 3+| | (S) TE | 0,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[six_five]
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[six_five]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Equipment 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Building*, *Landmark*, *Offshore Platform* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 
@@ -815,7 +676,7 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 [[sec_6.6]]
 === Bridge
 
-[cols="609,793,793,793,793,793,793,793,301,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *BRIDGE*. A structure erected over a depression or an obstacle such as a body of water, railroad, etc., to provide a roadway for vehicles or pedestrians. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Bridge (BRIDGE)*
@@ -830,6 +691,7 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 3: pontoon bridge +
 4: suspension bridge +
 5: transporter bridge | EN | 0,1
+
 3+| bridge function 2+| _(CATBRG)_ 3+|
 1: vehicular +
 2: rail +
@@ -866,20 +728,12 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 1: under construction +
 2: ruined +
 5: planned construction | EN | 0,1
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -888,29 +742,16 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 | (S) EN
 | 0,1 footnoteblock:[six_six]
 
-3+| fixed date range
-2+| 3+| See <<sec_2.4.8>>
-| C
-| 0,1
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
-3+| date end
-2+| (DATEND)
-3+| | (S) TD
-| 0,1 footnoteblock:[six_six]
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[six_six]
 
-3+| date start
-2+| (DATSTA)
-3+| | (S) TD
-| 0,1 footnoteblock:[six_six]
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[six_six]
 
-3+| height
-2+| (HEIGHT)
-3+| | RE | 0,1
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| nature of construction 2+| (NATCON) 3+|
 1: masonry +
@@ -918,15 +759,13 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 6: wooden +
 7: metal +
 11: latticed | EN | 0,*
-3+| opening bridge
-2+| _(CATBRG)_
-3+| | BO | 0,1 footnoteblock:[six_six]
+3+| opening bridge 2+| _(CATBRG)_ 3+| | BO | 0,1 footnoteblock:[six_six]
 
-3+| radar conspicuous
-2+| (CONRAD)
-3+| | BO | 0,1
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
+
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
@@ -938,43 +777,33 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 1: visually conspicuous +
 2: not visually conspicuous +
 3: prominent | EN | 0,1
+
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
-| 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[six_six]
+3+| file locator 2+| 3+| | (S) TE | 0,1
 
-3+| headline
-2+| 3+| | (S) TE
-| 0,1
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[six_six]
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| headline 2+| 3+| | (S) TE | 0,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[six_six]
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[six_six]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Collection 3+| *Bridge Aggregation* (see <<sec_25.4>>) 3+| *Span Fixed*, *Span Opening*, *Pontoon*, *Pylon/Bridge Support* 2+| Aggregation | 0,1
+
 | The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light Air Obstruction*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+
 | The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 |===
@@ -1045,7 +874,7 @@ image::figure-6-6.png[240,84]
 [[sec_6.7]]
 === Span fixed
 
-[cols="609,793,793,793,793,793,793,793,301,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *SPAN FIXED*. A fixed component of the deck of a bridge spanning successive bridge piers. (Adapted from Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2013).
 10+| *[underline]#S-101 Geo Feature:#* *Span Fixed* __**(BRIDGE)**__
@@ -1054,38 +883,21 @@ image::figure-6-6.png[240,84]
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| fixed date range
-2+| 3+| See <<sec_2.4.8>>
-| C
-| 0,1
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
-3+| date end
-2+| (DATEND)
-3+| | (S) TD
-| 0,1 footnoteblock:[six_seven]
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[six_seven]
 
-3+| date start
-2+| (DATSTA)
-3+| | (S) TD
-| 0,1 footnoteblock:[six_seven]
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[six_seven]
 
 3+| horizontal clearance fixed
 2+| 3+| | C | 0,1
 
-3+| horizontal clearance value
-2+| (HORCLR)
-3+| | (S) RE
-| 1,1
 
-3+| horizontal distance uncertainty
-2+| (HORACC)
-3+| | (S) RE
-| 0,1
+3+| horizontal clearance value 2+| (HORCLR) 3+| | (S) RE | 1,1
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| horizontal distance uncertainty 2+| (HORACC) 3+| | (S) RE | 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| vertical clearance fixed
 2+| 3+| | C | 1,1
@@ -1094,13 +906,10 @@ image::figure-6-6.png[240,84]
 
 3+| vertical uncertainty 2+| _(VERACC)_ 3+| | (S) C | 0,1
 
-3+| uncertainty fixed
-2+| 3+| | (S) RE
-| 1,1
 
-3+| uncertainty variable factor
-2+| 3+| | (S) RE
-| 0,1
+3+| uncertainty fixed 2+| 3+| | (S) RE | 1,1
+
+3+| uncertainty variable factor 2+| 3+| | (S) RE | 0,1
 
 3+| vertical datum 2+| (VERDAT) 3+|
 3: mean sea level +
@@ -1118,43 +927,32 @@ image::figure-6-6.png[240,84]
 29: nearly highest high water +
 30: highest astronomical tide +
 44: baltic sea chart datum 2000 | EN | 0,1
+
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
-| 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[six_seven]
+3+| file locator 2+| 3+| | (S) TE | 0,1
 
-3+| headline
-2+| 3+| | (S) TE
-| 0,1
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[six_seven]
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| headline 2+| 3+| | (S) TE | 0,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[six_seven]
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[six_seven]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Component 3+| *Bridge Aggregation* (see <<sec_25.4>>) 3+| *Bridge* 2+| Association | 0,*
 | The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light Air Obstruction*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+
 | The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 
@@ -1191,7 +989,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 [[sec_6.8]]
 === Span opening
 
-[cols="609,793,793,793,793,793,793,793,301,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *SPAN OPENING*. An opening component of the deck of a bridge spanning successive bridge piers. (Adapted from Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2013).
 10+| *[underline]#S-101 Geo Feature:#* *Span Opening* __**(BRIDGE)**__
@@ -1200,81 +998,44 @@ The value of the vertical clearance between (high) water level and any fixed ove
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| fixed date range
-2+| 3+| See <<sec_2.4.8>>
-| C
-| 0,1
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[six_eight]
 
-3+| date start
-2+| (DATSTA)
-3+| | (S) TD
-| 0,1 footnoteblock:[six_eight]
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[six_eight]
 
-3+| horizontal clearance fixed
-2+| 3+| | C | 0,1
+3+| horizontal clearance fixed 2+| 3+| | C | 0,1
 
-3+| horizontal clearance value
-2+| (HORCLR)
-3+| | (S) RE
-| 1,1
 
-3+| horizontal distance uncertainty
-2+| (HORACC)
-3+| | (S) RE
-| 0,1
+3+| horizontal clearance value 2+| (HORCLR) 3+| | (S) RE | 1,1
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| horizontal distance uncertainty 2+| (HORACC) 3+| | (S) RE | 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| vertical clearance closed
 2+| 3+| | C | 1,1
 
-3+| vertical clearance value
-2+| _(VERCCL)_
-3+| | (S) RE
-| 1,1
+3+| vertical clearance value 2+| _(VERCCL)_ 3+| | (S) RE | 1,1
 
-3+| vertical uncertainty
-2+| _(VERACC)_
-3+| | (S) C
-| 0,1
+3+| vertical uncertainty 2+| _(VERACC)_ 3+| | (S) C | 0,1
 
-3+| uncertainty fixed
-2+| 3+| | (S) RE
-| 1,1
+3+| uncertainty fixed 2+| 3+| | (S) RE | 1,1
 
-3+| uncertainty variable factor
-2+| 3+| | (S) RE
-| 0,1
+3+| uncertainty variable factor 2+| 3+| | (S) RE | 0,1
 
 3+| vertical clearance open
 2+| 3+| | C | 1,1
 
-3+| vertical clearance unlimited
-2+| 3+| | (S) BO
-| 1,1
+3+| vertical clearance unlimited 2+| 3+| | (S) BO | 1,1
 
-3+| vertical clearance value
-2+| _(VERCOP)_
-3+| | (S) RE
-| 0,1 footnoteblock:[six_eight]
+3+| vertical clearance value 2+| _(VERCOP)_ 3+| | (S) RE | 0,1 footnoteblock:[six_eight]
 
-3+| vertical uncertainty
-2+| _(VERACC)_
-3+| | (S) C
-| 0,1
+3+| vertical uncertainty 2+| _(VERACC)_ 3+| | (S) C | 0,1
 
-3+| uncertainty fixed
-2+| 3+| | (S) RE
-| 1,1
+3+| uncertainty fixed 2+| 3+| | (S) RE | 1,1
 
-3+| uncertainty variable factor
-2+| 3+| | (S) RE
-| 0,1
+3+| uncertainty variable factor 2+| 3+| | (S) RE | 0,1
 
 3+| vertical datum 2+| (VERDAT) 3+|
 3: mean sea level +
@@ -1292,43 +1053,32 @@ The value of the vertical clearance between (high) water level and any fixed ove
 29: nearly highest high water +
 30: highest astronomical tide +
 44: baltic sea chart datum 2000 | EN | 0,1
+
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
-| 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[six_eight]
+3+| file locator 2+| 3+| | (S) TE | 0,1
 
-3+| headline
-2+| 3+| | (S) TE
-| 0,1
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[six_eight]
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| headline 2+| 3+| | (S) TE | 0,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[six_eight]
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[six_eight]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Component 3+| *Bridge Aggregation* (see <<sec_25.4>>) 3+| *Bridge* 2+| Association | 0,*
 | The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light Air Obstruction*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+
 | The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 
@@ -1370,7 +1120,7 @@ The value of the vertical clearance between (high) water level and any opening o
 [[sec_6.9]]
 === Conveyor
 
-[cols="609,794,794,794,794,794,794,794,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *CONVEYOR*. A mechanical device for conveying bulk material or people using an endless moving belt or series of rollers. (Adapted from Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2010).
 10+| *[underline]#S-101 Geo Feature:#* *Conveyor (CONVYR)*
@@ -1384,6 +1134,7 @@ The value of the vertical clearance between (high) water level and any opening o
 2: belt conveyor +
 3: flume +
 4: lift/elevator | EN | 0,1
+
 3+| colour 2+| (COLOUR) 3+|
 1: white +
 2: black +
@@ -1422,44 +1173,27 @@ The value of the vertical clearance between (high) water level and any opening o
 | (S) EN
 | 0,1 footnoteblock:[six_nine]
 
-3+| fixed date range
-2+| 3+| See <<sec_2.4.8>>
-| C
-| 0,1
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
-3+| date end
-2+| (DATEND)
-3+| | (S) TD
-| 0,1 footnoteblock:[six_nine]
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[six_nine]
 
-3+| date start
-2+| (DATSTA)
-3+| | (S) TD
-| 0,1 footnoteblock:[six_nine]
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[six_nine]
 
-3+| height
-2+| (HEIGHT)
-3+| | RE | 0,1
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
 
-3+| lifting capacity
-2+| (LIFCAP)
-3+| | RE | 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| lifting capacity 2+| (LIFCAP) 3+| | RE | 0,1
+
 
 3+| multiplicity of features
 2+| 3+| | C | 0,1
 
-3+| multiplicity known
-2+| 3+| | (S) BO
-| 1,1
 
-3+| number of features
-2+| 3+| | (S) IN
-| 0,1
+3+| multiplicity known 2+| 3+| | (S) BO | 1,1
+
+3+| number of features 2+| 3+| | (S) IN | 0,1
 
 3+| product 2+| (PRODCT) 3+|
 4: stone +
@@ -1476,34 +1210,24 @@ The value of the vertical clearance between (high) water level and any opening o
 21: cement +
 22: grain +
 25: clay | EN | 0,*
-3+| radar conspicuous
-2+| (CONRAD)
-3+| | BO | 0,1
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
+
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+
 3+| status 2+| (STATUS) 3+|
 4: not in use +
 12: illuminated | EN | 0,*
 3+| vertical clearance fixed
 2+| 3+| | C | 0,1 footnoteblock:[six_nine]
 
-3+| vertical clearance value
-2+| (VERCLR)
-3+| | (S) RE
-| 1,1
+3+| vertical clearance value 2+| (VERCLR) 3+| | (S) RE | 1,1
 
-3+| vertical uncertainty
-2+| _(VERACC)_
-3+| | (S) C
-| 0,1
+3+| vertical uncertainty 2+| _(VERACC)_ 3+| | (S) C | 0,1
 
-3+| uncertainty fixed
-2+| 3+| | (S) RE
-| 1,1
+3+| uncertainty fixed 2+| 3+| | (S) RE | 1,1
 
-3+| uncertainty variable factor
-2+| 3+| | (S) RE
-| 0,1
+3+| uncertainty variable factor 2+| 3+| | (S) RE | 0,1
 
 3+| vertical datum 2+| (VERDAT) 3+|
 3: mean sea level +
@@ -1521,50 +1245,39 @@ The value of the vertical clearance between (high) water level and any opening o
 29: nearly highest high water +
 30: highest astronomical tide +
 44: baltic sea chart datum 2000 | EN | 0,1
-3+| vertical length
-2+| (VERLEN)
-3+| | RE | 0,1
+
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
+
 
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
 2: not visually conspicuous +
 3: prominent | EN | 0,1
+
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
-| 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[six_nine]
+3+| file locator 2+| 3+| | (S) TE | 0,1
 
-3+| headline
-2+| 3+| | (S) TE
-| 0,1
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[six_nine]
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| headline 2+| 3+| | (S) TE | 0,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[six_nine]
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[six_nine]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+
 | The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 
@@ -1606,7 +1319,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 [[sec_6.10]]
 === Cable overhead
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *OVERHEAD CABLE*. A single continuous rope-like bundle consisting of multiple strands of fiber, plastic, metal, and/or glass, which is supported by structures such as poles or pylons and passing over or nearby navigable waters. (Adapted from Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2012).
 10+| *[underline]#S-101 Geo Feature:#* *Cable Overhead (CBLOHD)*
@@ -1619,42 +1332,25 @@ The value of the vertical clearance between (high) water level and any fixed ove
 1: power line +
 3: transmission line +
 10: telecommunications cable | EN | 0,1
+
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 5: planned construction | EN | 0,1
-3+| fixed date range
-2+| 3+| See <<sec_2.4.8>>
-| C
-| 0,1
 
-3+| date end
-2+| (DATEND)
-3+| | (S) TD
-| 0,1 footnoteblock:[six_ten]
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
-3+| date start
-2+| (DATSTA)
-3+| | (S) TD
-| 0,1 footnoteblock:[six_ten]
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[six_ten]
 
-3+| ice factor
-2+| (ICEFAC)
-3+| | RE | 0,1
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[six_ten]
 
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
+3+| ice factor 2+| (ICEFAC) 3+| | RE | 0,1
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -1663,27 +1359,21 @@ The value of the vertical clearance between (high) water level and any fixed ove
 | (S) EN
 | 0,1 footnoteblock:[six_ten]
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| multiplicity of features
 2+| 3+| | C | 0,1
 
-3+| multiplicity known
-2+| 3+| | (S) BO
-| 1,1
 
-3+| number of features
-2+| 3+| | (S) IN
-| 0,1
+3+| multiplicity known 2+| 3+| | (S) BO | 1,1
 
-3+| radar conspicuous
-2+| (CONRAD)
-3+| | BO | 0,1
+3+| number of features 2+| 3+| | (S) IN | 0,1
+
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
+
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 4: not in use +
@@ -1694,44 +1384,24 @@ The value of the vertical clearance between (high) water level and any fixed ove
 3+| vertical clearance fixed
 2+| 3+| | C | 0,1 footnoteblock:[six_ten]
 
-3+| vertical clearance value
-2+| _(VERCLR)_
-3+| | (S) RE
-| 1,1
+3+| vertical clearance value 2+| _(VERCLR)_ 3+| | (S) RE | 1,1
 
-3+| vertical uncertainty
-2+| _(VERACC)_
-3+| | (S) C
-| 0,1
+3+| vertical uncertainty 2+| _(VERACC)_ 3+| | (S) C | 0,1
 
-3+| uncertainty fixed
-2+| 3+| | (S) RE
-| 1,1
+3+| uncertainty fixed 2+| 3+| | (S) RE | 1,1
 
-3+| uncertainty variable factor
-2+| 3+| | (S) RE
-| 0,1
+3+| uncertainty variable factor 2+| 3+| | (S) RE | 0,1
 
 3+| vertical clearance safe
 2+| 3+| | C | 0,1 footnoteblock:[six_ten]
 
-3+| vertical clearance value
-2+| _(VERCSA)_
-3+| | (S) RE
-| 1,1
+3+| vertical clearance value 2+| _(VERCSA)_ 3+| | (S) RE | 1,1
 
-3+| vertical uncertainty
-2+| _(VERACC)_
-3+| | (S) C
-| 0,1
+3+| vertical uncertainty 2+| _(VERACC)_ 3+| | (S) C | 0,1
 
-3+| uncertainty fixed
-2+| 3+| | (S) RE
-| 1,1
+3+| uncertainty fixed 2+| 3+| | (S) RE | 1,1
 
-3+| uncertainty variable factor
-2+| 3+| | (S) RE
-| 0,1
+3+| uncertainty variable factor 2+| 3+| | (S) RE | 0,1
 
 3+| vertical datum 2+| (VERDAT) 3+|
 3: mean sea level +
@@ -1749,44 +1419,33 @@ The value of the vertical clearance between (high) water level and any fixed ove
 29: nearly highest high water +
 30: highest astronomical tide +
 44: baltic sea chart datum 2000 | EN | 0,1
+
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
 2: not visually conspicuous +
 3: prominent | EN | 0,1
+
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
-| 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[six_ten]
+3+| file locator 2+| 3+| | (S) TE | 0,1
 
-3+| headline
-2+| 3+| | (S) TE
-| 0,1
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[six_ten]
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| headline 2+| 3+| | (S) TE | 0,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[six_ten]
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[six_ten]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Radar Reflector* 2+| Composition | 0,1
+
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 
@@ -1844,23 +1503,16 @@ For power cables or transmission lines carrying very high voltages, an additiona
 3: intake pipe +
 4: sewer +
 6: supply pipe | EN | 0,1
+
 4+| condition 2+| (CONDTN) 3+|
 1: under construction +
 5: planned construction | EN | 0,1
-4+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
 
-4+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+4+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
-4+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+4+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+4+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 4+| name usage
 2+| 3+|
@@ -1869,36 +1521,21 @@ For power cables or transmission lines carrying very high voltages, an additiona
 | (S) EN
 | 0,1 footnoteblock:[six_eleven]
 
-4+| fixed date range
-2+| 3+| See <<sec_2.4.8>>
-| C
-| 0,1
+4+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
-4+| date end
-2+| (DATEND)
-3+| | (S) TD
-| 0,1 footnoteblock:[six_eleven]
+4+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[six_eleven]
 
-4+| date start
-2+| (DATSTA)
-3+| | (S) TD
-| 0,1 footnoteblock:[six_eleven]
+4+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[six_eleven]
 
-4+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+4+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 4+| multiplicity of features
 2+| 3+| | C | 0,1
 
-4+| multiplicity known
-2+| 3+| | (S) BO
-| 1,1
 
-4+| number of features
-2+| 3+| | (S) IN
-| 0,1
+4+| multiplicity known 2+| 3+| | (S) BO | 1,1
+
+4+| number of features 2+| 3+| | (S) IN | 0,1
 
 4+| product 2+| (PRODCT) 3+|
 1: oil +
@@ -1911,11 +1548,11 @@ For power cables or transmission lines carrying very high voltages, an additiona
 19: liquefied petroleum gas +
 20: wine +
 22: grain | EN | 0,*
-4+| radar conspicuous
-2+| (CONRAD)
-3+| | BO | 0,1
+4+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
+
 
 4+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+
 4+| status 2+| (STATUS) 3+|
 1: permanent +
 4: not in use +
@@ -1924,23 +1561,13 @@ For power cables or transmission lines carrying very high voltages, an additiona
 4+| vertical clearance fixed
 2+| 3+| | C | 0,1 footnoteblock:[six_eleven]
 
-4+| vertical clearance value
-2+| (VERCLR)
-3+| | (S) RE
-| 1,1
+4+| vertical clearance value 2+| (VERCLR) 3+| | (S) RE | 1,1
 
-4+| vertical uncertainty
-2+| _(VERACC)_
-3+| | (S) C
-| 0,1
+4+| vertical uncertainty 2+| _(VERACC)_ 3+| | (S) C | 0,1
 
-4+| uncertainty fixed
-2+| 3+| | (S) RE
-| 1,1
+4+| uncertainty fixed 2+| 3+| | (S) RE | 1,1
 
-4+| uncertainty variable factor
-2+| 3+| | (S) RE
-| 0,1
+4+| uncertainty variable factor 2+| 3+| | (S) RE | 0,1
 
 4+| vertical datum 2+| (VERDAT) 3+|
 3: mean sea level +
@@ -1958,45 +1585,35 @@ For power cables or transmission lines carrying very high voltages, an additiona
 29: nearly highest high water +
 30: highest astronomical tide +
 44: baltic sea chart datum 2000 | EN | 0,1
+
 4+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
 2: not visually conspicuous +
 3: prominent | EN | 0,1
+
 4+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-4+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
 
-4+| file locator
-2+| 3+| | (S) TE
-| 0,1
+4+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-4+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[six_eleven]
+4+| file locator 2+| 3+| | (S) TE | 0,1
 
-4+| headline
-2+| 3+| | (S) TE
-| 0,1
+4+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[six_eleven]
 
-4+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+4+| headline 2+| 3+| | (S) TE | 0,1
 
-4+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[six_eleven]
+4+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+4+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[six_eleven]
 
 11+| *Feature Associations*
-2+| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+2+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 2+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Radar Reflector* 2+| Composition | 0,1
+
 2+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
+
 2+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 4+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+
 2+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
 2+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 
@@ -2037,7 +1654,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 [[sec_6.12]]
 === Pylon/bridge support
 
-[cols="609,793,793,793,793,793,793,793,301,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *PYLON/BRIDGE SUPPORT*. A vertical construction consisting, for example, of a steel framework or pre-stressed concrete to carry cables, a bridge, etc. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.125, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Pylon/Bridge Support (PYLONS)*
@@ -2078,20 +1695,12 @@ The value of the vertical clearance between (high) water level and any fixed ove
 1: under construction +
 2: ruined +
 5: planned construction | EN | 0,1
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -2100,40 +1709,24 @@ The value of the vertical clearance between (high) water level and any fixed ove
 | (S) EN
 | 0,1 footnoteblock:[six_twelve]
 
-3+| fixed date range
-2+| 3+| See <<sec_2.4.8>>
-| C
-| 0,1
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
-3+| date end
-2+| (DATEND)
-3+| | (S) TD
-| 0,1 footnoteblock:[six_twelve]
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[six_twelve]
 
-3+| date start
-2+| (DATSTA)
-3+| | (S) TD
-| 0,1 footnoteblock:[six_twelve]
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[six_twelve]
 
-3+| height
-2+| (HEIGHT)
-3+| | RE | 0,1
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| multiplicity of features
 2+| 3+| | C | 0,1
 
-3+| multiplicity known
-2+| 3+| | (S) BO
-| 1,1
 
-3+| number of features
-2+| 3+| | (S) IN
-| 0,1
+3+| multiplicity known 2+| 3+| | (S) BO | 1,1
+
+3+| number of features 2+| 3+| | (S) IN | 0,1
 
 3+| nature of construction 2+| (NATCON) 3+|
 1: masonry +
@@ -2141,22 +1734,22 @@ The value of the vertical clearance between (high) water level and any fixed ove
 6: wooden +
 7: metal +
 11: latticed | EN | 0,*
-3+| radar conspicuous
-2+| (CONRAD)
-3+| | BO | 0,1
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
+
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+
 3+| status 2+| (STATUS) 3+|
 4: not in use +
 12: illuminated | EN | 0,*
-3+| vertical length
-2+| (VERLEN)
-3+| | RE | 0,1
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
+
 
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
 2: not visually conspicuous +
 3: prominent | EN | 0,1
+
 3+| water level effect 2+| (WATLEV) 3+|
 1: partly submerged at high water +
 2: always dry +
@@ -2164,44 +1757,33 @@ The value of the vertical clearance between (high) water level and any fixed ove
 4: covers and uncovers +
 5: awash +
 6: subject to inundation or flooding | EN | 0,1
+
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
-| 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[six_twelve]
+3+| file locator 2+| 3+| | (S) TE | 0,1
 
-3+| headline
-2+| 3+| | (S) TE
-| 0,1
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[six_twelve]
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| headline 2+| 3+| | (S) TE | 0,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[six_twelve]
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[six_twelve]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Component 3+| *Bridge Aggregation* (see <<sec_25.4>>) 3+| *Bridge* 2+| Association | 0,*
 | The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Bollard*, *Daymark*, *Distance Mark*, *Fog Signal*, *Light Air Obstruction*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+
 | The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Roofed Support 3+| *Roofed Structure Aggregation* (see <<sec_25.14>>) 3+| *Structure Over Navigable Water* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 
@@ -2235,7 +1817,7 @@ The actual position of pylons supporting bridges, pipelines and cables must be i
 [[sec_6.13]]
 === Fence/wall
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *FENCE/WALL*. A man-made barrier used as an enclosure or boundary or for protection. (Adapted from Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2013).
 10+| *[underline]#S-101 Geo Feature:#* *Fence/Wall (FNCLNE)*
@@ -2248,6 +1830,7 @@ The actual position of pylons supporting bridges, pipelines and cables must be i
 1: fence +
 3: hedge +
 4: wall | EN | 0,1
+
 3+| colour 2+| (COLOUR) 3+|
 1: white +
 2: black +
@@ -2273,24 +1856,15 @@ The actual position of pylons supporting bridges, pipelines and cables must be i
 1: under construction +
 2: ruined +
 5: planned construction | EN | 0,1
-3+| elevation
-2+| (ELEVAT)
-3+| | RE | 0,1
 
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
+3+| elevation 2+| (ELEVAT) 3+| | RE | 0,1
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -2299,14 +1873,10 @@ The actual position of pylons supporting bridges, pipelines and cables must be i
 | (S) EN
 | 0,1 footnoteblock:[six_thirteen]
 
-3+| height
-2+| (HEIGHT)
-3+| | RE | 0,1
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| nature of construction 2+| (NATCON) 3+|
 1: masonry +
@@ -2315,57 +1885,43 @@ The actual position of pylons supporting bridges, pipelines and cables must be i
 6: wooden +
 7: metal +
 11: latticed | EN | 0,*
-3+| radar conspicuous
-2+| (CONRAD)
-3+| | BO | 0,1
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
+
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 7: temporary +
 12: illuminated +
 13: historic | EN | 0,*
-3+| vertical length
-2+| (VERLEN)
-3+| | RE | 0,1
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
+
 
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
 2: not visually conspicuous +
 3: prominent | EN | 0,1
+
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
-| 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[six_thirteen]
+3+| file locator 2+| 3+| | (S) TE | 0,1
 
-3+| headline
-2+| 3+| | (S) TE
-| 0,1
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[six_thirteen]
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| headline 2+| 3+| | (S) TE | 0,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[six_thirteen]
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[six_thirteen]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 
@@ -2397,7 +1953,7 @@ If it is required to encode a fence or wall, it must be done using the feature *
 [[sec_6.14]]
 === Railway
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *RAILWAY*. A rail or set of parallel rails on which a train, tram, or rail wagon runs. (Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2010).
 10+| *[underline]#S-101 Geo Feature:#* *Railway (RAILWY)*
@@ -2410,20 +1966,12 @@ If it is required to encode a fence or wall, it must be done using the feature *
 1: under construction +
 2: ruined +
 5: planned construction | EN | 0,1
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -2432,16 +1980,13 @@ If it is required to encode a fence or wall, it must be done using the feature *
 | (S) EN
 | 0,1 footnoteblock:[fix_fourteen]
 
-3+| height
-2+| (HEIGHT)
-3+| | RE | 0,1
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 4: not in use +
@@ -2450,38 +1995,24 @@ If it is required to encode a fence or wall, it must be done using the feature *
 13: historic +
 14: public | EN | 0,*
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
-| 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[fix_fourteen]
+3+| file locator 2+| 3+| | (S) TE | 0,1
 
-3+| headline
-2+| 3+| | (S) TE
-| 0,1
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fix_fourteen]
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| headline 2+| 3+| | (S) TE | 0,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[fix_fourteen]
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[fix_fourteen]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 
@@ -2516,7 +2047,7 @@ If it is required to encode a railway, it must be done using the feature *Railwa
 [[sec_6.15]]
 === Road
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *ROAD*. A route with a specially prepared surface that is intended for use by wheeled vehicles or pedestrians. (Adapted from Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2013).
 10+| *[underline]#S-101 Geo Feature:#* *Road (ROADWY)*
@@ -2532,24 +2063,17 @@ If it is required to encode a railway, it must be done using the feature *Railwa
 4: track/path
 5: major street +
 6: minor street | EN | 0,1
+
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
 5: planned construction | EN | 0,1
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -2558,15 +2082,13 @@ If it is required to encode a railway, it must be done using the feature *Railwa
 | (S) EN
 | 0,1 footnoteblock:[fix_fifteen]
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| nature of construction 2+| (NATCON) 3+|
 4: hard surfaced +
 5: unsurfaced | EN | 0,*
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 4: not in use +
@@ -2577,38 +2099,24 @@ If it is required to encode a railway, it must be done using the feature *Railwa
 13: historic +
 14: public | EN | 0,*
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
-| 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[fix_fifteen]
+3+| file locator 2+| 3+| | (S) TE | 0,1
 
-3+| headline
-2+| 3+| | (S) TE
-| 0,1
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fix_fifteen]
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| headline 2+| 3+| | (S) TE | 0,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[fix_fifteen]
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[fix_fifteen]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 
@@ -2642,7 +2150,7 @@ If it is required to encode a road or track, it must be done using the feature *
 [[sec_6.16]]
 === Tunnel
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *TUNNEL*. A passage that is open to the atmosphere at both ends, buried under the seabed or laid over the seafloor or bored under the ground or through mountains. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.191, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Tunnel (TUNNEL)*
@@ -2655,20 +2163,12 @@ If it is required to encode a road or track, it must be done using the feature *
 1: under construction +
 2: ruined +
 5: planned construction | EN | 0,1
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -2680,22 +2180,15 @@ If it is required to encode a road or track, it must be done using the feature *
 3+| horizontal clearance fixed
 2+| 3+| | C | 0,1
 
-3+| horizontal clearance value
-2+| (HORCLR)
-3+| | (S) RE
-| 1,1
 
-3+| horizontal distance uncertainty
-2+| (HORACC)
-3+| | (S) RE
-| 0,1
+3+| horizontal clearance value 2+| (HORCLR) 3+| | (S) RE | 1,1
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| horizontal distance uncertainty 2+| (HORACC) 3+| | (S) RE | 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 3: recommended +
@@ -2706,23 +2199,14 @@ If it is required to encode a road or track, it must be done using the feature *
 3+| vertical clearance fixed
 2+| 3+| | C | 0,1
 
-3+| vertical clearance value
-2+| (VERCLR)
-3+| | (S) RE
-| 1,1
 
-3+| vertical uncertainty
-2+| _(VERACC)_
-3+| | (S) C
-| 0,1
+3+| vertical clearance value 2+| (VERCLR) 3+| | (S) RE | 1,1
 
-3+| uncertainty fixed
-2+| 3+| | (S) RE
-| 1,1
+3+| vertical uncertainty 2+| _(VERACC)_ 3+| | (S) C | 0,1
 
-3+| uncertainty variable factor
-2+| 3+| | (S) RE
-| 0,1
+3+| uncertainty fixed 2+| 3+| | (S) RE | 1,1
+
+3+| uncertainty variable factor 2+| 3+| | (S) RE | 0,1
 
 3+| vertical datum 2+| (VERDAT) 3+|
 3: mean sea level +
@@ -2740,40 +2224,28 @@ If it is required to encode a road or track, it must be done using the feature *
 29: nearly highest high water +
 30: highest astronomical tide +
 44: baltic sea chart datum 2000 | EN | 0,1
+
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
-| 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[six_sixteen]
+3+| file locator 2+| 3+| | (S) TE | 0,1
 
-3+| headline
-2+| 3+| | (S) TE
-| 0,1
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[six_sixteen]
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| headline 2+| 3+| | (S) TE | 0,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[six_sixteen]
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[six_sixteen]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 

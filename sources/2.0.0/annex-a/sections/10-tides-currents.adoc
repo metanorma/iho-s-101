@@ -9,7 +9,7 @@ The inclusion of tidal information in ECDIS is optional. As such, for ENC only t
 [[sec_10.2]]
 === Tidal stream -- flood/ebb
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *TIDAL STREAM*. Approximate tidal stream rates given as discrete rate values for flood and ebb flow during springs. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.173, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Tidal Stream -- Flood/Ebb (TS_FEB)*
@@ -24,15 +24,9 @@ The inclusion of tidal information in ECDIS is optional. As such, for ENC only t
 
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -41,25 +35,13 @@ The inclusion of tidal information in ECDIS is optional. As such, for ENC only t
 | (S) EN
 | 0,1 footnoteblock:[ten_two]
 
-3+| fixed date range
-2+| 3+| See <<sec_2.4.8>>
-| C
-| 0,1
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
-3+| date end
-2+| (DATEND)
-3+| | (S) TD
-| 0,1 footnoteblock:[ten_two]
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[ten_two]
 
-3+| date start
-2+| (DATSTA)
-3+| | (S) TD
-| 0,1 footnoteblock:[ten_two]
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[ten_two]
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| orientation
 2+| 3+| | C | 1,1
@@ -68,51 +50,35 @@ The inclusion of tidal information in ECDIS is optional. As such, for ENC only t
 2+| 3+| | (S) RE
 | 0,1
 
-3+| orientation value
-2+| _(ORIENT)_
-3+| | (S) RE
-| 1,1
+3+| orientation value 2+| _(ORIENT)_ 3+| | (S) RE | 1,1
 
 3+| speed
 2+| 3+| | C | 1,1
 
 3+| speed maximum 2+| (CURVEL) 3+| 35.0 >= speed maximum > speed minimum | (S) RE | 1,1
-3+| speed minimum
-2+| 3+| 0 < speed minimum < speed maximum
-| (S) RE
-| 0,1
+
+3+| speed minimum 2+| 3+| 0 < speed minimum < speed maximum | (S) RE | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
+
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
 3+| file locator
 2+| 3+| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[ten_two]
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[ten_two]
 
 3+| headline
 2+| 3+| | (S) TE
 | 0,1
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[ten_two]
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[ten_two]
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
@@ -150,7 +116,7 @@ If it is required to encode tidal stream information that is limited to flood an
 [[sec_10.3]]
 === Current -- non-gravitational
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *CURRENT -- NON-GRAVITATIONAL*. Any [[current]] that is caused by other than [[tide-producing%20force]]. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Current -- Non-Gravitational (CURENT)*
@@ -159,20 +125,11 @@ If it is required to encode tidal stream information that is limited to flood an
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -181,25 +138,13 @@ If it is required to encode tidal stream information that is limited to flood an
 | (S) EN
 | 0,1 footnoteblock:[ten_three]
 
-3+| fixed date range
-2+| 3+| See <<sec_2.4.8>>
-| C
-| 0,1
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
-3+| date end
-2+| (DATEND)
-3+| | (S) TD
-| 0,1 footnoteblock:[ten_three]
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[ten_three]
 
-3+| date start
-2+| (DATSTA)
-3+| | (S) TD
-| 0,1 footnoteblock:[ten_three]
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[ten_three]
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| orientation
 2+| 3+| | C | 1,1
@@ -208,68 +153,43 @@ If it is required to encode tidal stream information that is limited to flood an
 2+| 3+| | (S) RE
 | 0,1
 
-3+| orientation value
-2+| _(ORIENT)_
-3+| | (S) RE
-| 1,1
+3+| orientation value 2+| _(ORIENT)_ 3+| | (S) RE | 1,1
 
-3+| periodic date range
-2+| 3+| See <<sec_2.4.8>>
-| C
-| 0,*
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
 
-3+| date end
-2+| _(PEREND)_
-3+| | (S) TD
-| 1,1
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
 
-3+| date start
-2+| _(PERSTA)_
-3+| | (S) TD
-| 1,1
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
 
 3+| speed
 2+| 3+| | C | 1,1
 
 3+| speed maximum 2+| (CURVEL) 3+| 35.0 >= speed maximum > speed minimum | (S) RE | 1,1
-3+| speed minimum
-2+| 3+| 0 < speed minimum < speed maximum
-| (S) RE
-| 0,1
+
+3+| speed minimum 2+| 3+| 0 < speed minimum < speed maximum | (S) RE | 0,1
 
 3+| status 2+| (STATUS) 3+|
 5: periodic/intermittent | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
+
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
 3+| file locator
 2+| 3+| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[ten_three]
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[ten_three]
 
 3+| headline
 2+| 3+| | (S) TE
 | 0,1
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[ten_three]
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[ten_three]
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
@@ -316,7 +236,7 @@ If it is required to encode a non-gravitational current, it must be done using t
 [[sec_10.4]]
 === Water turbulence
 
-[cols="539,804,804,804,804,804,804,804,294,539", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *WATER TURBULENCE*. The disturbance of water caused by the interaction of any combination of waves, currents, tidal streams, wind, shoal patches and obstructions. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Water Turbulence (WATTUR)*
@@ -331,20 +251,12 @@ If it is required to encode a non-gravitational current, it must be done using t
 3: overfalls +
 4: tide rips +
 5: bombora | EN | 1,1
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -353,42 +265,27 @@ If it is required to encode a non-gravitational current, it must be done using t
 | (S) EN
 | 0,1 footnoteblock:[ten_four]
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
 3+| file locator
 2+| 3+| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[ten_four]
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[ten_four]
 
 3+| headline
 2+| 3+| | (S) TE
 | 0,1
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[ten_four]
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[ten_four]
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
@@ -413,7 +310,7 @@ If it is required to encode a disturbance of water, it must be done using the fe
 
 [underline]#Remarks:#
 
-* If it is required to encode a breaker over an off-lying shoal, it must be done using a *Water Turbulence* feature at the same position as the feature causing the breaker (for example*Underwater/Awash Rock*).
+* If it is required to encode a breaker over an off-lying shoal, it must be done using a *Water Turbulence* feature at the same position as the feature causing the breaker (for example *Underwater/Awash Rock*).
 * A *Water Turbulence* feature of type surface must be covered by *Depth Area*, *Dredged Area* or *Unsurveyed Area* features as appropriate.
 
 [underline]#Distinction:# Rapids; Waterfall.
@@ -421,7 +318,7 @@ If it is required to encode a disturbance of water, it must be done using the fe
 [[sec_10.5]]
 === Tidal stream panel data
 
-[cols="705,597,597,470,245,597,597,597,210,385", options="unnumbered"]
+[cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *TIDAL STREAM PANEL DATA*. Approximate tidal stream characteristics given as discrete value sets at a specified interval before and/or after a high or low water. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.176, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Tidal Stream Panel Data (TS_PAD)*
@@ -430,20 +327,11 @@ If it is required to encode a disturbance of water, it must be done using the fe
 3+| _Real World_ 4+| _Paper Chart Symbol_ 3+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -452,10 +340,7 @@ If it is required to encode a disturbance of water, it must be done using the fe
 | (S) EN
 | 0,1 footnoteblock:[ten_five]
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| station name
 2+| _(TS_TSP)_
@@ -504,46 +389,31 @@ If it is required to encode a disturbance of water, it must be done using the fe
 2+| 3+| | (S) RE
 | 1,1
 
-3+| speed maximum
-2+| 3+| 35.0 >= speed maximum
-| (S) RE
-| 1,1
+3+| speed maximum 2+| 3+| 35.0 >= speed maximum | (S) RE | 1,1
 
 3+| time relative to tide
 2+| 3+| | (S) RE
 | 1,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
 3+| file locator
 2+| 3+| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[ten_five]
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[ten_five]
 
 3+| headline
 2+| 3+| | (S) TE
 | 0,1
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[ten_five]
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[ten_five]
 
-9+| *Feature Associations* |
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
@@ -580,9 +450,9 @@ S-101 Encoding: (Complex attributes in italics, encoded values in blue text)
 .Tide Stream Panel Data - Example
 [cols="987,716,716,658,343"]
 |===
-5+h| *Tidal Stream Panel Data (feature)*
-2+| station name 3+| Plymouth (Devonport)
-2+| station number 3+| 0014
+5+h| Tidal Stream Panel Data (feature)
+
+2+| station name 3+| Plymouth (Devonport) 2+| station number 3+| 0014
 5+| _tidal stream panel values_
 | reference tide 4+| high water
 | reference tide type 4+| springs

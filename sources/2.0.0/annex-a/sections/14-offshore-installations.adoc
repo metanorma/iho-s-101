@@ -5,7 +5,7 @@
 [[sec_14.1]]
 === Offshore platform
 
-[cols="609,794,794,794,794,794,794,794,294,539",options="unnumbered"]
+[cols="10",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *OFFSHORE PLATFORM*. A permanent offshore structure, either fixed or floating. (Adapted from IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Offshore Platform (OFSPLF)*
@@ -51,20 +51,11 @@
 1: under construction +
 2: ruined +
 5: planned construction | EN | 0,1
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -73,20 +64,11 @@
 | (S) EN
 | 0,1 footnoteblock:[fourteen_one]
 
-3+| fixed date range
-2+| 3+| See <<sec_2.4.8>>
-| C
-| 0,1
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
-3+| date end
-2+| (DATEND)
-3+| | (S) TD
-| 0,1 footnoteblock:[fourteen_one]
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[fourteen_one]
 
-3+| date start
-2+| (DATSTA)
-3+| | (S) TD
-| 0,1 footnoteblock:[fourteen_one]
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[fourteen_one]
 
 3+| flare stack
 2+| _*(LNDMRK)*_
@@ -96,10 +78,7 @@
 2+| (HEIGHT)
 3+| | RE | 0,1
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| product 2+| (PRODCT) 3+|
 1: oil +
@@ -130,37 +109,25 @@
 2: not visually conspicuous +
 3: prominent | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
 3+| file locator
 2+| 3+| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[fourteen_one]
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fourteen_one]
 
 3+| headline
 2+| 3+| | (S) TE
 | 0,1
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[fourteen_one]
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[fourteen_one]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Bollard*, *Daymark*, *Distance Mark*, *Fog Signal*, *Helipad*, *Light Air Obstruction*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
 | The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
@@ -232,7 +199,7 @@ If it is required to indicate the presence of a flare stack on an offshore platf
 [[sec_14.2]]
 === Submarine cable
 
-[cols="609,794,794,794,794,794,794,794,294,539",options="unnumbered"]
+[cols="10",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *SUBMARINE CABLE*. An assembly of wires or fibres, or a wire rope or chain, which has been laid underwater or buried beneath the seafloor. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Cable Submarine (CBLSUB)*
@@ -253,20 +220,11 @@ If it is required to indicate the presence of a flare stack on an offshore platf
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 5: planned construction | EN | 0,1
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -275,25 +233,13 @@ If it is required to indicate the presence of a flare stack on an offshore platf
 | (S) EN
 | 0,1 footnoteblock:[fourteen_two]
 
-3+| fixed date range
-2+| 3+| See <<sec_2.4.8>>
-| C
-| 0,1
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
-3+| date end
-2+| (DATEND)
-3+| | (S) TD
-| 0,1 footnoteblock:[fourteen_two]
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[fourteen_two]
 
-3+| date start
-2+| (DATSTA)
-3+| | (S) TD
-| 0,1 footnoteblock:[fourteen_two]
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[fourteen_two]
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| status 2+| (STATUS) 3+|
 1: permanent +
@@ -301,36 +247,20 @@ If it is required to indicate the presence of a flare stack on an offshore platf
 13: historic +
 18: existence doubtful | EN | 0,*
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
-| 0,1
+3+| file locator 2+| 3+| | (S) TE | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[fourteen_two]
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fourteen_two]
 
-3+| headline
-2+| 3+| | (S) TE
-| 0,1
+3+| headline 2+| 3+| | (S) TE | 0,1
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[fourteen_two]
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[fourteen_two]
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Component 3+| *Mooring Trot Aggregation* (see <<sec_25.10>>) 3+| *Mooring Trot* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
@@ -379,7 +309,7 @@ If it is required to encode a submarine cable, it must be done using the feature
 [[sec_14.3]]
 === Submarine cable area
 
-[cols="539,804,804,804,804,804,804,804,294,539",options="unnumbered"]
+[cols="10",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *SUBMARINE CABLE AREA*. An area which contains one or more submarine cables. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.70, November 2000, as amended).
 10+| *[underline]#S-101 Geo Feature:#* *Cable Area (CBLARE)*
@@ -392,20 +322,11 @@ If it is required to encode a submarine cable, it must be done using the feature
 1: power line +
 7: ferry +
 10: telecommunications cable | EN | 0,*
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -414,25 +335,13 @@ If it is required to encode a submarine cable, it must be done using the feature
 | (S) EN
 | 0,1 footnoteblock:[fourteen_three]
 
-3+| fixed date range
-2+| 3+| See <<sec_2.4.8>>
-| C
-| 0,1
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
-3+| date end
-2+| (DATEND)
-3+| | (S) TD
-| 0,1 footnoteblock:[fourteen_three]
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[fourteen_three]
 
-3+| date start
-2+| (DATSTA)
-3+| | (S) TD
-| 0,1 footnoteblock:[fourteen_three]
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[fourteen_three]
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| restriction 2+| (RESTRN) 3+|
 1: anchoring prohibited +
@@ -464,9 +373,7 @@ If it is required to encode a submarine cable, it must be done using the feature
 3+| vessel speed limit
 2+| 3+| | C | 0,*
 
-3+| speed limit
-2+| 3+| | (S) RE
-| 1,1
+3+| speed limit 2+| 3+| | (S) RE | 1,1
 
 3+| speed units
 2+| 3+|
@@ -476,41 +383,23 @@ If it is required to encode a submarine cable, it must be done using the feature
 | (S) EN
 | 1,1
 
-3+| vessel class
-2+| 3+| | (S) TE
-| 0,1
+3+| vessel class 2+| 3+| | (S) TE | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
-| 0,1
+3+| file locator 2+| 3+| | (S) TE | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[fourteen_three]
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fourteen_three]
 
-3+| headline
-2+| 3+| | (S) TE
-| 0,1
+3+| headline 2+| 3+| | (S) TE | 0,1
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[fourteen_three]
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[fourteen_three]
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
@@ -551,7 +440,7 @@ If it is required to encode a submarine cable area, it must be done using the fe
 [[sec_14.4]]
 === Pipeline
 
-[cols="539,804,804,804,804,804,804,804,294,539",options="unnumbered"]
+[cols="10",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *PIPELINE*. A connected set of pipes for conveying liquids, slurries, or gases. (Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2012).
 10+| *[underline]#S-101 Geo Feature:#* *Pipeline Submarine/On Land (PIPSOL)*
@@ -560,9 +449,7 @@ If it is required to encode a submarine cable area, it must be done using the fe
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| buried depth
-2+| (BURDEP)
-3+| | RE | 0,1
+3+| buried depth 2+| (BURDEP) 3+| | RE | 0,1
 
 3+| category of pipeline/pipe 2+| (CATPIP) 3+|
 2: outfall pipe +
@@ -574,22 +461,16 @@ If it is required to encode a submarine cable area, it must be done using the fe
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 5: planned construction | EN | 0,1
+
 3+| depth range minimum value 2+| (DRVAL1) 3+| DRVAL1 <= DRVAL2 | RE | 0,1
+
 3+| depth range maximum value 2+| (DRVAL2) 3+| DRVAL2 >= DRVAL1 | RE | 0,1
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -598,25 +479,13 @@ If it is required to encode a submarine cable area, it must be done using the fe
 | (S) EN
 | 0,1 footnoteblock:[fourteen_four]
 
-3+| fixed date range
-2+| 3+| See <<sec_2.4.8>>
-| C
-| 0,1
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
-3+| date end
-2+| (DATEND)
-3+| | (S) TD
-| 0,1 footnoteblock:[fourteen_four]
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[fourteen_four]
 
-3+| date start
-2+| (DATSTA)
-3+| | (S) TD
-| 0,1 footnoteblock:[fourteen_four]
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[fourteen_four]
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| multiplicity of features
 2+| 3+| | C | 0,1
@@ -665,37 +534,25 @@ If it is required to encode a submarine cable area, it must be done using the fe
 7: temporary +
 12: illuminated | EN | 0,*
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
 3+| file locator
 2+| 3+| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[fourteen_four]
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fourteen_four]
 
 3+| headline
 2+| 3+| | (S) TE
 | 0,1
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[fourteen_four]
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[fourteen_four]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
@@ -748,7 +605,7 @@ If it is required to encode diffusers and cribs, this must be done using *Obstru
 [[sec_14.5]]
 === Submarine pipeline area
 
-[cols="539,804,804,804,804,804,804,804,294,539",options="unnumbered"]
+[cols="10",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *SUBMARINE PIPELINE AREA*. An area containing one or more submarine pipelines. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.118, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Submarine Pipeline Area (PIPARE)*
@@ -763,20 +620,11 @@ If it is required to encode diffusers and cribs, this must be done using *Obstru
 4: sewer +
 5: bubbler system +
 6: supply pipe | EN | 0,*
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -785,25 +633,13 @@ If it is required to encode diffusers and cribs, this must be done using *Obstru
 | (S) EN
 | 0,1 footnoteblock:[fourteen_five]
 
-3+| fixed date range
-2+| 3+| See <<sec_2.4.8>>
-| C
-| 0,1
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
-3+| date end
-2+| (DATEND)
-3+| | (S) TD
-| 0,1 footnoteblock:[fourteen_five]
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[fourteen_five]
 
-3+| date start
-2+| (DATSTA)
-3+| | (S) TD
-| 0,1 footnoteblock:[fourteen_five]
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[fourteen_five]
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| product 2+| (PRODCT) 3+|
 1: oil +
@@ -866,36 +702,24 @@ If it is required to encode diffusers and cribs, this must be done using *Obstru
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
 3+| file locator
 2+| 3+| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[fourteen_five]
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fourteen_five]
 
 3+| headline
 2+| 3+| | (S) TE
 | 0,1
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[fourteen_five]
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[fourteen_five]
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
@@ -937,7 +761,7 @@ If it is required to encode a submarine pipeline area, it must be done using the
 [[sec_14.6]]
 === Offshore production area
 
-[cols="539,804,804,804,804,804,804,804,294,539",options="unnumbered"]
+[cols="10",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *OFFSHORE PRODUCTION AREA*. An area at sea within which there are production facilities. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.113, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Offshore Production Area (OSPARE)*
@@ -958,20 +782,11 @@ If it is required to encode a submarine pipeline area, it must be done using the
 2: ruined +
 4: wingless +
 5: planned construction | EN | 0,1
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
 3+| name usage
 2+| 3+|
@@ -980,29 +795,17 @@ If it is required to encode a submarine pipeline area, it must be done using the
 | (S) EN
 | 0,1 footnoteblock:[fourteen_six]
 
-3+| fixed date range
-2+| 3+| See <<sec_2.4.8>>
-| C
-| 0,1
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
-3+| date end
-2+| (DATEND)
-3+| | (S) TD
-| 0,1 footnoteblock:[fourteen_six]
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[fourteen_six]
 
-3+| date start
-2+| (DATSTA)
-3+| | (S) TD
-| 0,1 footnoteblock:[fourteen_six]
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[fourteen_six]
 
 3+| height
 2+| (HEIGHT)
 3+| | RE | 0,1
 
-3+| interoperability identifier
-2+| 3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| product 2+| (PRODCT) 3+|
 1: oil +
@@ -1086,36 +889,24 @@ If it is required to encode a submarine pipeline area, it must be done using the
 4: covers and uncovers +
 7: floating | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
 3+| file locator
 2+| 3+| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 footnoteblock:[fourteen_six]
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fourteen_six]
 
 3+| headline
 2+| 3+| | (S) TE
 | 0,1
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
-3+| | (S) TE
-| 0,1 footnoteblock:[fourteen_six]
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[fourteen_six]
 
-10+| *Feature Associations*
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
@@ -1146,7 +937,7 @@ If it is required to encode an offshore production area, it must be done using t
 
 * For additional guidance regarding the encoding of vessel speed limits, see <<sec_17.4>>.
 * General information about a wind farm such as blade diameter and blade vertical clearance should be encoded, if required, using the complex attribute *information* (see <<sec_2.4.6>>). If it is required to encode individual offshore wind turbines, it should be done using a *Wind Turbine* feature (see <<sec_7.4>>).
-* If it is required to encode individual wave energy devices or underwater turbines within a wave or current farm (or turbine field), it should be done using an *Obstruction* feature (see <<sec_13.6>>) or, if there are associated surface structures, using appropriate features, for example*Offshore Platform* or *Special Purpose/General Beacon* (see <<sec_14.1;and!sec_20.12>>). The extent and nature of any restricted area related to the feature should be encoded using a *Restricted Area* feature(see <<sec_17.8>>).
+* If it is required to encode individual wave energy devices or underwater turbines within a wave or current farm (or turbine field), it should be done using an *Obstruction* feature (see <<sec_13.6>>) or, if there are associated surface structures, using appropriate features, for example *Offshore Platform* or *Special Purpose/General Beacon* (see <<sec_14.1;and!sec_20.12>>). The extent and nature of any restricted area related to the feature should be encoded using a *Restricted Area* feature(see <<sec_17.8>>).
 * If it is required to encode an offshore development area, it should be done using an *Offshore Production Area* feature, with attributes *category of offshore production area* and *product* populated with the appropriate value; and *condition* = _1_ (under construction). A note describing the activities taking place within the area may be included using the complex attribute *information* (see <<sec_2.4.6>>). At the conclusion of the development of the area, the attribute *condition* and any associated note can then be removed from the feature.
 
 [[sec_14.6.2]]
