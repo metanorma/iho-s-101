@@ -92,12 +92,14 @@ image::figure-15-3.png["",493,447]
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnote:fifteen_four[For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnote:fifteen_four[]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -147,13 +149,13 @@ image::figure-15-3.png["",493,447]
 
 3+| file locator 2+| 3+| | (S) TE | 0,1
 
-3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 ^†^
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnote:fifteen_four[]
 
 3+| headline 2+| 3+| | (S) TE | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 ^†^
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnote:fifteen_four[]
 
 9+| *Feature Associations* |
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -161,7 +163,6 @@ image::figure-15-3.png["",493,447]
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-9+.<| ^†^ For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -170,7 +171,9 @@ image::figure-15-3.png["",493,447]
 [[sec_15.4.1]]
 ==== Navigation lines (see S-4 -- B-433)
 
-Clearing Linesare important in rocky areas where dangers are not guarded by buoys and where sailing vessels (which are not always able to keep to a direct track) and other small craft may navigate close inshore. Transits marking isolated dangers are based on beacons or other marks which are erected on shore to indicate (approximately, unless there are two pairs of beacons) the position of an isolated danger. Leading lines based on beacons or lights must be encoded where the optimum display scale for the ENC data permits. Leading lines based on natural features should be encoded on the largest optimum display scale ENC data where they appear to be useful, particularly if other navigational aids seem inadequate.If it is required to encode a navigation line, it must be done using the feature *Navigation Line*. The use of *Navigation Line* and *Recommended Track* (see <<sec_15.5>>) is defined in more detail in the following Table, and in <<fig_15-4>> below:
+Clearing Linesare important in rocky areas where dangers are not guarded by buoys and where sailing vessels (which are not always able to keep to a direct track) and other small craft may navigate close inshore. Transits marking isolated dangers are based on beacons or other marks which are erected on shore to indicate (approximately, unless there are two pairs of beacons) the position of an isolated danger. Leading lines based on beacons or lights must be encoded where the optimum display scale for the ENC data permits. Leading lines based on natural features should be encoded on the largest optimum display scale ENC data where they appear to be useful, particularly if other navigational aids seem inadequate.
+
+If it is required to encode a navigation line, it must be done using the feature *Navigation Line*. The use of *Navigation Line* and *Recommended Track* (see <<sec_15.5>>) is defined in more detail in the following Table, and in <<fig_15-4>> below:
 
 [[table_15-1]]
 .Navigation lines -- Attribute encoding
@@ -200,7 +203,15 @@ image::figure-15-4.png[580,299]
 [[sec_15.4.2]]
 ==== Measured distances (see S-4 -- B-458)
 
-If the track to be followed is on a leading line or a bearing, it must be encoded in the way described in the Table and <<fig_15-4>> above (cases 1 or 4). If the track is not on a leading line or bearing, it must be encoded only as a *Navigation Line* feature with the attribute *category of navigation line* being set to an empty (null) value. In either case, if it is required to encode the measured distance, it must be done using the attribute *measured distance*.If it is required to encode the transit lines, they must be done using *Navigation Line* features, with *category of navigation line* = _2_ (transit line).If it is required to encode the beacons, they must be done using *Special Purpose/General Beacon* features, with attribute *category of special purpose mark* = _17_ (measured distance mark).On occasions, one or more of the transits used for the measured distance may incorporate an existing landmark as the front or rear mark. In this case, if *Landmark* is encoded, *category of special purpose mark* = _17_ must also be populated.Where the entire measured distance system exists within a single dataset, each transit line with its beacons must be associated with the feature *Range System* (see <<sec_15.6>>) using the association *Range System Aggregation* (see <<sec_25.13>>). These two associations and the track to be followed must be associated with another instance of *Range System* to form a hierarchical relationship.
+If the track to be followed is on a leading line or a bearing, it must be encoded in the way described in the Table and <<fig_15-4>> above (cases 1 or 4). If the track is not on a leading line or bearing, it must be encoded only as a *Navigation Line* feature with the attribute *category of navigation line* being set to an empty (null) value. In either case, if it is required to encode the measured distance, it must be done using the attribute *measured distance*.
+
+If it is required to encode the transit lines, they must be done using *Navigation Line* features, with *category of navigation line* = _2_ (transit line).
+
+If it is required to encode the beacons, they must be done using *Special Purpose/General Beacon* features, with attribute *category of special purpose mark* = _17_ (measured distance mark).
+
+On occasions, one or more of the transits used for the measured distance may incorporate an existing landmark as the front or rear mark. In this case, if *Landmark* is encoded, *category of special purpose mark* = _17_ must also be populated.
+
+Where the entire measured distance system exists within a single dataset, each transit line with its beacons must be associated with the feature *Range System* (see <<sec_15.6>>) using the association *Range System Aggregation* (see <<sec_25.13>>). These two associations and the track to be followed must be associated with another instance of *Range System* to form a hierarchical relationship.
 
 [underline]#Remarks:#
 
@@ -251,7 +262,7 @@ If the track to be followed is on a leading line or a bearing, it must be encode
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_five]
 
 3+| fixed date range
 2+| 3+| See <<sec_2.4.8>>
@@ -261,12 +272,12 @@ If the track to be followed is on a leading line or a bearing, it must be encode
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_five]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_five]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -349,7 +360,7 @@ If the track to be followed is on a leading line or a bearing, it must be encode
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_five]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -363,7 +374,7 @@ If the track to be followed is on a leading line or a bearing, it must be encode
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_five]
 
 9+| *Feature Associations* |
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -372,16 +383,33 @@ If the track to be followed is on a leading line or a bearing, it must be encode
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-9+.<| ^†^ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[fifteen_five]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# M 3-6
 
 [[sec_15.5.1]]
 ==== Recommended tracks (see S-4 -- B-432.1; B-434 and B-434.1-4)
 
-Recommended tracks and fairways usually comprise a number of sections (sometimes termed "legs") which lead between dangers lying close on both sides of the track or fairway. Tracks commonly include some sections which are leading lines (see <<sec_15.1>>). The distinction between tracks and fairways, in this context, is that tracks have no specified outer limits and fairways do have specified outer limits.It is important to recognise that it is not the role of cartographers to create "recommended" tracks and other "recommended" routeing measures; such recommendations are made by other authorities. The word "Recommended", used in connection with recommended tracks and other recommended routeing measures usually implies that it has been recommended by a competent authority (such as a port authority within its port limits or a maritime safety authority) and may be adopted by IMO. Occasionally, the recommendation may be based on advice directly from a competent surveyor or established by precedent.Recommended tracks include all channels recommended for hydrographic reasons to lead safely between shoal depths. The use of such tracks is generally left to the discretion of the Mariner and will depend on the vessel's draught, the state of the tide, adequacy of navigational aids and so on.If it is required to encode a recommended track, it must be done using the feature *Recommended Track*.The use of *Navigation Line* and *Recommended Track* is defined in more detail in the following Table, and in <<fig_15-5>> below.
+Recommended tracks and fairways usually comprise a number of sections (sometimes termed "legs") which lead between dangers lying close on both sides of the track or fairway. Tracks commonly include some sections which are leading lines (see <<sec_15.1>>). The distinction between tracks and fairways, in this context, is that tracks have no specified outer limits and fairways do have specified outer limits.
+
+It is important to recognise that it is not the role of cartographers to create "recommended" tracks and other "recommended" routeing measures; such recommendations are made by other authorities. The word "Recommended", used in connection with recommended tracks and other recommended routeing measures usually implies that it has been recommended by a competent authority (such as a port authority within its port limits or a maritime safety authority) and may be adopted by IMO. Occasionally, the recommendation may be based on advice directly from a competent surveyor or established by precedent.
+
+Recommended tracks include all channels recommended for hydrographic reasons to lead safely between shoal depths. The use of such tracks is generally left to the discretion of the Mariner and will depend on the vessel's draught, the state of the tide, adequacy of navigational aids and so on.
+
+If it is required to encode a recommended track, it must be done using the feature *Recommended Track*.
+
+The use of *Navigation Line* and *Recommended Track* is defined in more detail in the following Table, and in <<fig_15-5>> below.
 
 [[table_15-2]]
 .Recommended tracks -- Attribute encoding
@@ -444,7 +472,7 @@ image::figure-15-5.png[580,299]
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_six]
 
 3+| fixed date range
 2+| 3+| See <<sec_2.4.8>>
@@ -454,12 +482,12 @@ image::figure-15-5.png[580,299]
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_six]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_six]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -482,7 +510,7 @@ image::figure-15-5.png[580,299]
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_six]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -496,7 +524,7 @@ image::figure-15-5.png[580,299]
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_six]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -507,16 +535,27 @@ image::figure-15-5.png[580,299]
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[fifteen_six]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:#
 
 [[sec_15.6.1]]
 ==== Range systems (see S4 -- B-433)
 
-If it is required to encode leading, clearing and transit lines and recommended tracks, it must be done using the features *Navigation Line* and *Recommended Track* (see <<sec_15.4;and!sec_15.5>>), and related point navigational aids features (see Sections 18-21). This applies for visual and radio navigational aids.To encode a range system, the features *Navigation Line*, *Recommended Route Centreline*, *Recommended Track* and the navigational aids features should be associated with the feature *Range System* using the association *Range System Aggregation* (see <<sec_25.13>>).
+If it is required to encode leading, clearing and transit lines and recommended tracks, it must be done using the features *Navigation Line* and *Recommended Track* (see <<sec_15.4;and!sec_15.5>>), and related point navigational aids features (see Sections 18-21). This applies for visual and radio navigational aids.
+
+To encode a range system, the features *Navigation Line*, *Recommended Route Centreline*, *Recommended Track* and the navigational aids features should be associated with the feature *Range System* using the association *Range System Aggregation* (see <<sec_25.13>>).
 
 [underline]#Remarks:#
 
@@ -531,7 +570,9 @@ If it is required to encode leading, clearing and transit lines and recommended 
 
 [cols="609,794,794,794,794,794,794,794,294,539",options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *FAIRWAY*.That part of a river, harbour and so on, where the main navigable channel for vessels of larger size lies. It is also the usual course followed by vessels entering or leaving harbours, called "ship channel". (International Maritime Dictionary, 2^nd^ Edition).
+10+| [underline]#IHO Definition:# *FAIRWAY*.
+
+That part of a river, harbour and so on, where the main navigable channel for vessels of larger size lies. It is also the usual course followed by vessels entering or leaving harbours, called "ship channel". (International Maritime Dictionary, 2^nd^ Edition).
 10+| *[underline]#S-101 Geo Feature:#* *Fairway (FAIRWY)*
 10+| *[underline]#Primitives:#* *Surface*
 
@@ -562,7 +603,7 @@ If it is required to encode leading, clearing and transit lines and recommended 
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_seven]
 
 3+| fixed date range
 2+| 3+| See <<sec_2.4.8>>
@@ -572,12 +613,12 @@ If it is required to encode leading, clearing and transit lines and recommended 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_seven]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_seven]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -677,7 +718,7 @@ If it is required to encode leading, clearing and transit lines and recommended 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_seven]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -691,7 +732,7 @@ If it is required to encode leading, clearing and transit lines and recommended 
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_seven]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -701,16 +742,27 @@ If it is required to encode leading, clearing and transit lines and recommended 
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[fifteen_seven]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# M 18
 
 [[sec_15.7.1]]
 ==== Fairways (see S-4 -- B-432.1(c) and B-434.5)
 
-A fairway, sometimes called Ship Channel, is the main navigable channel in the approaches to, or within, a river or harbour. Fairways which are designated by a regulatory authority are treated as Routeing Measures.If it is required to encode a fairway, it must be done using the feature *Fairway*.
+A fairway, sometimes called Ship Channel, is the main navigable channel in the approaches to, or within, a river or harbour. Fairways which are designated by a regulatory authority are treated as Routeing Measures.
+
+If it is required to encode a fairway, it must be done using the feature *Fairway*.
 
 [underline]#Remarks:#
 
@@ -728,7 +780,9 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 
 [cols="539,804,804,804,804,804,804,804,294,539",options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *FAIRWAY SYSTEM*.That part of a river, harbour and so on, where the main navigable channel for vessels of larger size lies. It is also the usual course followed by vessels entering or leaving harbours, called "ship channel". (International Maritime Dictionary, 2^nd^ Edition) fairway system is an aggregation of connected fairway features making up a complex fairway system.
+10+| [underline]#IHO Definition:# *FAIRWAY SYSTEM*.
+
+That part of a river, harbour and so on, where the main navigable channel for vessels of larger size lies. It is also the usual course followed by vessels entering or leaving harbours, called "ship channel". (International Maritime Dictionary, 2^nd^ Edition) fairway system is an aggregation of connected fairway features making up a complex fairway system.
 10+| *[underline]#S-101 Geo Feature:#* *Fairway System* __**(C_AGGR)**__
 10+| *[underline]#Primitives:#* *Surface, None*
 
@@ -755,7 +809,7 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_eight]
 
 3+| fixed date range
 2+| 3+| See <<sec_2.4.8>>
@@ -765,12 +819,12 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_eight]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_eight]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -808,7 +862,7 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_eight]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -822,7 +876,7 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_eight]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -832,16 +886,27 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[fifteen_eight]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# M 18
 
 [[sec_15.8.1]]
 ==== Fairway systems (see S-4 -- B-432.1(c) and B-434.5)
 
-A fairway, sometimes called Ship Channel, is the main navigable channel in the approaches to, or within, a river or harbour. Fairways which are designated by a regulatory authority are treated as Routeing Measures.A fairway system is composed of two or more *Fairway* features that comprise a complex fairway routeing system, for instance a long fairway comprising several bends. To define the complete fairway system, the *Fairway* features must be aggregated in a *Fairway System* feature, using the association *Fairway Aggregation* (see <<sec_25.7>>).
+A fairway, sometimes called Ship Channel, is the main navigable channel in the approaches to, or within, a river or harbour. Fairways which are designated by a regulatory authority are treated as Routeing Measures.
+
+A fairway system is composed of two or more *Fairway* features that comprise a complex fairway routeing system, for instance a long fairway comprising several bends. To define the complete fairway system, the *Fairway* features must be aggregated in a *Fairway System* feature, using the association *Fairway Aggregation* (see <<sec_25.7>>).
 
 [underline]#Remarks:#
 
@@ -891,7 +956,7 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_nine]
 
 3+| fixed date range
 2+| 3+| See <<sec_2.4.8>>
@@ -901,12 +966,12 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_nine]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_nine]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -983,7 +1048,7 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_nine]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -997,7 +1062,7 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_nine]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -1007,16 +1072,27 @@ A fairway, sometimes called Ship Channel, is the main navigable channel in the a
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[fifteen_nine]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# M 28.1
 
 [[sec_15.9.1]]
 ==== Recommended routes (see S-4 -- B-435.4)
 
-A recommended route is a route of undefined width, for the convenience of ships in transit, which is often marked by centreline buoys. (IMO Ships Routeing, 2010). IMO-designated recommended routes are listed in IMO publication "__Ships' Routeing__"Part E. This type of routeing measure was adopted to include such features as the "transit routes" (through former minefields) in the entrances to the Baltic Sea. In contrast to recommended tracks (see <<sec_15.5>>), there is usually ample sea-room for vessels to keep well starboard (to the right) of the centreline.If it is required to encode the centreline of a recommended route, it must be done using the feature *Recommended Route Centreline*.
+A recommended route is a route of undefined width, for the convenience of ships in transit, which is often marked by centreline buoys. (IMO Ships Routeing, 2010). IMO-designated recommended routes are listed in IMO publication "__Ships' Routeing__"Part E. This type of routeing measure was adopted to include such features as the "transit routes" (through former minefields) in the entrances to the Baltic Sea. In contrast to recommended tracks (see <<sec_15.5>>), there is usually ample sea-room for vessels to keep well starboard (to the right) of the centreline.
+
+If it is required to encode the centreline of a recommended route, it must be done using the feature *Recommended Route Centreline*.
 
 [underline]#Remarks:#
 
@@ -1054,12 +1130,12 @@ A recommended route is a route of undefined width, for the convenience of ships 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_ten]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_ten]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -1122,7 +1198,7 @@ A recommended route is a route of undefined width, for the convenience of ships 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_ten]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -1136,7 +1212,7 @@ A recommended route is a route of undefined width, for the convenience of ships 
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_ten]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -1145,9 +1221,16 @@ A recommended route is a route of undefined width, for the convenience of ships 
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[fifteen_ten]]
+[NOTE]
+--
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# M 28.2
 
@@ -1204,7 +1287,7 @@ If it is required to encode a two-way route with one-way sections, separate *Two
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_eleven]
 
 3+| fixed date range
 2+| 3+| See <<sec_2.4.8>>
@@ -1214,12 +1297,12 @@ If it is required to encode a two-way route with one-way sections, separate *Two
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_eleven]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_eleven]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -1242,7 +1325,7 @@ If it is required to encode a two-way route with one-way sections, separate *Two
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_eleven]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -1256,7 +1339,7 @@ If it is required to encode a two-way route with one-way sections, separate *Two
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_eleven]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -1267,9 +1350,18 @@ If it is required to encode a two-way route with one-way sections, separate *Two
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[fifteen_eleven]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# M 28.2
 
@@ -1306,12 +1398,12 @@ To define the complete two-way system, the *Two-Way Route Part* features must be
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twelve]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twelve]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -1339,7 +1431,7 @@ To define the complete two-way system, the *Two-Way Route Part* features must be
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twelve]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -1353,23 +1445,32 @@ To define the complete two-way system, the *Two-Way Route Part* features must be
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twelve]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[fifteen_twelve]]
+[NOTE]
+--
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# M 26.1-2
 
 [[sec_15.12.1]]
 ==== Recommended traffic lane part (see S-4 -- B-435.5)
 
-Recommended direction of traffic flow is a traffic flow pattern indicating a recommended directional movement of traffic where it is impractical or unnecessary to adopt an established direction of traffic flow. (IMO Ships Routeing, 2010). IMO-designated recommended directions of traffic flow are listed in IMO publication "__Ships' Routeing__"Part E. Several hydrographic offices, in consultation with their Ministries of Transport, have added recommended directions in areas such as the outer approaches to major ports in order to show the best routes for crossing traffic or to minimise the risk of head-on encounters.The feature *Recommended Traffic Lane Part* must be used, where required, to encode areas with a recommended direction of traffic flow which is generally along one bearing:
+Recommended direction of traffic flow is a traffic flow pattern indicating a recommended directional movement of traffic where it is impractical or unnecessary to adopt an established direction of traffic flow. (IMO Ships Routeing, 2010). IMO-designated recommended directions of traffic flow are listed in IMO publication "__Ships' Routeing__"Part E. Several hydrographic offices, in consultation with their Ministries of Transport, have added recommended directions in areas such as the outer approaches to major ports in order to show the best routes for crossing traffic or to minimise the risk of head-on encounters.
+
+The feature *Recommended Traffic Lane Part* must be used, where required, to encode areas with a recommended direction of traffic flow which is generally along one bearing:
 
 * between two traffic separation schemes (TSS) (INT1 -- M 26.1);
 * in the entrance area of a TSS; or
@@ -1422,7 +1523,7 @@ Recommended direction of traffic flow is a traffic flow pattern indicating a rec
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_thirteen]
 
 3+| fixed date range
 2+| 3+| See <<sec_2.4.8>>
@@ -1432,12 +1533,12 @@ Recommended direction of traffic flow is a traffic flow pattern indicating a rec
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_thirteen]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_thirteen]
 
 3+| IMO adopted
 2+| _(CATTSS)_
@@ -1505,7 +1606,7 @@ Recommended direction of traffic flow is a traffic flow pattern indicating a rec
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_thirteen]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -1519,7 +1620,7 @@ Recommended direction of traffic flow is a traffic flow pattern indicating a rec
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_thirteen]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -1529,16 +1630,27 @@ Recommended direction of traffic flow is a traffic flow pattern indicating a rec
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[fifteen_thirteen]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# M 27.3
 
 [[sec_15.13.1]]
 ==== Deep Water route centrelines (see S-4 -- B-435.3)
 
-A complete Deep Water route (DW) consists of one or more areas within which the flow of traffic either follows one defined direction for one-way traffic, or follows one defined direction and its reciprocal for two-way traffic.If it is required to encode the centreline of a Deep Water route, the width of which is not explicitly defined, it must be done using the feature *Deep Water Route Centreline*.
+A complete Deep Water route (DW) consists of one or more areas within which the flow of traffic either follows one defined direction for one-way traffic, or follows one defined direction and its reciprocal for two-way traffic.
+
+If it is required to encode the centreline of a Deep Water route, the width of which is not explicitly defined, it must be done using the feature *Deep Water Route Centreline*.
 
 [underline]#Remarks:#
 
@@ -1588,7 +1700,7 @@ A complete Deep Water route (DW) consists of one or more areas within which the 
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_fourteen]
 
 3+| fixed date range
 2+| 3+| See <<sec_2.4.8>>
@@ -1598,12 +1710,12 @@ A complete Deep Water route (DW) consists of one or more areas within which the 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_fourteen]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_fourteen]
 
 3+| IMO adopted
 2+| _(CATTSS)_
@@ -1715,7 +1827,7 @@ A complete Deep Water route (DW) consists of one or more areas within which the 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_fourteen]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -1729,7 +1841,7 @@ A complete Deep Water route (DW) consists of one or more areas within which the 
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_fourteen]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -1739,16 +1851,27 @@ A complete Deep Water route (DW) consists of one or more areas within which the 
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[fifteen_fourteen]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# M 27.1-2
 
 [[sec_15.14.1]]
 ==== Deep Water route parts (see S-4 -- B-435; B-435.3 and B-436.3)
 
-A complete Deep Water route (DW) consists of one or more areas within which the flow of traffic either follows one defined direction for one-way traffic, or follows one defined direction and its reciprocal for two-way traffic.If it is required to encode these areas, this must be done using the feature *Deep Water Route Part*.
+A complete Deep Water route (DW) consists of one or more areas within which the flow of traffic either follows one defined direction for one-way traffic, or follows one defined direction and its reciprocal for two-way traffic.
+
+If it is required to encode these areas, this must be done using the feature *Deep Water Route Part*.
 
 [underline]#Remarks:#
 
@@ -1796,7 +1919,7 @@ A complete Deep Water route (DW) consists of one or more areas within which the 
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_fifteen]
 
 3+| fixed date range
 2+| 3+| See <<sec_2.4.8>>
@@ -1806,12 +1929,12 @@ A complete Deep Water route (DW) consists of one or more areas within which the 
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_fifteen]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_fifteen]
 
 3+| IMO adopted
 2+| _(CATTSS)_
@@ -1835,7 +1958,7 @@ A complete Deep Water route (DW) consists of one or more areas within which the 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_fifteen]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -1849,7 +1972,7 @@ A complete Deep Water route (DW) consists of one or more areas within which the 
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_fifteen]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -1860,9 +1983,18 @@ A complete Deep Water route (DW) consists of one or more areas within which the 
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,1
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[fifteen_fifteen]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# M 27.1-3
 
@@ -1899,12 +2031,12 @@ If it is required to define a complete Deep Water route (DW) system, the feature
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_sixteen]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_sixteen]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -1974,7 +2106,7 @@ If it is required to define a complete Deep Water route (DW) system, the feature
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_sixteen]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -1988,7 +2120,7 @@ If it is required to define a complete Deep Water route (DW) system, the feature
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_sixteen]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -1996,9 +2128,16 @@ If it is required to define a complete Deep Water route (DW) system, the feature
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[fifteen_sixteen]]
+[NOTE]
+--
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# M 25.1, 25.2
 
@@ -2046,7 +2185,7 @@ The feature*Inshore Traffic Zone* must only be used to encode the designated are
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_seventeen]
 
 3+| fixed date range
 2+| 3+| See <<sec_2.4.8>>
@@ -2056,12 +2195,12 @@ The feature*Inshore Traffic Zone* must only be used to encode the designated are
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_seventeen]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_seventeen]
 
 3+| IMO adopted
 2+| _(CATTSS)_
@@ -2133,7 +2272,7 @@ The feature*Inshore Traffic Zone* must only be used to encode the designated are
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_seventeen]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -2147,7 +2286,7 @@ The feature*Inshore Traffic Zone* must only be used to encode the designated are
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_seventeen]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -2156,9 +2295,18 @@ The feature*Inshore Traffic Zone* must only be used to encode the designated are
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[fifteen_seventeen]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# M 16, 24
 
@@ -2196,12 +2344,12 @@ Precautionary areas are commonly designated by IMO for certain areas of convergi
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_eighteen]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_eighteen]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -2210,7 +2358,7 @@ Precautionary areas are commonly designated by IMO for certain areas of convergi
 
 3+| orientation value
 2+| (ORIENT)
-3+| | RE | 0,1 ^†^
+3+| | RE | 0,1 footnoteblock:[fifteen_eighteen]
 
 3+| restriction 2+| (RESTRN) 3+|
 1: anchoring prohibited +
@@ -2274,7 +2422,7 @@ Precautionary areas are commonly designated by IMO for certain areas of convergi
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_eighteen]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -2288,7 +2436,7 @@ Precautionary areas are commonly designated by IMO for certain areas of convergi
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_eighteen]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -2296,9 +2444,18 @@ Precautionary areas are commonly designated by IMO for certain areas of convergi
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ The attribute *orientation value* is mandatory for all *Traffic Separation Scheme Lane Part* features, unless the part is a junction.For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[fifteen_eighteen]]
+[NOTE]
+--
+The attribute *orientation value* is mandatory for all *Traffic Separation Scheme Lane Part* features, unless the part is a junction.
+
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# M 20.1-3, 22
 
@@ -2340,12 +2497,12 @@ image::figure-15-7.png[308,147]
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_nineteen]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_nineteen]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -2370,7 +2527,7 @@ image::figure-15-7.png[308,147]
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_nineteen]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -2384,7 +2541,7 @@ image::figure-15-7.png[308,147]
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_nineteen]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -2392,9 +2549,16 @@ image::figure-15-7.png[308,147]
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[fifteen_nineteen]]
+[NOTE]
+--
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# M 12, 13, 20.1, 20.3, 21
 
@@ -2429,12 +2593,12 @@ The feature *Separation Zone or Line* must be used to encode the common boundary
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twenty]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twenty]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -2459,7 +2623,7 @@ The feature *Separation Zone or Line* must be used to encode the common boundary
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twenty]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -2473,7 +2637,7 @@ The feature *Separation Zone or Line* must be used to encode the common boundary
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twenty]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -2481,9 +2645,16 @@ The feature *Separation Zone or Line* must be used to encode the common boundary
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[fifteen_twenty]]
+[NOTE]
+--
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# M 15
 
@@ -2518,12 +2689,12 @@ The feature *Traffic Separation Scheme Boundary* must only be used to encode the
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentyone]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentyone]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -2591,7 +2762,7 @@ The feature *Traffic Separation Scheme Boundary* must only be used to encode the
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentyone]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -2605,7 +2776,7 @@ The feature *Traffic Separation Scheme Boundary* must only be used to encode the
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentyone]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -2613,9 +2784,16 @@ The feature *Traffic Separation Scheme Boundary* must only be used to encode the
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[fifteen_twentyone]]
+[NOTE]
+--
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# M 23
 
@@ -2654,12 +2832,12 @@ The feature *Traffic Separation Scheme Crossing* must only be used to encode the
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentytwo]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentytwo]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -2727,7 +2905,7 @@ The feature *Traffic Separation Scheme Crossing* must only be used to encode the
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentytwo]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -2741,7 +2919,7 @@ The feature *Traffic Separation Scheme Crossing* must only be used to encode the
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentytwo]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -2749,9 +2927,16 @@ The feature *Traffic Separation Scheme Crossing* must only be used to encode the
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[fifteen_twentytwo]]
+[NOTE]
+--
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# M 21
 
@@ -2801,7 +2986,7 @@ The feature *Traffic Separation Scheme Roundabout* must only be used to encode t
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentythree]
 
 3+| fixed date range
 2+| 3+| See <<sec_2.4.8>>
@@ -2811,12 +2996,12 @@ The feature *Traffic Separation Scheme Roundabout* must only be used to encode t
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentythree]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentythree]
 
 3+| IMO adopted
 2+| _(CATTSS)_
@@ -2843,7 +3028,7 @@ The feature *Traffic Separation Scheme Roundabout* must only be used to encode t
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentythree]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -2857,7 +3042,7 @@ The feature *Traffic Separation Scheme Roundabout* must only be used to encode t
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentythree]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -2869,16 +3054,27 @@ The feature *Traffic Separation Scheme Roundabout* must only be used to encode t
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[fifteen_twentythree]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# M 20.1-27.3, 29.1
 
 [[sec_15.23.1]]
 ==== Traffic separation schemes (see S4 -- B-435.1-3)
 
-If it is required to encode a traffic separation scheme (TSS), it must be done using:- Deep Water routes (DW -- a route within defined limits which has been accurately surveyed for clearance of sea bottom and submerged obstacles as indicated on the chart. (IMO Ships Routeing, 2010)). Deep Water routes are encoded using *Deep Water Route Centreline*, *Deep Water Route Part* and *Deep Water Route* features (see <<sec_15.13;to!sec_15.15>>);- *Inshore Traffic Zone* (see <<sec_15.16>>);- *Precautionary Area*(see <<sec_15.17>>);- *Separation Zone or Line*, *Traffic Separation Scheme Boundary*, *Traffic Separation Scheme Crossing*, *Traffic Separation Scheme Lane Part*, *Traffic Separation Scheme Roundabout* (see <<sec_15.18;to!sec_15.22>>); and- Navigational aids features (see Sections18 to 21).To define the complete traffic separation scheme system, these features must be associated with the feature *Traffic Separation Scheme* using the association *Traffic Separation Scheme Aggregation* (see <<sec_25.18>>); and any associated aids to navigation should be associated with the *Traffic Separation Scheme* using the association *Aids to Navigation Association* (see <<sec_25.2>>).
+If it is required to encode a traffic separation scheme (TSS), it must be done using:- Deep Water routes (DW -- a route within defined limits which has been accurately surveyed for clearance of sea bottom and submerged obstacles as indicated on the chart. (IMO Ships Routeing, 2010)). Deep Water routes are encoded using *Deep Water Route Centreline*, *Deep Water Route Part* and *Deep Water Route* features (see <<sec_15.13;to!sec_15.15>>);- *Inshore Traffic Zone* (see <<sec_15.16>>);- *Precautionary Area*(see <<sec_15.17>>);- *Separation Zone or Line*, *Traffic Separation Scheme Boundary*, *Traffic Separation Scheme Crossing*, *Traffic Separation Scheme Lane Part*, *Traffic Separation Scheme Roundabout* (see <<sec_15.18;to!sec_15.22>>); and- Navigational aids features (see Sections18 to 21).
+
+To define the complete traffic separation scheme system, these features must be associated with the feature *Traffic Separation Scheme* using the association *Traffic Separation Scheme Aggregation* (see <<sec_25.18>>); and any associated aids to navigation should be associated with the *Traffic Separation Scheme* using the association *Aids to Navigation Association* (see <<sec_25.2>>).
 
 [underline]#Remarks:#
 
@@ -2922,7 +3118,7 @@ If it is required to encode a traffic separation scheme (TSS), it must be done u
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentyfour]
 
 3+| fixed date range
 2+| 3+| See <<sec_2.4.8>>
@@ -2932,12 +3128,12 @@ If it is required to encode a traffic separation scheme (TSS), it must be done u
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentyfour]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentyfour]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -2946,7 +3142,7 @@ If it is required to encode a traffic separation scheme (TSS), it must be done u
 
 3+| nationality
 2+| (NATION)
-3+| | TE | 0,1 ^†^
+3+| | TE | 0,1 footnoteblock:[fifteen_twentyfour]
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
@@ -2961,7 +3157,7 @@ If it is required to encode a traffic separation scheme (TSS), it must be done u
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentyfour]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -2975,7 +3171,7 @@ If it is required to encode a traffic separation scheme (TSS), it must be done u
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentyfour]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -2984,16 +3180,35 @@ If it is required to encode a traffic separation scheme (TSS), it must be done u
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.The attribute *nationality* is mandatory if *Archipelagic Sea Lane Area* is not associated with the feature *Archipelagic Sea Lane* using the association *ASL Aggregation*.For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[fifteen_twentyfour]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+The attribute *nationality* is mandatory if *Archipelagic Sea Lane Area* is not associated with the feature *Archipelagic Sea Lane* using the association *ASL Aggregation*.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# M 17
 
 [[sec_15.24.1]]
 ==== Archipelagic Sea Lane area (see S-4 -- B-435.10)
 
-Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) states that: "an archipelagic State may designate sea lanes ..., suitable for the continuous and expeditious passage of foreign ships ... through ... its archipelagic waters and the adjacent Territorial Sea. ... All ships ... enjoy the right of archipelagic sea lanes passage in such sea lanes ... [which] include all normal passage routes used as routes for international navigation … through archipelagic waters". (Note: references to aircraft and air routes in UNCLOS have been omitted in these extracts from Article 53). (IHO S-4 B-435.10, C-51 Appendix 2 Part II).Any archipelagic State which wishes to designate Archipelagic Sea Lanes (ASL) must propose them to IMO for adoption as ASL including all normal passage routes and navigational channels as required by UNCLOS. ASL are adopted by IMO in accordance with the relevant provisions of UNCLOS.If it is required to encode an Archipelagic Sea Lane, it must be done using *Archipelagic Sea Lane Area* and/or *Archipelagic Sea Lane Axis* (see <<sec_15.25>>) features, and possibly navigational aids features.The unique character of Archipelagic Sea Lanes (ASLs) is specified by UNCLOS Article 53 and Part H, General Provision of IMO Ships Routeing. Further information is provided in the IHO publication C-51 (Manual on Technical Aspects of the United Nations Convention on the Law of the Sea).The encoding of relationships between these features is defined in <<sec_15.27>>.
+Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) states that: "an archipelagic State may designate sea lanes ..., suitable for the continuous and expeditious passage of foreign ships ... through ... its archipelagic waters and the adjacent Territorial Sea. ... All ships ... enjoy the right of archipelagic sea lanes passage in such sea lanes ... [which] include all normal passage routes used as routes for international navigation … through archipelagic waters". (Note: references to aircraft and air routes in UNCLOS have been omitted in these extracts from Article 53). (IHO S-4 B-435.10, C-51 Appendix 2 Part II).
+
+Any archipelagic State which wishes to designate Archipelagic Sea Lanes (ASL) must propose them to IMO for adoption as ASL including all normal passage routes and navigational channels as required by UNCLOS. ASL are adopted by IMO in accordance with the relevant provisions of UNCLOS.
+
+If it is required to encode an Archipelagic Sea Lane, it must be done using *Archipelagic Sea Lane Area* and/or *Archipelagic Sea Lane Axis* (see <<sec_15.25>>) features, and possibly navigational aids features.
+
+The unique character of Archipelagic Sea Lanes (ASLs) is specified by UNCLOS Article 53 and Part H, General Provision of IMO Ships Routeing. Further information is provided in the IHO publication C-51 (Manual on Technical Aspects of the United Nations Convention on the Law of the Sea).
+
+The encoding of relationships between these features is defined in <<sec_15.27>>.
 
 [underline]#Remarks:#
 
@@ -3036,7 +3251,7 @@ Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) state
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentyfive]
 
 3+| fixed date range
 2+| 3+| See <<sec_2.4.8>>
@@ -3046,12 +3261,12 @@ Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) state
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentyfive]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentyfive]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -3060,7 +3275,7 @@ Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) state
 
 3+| nationality
 2+| (NATION)
-3+| | TE | 0,1 ^†^
+3+| | TE | 0,1 footnoteblock:[fifteen_twentyfive]
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
@@ -3075,7 +3290,7 @@ Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) state
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentyfive]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -3089,7 +3304,7 @@ Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) state
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentyfive]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -3098,16 +3313,29 @@ Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) state
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.The attribute *nationality* is mandatory if *Archipelagic Sea Lane Axis* is not associated with the feature *Archipelagic Sea Lane* using the association *ASL Aggregation*.For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[fifteen_twentyfive]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+The attribute *nationality* is mandatory if *Archipelagic Sea Lane Axis* is not associated with the feature *Archipelagic Sea Lane* using the association *ASL Aggregation*.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# M 17
 
 [[sec_15.25.1]]
 ==== Archipelagic Sea Lane Axis (see S-4 -- B-435.10)
 
-Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) states that: "an archipelagic State may designate sea lanes ..., suitable for the continuous and expeditious passage of foreign ships ... through ... its archipelagic waters and the adjacent Territorial Sea. ... All ships ... enjoy the right of archipelagic sea lanes passage in such sea lanes ... [which] include all normal passage routes used as routes for international navigation … through archipelagic waters". (Note: references to aircraft and air routes in UNCLOS have been omitted in these extracts from Article 53). (IHO S-4 B-435.10, C-51 Appendix 2 Part II).The axis lineof an Archipelagic Sea lane (ASL) is encoded in ENCs only for the purpose of defining the sea lane. The axis line does not indicate any routes or recommended tracks as defined in IMO publication "__Ships' Routeing__"Part A.
+Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) states that: "an archipelagic State may designate sea lanes ..., suitable for the continuous and expeditious passage of foreign ships ... through ... its archipelagic waters and the adjacent Territorial Sea. ... All ships ... enjoy the right of archipelagic sea lanes passage in such sea lanes ... [which] include all normal passage routes used as routes for international navigation … through archipelagic waters". (Note: references to aircraft and air routes in UNCLOS have been omitted in these extracts from Article 53). (IHO S-4 B-435.10, C-51 Appendix 2 Part II).
+
+The axis lineof an Archipelagic Sea lane (ASL) is encoded in ENCs only for the purpose of defining the sea lane. The axis line does not indicate any routes or recommended tracks as defined in IMO publication "__Ships' Routeing__"Part A.
 
 [underline]#Remarks:#
 
@@ -3148,7 +3376,7 @@ Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) state
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentysix]
 
 3+| fixed date range
 2+| 3+| See <<sec_2.4.8>>
@@ -3158,12 +3386,12 @@ Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) state
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentysix]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentysix]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -3187,7 +3415,7 @@ Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) state
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentysix]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -3201,7 +3429,7 @@ Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) state
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentysix]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -3212,9 +3440,18 @@ Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) state
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[fifteen_twentysix]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# M 17
 
@@ -3267,7 +3504,7 @@ To define the complete Archipelagic Sea Lane (ASL) system, the features *Archipe
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentyseven]
 
 3+| fixed date range
 2+| 3+| See <<sec_2.4.8>>
@@ -3277,12 +3514,12 @@ To define the complete Archipelagic Sea Lane (ASL) system, the features *Archipe
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentyseven]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentyseven]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -3291,7 +3528,7 @@ To define the complete Archipelagic Sea Lane (ASL) system, the features *Archipe
 
 3+| orientation value
 2+| _(ORIENT)_
-3+| | RE | 0,2 ^†^
+3+| | RE | 0,2 footnoteblock:[fifteen_twentyseven]
 
 3+| periodic date range
 2+| 3+| See <<sec_2.4.8>>
@@ -3334,7 +3571,7 @@ To define the complete Archipelagic Sea Lane (ASL) system, the features *Archipe
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentyseven]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -3348,7 +3585,7 @@ To define the complete Archipelagic Sea Lane (ASL) system, the features *Archipe
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentyseven]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -3356,16 +3593,29 @@ To define the complete Archipelagic Sea Lane (ASL) system, the features *Archipe
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ For radio calling-in points of type point, the attribute *orientation value* is mandatory.Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[fifteen_twentyseven]]
+[NOTE]
+--
+For radio calling-in points of type point, the attribute *orientation value* is mandatory.
+
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# M 40.1-2
 
 [[sec_15.27.1]]
 ==== Radio calling-in (reporting) points (see S-4 -- B-488.1 and B-488.2)
 
-Radio reporting points, also called radio calling-in points, have been established in certain busy waterways and port approaches to assist traffic control. On passing these points or crossing a defined line vessels are required to report on VHF to a Traffic Control Centre.If it is required to encode a radio reporting point or line, it must be done using the feature *Radio Calling-In Point*.
+Radio reporting points, also called radio calling-in points, have been established in certain busy waterways and port approaches to assist traffic control. On passing these points or crossing a defined line vessels are required to report on VHF to a Traffic Control Centre.
+
+If it is required to encode a radio reporting point or line, it must be done using the feature *Radio Calling-In Point*.
 
 [underline]#Remarks:#
 
@@ -3415,7 +3665,7 @@ Radio reporting points, also called radio calling-in points, have been establish
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentyeight]
 
 3+| fixed date range
 2+| 3+| See <<sec_2.4.8>>
@@ -3425,12 +3675,12 @@ Radio reporting points, also called radio calling-in points, have been establish
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentyeight]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentyeight]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -3475,7 +3725,7 @@ Radio reporting points, also called radio calling-in points, have been establish
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentyeight]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -3489,7 +3739,7 @@ Radio reporting points, also called radio calling-in points, have been establish
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentyeight]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -3497,9 +3747,18 @@ Radio reporting points, also called radio calling-in points, have been establish
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[fifteen_twentyeight]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# M 50, 51
 
@@ -3551,7 +3810,7 @@ If it is required to encode a ferry route, it must be done using the feature *Fe
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentynine]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -3581,7 +3840,7 @@ If it is required to encode a ferry route, it must be done using the feature *Fe
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentynine]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -3595,7 +3854,7 @@ If it is required to encode a ferry route, it must be done using the feature *Fe
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_twentynine]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -3603,16 +3862,25 @@ If it is required to encode a ferry route, it must be done using the feature *Fe
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[fifteen_twentynine]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# M 32.1-2
 
 [[sec_15.29.1]]
 ==== Radar reference lines (see S-4 -- B-487.2)
 
-Radar reference linesare mid-channel lines corresponding to lines incorporated in Vessel Traffic Services (VTS) radar displays. A line is used as a positional reference so that the VTS authorities may easily provide a vessel with its position, relative to the line, when visibility is poor. These must be charted on appropriate optimum display scale ENC data.If it is required to encode a radar reference line, it must be done using the feature *Radar Line*.
+Radar reference linesare mid-channel lines corresponding to lines incorporated in Vessel Traffic Services (VTS) radar displays. A line is used as a positional reference so that the VTS authorities may easily provide a vessel with its position, relative to the line, when visibility is poor. These must be charted on appropriate optimum display scale ENC data.
+
+If it is required to encode a radar reference line, it must be done using the feature *Radar Line*.
 
 [underline]#Remarks:#
 
@@ -3657,7 +3925,7 @@ Radar reference linesare mid-channel lines corresponding to lines incorporated i
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_thirty]
 
 3+| fixed date range
 2+| 3+| See <<sec_2.4.8>>
@@ -3667,12 +3935,12 @@ Radar reference linesare mid-channel lines corresponding to lines incorporated i
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_thirty]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_thirty]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -3697,7 +3965,7 @@ Radar reference linesare mid-channel lines corresponding to lines incorporated i
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_thirty]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -3711,7 +3979,7 @@ Radar reference linesare mid-channel lines corresponding to lines incorporated i
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fifteen_thirty]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -3719,16 +3987,27 @@ Radar reference linesare mid-channel lines corresponding to lines incorporated i
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[fifteen_thirty]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# M 31
 
 [[sec_15.30.1]]
 ==== Radar ranges (see S-4 -- B-487.1)
 
-Many large ports have a radar surveillance system covering their approaches to provide guidance for vessels, particularly in poor visibility. The maximum range of the system forms an arc or series of overlapping arcs.If it is required to encode a radar range, it must be done using the feature *Radar Range*.
+Many large ports have a radar surveillance system covering their approaches to provide guidance for vessels, particularly in poor visibility. The maximum range of the system forms an arc or series of overlapping arcs.
+
+If it is required to encode a radar range, it must be done using the feature *Radar Range*.
 
 [underline]#Remarks:#
 
@@ -3779,7 +4058,9 @@ Many large ports have a radar surveillance system covering their approaches to p
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnote:fifteen_thirtyone[Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
 3+| height
 2+| (HEIGHT)
@@ -3828,7 +4109,7 @@ Many large ports have a radar surveillance system covering their approaches to p
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:fifteen_thirtyone[]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -3842,7 +4123,7 @@ Many large ports have a radar surveillance system covering their approaches to p
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:fifteen_thirtyone[]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -3850,8 +4131,6 @@ Many large ports have a radar surveillance system covering their approaches to p
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
 |===
 
 [underline]#INT 1 Reference:# M 30; S 1

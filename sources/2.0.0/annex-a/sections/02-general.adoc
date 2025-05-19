@@ -395,7 +395,7 @@ one of: *height*; *value of sounding*
 | *Structure Over Navigable Water*      | *horizontal clearance fixed*; *vertical clearance fixed*
 | *Swept Area*                          | *depth range minimum value* *
 | *Territorial Sea Area*                | *nationality* *
-| *Tidal Stream -- Flood/Ebb*            | *category of tidal stream*; *orientation*; *speed*
+| *Tidal Stream -- Flood/Ebb*           | *category of tidal stream*; *orientation*; *speed*
 | *Tidal Stream Panel Data*             | *station name*; *tidal stream panel values* *
 | *Traffic Separation Scheme Lane Part* | *orientation value* (except when the lane part is a junction)
 | *Two-Way Route Part*                  | *orientation value*; *traffic flow*
@@ -433,7 +433,7 @@ one of: *category of wreck*; *value of sounding*
 
 [NOTE]
 ====
-Sub-attributes of complex attributes, as well as the complex attribute itself, may also be designated as mandatory (see NOTE 2 below). "Conditional" mandatory attributes are identified in the feature Tables in Sections 3-24 by the superscript ^†^, with qualifying comments included after the attribute list for the relevant feature; and are also indicated in <<table_2-3>> above by the following additional text:
+Sub-attributes of complex attributes, as well as the complex attribute itself, may also be designated as mandatory (see <<note_2_table_2-3>> below). "Conditional" mandatory attributes are identified in the feature Tables in Sections 3-24 by the superscript ^†^, with qualifying comments included after the attribute list for the relevant feature; and are also indicated in <<table_2-3>> above by the following additional text:
 
 _over navigable water*_:: for *Bridge*, *Cable Overhead*, *Conveyor*, *Pipeline Overhead*
 
@@ -452,6 +452,7 @@ _one of_:: for *Cable Overhead*, *Obstruction*, *Wreck*
 Compilers must consider these conditional circumstances when encoding features for ENC, as well as any additional information given in the feature class descriptions in this document. For example, when encoding a *Cation Area*, the mandatory attributes are _at least one of_*information* or *pictorial representation* -- if the relevant information is textual, *information* must be populated and there is no requirement to populate *pictorial representation*, which therefore should not be populated with an empty (null) value, as it is not mandatory in this case.
 ====
 
+[[note_2_table_2-3]]
 NOTE: For complex attributes, at least one sub-attribute is mandatory (or conditionally mandatory) however mandatory sub-attributes of complex attributes have not been included in <<table_2-3>> above. Where the sub-attribute of a complex is conditionally mandatory (for example, for the feature *Seabed Area*_at least one of_ the sub-attributes *nature of surface* or *nature of surface -- qualifying terms* must be populated for the complex attribute *surface characteristics*), this is indicated by the superscript ^†^ as for the "Conditional" mandatory attributes described in Note 1 above.
 
 NOTE: The attribute *colour pattern* is mandatory for any feature (except lights features) that has more than one value populated for the attribute *colour*.
@@ -1254,8 +1255,9 @@ In order to best determine the appropriate level of masking required for an ENC 
 
 The following scenarios where masking is recommended should be considered by compilers;
 
-1. Surface features crossing ENC cell boundaries:
-
+. Surface features crossing ENC cell boundaries:
++
+--
 When a single feature of type surface crosses the boundaries of adjoining ENC cells, mask the edge where it shares the geometry of the boundary in each ENC:
 
 [[figure_2-4]]
@@ -1310,9 +1312,11 @@ h| Feature Type h| Comment
 | *Vessel Traffic Service Area*   |
 | *Water Turbulence*              |
 |===
+--
 
 . Surface features having ECDIS symbol pattern fill:
-
++
+--
 Surfaces symbolised in ECDIS with a patterned fill, and for which the outer edge of the surface has no significance (or is subject to change or intermittent), for example *Vegetation* (see <<fig_2-6>> below) or *Water Turbulence* features, may have the boundary of the surface masked to reduce screen clutter.
 
 [[fig_2-6]]
@@ -1320,10 +1324,11 @@ Surfaces symbolised in ECDIS with a patterned fill, and for which the outer edge
 image::figure-2-6.png["",602,156]
 
 Compilers must take care that the surface is large enough at the optimum display scale of the ENC data (and at smaller optimum display scales at which it is intended that the feature should be displayed) so that at least one pattern symbol is displayed in the area. If this is not the case, the boundary of the surface should not be masked. Alternatively, a point feature may be encoded instead of the surface feature. It may be useful to load and display the ENC in an ECDIS in order to assist with making decisions as to the best encoding option to adopt in individual circumstances.
+--
 
-[start=3]
 . Routeing measures -- entrance and exit edges:
-
++
+--
 Routeing measures such as Traffic Separation Schemes (TSS), Two-Way Routes and Deep Water Routes have defined "ends" through which vessels enter and exit the route. Most routeing measures also consist of multiple components having different orientations. Where encoded, many of the features comprising the routeing measure symbolise along the edges of the area. Where the edges corresponding to the entry/exit points and between individual components of the route have not been masked, the impression of the route as a single routeing measure may not be apparent to the Mariner, and cause confusion. Compilers should therefore mask the entry/exit edges, and all edges between components within the routeing measure.
 
 <<table_2-10>> below lists those area features that should have entry/exit edges, and all edges between components within the routeing measure masked.
@@ -1362,6 +1367,7 @@ image::figure-2-8.jpeg[Shape3,388,248]
 ====
 In the example above it is also possible to mask the areas of water turbulence (indicated in <<fig_2-8>> by red arrows -- see scenario 2 above), however the small area to the east of the West cardinal buoy is too small to display the symbol at the optimum display scale of the ENC data. In cases such as this the compiler should consider capturing this as a *Water Turbulence* feature of type point.
 ====
+--
 
 [[sec_2.6]]
 === Description of table format for S-101 meta, geo and information features

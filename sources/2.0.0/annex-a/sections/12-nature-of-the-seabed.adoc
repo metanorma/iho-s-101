@@ -5,52 +5,31 @@
 [[sec_12.1]]
 === Seabed area
 
-[cols="77,52,52,52,52,52,52,52,52,77,41", options="unnumbered"]
+[cols="77,52,52,52,52,52,52,52,52,77", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *SEABED AREA*. A region of the [[bottom]] including the material of which it is composed and its physical characteristics. Also called nature of bottom, character (or characteristics) of the bottom, or quality of the bottom.(Adapted from IHO Dictionary -- S-32). |
-10+| *[underline]#S-101 Geo Feature:#* *Seabed Area (SBDARE)* |
-10+| *[underline]#Primitives:#* *Point, Curve, Surface* |
+10+| [underline]#IHO Definition:# *SEABED AREA*. A region of the [[bottom]] including the material of which it is composed and its physical characteristics. Also called nature of bottom, character (or characteristics) of the bottom, or quality of the bottom.(Adapted from IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Seabed Area (SBDARE)*
+10+| *[underline]#Primitives:#* *Point, Curve, Surface*
 
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
-|
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 
-3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity |
-3+| feature name
-2+| 3+| See <<sec_2.5.8>>
-| C
-| 0,*
-|
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C       | 0,*
+3+| language     2+| 3+| ISO 639-2/T       | (S) TE  | 1,1
+3+| name         2+| _(OBJNAM) (NOBJNM)_ 3+|         | (S) TE | 1,1
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
-|
-
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
-3+| | (S) TE
-| 1,1
-|
-
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
-| 0,1 ^†^
-|
+2: alternate name display | (S) EN | 0,1 footnoteblock:[twelve_one]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
 | URN
 | 0,1
-|
 
 3+| surface characteristics
 2+| 3+| | C | 1,\* (ordered)
-|
 
 3+| nature of surface 2+| (NATSUR) 3+|
 1: mud  +
@@ -65,7 +44,8 @@
 11: lava +
 14: coral +
 17: shells +
-18: boulder | (S) EN | 0,1 ^†^ |
+18: boulder | (S) EN | 0,1 footnoteblock:[twelve_one]
+
 3+| nature of surface -- qualifying terms 2+| (NATQUA) 3+|
 1: fine +
 2: medium +
@@ -76,64 +56,51 @@
 7: stiff +
 8: volcanic +
 9: calcareous +
-10: hard | (S) EN | 0,3 ^†^ |
-3+| underlying layer
-2+| 3+| | (S) IN
-| 0,1
-|
+10: hard | (S) EN | 0,3 footnoteblock:[twelve_one]
+
+3+| underlying layer 2+| 3+| | (S) IN | 0,1
 
 3+| water level effect 2+| (WATLEV) 3+|
 3: always under water/ submerged
 4: covers and uncovers +
-5: awash | EN | 0,1 |
-3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1 |
-3+| information
-2+| 3+| See <<sec_2.4.6>>
-| C
-| 0,*
-|
+5: awash | EN | 0,1
 
-3+| file locator
-2+| 3+| | (S) TE
-| 0,1
-|
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
-3+| | (S) TE
-| 0,1 ^†^
-|
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| headline
-2+| 3+| | (S) TE
-| 0,1
-|
+3+| file locator 2+| 3+| | (S) TE | 0,1
 
-3+| language
-2+| 3+| ISO 639-2/T
-| (S) TE
-| 1,1
-|
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twelve_one]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
-|
+| 0,1 footnoteblock:[twelve_one]
 
-10+| *Feature Associations* |
-| *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity |
-| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,* |
-| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1 |
-| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,* |
-| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,* |
-10+.<| ^†^ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+10+| *Feature Associations*
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twelve_one]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *surface characteristics*, at least one of the sub-attributes *nature of surface* or *nature of surface -- qualifying terms* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-|===
+--
 
 [underline]#INT 1 Reference:# J 1-12, 30-39
 
@@ -450,7 +417,7 @@ h| - Qualifying Terms .2+h| __1__fine .2+h| __2__medium .2+h| __3__coarse .2+h| 
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnoteblock:[twelve_two]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -470,7 +437,7 @@ h| - Qualifying Terms .2+h| __1__fine .2+h| __2__medium .2+h| __3__coarse .2+h| 
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[twelve_two]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -484,7 +451,7 @@ h| - Qualifying Terms .2+h| __1__fine .2+h| __2__medium .2+h| __3__coarse .2+h| 
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[twelve_two]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -492,11 +459,16 @@ h| - Qualifying Terms .2+h| __1__fine .2+h| __2__medium .2+h| __3__coarse .2+h| 
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
-
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[twelve_two]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# J 13.1, 13.2
 
@@ -543,7 +515,7 @@ If it is required to encode marine weed or kelp, it must be done using the featu
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnoteblock:[twelve_three]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -563,7 +535,7 @@ If it is required to encode marine weed or kelp, it must be done using the featu
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[twelve_three]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -577,7 +549,7 @@ If it is required to encode marine weed or kelp, it must be done using the featu
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[twelve_three]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -585,11 +557,16 @@ If it is required to encode marine weed or kelp, it must be done using the featu
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
-
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[twelve_three]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# J 13.1
 
@@ -639,7 +616,7 @@ If it is required to encode seagrass, it must be done using the feature *Seagras
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:twelve_four[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -653,14 +630,13 @@ If it is required to encode seagrass, it must be done using the feature *Seagras
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnote:twelve_four[]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
 
@@ -714,7 +690,7 @@ If it is required to encode sandwaves, this must be done using the feature *Sand
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnoteblock:[twelve_five]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -734,7 +710,7 @@ If it is required to encode sandwaves, this must be done using the feature *Sand
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[twelve_five]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -748,7 +724,7 @@ If it is required to encode sandwaves, this must be done using the feature *Sand
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[twelve_five]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -756,11 +732,16 @@ If it is required to encode sandwaves, this must be done using the feature *Sand
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
-
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 
 |===
+
+[[twelve_five]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
 
 [underline]#INT 1 Reference:# J 15
 

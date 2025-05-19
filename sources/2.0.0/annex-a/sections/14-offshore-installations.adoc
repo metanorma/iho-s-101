@@ -46,7 +46,7 @@
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown)
-6: border stripe | EN | 0,1 ^†^
+6: border stripe | EN | 0,1 footnoteblock:[fourteen_one]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
@@ -71,7 +71,7 @@
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_one]
 
 3+| fixed date range
 2+| 3+| See <<sec_2.4.8>>
@@ -81,12 +81,12 @@
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_one]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_one]
 
 3+| flare stack
 2+| _*(LNDMRK)*_
@@ -142,7 +142,7 @@
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_one]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -156,7 +156,7 @@
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_one]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+| *Feature Associations*
@@ -167,15 +167,20 @@
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ The attribute *colour pattern* is mandatory for offshore platforms that have more than one value populated for the attribute *colour*.
+
+|===
+
+[[fourteen_one]]
+[NOTE]
+--
+The attribute *colour pattern* is mandatory for offshore platforms that have more than one value populated for the attribute *colour*.
 
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-|===
+--
 
 [underline]#INT 1 Reference:# L 2, 10-15, 17
 
@@ -268,7 +273,7 @@ If it is required to indicate the presence of a flare stack on an offshore platf
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_two]
 
 3+| fixed date range
 2+| 3+| See <<sec_2.4.8>>
@@ -278,12 +283,12 @@ If it is required to indicate the presence of a flare stack on an offshore platf
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_two]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_two]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -308,7 +313,7 @@ If it is required to indicate the presence of a flare stack on an offshore platf
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_two]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -322,7 +327,7 @@ If it is required to indicate the presence of a flare stack on an offshore platf
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_two]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -331,13 +336,18 @@ If it is required to indicate the presence of a flare stack on an offshore platf
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+|===
+
+[[fourteen_two]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-|===
+--
 
 [underline]#INT 1 Reference:# L 30.1, 31.1, 32; Q 42
 
@@ -402,7 +412,7 @@ If it is required to encode a submarine cable, it must be done using the feature
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_three]
 
 3+| fixed date range
 2+| 3+| See <<sec_2.4.8>>
@@ -412,12 +422,12 @@ If it is required to encode a submarine cable, it must be done using the feature
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_three]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_three]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -483,7 +493,7 @@ If it is required to encode a submarine cable, it must be done using the feature
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_three]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -497,7 +507,7 @@ If it is required to encode a submarine cable, it must be done using the feature
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_three]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -505,13 +515,18 @@ If it is required to encode a submarine cable, it must be done using the feature
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+|===
+
+[[fourteen_three]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-|===
+--
 
 [underline]#INT 1 Reference:# L 30.2, 31.2
 
@@ -581,7 +596,7 @@ If it is required to encode a submarine cable area, it must be done using the fe
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_four]
 
 3+| fixed date range
 2+| 3+| See <<sec_2.4.8>>
@@ -591,12 +606,12 @@ If it is required to encode a submarine cable area, it must be done using the fe
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_four]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_four]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -662,7 +677,7 @@ If it is required to encode a submarine cable area, it must be done using the fe
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_four]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -676,7 +691,7 @@ If it is required to encode a submarine cable area, it must be done using the fe
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_four]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+| *Feature Associations*
@@ -685,13 +700,18 @@ If it is required to encode a submarine cable area, it must be done using the fe
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+|===
+
+[[fourteen_four]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-|===
+--
 
 [underline]#INT 1 Reference:# D 29; L 40.1, 41.1, 42, 44
 
@@ -763,7 +783,7 @@ If it is required to encode diffusers and cribs, this must be done using *Obstru
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_five]
 
 3+| fixed date range
 2+| 3+| See <<sec_2.4.8>>
@@ -773,12 +793,12 @@ If it is required to encode diffusers and cribs, this must be done using *Obstru
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_five]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_five]
 
 3+| interoperability identifier
 2+| 3+| MRN (see <<sec_27.114>>)
@@ -858,7 +878,7 @@ If it is required to encode diffusers and cribs, this must be done using *Obstru
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_five]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -872,7 +892,7 @@ If it is required to encode diffusers and cribs, this must be done using *Obstru
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_five]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -880,13 +900,18 @@ If it is required to encode diffusers and cribs, this must be done using *Obstru
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+|===
+
+[[fourteen_five]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-|===
+--
 
 [underline]#INT 1 Reference:# L 40.2, 41.2
 
@@ -953,7 +978,7 @@ If it is required to encode a submarine pipeline area, it must be done using the
 1: default name display +
 2: alternate name display +
 | (S) EN
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_six]
 
 3+| fixed date range
 2+| 3+| See <<sec_2.4.8>>
@@ -963,12 +988,12 @@ If it is required to encode a submarine pipeline area, it must be done using the
 3+| date end
 2+| (DATEND)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_six]
 
 3+| date start
 2+| (DATSTA)
 3+| | (S) TD
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_six]
 
 3+| height
 2+| (HEIGHT)
@@ -1073,7 +1098,7 @@ If it is required to encode a submarine pipeline area, it must be done using the
 3+| file reference
 2+| _(TXTDSC) (NTXTDS)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_six]
 
 3+| headline
 2+| 3+| | (S) TE
@@ -1087,7 +1112,7 @@ If it is required to encode a submarine pipeline area, it must be done using the
 3+| text
 2+| _(INFORM) (NINFOM)_
 3+| | (S) TE
-| 0,1 ^†^
+| 0,1 footnoteblock:[fourteen_six]
 
 10+| *Feature Associations*
 | *S-101 Role* 3+| *Association Type* 3+| *Associated to* 2+h| Type h| Multiplicity
@@ -1095,13 +1120,18 @@ If it is required to encode a submarine pipeline area, it must be done using the
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
-10+.<| ^†^ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+|===
+
+[[fourteen_six]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
-
-|===
+--
 
 [underline]#INT 1 Reference:# L 4, 5.2
 
