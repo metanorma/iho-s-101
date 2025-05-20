@@ -200,7 +200,7 @@ Full details of all dangers to navigation must be encoded except in those areas 
 
 Underwater rocks may cover and uncover, may be awash, or may be always underwater.
 
-Population of the attributes *quality of* **vertical** *measurement*, *water level effect*, *reported date* and the spatial attribute *quality of horizontal measurement* are described in the Table below:
+Population of the attributes *quality of vertical* *measurement*, *water level effect*, *reported date* and the spatial attribute *quality of horizontal measurement* are described in the Table below:
 
 [[table_13-2]]
 .Underwater rocks -- Attribute encoding
@@ -374,7 +374,7 @@ The ECDIS "system" attribute *default clearance depth* must be populated with a 
 
 Wrecks must be encoded to whatever depth they are considered to be of interest, also taking account of the needs of submarines and fishing vessels where appropriate, but not generally in water deeper than 2000m. (Trawling regularly takes place in depths of 400m and occasionally in depths as great as 2000m).
 
-Population of the attributes *category of wreck*, *quality of* **vertical** *measurement*, *technique of vertical measurement* and *water level effect* are described in <<table_13-3>> below.
+Population of the attributes *category of wreck*, *quality of vertical* *measurement*, *technique of vertical measurement* and *water level effect* are described in <<table_13-3>> below.
 
 In the following Table, the symbol '/' indicates that this attribute is not relevant for the wreck instance and therefore must not be encoded. A blank indicates that the encoder may choose a relevant value for the attribute.
 
@@ -618,7 +618,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[thirteen_six]]
 [NOTE]
 --
-Exactly one of the attributes *height* or *value of* **sounding** must be populated.
+Exactly one of the attributes *height* or *value of sounding* must be populated.
 
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
@@ -634,7 +634,7 @@ The ECDIS "system" attribute *default clearance depth* must be populated with a 
 
 If it is required to encode features considered to be an obstruction or hazard to surface navigation that cannot be encoded using any other S-101 specific feature (for example *Underwater Rock*, *Wreck*), it must be done using the feature *Obstruction*.
 
-Population of the attributes *quality of* **vertical** *measurement*, *technique of vertical measurement* and *water level effect* are described in <<table_13-4>> below.
+Population of the attributes *quality of vertical* *measurement*, *technique of vertical measurement* and *water level effect* are described in <<table_13-4>> below.
 
 In the following Table, the symbol '/' indicates that this attribute is not relevant for the obstruction instance and therefore must not be encoded. A blank indicates that the encoder may choose a relevant value for the attribute.
 
@@ -712,8 +712,8 @@ Where mangrove areas are required to be generalised on smaller optimum display s
 [cols="10"]
 |===
 10+| [underline]#IHO Definition:# *FOUL GROUND*. Areas over which it is safe to navigate but which should be avoided for anchoring, taking the ground or ground fishing. (IHO Dictionary -- S-32).
-10+| *[underline]#S-101 Geo Feature:#* *Foul Ground* __**(OBSTRN)**__
-10+| *[underline]#Primitives:#* *Point, Surface*
+10+| *[underline]#S-101 Geo Feature:# Foul Ground _(OBSTRN)_*
+10+| *[underline]#Primitives:# Point, Surface*
 
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
@@ -1176,7 +1176,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[thirteen_ten]]
 [NOTE]
 --
-Exactly one of the attributes *height* or *value of* **sounding** must be populated.
+Exactly one of the attributes *height* or *value of sounding* must be populated.
 
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 

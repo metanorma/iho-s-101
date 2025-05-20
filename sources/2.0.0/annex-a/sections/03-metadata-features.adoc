@@ -353,7 +353,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 .Buoyage system and direction
 image::figure-3-1.png["",465,188]
 
-Within a dataset, there may be some areas where the direction of buoyage is defined by local rules and must, therefore, be specified. If required, these areas must be encoded as *Local* **Direction of Buoyage** features, with the mandatory attribute *orientation value* indicating the direction of buoyage. *Local* **Direction of Buoyage** features must not overlap, but in areas where local buoyage directions apply, *Local* **Direction of Buoyage** features must overlap *Navigational System of Marks* features (see <<sec_3.6>>) (see <<fig_3-1>> above).
+Within a dataset, there may be some areas where the direction of buoyage is defined by local rules and must, therefore, be specified. If required, these areas must be encoded as *Local Direction of Buoyage* features, with the mandatory attribute *orientation value* indicating the direction of buoyage. *Local Direction of Buoyage* features must not overlap, but in areas where local buoyage directions apply, *Local Direction of Buoyage* features must overlap *Navigational System of Marks* features (see <<sec_3.6>>) (see <<fig_3-1>> above).
 
 [underline]#Remarks:#
 
@@ -704,7 +704,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[sec_3.10.1]]
 ==== Vertical datum
 
-Vertical (height) datum information is encoded using the Meta feature *Vertical Datum of Data*, or by populating the attribute *vertical datum* on individual geo features. The values encoded in the attributes *elevation*, *height*, *vertical clearance closed*, *vertical clearance fixed*, *vertical clearance open* and *vertical* **clearance safe** (positive values up) are referenced to the specified datum(s). *vertical datum* must not be encoded on any geo feature instance unless at least one of the above attributes is also encoded on that feature.
+Vertical (height) datum information is encoded using the Meta feature *Vertical Datum of Data*, or by populating the attribute *vertical datum* on individual geo features. The values encoded in the attributes *elevation*, *height*, *vertical clearance closed*, *vertical clearance fixed*, *vertical clearance open* and *vertical clearance safe* (positive values up) are referenced to the specified datum(s). *vertical datum* must not be encoded on any geo feature instance unless at least one of the above attributes is also encoded on that feature.
 
 The vertical datum of the dataset must be encoded using the Meta feature *Vertical Datum of Data*:
 
@@ -883,7 +883,7 @@ The technique of sounding measurement must not be encoded using *technique of ve
 |===
 11+| [underline]#IHO Definition:# *UPDATE INFORMATION*. The Update Information metadata feature is used to represent a change to the information shown.
 11+| *S-101 Metadata Feature:* *Update Information*
-11+| *[underline]#Primitives:#* **Point, Curve, Surface**, *None*
+11+| *[underline]#Primitives:# Point, Curve, Surface, None*
 
 2+| _Real World_ 5+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 

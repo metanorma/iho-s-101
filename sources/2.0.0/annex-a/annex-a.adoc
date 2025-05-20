@@ -2691,7 +2691,7 @@ Environmentally Sensitive Sea Areas (ESSA) should be included on ENCs where ther
 
 If it is required to encode an Environmentally Sensitive Sea Area, it must be done using a *Restricted Area* feature (see <<sec_17.8>>), with attribute *category of restricted area* = _27_ (ESSA) or _28_ (PSSA).
 
-An Environmentally Sensitive Sea Area that is shown on the source as a point symbol should be encoded using a small surfacerestricted area feature__.__
+An Environmentally Sensitive Sea Area that is shown on the source as a point symbol should be encoded using a small surfacerestricted area feature.
 
 [[sec_17.8]]
 === Restricted area
@@ -3391,7 +3391,7 @@ For the purpose of encoding lights in ENC, the following features must be used, 
 * *Light All Around* (see <<sec_19.2>>) for lights having the same character over the whole horizon of interest to marine navigation (all-round lights)), excluding fog detector and air obstruction lights;
 * *Light Sectored* (see <<sec_19.3>>) for lights having one or more sectors which have different characteristics, including directional lights and lights having obscured or partially obscured sectors;
 * *Light Fog Detector* (see <<sec_19.4>>) for lights used to automatically determine conditions of visibility which warrant the turning on or off of a sound signal; and
-* **Light Air Obstruction** (see <<sec_19.5>>) for lights marking an obstacle which constitutes a danger to air navigation.
+* *Light Air Obstruction* (see <<sec_19.5>>) for lights marking an obstacle which constitutes a danger to air navigation.
 
 When encoding a light, the combination of the character and purpose of the light must be evaluated in order to determine the most appropriate light feature from the above list.
 
@@ -3521,7 +3521,7 @@ Bu__, further investigation must be done in order to determine the true position
 [[sec_19.1.6]]
 ==== Lighthouses (see S-4 -- B-457.3)
 
-If it is required to encode a lighthouse, it must be done using a *Landmark* feature (see <<sec_7.2>>), with attributes *category of landmark* = _17_ (tower)and *function* = _33_ (light support)for towers, or using a *Building* feature (see <<sec_6.2>>), with the attribute *function* = __33__, for any other shapes.
+If it is required to encode a lighthouse, it must be done using a *Landmark* feature (see <<sec_7.2>>), with attributes *category of landmark* = _17_ (tower)and *function* = _33_ (light support)for towers, or using a *Building* feature (see <<sec_6.2>>), with the attribute *function* = _33_, for any other shapes.
 
 If it is required to encode the attributes *elevation*, *height* and *vertical length* for a lighthouse, this must be done as described in <<sec_19.1.3>>.
 
@@ -4155,11 +4155,11 @@ If it is required to encode a light sector having a directional function, it mus
 
 Evolving technology in the development of navigational lights has resulted in the installation of complex directional navigation lights with multiple sectors, colours and characteristics, some with oscillating sectors, in many areas where navigation is restricted. These lights may have up to 7 sectors, with the central sector being a very narrow, sometimes intensified, fixed white sector performing the directional function of the light. In the IALA A System, the sectors flanking this directional light may be alternating and oscillate increasingly from white to green (to starboard) and red (to port) with increasing deviation from the track defined by the directional light. These lights will normally be flanked by narrow sectors of fixed green (to starboard) and red (to port). Additionally, there may be outer sectors that are occulting green (to starboard) and red (to port) which oscillate with increasing period of eclipse to isophased or flashing with increasing deviation from the track defined by the directional light. For the IALA B System the colours are reversed. In some cases these complex lights may not conform to IALA. Each of the outer sectors may be very narrow.
 
-If is required to encode an oscillating light sector, it should be done using a *Light Sectored* feature, with iterations of the complex attribute *sector characteristics* as follows: For light sectors in the IALA A system that are alternating and oscillate increasingly from white to green (to starboard) and red (to port) with increasing deviation from the track defined by the directional light:*sector characteristics***:** *light characteristic* = _28_ (Alternating); *colour* = _1,3_ (White, Red); *sector limit*; *sector* **information** (*text*) = __White phase decreases as bearing to light increases__**sector characteristics****:** *light characteristic* = _28_ (Alternating); *colour* = _1,4_ (White, Green); *sector limit*; *sector* **information** (*text*) = __White phase increases as bearing to light increases__For lights in the IALA B system that are alternating and oscillate increasingly from white to red (to starboard) and green (to port) with increasing deviation from the track defined by the directional light; transpose the colours red and green in the above encoding.
+If is required to encode an oscillating light sector, it should be done using a *Light Sectored* feature, with iterations of the complex attribute *sector characteristics* as follows: For light sectors in the IALA A system that are alternating and oscillate increasingly from white to green (to starboard) and red (to port) with increasing deviation from the track defined by the directional light:*sector characteristics***:** *light characteristic* = _28_ (Alternating); *colour* = _1,3_ (White, Red); *sector limit*; *sector information* (*text*) = __White phase decreases as bearing to light increases__**sector characteristics****:** *light characteristic* = _28_ (Alternating); *colour* = _1,4_ (White, Green); *sector limit*; *sector information* (*text*) = __White phase increases as bearing to light increases__For lights in the IALA B system that are alternating and oscillate increasingly from white to red (to starboard) and green (to port) with increasing deviation from the track defined by the directional light; transpose the colours red and green in the above encoding.
 
-For lights in the IALA A system that are occulting green (to starboard) and red (to port) which oscillate with increasing period of eclipse to isophased or flashing with increasing deviation from the track defined by the directional light:*sector characteristics***:** *light characteristic* = _8_ (Occulting); *colour* = _3_ (Red); *sector limit*; *sector* **information** (*text*) = __Light phase decreases as bearing to light increases__**sector characteristics****:** *light characteristic* = _8_ (Occulting); *colour* = _4_ (Green); *sector limit*; *sector* **information** (*text*) = __Light phase increases as bearing to light increases__For lights in the IALA B system that are occulting red (to starboard) and green (to port) which oscillate with increasing period of eclipse to isophased or flashing with increasing deviation from the track defined by the directional light; transpose the colours red and green in the above encoding.
+For lights in the IALA A system that are occulting green (to starboard) and red (to port) which oscillate with increasing period of eclipse to isophased or flashing with increasing deviation from the track defined by the directional light:*sector characteristics***:** *light characteristic* = _8_ (Occulting); *colour* = _3_ (Red); *sector limit*; *sector information* (*text*) = __Light phase decreases as bearing to light increases__**sector characteristics****:** *light characteristic* = _8_ (Occulting); *colour* = _4_ (Green); *sector limit*; *sector information* (*text*) = __Light phase increases as bearing to light increases__For lights in the IALA B system that are occulting red (to starboard) and green (to port) which oscillate with increasing period of eclipse to isophased or flashing with increasing deviation from the track defined by the directional light; transpose the colours red and green in the above encoding.
 
-Oscillating lights which are not IALA should be encoded similar to the above. For instance, where a light contains white sectors that are occulting and oscillate with increasing period of eclipse to isophased or flashing with increasing deviation from the track defined by the directional light:For the sector to port of the track defined by the directional light:*sector characteristics***:** *light characteristic* = _8_ (Occulting); *colour* = _1_ (White); *sector limit*; *sector* **information** (*text*) = __Light phase decreases as bearing to light increases__For the sector to starboard of the track defined by the directional light:*sector characteristics***:** *light characteristic* = _8_ (Occulting); *colour* = _1_ (White); *sector limit*; *sector* **information** (*text*) = __Light phase increases as bearing to light increases__All other light sectors must be encoded using additional iterations of *sector characteristics*, with sub-attributes (including *light sector* or *directional character*) populated in accordance with the characteristics of the sector.
+Oscillating lights which are not IALA should be encoded similar to the above. For instance, where a light contains white sectors that are occulting and oscillate with increasing period of eclipse to isophased or flashing with increasing deviation from the track defined by the directional light:For the sector to port of the track defined by the directional light:*sector characteristics***:** *light characteristic* = _8_ (Occulting); *colour* = _1_ (White); *sector limit*; *sector information* (*text*) = __Light phase decreases as bearing to light increases__For the sector to starboard of the track defined by the directional light:*sector characteristics***:** *light characteristic* = _8_ (Occulting); *colour* = _1_ (White); *sector limit*; *sector information* (*text*) = __Light phase increases as bearing to light increases__All other light sectors must be encoded using additional iterations of *sector characteristics*, with sub-attributes (including *light sector* or *directional character*) populated in accordance with the characteristics of the sector.
 
 [underline]#Distinction:# Cardinal Beacon; Cardinal Buoy; Emergency Wreck Marking Buoy; Installation Buoy; Isolated Danger Beacon; Isolated Danger Buoy; Lateral Beacon; Lateral Buoy; Light Air Obstruction; Light All Around; Light Float; Light Fog Detector; Light Vessel; Safe Water Beacon; Safe Water Buoy; Special Purpose/General Beacon; Special Purpose/General Buoy.
 
@@ -6217,7 +6217,7 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 
 Mooring buoys must be shown on charts of appropriate scale to indicate buoys and moored vessels as possible hazards to navigation as well as, on the largest scales, to facilitate mooring operations.
 
-If it is required to encode a mooring buoy, it must be done using the feature *Mooring* **Buoy**.
+If it is required to encode a mooring buoy, it must be done using the feature *Mooring Buoy*.
 
 [underline]#Remarks:#
 
@@ -10498,7 +10498,7 @@ If it is required to encode identical information associated with multiple geo f
 
 * Within a dataset, individual instances of information associated with a geo feature which cannot be encoded using the descriptive attributes on the feature should be encoded using the attributes *information* or *pictorial representation* on the feature itself, not using *Nautical Information*. However where this information is shared between features contained in a single dataset, or included in multiple datasets within the ENC portfolio, *Nautical Information* may be used.
 * *Nautical Information* must not be used to include a reference to a picture file (attribute *pictorial representation*) to a feature that does not itself include *pictorial representation* as an allowable attribute.
-* The complex attributes *fixed date range* and *periodic date range*, when populated for *Nautical Information*, apply only to *Nautical* **Information** and not to any feature that it may be associated with.
+* The complex attributes *fixed date range* and *periodic date range*, when populated for *Nautical Information*, apply only to *Nautical Information* and not to any feature that it may be associated with.
 
 [underline]#Distinction:# Information Area; Update Information.
 
@@ -11330,7 +11330,7 @@ h| Role Type h| Role h| Associated With h| Multiplicity
 
 [cols="a",options="noheader,unnumbered"]
 |===
-| [underline]#IHO Definition:# *THE* **UPDATE**. A pointer to a feature that describes changes made to a dataset.
+| [underline]#IHO Definition:# *THE UPDATE*. A pointer to a feature that describes changes made to a dataset.
 
 |===
 
@@ -11339,7 +11339,7 @@ h| Role Type h| Role h| Associated With h| Multiplicity
 
 [cols="a",options="noheader,unnumbered"]
 |===
-| [underline]#IHO Definition:# *THE* **UPDATED OBJECT**. A pointer to a feature that has been updated.
+| [underline]#IHO Definition:# *THE UPDATED OBJECT*. A pointer to a feature that has been updated.
 
 |===
 
@@ -16241,70 +16241,122 @@ a| [underline]#IHO Definition:# *CATEGORY OF ZONE OF CONFIDENCE IN DATA*. Classi
 
 ** The full categorisation of each category is as follows:
 
-[cols="25,100,63,103,123,131", options="unnumbered"]
+[cols="^.^25,^.^100,^.^63,103,123,131", options="unnumbered"]
 |===
-| 1 | 2 2+| 3 | 4 | 5
+| 1 | 2 2+| 3 ^| 4 ^| 5
 
-| ZOC ^1^
-| Position Accuracy ^2^
-2+| Depth Accuracy ^3^
+| ZOC footnoteblock:[footnote_27_74_1] | Position Accuracy
+footnote:[Position Accuracy of depicted soundings at 95% CI (2.45 sigma) with respect to the given datum. It is the cumulative error and includes survey, transformation and digitizing errors etc. Position accuracy need not be rigorously computed for ZOCs B, C and D but may be estimated based on type of equipment, calibration regime, historical accuracy etc.]
 
-| Seafloor Coverage
-| Typical Survey Characteristics ^5^
+2+| Depth Accuracy
+footnote:[Depth accuracy of depicted soundings stem:[= a + (b ** d)//100] at 95% CI (2.00 sigma), where d = depth in metres at the critical depth. Depth accuracy need not be rigorously computed for ZOCs B, C and D but may be estimated based on type of equipment, calibration regime, historical accuracy etc.]
 
-.3+| A1
+^.^| Seafloor Coverage ^.^| Typical Survey Characteristics
+footnote:[Typical Survey Characteristics -- these descriptions should be seen as indicative examples only.]
 
-.3+|   5 m + 5% depth
-2+| =0.50 + 1%d
-.3+| Full area search undertaken. Significant seafloor features detected ^4 ^ and depths measured.
-.3+| Controlled, systematic survey ^6^ high position and depth accuracy achieved using DGPS or a minimum three high quality lines of position (LOP) and a multi beam, channel or mechanical sweep system.
-
-| Depth (m) | Accuracy (m)
-
-h| 10301001000 h| ± 0.6± 0.8± 1.5± 10.5
-.3+| A2
-.3+|   20 m
-2+| = 1.00 + 2%d
-.3+| Full area search undertaken. Significant seafloor features detected ^4 ^ and depths measured.
-.3+| Controlled, systematic survey ^6^ achieving position and depth accuracy less than *zone of confidence A1* and using a modern survey echo sounder ^7^ and a sonar or mechanical sweep system.
-
-| Depth (m) | Accuracy (m)
-
-h| 10301001000 h| ± 1.2± 1.6± 3.0± 21.0
-.3+| B
-.3+|   50 m
-2+| = 1.00 + 2%d
-.3+| Full area search not achieved; uncharted features, hazardous to surface navigation are not expected but may exist.
-.3+| Controlled, systematic survey achieving similar depth but lesser position accuracies than **zone of confidence A2**, using a modern survey echo sounder ^7^, but no sonar or mechanical sweep system.
+.3+| A1 .3+|  stem:[pm 50 "unitsml(m)" + 5%] depth
+2+^| stem:[= 0.50 + 1%"d"]
+.3+| Full area search undertaken. Significant seafloor features detected footnoteblock:[footnote_27_74_4] and depths measured.
+.3+| Controlled, systematic survey footnoteblock:[footnote_27_74_6] high position and depth accuracy achieved using DGPS or a minimum three high quality lines of position (LOP) and a multi beam, channel or mechanical sweep system.
 
 h| Depth (m) h| Accuracy (m)
-h| 10301001000 h| ± 1.2 ± 1.6± 3.0± 21.0
-.3+| C
-.3+|   500 m
-2+| = 2.00 + 5%d
+| 10 +
+30 +
+100 +
+1000 | stem:[pm 0.6] +
+stem:[pm 0.8] +
+stem:[pm 1.5] +
+stem:[pm 10.5]
+
+.3+| A2 .3+|  stem:[pm 20 "unitsml(m)"] 2+^| stem:[= 1.00 + 2%"d"]
+.3+| Full area search undertaken. Significant seafloor features detected footnoteblock:[footnote_27_74_4] and depths measured.
+.3+| Controlled, systematic survey footnoteblock:[footnote_27_74_6] achieving position and depth accuracy less than *zone of confidence A1* and using a modern survey echo sounder footnoteblock:[footnote_27_74_7] and a sonar or mechanical sweep system.
+
+h| Depth (m) h| Accuracy (m)
+| 10 +
+30 +
+100 +
+1000 | stem:[pm 1.2] +
+stem:[pm 1.6] +
+stem:[pm 3.0] +
+stem:[pm 21.0]
+
+.3+| B .3+|  stem:[pm 50 "unitsml(m)"] 2+^| stem:[= 1.00 + 2%"d"]
+.3+| Full area search not achieved; uncharted features, hazardous to surface navigation are not expected but may exist.
+.3+| Controlled, systematic survey achieving similar depth but lesser position accuracies than *zone of confidence A2*, using a modern survey echo sounder footnoteblock:[footnote_27_74_7], but no sonar or mechanical sweep system.
+
+h| Depth (m) h| Accuracy (m)
+| 10 +
+30 +
+100 +
+1000 | stem:[pm 1.2] +
+stem:[pm 1.6] +
+stem:[pm 3.0] +
+stem:[pm 21.0]
+
+.3+| C .3+|  stem:[pm 50 "unitsml(m)"] 2+^| stem:[= 2.00 + 5%"d"]
 .3+| Full area search not achieved, depth anomalies may be expected.
 .3+| Low accuracy survey or data collected on an opportunity basis such as soundings on passage.
 
 h| Depth (m) h| Accuracy (m)
-h| 10301001000 h| ± 2.5± 3.5± 7.0± 52.0
-|
-D
-| Worse than *zone of confidence C*
-2+| Worse than *zone of confidence C*
+| 10 +
+30 +
+100 +
+1000 | stem:[pm 2.5] +
+stem:[pm 3.5] +
+stem:[pm 7.0] +
+stem:[pm 52.0]
+
+| D | Worse than *zone of confidence C* 2+| Worse than *zone of confidence C*
 | Full area search not achieved, large depth anomalies may be expected.
 | Poor quality data or data that cannot be quality assessed due to lack of information.
 
-h| U
-4+h| Unassessed -- The quality of the bathymetric data has yet to be assessed
-|
-
+| U 4+<| Unassessed -- The quality of the bathymetric data has yet to be assessed |
 |===
 
-**To decide on a ZOC Category, all conditions outlined in columns 2 to 4 of the Table must be met.**
+NOTE: To decide on a ZOC Category, all conditions outlined in columns 2 to 4 of the Table must be met.
 
-Explanatory notes quoted in the Table:
 
-^1 ^ The allocation of a Zone of Confidence (ZOC) indicates that particular data meets minimum criteria for position and depth accuracy and seafloor coverage defined in this Table. ZOC categories reflect a charting standard and not just a hydrographic survey standard. Depth and position accuracies specified for each ZOC category refer to the errors of the final depicted soundings and include not only survey errors but also other errors introduced in the chart production process. Data is further qualified in Meta Feature Type *Quality of Bathymetric Data* (see <<sec_3.8>>) and associated Information Type *Spatial Quality* (see <<sec_24.5>>) attributes as follows:a) Positional Accuracy (*horizontal position uncertainty*) and Sounding Accuracy (*vertical uncertainty*) on the associated instance of *Spatial Quality* may be used to indicate that a higher position or depth accuracy has been achieved than defined in this Table (for example a survey where full seafloor coverage was not achieved could not be classified higher that ZOC B; however, if the position accuracy was, for instance, ± 15 metres, the attribute *horizontal position uncertainty* could be used to indicate this).b) Swept areas where the clearance depth is accurately known but the actual seabed depth is not accurately known may be accorded a 'higher' ZOC (that is, A1 or A2) providing positional and depth accuracies of the swept depth meets the criteria in this Table. In this instance, the attribute *depth range minimum value* on the *Quality of Bathymetric Data* feature may be used to specify the swept depth. The position accuracy criteria apply to the boundaries of swept areas.c) The complex attribute *survey date range* on the *Quality of Bathymetric Data* feature is used to indicate the start and end dates of the survey(s) covering the area.^2^ Position Accuracy of depicted soundings at 95% CI (2.45 sigma) with respect to the given datum. It is the cumulative error and includes survey, transformation and digitizing errors etc. Position accuracy need not be rigorously computed for ZOCs B, C and D but may be estimated based on type of equipment, calibration regime, historical accuracy etc.^3^ Depth accuracy of depicted soundings = a + (b~*~d)/100 at 95% CI (2.00 sigma), where d = depth in metres at the critical depth. Depth accuracy need not be rigorously computed for ZOCs B, C and D but may be estimated based on type of equipment, calibration regime, historical accuracy etc.^4 ^ Significant seafloor features are defined as those rising above depicted depths by more than:DepthSignificant Featurea. <40 m 2 mb. >40 m 10% depthA full seafloor search indicates that a systematic survey was conducted using detection systems, depth measurement systems, procedures, and trained personnel designed to detect and measure depths on significant seafloor features. Significant features are included on the chart as scale allows. It is impossible to guarantee that no significant feature could remain undetected, and significant features may have become present in the area since the time of the survey.^5 ^ Typical Survey Characteristics -- these descriptions should be seen as indicative examples only.^6^ Controlled, systematic surveys (ZOC A1, A2 and B) -- surveys comprising planned survey lines, on a geodetic datum that can be transformed to WGS 84.^7^ Modern survey echo sounder -- high precision single beam depth measuring equipment, generally including all survey echo sounders designed post 1970.
+[[footnote_27_74_1]]
+[NOTE]
+--
+The allocation of a Zone of Confidence (ZOC) indicates that particular data meets minimum criteria for position and depth accuracy and seafloor coverage defined in this Table. ZOC categories reflect a charting standard and not just a hydrographic survey standard. Depth and position accuracies specified for each ZOC category refer to the errors of the final depicted soundings and include not only survey errors but also other errors introduced in the chart production process. Data is further qualified in Meta Feature Type *Quality of Bathymetric Data* (see <<sec_3.8>>) and associated Information Type *Spatial Quality* (see <<sec_24.5>>) attributes as follows:
+
+. Positional Accuracy (*horizontal position uncertainty*) and Sounding Accuracy (*vertical uncertainty*) on the associated instance of *Spatial Quality* may be used to indicate that a higher position or depth accuracy has been achieved than defined in this Table (for example a survey where full seafloor coverage was not achieved could not be classified higher that ZOC B; however, if the position accuracy was, for instance, stem:[pm 15] metres, the attribute *horizontal position uncertainty* could be used to indicate this).
+
+. Swept areas where the clearance depth is accurately known but the actual seabed depth is not accurately known may be accorded a 'higher' ZOC (that is, A1 or A2) providing positional and depth accuracies of the swept depth meets the criteria in this Table. In this instance, the attribute *depth range minimum value* on the *Quality of Bathymetric Data* feature may be used to specify the swept depth. The position accuracy criteria apply to the boundaries of swept areas.
+
+. The complex attribute *survey date range* on the *Quality of Bathymetric Data* feature is used to indicate the start and end dates of the survey(s) covering the area.
+--
+
+[[footnote_27_74_4]]
+[NOTE]
+--
+Significant seafloor features are defined as those rising above depicted depths by more than:
+
+[cols="3",options="unnumbered"]
+|===
+|   h| Depth h| Significant Feature
+
+| a. | stem:[< 40 "unitsml(m)"] | stem:[2 "unitsml(m)"]
+| b. | stem:[> 40 "unitsml(m)"] | 10% depth
+|===
+
+A full seafloor search indicates that a systematic survey was conducted using detection systems, depth measurement systems, procedures, and trained personnel designed to detect and measure depths on significant seafloor features. Significant features are included on the chart as scale allows. It is impossible to guarantee that no significant feature could remain undetected, and significant features may have become present in the area since the time of the survey.
+--
+
+[[footnote_27_74_6]]
+[NOTE]
+--
+Controlled, systematic surveys (ZOC A1, A2 and B) -- surveys comprising planned survey lines, on a geodetic datum that can be transformed to WGS 84.
+--
+
+[[footnote_27_74_7]]
+[NOTE]
+--
+Modern survey echo sounder -- high precision single beam depth measuring equipment, generally including all survey echo sounders designed post 1970.
+--
+
 
 [[sec_27.75]]
 === colour (COLOUR)
@@ -16563,7 +16615,7 @@ Explanatory notes quoted in the Table:
 
 [underline]#Indication:# The string encodes a recurring day each year that is not fixed in the Gregorian calendar.
 
-[underline]#Example:# *Fourth Thursday in November* **Easter Sunday**
+[underline]#Example:# *Fourth Thursday in November Easter Sunday*
 
 [underline]#Remarks:#
 
@@ -21982,7 +22034,7 @@ Example: *1* for Update number 1
 
 [underline]#Maximum range:# 1
 
-[underline]#Range closure:# Open interval (_minimum <_ _*uncertainty variable factor*_ _< maximum_)Example: The positional accuracy for the highest accuracy for hydrographic data in a *Spatial* **Quality** feature is quoted as "±5 metres + 10% depth". The variable component in this example is depth, and the factor to be applied to the depth at a location in order to provide the variable uncertainty is *0.1*.
+[underline]#Range closure:# Open interval (_minimum <_ _*uncertainty variable factor*_ _< maximum_)Example: The positional accuracy for the highest accuracy for hydrographic data in a *Spatial Quality* feature is quoted as "±5 metres + 10% depth". The variable component in this example is depth, and the factor to be applied to the depth at a location in order to provide the variable uncertainty is *0.1*.
 
 In this example, at a depth of 25 metres, the variable uncertainty would be 2.5 metres, and the overall best estimate of the positional accuracy would be ±7.5 metres.
 
@@ -22469,7 +22521,7 @@ Sub-attributes:
 
 [underline]#Remarks:#
 
-* No formatting of text is possible within *shape* **information**. If formatted text is required, then an associated text file referenced by the complex attribute *information* must be used (see <<sec_29.9>>).
+* No formatting of text is possible within *shape information*. If formatted text is required, then an associated text file referenced by the complex attribute *information* must be used (see <<sec_29.9>>).
 
 |===
 
@@ -23204,15 +23256,15 @@ X regarding the requirement for the vector records making up the curve feature t
 
 Under certain conditions, it may be necessary for a Data Producer to issue Update information in advance. For example, a change in a traffic routeing system must be made public before the new situation is implemented. Within an Update dataset there is no means of indicating the date at which an Update must be applied. Therefore, when an Update dataset is received by an end-user, it must be applied immediately. To avoid situations where Update information would cause target data to reflect a situation that does not yet exist, the following encoding rules must be followed:
 
-a) If the advance Update information contained in the Update message involves the addition of features to the existing data (for example a new lighthouse), the *date start* sub-attribute for the complex attribute *fixed* **date range** on the new features must contain the date at which the Update becomes active.
+a) If the advance Update information contained in the Update message involves the addition of features to the existing data (for example a new lighthouse), the *date start* sub-attribute for the complex attribute *fixed date range* on the new features must contain the date at which the Update becomes active.
 
 b) If the advance Update information contained in the Update message involves the modification of existing features (for example a change in a traffic routeing system), it must be treated as a deletion of the existing features and replacement with new features. See a) above and c) below.
 
-c) If the advance Update information contained in the Update message involves the deletion of existing features (for example the removal of a buoy), the Update message must set the *end date* sub-attribute for the complex attribute *fixed* **date range** of all features to be deleted to the date at which the Update becomes active. *NB*. This Update message does not actually delete the features from the dataset, it simply indicates that on the date held in the *date end* sub-attribute for the complex attribute *fixed* **date range** they become obsolete. A further Update to actually delete the obsolete features from the dataset should be sent at the time that the change in the real world occurs.
+c) If the advance Update information contained in the Update message involves the deletion of existing features (for example the removal of a buoy), the Update message must set the *end date* sub-attribute for the complex attribute *fixed date range* of all features to be deleted to the date at which the Update becomes active. *NB*. This Update message does not actually delete the features from the dataset, it simply indicates that on the date held in the *date end* sub-attribute for the complex attribute *fixed date range* they become obsolete. A further Update to actually delete the obsolete features from the dataset should be sent at the time that the change in the real world occurs.
 
-d) To highlight to the Mariner that the advance Update information contained in an Update message will take place in the future, it is recommended that a *Caution Area* feature (see <<sec_16.10>>) be created covering the location at which the future changes will take place. A warning note specifying, in plain language, the nature of the future change should be encoded, using the complex attribute *information* (see <<sec_2.4.6>>). The sub-attribute *date end* for the complex attribute *fixed* **date range** on the *Caution Area* must be set to the date at which the change described in the Update becomes active.
+d) To highlight to the Mariner that the advance Update information contained in an Update message will take place in the future, it is recommended that a *Caution Area* feature (see <<sec_16.10>>) be created covering the location at which the future changes will take place. A warning note specifying, in plain language, the nature of the future change should be encoded, using the complex attribute *information* (see <<sec_2.4.6>>). The sub-attribute *date end* for the complex attribute *fixed date range* on the *Caution Area* must be set to the date at which the change described in the Update becomes active.
 
-Changes to the *date start* and *date end* for *fixed* **date range** cannot be applied to spatial types. Therefore, a change to the geometry of a real world feature (for example the relocation of a buoy) to be applied in the future can only be achieved by updating all of the geo and spatial types involved.
+Changes to the *date start* and *date end* for *fixed date range* cannot be applied to spatial types. Therefore, a change to the geometry of a real world feature (for example the relocation of a buoy) to be applied in the future can only be achieved by updating all of the geo and spatial types involved.
 
 As a consequence of issuing advance information Updates, more than one instance of a particular real world feature could exist in the dataset.
 
@@ -23223,20 +23275,26 @@ Further information regarding issuing Update information in advance as an equiva
 
 It is important that Mariners be provided with advance notification of changes to traffic separation schemes (TSS), which may include modification to an existing TSS, addition of a new TSS or removal of a TSS. In order to provide a consistent approach to Mariners regarding advance notification of changes to a traffic separation scheme, the following procedure should be adopted:
 
-1) At least one month before the changes to the TSS come into force, issue an updated dataset (as an Update or a New Edition) which:
+. At least one month before the changes to the TSS come into force, issue an updated dataset (as an Update or a New Edition) which:
++
+--
+* Adds new or amended TSS component features. These features must have *date start* for *fixed* *date range* populated with the date that the changes to the TSS come into force.
+* Adds *date end* for *fixed date range* (populated with the date of the day before the changes to the TSS come into force) to any component features of the existing TSS that are to be changed or deleted.
+* Creates a *Caution Area* surface feature (see <<sec_16.10>>) covering the geographic extent of both the current and the future TSS. The complex attribute *information* (see <<sec_2.4.6>>) must be used to explain the change to the TSS, for example_"The traffic separation scheme off Cape Bon is to be modified at 0000 UTC on 1 July 2009. This ENC includes all the information before and after the change, indicated by the sub-attributes_ __**date end**__ _(before the change) and_ __**date start**__ _(after the change) for the complex attribute_ __**fixed** __ __**date range**__ _on the components of the scheme"_. The sub-attribute *date end* on *fixed date range* for the *Caution Area* should be populated with the date at which the change comes into force or, if encoders wish to provide extended information to the Mariner that a change has been made, with a date up to a month after the change comes into force. If the current and the future TSS are not in the same geographic area, it may be required to encode two distinct *Caution Area* surface features. A picture file may be referenced by the *Caution Area* using the attribute *pictorial representation* if it is considered useful, for example the equivalent paper chart representation of the amended or new TSS.
+--
 
-* Adds new or amended TSS component features. These features must have *date start* for *fixed* **date range** populated with the date that the changes to the TSS come into force.
-* Adds *date end* for *fixed* **date range** (populated with the date of the day before the changes to the TSS come into force) to any component features of the existing TSS that are to be changed or deleted.
-* Creates a *Caution Area* surface feature (see <<sec_16.10>>) covering the geographic extent of both the current and the future TSS. The complex attribute *information* (see <<sec_2.4.6>>) must be used to explain the change to the TSS, for example_"The traffic separation scheme off Cape Bon is to be modified at 0000 UTC on 1 July 2009. This ENC includes all the information before and after the change, indicated by the sub-attributes_ __**date end**__ _(before the change) and_ __**date start**__ _(after the change) for the complex attribute_ __**fixed** __ __**date range**__ _on the components of the scheme"_. The sub-attribute *date end* on *fixed* **date range** for the *Caution Area* should be populated with the date at which the change comes into force or, if encoders wish to provide extended information to the Mariner that a change has been made, with a date up to a month after the change comes into force. If the current and the future TSS are not in the same geographic area, it may be required to encode two distinct *Caution Area* surface features. A picture file may be referenced by the *Caution Area* using the attribute *pictorial representation* if it is considered useful, for example the equivalent paper chart representation of the amended or new TSS.
-
-2) As soon as possible after the modified/new/deleted TSS comes into force, issue an updated dataset (as an Update or New Edition) which:
-
+. As soon as possible after the modified/new/deleted TSS comes into force, issue an updated dataset (as an Update or New Edition) which:
++
+--
 * Deletes the changed or redundant component features of the former TSS.
 * Removes the attribute *fixed date range* from the component features of the new TSS.
+--
 
-3) The *Caution Area* must also be removed by Update, either as part of the Update to remove the redundant component features of the former TSS, or as a separate Update at a later date, corresponding to the date populated in the sub-attribute *date end* for the complex attribute *fixed* **date range** for the *Caution Area*.
-
+. The *Caution Area* must also be removed by Update, either as part of the Update to remove the redundant component features of the former TSS, or as a separate Update at a later date, corresponding to the date populated in the sub-attribute *date end* for the complex attribute *fixed date range* for the *Caution Area*.
++
+--
 Encoders who are members of RENCs should also provide advance notification of changes to TSS to their RENC in accordance with RENC procedures, in order for the RENC to provide additional notification to Mariners of impending TSS changes.
+--
 
 [[sec_31.2]]
 === Guidelines for encoding Temporary and Preliminary ENC Updates
@@ -23271,7 +23329,7 @@ It is important that HOs should consider constraints of time when identifying th
 
 .. The overuse of *Caution Area* features (especially *Caution Area* of type surface -- see <<sec_16.10>>) for temporary information should be avoided. The *Caution Area* feature is used when it is relevant for the situation and/or when a particular change needs a special warning. *Caution Area* may be used when the relevant features cannot be encoded, for example information cannot be displayed clearly or cannot be easily promulgated due to time constraints.
 .. To correctly encode an ENC Update the source information is essential in determining which elements of the Update are reliable, which are permanent and which are temporary. The attribute *status* with value _7_ (temporary) should only be used in an Update when it is certain that the status of a feature is confirmed as temporary.
-.. Use of complex attribute *fixed* **date range**:
+.. Use of complex attribute *fixed date range*:
 
 The earliest date on which a feature will be present (*date start*) and the latest date on which a feature will be present (*date end*) must only be encoded when known. Where such dates have been encoded for any feature that is the structure component of a *Structure/Equipment* feature association, all other component features within the relationship must not extend beyond the temporal attribute values encoded for the structure feature.
 
@@ -23317,7 +23375,7 @@ When an ENC Update promulgates information well in advance and uses *fixed date 
 
 .. Buoy temporarily moved:
 
-*** When a buoy is temporarily moved then it, and any associated features, are "moved" to the new position and the attribute *status* = _7_ (temporary) is populated. Alternative encodings are possible, for example, if the move is for a fixed period of time. In these cases the feature, and any associated components, can be created in the temporary position with sub-attribute *date end* for the complex attribute *fixed* **date range** populated with the date corresponding to the end of the fixed period of time. The currently charted feature, and any associated components, should have *date start* for the complex attribute *fixed* **date range** also populated with the date corresponding to the end of the fixed period of time. A *Caution Area* feature may, if considered necessary, be added.
+*** When a buoy is temporarily moved then it, and any associated features, are "moved" to the new position and the attribute *status* = _7_ (temporary) is populated. Alternative encodings are possible, for example, if the move is for a fixed period of time. In these cases the feature, and any associated components, can be created in the temporary position with sub-attribute *date end* for the complex attribute *fixed date range* populated with the date corresponding to the end of the fixed period of time. The currently charted feature, and any associated components, should have *date start* for the complex attribute *fixed date range* also populated with the date corresponding to the end of the fixed period of time. A *Caution Area* feature may, if considered necessary, be added.
 
 .. Light temporarily extinguished:
 
@@ -23365,7 +23423,7 @@ When information is issued as advance notification for an ENC it is necessary to
 --
 
 . Source Information received may contain some navigationally significant elements that are simple to encode with the relevant features in a timely manner. In such cases these elements may be encoded with the relevant features provided that they reflect the "real world" situation after the ENC Update is made available to the user. However, if the changes are subject to continual change these features should be amended as a consequence and will represent additional work for the HO. In such cases, the ENC Update should also warn the Mariner that the situation is subject to change. For temporary information, see <<sec_31.2.2>>.
-. Use of complex attribute *fixed* **date range**: See <<sec_31.2.2>> paragraph 6. For new or amended routeing measures, see <<sec_31.1.1>>.
+. Use of complex attribute *fixed date range*: See <<sec_31.2.2>> paragraph 6. For new or amended routeing measures, see <<sec_31.1.1>>.
 
 . Use the complex attribute *information*: See <<sec_31.2.2>> paragraph 7.
 

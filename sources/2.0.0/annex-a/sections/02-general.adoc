@@ -1447,14 +1447,22 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 
 The "^†^" superscript in the Multiplicity column indicates a "conditional" mandatory attribute. See <<sec_2.4.3>>.
 
-[underline]#INT 1 Reference:# The INT 1 location(s) of the Feature -- by INT1 Section and Section Number.*X.X.X**Sub-clause heading(s)* **(see S-4 -- B-YYY.Y)**Introductory remarks. Includes information regarding the real world entity/situation requiring the encoding of the Feature in the ENC, and where required nautical cartographic principles relevant to the Feature to aid the compiler in determining encoding requirements. Specific instructions to encode the feature.
+[underline]#INT 1 Reference:# The INT 1 location(s) of the Feature -- by INT1 Section and Section Number.
+
+*X.X.X* *Sub-clause heading(s) (see S-4 -- B-YYY.Y)*
+
+Introductory remarks. Includes information regarding the real world entity/situation requiring the encoding of the Feature in the ENC, and where required nautical cartographic principles relevant to the Feature to aid the compiler in determining encoding requirements.
+
+Specific instructions to encode the feature.
 
 Note that in all sub-clauses feature types and association names are shown in *Bold Capitalised Text*; attributes (complex, sub- and simple) are shown in *bold lower case text*; and attribute values (including enumerate codes) are shown in _italic text_.
 
 [underline]#Remarks:#
 
 * Additional encoding guidance relevant to the feature.
-*X.X.X.X**Sub-sub-clause heading(s)* **(see S-4 -- B-CCC.C)**Clauses related to specific encoding scenarios for the Feature. (Not required for all Features).
+*X.X.X.X* *Sub-sub-clause heading(s) (see S-4 -- B-CCC.C)*
+
+Clauses related to specific encoding scenarios for the Feature. (Not required for all Features).
 
 [underline]#Remarks:#
 
