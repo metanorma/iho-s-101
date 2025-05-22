@@ -4,7 +4,7 @@
 [[sec_8.1]]
 === Works in progress and projected (see S-4 – B-329)
 
-An ENC can seldom show the exact state of work under construction because it may not be known by the encoder and, even if known, may be expected to change between ENC updates (see Section 31). Where it is possible to provide the Mariner with an indication of the status of work under construction, under reclamation or planned, it must be done using the appropriate feature (for example *Shoreline Construction*, *Causeway*, *Dock Area*, *Dry Dock*, *Pipeline Submarine/On Land*), with the attribute *condition* populated as _1_ (under construction), _3_ (under reclamation) or _5_ (planned construction). Where the encoder wishes to provide such information to the Mariner and the details of the works are not known (nature and extent of the works), this should be done using the feature *Caution Area* (see <<sec_16.10>>), with known details of the works encoded using the complex attribute *information* (see <<sec_2.4.6>>).
+An ENC can seldom show the exact state of work under construction because it may not be known by the encoder and, even if known, may be expected to change between ENC updates (see <<sec_31>>). Where it is possible to provide the Mariner with an indication of the status of work under construction, under reclamation or planned, it must be done using the appropriate feature (for example *Shoreline Construction*, *Causeway*, *Dock Area*, *Dry Dock*, *Pipeline Submarine/On Land*), with the attribute *condition* populated as _1_ (under construction), _3_ (under reclamation) or _5_ (planned construction). Where the encoder wishes to provide such information to the Mariner and the details of the works are not known (nature and extent of the works), this should be done using the feature *Caution Area* (see <<sec_16.10>>), with known details of the works encoded using the complex attribute *information* (see <<sec_2.4.6>>).
 
 If it is required to provide the Mariner with an indication of the date to which information regarding the works is current, it must be done using the attribute *reported date* (see <<sec_27.154>>).
 
@@ -12,7 +12,7 @@ The coastline existing before the beginning of the works should remain encoded a
 
 As the works progress and further information is supplied to the Producing Authority, ENC datasets should be updated appropriately through the issue of updates to the dataset or publication of New Editions of the dataset (see <<sec_31.2.3>>).
 
-On completion of the works, full encoding of the new feature(s) in accordance with the relevant clauses in this document must be achieved, and incorporated in the relevant ENC dataset through the issue of an update to the dataset or publication of a New Edition of the dataset (see Section 31).
+On completion of the works, full encoding of the new feature(s) in accordance with the relevant clauses in this document must be achieved, and incorporated in the relevant ENC dataset through the issue of an update to the dataset or publication of a New Edition of the dataset (see <<sec_31>>).
 
 [[sec_8.1.1]]
 ==== Works on land (see S-4 – B-329.1)
@@ -70,24 +70,17 @@ Because lights and buoys marking the limits of works at sea may be moved without
 
 3+|
 1: default name display +
-2 : alternate name display
-| (S) EN
-| 0,1 footnoteblock:[eight_two]
+2: alternate name display | (S) EN | 0,1 footnoteblock:[eight_two]
 
-3+| interoperability identifier
-2+a|
-
-3+| MRN (see <<sec_27.114>>)
-| URN
-| 0,1
+3+| interoperability identifier 2+a| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
 5: periodic/intermittent +
 7: temporary +
-9: mandatory
-12 : illuminated | EN | 0,*
+9: mandatory +
+12: illuminated | EN | 0,*
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information
 2+a|
@@ -191,7 +184,7 @@ If it is required to encode an official place to register, declare and/or check 
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 0,\* (ordered)
+13: pink | EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
@@ -222,21 +215,11 @@ If it is required to encode an official place to register, declare and/or check 
 3+a| | (S) TE
 | 1,1
 
-3+| name usage
-2+a|
-
-3+|
+3+| name usage 2+a| 3+|
 1: default name display +
-2: alternate name display
-| (S) EN
-| 0,1 footnoteblock:[eight_three]
+2: alternate name display | (S) EN | 0,1 footnoteblock:[eight_three]
 
-3+| fixed date range
-2+a|
-
-3+| See <<sec_2.4.8>>
-| C
-| 0,1
+3+| fixed date range 2+a| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
@@ -418,7 +401,7 @@ If it is required to encode a permanently moored ship, it must be done using the
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 0,\* (ordered)
+13: pink | EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
@@ -454,9 +437,7 @@ If it is required to encode a permanently moored ship, it must be done using the
 
 3+|
 1: default name display +
-2: alternate name display
-| (S) EN
-| 0,1 footnoteblock:[eight_four]
+2: alternate name display | (S) EN | 0,1 footnoteblock:[eight_four]
 
 3+| fixed date range
 2+a|
@@ -639,9 +620,7 @@ If it is required to encode a pile or post that is not used as a dolphin or an a
 
 3+|
 1: default name display +
-2: alternate name display
-| (S) EN
-| 0,1 footnoteblock:[eight_five]
+2: alternate name display | (S) EN | 0,1 footnoteblock:[eight_five]
 
 3+| fixed date range
 2+a|
@@ -785,7 +764,8 @@ If it is required to encode a dyke, it must be done using the feature *Dyke*.
 1: breakwater +
 2: groyne +
 3: mole +
-4: pier (jetty)5 : promenade pier +
+4: pier (jetty) +
+5: promenade pier +
 6: wharf +
 7: training wall +
 8: rip rap +
@@ -814,13 +794,14 @@ If it is required to encode a dyke, it must be done using the feature *Dyke*.
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 0,\* (ordered)
+13: pink | EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)6 : border stripe | EN | 0,1 footnoteblock:[eight_six]
+5: stripes (direction unknown) +
+6: border stripe | EN | 0,1 footnoteblock:[eight_six]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
@@ -845,21 +826,11 @@ If it is required to encode a dyke, it must be done using the feature *Dyke*.
 3+a| | (S) TE
 | 1,1
 
-3+| name usage
-2+a|
-
-3+|
+3+| name usage 2+a| 3+|
 1: default name display +
-2: alternate name display
-| (S) EN
-| 0,1 footnoteblock:[eight_six]
+2: alternate name display | (S) EN | 0,1 footnoteblock:[eight_six]
 
-3+| fixed date range
-2+a|
-
-3+| See <<sec_2.4.8>>
-| C
-| 0,1
+3+| fixed date range 2+a| 3+| See <<sec_2.4.8>> | C | 0,1
 
 3+| date end
 2+| (DATEND)
@@ -1078,9 +1049,7 @@ image::figure-8-1.png[631,332]
 2: covered bulk terminal +
 3: covered wharf +
 4: covered service terminal +
-5: covered passenger terminal
-2+| EN
-| 0,*
+5: covered passenger terminal 2+| EN | 0,*
 
 3+| colour 2+| (COLOUR) 3+|
 1: white +
@@ -1095,13 +1064,14 @@ image::figure-8-1.png[631,332]
 10: violet +
 11: orange +
 12: magenta +
-13: pink 2+| EN | 0,\* (ordered)
+13: pink 2+| EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)6 : border stripe 2+| EN | 0,1 footnoteblock:[eight_seven]
+5: stripes (direction unknown) +
+6: border stripe 2+| EN | 0,1 footnoteblock:[eight_seven]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
@@ -1133,9 +1103,7 @@ image::figure-8-1.png[631,332]
 
 3+|
 1: default name display +
-2: alternate name display
-2+| (S) EN
-| 0,1 footnoteblock:[eight_seven]
+2: alternate name display 2+| (S) EN | 0,1 footnoteblock:[eight_seven]
 
 3+| fixed date range
 2+a|
@@ -1237,7 +1205,8 @@ image::figure-8-1.png[631,332]
 2+| (S) TD
 | 1,1
 
-3+| product 2+| (PRODCT) 3+| 7 : chemicals +
+3+| product 2+| (PRODCT) 3+|
+7: chemicals +
 12: iron ingots +
 13: salt +
 21: cement +
@@ -1298,7 +1267,7 @@ image::figure-8-1.png[631,332]
 | 0,1
 
 3+| vertical datum 2+| (VERDAT) 3+|
-3 : mean sea level +
+3: mean sea level +
 13: low water +
 16: mean high water +
 17: mean high water springs +
@@ -1307,7 +1276,8 @@ image::figure-8-1.png[631,332]
 20: high water springs +
 21: mean higher high water +
 24: local datum +
-25: international great lakes datum 198526 : mean water level +
+25: international great lakes datum 1985 +
+26: mean water level +
 28: higher high water large tide +
 29: nearly highest high water +
 30: highest astronomical tide +
@@ -1460,9 +1430,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 
 3+|
 1: default name display +
-2: alternate name display
-| (S) EN
-| 0,1 footnoteblock:[eight_eight]
+2: alternate name display | (S) EN | 0,1 footnoteblock:[eight_eight]
 
 3+| interoperability identifier
 2+a|
@@ -1611,9 +1579,7 @@ If it is required to encode a causeway, it must be done using the feature *Cause
 
 3+|
 1: default name display +
-2: alternate name display
-| (S) EN
-| 0,1 footnoteblock:[eight_nine]
+2: alternate name display | (S) EN | 0,1 footnoteblock:[eight_nine]
 
 3+| fixed date range
 2+a|
@@ -1791,9 +1757,7 @@ If it is required to encode a non-navigable canal, it must be done using the fea
 
 3+|
 1: default name display +
-2: alternate name display
-| (S) EN
-| 0,1 footnoteblock:[eight_ten]
+2: alternate name display | (S) EN | 0,1 footnoteblock:[eight_ten]
 
 3+| fixed date range
 2+a|
@@ -1833,9 +1797,8 @@ If it is required to encode a non-navigable canal, it must be done using the fea
 1: metres +
 2: yards +
 3: kilometres +
-4: statute miles5: nautical miles
-| (S) EN
-| 1,1
+4: statute miles +
+5: nautical miles | (S) EN | 1,1
 
 3+| reference location
 2+a|
@@ -1980,9 +1943,7 @@ If it is required to encode a distance mark, it must be done using the feature *
 
 3+|
 1: default name display +
-2: alternate name display
-| (S) EN
-| 0,1 footnoteblock:[eight_eleven]
+2: alternate name display | (S) EN | 0,1 footnoteblock:[eight_eleven]
 
 3+| horizontal clearance open
 2+a|
@@ -2014,7 +1975,8 @@ If it is required to encode a distance mark, it must be done using the feature *
 2: concreted +
 6: wooden +
 7: metal | EN | 0,*
-3+| quality of vertical measurement 2+| (QUASOU) 3+| 2 : depth or least depth unknown +
+3+| quality of vertical measurement 2+| (QUASOU) 3+|
+2: depth or least depth unknown +
 3: doubtful sounding +
 4: unreliable sounding +
 6: least depth known +
@@ -2063,7 +2025,8 @@ If it is required to encode a distance mark, it must be done using the feature *
 3+a| | (S) RE
 | 0,1
 
-3+| vertical datum 2+| (VERDAT) 3+| 3 : mean sea level +
+3+| vertical datum 2+| (VERDAT) 3+|
+3: mean sea level +
 13: low water +
 16: mean high water +
 17: mean high water springs +
@@ -2072,7 +2035,8 @@ If it is required to encode a distance mark, it must be done using the feature *
 20: high water springs +
 21: mean higher high water +
 24: local datum +
-25: international great lakes datum 198526 : mean water level +
+25: international great lakes datum 1985 +
+26: mean water level +
 28: higher high water large tide +
 29: nearly highest high water +
 30: highest astronomical tide +
@@ -2202,13 +2166,14 @@ If it is required to encode a gate that controls the flow of water, it must be d
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 0,\* (ordered)
+13: pink | EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)6 : border stripe | EN | 0,1 footnoteblock:[eight_twelve]
+5: stripes (direction unknown) +
+6: border stripe | EN | 0,1 footnoteblock:[eight_twelve]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
@@ -2238,9 +2203,7 @@ If it is required to encode a gate that controls the flow of water, it must be d
 
 3+|
 1: default name display +
-2: alternate name display
-| (S) EN
-| 0,1 footnoteblock:[eight_twelve]
+2: alternate name display | (S) EN | 0,1 footnoteblock:[eight_twelve]
 
 3+| fixed date range
 2+a|
@@ -2411,7 +2374,8 @@ When an encoded flood barrage is inside an area that is not navigable at the opt
 4+a| _ECDIS Symbol_
 
 3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
-3+| category of crane 2+| (CATCRN) 3+| 2 : container crane/gantry +
+3+| category of crane 2+| (CATCRN) 3+|
+2: container crane/gantry +
 3: sheerlegs +
 4: travelling crane +
 5: A-frame +
@@ -2429,14 +2393,14 @@ When an encoded flood barrage is inside an area that is not navigable at the opt
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 0,\* (ordered)
+13: pink | EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown) +
-6 : border stripe | EN | 0,1 footnoteblock:[eight_thirteen]
+6: border stripe | EN | 0,1 footnoteblock:[eight_thirteen]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
@@ -2465,9 +2429,7 @@ When an encoded flood barrage is inside an area that is not navigable at the opt
 
 3+|
 1: default name display +
-2: alternate name display
-| (S) EN
-| 0,1 footnoteblock:[eight_thirteen]
+2: alternate name display | (S) EN | 0,1 footnoteblock:[eight_thirteen]
 
 3+| height
 2+| (HEIGHT)
@@ -2552,7 +2514,8 @@ When an encoded flood barrage is inside an area that is not navigable at the opt
 3+a| | (S) RE
 | 0,1
 
-3+| vertical datum 2+| (VERDAT) 3+| 3 : mean sea level +
+3+| vertical datum 2+| (VERDAT) 3+|
+3: mean sea level +
 13: low water +
 16: mean high water +
 17: mean high water springs +
@@ -2561,7 +2524,8 @@ When an encoded flood barrage is inside an area that is not navigable at the opt
 20: high water springs +
 21: Mean higher high water +
 24: local datum +
-25: international great lakes datum 198526 : mean water level +
+25: international great lakes datum 1985 +
+26: mean water level +
 28: higher high water large tide +
 29: nearly highest high water +
 30: highest astronomical tide +
@@ -2657,7 +2621,7 @@ If it is required to encode a crane, it must be done using the feature *Crane***
 * The purpose of charting these features is primarily to assist the Mariner in identifying particular berths, etc.
 * The complex attribute *orientation* is used, where required, to encode the angular distance from true north to the axis of the crane's jib (generally perpendicular to the wharf).
 * The position of a sheerleg or a travelling crane is defined as its resting position. If it is required to encode the track, it must be done using the feature *Railway* (see <<sec_6.14>>).
-* Where fitted, lights should be encoded as described in Section 19, with the *Crane* being used as the structure feature for the relevant light equipment feature(s) (see <<sec_18.2>>).
+* Where fitted, lights should be encoded as described in <<sec_19>>, with the *Crane* being used as the structure feature for the relevant light equipment feature(s) (see <<sec_18.2>>).
 * For cranes located in navigable water, the Boolean attribute *in the water* must be set to _True_ to indicate that the feature is to be included in the ECDIS Base Display. Where such structures are located in the water it is not required to encode any supporting structures (for example piles, stilts).
 * Value _13_ (low water) for attribute *vertical datum* is only applicable to enclosed (inland) waterways; and must not be used to indicate the reference datum for vertical clearances in tidal waters.
 
@@ -2698,9 +2662,7 @@ If it is required to encode a crane, it must be done using the feature *Crane***
 12: reefer container cargo +
 13: Ro-Ro cargo +
 14: project cargo +
-15: break bulk cargo
-| EN
-| 0,*
+15: break bulk cargo | EN | 0,*
 
 3+| feature name
 2+a|
@@ -2721,14 +2683,9 @@ If it is required to encode a crane, it must be done using the feature *Crane***
 3+a| | (S) TE
 | 1,1
 
-3+| name usage
-2+a|
-
-3+|
+3+| name usage 2+a| 3+|
 1: default name display +
-2: alternate name display
-| (S) EN
-| 0,1 footnoteblock:[eight_fourteen]
+2: alternate name display | (S) EN | 0,1 footnoteblock:[eight_fourteen]
 
 3+| fixed date range
 2+a|
@@ -2914,7 +2871,7 @@ If it is required to encode a berth, it must be done using the feature *Berth*.
 [cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *DOLPHIN*. A post or group of posts, used for mooring or warping a vessel, or as an aid to navigation. The dolphin may be in the water, on a wharf or on the beach. (Adapted from IHO Dictionary – S-32).
-10+| *[underline]#S-101 Geo Feature:#* *Dolphin* __**(MORFAC)**__
+10+| *[underline]#S-101 Geo Feature:#* *Dolphin* *_(MORFAC)_*
 10+| *Primitives:* *Point, Surface*
 2+a| _Real World_
 
@@ -2941,14 +2898,14 @@ If it is required to encode a berth, it must be done using the feature *Berth*.
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 0,\* (ordered)
+13: pink | EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
 5: stripes (direction unknown) +
-6 : border stripe | EN | 0,1 footnoteblock:[eight_fifteen]
+6: border stripe | EN | 0,1 footnoteblock:[eight_fifteen]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
@@ -2984,9 +2941,7 @@ If it is required to encode a berth, it must be done using the feature *Berth*.
 
 3+|
 1: default name display +
-2: alternate name display
-| (S) EN
-| 0,1 footnoteblock:[eight_fifteen]
+2: alternate name display | (S) EN | 0,1 footnoteblock:[eight_fifteen]
 
 3+| fixed date range
 2+a|
@@ -3155,7 +3110,7 @@ If it is required to encode a dolphin, it must be done using the feature *Dolphi
 [cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *BOLLARD*. Small shaped post, mounted on a wharf or dolphin used to secure ship's lines. (IHO Dictionary – S-32).
-10+| *[underline]#S-101 Geo Feature:#* *Bollard* __**(MORFAC)**__
+10+| *[underline]#S-101 Geo Feature:#* *Bollard* *_(MORFAC)_*
 10+| *Primitives:* *Point*
 2+a| _Real World_
 
@@ -3192,8 +3147,7 @@ If it is required to encode a dolphin, it must be done using the feature *Dolphi
 
 3+|
 1: default name display +
-2: alternate name display
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[eight_sixteen]
 
 3+| fixed date range
@@ -3378,8 +3332,7 @@ If it is required to encode a bollard, it must be done using the feature *Bollar
 
 3+|
 1: default name display +
-2: alternate name display
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[eight_seventeen]
 
 3+| fixed date range
@@ -3442,12 +3395,14 @@ If it is required to encode a bollard, it must be done using the feature *Bollar
 | RE
 | 0,1
 
-3+| quality of vertical measurement 2+| (QUASOU) 3+| 2 : depth or least depth unknown +
+3+| quality of vertical measurement 2+| (QUASOU) 3+|
+2: depth or least depth unknown +
 3: doubtful sounding +
 4: unreliable sounding +
 6: least depth known +
 7: least depth unknown, safe clearance at value shown +
-8: value reported (not surveyed)9 : value reported (not confirmed) | EN | 0,*
+8: value reported (not surveyed) +
+9: value reported (not confirmed) | EN | 0,*
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 4: not in use +
@@ -3576,13 +3531,14 @@ If it is required to encode a dry dock, it must be done using the feature *Dry D
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 0,\* (ordered)
+13: pink | EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)6 : border stripe | EN | 0,1 footnoteblock:[eight_eighteen]
+5: stripes (direction unknown) +
+6: border stripe | EN | 0,1 footnoteblock:[eight_eighteen]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
@@ -3618,9 +3574,7 @@ If it is required to encode a dry dock, it must be done using the feature *Dry D
 
 3+|
 1: default name display +
-2: alternate name display
-| (S) EN
-| 0,1 footnoteblock:[eight_eighteen]
+2: alternate name display | (S) EN | 0,1 footnoteblock:[eight_eighteen]
 
 3+| fixed date range
 2+a|
@@ -3834,8 +3788,7 @@ If it is required to encode a floating dock, it must be done using the feature *
 
 3+|
 1: default name display +
-2: alternate name display
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[eight_nineteen]
 
 3+| fixed date range
@@ -3997,7 +3950,8 @@ If it is required to encode a pontoon, it must be done using the feature *Pontoo
 4+a| _ECDIS Symbol_
 
 3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
-3+| category of dock 2+| (CATDOC) 3+| 1: tidal2: wet dock | EN | 0,1
+3+| category of dock 2+| (CATDOC) 3+| 1: tidal +
+2: wet dock | EN | 0,1
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
@@ -4027,8 +3981,7 @@ If it is required to encode a pontoon, it must be done using the feature *Pontoo
 
 3+|
 1: default name display +
-2: alternate name display
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[eight_twenty]
 
 3+| fixed date range
@@ -4234,8 +4187,7 @@ If it is required to encode a non-navigable dock area, it must be done using the
 
 3+|
 1: default name display +
-2: alternate name display
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[eight_twenty-one]
 
 3+| horizontal length
@@ -4390,8 +4342,7 @@ If it is required to encode a gridiron, it must be done using the feature *Gridi
 
 3+|
 1: default name display +
-2: alternate name display
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[eight_twenty-two]
 
 3+| fixed date range
@@ -4556,7 +4507,7 @@ If it is required to encode a non-navigable lock basin, it must be done using th
 10+| [underline]#IHO Definition:# *MOORING TROT*. A mooring is a place where a vessel may be secured. (IHI Dictionary – S-32).
 
 A mooring trot is a mooring that is composed of ground tackle, mooring cables, buoys and mooring berths on junction cables.
-10+| *[underline]#S-101 Geo Feature:#* *Mooring Trot* __**(C_AGGR)**__
+10+| *[underline]#S-101 Geo Feature:#* *Mooring Trot* *_(C_AGGR)_*
 10+| *Primitives:* *Surface, None*
 2+a| _Real World_
 
@@ -4589,8 +4540,7 @@ A mooring trot is a mooring that is composed of ground tackle, mooring cables, b
 
 3+|
 1: default name display +
-2: alternate name display
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[eight_twenty-three]
 
 3+| fixed date range

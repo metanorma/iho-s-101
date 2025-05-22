@@ -162,7 +162,7 @@ Meta features *Quality of Non-bathymetric Data* and *Quality of Bathymetric Data
 [cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *DATA COVERAGE*. A geographical area that describes the coverage and extent of spatial objects. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.210, November 2000).
-10+| *S-101 Metadata Feature:* *Data Coverage (M_COVR)* _*(M_CSCL)*_
+10+| *S-101 Metadata Feature:* *Data Coverage (M_COVR) _(M_CSCL)_*
 10+| *[underline]#Primitives:#* *Surface*
 3+| _Real World_ 4+| _Paper Chart Symbol_ 3+| _ECDIS Symbol_
 
@@ -172,10 +172,10 @@ Meta features *Quality of Non-bathymetric Data* and *Quality of Bathymetric Data
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| maximum display scale 2+| 3+| maximum display scale ≤ optimum display scale < minimum display scale | IN | 1,1 3+| minimum display scale 2+| 3+| See <<table_3-2>> belowminimum display scale > optimum display scale ≥ maximum display scale | IN
+3+| maximum display scale 2+| 3+| maximum display scale stem:[<=] optimum display scale < minimum display scale | IN | 1,1 3+| minimum display scale 2+| 3+| See <<table_3-2>> below minimum display scale > optimum display scale ≥ maximum display scale | IN
 | 1,1
 
-3+| optimum display scale 2+| _(CSCALE)_ 3+| See <<table_3-2>> belowmaximum display scale ≤ optimum display scale < minimum display scale | IN | 1,1 3+| information 2+| 3+| See <<sec_2.4.6>> | C
+3+| optimum display scale 2+| _(CSCALE)_ 3+| See <<table_3-2>> below maximum display scale stem:[<=] optimum display scale < minimum display scale | IN | 1,1 3+| information 2+| 3+| See <<sec_2.4.6>> | C
 | 0,*
 
 3+| file locator 2+| 3+| | (S) TE | 0,1
@@ -254,7 +254,7 @@ Where a series of differing optimum display scale ENC datasets are compiled cove
 [cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *NAVIGATIONAL SYSTEM OF MARKS*. An area within which the navigational system of marks has been established in relation to a specific direction. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.214, November 2000).
-10+| *S-101 Metadata Feature:* *Navigational System of Marks* __**(M_NSYS)**__
+10+| *S-101 Metadata Feature:* *Navigational System of Marks* *_(M_NSYS)_*
 10+| *[underline]#Primitives:#* *Surface*
 
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
@@ -308,7 +308,7 @@ Individual buoys and beacons may not be part of the general buoyage system. This
 [cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *LOCAL DIRECTION OF BUOYAGE*. An area within which the navigational system of marks has been established in relation to a specific direction. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.214, November 2000).
-10+| *S-101 Metadata Feature:* *Local Direction of Buoyage* __**(M_NSYS)**__
+10+| *S-101 Metadata Feature:* *Local Direction of Buoyage* *_(M_NSYS)_*
 10+| *[underline]#Primitives:#* *Surface*
 
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
@@ -386,7 +386,7 @@ Within a dataset, there may be some areas where the direction of buoyage is defi
 3+| data assessment
 2+| 3+|
 1: assessed +
-2: assessed (oceanic)
+2: assessed (oceanic) +
 3: unassessed +
 | EN
 | 1,1
@@ -599,8 +599,8 @@ The vertical and horizontal position uncertainty values populated on the instanc
 22: equinoctial spring low water +
 23: lowest astronomical tide +
 24: local datum +
-25: international great lakes datum  +
-198526: mean water level +
+25: international great lakes datum 1985 +
+26: mean water level +
 27: lower low water large tide +
 44: baltic sea chart datum 2000 | EN | 1,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
@@ -674,8 +674,8 @@ Note, that because every ZCOO value is explicitly linked to sounding datum there
 20: high water springs +
 21: mean higher high water +
 24: local datum +
-25: international great lakes datum  +
-198526: mean water level +
+25: international great lakes datum  1985 +
+26: mean water level +
 28: higher high water large tide +
 29: nearly highest high water +
 30: highest astronomical tide +
@@ -774,9 +774,9 @@ Where different vertical datums are used for the various vertical measurements, 
 3: doubtful sounding +
 4: unreliable sounding +
 6: least depth known +
-7: least depth unknown, safe clearance at value shown
-8: value reported (not surveyed)
-9: value reported (not confirmed)
+7: least depth unknown, safe clearance at value shown +
+8: value reported (not surveyed) +
+9: value reported (not confirmed) +
 10: maintained depth +
 11: not regularly maintained | EN | 0,*
 
@@ -793,16 +793,16 @@ Where different vertical datums are used for the various vertical measurements, 
 3+| date start 2+| _(SURSTA)_ 3+| | (S) TD | 0,1
 
 3+| survey type 2+| (SURTYP) 3+|
-1: reconnaissance/sketch survey
+1: reconnaissance/sketch survey +
 2: controlled survey +
 4: examination survey +
 5: passage survey +
 6: remotely sensed +
 7: full coverage +
 8: systematic survey +
-9: non-systematic survey
+9: non-systematic survey +
 10: inadequately surveyed +
-11: spot-sounding survey
+11: spot-sounding survey +
 12: acoustically swept survey +
 13: mechanically swept survey | EN | 1,*
 3+| technique of vertical measurement 2+| (TECSOU) 3+|
@@ -819,7 +819,8 @@ Where different vertical datums are used for the various vertical measurements, 
 13: swept by side scan sonar +
 15: found by LIDAR +
 16: synthetic aperture radar +
-17: hyperspectral imagery18 : mechanically swept | EN | 0,*
+17: hyperspectral imagery +
+18: mechanically swept | EN | 0,*
 
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
@@ -897,17 +898,13 @@ The technique of sounding measurement must not be encoded using *technique of ve
 
 4+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-4+| update number
-2+| 3+| | IN | 1,1
+4+| update number 2+| 3+| | IN | 1,1
 
-4+| update type
-2+| 3+|
+4+| update type 2+| 3+|
 1: insert +
 2: delete +
 3: modify +
-4: move
-| EN
-| 1,1
+4: move | EN | 1,1
 
 3+| scale minimum 3+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1 footnoteblock:[three_twelve] 3+| source 3+| 3+| | TE | 0,1
 

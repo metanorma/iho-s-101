@@ -78,7 +78,7 @@ Where issues of maritime jurisdiction between two or more Coastal States are in 
 10: dry bulk cargo +
 11: liquid bulk cargo +
 12: reefer container cargo +
-13: Ro-Ro cargo
+13: Ro-Ro cargo +
 14: project cargo +
 15: break bulk cargo | EN | 0,*
 
@@ -132,14 +132,14 @@ Where issues of maritime jurisdiction between two or more Coastal States are in 
 19: industrial or mineral exploration/development restricted +
 20: drilling prohibited +
 21: drilling restricted +
-23: cargo transhipment (lightening) prohibited
+23: cargo transhipment (lightening) prohibited +
 24: dragging prohibited +
 27: speed restricted +
 39: swimming prohibited | EN | 0,* 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
 3: recommended +
-5: periodic/intermittent
+5: periodic/intermittent +
 6: reserved +
 7: temporary +
 8: private +
@@ -291,7 +291,7 @@ NOTE: the encoding of *Anchorage Area* with attribute *category of anchorage* = 
 19: industrial or mineral exploration/development restricted +
 20: drilling prohibited +
 21: drilling restricted +
-23: cargo transhipment (lightening) prohibited
+23: cargo transhipment (lightening) prohibited +
 24: dragging prohibited +
 25: stopping prohibited +
 27: speed restricted +
@@ -300,7 +300,7 @@ NOTE: the encoding of *Anchorage Area* with attribute *category of anchorage* = 
 1: permanent +
 2: occasional +
 3: recommended +
-5: periodic/intermittent
+5: periodic/intermittent +
 6: reserved +
 7: temporary +
 8: private +
@@ -406,9 +406,9 @@ If it is required to encode a mooring area, it must be done using the feature *M
 10: dry bulk cargo +
 11: liquid bulk cargo +
 12: reefer container cargo +
-13: Ro-Ro cargo
+13: Ro-Ro cargo +
 14: project cargo +
-15: break bulk cargo
+15: break bulk cargo +
 | EN
 | 0,*
 
@@ -448,7 +448,7 @@ If it is required to encode a mooring area, it must be done using the feature *M
 2: occasional +
 3: recommended +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 6: reserved +
 7: temporary +
 8: private +
@@ -565,7 +565,7 @@ If it is required to encode an anchor berth, it must be done using the feature *
 20: drilling prohibited +
 21: drilling restricted +
 22: removal of historical artefacts prohibited +
-23: cargo transhipment (lightening) prohibited
+23: cargo transhipment (lightening) prohibited +
 24: dragging prohibited +
 25: stopping prohibited +
 27: speed restricted +
@@ -574,7 +574,7 @@ If it is required to encode an anchor berth, it must be done using the feature *
 2: occasional +
 3: recommended +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 6: reserved +
 7: temporary +
 8: private +
@@ -696,7 +696,7 @@ If it is required to encode a seaplane landing area, it must be done using the f
 20: drilling prohibited +
 21: drilling restricted +
 22: removal of historical artefacts prohibited +
-23: cargo transhipment (lightening) prohibited
+23: cargo transhipment (lightening) prohibited +
 24: dragging prohibited +
 25: stopping prohibited +
 27: speed restricted | EN | 0,*
@@ -805,7 +805,7 @@ If it is required to encode a dredging area, it must be done using a *Restricted
 2: torpedo exercise area +
 3: submarine exercise area +
 4: firing danger area +
-5: mine-laying practice area
+5: mine-laying practice area +
 6: small arms firing range | EN | 0,*
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
@@ -856,7 +856,7 @@ If it is required to encode a dredging area, it must be done using a *Restricted
 20: drilling prohibited +
 21: drilling restricted +
 22: removal of historical artefacts prohibited +
-23: cargo transhipment (lightening) prohibited
+23: cargo transhipment (lightening) prohibited +
 24: dragging prohibited +
 25: stopping prohibited +
 26: landing prohibited +
@@ -865,7 +865,7 @@ If it is required to encode a dredging area, it must be done using a *Restricted
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
-5: periodic/intermittent
+5: periodic/intermittent +
 6: reserved +
 7: temporary +
 16: watched +
@@ -1089,7 +1089,7 @@ If it is required to encode a named international or national territory, it must
 1: permanent +
 2: occasional +
 3: recommended +
-5: periodic/intermittent
+5: periodic/intermittent +
 6: reserved +
 7: temporary +
 9: mandatory | EN | 0,*
@@ -1188,10 +1188,10 @@ If it is required to encode a cargo transhipment area, it must be done using the
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,\* footnoteblock:[sixteen_eleven]
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,* footnoteblock:[sixteen_eleven]
 
 3+| file locator 2+| 3+| | (S) TE | 0,1
 
@@ -1247,7 +1247,7 @@ If it is required to identify an area in which the Mariner must be aware of circ
 [cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *INFORMATION AREA*. An area for which general information regarding navigation, but not directly related to safety of navigation, is available.
-10+| *[underline]#S-101 Geo Feature:#* *Information Area* __**(M_NPUB)**__
+10+| *[underline]#S-101 Geo Feature:# Information Area _(M_NPUB)_*
 10+| *[underline]#Primitives:#* *Point, Surface*
 
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
@@ -1284,7 +1284,7 @@ If it is required to identify an area in which the Mariner must be aware of circ
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 
-3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,\* footnoteblock:[sixteen_twelve]
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,* footnoteblock:[sixteen_twelve]
 
 3+| file locator 2+| 3+| | (S) TE | 0,1
 
@@ -1613,7 +1613,7 @@ If it is required to encode an Exclusive Economic Zone (EEZ), it must be done us
 
 3+| status 2+| (STATUS) 3+|
 1: permanent +
-5: periodic/intermittent
+5: periodic/intermittent +
 6: reserved +
 7: temporary | EN | 0,*
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
@@ -1714,7 +1714,7 @@ If it is required to encode a fishery zone, it must be done using the feature *F
 20: drilling prohibited +
 21: drilling restricted +
 22: removal of historical artefacts prohibited +
-23: cargo transhipment (lightening) prohibited
+23: cargo transhipment (lightening) prohibited +
 24: dragging prohibited +
 25: stopping prohibited +
 26: landing prohibited +
@@ -1722,7 +1722,7 @@ If it is required to encode a fishery zone, it must be done using the feature *F
 39: swimming prohibited | EN | 0,*
 3+| status 2+| (STATUS) 3+|
 1: permanent +
-5: periodic/intermittent
+5: periodic/intermittent +
 6: reserved +
 7: temporary +
 8: private +
@@ -1978,7 +1978,7 @@ If it is required to encode an administrative harbour area, it must be done usin
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
-5: periodic/intermittent
+5: periodic/intermittent +
 6: reserved +
 7: temporary +
 8: private | EN | 0,*
@@ -2039,7 +2039,7 @@ If it is required to encode a log pond (also known as booming ground), it must b
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| category of oil barrier 2+| (CATOLB) 3+|
-1: oil retention (high pressure pipe)
+1: oil retention (high pressure pipe) +
 2: floating oil barrier | EN | 0,1
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
@@ -2071,7 +2071,7 @@ If it is required to encode a log pond (also known as booming ground), it must b
 1: permanent +
 2: occasional +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary +
 8: private | EN | 0,*
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
@@ -2218,7 +2218,7 @@ If it is required to encode a Straight Territorial Sea Baseline, it must be done
 20: drilling prohibited +
 21: drilling restricted +
 22: removal of historical artefacts prohibited +
-23: cargo transhipment (lightening) prohibited
+23: cargo transhipment (lightening) prohibited +
 24: dragging prohibited +
 27: speed restricted | EN | 0,*
 3+| vessel speed limit
@@ -2330,7 +2330,7 @@ If it is required to encode a Territorial Sea area, it must be done using the fe
 20: drilling prohibited +
 21: drilling restricted +
 22: removal of historical artefacts prohibited +
-23: cargo transhipment (lightening) prohibited
+23: cargo transhipment (lightening) prohibited +
 24: dragging prohibited +
 25: stopping prohibited +
 27: speed restricted | EN | 0,*
@@ -2586,7 +2586,7 @@ If it is required to encode a collision regulations (COLREGs) demarcation line, 
 3+| regulation citation 2+| 3+| | TE | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,\* footnoteblock:[sixteen_twentyeight]
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,* footnoteblock:[sixteen_twentyeight]
 
 3+| file locator 2+| 3+| | (S) TE | 0,1
 
@@ -2780,7 +2780,7 @@ An Environmentally Sensitive Sea Area that is shown on the source as a point sym
 20: drilling prohibited +
 21: drilling restricted +
 22: removal of historic artefacts prohibited +
-23: cargo transhipment (lightening) prohibited
+23: cargo transhipment (lightening) prohibited +
 24: dragging prohibited +
 25: stopping prohibited +
 26: landing prohibited +
@@ -2792,7 +2792,7 @@ An Environmentally Sensitive Sea Area that is shown on the source as a point sym
 2: occasional +
 3: recommended +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 6: reserved +
 7: temporary +
 9: mandatory +
@@ -3640,7 +3640,7 @@ Encoders are advised, therefore, that an aid to navigation structure object (for
 6: yellow +
 9: amber +
 10: violet +
-11: orange | EN | 1,\* (ordered)
+11: orange | EN | 1,* (ordered)
 3+| exhibition condition of light 2+| (EXCLIT) 3+|
 1: light shown without change of character +
 2: daytime light +
@@ -3703,40 +3703,38 @@ Encoders are advised, therefore, that an aid to navigation structure object (for
 3+| light characteristic 2+| (LITCHR) 3+|
 1: fixed +
 2: flashing +
-3: long-flashing
-4: quick-flashing
-5: very quick-flashing
-6: ultra quick-flashing
+3: long-flashing +
+4: quick-flashing +
+5: very quick-flashing +
+6: ultra quick-flashing +
 7: isophased +
 8: occulting +
 11: interrupted ultra quick flashing +
 12: morse +
 13: fixed and flash +
-14: flash and long-flash
+14: flash and long-flash +
 15: occulting and flash +
-16: fixed and long-flash
+16: fixed and long-flash +
 17: occulting alternating +
-18: long-flash alternating
+18: long-flash alternating +
 19: flash alternating +
-25: quick-flash plus long-flash
-26: very quick-flash plus long-flash
-27: ultra quick-flash plus long-flash
+25: quick-flash plus long-flash +
+26: very quick-flash plus long-flash +
+27: ultra quick-flash plus long-flash +
 28: alternating +
 29: fixed and alternating flashing | (S) EN | 1,1
-3+| signal group 2+| (SIGGRP) 3+| | (S) TE | 0,\* (ordered) footnoteblock:[nineteen_two]
+3+| signal group 2+| (SIGGRP) 3+| | (S) TE | 0,* (ordered) footnoteblock:[nineteen_two]
 
 3+| signal period 2+| (SIGPER) 3+| | (S) RE | 0,1 footnoteblock:[nineteen_two]
 
-3+| signal sequence 2+| _(SIGSEQ)_ 3+| | (S) C | 0,\* (ordered)
+3+| signal sequence 2+| _(SIGSEQ)_ 3+| | (S) C | 0,* (ordered)
 
 3+| signal duration 2+| 3+| | (S) RE | 1,1
 
 3+| signal status
 2+| 3+|
-1: lit/sound
-2: eclipsed/silent
-| (S) EN
-| 1,1
+1: lit/sound +
+2: eclipsed/silent | (S) EN | 1,1
 
 3+| signal generation 2+| (SIGGEN) 3+|
 5: radio activated +
@@ -3745,7 +3743,7 @@ Encoders are advised, therefore, that an aid to navigation structure object (for
 1: permanent +
 2: occasional +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 6: reserved +
 7: temporary +
 8: private +
@@ -3767,8 +3765,8 @@ Encoders are advised, therefore, that an aid to navigation structure object (for
 20: high water springs +
 21: mean higher high water +
 24: local datum +
-25: international great lakes datum +
-198526: mean water level +
+25: international great lakes datum 1985 +
+26: mean water level +
 28: higher high water large tide +
 29: nearly highest high water +
 30: highest astronomical tide +
@@ -3924,24 +3922,24 @@ Further guidance for encoding various types and characteristics of lights can be
 3+| light characteristic 2+| (LITCHR) 3+|
 1: fixed +
 2: flashing +
-3: long-flashing
-4: quick-flashing
-5: very quick-flashing
-6: ultra quick-flashing
+3: long-flashing +
+4: quick-flashing +
+5: very quick-flashing +
+6: ultra quick-flashing +
 7: isophased +
 8: occulting +
 11: interrupted ultra quick flashing +
 12: morse +
 13: fixed and flash +
-14: flash and long-flash
+14: flash and long-flash +
 15: occulting and flash +
-16: fixed and long-flash
+16: fixed and long-flash +
 17: occulting alternating +
-18: long-flash alternating
+18: long-flash alternating +
 19: flash alternating +
-25: quick-flash plus long-flash
-26: very quick-flash plus long-flash
-27: ultra quick-flash plus long-flash
+25: quick-flash plus long-flash +
+26: very quick-flash plus long-flash +
+27: ultra quick-flash plus long-flash +
 28: alternating +
 29: fixed and alternating flashing | (S) EN | 1,1
 3+| light sector 2+| 3+| | (S) C | 1,*
@@ -3954,7 +3952,7 @@ Further guidance for encoding various types and characteristics of lights can be
 6: yellow +
 9: amber +
 10: violet +
-11: orange | (S) EN | 1,\* (ordered)
+11: orange | (S) EN | 1,* (ordered)
 3+| directional character 2+| 3+| | (S) C | 0,1 footnoteblock:[nineteen_three]
 
 3+| moiré effect 2+| 3+| | (S) BO | 0,1
@@ -3999,20 +3997,18 @@ Further guidance for encoding various types and characteristics of lights can be
 
 3+| sector arc extension 2+| 3+| | (S) BO | 0,1
 
-3+| signal group 2+| (SIGGRP) 3+| | (S) TE | 0,\* (ordered) footnoteblock:[nineteen_three]
+3+| signal group 2+| (SIGGRP) 3+| | (S) TE | 0,* (ordered) footnoteblock:[nineteen_three]
 
 3+| signal period 2+| (SIGPER) 3+| | (S) RE | 0,1 footnoteblock:[nineteen_three]
 
-3+| signal sequence 2+| _(SIGSEQ)_ 3+| | (S) C | 0,\* (ordered)
+3+| signal sequence 2+| _(SIGSEQ)_ 3+| | (S) C | 0,* (ordered)
 
 3+| signal duration 2+| 3+| | (S) RE | 1,1
 
 3+| signal status
 2+| 3+|
-1: lit/sound
-2: eclipsed/silent
-| (S) EN
-| 1,1
+1: lit/sound +
+2: eclipsed/silent | (S) EN | 1,1
 
 3+| signal generation 2+| (SIGGEN) 3+|
 5: radio activated +
@@ -4021,7 +4017,7 @@ Further guidance for encoding various types and characteristics of lights can be
 1: permanent +
 2: occasional +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 6: reserved +
 7: temporary +
 8: private +
@@ -4040,8 +4036,8 @@ Further guidance for encoding various types and characteristics of lights can be
 20: high water springs +
 21: mean higher high water +
 24: local datum +
-25: international great lakes datum +
-198526: mean water level +
+25: international great lakes datum 1985 +
+26: mean water level +
 28: higher high water large tide +
 29: nearly highest high water +
 30: highest astronomical tide +
@@ -4155,11 +4151,31 @@ If it is required to encode a light sector having a directional function, it mus
 
 Evolving technology in the development of navigational lights has resulted in the installation of complex directional navigation lights with multiple sectors, colours and characteristics, some with oscillating sectors, in many areas where navigation is restricted. These lights may have up to 7 sectors, with the central sector being a very narrow, sometimes intensified, fixed white sector performing the directional function of the light. In the IALA A System, the sectors flanking this directional light may be alternating and oscillate increasingly from white to green (to starboard) and red (to port) with increasing deviation from the track defined by the directional light. These lights will normally be flanked by narrow sectors of fixed green (to starboard) and red (to port). Additionally, there may be outer sectors that are occulting green (to starboard) and red (to port) which oscillate with increasing period of eclipse to isophased or flashing with increasing deviation from the track defined by the directional light. For the IALA B System the colours are reversed. In some cases these complex lights may not conform to IALA. Each of the outer sectors may be very narrow.
 
-If is required to encode an oscillating light sector, it should be done using a *Light Sectored* feature, with iterations of the complex attribute *sector characteristics* as follows: For light sectors in the IALA A system that are alternating and oscillate increasingly from white to green (to starboard) and red (to port) with increasing deviation from the track defined by the directional light:*sector characteristics***:** *light characteristic* = _28_ (Alternating); *colour* = _1,3_ (White, Red); *sector limit*; *sector information* (*text*) = __White phase decreases as bearing to light increases__**sector characteristics****:** *light characteristic* = _28_ (Alternating); *colour* = _1,4_ (White, Green); *sector limit*; *sector information* (*text*) = __White phase increases as bearing to light increases__For lights in the IALA B system that are alternating and oscillate increasingly from white to red (to starboard) and green (to port) with increasing deviation from the track defined by the directional light; transpose the colours red and green in the above encoding.
+If is required to encode an oscillating light sector, it should be done using a *Light Sectored* feature, with iterations of the complex attribute *sector characteristics* as follows: For light sectors in the IALA A system that are alternating and oscillate increasingly from white to green (to starboard) and red (to port) with increasing deviation from the track defined by the directional light:
 
-For lights in the IALA A system that are occulting green (to starboard) and red (to port) which oscillate with increasing period of eclipse to isophased or flashing with increasing deviation from the track defined by the directional light:*sector characteristics***:** *light characteristic* = _8_ (Occulting); *colour* = _3_ (Red); *sector limit*; *sector information* (*text*) = __Light phase decreases as bearing to light increases__**sector characteristics****:** *light characteristic* = _8_ (Occulting); *colour* = _4_ (Green); *sector limit*; *sector information* (*text*) = __Light phase increases as bearing to light increases__For lights in the IALA B system that are occulting red (to starboard) and green (to port) which oscillate with increasing period of eclipse to isophased or flashing with increasing deviation from the track defined by the directional light; transpose the colours red and green in the above encoding.
+*sector characteristics*: *light characteristic* = _28_ (Alternating); *colour* = _1,3_ (White, Red); *sector limit*; *sector information* (*text*) = _White phase decreases as bearing to light increases_
 
-Oscillating lights which are not IALA should be encoded similar to the above. For instance, where a light contains white sectors that are occulting and oscillate with increasing period of eclipse to isophased or flashing with increasing deviation from the track defined by the directional light:For the sector to port of the track defined by the directional light:*sector characteristics***:** *light characteristic* = _8_ (Occulting); *colour* = _1_ (White); *sector limit*; *sector information* (*text*) = __Light phase decreases as bearing to light increases__For the sector to starboard of the track defined by the directional light:*sector characteristics***:** *light characteristic* = _8_ (Occulting); *colour* = _1_ (White); *sector limit*; *sector information* (*text*) = __Light phase increases as bearing to light increases__All other light sectors must be encoded using additional iterations of *sector characteristics*, with sub-attributes (including *light sector* or *directional character*) populated in accordance with the characteristics of the sector.
+*sector characteristics*: *light characteristic* = _28_ (Alternating); *colour* = _1,4_ (White, Green); *sector limit*; *sector information* (*text*) = _White phase increases as bearing to light increases_
+
+For lights in the IALA B system that are alternating and oscillate increasingly from white to red (to starboard) and green (to port) with increasing deviation from the track defined by the directional light; transpose the colours red and green in the above encoding.
+
+For lights in the IALA A system that are occulting green (to starboard) and red (to port) which oscillate with increasing period of eclipse to isophased or flashing with increasing deviation from the track defined by the directional light:
+
+*sector characteristics*: *light characteristic* = _8_ (Occulting); *colour* = _3_ (Red); *sector limit*; *sector information* (*text*) = _Light phase decreases as bearing to light increases_
+
+**sector characteristics*: *light characteristic* = _8_ (Occulting); *colour* = _4_ (Green); *sector limit*; *sector information* (*text*) = _Light phase increases as bearing to light increases_
+
+For lights in the IALA B system that are occulting red (to starboard) and green (to port) which oscillate with increasing period of eclipse to isophased or flashing with increasing deviation from the track defined by the directional light; transpose the colours red and green in the above encoding.
+
+Oscillating lights which are not IALA should be encoded similar to the above. For instance, where a light contains white sectors that are occulting and oscillate with increasing period of eclipse to isophased or flashing with increasing deviation from the track defined by the directional light:For the sector to port of the track defined by the directional light:
+
+*sector characteristics*: *light characteristic* = _8_ (Occulting); *colour* = _1_ (White); *sector limit*; *sector information* (*text*) = _Light phase decreases as bearing to light increases_
+
+For the sector to starboard of the track defined by the directional light:
+
+*sector characteristics*: *light characteristic* = _8_ (Occulting); *colour* = _1_ (White); *sector limit*; *sector information* (*text*) = _Light phase increases as bearing to light increases_
+
+All other light sectors must be encoded using additional iterations of *sector characteristics*, with sub-attributes (including *light sector* or *directional character*) populated in accordance with the characteristics of the sector.
 
 [underline]#Distinction:# Cardinal Beacon; Cardinal Buoy; Emergency Wreck Marking Buoy; Installation Buoy; Isolated Danger Beacon; Isolated Danger Buoy; Lateral Beacon; Lateral Buoy; Light Air Obstruction; Light All Around; Light Float; Light Fog Detector; Light Vessel; Safe Water Beacon; Safe Water Buoy; Special Purpose/General Beacon; Special Purpose/General Buoy.
 
@@ -4223,40 +4239,38 @@ Oscillating lights which are not IALA should be encoded similar to the above. Fo
 3+| light characteristic 2+| (LITCHR) 3+|
 1: fixed +
 2: flashing +
-3: long-flashing
-4: quick-flashing
-5: very quick-flashing
-6: ultra quick-flashing
+3: long-flashing +
+4: quick-flashing +
+5: very quick-flashing +
+6: ultra quick-flashing +
 7: isophased +
 8: occulting +
 11: interrupted ultra quick flashing +
 12: morse +
 13: fixed and flash +
-14: flash and long-flash
+14: flash and long-flash +
 15: occulting and flash +
-16: fixed and long-flash
+16: fixed and long-flash +
 17: occulting alternating +
-18: long-flash alternating
+18: long-flash alternating +
 19: flash alternating +
-25: quick-flash plus long-flash
-26: very quick-flash plus long-flash
-27: ultra quick-flash plus long-flash
+25: quick-flash plus long-flash +
+26: very quick-flash plus long-flash +
+27: ultra quick-flash plus long-flash +
 28: alternating +
 29: fixed and alternating flashing | (S) EN | 1,1
-3+| signal group 2+| (SIGGRP) 3+| | (S) TE | 0,\* (ordered) footnoteblock:[nineteen_four]
+3+| signal group 2+| (SIGGRP) 3+| | (S) TE | 0,* (ordered) footnoteblock:[nineteen_four]
 
 3+| signal period 2+| (SIGPER) 3+| | (S) RE | 0,1 footnoteblock:[nineteen_four]
 
-3+| signal sequence 2+| _(SIGSEQ)_ 3+| | (S) C | 0,\* (ordered)
+3+| signal sequence 2+| _(SIGSEQ)_ 3+| | (S) C | 0,* (ordered)
 
 3+| signal duration 2+| 3+| | (S) RE | 1,1
 
 3+| signal status
 2+| 3+|
-1: lit/sound
-2: eclipsed/silent
-| (S) EN
-| 1,1
+1: lit/sound +
+2: eclipsed/silent | (S) EN | 1,1
 
 3+| signal generation 2+| (SIGGEN) 3+|
 5: radio activated +
@@ -4265,7 +4279,7 @@ Oscillating lights which are not IALA should be encoded similar to the above. Fo
 1: permanent +
 2: occasional +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 6: reserved +
 7: temporary +
 8: private +
@@ -4284,8 +4298,8 @@ Oscillating lights which are not IALA should be encoded similar to the above. Fo
 20: high water springs +
 21: mean higher high water +
 24: local datum +
-25: international great lakes datum +
-198526: mean water level +
+25: international great lakes datum 1985 +
+26: mean water level +
 28: higher high water large tide +
 29: nearly highest high water +
 30: highest astronomical tide +
@@ -4429,46 +4443,43 @@ Further guidance for encoding various types and characteristics of lights can be
 3+| light characteristic 2+| (LITCHR) 3+|
 1: fixed +
 2: flashing +
-3: long-flashing
-4: quick-flashing
-5: very quick-flashing
-6: ultra quick-flashing
+3: long-flashing +
+4: quick-flashing +
+5: very quick-flashing +
+6: ultra quick-flashing +
 7: isophased +
 8: occulting +
 11: interrupted ultra quick flashing +
 12: morse +
 13: fixed and flash +
-14: flash and long-flash
+14: flash and long-flash +
 15: occulting and flash +
-16: fixed and long-flash
+16: fixed and long-flash +
 17: occulting alternating +
-18: long-flash alternating
+18: long-flash alternating +
 19: flash alternating +
-25: quick-flash plus long-flash
-26: very quick-flash plus long-flash
-27: ultra quick-flash plus long-flash
+25: quick-flash plus long-flash +
+26: very quick-flash plus long-flash +
+27: ultra quick-flash plus long-flash +
 28: alternating +
 29: fixed and alternating flashing | (S) EN | 1,1
-3+| signal group 2+| (SIGGRP) 3+| | (S) TE | 0,\* (ordered) footnoteblock:[nineteen_five]
+3+| signal group 2+| (SIGGRP) 3+| | (S) TE | 0,* (ordered) footnoteblock:[nineteen_five]
 
 3+| signal period 2+| (SIGPER) 3+| | (S) RE | 0,1 footnoteblock:[nineteen_five]
 
-3+| signal sequence 2+| _(SIGSEQ)_ 3+| | (S) C | 0,\* (ordered)
+3+| signal sequence 2+| _(SIGSEQ)_ 3+| | (S) C | 0,* (ordered)
 
 3+| signal duration 2+| 3+| | (S) RE | 1,1
 
-3+| signal status
-2+| 3+|
-1: lit/sound
-2: eclipsed/silent
-| (S) EN
-| 1,1
+3+| signal status 2+| 3+|
+1: lit/sound +
+2: eclipsed/silent | (S) EN | 1,1
 
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 6: reserved +
 7: temporary +
 8: private +
@@ -4490,8 +4501,8 @@ Further guidance for encoding various types and characteristics of lights can be
 20: high water springs +
 21: mean higher high water +
 24: local datum +
-25: international great lakes datum +
-198526: mean water level +
+25: international great lakes datum 1985 +
+26: mean water level +
 28: higher high water large tide +
 29: nearly highest high water +
 30: highest astronomical tide +
@@ -4574,8 +4585,8 @@ Further guidance for encoding various types and characteristics of lights can be
 7: superbuoy +
 8: ice buoy | EN | 1,1
 3+| category of lateral mark 2+| (CATLAM) 3+|
-1: port-hand lateral mark
-2: starboard-hand lateral mark
+1: port-hand lateral mark +
+2: starboard-hand lateral mark +
 3: preferred channel to starboard lateral mark +
 4: preferred channel to port lateral mark | EN | 1,1
 3+| colour 2+| (COLOUR) 3+|
@@ -4591,13 +4602,13 @@ Further guidance for encoding various types and characteristics of lights can be
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 1,\* (ordered)
+13: pink | EN | 1,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | EN | 0,1 footnoteblock:[twenty_one]
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
@@ -4642,7 +4653,7 @@ Further guidance for encoding various types and characteristics of lights can be
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary +
 8: private +
 18: existence doubtful | EN | 0,*
@@ -4662,43 +4673,43 @@ Further guidance for encoding various types and characteristics of lights can be
 10: violet +
 11: orange +
 12: magenta +
-13: pink | (S) EN | 0,\* (ordered)
+13: pink | (S) EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_one]
 3+| topmark/daymark shape 2+| (TOPSHP) 3+|
-1: cone (point up)
-2: cone (point down)
+1: cone (point up) +
+2: cone (point down) +
 3: sphere +
 4: 2 spheres +
 5: cylinder +
 6: board +
-7: x-shaped
+7: x-shaped +
 8: upright cross +
-9: cube (point up)
-10: 2 cones (point to point)
-11: 2 cones (base to base)
+9: cube (point up) +
+10: 2 cones (point to point) +
+11: 2 cones (base to base) +
 12: rhombus +
-13: 2 cones (points upward)
-14: 2 cones (points downward)
-15: besom (point up)
-16: besom (point down)
+13: 2 cones (points upward) +
+14: 2 cones (points downward) +
+15: besom (point up) +
+16: besom (point down) +
 17: flag +
 18: sphere over a rhombus +
 19: square +
-20: rectangle (horizontal)
-21: rectangle (vertical)
-22: trapezium (up)
-23: trapezium (down)
-24: triangle (point up)
-25: triangle (point down)
+20: rectangle (horizontal) +
+21: rectangle (vertical) +
+22: trapezium (up) +
+23: trapezium (down) +
+24: triangle (point up) +
+25: triangle (point down) +
 26: circle +
-27: two upright crosses (one over the other)
-28: T-shape
+27: two upright crosses (one over the other) +
+28: T-shape +
 29: triangle pointing up over a circle +
 30: upright cross over a circle +
 31: rhombus over a circle +
@@ -4816,13 +4827,13 @@ image::figure-20-1.png["",475,406]
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 1,\* (ordered)
+13: pink | EN | 1,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | EN | 0,1 footnoteblock:[twenty_two]
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
@@ -4867,7 +4878,7 @@ image::figure-20-1.png["",475,406]
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary +
 8: private +
 18: existence doubtful | EN | 0,*
@@ -4887,43 +4898,43 @@ image::figure-20-1.png["",475,406]
 10: violet +
 11: orange +
 12: magenta +
-13: pink | (S) EN | 0,\* (ordered)
+13: pink | (S) EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_two]
 3+| topmark/daymark shape 2+| (TOPSHP) 3+|
-1: cone (point up)
-2: cone (point down)
+1: cone (point up) +
+2: cone (point down) +
 3: sphere +
 4: 2 spheres +
 5: cylinder +
 6: board +
-7: x-shaped
+7: x-shaped +
 8: upright cross +
-9: cube (point up)
-10: 2 cones (point to point)
-11: 2 cones (base to base)
+9: cube (point up) +
+10: 2 cones (point to point) +
+11: 2 cones (base to base) +
 12: rhombus +
-13: 2 cones (points upward)
-14: 2 cones (points downward)
-15: besom (point up)
-16: besom (point down)
+13: 2 cones (points upward) +
+14: 2 cones (points downward) +
+15: besom (point up) +
+16: besom (point down) +
 17: flag +
 18: sphere over a rhombus +
 19: square +
-20: rectangle (horizontal)
-21: rectangle (vertical)
-22: trapezium (up)
-23: trapezium (down)
-24: triangle (point up)
-25: triangle (point down)
+20: rectangle (horizontal) +
+21: rectangle (vertical) +
+22: trapezium (up) +
+23: trapezium (down) +
+24: triangle (point up) +
+25: triangle (point down) +
 26: circle +
-27: two upright crosses (one over the other)
-28: T-shape
+27: two upright crosses (one over the other) +
+28: T-shape +
 29: triangle pointing up over a circle +
 30: upright cross over a circle +
 31: rhombus over a circle +
@@ -5030,13 +5041,13 @@ image::figure-20-2.png["",517,636]
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 1,\* (ordered)
+13: pink | EN | 1,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | EN | 0,1 footnoteblock:[twenty_three]
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
@@ -5081,7 +5092,7 @@ image::figure-20-2.png["",517,636]
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary +
 8: private +
 18: existence doubtful | EN | 0,*
@@ -5101,43 +5112,43 @@ image::figure-20-2.png["",517,636]
 10: violet +
 11: orange +
 12: magenta +
-13: pink | (S) EN | 0,\* (ordered)
+13: pink | (S) EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_three]
 3+| topmark/daymark shape 2+| (TOPSHP) 3+|
-1: cone (point up)
-2: cone (point down)
+1: cone (point up) +
+2: cone (point down) +
 3: sphere +
 4: 2 spheres +
 5: cylinder +
 6: board +
-7: x-shaped
+7: x-shaped +
 8: upright cross +
-9: cube (point up)
-10: 2 cones (point to point)
-11: 2 cones (base to base)
+9: cube (point up) +
+10: 2 cones (point to point) +
+11: 2 cones (base to base) +
 12: rhombus +
-13: 2 cones (points upward)
-14: 2 cones (points downward)
-15: besom (point up)
-16: besom (point down)
+13: 2 cones (points upward) +
+14: 2 cones (points downward) +
+15: besom (point up) +
+16: besom (point down) +
 17: flag +
 18: sphere over a rhombus +
 19: square +
-20: rectangle (horizontal)
-21: rectangle (vertical)
-22: trapezium (up)
-23: trapezium (down)
-24: triangle (point up)
-25: triangle (point down)
+20: rectangle (horizontal) +
+21: rectangle (vertical) +
+22: trapezium (up) +
+23: trapezium (down) +
+24: triangle (point up) +
+25: triangle (point down) +
 26: circle +
-27: two upright crosses (one over the other)
-28: T-shape
+27: two upright crosses (one over the other) +
+28: T-shape +
 29: triangle pointing up over a circle +
 30: upright cross over a circle +
 31: rhombus over a circle +
@@ -5244,13 +5255,13 @@ image::figure-20-3.png["",549,263]
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 1,\* (ordered)
+13: pink | EN | 1,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | EN | 0,1 footnoteblock:[twenty_four]
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
@@ -5295,7 +5306,7 @@ image::figure-20-3.png["",549,263]
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary +
 8: private +
 18: existence doubtful | EN | 0,*
@@ -5315,43 +5326,43 @@ image::figure-20-3.png["",549,263]
 10: violet +
 11: orange +
 12: magenta +
-13: pink | (S) EN | 0,\* (ordered)
+13: pink | (S) EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_four]
 3+| topmark/daymark shape 2+| (TOPSHP) 3+|
-1: cone (point up)
-2: cone (point down)
+1: cone (point up) +
+2: cone (point down) +
 3: sphere +
 4: 2 spheres +
 5: cylinder +
 6: board +
-7: x-shaped
+7: x-shaped +
 8: upright cross +
-9: cube (point up)
-10: 2 cones (point to point)
-11: 2 cones (base to base)
+9: cube (point up) +
+10: 2 cones (point to point) +
+11: 2 cones (base to base) +
 12: rhombus +
-13: 2 cones (points upward)
-14: 2 cones (points downward)
-15: besom (point up)
-16: besom (point down)
+13: 2 cones (points upward) +
+14: 2 cones (points downward) +
+15: besom (point up) +
+16: besom (point down) +
 17: flag +
 18: sphere over a rhombus +
 19: square +
-20: rectangle (horizontal)
-21: rectangle (vertical)
-22: trapezium (up)
-23: trapezium (down)
-24: triangle (point up)
-25: triangle (point down)
+20: rectangle (horizontal) +
+21: rectangle (vertical) +
+22: trapezium (up) +
+23: trapezium (down) +
+24: triangle (point up) +
+25: triangle (point down) +
 26: circle +
-27: two upright crosses (one over the other)
-28: T-shape
+27: two upright crosses (one over the other) +
+28: T-shape +
 29: triangle pointing up over a circle +
 30: upright cross over a circle +
 31: rhombus over a circle +
@@ -5466,18 +5477,18 @@ image::figure-20-4.png["",664,217]
 15: LANBY +
 17: measured distance mark +
 18: notice mark +
-19: TSS mark (Traffic Separation Scheme)
+19: TSS mark (Traffic Separation Scheme) +
 20: anchoring prohibited mark +
 21: berthing prohibited mark +
 22: overtaking prohibited mark +
-23: two-way traffic prohibited mark
+23: two-way traffic prohibited mark +
 24: reduced wake mark +
 25: speed limit mark +
 26: stop mark +
 27: general warning mark +
-28: sound ship's siren mark
+28: sound ship's siren mark +
 29: restricted vertical clearance mark +
-30: maximum vessel's draught mark
+30: maximum vessel's draught mark +
 31: restricted horizontal clearance mark +
 32: strong current warning mark +
 33: berthing permitted mark +
@@ -5521,13 +5532,13 @@ image::figure-20-4.png["",664,217]
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 1,\* (ordered)
+13: pink | EN | 1,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | EN | 0,1 footnoteblock:[twenty_five]
 
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
@@ -5572,7 +5583,7 @@ image::figure-20-4.png["",664,217]
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary +
 8: private +
 18: existence doubtful | EN | 0,*
@@ -5592,43 +5603,43 @@ image::figure-20-4.png["",664,217]
 10: violet +
 11: orange +
 12: magenta +
-13: pink | (S) EN | 0,\* (ordered)
+13: pink | (S) EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_five]
 3+| topmark/daymark shape 2+| (TOPSHP) 3+|
-1: cone (point up)
-2: cone (point down)
+1: cone (point up) +
+2: cone (point down) +
 3: sphere +
 4: 2 spheres +
 5: cylinder +
 6: board +
-7: x-shaped
+7: x-shaped +
 8: upright cross +
-9: cube (point up)
-10: 2 cones (point to point)
-11: 2 cones (base to base)
+9: cube (point up) +
+10: 2 cones (point to point) +
+11: 2 cones (base to base) +
 12: rhombus +
-13: 2 cones (points upward)
-14: 2 cones (points downward)
-15: besom (point up)
-16: besom (point down)
+13: 2 cones (points upward) +
+14: 2 cones (points downward) +
+15: besom (point up) +
+16: besom (point down) +
 17: flag +
 18: sphere over a rhombus +
 19: square +
-20: rectangle (horizontal)
-21: rectangle (vertical)
-22: trapezium (up)
-23: trapezium (down)
-24: triangle (point up)
-25: triangle (point down)
+20: rectangle (horizontal) +
+21: rectangle (vertical) +
+22: trapezium (up) +
+23: trapezium (down) +
+24: triangle (point up) +
+25: triangle (point down) +
 26: circle +
-27: two upright crosses (one over the other)
-28: T-shape
+27: two upright crosses (one over the other) +
+28: T-shape +
 29: triangle pointing up over a circle +
 30: upright cross over a circle +
 31: rhombus over a circle +
@@ -5716,7 +5727,7 @@ h| Feature | INT1 h| Feature h| buoy shape h| category of special purpose mark h
 | Buoy marking traffic separation scheme | Q61 | *Special Purpose/General Buoy* | | _19_ |
 | Buoy marking recreation zone           | Q62 | *Special Purpose/General Buoy* | | _12_ |
 | Floating waste bin                     | | *Special Purpose/General Buoy* | | _Empty (null) value_ | *information* = _waste bin_ (for example)
-| Fish Aggregating Device (FAD)             | | *Special Purpose/General Buoy* | _*/*_ | _59_ | Fish havens are encoded as *Obstruction* (see <<sec_13.6>>)
+| Fish Aggregating Device (FAD)             | | *Special Purpose/General Buoy* | *_/_* | _59_ | Fish havens are encoded as *Obstruction* (see <<sec_13.6>>)
 | Buoy marking wave recorder (or current meter) | Q59 | *Special Purpose/General Buoy* | | _63_ |
 |===
 
@@ -5762,13 +5773,13 @@ h| Feature | INT1 h| Feature h| buoy shape h| category of special purpose mark h
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 1,\* (ordered)
+13: pink | EN | 1,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | EN | 0,1 footnoteblock:[twenty_six]
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
@@ -5820,43 +5831,43 @@ h| Feature | INT1 h| Feature h| buoy shape h| category of special purpose mark h
 10: violet +
 11: orange +
 12: magenta +
-13: pink | (S) EN | 0,\* (ordered)
+13: pink | (S) EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_six]
 3+| topmark/daymark shape 2+| (TOPSHP) 3+|
-1: cone (point up)
-2: cone (point down)
+1: cone (point up) +
+2: cone (point down) +
 3: sphere +
 4: 2 spheres +
 5: cylinder +
 6: board +
-7: x-shaped
+7: x-shaped +
 8: upright cross +
-9: cube (point up)
-10: 2 cones (point to point)
-11: 2 cones (base to base)
+9: cube (point up) +
+10: 2 cones (point to point) +
+11: 2 cones (base to base) +
 12: rhombus +
-13: 2 cones (points upward)
-14: 2 cones (points downward)
-15: besom (point up)
-16: besom (point down)
+13: 2 cones (points upward) +
+14: 2 cones (points downward) +
+15: besom (point up) +
+16: besom (point down) +
 17: flag +
 18: sphere over a rhombus +
 19: square +
-20: rectangle (horizontal)
-21: rectangle (vertical)
-22: trapezium (up)
-23: trapezium (down)
-24: triangle (point up)
-25: triangle (point down)
+20: rectangle (horizontal) +
+21: rectangle (vertical) +
+22: trapezium (up) +
+23: trapezium (down) +
+24: triangle (point up) +
+25: triangle (point down) +
 26: circle +
-27: two upright crosses (one over the other)
-28: T-shape
+27: two upright crosses (one over the other) +
+28: T-shape +
 29: triangle pointing up over a circle +
 30: upright cross over a circle +
 31: rhombus over a circle +
@@ -5971,13 +5982,13 @@ If it is required to encode a buoy having the function of an emergency wreck mar
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 1,\* (ordered)
+13: pink | EN | 1,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | EN | 0,1 footnoteblock:[twenty_seven]
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
@@ -6021,7 +6032,7 @@ If it is required to encode a buoy having the function of an emergency wreck mar
 1: permanent +
 2: occasional +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary +
 8: private +
 18: existence doubtful | EN | 0,*
@@ -6086,7 +6097,7 @@ If it is required to encode an installation buoy, it must be done using the feat
 [cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *MOORING BUOY*. A buoy secured to the bottom by permanent moorings with means for mooring a vessel by use of its anchor chain or mooring lines. (IHO Dictionary -- S-32).
-10+| *[underline]#S-101 Geo Feature:#* *Mooring Buoy* __**(MORFAC)**__
+10+| *[underline]#S-101 Geo Feature:#* *Mooring Buoy* *_(MORFAC)_*
 10+| *[underline]#Primitives:#* *Point*
 
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
@@ -6114,13 +6125,13 @@ If it is required to encode an installation buoy, it must be done using the feat
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 0,\* (ordered)
+13: pink | EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | EN | 0,1 footnoteblock:[twenty_eight]
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
@@ -6163,7 +6174,7 @@ If it is required to encode an installation buoy, it must be done using the feat
 1: permanent +
 2: occasional +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary +
 8: private +
 18: existence doubtful | EN | 0,*
@@ -6240,16 +6251,16 @@ If it is required to encode a mooring buoy, it must be done using the feature *M
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| beacon shape 2+| (BCNSHP) 3+|
-1: stake, pole, perch, post
+1: stake, pole, perch, post +
 2: withy +
 3: beacon tower +
 4: lattice beacon +
-5 : pile beacon +
-6 : cairn +
-7 : buoyant beacon | EN | 1,1
+5: pile beacon +
+6: cairn +
+7: buoyant beacon | EN | 1,1
 3+| category of lateral mark 2+| (CATLAM) 3+|
-1: port-hand lateral mark
-2: starboard-hand lateral mark
+1: port-hand lateral mark +
+2: starboard-hand lateral mark +
 3: preferred channel to starboard lateral mark +
 4: preferred channel to port lateral mark | EN | 1,1
 3+| colour 2+| (COLOUR) 3+|
@@ -6265,13 +6276,13 @@ If it is required to encode a mooring buoy, it must be done using the feature *M
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 1,\* (ordered)
+13: pink | EN | 1,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | EN | 0,1 footnoteblock:[twenty_nine]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
@@ -6329,7 +6340,7 @@ If it is required to encode a mooring buoy, it must be done using the feature *M
 1: permanent +
 2: occasional +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary +
 8: private +
 12: illuminated +
@@ -6350,43 +6361,43 @@ If it is required to encode a mooring buoy, it must be done using the feature *M
 10: violet +
 11: orange +
 12: magenta +
-13: pink | (S) EN | 0,\* (ordered)
+13: pink | (S) EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_nine]
 3+| topmark/daymark shape 2+| (TOPSHP) 3+|
-1: cone (point up)
-2: cone (point down)
+1: cone (point up) +
+2: cone (point down) +
 3: sphere +
 4: 2 spheres +
 5: cylinder +
 6: board +
-7: x-shaped
+7: x-shaped +
 8: upright cross +
-9: cube (point up)
-10: 2 cones (point to point)
-11: 2 cones (base to base)
+9: cube (point up) +
+10: 2 cones (point to point) +
+11: 2 cones (base to base) +
 12: rhombus +
-13: 2 cones (points upward)
-14: 2 cones (points downward)
-15: besom (point up)
-16: besom (point down)
+13: 2 cones (points upward) +
+14: 2 cones (points downward) +
+15: besom (point up) +
+16: besom (point down) +
 17: flag +
 18: sphere over a rhombus +
 19: square +
-20: rectangle (horizontal)
-21: rectangle (vertical)
-22: trapezium (up)
-23: trapezium (down)
-24: triangle (point up)
-25: triangle (point down)
+20: rectangle (horizontal) +
+21: rectangle (vertical) +
+22: trapezium (up) +
+23: trapezium (down) +
+24: triangle (point up) +
+25: triangle (point down) +
 26: circle +
-27: two upright crosses (one over the other)
-28: T-shape
+27: two upright crosses (one over the other) +
+28: T-shape +
 29: triangle pointing up over a circle +
 30: upright cross over a circle +
 31: rhombus over a circle +
@@ -6484,7 +6495,7 @@ image::figure-20-1.png["",544,466]
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| beacon shape 2+| (BCNSHP) 3+|
-1: stake, pole, perch, post
+1: stake, pole, perch, post +
 2: withy +
 3: beacon tower +
 4: lattice beacon +
@@ -6509,13 +6520,13 @@ image::figure-20-1.png["",544,466]
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 1,\* (ordered)
+13: pink | EN | 1,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | EN | 0,1 footnoteblock:[twenty_ten]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
@@ -6573,7 +6584,7 @@ image::figure-20-1.png["",544,466]
 1: permanent +
 2: occasional +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary +
 8: private +
 12: illuminated +
@@ -6600,37 +6611,37 @@ image::figure-20-1.png["",544,466]
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_ten]
 3+| topmark/daymark shape 2+| (TOPSHP) 3+|
-1: cone (point up)
-2: cone (point down)
+1: cone (point up) +
+2: cone (point down) +
 3: sphere +
 4: 2 spheres +
 5: cylinder +
 6: board +
-7: x-shaped
+7: x-shaped +
 8: upright cross +
-9: cube (point up)
-10: 2 cones (point to point)
-11: 2 cones (base to base)
+9: cube (point up) +
+10: 2 cones (point to point) +
+11: 2 cones (base to base) +
 12: rhombus +
-13: 2 cones (points upward)
-14: 2 cones (points downward)
-15: besom (point up)
-16: besom (point down)
+13: 2 cones (points upward) +
+14: 2 cones (points downward) +
+15: besom (point up) +
+16: besom (point down) +
 17: flag +
 18: sphere over a rhombus +
 19: square +
-20: rectangle (horizontal)
-21: rectangle (vertical)
-22: trapezium (up)
-23: trapezium (down)
-24: triangle (point up)
-25: triangle (point down)
+20: rectangle (horizontal) +
+21: rectangle (vertical) +
+22: trapezium (up) +
+23: trapezium (down) +
+24: triangle (point up) +
+25: triangle (point down) +
 26: circle +
-27: two upright crosses (one over the other)
-28: T-shape
+27: two upright crosses (one over the other) +
+28: T-shape +
 29: triangle pointing up over a circle +
 30: upright cross over a circle +
 31: rhombus over a circle +
@@ -6722,7 +6733,7 @@ image::figure-20-2.png["",508,624]
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| beacon shape 2+| (BCNSHP) 3+|
-1: stake, pole, perch, post
+1: stake, pole, perch, post +
 2: withy +
 3: beacon tower +
 4: lattice beacon +
@@ -6742,13 +6753,13 @@ image::figure-20-2.png["",508,624]
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 1,\* (ordered)
+13: pink | EN | 1,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | EN | 0,1 footnoteblock:[twenty_eleven]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
@@ -6806,7 +6817,7 @@ image::figure-20-2.png["",508,624]
 1: permanent +
 2: occasional +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary +
 8: private +
 12: illuminated +
@@ -6827,43 +6838,43 @@ image::figure-20-2.png["",508,624]
 10: violet +
 11: orange +
 12: magenta +
-13: pink | (S) EN | 0,\* (ordered)
+13: pink | (S) EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_eleven]
 3+| topmark/daymark shape 2+| (TOPSHP) 3+|
-1: cone (point up)
-2: cone (point down)
+1: cone (point up) +
+2: cone (point down) +
 3: sphere +
 4: 2 spheres +
 5: cylinder +
 6: board +
-7: x-shaped
+7: x-shaped +
 8: upright cross +
-9: cube (point up)
-10: 2 cones (point to point)
-11: 2 cones (base to base)
+9: cube (point up) +
+10: 2 cones (point to point) +
+11: 2 cones (base to base) +
 12: rhombus +
-13: 2 cones (points upward)
-14: 2 cones (points downward)
-15: besom (point up)
-16: besom (point down)
+13: 2 cones (points upward) +
+14: 2 cones (points downward) +
+15: besom (point up) +
+16: besom (point down) +
 17: flag +
 18: sphere over a rhombus +
 19: square +
-20: rectangle (horizontal)
-21: rectangle (vertical)
-22: trapezium (up)
-23: trapezium (down)
-24: triangle (point up)
-25: triangle (point down)
+20: rectangle (horizontal) +
+21: rectangle (vertical) +
+22: trapezium (up) +
+23: trapezium (down) +
+24: triangle (point up) +
+25: triangle (point down) +
 26: circle +
-27: two upright crosses (one over the other)
-28: T-shape
+27: two upright crosses (one over the other) +
+28: T-shape +
 29: triangle pointing up over a circle +
 30: upright cross over a circle +
 31: rhombus over a circle +
@@ -6957,7 +6968,7 @@ image::figure-20-3.png["",549,263]
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| beacon shape 2+| (BCNSHP) 3+|
-1: stake, pole, perch, post
+1: stake, pole, perch, post +
 2: withy +
 3: beacon tower +
 4: lattice beacon +
@@ -6977,13 +6988,13 @@ image::figure-20-3.png["",549,263]
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 1,\* (ordered)
+13: pink | EN | 1,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | EN | 0,1 footnoteblock:[twenty_twelve]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
@@ -7041,7 +7052,7 @@ image::figure-20-3.png["",549,263]
 1: permanent +
 2: occasional +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary +
 8: private +
 12: illuminated +
@@ -7062,43 +7073,43 @@ image::figure-20-3.png["",549,263]
 10: violet +
 11: orange +
 12: magenta +
-13: pink | (S) EN | 0,\* (ordered)
+13: pink | (S) EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_twelve]
 3+| topmark/daymark shape 2+| (TOPSHP) 3+|
-1: cone (point up)
-2: cone (point down)
+1: cone (point up) +
+2: cone (point down) +
 3: sphere +
 4: 2 spheres +
 5: cylinder +
 6: board +
-7: x-shaped
+7: x-shaped +
 8: upright cross +
-9: cube (point up)
-10: 2 cones (point to point)
-11: 2 cones (base to base)
+9: cube (point up) +
+10: 2 cones (point to point) +
+11: 2 cones (base to base) +
 12: rhombus +
-13: 2 cones (points upward)
-14: 2 cones (points downward)
-15: besom (point up)
-16: besom (point down)
+13: 2 cones (points upward) +
+14: 2 cones (points downward) +
+15: besom (point up) +
+16: besom (point down) +
 17: flag +
 18: sphere over a rhombus +
 19: square +
-20: rectangle (horizontal)
-21: rectangle (vertical)
-22: trapezium (up)
-23: trapezium (down)
-24: triangle (point up)
-25: triangle (point down)
+20: rectangle (horizontal) +
+21: rectangle (vertical) +
+22: trapezium (up) +
+23: trapezium (down) +
+24: triangle (point up) +
+25: triangle (point down) +
 26: circle +
-27: two upright crosses (one over the other)
-28: T-shape
+27: two upright crosses (one over the other) +
+28: T-shape +
 29: triangle pointing up over a circle +
 30: upright cross over a circle +
 31: rhombus over a circle +
@@ -7191,7 +7202,7 @@ image::figure-20-4.png["",568,184]
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| beacon shape 2+| (BCNSHP) 3+|
-1: stake, pole, perch, post
+1: stake, pole, perch, post +
 2: withy +
 3: beacon tower +
 4: lattice beacon +
@@ -7214,18 +7225,18 @@ image::figure-20-4.png["",568,184]
 16: leading mark +
 17: measured distance mark +
 18: notice mark +
-19: TSS mark (Traffic Separation Scheme)
+19: TSS mark (Traffic Separation Scheme) +
 20: anchoring prohibited mark +
 21: berthing prohibited mark +
 22: overtaking prohibited mark +
-23: two-way traffic prohibited mark
+23: two-way traffic prohibited mark +
 24: reduced wake mark +
 25: speed limit mark +
 26: stop mark +
 27: general warning mark +
-28: sound ship's siren mark
+28: sound ship's siren mark +
 29: restricted vertical clearance mark +
-30: maximum vessel's draught mark
+30: maximum vessel's draught mark +
 31: restricted horizontal clearance mark +
 32: strong current warning mark +
 33: berthing permitted mark +
@@ -7270,13 +7281,13 @@ image::figure-20-4.png["",568,184]
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 1,\* (ordered)
+13: pink | EN | 1,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | EN | 0,1 footnoteblock:[twenty_thirteen]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
@@ -7334,7 +7345,7 @@ image::figure-20-4.png["",568,184]
 1: permanent +
 2: occasional +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary +
 8: private +
 12: illuminated +
@@ -7355,43 +7366,43 @@ image::figure-20-4.png["",568,184]
 10: violet +
 11: orange +
 12: magenta +
-13: pink | (S) EN | 0,\* (ordered)
+13: pink | (S) EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_thirteen]
 3+| topmark/daymark shape 2+| (TOPSHP) 3+|
-1: cone (point up)
-2: cone (point down)
+1: cone (point up) +
+2: cone (point down) +
 3: sphere +
 4: 2 spheres +
 5: cylinder +
 6: board +
-7: x-shaped
+7: x-shaped +
 8: upright cross +
-9: cube (point up)
-10: 2 cones (point to point)
-11: 2 cones (base to base)
+9: cube (point up) +
+10: 2 cones (point to point) +
+11: 2 cones (base to base) +
 12: rhombus +
-13: 2 cones (points upward)
-14: 2 cones (points downward)
-15: besom (point up)
-16: besom (point down)
+13: 2 cones (points upward) +
+14: 2 cones (points downward) +
+15: besom (point up) +
+16: besom (point down) +
 17: flag +
 18: sphere over a rhombus +
 19: square +
-20: rectangle (horizontal)
-21: rectangle (vertical)
-22: trapezium (up)
-23: trapezium (down)
-24: triangle (point up)
-25: triangle (point down)
+20: rectangle (horizontal) +
+21: rectangle (vertical) +
+22: trapezium (up) +
+23: trapezium (down) +
+24: triangle (point up) +
+25: triangle (point down) +
 26: circle +
-27: two upright crosses (one over the other)
-28: T-shape
+27: two upright crosses (one over the other) +
+28: T-shape +
 29: triangle pointing up over a circle +
 30: upright cross over a circle +
 31: rhombus over a circle +
@@ -7700,18 +7711,18 @@ If it is required to encode a fixed or floating sign or notice board, it must be
 16: leading mark +
 17: measured distance mark +
 18: notice mark +
-19: TSS mark (Traffic Separation Scheme)
+19: TSS mark (Traffic Separation Scheme) +
 20: anchoring prohibited mark +
 21: berthing prohibited mark +
 22: overtaking prohibited mark +
-23: two-way traffic prohibited mark
+23: two-way traffic prohibited mark +
 24: reduced wake mark +
 25: speed limit mark +
 26: stop mark +
 27: general warning mark +
-28: sound ship's siren mark
+28: sound ship's siren mark +
 29: restricted vertical clearance mark +
-30: maximum vessel's draught mark
+30: maximum vessel's draught mark +
 31: restricted horizontal clearance mark +
 32: strong current warning mark +
 33: berthing permitted mark +
@@ -7756,13 +7767,13 @@ If it is required to encode a fixed or floating sign or notice board, it must be
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 1,\* (ordered)
+13: pink | EN | 1,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | EN | 0,1 footnoteblock:[twenty_fourteen]
 3+| elevation
 2+| (ELEVAT) 3+| | RE | 0,1
@@ -7810,39 +7821,40 @@ If it is required to encode a fixed or floating sign or notice board, it must be
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary +
-8: private12: illuminated | EN | 0,*
+8: private +
+12: illuminated | EN | 0,*
 
 3+| topmark/daymark shape 2+| (TOPSHP) 3+|
-1: cone (point up)
-2: cone (point down)
+1: cone (point up) +
+2: cone (point down) +
 3: sphere +
 4: 2 spheres +
 5: cylinder +
 6: board +
-7: x-shaped
+7: x-shaped +
 8: upright cross +
-9: cube (point up)
-10: 2 cones (point to point)
-11: 2 cones (base to base)
+9: cube (point up) +
+10: 2 cones (point to point) +
+11: 2 cones (base to base) +
 12: rhombus +
-13: 2 cones (points upward)
-14: 2 cones (points downward)
-15: besom (point up)
-16: besom (point down)
+13: 2 cones (points upward) +
+14: 2 cones (points downward) +
+15: besom (point up) +
+16: besom (point down) +
 17: flag +
 18: sphere over a rhombus +
 19: square +
-20: rectangle (horizontal)
-21: rectangle (vertical)
-22: trapezium (up)
-23: trapezium (down)
-24: triangle (point up)
-25: triangle (point down)
+20: rectangle (horizontal) +
+21: rectangle (vertical) +
+22: trapezium (up) +
+23: trapezium (down) +
+24: triangle (point up) +
+25: triangle (point down) +
 26: circle +
-27: two upright crosses (one over the other)
-28: T-shape
+27: two upright crosses (one over the other) +
+28: T-shape +
 29: triangle pointing up over a circle +
 30: upright cross over a circle +
 31: rhombus over a circle +
@@ -7993,13 +8005,13 @@ In the following Table, a blank indicates that the encoder may choose a relevant
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 1,\* (ordered)
+13: pink | EN | 1,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | EN | 0,1 footnoteblock:[twenty_fifteen]
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
@@ -8045,7 +8057,7 @@ In the following Table, a blank indicates that the encoder may choose a relevant
 1: permanent +
 2: occasional +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary +
 8: private +
 14: public +
@@ -8067,43 +8079,43 @@ In the following Table, a blank indicates that the encoder may choose a relevant
 10: violet +
 11: orange +
 12: magenta +
-13: pink | (S) EN | 0,\* (ordered)
+13: pink | (S) EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_fifteen]
 3+| topmark/daymark shape 2+| (TOPSHP) 3+|
-1: cone (point up)
-2: cone (point down)
+1: cone (point up) +
+2: cone (point down) +
 3: sphere +
 4: 2 spheres +
 5: cylinder +
 6: board +
-7: x-shaped
+7: x-shaped +
 8: upright cross +
-9: cube (point up)
-10: 2 cones (point to point)
-11: 2 cones (base to base)
+9: cube (point up) +
+10: 2 cones (point to point) +
+11: 2 cones (base to base) +
 12: rhombus +
-13: 2 cones (points upward)
-14: 2 cones (points downward)
-15: besom (point up)
-16: besom (point down)
+13: 2 cones (points upward) +
+14: 2 cones (points downward) +
+15: besom (point up) +
+16: besom (point down) +
 17: flag +
 18: sphere over a rhombus +
 19: square +
-20: rectangle (horizontal)
-21: rectangle (vertical)
-22: trapezium (up)
-23: trapezium (down)
-24: triangle (point up)
-25: triangle (point down)
+20: rectangle (horizontal) +
+21: rectangle (vertical) +
+22: trapezium (up) +
+23: trapezium (down) +
+24: triangle (point up) +
+25: triangle (point down) +
 26: circle +
-27: two upright crosses (one over the other)
-28: T-shape
+27: two upright crosses (one over the other) +
+28: T-shape +
 29: triangle pointing up over a circle +
 30: upright cross over a circle +
 31: rhombus over a circle +
@@ -8199,13 +8211,13 @@ If it is required to encode a light float, it must be done using the feature *Li
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 1,\* (ordered)
+13: pink | EN | 1,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | EN | 0,1 footnoteblock:[twenty_sixteen]
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
@@ -8250,7 +8262,7 @@ If it is required to encode a light float, it must be done using the feature *Li
 1: permanent +
 2: occasional +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary +
 8: private +
 14: public +
@@ -8341,13 +8353,13 @@ If it is required to encode a light vessel, it must be done using the feature *L
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 0,\* (ordered)
+13: pink | EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | EN | 0,1 footnoteblock:[twenty_seventeen]
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
@@ -8563,22 +8575,20 @@ If it is required to encode radar reflectors on curve features (for instance ove
 2+| (SIGPER) 3+| | RE | 0,1
 
 3+| signal sequence
-2+| _(SIGSEQ)_ 3+| | C | 0,\* (ordered)
+2+| _(SIGSEQ)_ 3+| | C | 0,* (ordered)
 
 3+| signal duration 2+| 3+| | (S) RE | 1,1
 
 3+| signal status
 2+| 3+|
-1: lit/sound
-2: eclipsed/silent
-| (S) EN
-| 1,1
+1: lit/sound +
+2: eclipsed/silent | (S) EN | 1,1
 
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary +
 8: private +
 15: synchronized | EN | 0,*
@@ -8618,7 +8628,7 @@ For each instance of *fixed date range*, at least one of the sub-attributes *dat
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 --
 
-[underline]#INT 1 Reference:#R 1, 10-16, 20-22
+[underline]#INT 1 Reference:# R 1, 10-16, 20-22
 
 [[sec_20.19.1]]
 ==== Fog signals (see S-4 -- B-451-454)
@@ -8697,7 +8707,7 @@ It is not required to encode AIS information on ENCs, as ENCs are intended to be
 
 3+| status 2+| (STATUS) 3+|
 1: permanent +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
@@ -8753,7 +8763,7 @@ If it is required to encode a physical AIS aid to navigation, it must be done us
 [cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *VIRTUAL AIS AID TO NAVIGATION*. An Automatic Identification System (AIS) message 21 transmitted from an AIS station to simulate on navigation systems an Aid to Navigation which does not physically exist. (Adapted from IALA Recommendation A-126).
-10+| *[underline]#S-101 Geo Feature:#* *Virtual AIS Aid to Navigation* __**(NEWOBJ)**__
+10+| *[underline]#S-101 Geo Feature:#* *Virtual AIS Aid to Navigation* *_(NEWOBJ)_*
 10+| *[underline]#Primitives:#* *Point*
 
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
@@ -8793,7 +8803,7 @@ If it is required to encode a physical AIS aid to navigation, it must be done us
 
 3+| status 2+| (STATUS) 3+|
 1: permanent +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary | EN | 0,1
 3+| virtual AIS aid to navigation type
 2+| 3+|
@@ -8801,10 +8811,10 @@ If it is required to encode a physical AIS aid to navigation, it must be done us
 2: east cardinal +
 3: south cardinal +
 4: west cardinal +
-5: port lateral (IALA A)
-6: starboard lateral (IALA A)
-7: port lateral (IALA B)
-8: starboard lateral (IALA B)
+5: port lateral (IALA A) +
+6: starboard lateral (IALA A) +
+7: port lateral (IALA B) +
+8: starboard lateral (IALA B) +
 9: isolated danger +
 10: safe water +
 11: special purpose +
@@ -8875,7 +8885,7 @@ If it is required to encode a virtual AIS aid to navigation, it must be done usi
 3+| call sign 2+| (CALSGN) 3+| | TE | 0,1
 
 3+| category of radio station 2+| (CATROS) 3+|
-5: radio direction-finding station
+5: radio direction-finding station +
 10: differential GNSS +
 11: Toran +
 14: Chaika +
@@ -8924,7 +8934,7 @@ If it is required to encode a virtual AIS aid to navigation, it must be done usi
 1: permanent +
 2: occasional +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary +
 8: private | EN | 0,*
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
@@ -9007,8 +9017,8 @@ If it is required to encode a radio direction-finding station, it must be done u
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| category of radar transponder beacon 2+| (CATRTB) 3+|
-1: ramark, radar beacon transmitting continuously
-2: racon, radar transponder beacon
+1: ramark, radar beacon transmitting continuously +
+2: racon, radar transponder beacon +
 3: leading racon/radar transponder beacon | EN | 1,1
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
@@ -9062,22 +9072,20 @@ If it is required to encode a radio direction-finding station, it must be done u
 3+| signal group 2+| (SIGGRP) 3+| | TE | 0,1
 
 3+| signal sequence
-2+| _(SIGSEQ)_ 3+| | C | 0,\* (ordered)
+2+| _(SIGSEQ)_ 3+| | C | 0,* (ordered)
 
 3+| signal duration 2+| 3+| | (S) RE | 1,1
 
 3+| signal status
 2+| 3+|
-1: lit/sound
-2: eclipsed/silent
-| (S) EN
-| 1,1
+1: lit/sound +
+2: eclipsed/silent | (S) EN | 1,1
 
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary +
 8: private | EN | 0,*
 3+| value of maximum range
@@ -9117,7 +9125,7 @@ For each instance of *fixed date range*, at least one of the sub-attributes *dat
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 --
 
-[underline]#INT 1 Reference:#S 2-3
+[underline]#INT 1 Reference:# S 2-3
 
 [[sec_21.5.1]]
 ==== Radar beacons (see S-4 -- B-486)
@@ -9155,7 +9163,7 @@ NOTE: All features comprising a range system must have the same value populated 
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| category of pilot boarding place 2+| (CATPIL) 3+|
-1: boarding by pilot-cruising vessel
+1: boarding by pilot-cruising vessel +
 2: boarding by helicopter +
 3: pilot comes out from shore | EN | 0,1
 3+| category of preference
@@ -9207,7 +9215,7 @@ NOTE: All features comprising a range system must have the same value populated 
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
-5: periodic/intermittent
+5: periodic/intermittent +
 6: reserved +
 9: mandatory +
 16: watched +
@@ -9273,7 +9281,7 @@ If it is required to encode a pilot station ashore, it must be done using a *Bui
 [cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *VESSEL TRAFFIC SERVICE*. The area of any service implemented by a relevant authority primarily designed to improve safety and efficiency of traffic flow and the protection of the environment. It may range from simple information messages, to extensive organisation of the traffic involving national or regional schemes. (IHO Dictionary -- S-32).
-10+| *[underline]#S-101 Geo Feature:#* *Vessel Traffic Service Area* __**(ADMARE)**__
+10+| *[underline]#S-101 Geo Feature:#* *Vessel Traffic Service Area* *_(ADMARE)_*
 10+| *[underline]#Primitives:#* *Surface*
 
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
@@ -9384,7 +9392,7 @@ If it is required to encode an area within which a competent authority provides 
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 16: watched +
 17: unwatched | EN | 0,*
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
@@ -9500,7 +9508,7 @@ If it is required to encode a Coast Guard station, it must be done using the fea
 1: permanent +
 2: occasional +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary +
 8: private +
 12: illuminated +
@@ -9613,7 +9621,7 @@ If it is required to encode a warning signal station, it must be done using the 
 1: permanent +
 2: occasional +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary +
 8: private +
 12: illuminated +
@@ -9671,7 +9679,7 @@ If it is required to encode a traffic signal station, it must be done using the 
 
 [underline]#Remarks:#
 
-* If it is required to encode a bridge light marking the centre of a navigable span, it must be done using a light feature (see Section 19).
+* If it is required to encode a bridge light marking the centre of a navigable span, it must be done using a light feature (see <<sec_19>>).
 * The *Signal Station Traffic* must only be used to describe the function of the signal station, independent of the building or structure itself. If it is required to encode the building or structure housing the service, it must be done using an appropriate feature (for example *Building*, *Landmark*).
 * Each VHF-channel should be indicated, using the attribute *communication channel* (see <<sec_27.77>>). Alternately, if the same VHF-channel(s) apply to multiple features in the dataset, this should be indicated through an associated instance of the information type *Contact Details*, attribute *communication channel* (see <<sec_24.1>>).
 
@@ -9730,7 +9738,7 @@ If it is required to encode a traffic signal station, it must be done using the 
 1: permanent +
 2: occasional +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary +
 8: private +
 14: public +
@@ -9800,10 +9808,10 @@ If it is required to encode a rescue station, it must be done using the feature 
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| category of harbour facility 2+| (CATHAF) 3+|
-1: RoRo-terminal
+1: RoRo-terminal +
 3: ferry terminal +
 4: fishing harbour +
-5: yacht harbour/marina
+5: yacht harbour/marina +
 6: naval base +
 7: tanker terminal +
 8: passenger terminal +
@@ -9870,7 +9878,7 @@ If it is required to encode a rescue station, it must be done using the feature 
 13: salt +
 14: sand +
 15: timber +
-16: sawdust/wood chips
+16: sawdust/wood chips +
 17: scrap metal +
 18: liquefied natural gas +
 19: liquefied petroleum gas +
@@ -9899,13 +9907,13 @@ If it is required to encode a rescue station, it must be done using the feature 
 19: industrial or mineral exploration/development restricted +
 20: drilling prohibited +
 21: drilling restricted +
-23: cargo transhipment (lightening) prohibited
+23: cargo transhipment (lightening) prohibited +
 24: dragging prohibited +
 27: speed restricted | EN | 0,*
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 6: reserved +
 7: temporary +
 8: private +
@@ -10019,9 +10027,9 @@ If it is required to encode a harbour facility, it must be done using the featur
 23: parking for boats and trailers +
 24: caravan site +
 25: camping site +
-26: sewage pump-out station
+26: sewage pump-out station +
 27: emergency telephone +
-28: landing/launching place for boats
+28: landing/launching place for boats +
 30: scrubbing berth +
 31: picnic area +
 32: mechanics workshop +
@@ -10052,7 +10060,7 @@ If it is required to encode a harbour facility, it must be done using the featur
 2: occasional +
 3: recommended +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 6: reserved +
 7: temporary +
 8: private +
@@ -10310,9 +10318,9 @@ If it is required to encode the contact information (communication channel, call
 
 3+| day of week is range 2+| 3+| | (S) BO | 0,1
 
-3+| time of day end 2+| 3+| | (S) TI | 0,\* (ordered) footnoteblock:[twentyfour_two]
+3+| time of day end 2+| 3+| | (S) TI | 0,* (ordered) footnoteblock:[twentyfour_two]
 
-3+| time of day start 2+| 3+| | (S) TI | 0,\* (ordered) footnoteblock:[twentyfour_two]
+3+| time of day start 2+| 3+| | (S) TI | 0,* (ordered) footnoteblock:[twentyfour_two]
 
 3+| information
 2+| 3+| | C | 0,*
@@ -10371,9 +10379,9 @@ If it is required to encode the time schedules for the operation of a service (f
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| date fixed 2+| 3+| See <<sec_2.4.8>> | TD | 0,\* footnoteblock:[twentyfour_three]
+3+| date fixed 2+| 3+| See <<sec_2.4.8>> | TD | 0,* footnoteblock:[twentyfour_three]
 
-3+| date variable 2+| 3+| | TE | 0,\* footnoteblock:[twentyfour_three]
+3+| date variable 2+| 3+| | TE | 0,* footnoteblock:[twentyfour_three]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
@@ -10457,7 +10465,7 @@ If it is required to encode the date(s) when an event, festival or national holi
 
 3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
 
-3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,\* footnoteblock:[twentyfour_four]
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,* footnoteblock:[twentyfour_four]
 
 3+| file locator 2+| 3+| | (S) TE | 0,1
 
@@ -10517,7 +10525,7 @@ If it is required to encode identical information associated with multiple geo f
 3+| quality of horizontal measurement 2+| (QUAPOS) 3+|
 4: approximate | EN | 0,1 footnoteblock:[twentyfour_five]
 3+| spatial accuracy
-2+| 3+| | C | 0,\* footnoteblock:[twentyfour_five]
+2+| 3+| | C | 0,* footnoteblock:[twentyfour_five]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | (S) C | 0,1 footnoteblock:[twentyfour_five]
 
@@ -10683,7 +10691,7 @@ image::figure-25-4.png["",658,86]
 
 h| Role Type h| Role h| Associated With h| Multiplicity
 | Aggregation | The Collection | *Traffic Separation Scheme* | 0,1
-| Association | The Component | *Deep Water Route*, *Deep Water Route Centreline*, *Deep Water Route Part*, *Inshore Traffic Zone*, *Landmark*, *Light Float*, *Light Vessel*, *Pile*, *Precautionary Area*, __**Restricted Area**__, *Separation Zone or Line*, *Traffic Separation Scheme*, *Traffic Separation Scheme Boundary*, *Traffic Separation Scheme Crossing*, *Traffic Separation Scheme Lane Part*, *Traffic Separation Scheme Roundabout*, *Two-Way Route*, *Two-Way Route Part* | 0,*
+| Association | The Component | *Deep Water Route*, *Deep Water Route Centreline*, *Deep Water Route Part*, *Inshore Traffic Zone*, *Landmark*, *Light Float*, *Light Vessel*, *Pile*, *Precautionary Area*, *_Restricted Area_*, *Separation Zone or Line*, *Traffic Separation Scheme*, *Traffic Separation Scheme Boundary*, *Traffic Separation Scheme Crossing*, *Traffic Separation Scheme Lane Part*, *Traffic Separation Scheme Roundabout*, *Two-Way Route*, *Two-Way Route Part* | 0,*
 
 |===
 
@@ -10722,7 +10730,7 @@ h| Role Type h| Role h| Associated With h| Multiplicity
 
 The only additional characteristic to note in <<fig_25-5>>, which is characteristic of all feature/information associations, is that unlike feature/feature associations, feature/information associations have only one role (at the information feature end of the relationship).
 
-Within the feature tables included in Sections 3 to 24 of this document, a description of the associations as relevant to each individual feature has also been included. <<table_25-6>> below shows an example as included for the feature *Lateral Buoy* (see <<sec_20.1>>); and guidance as to how to interpret these tables.
+Within the feature tables included in <<sec_3;to!sec_24>> of this document, a description of the associations as relevant to each individual feature has also been included. <<table_25-6>> below shows an example as included for the feature *Lateral Buoy* (see <<sec_20.1>>); and guidance as to how to interpret these tables.
 
 [[table_25-6]]
 .Example of associations applicable to individual features -- Lateral Buoy
@@ -10750,7 +10758,7 @@ Each row included in <<table_25-6>> above describes a S-101 association instance
 NOTE: The association type for a feature/information association will always be "Association".
 --
 
-. The role name as defined for the *Lateral Buoy* end of the association and as described in Section 26; and included in the tables in this Section in the "Role" column.
+. The role name as defined for the *Lateral Buoy* end of the association and as described in <<sec_26>>; and included in the tables in this Section in the "Role" column.
 +
 --
 NOTE: a dash "-" in this column indicates the one-way nature of a feature/information association -- the role name is included at the information end of the association only.
@@ -10759,7 +10767,7 @@ NOTE: a dash "-" in this column indicates the one-way nature of a feature/inform
 . The multiplicity as defined for the *Lateral Buoy* end of the association and included in the tables in this Section in the "Multiplicity" column. For *Lateral Buoy*, these multiplicities are interpreted as follows:
 
 * 0,1 for the *Structure/Equipment* association means that a *Lateral Buoy* can exist in isolation (lower multiplicity 0) but, if the association exists, exactly one instance of *Lateral Buoy* must be included in the "The Structure" role of type Composition. The same principle applies for the *Text Association* association.
-* 0,\* means that a *Lateral Buoy* can exist in isolation (lower multiplicity 0) but, if the association exists, one or more instances of *Lateral Buoy* may (but are not required) to be included in the association. In general this is an indication of "collective multiplicity" (see <<fig_15-4>> above and associated guidance).
+* 0,* means that a *Lateral Buoy* can exist in isolation (lower multiplicity 0) but, if the association exists, one or more instances of *Lateral Buoy* may (but are not required) to be included in the association. In general this is an indication of "collective multiplicity" (see <<fig_15-4>> above and associated guidance).
 
 [[sec_25.1]]
 === Additional information
@@ -11024,7 +11032,7 @@ h| Role Type h| Role h| Associated With h| Multiplicity
 
 h| Role Type h| Role h| Associated With h| Multiplicity
 | Aggregation | The Collection | *Range System* | 0,1
-| Association | The Component | __**Cardinal Beacon**__, __**Building**__, __**Daymark**__, __**Dolphin**__, __**Fortified Structure**__, __**Isolated Danger Beacon**__, __**Landmark**__, __**Lateral Beacon**__, __**Light All Around**__, __**Light Sectored**__, *Navigation Line*, __**Pile**__, __**Radar Transponder Beacon**__, *Range System*, *Recommended Route Centreline*, *Recommended Track*, __**Safe Water Beacon**__, __**Silo/Tank**__, _*Special Purpose/General Beacon*_ | 0,*
+| Association | The Component | *_Cardinal Beacon_*, *_Building_*, *_Daymark_*, *_Dolphin_*, *_Fortified Structure_*, *_Isolated Danger Beacon_*, *_Landmark_*, *_Lateral Beacon_*, *_Light All Around_*, *_Light Sectored_*, *Navigation Line*, *_Pile_*, *_Radar Transponder Beacon_*, *Range System*, *Recommended Route Centreline*, *Recommended Track*, *_Safe Water Beacon_*, *_Silo/Tank_*, *_Special Purpose/General Beacon_* | 0,*
 
 |===
 
@@ -11158,7 +11166,7 @@ h| Role Type h| Role h| Associated With h| Multiplicity
 
 h| Role Type h| Role h| Associated With h| Multiplicity
 | Aggregation | The Collection | *Traffic Separation Scheme* | 0,1
-| Association | The Component | *Deep Water Route*, *Deep Water Route Centreline*, *Deep Water Route Part*, *Inshore Traffic Zone*, *Precautionary Area*, __**Restricted Area**__, *Separation Zone or Line*, *Traffic Separation Scheme*, *Traffic Separation Scheme Boundary*, *Traffic Separation Scheme Crossing*, *Traffic Separation Scheme Lane Part*, *Traffic Separation Scheme Roundabout*, *Two-Way Route*, *Two-Way Route Part* | 0,*
+| Association | The Component | *Deep Water Route*, *Deep Water Route Centreline*, *Deep Water Route Part*, *Inshore Traffic Zone*, *Precautionary Area*, *_Restricted Area_*, *Separation Zone or Line*, *Traffic Separation Scheme*, *Traffic Separation Scheme Boundary*, *Traffic Separation Scheme Crossing*, *Traffic Separation Scheme Lane Part*, *Traffic Separation Scheme Roundabout*, *Two-Way Route*, *Two-Way Route Part* | 0,*
 
 |===
 
@@ -11632,7 +11640,7 @@ h| Role Type h| Role h| Associated With h| Multiplicity
 
 [underline]#Maximum range:# 20
 
-[underline]#Range closure:# Left half-open interval (_minimum <_ _*buried depth*_ _≤ maximum_)
+[underline]#Range closure:# Left half-open interval (stem:["minimum" < bb "buried depth" <= "maximum"])
 
 [underline]#Example:# *2.5* for a depth of 2∙5 metres
 
@@ -16449,9 +16457,12 @@ Modern survey echo sounder -- high precision single beam depth measuring equipme
 
 [underline]#Indication:# Each Channel must be indicated in square brackets by 4 digits and up to 4 characters (A-Z).
 
-[underline]#Format:# **[**__XXX__**XXXXX]**(7 to 10 characters (mandatory))
+[underline]#Format:# **[**__XXX__**XXXXX]** (7 to 10 characters (mandatory))
 
-[underline]#Example:# *[VHF0007]* for VHF-Channel 7**[NBDP5555]** for Narrow Band Direct Printing Channel 5555
+[underline]#Example:#
+
+[VHF0007]:: for VHF-Channel 7
+[NBDP5555]:: for Narrow Band Direct Printing Channel 5555
 
 [underline]#Remarks:#
 
@@ -16552,9 +16563,16 @@ Modern survey echo sounder -- high precision single beam depth measuring equipme
 
 [underline]#Indication:# Dates should be encoded using 4 digits for the calendar year (YYYY), 2 digits for the month (MM) (for example April = 04) and 2 digits for the day (DD). When no specific year, month and/or day is required/known, indication of the year, month and/or day is omitted, and replaced with dashes (-). See also <<sec_2.4.8>>.
 
-[underline]#Format:# YYYYMMDD (full date, *mandatory*)YYYYMM-- (no specific day required -- *mandatory*)YYYY---- (no specific month required -- *mandatory*)----MMDD (same day each year, *mandatory*)----MM--(same month each year, *mandatory*)
+[underline]#Format:#
 
-[underline]#Example:# *20101203* for 03 December 2010 at 240000 hours as ending date.*----02--* for 28 February at 240000 hours as ending date for non-leap years; and 29 February at 240000 hours as ending date for leap years.
+YYYYMMDD:: (full date, *mandatory*)
+YYYYMM--:: (no specific day required -- *mandatory*)
+YYYY----:: (no specific month required -- *mandatory*)
+----MMDD:: (same day each year, *mandatory*)
+----MM--:: (same month each year, *mandatory*)
+
+[underline]#Example:# *20101203* for 03 December 2010 at 240000 hours as ending date. +
+*----02--* for 28 February at 240000 hours as ending date for non-leap years; and 29 February at 240000 hours as ending date for leap years.
 
 [underline]#Remarks:#
 
@@ -16573,7 +16591,10 @@ Modern survey echo sounder -- high precision single beam depth measuring equipme
 
 [underline]#Indication:# Dates should be encoded using 4 digits for the calendar year (YYYY), 2 digits for the month (MM) (for example April = 04) and 2 digits for the day (DD). When no specific year, month and/or day is required/known, indication of the year, month and/or day is omitted, and replaced with dashes (-). See also <<sec_2.4.8>>.
 
-[underline]#Format:# ----MMDD (same day each year, *mandatory*)----MM--(same month each year, *mandatory*)
+[underline]#Format:#
+
+----MMDD:: (same day each year, *mandatory*)
+----MM--:: (same month each year, *mandatory*)
 
 [underline]#Example:# *----0908* for 08 September each year.*----02--* for February of each year.
 
@@ -16594,9 +16615,16 @@ Modern survey echo sounder -- high precision single beam depth measuring equipme
 
 [underline]#Indication:# Dates should be encoded using 4 digits for the calendar year (YYYY), 2 digits for the month (MM) (for example April = 04) and 2 digits for the day (DD). When no specific year, month and/or day is required/known, indication of the year, month and/or day is omitted, and replaced with dashes (-). See also <<sec_2.4.8>>.
 
-[underline]#Format:# YYYYMMDD (full date, *mandatory*)YYYYMM-- (no specific day required -- *mandatory*)YYYY---- (no specific month required -- *mandatory*)----MMDD (same day each year, *mandatory*)----MM-- (same month each year, *mandatory*)
+[underline]#Format:#
 
-[underline]#Example:# *20101129* for 29 November 2010 at 000000 hours as starting date.*----02--* for 01 February at 000000 hours annually as starting date.
+YYYYMMDD:: (full date, *mandatory*)
+YYYYMM--:: (no specific day required -- *mandatory*)
+YYYY----:: (no specific month required -- *mandatory*)
+----MMDD:: (same day each year, *mandatory*)
+----MM--:: (same month each year, *mandatory*)
+
+[underline]#Example:# *20101129* for 29 November 2010 at 000000 hours as starting date. +
+*----02--* for 01 February at 000000 hours annually as starting date.
 
 [underline]#Remarks:#
 
@@ -16713,7 +16741,7 @@ Modern survey echo sounder -- high precision single beam depth measuring equipme
 
 [underline]#Maximum range:# 12500
 
-[underline]#Range closure:# Open interval (_minimum <_ _*depth range maximum*_ _< maximum_)
+[underline]#Range closure:# Open interval (stem:["minimum" < bb "depth range maximum" < "maximum"])
 
 [underline]#Example:# *100* for a maximum depth of 100 metres**-0.5** for a deepest drying depth of 0.5 metres
 
@@ -16741,7 +16769,7 @@ Modern survey echo sounder -- high precision single beam depth measuring equipme
 
 [underline]#Maximum range:# 12500
 
-[underline]#Range closure:# Open interval (_minimum <_ _*depth range minimum*_ _< maximum_)
+[underline]#Range closure:# Open interval (stem:["minimum" < bb "depth range minimum" < "maximum"])
 
 [underline]#Example:# *50* for a minimum depth of 50 metres**-3.5** for a minimum drying depth of 3.5 metres
 
@@ -16840,7 +16868,11 @@ Modern survey echo sounder -- high precision single beam depth measuring equipme
 
 [underline]#Indication:# Dates should be encoded using 4 digits for the calendar year (YYYY), 2 digits for the month (MM) (for example April = 04) and 2 digits for the day (DD). When no specific year, month and/or day is required/known, indication of the year, month and/or day is omitted, and replaced with dashes (-). See also <<sec_2.4.8>>.
 
-[underline]#Format:# YYYYMMDD (full date, *mandatory*)YYYYMM-- (no specific day required -- *mandatory*)YYYY---- (no specific month required -- *mandatory*)
+[underline]#Format:#
+
+YYYYMMDD:: (full date, *mandatory*)
+YYYYMM--:: (no specific day required -- *mandatory*)
+YYYY----:: (no specific month required -- *mandatory*)
 
 [underline]#Example:# *20101203* for 03 December 2010 as the dredged date.
 
@@ -16867,7 +16899,7 @@ Modern survey echo sounder -- high precision single beam depth measuring equipme
 
 [underline]#Maximum range:# 8850
 
-[underline]#Range closure:# Closed interval (_minimum ≤_ _*elevation*_ _≤ maximum_)
+[underline]#Range closure:# Closed interval (stem:["minimum" <= bb "elevation" <= "maximum"])
 
 [underline]#Example:# *47* for an elevation of 47 metres
 
@@ -16894,7 +16926,7 @@ Modern survey echo sounder -- high precision single beam depth measuring equipme
 
 [underline]#Maximum range:# 1000
 
-[underline]#Range closure:# Open interval (_minimum <_ _*estimated range of transmission*_ _< maximum_)
+[underline]#Range closure:# Open interval (stem:["minimum" < bb "estimated range of transmission" < "maximum"])
 
 [underline]#Example:# *45* for a maximum range of 45 nautical miles
 
@@ -17035,7 +17067,7 @@ TXT and may contain formatted text.
 
 [underline]#Maximum range:# 360
 
-[underline]#Range closure:# Right half-open interval (_minimum ≤_ _*flare bearing*_ _< maximum_)
+[underline]#Range closure:# Right half-open interval (stem:["minimum" <= bb "flare bearing" < "maximum"])
 
 [underline]#Example:# *270* for an flare bearing of 270 degrees away from the light
 
@@ -17079,7 +17111,7 @@ TXT and may contain formatted text.
 
 [underline]#Minimum range:# 0
 
-[underline]#Range closure:# Left half-open ray (_minimum <_ _*frequency shore station receives*_)
+[underline]#Range closure:# Left half-open ray (stem:["minimum" < bb "frequency shore station receives"])
 
 [underline]#Example:# *950000000* for a radio signal centred on 950 MHz
 
@@ -17102,7 +17134,7 @@ TXT and may contain formatted text.
 
 [underline]#Minimum range:# 0
 
-[underline]#Range closure:# Left half-open ray (_minimum <_ _*frequency shore station transmits*_)
+[underline]#Range closure:# Left half-open ray (stem:["minimum" < bb "frequency shore station transmits"])
 
 [underline]#Example:# *950000000* for a radio signal centred on 950 MHz
 
@@ -17439,7 +17471,7 @@ TXT and may contain formatted text.
 
 [underline]#Maximum range:# 8850
 
-[underline]#Range closure:# Left half-open interval (_minimum <_ _*height*_ _≤ maximum_)
+[underline]#Range closure:# Left half-open interval (stem:["minimum" < bb "height" <= "maximum"])
 
 [underline]#Example:# *73* for a height of 73 metres
 
@@ -17464,7 +17496,7 @@ TXT and may contain formatted text.
 
 [underline]#Minimum range:# 0
 
-[underline]#Range closure:# Left half-open ray (_minimum <_ _*horizontal clearance length*_)
+[underline]#Range closure:# Left half-open ray (stem:["minimum" < bb "horizontal clearance length"])
 
 [underline]#Example:# *75* for a horizontal clearance length of 75 metres
 
@@ -17489,7 +17521,7 @@ TXT and may contain formatted text.
 
 [underline]#Minimum range:# 0
 
-[underline]#Range closure:# Left half-open ray (_minimum <_ _*horizontal clearance value*_)
+[underline]#Range closure:# Left half-open ray (stem:["minimum" < bb "horizontal clearance value"])
 
 [underline]#Example:# *125* for a horizontal clearance of 125 metres
 
@@ -17514,7 +17546,7 @@ TXT and may contain formatted text.
 
 [underline]#Minimum range:# 0
 
-[underline]#Range closure:# Left half-open ray (_minimum <_ _*horizontal clearance width*_)
+[underline]#Range closure:# Left half-open ray (stem:["minimum" < bb "horizontal clearance width"])
 
 [underline]#Example:# *30* for a horizontal clearance width of 30 metres
 
@@ -17539,7 +17571,7 @@ TXT and may contain formatted text.
 
 [underline]#Minimum range:# 0
 
-[underline]#Range closure:# Left half-open ray (_minimum <_ _*horizontal length*_)
+[underline]#Range closure:# Left half-open ray (stem:["minimum" < bb "horizontal length"])
 
 [underline]#Example:# *95* for a length of 95 metres
 
@@ -17564,7 +17596,7 @@ TXT and may contain formatted text.
 
 [underline]#Minimum range:# 0
 
-[underline]#Range closure:# Left half-open ray (_minimum <_ _*horizontal width*_)
+[underline]#Range closure:# Left half-open ray (stem:["minimum" < bb "horizontal width"])
 
 [underline]#Example:# *12.6* for a width of 12.6 metres
 
@@ -17591,7 +17623,7 @@ TXT and may contain formatted text.
 
 [underline]#Maximum range:# 20
 
-[underline]#Range closure:# Left half-open interval (_minimum <_ _*ice factor*_ _≤ maximum_)
+[underline]#Range closure:# Left half-open interval (stem:["minimum" < bb "ice factor" <= "maximum"])
 
 [underline]#Example:# *2.5* for a reduction of 2∙5 metres in the vertical clearance.
 
@@ -17742,7 +17774,7 @@ TXT and may contain formatted text.
 
 [underline]#Minimum range:# 0
 
-[underline]#Range closure:# Left half-open ray (_minimum <_ _*lifting capacity*_)
+[underline]#Range closure:# Left half-open ray (stem:["minimum" < bb "lifting capacity"])
 
 [underline]#Example:# *120* for a lifting capacity of 120 tonnes
 
@@ -17990,7 +18022,9 @@ TXT and may contain formatted text.
 
 [underline]#Indication:# Character encoding of a URI must follow the syntax rules defined in RFC 3986.
 
-[underline]#Format:# *http://*..... or *https://*..... (mandatory)Example:https://www.iho.int/[**https://www.iho.int**]
+[underline]#Format:# *http://*..... or *https://*..... (mandatory)
+
+[underline]#Example:# https://www.iho.int/[**https://www.iho.int**]
 
 [underline]#Remarks:#
 
@@ -18015,7 +18049,7 @@ TXT and may contain formatted text.
 
 [underline]#Maximum range:# 180
 
-[underline]#Range closure:# Left half-open interval (_minimum <_ _*magnetic anomaly value*_ _≤ maximum_)
+[underline]#Range closure:# Left half-open interval (stem:["minimum" < bb "magnetic anomaly value" <= "maximum"])
 
 [underline]#Example:# *5* for a deviation of 5 degrees
 
@@ -18098,7 +18132,7 @@ TXT and may contain formatted text.
 
 [underline]#Maximum range:# 30
 
-[underline]#Range closure:# Left half-open interval (_minimum <_ _*maximum permitted draught*_ _≤ maximum_)
+[underline]#Range closure:# Left half-open interval (stem:["minimum" < bb "maximum permitted draught" <= "maximum"])
 
 [underline]#Example:# *14.5* for a maximum permitted draught of 14·5 metres
 
@@ -18123,7 +18157,7 @@ TXT and may contain formatted text.
 
 [underline]#Minimum range:# 0
 
-[underline]#Range closure:# Left half-open ray (_minimum <_ _*maximum permitted vessel length*_)
+[underline]#Range closure:# Left half-open ray (stem:["minimum" < bb "maximum permitted vessel length"])
 
 [underline]#Example:# *30.5* for a maximum permitted vessel length of 30·5 metres
 
@@ -18146,7 +18180,7 @@ TXT and may contain formatted text.
 
 [underline]#Minimum range:# 0
 
-[underline]#Range closure:# Left half-open ray (_minimum <_ _*measured distance*_)
+[underline]#Range closure:# Left half-open ray (stem:["minimum" < bb "measured distance"])
 
 [underline]#Example:# *1445* for a measured distance of 1445 metres
 
@@ -18173,7 +18207,7 @@ TXT and may contain formatted text.
 
 [underline]#Maximum range:# 30
 
-[underline]#Range closure:# Left half-open interval (_minimum <_ _*minimum berth depth*_ _≤ maximum_)
+[underline]#Range closure:# Left half-open interval (stem:["minimum" < bb "minimum berth depth" <= "maximum"])
 
 [underline]#Example:# *14.6* for a minimum berth depth of 14.6 metres
 
@@ -18587,7 +18621,7 @@ TXT and may contain formatted text.
 
 [underline]#Minimum range:# 2
 
-[underline]#Range closure:# Left closed ray (_minimum ≤_ _*number of features*_)
+[underline]#Range closure:# Left closed ray (stem:["minimum" <= bb "number of features"])
 
 [underline]#Example:# *3* for 3 co-located cables
 
@@ -18631,7 +18665,7 @@ TXT and may contain formatted text.
 
 [underline]#Maximum range:# 360
 
-[underline]#Range closure:# Right half-open interval (_minimum ≤_ _*orientation value*_ _< maximum_)
+[underline]#Range closure:# Right half-open interval (stem:["minimum" <= bb "orientation value" < "maximum"])
 
 [underline]#Example:# *246.7* for an orientation value of 246∙7 degrees
 
@@ -18919,7 +18953,7 @@ Default value:__False__
 
 [underline]#Minimum range:# 0
 
-[underline]#Range closure:# Left half-open ray (_minimum <_ _*radius*_)
+[underline]#Range closure:# Left half-open ray (stem:["minimum" < bb "radius"])
 
 [underline]#Example:# *26* for a radius of 26 metres
 
@@ -19291,7 +19325,7 @@ Default value:__False__
 
 [underline]#Attribute Type:# Integer
 
-[underline]#Indication:# The modulus of the scale is indicated, that is 1:89 999 is encoded as 89999.
+[underline]#Indication:# The modulus of the scale is indicated, that is 1:89&nbsp;999 is encoded as 89999.
 
 [underline]#Unit:# None
 
@@ -19299,7 +19333,9 @@ Default value:__False__
 
 [underline]#Maximum range:# 19999999
 
-[underline]#Range closure:# Closed interval (_minimum ≤_ _*scale minimum*_ _≤ maximum_)Example: If a particular minimum scale is specified as 1:89 999 (encoded as *89999*), and an example of a smaller scale would be 1:179 999 (encoded as *179999*).
+[underline]#Range closure:# Closed interval (stem:["minimum" <=  bb"scale minimum" <= "maximum"])
+
+[underline]#Example:# If a particular minimum scale is specified as 1:89&nbsp;999 (encoded as *89999*), and an example of a smaller scale would be 1:179&nbsp;999 (encoded as *179999*).
 
 The *scale minimum* value of a feature determines the display scale below which the feature is no longer displayed. Its purpose is to reduce clutter, to prioritise the display of features and to improve display speed. In encoding its value, the producing authority should consider these factors, as well as the scale at which the feature is no longer likely to be required for navigation. In order to optimize the performance and clarity of the ENC, it is a mandatory requirement on ENCs that *scale minimum* is used.
 
@@ -19330,7 +19366,7 @@ The *scale minimum* value of a feature determines the display scale below which 
 
 [underline]#Maximum range:# 360
 
-[underline]#Range closure:# Right half-open interval (_minimum ≤_ _*sector bearing*_ _< maximum_)
+[underline]#Range closure:# Right half-open interval (stem:["minimum" <= bb "sector bearing" < "maximum"])
 
 [underline]#Example:# *125* for a sector bearing of 125 degrees
 
@@ -19358,7 +19394,7 @@ The *scale minimum* value of a feature determines the display scale below which 
 
 [underline]#Minimum range:# 0
 
-[underline]#Range closure:# Left half-open ray (_minimum <_ _*sector line length*_)
+[underline]#Range closure:# Left half-open ray (stem:["minimum" < bb "sector line length"])
 
 [underline]#Example:# *5.15* for a sector line length of 5.15 nautical miles
 
@@ -19387,7 +19423,7 @@ The *scale minimum* value of a feature determines the display scale below which 
 
 [underline]#Maximum range:# 60
 
-[underline]#Range closure:# Left half-open interval (_minimum <_ _*signal duration*_ _≤ maximum_)
+[underline]#Range closure:# Left half-open interval (stem:["minimum" < bb "signal duration" <= "maximum"])
 
 [underline]#Example:# *2.5* for an duration of 2·5 seconds
 
@@ -19410,7 +19446,7 @@ The *scale minimum* value of a feature determines the display scale below which 
 
 [underline]#Minimum range:# 0
 
-[underline]#Range closure:# Left half-open ray (_minimum <_ _*signal frequency*_)
+[underline]#Range closure:# Left half-open ray (stem:["minimum" < bb "signal frequency"])
 
 [underline]#Example:# *950000000* for a radio signal centred on 950 MHz
 
@@ -19514,7 +19550,7 @@ Examples:Light CharacteristicSignal GroupVQ(6)+LFl -> **(6)(1)**LFl+Fl(2+3) -> *
 
 [underline]#Maximum range:# 120
 
-[underline]#Range closure:# Left half-open interval (_minimum <_ _*signal period*_ _≤ maximum_)
+[underline]#Range closure:# Left half-open interval (stem:["minimum" < bb "signal period" <= "maximum"])
 
 [underline]#Example:# *12* for an interval of 12 seconds
 
@@ -19568,7 +19604,7 @@ Examples:Light CharacteristicSignal GroupVQ(6)+LFl -> **(6)(1)**LFl+Fl(2+3) -> *
 
 [underline]#Maximum range:# 35
 
-[underline]#Range closure:# Left half-open interval (_minimum <_ _*speed limit*_ _≤ maximum_)
+[underline]#Range closure:# Left half-open interval (stem:["minimum" < bb "speed limit" <= "maximum"])
 
 [underline]#Example:# *4.5* for a speed limit of 4.5 knots (or other speed unit of measure as defined by *speed units*)
 
@@ -19597,7 +19633,7 @@ Speed maximum is the maximum rate of travel that can occur. (Adapted from S-57 E
 
 [underline]#Maximum range:# 35
 
-[underline]#Range closure:# Left half-open interval (_minimum <_ _*speed maximum*_ _≤ maximum_)
+[underline]#Range closure:# Left half-open interval (stem:["minimum" < bb "speed maximum" <= "maximum"])
 
 [underline]#Example:# *2.1* for a maximum speed of 2·1 knots
 
@@ -19626,7 +19662,7 @@ Speed minimum is the minimum rate of travel that can occur. (Adapted from S-57 E
 
 [underline]#Maximum range:# 20
 
-[underline]#Range closure:# Left half-open interval (_minimum <_ _*speed minimum*_ _≤ maximum_)
+[underline]#Range closure:# Left half-open interval (stem:["minimum" < bb "speed minimum" <= "maximum"])
 
 [underline]#Example:# *1.6* for a maximum speed of 1·6 knots
 
@@ -19851,7 +19887,7 @@ Speed minimum is the minimum rate of travel that can occur. (Adapted from S-57 E
 
 [underline]#Maximum range:# 200
 
-[underline]#Range closure:# Closed interval (_minimum ≤_ _*stream depth*_ _≤ maximum_)Examples:*0* for surface tidal stream data**15** for tidal stream data collected at a depth of 15 metres
+[underline]#Range closure:# Closed interval (stem:["minimum" <= bb "stream depth" <= "maximum"])Examples:*0* for surface tidal stream data**15** for tidal stream data collected at a depth of 15 metres
 
 [underline]#Remarks:#
 
@@ -20100,7 +20136,7 @@ Speed minimum is the minimum rate of travel that can occur. (Adapted from S-57 E
 
 [underline]#Maximum range:# 360
 
-[underline]#Range closure:# Right half-open interval (_minimum ≤_ _*text offset bearing*_ _< maximum_)
+[underline]#Range closure:# Right half-open interval (stem:["minimum" <= bb "text offset bearing" < "maximum"])
 
 [underline]#Example:# *246* for a text offset bearing of 246 degrees
 
@@ -20126,7 +20162,7 @@ Speed minimum is the minimum rate of travel that can occur. (Adapted from S-57 E
 
 [underline]#Maximum range:# 50
 
-[underline]#Range closure:# Left half-open interval (_minimum <_ _*text offset distance*_ _≤ maximum_)
+[underline]#Range closure:# Left half-open interval (stem:["minimum" < bb "text offset distance" <= "maximum"])
 
 [underline]#Example:# *15* for a text offset of 15 mm
 
@@ -20240,7 +20276,7 @@ Speed minimum is the minimum rate of travel that can occur. (Adapted from S-57 E
 
 [underline]#Maximum range:# 6
 
-[underline]#Range closure:# Closed interval (_minimum ≤_ _*tide relative to tide*_ _≤ maximum_)
+[underline]#Range closure:# Closed interval (stem:["minimum" <= bb "tide relative to tide" <= "maximum"])
 
 [underline]#Example:# *1.5* for 1·5 hours after the referenced tide**-1.5** for 1·5 hours before the referenced tide
 
@@ -20528,7 +20564,7 @@ Cones are commonly used as International Association of Lighthouse Authorities -
 
 [underline]#Maximum range:# 5
 
-[underline]#Range closure:# Left half-open interval (_minimum_ < _*underlying layer*_≤ _maximum_)
+[underline]#Range closure:# Left half-open interval (stem:["minimum" < bb "underlying layer" <= "maximum"])
 
 [underline]#Example:# *1* where the seabed type is the layer below the top of the seabed surface.
 
@@ -20555,7 +20591,7 @@ Cones are commonly used as International Association of Lighthouse Authorities -
 
 [underline]#Maximum range:# 1200
 
-[underline]#Range closure:# Closed interval (_minimum ≤_ _*value of annual change in magnetic variation*_ _≤ maximum_)
+[underline]#Range closure:# Closed interval (stem:["minimum" <= bb "value of annual change in magnetic variation" <= "maximum"])
 
 [underline]#Example:# *-7.1* for an annual change of 7·1' in a westerly direction
 
@@ -20582,7 +20618,7 @@ Cones are commonly used as International Association of Lighthouse Authorities -
 
 [underline]#Maximum range:# 12500
 
-[underline]#Range closure:# Open interval (_minimum <_ _*value of depth contour*_ _< maximum_)
+[underline]#Range closure:# Open interval (stem:["minimum" < bb "value of depth contour" < "maximum"])
 
 [underline]#Example:# *50* for a depth contour of 50 metres
 
@@ -20609,7 +20645,7 @@ Cones are commonly used as International Association of Lighthouse Authorities -
 
 [underline]#Maximum range:# 180
 
-[underline]#Range closure:# Left half-open interval (_minimum <_ _*value of magnetic variation*_ _≤ maximum_)
+[underline]#Range closure:# Left half-open interval (stem:["minimum" < bb "value of magnetic variation" <= "maximum"])
 
 [underline]#Example:# *2.3* for a magnetic north oriented at 2.3 degrees (2°18') east from the geographic (true) north-*1.5* for a magnetic north oriented at 2.3 degrees (1°30') west from the geographic (true) north
 
@@ -20634,7 +20670,7 @@ Cones are commonly used as International Association of Lighthouse Authorities -
 
 [underline]#Minimum range:# 0
 
-[underline]#Range closure:# Left half-open ray (_minimum <_ _*value of maximum range*_)
+[underline]#Range closure:# Left half-open ray (stem:["minimum" < bb "value of maximum range"])
 
 [underline]#Example:# *17* for maximum range of 17 nautical miles
 
@@ -20661,7 +20697,7 @@ Cones are commonly used as International Association of Lighthouse Authorities -
 
 [underline]#Maximum range:# 30
 
-[underline]#Range closure:# Left half-open interval (_minimum <_ _*value of nominal range*_ _≤ maximum_)
+[underline]#Range closure:# Left half-open interval (stem:["minimum" < bb "value of nominal range" <= "maximum"])
 
 [underline]#Example:# *14* for a nominal range of 14 nautical miles
 
@@ -20688,7 +20724,7 @@ Cones are commonly used as International Association of Lighthouse Authorities -
 
 [underline]#Maximum range:# 12500
 
-[underline]#Range closure:# Open interval (_minimum <_ _*value of sounding*_ _< maximum_)Examples:*18.2* for a sounding of 18∙2 metres**-2.4** for a drying height of 2∙4 metres
+[underline]#Range closure:# Open interval (stem:["minimum" < bb "value of sounding" < "maximum"])Examples:*18.2* for a sounding of 18∙2 metres**-2.4** for a drying height of 2∙4 metres
 
 [underline]#Remarks:#
 
@@ -20728,7 +20764,7 @@ Cones are commonly used as International Association of Lighthouse Authorities -
 
 [underline]#Minimum range:# 0
 
-[underline]#Range closure:# Left half-open ray (_minimum <_ _*vertical clearance value*_)
+[underline]#Range closure:# Left half-open ray (stem:["minimum" < bb "vertical clearance value"])
 
 [underline]#Example:# *7.6* for a vertical clearance of 7·6 metres
 
@@ -20960,7 +20996,7 @@ A tidal datum approximating the lowest water level observed at a place, originat
 
 [underline]#Maximum range:# 900
 
-[underline]#Range closure:# Left half-open interval (_minimum <_ _*vertical length*_ _≤ maximum_)Minimum value: 0
+[underline]#Range closure:# Left half-open interval (stem:["minimum" < bb "vertical length" <= "maximum"])Minimum value: 0
 
 [underline]#Example:# *24.5* for a vertical length of 24.5 metres
 
@@ -21199,7 +21235,7 @@ A tidal datum approximating the lowest water level observed at a place, originat
 
 [underline]#Minimum range:# 0
 
-[underline]#Range closure:# Left half-open ray (_minimum <_ _*waterway distance*_)
+[underline]#Range closure:# Left half-open ray (stem:["minimum" < bb "waterway distance"])
 
 [underline]#Example:# *2.5* for a waterway distance value of 2.5 nautical miles (where *distance unit of measurement* is populated as _5_ (nautical mile).
 
@@ -21224,7 +21260,7 @@ A tidal datum approximating the lowest water level observed at a place, originat
 
 [underline]#Minimum range:# 0
 
-[underline]#Range closure:# Left half-open ray (_minimum <_ _*wave length value*_)
+[underline]#Range closure:# Left half-open ray (stem:["minimum" < bb "wave length value"])
 
 [underline]#Example:# *0.03* for a radar transponder beacon in the wave length "3cm (X) -- Band".
 
@@ -21334,7 +21370,7 @@ A tidal datum approximating the lowest water level observed at a place, originat
 
 [underline]#Minimum range:# 1
 
-[underline]#Range closure:# Left closed ray (_minimum ≤_ _*drawing index*_)
+[underline]#Range closure:# Left closed ray (stem:["minimum" <=  bb "drawing index"])
 
 [underline]#Example:# *1* for a dataset intended to be viewed seamlessly with other datasets having drawing index value set to 1.
 
@@ -21376,7 +21412,7 @@ A tidal datum approximating the lowest water level observed at a place, originat
 
 [underline]#Minimum range:# 0
 
-[underline]#Range closure:# Left closed ray (_minimum ≤_ _*horizontal distance uncertainty*_)
+[underline]#Range closure:# Left closed ray (stem:["minimum" <= bb "horizontal distance uncertainty"])
 
 [underline]#Example:# *0.5* for an error of 0∙5 metres.
 
@@ -21418,7 +21454,7 @@ A tidal datum approximating the lowest water level observed at a place, originat
 
 [underline]#Minimum range:# 0
 
-[underline]#Range closure:# Left half-open ray (_minimum <_ _*line spacing maximum*_)
+[underline]#Range closure:# Left half-open ray (stem:["minimum" < bb "line spacing maximum"])
 
 [underline]#Example:# *250* for a maximum distance between sounding lines of 250 metres.
 
@@ -21441,7 +21477,7 @@ A tidal datum approximating the lowest water level observed at a place, originat
 
 [underline]#Minimum range:# 0
 
-[underline]#Range closure:# Left half-open ray (_minimum <_ _*line spacing minimum*_)
+[underline]#Range closure:# Left half-open ray (stem:["minimum" < bb "line spacing minimum"])
 
 [underline]#Example:# *50* for a minimum distance between sounding lines of 50 metres.
 
@@ -21468,7 +21504,7 @@ A tidal datum approximating the lowest water level observed at a place, originat
 
 [underline]#Maximum range:# 10000000
 
-[underline]#Range closure:# Closed interval (_minimum ≤_ _*maximum display scale*_ _≤ maximum_)
+[underline]#Range closure:# Closed interval (stem:["minimum" <= bb "maximum display scale" <= "maximum"])
 
 [underline]#Example:# *12000* for a maximum display scale of scale of 1:12000
 
@@ -21494,7 +21530,7 @@ A tidal datum approximating the lowest water level observed at a place, originat
 
 [underline]#Minimum range:# 0
 
-[underline]#Range closure:# Left half-open ray (_minimum <_ _*measurement distance maximum*_)
+[underline]#Range closure:# Left half-open ray (stem:["minimum" < bb "measurement distance maximum"])
 
 [underline]#Example:# *30* for a maximum distance between sounding along a sounding line of 30 metres.
 
@@ -21519,7 +21555,7 @@ A tidal datum approximating the lowest water level observed at a place, originat
 
 [underline]#Minimum range:# 0
 
-[underline]#Range closure:# Left half-open ray (_minimum <_ _*measurement distance minimum*_)
+[underline]#Range closure:# Left half-open ray (stem:["minimum" < bb "measurement distance minimum"])
 
 [underline]#Example:# *5* for a minimum distance between sounding along a sounding line of 5 metres.
 
@@ -21546,7 +21582,7 @@ A tidal datum approximating the lowest water level observed at a place, originat
 
 [underline]#Maximum range:# 10000000
 
-[underline]#Range closure:# Closed interval (_minimum ≤_ _*minimum display scale*_ _≤ maximum_)
+[underline]#Range closure:# Closed interval (stem:["minimum" <= bb "minimum display scale" <= "maximum"])
 
 [underline]#Example:# *700000* for a minimum display scale of scale of 1:700000
 
@@ -21574,7 +21610,7 @@ A tidal datum approximating the lowest water level observed at a place, originat
 
 [underline]#Maximum range:# 10000000
 
-[underline]#Range closure:# Closed interval (_minimum ≤_ _*optimum display scale*_ _≤ maximum_)
+[underline]#Range closure:# Closed interval (stem:["minimum" <= bb "optimum display scale" <= "maximum"])
 
 [underline]#Example:# *12000* for an optimum display scale of scale of 1:12000
 
@@ -21602,7 +21638,7 @@ A tidal datum approximating the lowest water level observed at a place, originat
 
 [underline]#Maximum range:# 360
 
-[underline]#Range closure:# Right half-open interval (_minimum ≤_ _*orientation uncertainty*_ _< maximum_)
+[underline]#Range closure:# Right half-open interval (stem:["minimum" <= bb "orientation uncertainty" < "maximum"])
 
 [underline]#Example:# *0·005* for an error of 0·005 degrees
 
@@ -21723,7 +21759,7 @@ A tidal datum approximating the lowest water level observed at a place, originat
 
 [underline]#Minimum range:# 0
 
-[underline]#Range closure:# Left half-open ray (_minimum <_ _*scale value maximum*_)
+[underline]#Range closure:# Left half-open ray (stem:["minimum" < bb "scale value maximum"])
 
 [underline]#Example:# *25000* for a scale of 1:25000
 
@@ -21748,7 +21784,7 @@ A tidal datum approximating the lowest water level observed at a place, originat
 
 [underline]#Minimum range:# 0
 
-[underline]#Range closure:# Left half-open ray (_minimum <_ _*scale value minimum*_)
+[underline]#Range closure:# Left half-open ray (stem:["minimum" < bb "scale value minimum"])
 
 [underline]#Example:# *250000* for a scale of 1:250000
 
@@ -21790,7 +21826,7 @@ A tidal datum approximating the lowest water level observed at a place, originat
 
 [underline]#Minimum range:# 0
 
-[underline]#Range closure:# Left half-open ray (_minimum <_ _*size of features detected*_)
+[underline]#Range closure:# Left half-open ray (stem:["minimum" < bb "size of features detected"])
 
 [underline]#Example:# *32.5* for a survey capable of detecting significant seafloor features of a minimum size of 32.5 cubic metres.
 
@@ -21943,7 +21979,7 @@ A tidal datum approximating the lowest water level observed at a place, originat
 
 [underline]#Minimum range:# 0
 
-[underline]#Range closure:# Left half-open ray (_minimum <_ _*update number*_)
+[underline]#Range closure:# Left half-open ray (stem:["minimum" < bb "update number"])
 
 Example: *1* for Update number 1
 
@@ -22007,7 +22043,7 @@ Example: *1* for Update number 1
 
 [underline]#Minimum range:# 0
 
-[underline]#Range closure:# Left half-open ray (_minimum <_ _*uncertainty fixed*_)
+[underline]#Range closure:# Left half-open ray (stem:["minimum" < bb "uncertainty fixed"])
 
 [underline]#Example:# *1.2* for a fixed uncertainty of 1∙2 metres
 
@@ -22034,7 +22070,9 @@ Example: *1* for Update number 1
 
 [underline]#Maximum range:# 1
 
-[underline]#Range closure:# Open interval (_minimum <_ _*uncertainty variable factor*_ _< maximum_)Example: The positional accuracy for the highest accuracy for hydrographic data in a *Spatial Quality* feature is quoted as "±5 metres + 10% depth". The variable component in this example is depth, and the factor to be applied to the depth at a location in order to provide the variable uncertainty is *0.1*.
+[underline]#Range closure:# Open interval (stem:["minimum" < bb "uncertainty variable factor" < "maximum"])
+
+Example: The positional accuracy for the highest accuracy for hydrographic data in a *Spatial Quality* feature is quoted as "±5 metres + 10% depth". The variable component in this example is depth, and the factor to be applied to the depth at a location in order to provide the variable uncertainty is *0.1*.
 
 In this example, at a depth of 25 metres, the variable uncertainty would be 2.5 metres, and the overall best estimate of the positional accuracy would be ±7.5 metres.
 
@@ -22895,7 +22933,7 @@ Sub-attributes:
 
 [underline]#Maximum range:# 12500
 
-[underline]#Range closure:# Open interval (_minimum <_ _*default clearance depth*_ _< maximum_)Examples:*12.5* for a default clearance depth of 12.5 metres**-2.4** for a drying default clearance height of 2∙4 metres
+[underline]#Range closure:# Open interval (stem:["minimum" < bb "default clearance depth" < "maximum"])Examples:*12.5* for a default clearance depth of 12.5 metres**-2.4** for a drying default clearance height of 2∙4 metres
 
 [underline]#Remarks:#
 
@@ -22965,7 +23003,7 @@ h| /
 h| Unknown
 |
 
-h| _*0.1*_
+h| *_0.1_*
 
 |
 
@@ -22973,10 +23011,10 @@ h| _2,_ Empty (null)
 h| /
 h| Unknown
 h| _3_
-h| _*0.1*_
+h| *_0.1_*
 
-h| ≠ _6_ h| _2,_ Empty (null) h| / h| Unknown h| _5_ h| _*0*_
-h| ≠ _6_ h| _2,_ Empty (null) h| / h| Unknown h| _4,_ Unknown h| _*-15*_
+h| ≠ _6_ h| _2,_ Empty (null) h| / h| Unknown h| _5_ h| *_0_*
+h| ≠ _6_ h| _2,_ Empty (null) h| / h| Unknown h| _4,_ Unknown h| *_-15_*
 5+h| *For features of unknown depth, covered or partially covered by Unsurveyed Area; or Depth/Dredged Area where depth range minimum value is unknown* |
 h| _6_
 |
@@ -22985,7 +23023,7 @@ h| /
 h| Unknown
 |
 
-h| _*0.1*_
+h| *_0.1_*
 
 |
 
@@ -22994,7 +23032,7 @@ h| _*0.1*_
 h| /
 h| Unknown
 h| _3_
-h| _*0.1*_
+h| *_0.1_*
 
 h| ≠ _6_
 |
@@ -23002,7 +23040,7 @@ h| ≠ _6_
 h| /
 h| Unknown
 h| _5_
-h| _*0*_
+h| *_0_*
 
 h| ≠ _6_
 |
@@ -23010,7 +23048,7 @@ h| ≠ _6_
 h| /
 h| Unknown
 h| _4,_ Unknown
-h| _*-15*_
+h| *_-15_*
 
 |===
 
@@ -23030,15 +23068,15 @@ h| */*
 |
 
 h| _1,3_ h| Unknown h| _3_ h| Least Depth | |
-h| _2,_ Empty (null) h| Unknown h| _3_ h| _*0.1*_ | |
-h| _2,_ Empty (null) h| Unknown h| _5_ h| _*0*_ | |
-h| _2,_ Empty (null) h| Unknown h| _4,_ Unknown h| _*-15*_ | |
+h| _2,_ Empty (null) h| Unknown h| _3_ h| *_0.1_* | |
+h| _2,_ Empty (null) h| Unknown h| _5_ h| *_0_* | |
+h| _2,_ Empty (null) h| Unknown h| _4,_ Unknown h| *_-15_* | |
 4+h| *For features of unknown depth, covered by Unsurveyed Area; or Depth/Dredged Area where depth range minimum value is unknown* | |
 |
 
 h| Unknown
 h| _3_
-h| _*0.1*_
+h| *_0.1_*
 |
 |
 
@@ -23046,7 +23084,7 @@ h| _*0.1*_
 
 h| Unknown
 h| _5_
-h| _*0*_
+h| *_0_*
 |
 |
 
@@ -23054,7 +23092,7 @@ h| _*0*_
 
 h| Unknown
 h| _4,_ Unknown
-h| _*-15*_
+h| *_-15_*
 |
 |
 
@@ -23062,7 +23100,7 @@ h| _*-15*_
 
 h| Unknown
 h| _3_
-h| _*0.1*_
+h| *_0.1_*
 |
 |
 
@@ -23098,7 +23136,7 @@ h| _1_
 h| /
 h| /
 h| _1,2,4,5,_ Unknown
-h| _*20.1*_ or *{Least Depth -- 66}* (whichever value is larger)
+h| *_20.1_* or *{Least Depth -- 66}* (whichever value is larger)
 
 h| _1_
 h| _2,_ Empty (null)
@@ -23106,17 +23144,17 @@ h| /
 h| /
 |
 
-h| _*20.1*_ or *{Least Depth -- 66}* (whichever value is larger)
+h| *_20.1_* or *{Least Depth -- 66}* (whichever value is larger)
 
-h| / h| _2,_ Empty (null) h| / h| Unknown h| _3,5_ h| _*0*_
-h| / h| _2,_ Empty (null) h| / h| Unknown h| _4,_ Unknown h| _*-15*_
+h| / h| _2,_ Empty (null) h| / h| Unknown h| _3,5_ h| *_0_*
+h| / h| _2,_ Empty (null) h| / h| Unknown h| _4,_ Unknown h| *_-15_*
 h| _2,3,4,5,_ Unknown
 |
 
 h| /
 h| /
 h| _1,2,4,5_ Unknown
-h| _*-15*_
+h| *_-15_*
 
 h| _2,3,4,5,_ Unknown
 h| _2,_ Empty (null)
@@ -23124,7 +23162,7 @@ h| /
 h| /
 |
 
-h| _*-15*_
+h| *_-15_*
 
 5+h| *For features of unknown depth, covered or partially covered by Unsurveyed Area; or Depth/Dredged Area where depth range minimum value is unknown* |
 h| _1_
@@ -23133,7 +23171,7 @@ h| _1_
 h| /
 h| /
 h| _3,_ Unknown
-h| _*20.1*_
+h| *_20.1_*
 
 h| /
 |
@@ -23141,7 +23179,7 @@ h| /
 h| /
 h| Unknown
 h| _3,5_
-h| _*0*_
+h| *_0_*
 
 h| /
 |
@@ -23149,7 +23187,7 @@ h| /
 h| /
 h| Unknown
 h| _4,_ Unknown
-h| _*-15*_
+h| *_-15_*
 
 h| Unknown
 |
@@ -23157,7 +23195,7 @@ h| Unknown
 h| /
 h| /
 h| _3,5_
-h| _*0*_
+h| *_0_*
 
 h| _2,3,4,5_
 |
@@ -23165,7 +23203,7 @@ h| _2,3,4,5_
 h| /
 h| /
 h| _3,5_
-h| _*-15*_
+h| *_-15_*
 
 h| _2,3,4,5,_ Unknown
 |
@@ -23173,7 +23211,7 @@ h| _2,3,4,5,_ Unknown
 h| /
 h| /
 h| _4,_ Unknown
-h| _*-15*_
+h| *_-15_*
 
 |===
 
@@ -23226,7 +23264,7 @@ h| _*-15*_
 
 [underline]#Maximum range:# 12500
 
-[underline]#Range closure:# Open interval (_minimum <_ _*surrounding depth*_ _< maximum_)
+[underline]#Range closure:# Open interval (stem:["minimum" < bb "surrounding depth" < "maximum"])
 
 [underline]#Example:# *20* for a surrounding depth of 20 metres
 
@@ -23280,7 +23318,7 @@ It is important that Mariners be provided with advance notification of changes t
 --
 * Adds new or amended TSS component features. These features must have *date start* for *fixed* *date range* populated with the date that the changes to the TSS come into force.
 * Adds *date end* for *fixed date range* (populated with the date of the day before the changes to the TSS come into force) to any component features of the existing TSS that are to be changed or deleted.
-* Creates a *Caution Area* surface feature (see <<sec_16.10>>) covering the geographic extent of both the current and the future TSS. The complex attribute *information* (see <<sec_2.4.6>>) must be used to explain the change to the TSS, for example_"The traffic separation scheme off Cape Bon is to be modified at 0000 UTC on 1 July 2009. This ENC includes all the information before and after the change, indicated by the sub-attributes_ __**date end**__ _(before the change) and_ __**date start**__ _(after the change) for the complex attribute_ __**fixed** __ __**date range**__ _on the components of the scheme"_. The sub-attribute *date end* on *fixed date range* for the *Caution Area* should be populated with the date at which the change comes into force or, if encoders wish to provide extended information to the Mariner that a change has been made, with a date up to a month after the change comes into force. If the current and the future TSS are not in the same geographic area, it may be required to encode two distinct *Caution Area* surface features. A picture file may be referenced by the *Caution Area* using the attribute *pictorial representation* if it is considered useful, for example the equivalent paper chart representation of the amended or new TSS.
+* Creates a *Caution Area* surface feature (see <<sec_16.10>>) covering the geographic extent of both the current and the future TSS. The complex attribute *information* (see <<sec_2.4.6>>) must be used to explain the change to the TSS, for example_"The traffic separation scheme off Cape Bon is to be modified at 0000 UTC on 1 July 2009. This ENC includes all the information before and after the change, indicated by the sub-attributes_ *_date end_* _(before the change) and_ *_date start_* _(after the change) for the complex attribute_ *_fixed date range_* _on the components of the scheme"_. The sub-attribute *date end* on *fixed date range* for the *Caution Area* should be populated with the date at which the change comes into force or, if encoders wish to provide extended information to the Mariner that a change has been made, with a date up to a month after the change comes into force. If the current and the future TSS are not in the same geographic area, it may be required to encode two distinct *Caution Area* surface features. A picture file may be referenced by the *Caution Area* using the attribute *pictorial representation* if it is considered useful, for example the equivalent paper chart representation of the amended or new TSS.
 --
 
 . As soon as possible after the modified/new/deleted TSS comes into force, issue an updated dataset (as an Update or New Edition) which:
@@ -23477,9 +23515,9 @@ When information is issued as advance notification for an ENC it is necessary to
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| drawing instruction 2+| (SYMINS) 3+| | TE | 0,\* footnoteblock:[thirtytwo_one]
+3+| drawing instruction 2+| (SYMINS) 3+| | TE | 0,* footnoteblock:[thirtytwo_one]
 
-3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,\* footnoteblock:[thirtytwo_one]
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,* footnoteblock:[thirtytwo_one]
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 

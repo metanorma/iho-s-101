@@ -65,11 +65,10 @@ Some of the principles of depth depiction are summarized below:
 1: depth known +
 3: doubtful sounding +
 4: unreliable sounding +
-8: value reported (not surveyed)
+8: value reported (not surveyed) +
 9: value reported (not confirmed) | EN | 0,*
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
-3+| status 2+| (STATUS) 3+| 1
-8: existence doubtful | EN | 0,1
+3+| status 2+| (STATUS) 3+| 18: existence doubtful | EN | 0,1
 3+| technique of vertical measurement 2+| (TECSOU) 3+|
 1: found by echo sounder +
 2: found by side scan sonar +
@@ -182,7 +181,7 @@ h| Sounding h| S-4 h| INT 1 h| quality of horizontal measurement h| quality of v
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| depth range maximum value 2+| (DRVAL2) 3+| DRVAL2 >= DRVAL1 | RE | 0,1 3+| depth range minimum value 2+| (DRVAL1) 3+| DRVAL1 <= DRVAL2 | RE | 1,1 3+| dredged date 2+| _(SORDAT)_
+3+| depth range maximum value 2+| (DRVAL2) 3+| stem:["DRVAL2" >= "DRVAL1"] | RE | 0,1 3+| depth range minimum value 2+| (DRVAL1) 3+| stem:["DRVAL1" <= "DRVAL2"] | RE | 1,1 3+| dredged date 2+| _(SORDAT)_
 3+| | TD | 0,1
 
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
@@ -223,7 +222,7 @@ h| Sounding h| S-4 h| INT 1 h| quality of horizontal measurement h| quality of v
 19: industrial or mineral exploration/development restricted +
 20: drilling prohibited +
 21: drilling restricted +
-23: cargo transhipment (lightening) prohibited
+23: cargo transhipment (lightening) prohibited +
 25: stopping prohibited +
 27: speed restricted +
 39: swimming prohibited | EN | 0,*
@@ -236,7 +235,8 @@ h| Sounding h| S-4 h| INT 1 h| quality of horizontal measurement h| quality of v
 13: swept by side scan sonar +
 15: found by LIDAR +
 16: synthetic aperture radar +
-17: hyperspectral imagery18 : mechanically swept | EN | 0,*
+17: hyperspectral imagery +
+18: mechanically swept | EN | 0,*
 3+| vertical uncertainty
 2+| _(SOUACC)_
 3+| | C | 0,1
@@ -640,7 +640,7 @@ If it is required to encode sandwaves, this must be done using the feature *Sand
 [cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *DEPTH --**NO BOTTOM FOUND*. Upon investigation the bottom was not found at this depth. (Adapted from IHO Dictionary -- S-32).
-10+| *[underline]#S-101 Geo Feature:#* *Depth -- No Bottom Found* __**(SOUNDG)**__
+10+| *[underline]#S-101 Geo Feature:#* *Depth -- No Bottom Found* *_(SOUNDG)_*
 10+| *[underline]#Primitives:#* *Pointset*
 
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_

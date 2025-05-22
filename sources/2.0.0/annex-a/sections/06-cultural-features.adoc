@@ -126,7 +126,7 @@ If it is required to encode a built-up area, it must be done using the feature *
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| building shape 2+| (BUISHP) 3+|
-5: high-rise building
+5: high-rise building +
 6: pyramid +
 7: cylindrical +
 8: spherical +
@@ -145,13 +145,13 @@ If it is required to encode a built-up area, it must be done using the feature *
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 0,\* (ordered)
+13: pink | EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | EN | 0,1 footnoteblock:[six_two]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
@@ -175,7 +175,7 @@ If it is required to encode a built-up area, it must be done using the feature *
 | 0,1 footnoteblock:[six_two]
 
 3+| function 2+| (FUNCTN) 3+|
-2: harbour-masters office
+2: harbour-masters office +
 3: customs office +
 4: health office +
 5: hospital +
@@ -183,12 +183,12 @@ If it is required to encode a built-up area, it must be done using the feature *
 7: hotel +
 8: railway station +
 9: police station +
-10: water-police station
+10: water-police station +
 11: pilot office +
 12: pilot lookout +
 13: bank office +
 14: headquarters for district control +
-15: transit shed/warehouse
+15: transit shed/warehouse +
 16: factory +
 17: power station +
 18: administrative +
@@ -401,7 +401,7 @@ A defined area on land (including any buildings, installations and equipment) in
 1: permanent +
 2: occasional +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 6: reserved +
 7: temporary +
 8: private +
@@ -511,7 +511,7 @@ For ENC data at smaller optimum display scales, an airport should be encoded as 
 1: permanent +
 2: occasional +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 6: reserved +
 7: temporary +
 8: private +
@@ -572,7 +572,7 @@ For larger optimum display scale ENC data, an airport should be encoded using a 
 [cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *HELIPAD*. A site on which helicopters may land and take off. (IHO Dictionary -- S-32).
-10+| *[underline]#S-101 Geo Feature:#* *Helipad* __**(RUNWAY)**__
+10+| *[underline]#S-101 Geo Feature:#* *Helipad* *_(RUNWAY)_*
 10+| *[underline]#Primitives:#* *Point*
 
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
@@ -618,7 +618,7 @@ For larger optimum display scale ENC data, an airport should be encoded using a 
 1: permanent +
 2: occasional +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 6: reserved +
 7: temporary +
 8: private +
@@ -715,7 +715,7 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 0,\* (ordered)
+13: pink | EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
@@ -770,7 +770,7 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 1: permanent +
 2: occasional +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary +
 12: illuminated | EN | 0,*
 3+| visual prominence 2+| (CONVIS) 3+|
@@ -877,7 +877,7 @@ image::figure-6-6.png[240,84]
 [cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *SPAN FIXED*. A fixed component of the deck of a bridge spanning successive bridge piers. (Adapted from Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2013).
-10+| *[underline]#S-101 Geo Feature:#* *Span Fixed* __**(BRIDGE)**__
+10+| *[underline]#S-101 Geo Feature:#* *Span Fixed* *_(BRIDGE)_*
 10+| *[underline]#Primitives:#* *Curve, Surface*
 
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
@@ -921,8 +921,8 @@ image::figure-6-6.png[240,84]
 20: high water springs +
 21: mean higher high water +
 24: local datum +
-25: international great lakes datum  +
-198526: mean water level +
+25: international great lakes datum  1985 +
+26: mean water level +
 28: higher high water large tide +
 29: nearly highest high water +
 30: highest astronomical tide +
@@ -992,7 +992,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 [cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *SPAN OPENING*. An opening component of the deck of a bridge spanning successive bridge piers. (Adapted from Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2013).
-10+| *[underline]#S-101 Geo Feature:#* *Span Opening* __**(BRIDGE)**__
+10+| *[underline]#S-101 Geo Feature:#* *Span Opening* *_(BRIDGE)_*
 10+| *[underline]#Primitives:#* *Curve, Surface*
 
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
@@ -1047,8 +1047,8 @@ The value of the vertical clearance between (high) water level and any fixed ove
 20: high water springs +
 21: mean higher high water +
 24: local datum +
-25: international great lakes datum  +
-198526: mean water level +
+25: international great lakes datum  1985 +
+26: mean water level +
 28: higher high water large tide +
 29: nearly highest high water +
 30: highest astronomical tide +
@@ -1148,13 +1148,13 @@ The value of the vertical clearance between (high) water level and any opening o
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 0,\* (ordered)
+13: pink | EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | EN | 0,1 footnoteblock:[six_nine]
 
 3+| condition 2+| (CONDTN) 3+|
@@ -1205,7 +1205,7 @@ The value of the vertical clearance between (high) water level and any opening o
 13: salt +
 14: sand +
 15: timber +
-16: sawdust/wood chips
+16: sawdust/wood chips +
 17: scrap metal +
 21: cement +
 22: grain +
@@ -1239,8 +1239,8 @@ The value of the vertical clearance between (high) water level and any opening o
 20: high water springs +
 21: mean higher high water +
 24: local datum +
-25: International great lakes datum  +
-198526: mean water level +
+25: International great lakes datum  1985 +
+26: mean water level +
 28: higher high water large tide +
 29: nearly highest high water +
 30: highest astronomical tide +
@@ -1377,7 +1377,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary +
 12: illuminated +
 28: buoyed | EN | 0,*
@@ -1413,8 +1413,8 @@ The value of the vertical clearance between (high) water level and any fixed ove
 20: high water springs +
 21: mean higher high water +
 24: local datum +
-25: international great lakes datum  +
-198526: mean water level +
+25: international great lakes datum  1985 +
+26: mean water level +
 28: higher high water large tide +
 29: nearly highest high water +
 30: highest astronomical tide +
@@ -1488,7 +1488,7 @@ For power cables or transmission lines carrying very high voltages, an additiona
 [[sec_6.11]]
 === Pipeline overhead
 
-[cols="154,201,201,201,201,201,201,201,201,84,154", options="unnumbered"]
+[cols="100,100,100,100,100,100,100,100,100,84,154", options="unnumbered"]
 |===
 11+| [underline]#IHO Definition:# *OVERHEAD PIPELINE*. A string of interconnected pipes, supported by pylons and passing over or nearby navigable waters, used for the transport of matter, nowadays mainly oil or gas. (Adapted from IHO Dictionary -- S-32 and S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.119, November 2000).
 11+| *[underline]#S-101 Geo Feature:#* *Pipeline Overhead (PIPOHD)*
@@ -1579,8 +1579,8 @@ For power cables or transmission lines carrying very high voltages, an additiona
 20: high water springs +
 21: mean higher high water +
 24: local datum +
-25: International great lakes datum  +
-198526: mean water level +
+25: International great lakes datum  1985 +
+26: mean water level +
 28: higher high water large tide +
 29: nearly highest high water +
 30: highest astronomical tide +
@@ -1664,10 +1664,10 @@ The value of the vertical clearance between (high) water level and any fixed ove
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| category of pylon 2+| (CATPYL) 3+|
-1: power transmission pylon/pole
-2: telephone/telegraph pylon/pole
+1: power transmission pylon/pole +
+2: telephone/telegraph pylon/pole +
 3: aerial cableway pylon +
-4: bridge pylon/tower
+4: bridge pylon/tower +
 5: bridge pier +
 6: pipeline pylon | EN | 1,1
 3+| colour 2+| (COLOUR) 3+|
@@ -1683,13 +1683,13 @@ The value of the vertical clearance between (high) water level and any fixed ove
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 0,\* (ordered)
+13: pink | EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | EN | 0,1 footnoteblock:[six_twelve]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
@@ -1753,7 +1753,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 3+| water level effect 2+| (WATLEV) 3+|
 1: partly submerged at high water +
 2: always dry +
-3: always under water/submerged
+3: always under water/submerged +
 4: covers and uncovers +
 5: awash +
 6: subject to inundation or flooding | EN | 0,1
@@ -1844,13 +1844,13 @@ The actual position of pylons supporting bridges, pipelines and cables must be i
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 0,\* (ordered)
+13: pink | EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | EN | 0,1 footnoteblock:[six_thirteen]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
@@ -2060,7 +2060,7 @@ If it is required to encode a railway, it must be done using the feature *Railwa
 1: motorway +
 2: major road +
 3: minor road +
-4: track/path
+4: track/path +
 5: major street +
 6: minor street | EN | 0,1
 
@@ -2218,8 +2218,8 @@ If it is required to encode a road or track, it must be done using the feature *
 20: high water springs +
 21: mean higher high water +
 24: local datum +
-25: international great lakes datum  +
-198526: mean water level +
+25: international great lakes datum  1985 +
+26: mean water level +
 28: higher high water large tide +
 29: nearly highest high water +
 30: highest astronomical tide +

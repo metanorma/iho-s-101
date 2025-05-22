@@ -475,7 +475,7 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 
 [underline]#Remarks:#
 
-* If it is required to encode an offshore landmark (as defined by the attribute *category of landmark*), the ECDIS system attribute *in the water* (see <<sec_30.2>>) must be populated to ensure the feature is always displayed on the ECDIS. Where fitted, lights should be encoded as described in Section 19, with the *Building*, *Wind Turbine*, *Landmark* or *Silo/Tank* being used as the structure feature for the relevant light equipment feature(s) (see <<sec_18.1>>).
+* If it is required to encode an offshore landmark (as defined by the attribute *category of landmark*), the ECDIS system attribute *in the water* (see <<sec_30.2>>) must be populated to ensure the feature is always displayed on the ECDIS. Where fitted, lights should be encoded as described in <<sec_19>>, with the *Building*, *Wind Turbine*, *Landmark* or *Silo/Tank* being used as the structure feature for the relevant light equipment feature(s) (see <<sec_18.1>>).
 * For encoding wind turbines, see <<sec_7.4>>.
 
 [[sec_7.2]]
@@ -500,7 +500,7 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 7: mast +
 8: windsock +
 9: monument +
-10: column/pillar
+10: column/pillar +
 11: memorial plaque +
 12: obelisk +
 13: statue +
@@ -509,7 +509,7 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 16: radar scanner +
 17: tower +
 18: windmill +
-20: spire/minaret
+20: spire/minaret +
 21: large rock or boulder on land +
 22: triangulation mark +
 23: boundary mark +
@@ -534,13 +534,13 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 0,\* (ordered)
+13: pink | EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | EN | 0,1 footnoteblock:[seven_two]
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
@@ -565,7 +565,7 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 | 0,1 footnoteblock:[seven_two]
 
 3+| function 2+| (FUNCTN) 3+|
-2: harbour-masters office
+2: harbour-masters office +
 3: customs office +
 4: health office +
 5: hospital +
@@ -573,12 +573,12 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 7: hotel +
 8: railway station +
 9: police station +
-10: water-police station
+10: water-police station +
 11: pilot office +
 12: pilot lookout +
 13: bank office +
 14: headquarters for district control +
-15: transit shed/warehouse
+15: transit shed/warehouse +
 16: factory +
 17: power station +
 18: administrative +
@@ -645,7 +645,7 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 3+| status 2+| (STATUS) 3+|
 2: occasional +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary +
 8: private +
 12: illuminated +
@@ -705,7 +705,7 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 --
 
-[underline]#INT 1 Reference:#D 8; E 10.2-10.4, 22-31; L 11; Q 100
+[underline]#INT 1 Reference:# D 8; E 10.2-10.4, 22-31; L 11; Q 100
 
 [[sec_7.2.1]]
 ==== Buildings, landmarks, tanks, silos (see S-4 -- B-373; B-373.6; B-374.3-5; B-374.7; B-375.1-2; B-456.2; B-487.3)
@@ -754,7 +754,7 @@ image::figure-7-1.png[Shape21,624,183]
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| building shape 2+| (BUISHP) 3+|
-5: high-rise building
+5: high-rise building +
 6: pyramid +
 7: cylindrical +
 8: spherical +
@@ -777,13 +777,13 @@ image::figure-7-1.png[Shape21,624,183]
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 0,\* (ordered)
+13: pink | EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | EN | 0,1 footnoteblock:[seven_three]
 
 3+| condition 2+| (CONDTN) 3+| 1: under construction +
@@ -838,7 +838,7 @@ image::figure-7-1.png[Shape21,624,183]
 9: milk +
 13: salt +
 14: sand +
-16: sawdust/wood chips
+16: sawdust/wood chips +
 18: liquefied natural gas +
 19: liquefied petroleum gas +
 20: wine +
@@ -930,7 +930,7 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 [cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *WIND TURBINE*. A tower and associated equipment that generates electrical power from wind. They can be sited offshore and may be either fixed or floating. (IHO Dictionary -- S-32).
-10+| *[underline]#S-101 Geo Feature:#* *Wind Turbine* __**(LNDMRK)**__
+10+| *[underline]#S-101 Geo Feature:#* *Wind Turbine* *_(LNDMRK)_*
 10+| *[underline]#Primitives:#* *Point*
 
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
@@ -949,13 +949,13 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 10: violet +
 11: orange +
 12: magenta +
-13: pink | EN | 0,\* (ordered)
+13: pink | EN | 0,* (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
 3: diagonal stripes +
 4: squared +
-5: stripes (direction unknown)
+5: stripes (direction unknown) +
 6: border stripe | EN | 0,1 footnoteblock:[seven_four]
 
 3+| condition 2+| (CONDTN) 3+| 1: under construction +
@@ -1015,7 +1015,7 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 1: permanent +
 2: occasional +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary +
 8: private +
 12: illuminated +
@@ -1047,8 +1047,8 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 20: high water springs +
 21: mean higher high water +
 24: local datum +
-25: international great lakes datum  +
-198526: mean water level +
+25: international great lakes datum  1985 +
+26: mean water level +
 28: higher high water large tide +
 29: nearly highest high water +
 30: highest astronomical tide +
@@ -1129,7 +1129,7 @@ If it is required to encode a wind turbine, it must be done using the feature *W
 * A ruined wind turbine should be encoded in the same way as the feature in good condition, but with attribute *condition* = _4_ (wingless).
 * If it is required to encode sites of dismantled offshore wind turbines, this must be done using *Foul Ground* features (see <<sec_13.7>>), unless the source indicates that any remaining structure protrudes far enough above the seabed so as to be an obstruction to surface navigation, in which case this must be encoded using an *Obstruction* feature (see <<sec_13.6>>).
 * If it is required to encode an offshore wind farm, it must be done using the feature *Offshore Production Area* (see <<sec_14.6>>). An onshore wind farm must be encoded, where required, using the feature *Production/Storage Area* (see <<sec_7.6>>).
-* Wind turbines may carry lights (see Section 19) or fog signals (see <<sec_20.19>>). Where fitted, lights should be encoded as described in Section 19, with the *Wind Turbine* being used as the structure feature for the light equipment feature(s).
+* Wind turbines may carry lights (see <<sec_19>>) or fog signals (see <<sec_20.19>>). Where fitted, lights should be encoded as described in <<sec_19>>, with the *Wind Turbine* being used as the structure feature for the light equipment feature(s).
 * Value _13_ (low water) for attribute *vertical datum* is only applicable to enclosed (inland) waterways; and must not be used to indicate the reference datum for vertical clearances in tidal waters.
 
 * If available and considered important for route planning and/or monitoring, the vertical uncertainty associated with encoded vertical clearance values should also be encoded.
@@ -1265,7 +1265,7 @@ If it is required to encode a fortified structure, it must be done using the fea
 [underline]#Remarks:#
 
 * If it is required to encode a Martello tower, it must be done using *Fortified Structure* with attribute *category of fort* = _5_ (fortified tower).
-* Where fitted, lights should be encoded as described in Section 19, with the *Fortified Structure* being used as the structure feature for the relevant light equipment feature(s) (see <<sec_18.1>>).
+* Where fitted, lights should be encoded as described in <<sec_19>>, with the *Fortified Structure* being used as the structure feature for the relevant light equipment feature(s) (see <<sec_18.1>>).
 * For fortified structures located in navigable water, the Boolean attribute *in the water* must be set to _True_ to indicate that the feature is to be included in the ECDIS Base Display. Where such structures are located in the water it is not required to encode any supporting structures (for example piles).
 
 [underline]#Distinction:# Building; Fence/Wall; Landmark.
@@ -1345,7 +1345,7 @@ If it is required to encode a fortified structure, it must be done using the fea
 13: salt +
 14: sand +
 15: timber +
-16: sawdust/wood chips
+16: sawdust/wood chips +
 17: scrap metal +
 18: liquefied natural gas +
 19: liquefied petroleum gas +

@@ -50,7 +50,7 @@ The allowable geometric primitive for each feature type is defined in the Featur
 
 Each spatial value must be referenced by at least one feature instance.
 
-Within this document, allowable primitives are included in the description of each feature type. For easy reference, <<table_2-1>> below summarises the allowable geometric primitives for each feature type. For some features, the allowable geometric primitives may be further constrained dependant on the populated values of attributes for a feature instance. Where this occurs, these constraints are described in the feature Table entries in Sections 3-24.
+Within this document, allowable primitives are included in the description of each feature type. For easy reference, <<table_2-1>> below summarises the allowable geometric primitives for each feature type. For some features, the allowable geometric primitives may be further constrained dependant on the populated values of attributes for a feature instance. Where this occurs, these constraints are described in the feature Table entries in <<sec_3;to!sec_24>>.
 
 In the Table, abbreviations are as follows: point (P), pointset (A), curve \(C) and surface (S). A feature that may have no geometric primitive is annotated as none (N).
 
@@ -177,7 +177,7 @@ The presentation of line styles may be affected by curve length. Therefore, the 
 [[sec_2.4]]
 === Attributes
 
-Attributes may be simple type or complex type, and are described in Sections 27-30. Complex (C) attributes (Section 29) are aggregates of other attributes that can be simple type (Sections 27 and 28) or complex type. Simple attributes in S-101 are assigned to one of 9 types (see <<sec_2.4.2>>).
+Attributes may be simple type or complex type, and are described in <<sec_27;to!sec_30>>. Complex \(C) attributes (<<sec_29>>) are aggregates of other attributes that can be simple type (<<sec_27;and!sec_28>>) or complex type. Simple attributes in S-101 are assigned to one of 9 types (see <<sec_2.4.2>>).
 
 The binding of attributes to feature types, the binding of attributes to attributes to construct complex attributes and attribute multiplicity is defined in the Feature Catalogue. Within this document, the allowable attributes are included in the description of each feature type, as well as attribute multiplicity and the allowable values for enumeration type attributes. Where relevant, constraints for other attribute types such as value range for integer and real type attributes; and string format and maximum string length for text type attributes as defined in the Feature Catalogue are also described.
 
@@ -197,7 +197,7 @@ h| Multiplicity h| Explanation
 | 1,1 | An instance is mandatory and there must only be one instance.
 | 0,* | An instance is not mandatory and there can be an infinite number of instances.
 | 1,* | An instance is mandatory and there can be an infinite number of instances.
-| 1,\* (ordered) | An instance is mandatory and there can be an infinite number of instances, the order of which has a specific meaning.
+| 1,* (ordered) | An instance is mandatory and there can be an infinite number of instances, the order of which has a specific meaning.
 | 2,2 | Two instances are mandatory and no more than two.
 
 |===
@@ -215,14 +215,14 @@ A red and white tower is encoded with attribute *colour* = _3_ (red) and *colour
 
 Each simple attribute in S-101 is assigned to one of 9types:
 
-EN:: Enumeration: A fixed list of valid identifiers of named literal values. Attributes of an enumeration type may only take values from this list. The complete list of allowable values for S-101 enumeration type attributes is included in Sections 27, 28 and 30; these values may be further constrained for the binding of the attribute to specific feature and information types.
+EN:: Enumeration: A fixed list of valid identifiers of named literal values. Attributes of an enumeration type may only take values from this list. The complete list of allowable values for S-101 enumeration type attributes is included in <<sec_27;and!sec_28;and!sec_30>>; these values may be further constrained for the binding of the attribute to specific feature and information types.
 
 BO:: Boolean: A value representing binary logic. The value can be either (1) __True__, (2) _False_ or empty (Unknown). The "default state" for Boolean type attributes, unless stated otherwise in this document, is _False_ for instances where the attribute is allowable for a feature, is non-mandatory and has not been populated (and is therefore not included for the feature instance). An empty (Unknown) value should only be populated where the Boolean type attribute is mandatory but the value (_True_ or _False_) is not known to the encoder.
 
 RE:: Real: A signed Real (floating point) number consisting of a mantissa and an exponent. The representation of a real is encapsulation and usage dependent.
 +
 --
-In S-100, "precision", as it applies to the IHO GI Registry and the S-101 Feature Catalogue, is defined as a non-negative integer expressing the constraint of the exponent of a real number (that is, "1" means the real number is constrained to a precision of 0.1; "2" means the real number is constrained to a precision of 0.01; etc) (S-100 Part 2a, <<sec_2>>a-4.2.10). For the attribute descriptions included in Sections 27, 28 and 30 of this document, the values quoted for precision are expressed in more "human-readable" terms as the exponent of the real type attribute (0.1, 0.01, 0.001, …).
+In S-100, "precision", as it applies to the IHO GI Registry and the S-101 Feature Catalogue, is defined as a non-negative integer expressing the constraint of the exponent of a real number (that is, "1" means the real number is constrained to a precision of 0.1; "2" means the real number is constrained to a precision of 0.01; etc) (S-100 Part 2a, <<sec_2>>a-4.2.10). For the attribute descriptions included in <<sec_27;and!28;and!sec_30>> of this document, the values quoted for precision are expressed in more "human-readable" terms as the exponent of the real type attribute (0.1, 0.01, 0.001, …).
 
 Examples: 23.501, -0.0001234, -23.0, 3.141296
 --
@@ -433,7 +433,7 @@ one of: *category of wreck*; *value of sounding*
 
 [NOTE]
 ====
-Sub-attributes of complex attributes, as well as the complex attribute itself, may also be designated as mandatory (see <<note_2_table_2-3>> below). "Conditional" mandatory attributes are identified in the feature Tables in Sections 3-24 by the superscript ^†^, with qualifying comments included after the attribute list for the relevant feature; and are also indicated in <<table_2-3>> above by the following additional text:
+Sub-attributes of complex attributes, as well as the complex attribute itself, may also be designated as mandatory (see <<note_2_table_2-3>> below). "Conditional" mandatory attributes are identified in the feature Tables in <<sec_3;to!sec_24>> by the superscript ^†^, with qualifying comments included after the attribute list for the relevant feature; and are also indicated in <<table_2-3>> above by the following additional text:
 
 _over navigable water*_:: for *Bridge*, *Cable Overhead*, *Conveyor*, *Pipeline Overhead*
 
@@ -498,7 +498,7 @@ The primary use of ENC is within ECDIS where ENC data is displayed based on the 
 [[sec_2.4.5.1]]
 ===== ECDIS "system" (portrayal) attributes
 
-Attributes designated as "ECDIS system" attributes are intended to provide information specific to aiding in portrayal of features in ECDIS in certain circumstances; and should be automatically populated by the ENC production software as required. The population of these attributes are conditional dependant on individual encoding instances including the relationship between an encoded feature and the underlying Skin of the Earth feature(s); and resolution of conflicts in portrayal specific to collocated light features. These attributes are described in Section 30 of this document, and include:
+Attributes designated as "ECDIS system" attributes are intended to provide information specific to aiding in portrayal of features in ECDIS in certain circumstances; and should be automatically populated by the ENC production software as required. The population of these attributes are conditional dependant on individual encoding instances including the relationship between an encoded feature and the underlying Skin of the Earth feature(s); and resolution of conflicts in portrayal specific to collocated light features. These attributes are described in <<sec_30>> of this document, and include:
 
 *default clearance depth* (see <<sec_30.1>>) -- this attribute is intended to provide a depth value to the ECDIS to aid in the display of underwater hazards (*Obstruction*, *Underwater/Awash Rock*, *Wreck*) where the actual depth of the underwater hazard is unknown (attribute *value of sounding* populated with an empty (null) value). This value is algorithmically calculated by the production system as required, based on the underlying depth(s) as described in <<sec_30.1>>. For S-101 ENCs, *default clearance depth* must be populated with a value, which must not be an empty (null) value, if the attribute *value of sounding* is populated with an empty (null) value.
 
@@ -574,7 +574,7 @@ Where the temporal attributes have been encoded for any feature that is the stru
 
 If it is required to show seasonality of features, it must be done using the attribute *status* = _5_ (periodic/intermittent). If it is required to encode the start and/or end dates of the season, this must be done using the complex attribute *periodic date range* (see <<sec_2.4.8;and!sec_29.15>>).
 
-Where there is a requirement to indicate the beginning or end date of a seasonal occurrence as the "last day in February", consideration must be given to allowing for the extra day (29^th^ February) added on leap years. Encoding *periodic date range*, sub-attribute *date end* with the value ----_0228_ may result in erroneous indication of seasonality in the ECDIS on the 29^th^ February for leap years, while encoding the value ----_0229_ may similarly result in ECDIS performance issues for non-leap years. Encoders are advised, therefore, that where it is required to encode the end of seasonality as the last day in February, this must be done, similar to any other month of the year, by encoding the value of *periodic date range*, sub-attribute *date end* as --_--02--_. Where the beginning of seasonality is the last day in February, this must be done by encoding the value of *periodic date range*, sub-attribute *date start* in accordance with the next occurrence of the date (--_--0228_ if the next occurrence is a non-leap year or --_--0229_ if the next occurrence is a leap year). The ENC dataset must be amended by ENC Update (see Section 31) where the date is required to be changed. For instance, if the value is --_--0228_ and the next occurrence is a leap year, an ENC Update must be created to amend the date to --_--0229_.
+Where there is a requirement to indicate the beginning or end date of a seasonal occurrence as the "last day in February", consideration must be given to allowing for the extra day (29^th^ February) added on leap years. Encoding *periodic date range*, sub-attribute *date end* with the value ----_0228_ may result in erroneous indication of seasonality in the ECDIS on the 29^th^ February for leap years, while encoding the value ----_0229_ may similarly result in ECDIS performance issues for non-leap years. Encoders are advised, therefore, that where it is required to encode the end of seasonality as the last day in February, this must be done, similar to any other month of the year, by encoding the value of *periodic date range*, sub-attribute *date end* as --_--02--_. Where the beginning of seasonality is the last day in February, this must be done by encoding the value of *periodic date range*, sub-attribute *date start* in accordance with the next occurrence of the date (--_--0228_ if the next occurrence is a non-leap year or --_--0229_ if the next occurrence is a leap year). The ENC dataset must be amended by ENC Update (see <<sec_31>>) where the date is required to be changed. For instance, if the value is --_--0228_ and the next occurrence is a leap year, an ENC Update must be created to amend the date to --_--0229_.
 
 Alternatively, if encoders consider that there is no regulatory requirement to update the start date of a period for leap years, the value of *date start* may be populated as --__--03--__, indicating a beginning date of 01 March each year.
 
@@ -1106,7 +1106,7 @@ h| FEATURE h| PRIMITIVE h| CONDITION h| scale minimum STEPS
 | *Lock Basin* | Surface | | 1
 | *Log Pond* | Point/Surface | Covered by a surface *Depth Area*, *Dredged Area*, or *Unsurveyed Area* feature | 4 | *Log Pond* | Point/Surface | | 1
 | *Magnetic Variation* | Point/Curve/Surface | | 1
-| *Marine Farm/Culture* | Point/Curve/Surface | If *exposition of sounding* = _2_ (shoaler than range of the surrounding depth area) and *value of sounding* ≤ _30_ | 4 | *Marine Farm/Culture* | Point/Curve/Surface | If *restriction* defined | 3 | *Marine Farm/Culture* | Point/Curve/Surface | | 1
+| *Marine Farm/Culture* | Point/Curve/Surface | If *exposition of sounding* = _2_ (shoaler than range of the surrounding depth area) and stem:[bb "value of sounding" <= 30] | 4 | *Marine Farm/Culture* | Point/Curve/Surface | If *restriction* defined | 3 | *Marine Farm/Culture* | Point/Curve/Surface | | 1
 | *Marine Pollution Regulations Area* | Surface | | 3
 | *Military Practice Area* | Point/Surface | | 3
 | *Mooring Area* | Point/Surface | | 2
@@ -1218,7 +1218,7 @@ h| FEATURE h| PRIMITIVE h| CONDITION h| scale minimum STEPS
 | *Update Information* | Point/Curve/Surface | | NOT SET
 
 4+| *CARTOGRAPHIC FEATURES*
-| *Text Placement* | Point | | <= associated feature
+| *Text Placement* | Point | | stem:[<= "associated feature"]
 
 |===
 
@@ -1409,7 +1409,7 @@ Example(s) of ECDIS symbology for the Feature.
 
 3+| This section lists the full list of allowable attributes for the S-101 feature. Attributes are listed in alphabetical order. Sub-attributes (Type prefix (S)) of complex (Type C) attributes are listed in alphabetical order and indented directly under the entry for the complex attribute (see below for example). Note that a complex attribute may have simple or complex attributes as sub-complex attributes.
 2+| This section liststhe corresponding S-57 attribute acronym. A blank cell indicates no corresponding S-57 acronym.
-3+| This section liststhe allowable encoding values for S-101 (for enumeration (E) Type attributes only). Further information about the attribute is available in Sections 27-30.
+3+| This section liststhe allowable encoding values for S-101 (for enumeration (E) Type attributes only). Further information about the attribute is available in <<sec_27;to!sec_30>>.
 | Attribute type (see <<sec_2.4.2>>).
 | Multiplicity describes the "cardinality" of the attribute in regard to the feature. See <<sec_2.4.1>>.
 
@@ -1438,7 +1438,7 @@ Example(s) of ECDIS symbology for the Feature.
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 | Role name 3+| *Name of Association* (see <<sec_25>>.xx) 3+| *Feature or Information Type(s)* 2+| Association/ Aggregation/ Composition | 0,1
-| See Section 26. 3+| See Section 25. 3+| Corresponds to the feature(s) that the subject feature may be associated to. See Section 25
+| See <<sec_26>>. 3+| See <<sec_25>>. 3+| Corresponds to the feature(s) that the subject feature may be associated to. See <<sec_25>>
 2+| Association type. | The individual multiplicity to which the subject feature may be associated to the "Associated to" feature(s) (see <<sec_25>>).
 
 10+a|
@@ -1480,8 +1480,8 @@ Clauses related to specific encoding scenarios for the Feature. (Not required fo
 
 * S-57 Acronym: S-57 attribute acronyms shown in italic style text have been re-modelled in S-101 from S-57.
 
-* Allowable Encoding Value: For enumeration (EN) type attributes, the enumerate values listed are only those allowable for the particular binding of the attribute relevant to the feature. Allowable values may vary for the attribute depending on the feature to which the attribute is bound. Such bindings are defined in the S-101 Feature Catalogue. The full list of enumerate values that may be assigned to an attribute in S-101 can be found in Sections 27 and 28 of this document.
+* Allowable Encoding Value: For enumeration (EN) type attributes, the enumerate values listed are only those allowable for the particular binding of the attribute relevant to the feature. Allowable values may vary for the attribute depending on the feature to which the attribute is bound. Such bindings are defined in the S-101 Feature Catalogue. The full list of enumerate values that may be assigned to an attribute in S-101 can be found in <<sec_27;and!sec_28>> of this document.
 
 * Type: The prefix (C) indicates that the attribute is a complex attribute. Complex attributes are aggregates of other attributes that can be simple type or complex type. The prefix (S) indicates that the attribute is a sub-attribute of a complex attribute. Complex attributes that are sub-attributes of a complex attribute, and their sub-attributes, are indicated by indentation of the attribute name in the S-101 Attribute column.
 
-* Feature/Feature, Feature/Information and Spatial/Information associations, including allowable features for association ends, are described in Section 25.
+* Feature/Feature, Feature/Information and Spatial/Information associations, including allowable features for association ends, are described in <<sec_25>>.

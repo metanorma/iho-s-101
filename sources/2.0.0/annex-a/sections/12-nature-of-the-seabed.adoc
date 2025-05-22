@@ -26,7 +26,7 @@
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| surface characteristics
-2+| 3+| | C | 1,\* (ordered)
+2+| 3+| | C | 1,* (ordered)
 
 3+| nature of surface 2+| (NATSUR) 3+|
 1: mud  +
@@ -58,7 +58,7 @@
 3+| underlying layer 2+| 3+| | (S) IN | 0,1
 
 3+| water level effect 2+| (WATLEV) 3+|
-3: always under water/ submerged
+3: always under water/ submerged +
 4: covers and uncovers +
 5: awash | EN | 0,1
 
@@ -120,7 +120,20 @@ If it is required to encode an area of the sea where the nature of the seabed is
 image::figure-12-1.png[Shape28,612,436]
 
 * In the following clauses, the paragraph prefixes refer to the examples shown in <<fig_12-1>>.
-(a) Mixed natures: The dominant nature of the seabed (*nature of surface*) should be populated first, along with its associated qualifying term (*nature of surface -- qualifying terms*), if required, using the complex attribute *surface characteristics*. Other natures should then be populated, in order of dominance, using further ordered instances of *surface characteristics*, (b) Underlying material: Should be encoded in the same way as mixed natures, and populating the sub-attribute *underlying layer* with the appropriate level of the layer below the surface layer. The surface layer must be encoded first, followed by the underlying layers.(c) Coral reef, which is always covered, represented as a surface (INT1 -- K16): An *Obstruction* feature of type surface must be encoded with attributes *category of obstruction* = _6_ (foul area), *nature of surface* = _14_ (coral) and *water level effect* = _3_ (always underwater/submerged). This feature must be covered by a *Depth Area* or *Unsurveyed Area* feature as appropriate. In this area, some point dangers may be shown. An *Underwater/Awash Rock* feature should be encoded for each individual point danger, with *nature of surface* = _14_ (coral).(d) Hard bottom: The attribute *nature of surface -- qualifying terms* = _10_ (hard) should be encoded, with the associated *nature of surface* populated with an empty (null) value.(e) On the source, in the intertidal area or along the drying line, the nature of surface is sometimes shown by an open line rather than a closed area. In such cases, a *Seabed Area* feature of type curve should be encoded, with attribute *water level effect* = _4_ (covers and uncovers).(f) If it is required to encode a rock pinnacle which is dangerous to navigation, it must be done using the feature *Underwater/Awash Rock*, while a rocky nature of seabed should be encoded using a *Seabed Area* feature.(g) Where a *Seabed Area* feature of type surface is located in an intertidal area, it should be encoded with *water level effect* = _4_ (covers and uncovers), in order for the intertidal rock or coral symbol to be displayed in ECDIS.
++
+--
+. Mixed natures: The dominant nature of the seabed (*nature of surface*) should be populated first, along with its associated qualifying term (*nature of surface -- qualifying terms*), if required, using the complex attribute *surface characteristics*. Other natures should then be populated, in order of dominance, using further ordered instances of *surface characteristics*,
+
+. Underlying material: Should be encoded in the same way as mixed natures, and populating the sub-attribute *underlying layer* with the appropriate level of the layer below the surface layer. The surface layer must be encoded first, followed by the underlying layers.
+
+. Coral reef, which is always covered, represented as a surface (INT1 -- K16): An *Obstruction* feature of type surface must be encoded with attributes *category of obstruction* = _6_ (foul area), *nature of surface* = _14_ (coral) and *water level effect* = _3_ (always underwater/submerged). This feature must be covered by a *Depth Area* or *Unsurveyed Area* feature as appropriate. In this area, some point dangers may be shown. An *Underwater/Awash Rock* feature should be encoded for each individual point danger, with *nature of surface* = _14_ (coral).
+
+. Hard bottom: The attribute *nature of surface -- qualifying terms* = _10_ (hard) should be encoded, with the associated *nature of surface* populated with an empty (null) value.(e) On the source, in the intertidal area or along the drying line, the nature of surface is sometimes shown by an open line rather than a closed area. In such cases, a *Seabed Area* feature of type curve should be encoded, with attribute *water level effect* = _4_ (covers and uncovers).
+
+. If it is required to encode a rock pinnacle which is dangerous to navigation, it must be done using the feature *Underwater/Awash Rock*, while a rocky nature of seabed should be encoded using a *Seabed Area* feature.
+
+. Where a *Seabed Area* feature of type surface is located in an intertidal area, it should be encoded with *water level effect* = _4_ (covers and uncovers), in order for the intertidal rock or coral symbol to be displayed in ECDIS.
+--
 
 * The nature of the seabed should be shown in depths of 2000m and less. The nature of the seabed may be shown in greater depths if thought to be useful.
 
@@ -459,7 +472,7 @@ If it is required to encode marine weed or kelp, it must be done using the featu
 [cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *SEAGRASS*. Any of various submerged monocotyledonous plants (such as eelgrass, tape grass, and turtle grass) of tropical to temperate usually shallow coastal waters that have narrow grass-like leaves and often form dense underwater meadows. (Merriam-Webster on-line dictionary).
-10+| *[underline]#S-101 Geo Feature:#* *Seagrass* __**(WEDKLP)**__
+10+| *[underline]#S-101 Geo Feature:#* *Seagrass* *_(WEDKLP)_*
 10+| *[underline]#Primitives:#* *Point, Surface*
 
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_

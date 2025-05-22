@@ -69,11 +69,10 @@
 53: river +
 54: reach +
 55: intertidal cay +
-56: submarine volcano
+56: submarine volcano | EN | 0,1
+footnote:ninedotone[At least one of the attributes *category of sea area* or *feature name* must be populated.]
 
-| EN | 0,1 footnote:ninedotone[At least one of the attributes *category of sea area* or *feature name* must be populated.]
-
-3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,\* footnote:ninedotone[]
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,* footnote:ninedotone[]
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
@@ -81,8 +80,7 @@
 
 3+| name usage 2+| 3+|
 1: default name display +
-2: alternate name display
-| (S) EN | 0,1 footnote:ninedotone[]
+2: alternate name display | (S) EN | 0,1 footnote:ninedotone[]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 

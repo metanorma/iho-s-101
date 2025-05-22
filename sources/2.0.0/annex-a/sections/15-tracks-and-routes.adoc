@@ -5,7 +5,7 @@
 [[sec_15.1]]
 === Leading, clearing and transit lines and recommended tracks (see S-4 -- B-433 and B-434)
 
-If it is required to encode leading, clearing and transit lines and recommended tracks, it must be done using the features *Navigation Line* and *Recommended Track* (see <<sec_15.4;and!sec_15.5>>), and related point navigational aids features (see Section 20). This applies for visual and radio navigational aids.
+If it is required to encode leading, clearing and transit lines and recommended tracks, it must be done using the features *Navigation Line* and *Recommended Track* (see <<sec_15.4;and!sec_15.5>>), and related point navigational aids features (see <<sec_20>>). This applies for visual and radio navigational aids.
 
 NB. In North America the word "range" is used instead of "transit" and "leading line".
 
@@ -50,7 +50,7 @@ If it is required to encode a traffic separation scheme, it must be done using:
 
 - *Separation Zone or Line*, *Traffic Separation Scheme Boundary*, *Traffic Separation Scheme Crossing*, *Traffic Separation Scheme Lane Part*, *Traffic Separation Scheme Roundabout* and *Traffic Separation Scheme* (see <<sec_15.18;to!sec_15.23>>); and
 
-- Navigational aids features (see Sections 18 to 21).
+- Navigational aids features (see <<sec_18;to!sec_21>>).
 
 For guidance on provision of advance notification of changes to traffic separation schemes, see <<sec_31.1.1>>.
 
@@ -115,7 +115,7 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
-5: periodic/intermittent
+5: periodic/intermittent +
 7: temporary +
 8: private +
 14: public | EN | 0,*
@@ -260,7 +260,7 @@ Where the entire measured distance system exists within a single dataset, each t
 3+| status 2+| (STATUS) 3+|
 1: permanent +
 2: occasional +
-5: periodic/intermittent
+5: periodic/intermittent +
 6: reserved +
 8: private +
 9: mandatory +
@@ -279,7 +279,7 @@ Where the entire measured distance system exists within a single dataset, each t
 3+| traffic flow 2+| (TRAFIC) 3+|
 1: inbound +
 2: outbound +
-3: one-way
+3: one-way +
 4: two-way | EN | 1,1
 3+| vertical uncertainty
 2+| _(SOUACC)_
@@ -379,7 +379,7 @@ image::figure-15-5.png[580,299]
 [cols="10",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *RANGE SYSTEM*. Two or more features in the same horizontal direction, particularly those features so placed as navigational aids to mark any line of importance to vessels, as a channel. The one nearest the observer is the front mark and the one farthest from the observer is the rear mark. (Adapted from IHO Dictionary -- S-32).
-10+| *[underline]#S-101 Geo Feature:#* *Range System* __**(C_AGGR)**__
+10+| *[underline]#S-101 Geo Feature:#* *Range System* *_(C_AGGR)_*
 10+| *[underline]#Primitives:#* *Curve, Surface, None*
 
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
@@ -453,7 +453,7 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_15.6.1]]
 ==== Range systems (see S4 -- B-433)
 
-If it is required to encode leading, clearing and transit lines and recommended tracks, it must be done using the features *Navigation Line* and *Recommended Track* (see <<sec_15.4;and!sec_15.5>>), and related point navigational aids features (see Sections 18-21). This applies for visual and radio navigational aids.
+If it is required to encode leading, clearing and transit lines and recommended tracks, it must be done using the features *Navigation Line* and *Recommended Track* (see <<sec_15.4;and!sec_15.5>>), and related point navigational aids features (see <<sec_18;to!sec_21>>). This applies for visual and radio navigational aids.
 
 To encode a range system, the features *Navigation Line*, *Recommended Route Centreline*, *Recommended Track* and the navigational aids features should be associated with the feature *Range System* using the association *Range System Aggregation* (see <<sec_25.13>>).
 
@@ -536,7 +536,7 @@ That part of a river, harbour and so on, where the main navigable channel for ve
 20: drilling prohibited +
 21: drilling restricted +
 22: removal of historical artefacts prohibited +
-23: cargo transhipment (lightening) prohibited
+23: cargo transhipment (lightening) prohibited +
 24: dragging prohibited +
 25: stopping prohibited +
 27: speed restricted +
@@ -551,7 +551,7 @@ That part of a river, harbour and so on, where the main navigable channel for ve
 3+| traffic flow 2+| (TRAFIC) 3+|
 1: inbound +
 2: outbound +
-3: one-way
+3: one-way +
 4: two-way | EN | 0,1
 3+| vertical uncertainty
 2+| _(SOUACC)_
@@ -625,7 +625,7 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [underline]#INT 1 Reference:# M 18
 
 [[sec_15.7.1]]
-==== Fairways (see S-4 -- B-432.1(c) and B-434.5)
+==== Fairways (see S-4 -- B-432.1\(c) and B-434.5)
 
 A fairway, sometimes called Ship Channel, is the main navigable channel in the approaches to, or within, a river or harbour. Fairways which are designated by a regulatory authority are treated as Routeing Measures.
 
@@ -650,7 +650,7 @@ If it is required to encode a fairway, it must be done using the feature *Fairwa
 10+| [underline]#IHO Definition:# *FAIRWAY SYSTEM*.
 
 That part of a river, harbour and so on, where the main navigable channel for vessels of larger size lies. It is also the usual course followed by vessels entering or leaving harbours, called "ship channel". (International Maritime Dictionary, 2^nd^ Edition) fairway system is an aggregation of connected fairway features making up a complex fairway system.
-10+| *[underline]#S-101 Geo Feature:#* *Fairway System* __**(C_AGGR)**__
+10+| *[underline]#S-101 Geo Feature:#* *Fairway System* (*_C_AGGR_*)
 10+| *[underline]#Primitives:#* *Surface, None*
 
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
@@ -800,7 +800,7 @@ A fairway system is composed of two or more *Fairway* features that comprise a c
 6: least depth known | EN | 0,*
 3+| status 2+| (STATUS) 3+|
 1: permanent +
-5: periodic/intermittent
+5: periodic/intermittent +
 6: reserved +
 9: mandatory | EN | 0,*
 3+| technique of vertical measurement 2+| (TECSOU) 3+|
@@ -816,7 +816,7 @@ A fairway system is composed of two or more *Fairway* features that comprise a c
 3+| traffic flow 2+| (TRAFIC) 3+|
 1: inbound +
 2: outbound +
-3: one-way
+3: one-way +
 4: two-way | EN | 0,1
 3+| vertical uncertainty
 2+| _(SOUACC)_
@@ -942,7 +942,7 @@ If it is required to encode the centreline of a recommended route, it must be do
 3+| traffic flow 2+| (TRAFIC) 3+|
 1: inbound +
 2: outbound +
-3: one-way
+3: one-way +
 4: two-way | EN | 1,1
 3+| vertical uncertainty
 2+| _(SOUACC)_
@@ -1253,7 +1253,7 @@ The feature *Recommended Traffic Lane Part* must be used, where required, to enc
 3+| traffic flow 2+| (TRAFIC) 3+|
 1: inbound +
 2: outbound +
-3: one-way
+3: one-way +
 4: two-way | EN | 1,1
 3+| vertical uncertainty
 2+| _(SOUACC)_
@@ -1395,7 +1395,7 @@ If it is required to encode the centreline of a Deep Water route, the width of w
 20: drilling prohibited +
 21: drilling restricted +
 22: removal of historical artefacts prohibited +
-23: cargo transhipment (lightening) prohibited
+23: cargo transhipment (lightening) prohibited +
 24: dragging prohibited +
 25: stopping prohibited +
 27: speed restricted | EN | 0,*
@@ -1419,7 +1419,7 @@ If it is required to encode the centreline of a Deep Water route, the width of w
 3+| traffic flow 2+| (TRAFIC) 3+|
 1: inbound +
 2: outbound +
-3: one-way
+3: one-way +
 4: two-way | EN | 1,1
 3+| vertical uncertainty
 2+| _(SOUACC)_
@@ -1519,7 +1519,7 @@ If it is required to encode these areas, this must be done using the feature *De
 [cols="10",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *DEEP WATER ROUTE*. A route within defined limits which has been accurately surveyed for clearance of sea bottom and submerged obstacles as indicated on the chart. (IMO Ships' Routeing).
-10+| *[underline]#S-101 Geo Feature:#* *Deep Water Route* __**(C_AGGR)**__
+10+| *[underline]#S-101 Geo Feature:#* *Deep Water Route* *_(C_AGGR)_*
 10+| *[underline]#Primitives:#* *Surface, None*
 
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
@@ -1644,7 +1644,7 @@ If it is required to define a complete Deep Water route (DW) system, the feature
 20: drilling prohibited +
 21: drilling restricted +
 22: removal of historical artefacts prohibited +
-23: cargo transhipment (lightening) prohibited
+23: cargo transhipment (lightening) prohibited +
 24: dragging prohibited +
 25: stopping prohibited +
 27: speed restricted | EN | 0,*
@@ -1780,7 +1780,7 @@ The feature *Inshore Traffic Zone* must only be used to encode the designated ar
 20: drilling prohibited +
 21: drilling restricted +
 22: removal of historical artefacts prohibited +
-23: cargo transhipment (lightening) prohibited
+23: cargo transhipment (lightening) prohibited +
 24: dragging prohibited +
 25: stopping prohibited +
 27: speed restricted | EN | 0,*
@@ -1904,7 +1904,7 @@ Precautionary areas are commonly designated by IMO for certain areas of convergi
 20: drilling prohibited +
 21: drilling restricted +
 22: removal of historical artefacts prohibited +
-23: cargo transhipment (lightening) prohibited
+23: cargo transhipment (lightening) prohibited +
 24: dragging prohibited +
 25: stopping prohibited +
 27: speed restricted | EN | 0,*
@@ -2173,7 +2173,7 @@ The feature *Traffic Separation Scheme Boundary* must only be used to encode the
 20: drilling prohibited +
 21: drilling restricted +
 22: removal of historical artefacts prohibited +
-23: cargo transhipment (lightening) prohibited
+23: cargo transhipment (lightening) prohibited +
 24: dragging prohibited +
 25: stopping prohibited +
 27: speed restricted | EN | 0,*
@@ -2292,7 +2292,7 @@ The feature *Traffic Separation Scheme Crossing* must only be used to encode the
 20: drilling prohibited +
 21: drilling restricted +
 22: removal of historical artefacts prohibited +
-23: cargo transhipment (lightening) prohibited
+23: cargo transhipment (lightening) prohibited +
 24: dragging prohibited +
 25: stopping prohibited +
 27: speed restricted | EN | 0,*
@@ -2429,7 +2429,7 @@ The feature *Traffic Separation Scheme Roundabout* must only be used to encode t
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
-| The Collection 3+| *Traffic Separation Scheme Aggregation* (see <<sec_25.18>>) 3+| *Deep Water Route*, *Deep Water Route Centreline*, *Deep Water Route Part*, *Inshore Traffic Zone*, *Precautionary Area*, __**Restricted Area**__, *Separation Zone or Line*, *Traffic Separation Scheme*, *Traffic Separation Scheme Boundary*, *Traffic Separation Scheme Crossing*, *Traffic Separation Scheme Lane Part*, *Traffic Separation Scheme Roundabout*, *Two-Way Route*, *Two-Way Route Part* 2+| Aggregation | 0,1
+| The Collection 3+| *Traffic Separation Scheme Aggregation* (see <<sec_25.18>>) 3+| *Deep Water Route*, *Deep Water Route Centreline*, *Deep Water Route Part*, *Inshore Traffic Zone*, *Precautionary Area*, *_Restricted Area_*, *Separation Zone or Line*, *Traffic Separation Scheme*, *Traffic Separation Scheme Boundary*, *Traffic Separation Scheme Crossing*, *Traffic Separation Scheme Lane Part*, *Traffic Separation Scheme Roundabout*, *Two-Way Route*, *Two-Way Route Part* 2+| Aggregation | 0,1
 | The Component 3+| *Traffic Separation Scheme Aggregation* (see <<sec_25.18>>) 3+| *Traffic Separation Scheme* 2+| Association | 0,*
 | The Collection 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Building*, *Bridge*, *Cardinal Beacon*, *Cardinal Buoy*, *Conveyor*, *Crane*, *Daymark*, *Dolphin*, *Emergency Wreck Marking Buoy*, *Fishing Facility*, *Floating Dock*, *Fortified Structure*, *Hulk*, *Isolated Danger Beacon*, *Isolated Danger Buoy*, *Landmark*, *Lateral Beacon*, *Lateral Buoy*, *Light Float*, *Light Vessel*, *Mooring Buoy*, *Offshore Platform*, *Pile*, *Pipeline Overhead*, *Pontoon*, *Pylon/Bridge Support*, *Safe Water Beacon*, *Safe Water Buoy*, *Shoreline Construction*, *Silo/Tank*, *Span Fixed*, *Span Opening*, *Special Purpose/General Beacon*, *Special Purpose/General Buoy*, *Structure Over Navigable Water*, *Wind Turbine* 2+| Aggregation | 0,1
 | The Component 3+| *Caution Area Association* (see <<sec_25.5>>) 3+| *Caution Area* 2+| Association | 0,*
@@ -2667,7 +2667,7 @@ The axis lineof an Archipelagic Sea lane (ASL) is encoded in ENCs only for the p
 [cols="10",options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *ARCHIPELAGIC SEA LANE*. Sea lanes designated by an archipelagic State for the passage of ships and aircraft. The Archipelagic Sea Lane aggregates all component parts of an Archipelagic Sea Lane system. (Adapted from IHO Dictionary -- S-32).
-10+| *[underline]#S-101 Geo Feature:#* *Archipelagic Sea Lane* __**(C_AGGR)**__
+10+| *[underline]#S-101 Geo Feature:#* *Archipelagic Sea Lane* *_(C_AGGR)_*
 10+| *[underline]#Primitives:#* *Surface, None*
 
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
@@ -2803,14 +2803,14 @@ To define the complete Archipelagic Sea Lane (ASL) system, the features *Archipe
 1: permanent +
 3: recommended +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 6: reserved +
 7: temporary +
 9: mandatory | EN | 0,*
 3+| traffic flow 2+| (TRAFIC) 3+|
 1: inbound +
 2: outbound +
-3: one-way
+3: one-way +
 4: two-way | EN | 1,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
@@ -2918,7 +2918,7 @@ If it is required to encode a radio reporting point or line, it must be done usi
 1: permanent +
 2: occasional +
 4: not in use +
-5: periodic/intermittent
+5: periodic/intermittent +
 6: reserved +
 7: temporary +
 8: private +

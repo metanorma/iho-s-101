@@ -57,7 +57,7 @@ If it is required to encode cuttings and embankments, this must be done in the s
 3+| category of coastline 2+| (CATCOA) 3+|
 1: steep coast +
 2: flat coast +
-6: glacier, seaward end
+6: glacier, seaward end +
 7: mangrove +
 8: marshy shore +
 10: ice coast | EN | 0,1
@@ -281,7 +281,7 @@ A point feature must be encoded using:
 [cols="10", options="unnumbered"]
 |===
 10+| [underline]#IHO Definition:# *ISLAND GROUP*. A named group of islands, including archipelagos.
-10+| *[underline]#S-101 Geo Feature:#* *Island Group* __**(C_AGGR)**__
+10+| *[underline]#S-101 Geo Feature:#* *Island Group* *_(C_AGGR)_*
 10+| *[underline]#Primitives:#* *Surface, None*
 
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
@@ -772,7 +772,7 @@ If it is required to encode a non-navigable lake, it must be done using the feat
 7: canyon lands +
 8: paddy field +
 9: agricultural land +
-10: savanna/grassland
+10: savanna/grassland +
 11: parkland +
 12: swamp +
 13: landslide +
@@ -783,8 +783,8 @@ If it is required to encode a non-navigable lake, it must be done using the feat
 18: cave +
 19: rock column or pinnacle +
 20: cay +
-21: wadi | EN | 0,\* footnoteblock:[five_eleven]
-3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,\* footnoteblock:[five_eleven]
+21: wadi | EN | 0,* footnoteblock:[five_eleven]
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,* footnoteblock:[five_eleven]
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
@@ -904,7 +904,7 @@ If the seaward edge of an encoded lava flow area is coincident with the coastlin
 3: bush +
 4: deciduous wood +
 5: coniferous wood +
-6: wood in general (inc. mixed wood)
+6: wood in general (inc. mixed wood) +
 11: reed +
 13: tree in general +
 14: evergreen tree +
@@ -1041,7 +1041,7 @@ If it is required to encode an isolated tree used as a landmark, it must be done
 
 3+| status 2+| (STATUS) 3+|
 1: permanent +
-5: periodic/intermittent
+5: periodic/intermittent +
 18: existence doubtful | EN | 0,*
 3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
 
