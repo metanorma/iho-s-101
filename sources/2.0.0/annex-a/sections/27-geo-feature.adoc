@@ -8553,7 +8553,11 @@ Speed minimum is the minimum rate of travel that can occur. (Adapted from S-57 E
 
 [underline]#Maximum range:# 200
 
-[underline]#Range closure:# Closed interval (stem:["minimum" <= bb "stream depth" <= "maximum"])Examples:*0* for surface tidal stream data**15** for tidal stream data collected at a depth of 15 metres
+[underline]#Range closure:# Closed interval (stem:["minimum" <= bb "stream depth" <= "maximum"])
+
+[underline]#Examples:#::
+*0*::: for surface tidal stream data
+*15*::: for tidal stream data collected at a depth of 15 metres
 
 [underline]#Remarks:#
 
@@ -9407,7 +9411,11 @@ Cones are commonly used as International Association of Lighthouse Authorities -
 
 [underline]#Maximum range:# 12500
 
-[underline]#Range closure:# Open interval (stem:["minimum" < bb "value of sounding" < "maximum"])Examples:*18.2* for a sounding of 18∙2 metres**-2.4** for a drying height of 2∙4 metres
+[underline]#Range closure:# Open interval (stem:["minimum" < bb "value of sounding" < "maximum"])
+
+[underline]#Examples:#::
+*18.2*::: for a sounding of 18∙2 metres
+*-2.4*::: for a drying height of 2∙4 metres
 
 [underline]#Remarks:#
 

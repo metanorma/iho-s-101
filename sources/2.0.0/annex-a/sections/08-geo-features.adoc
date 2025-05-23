@@ -2113,7 +2113,7 @@ For encoded gates that are navigable at the optimum display scale of the ENC dat
 
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-The sub-attribute *vertical clearance**value* for the complex attribute *vertical clearance open* is mandatory if the sub-attribute *vertical clearance unlimited* is set to _False_.
+The sub-attribute *vertical clearance value* for the complex attribute *vertical clearance open* is mandatory if the sub-attribute *vertical clearance unlimited* is set to _False_.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
 --

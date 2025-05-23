@@ -48,7 +48,7 @@ h| Rhythms of lights h| Q h| Q(3) h| VQ h| VQ(3) h| UQ h| IUQ
 
 |===
 
-Some lights recently constructed may appear to the Mariner as "fixed and flashing - FFL" by night, while the real-world feature actually comprises two separate lights vertically disposed, one fixed and the other flashing (F&Fl). When it is known that two separate features actually exist, they must be encoded as separate light features, in this case two *Light All Around* features, one with complex attribute *rhythm of light*, sub-attribute stem:[bb "light characteristic" = 1] (fixed) and the other with stem:[bb "light characteristic" = 2] (flashing), and not as one *Light**All Around* with stem:[bb "light characteristic" = 13] (fixed/flash).
+Some lights recently constructed may appear to the Mariner as "fixed and flashing - FFL" by night, while the real-world feature actually comprises two separate lights vertically disposed, one fixed and the other flashing (F&Fl). When it is known that two separate features actually exist, they must be encoded as separate light features, in this case two *Light All Around* features, one with complex attribute *rhythm of light*, sub-attribute stem:[bb "light characteristic" = 1] (fixed) and the other with stem:[bb "light characteristic" = 2] (flashing), and not as one *Light All Around* with stem:[bb "light characteristic" = 13] (fixed/flash).
 
 [[sec_19.1.2]]
 ==== Types and functions of lights (see S-4 -- B-471.1)
