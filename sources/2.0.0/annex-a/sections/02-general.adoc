@@ -222,7 +222,7 @@ BO:: Boolean: A value representing binary logic. The value can be either (1) _Tr
 RE:: Real: A signed Real (floating point) number consisting of a mantissa and an exponent. The representation of a real is encapsulation and usage dependent.
 +
 --
-In S-100, "precision", as it applies to the IHO GI Registry and the S-101 Feature Catalogue, is defined as a non-negative integer expressing the constraint of the exponent of a real number (that is, "1" means the real number is constrained to a precision of 0.1; "2" means the real number is constrained to a precision of 0.01; etc) (S-100 Part 2a, <<sec_2>>a-4.2.10). For the attribute descriptions included in <<sec_27;and!28;and!sec_30>> of this document, the values quoted for precision are expressed in more "human-readable" terms as the exponent of the real type attribute (0.1, 0.01, 0.001, …).
+In S-100, "precision", as it applies to the IHO GI Registry and the S-101 Feature Catalogue, is defined as a non-negative integer expressing the constraint of the exponent of a real number (that is, "1" means the real number is constrained to a precision of 0.1; "2" means the real number is constrained to a precision of 0.01; etc) (S-100 Part 2a, <<sec_2>>a-4.2.10). For the attribute descriptions included in <<sec_27;and!sec_28;and!sec_30>> of this document, the values quoted for precision are expressed in more "human-readable" terms as the exponent of the real type attribute (0.1, 0.01, 0.001, …).
 
 Examples: 23.501, -0.0001234, -23.0, 3.141296
 --
