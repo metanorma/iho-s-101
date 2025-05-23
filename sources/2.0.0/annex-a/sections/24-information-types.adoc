@@ -1,0 +1,402 @@
+
+[[sec_24]]
+== Information types
+
+[[sec_24.1]]
+=== Contact details
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *CONTACT DETAILS*.
+
+Information on how to reach a person or organisation by postal, internet, telephone, telex and radio systems.
+10+| *S-101 Information Type:* *Contact Details*
+10+| *[underline]#Primitives:#* *None*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| call sign 2+| (CALSGN) 3+| | TE | 0,1
+
+3+| communication channel 2+| (COMCHA) 3+| | TE | 0,*
+
+3+| contact instructions 2+| _(INFORM)_ 3+| | TE | 0,1
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnote:twentyfour_one[For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnote:twentyfour_one[]
+
+3+| frequency pair
+2+| 3+| | C | 0,*
+
+3+| frequency shore station receives 2+| 3+| | (S) IN | 0,1
+
+3+| frequency shore station transmits 2+| (SIGFRQ) 3+| | (S) IN | 0,1
+
+3+| MMSI code 2+| 3+| Unique 9 digit code | TE | 0,1
+
+3+| online resource
+2+| 3+| | C | 0,*
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| linkage 2+| 3+| ISO 19115:2014 | (S) URI | 1,1
+
+3+| name of resource 2+| 3+| ISO 19115:2014 | (S) TE | 0,1
+
+3+| telecommunications
+2+| 3+| | C | 0,*
+
+3+| contact instructions 2+| 3+| | (S) TE | 0,1
+
+3+| telecommunication identifier 2+| 3+| | (S) TE | 1,1
+
+3+| telecommunication service
+2+| 3+|
+1: voice +
+2: facsimile +
+3: SMS +
+4: data +
+5: streamed data +
+6: telex +
+7: telegraph +
+8: email | (S) EN
+| 0,1
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Information 3+| *Additional Information* (see <<sec_25.1>>). 3+| See next row 2+| Association | 0,1
+10+| [underline]#*Associated to:*# *Administration Area*, *Airport/Airfield*, *Anchor Berth*, *Anchorage Area*, *Berth*, *Bridge*, *Building*, *Cable Area*, *Cable Overhead*, *Cable Submarine*, *Cardinal Beacon*, *Cardinal Buoy*, *Checkpoint*, *Coast Guard Station*, *Conveyor*, *Crane*, *Daymark*, *Dock Area*, *Dolphin*, *Dry Dock*, *Emergency Wreck Marking Buoy*, *Fishing Facility*, *Floating Dock*, *Fog Signal*, *Gate*, **Harbour Area (Administrative)**, *Harbour Facility*, *Helipad*, *Installation Buoy*, *Isolated Danger Beacon*, *Isolated Danger Buoy*, *Landmark*, *Land Region*, *Lateral Beacon*, *Lateral Buoy*, *Light All Around*, *Light Float*, *Light Sectored*, *Light Vessel*, *Lock Basin*, *Marine Farm/Culture*, *Mooring Area*, *Mooring Buoy*, *Mooring Trot*, *Mooring Buoy*, *Offshore Platform*, *Offshore Production Area*, *Pilot Boarding Place*, *Pilotage District*, *Pipeline Overhead*, *Pipeline Submarine/On Land*, *Production/Storage Area*, *Radar Range*, *Radar Station*, *Radio Calling-In Point*, *Radio Station*, *Railway*, *Rescue Station*, *Runway*, *Safe Water Beacon*, *Safe Water Buoy*, *Seaplane Landing Area*, *Signal Station Traffic*, *Signal Station Warning*, *Silo/Tank*, *Small Craft Facility*, *Span Fixed*, *Span Opening*,*Special Purpose/General Beacon*, *Special Purpose/General Buoy*, *Submarine Pipeline Area*, *Tunnel*, *Vessel Traffic Service Area*, *Wind Turbine*
+
+|===
+
+[underline]#INT 1 Reference:#
+
+[[sec_24.1.1]]
+==== Contact details
+
+If it is required to encode the contact information (communication channel, call sign, radio frequency etc.), it must be done using the information type *Contact Details*. Each instance of *Contact Details* must be associated to the feature(s) to which the information applies using the association *Additional Information* (see <<sec_25.1>>).
+
+[underline]#Remarks:#
+
+* The frequency at which vessels receive signals must be populated, where required, using complex attribute *frequency pair*, sub-attribute *frequency shore station transmits*. The frequency at which vessels send signals to shore must be populated, where required, using complex attribute *frequency pair*, sub-attribute *frequency shore station receives*.
+* Where required, the values populated within the complex attribute *frequency pair* must be quoted in Hertz, for example a signal frequency of 950 MHz must be encoded as _950000000_.
+
+[underline]#Distinction:# Nautical Information.
+
+[[sec_24.2]]
+=== Service hours
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *SERVICE HOURS*. The time when a service is available and known exceptions.
+10+| *S-101 Information Type:* *Service Hours*
+10+| *[underline]#Primitives:#* *None*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twentyfour_two]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twentyfour_two]
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| schedule by day of week
+2+| 3+| | C | 1,*
+
+3+| category of schedule
+2+| 3+|
+1: normal operation +
+2: closure +
+3: unmanned operation | (S) EN
+| 0,1
+
+3+| time intervals by day of week 2+| 3+| | (S) C | 1,*
+
+3+| day of week
+2+| 3+|
+1: Sunday +
+2: Monday +
+3: Tuesday +
+4: Wednesday +
+5: Thursday +
+6: Friday +
+7: Saturday | (S) EN
+| 0,7 (ordered) footnoteblock:[twentyfour_two]
+
+3+| day of week is range 2+| 3+| | (S) BO | 0,1
+
+3+| time of day end 2+| 3+| | (S) TI | 0,* (ordered) footnoteblock:[twentyfour_two]
+
+3+| time of day start 2+| 3+| | (S) TI | 0,* (ordered) footnoteblock:[twentyfour_two]
+
+3+| information
+2+| 3+| | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twentyfour_two]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twentyfour_two]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Information 3+| *Additional Information* (see <<sec_25.1>>). 3+| See next row 2+| Association | 0,1
+10+| [underline]#*Associated to:*# *Airport/Airfield*, *Anchor Berth*, *Anchorage Area*, *Berth*, *Bridge*, *Building*, *Checkpoint*, *Coast Guard Station*, *Conveyor*, *Crane*, *Dock Area*, *Dry Dock*, *Floating Dock*, *Gate*, *Helipad*, *Landmark*, *Lock Basin*, *Mooring Area*, *Production/Storage Area*, *Radio Calling-In Point*, *Runway*, *Seaplane Landing Area*, *Span Fixed*, *Span Opening*
+
+|===
+
+[[twentyfour_two]]
+[NOTE]
+--
+For each instance of *time intervals by day of week*, at least one of the sub-attributes *day of week*, *time of day start* or *time of day end* must be populated. Where populated, the number of instances of *time of day start* must be the same as the number of instances of *time of day end*.
+
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:#
+
+[[sec_24.2.1]]
+==== Service hours
+
+If it is required to encode the time schedules for the operation of a service (for instance the opening and closing times for the opening spans of a bridge), it must be done using the information type *Service Hours*. Each instance of *Service Hours* must be associated to the feature(s) to which the information applies using the association *Additional Information* (see <<sec_25.1>>).
+
+[underline]#Remarks:#
+
+* The complex attribute *time intervals by day of week*, sub-attribute *day of week is range* indicates whether an instance of *time intervals by day of week* encodes a range of days or discrete days. The day(s) or day range(s) are encoded using sub-attribute *day of week*. Where *day of week is range* is populated as _True_, there must be exactly two instances of the attribute *day of week*. If *day of week* is not populated, this indicates that the same schedule applies every day (Monday through Sunday). Multiple ranges or mixing range with discrete days(s) is not allowed (if this is required another instance of *time intervals by day of week* must be encoded). See <<sec_2.4.9>>.
+* Overlapping intervals bound to the same feature using the association *Additional Information* are not permitted.
+* The complex attributes *fixed date range* and *periodic date range*, when populated for *Service Hours*, apply only to *Service Hours* and not to any feature that it may be associated with.
+
+[underline]#Distinction:# Nautical Information; Non-Standard Working Day.
+
+[[sec_24.3]]
+=== Non-standard working day
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *NON-STANDARD WORKING DAY*. Days when many services are not available. Often days of festivity or recreation or public holidays when normal working hours are limited, especially a national or religious festival, etc. (S-127 Edition 1.0.0).
+10+| *S-101 Information Type:* *Non-Standard Working Day*
+10+| *[underline]#Primitives:#* *None*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| date fixed 2+| 3+| See <<sec_2.4.8>> | TD | 0,* footnoteblock:[twentyfour_three]
+
+3+| date variable 2+| 3+| | TE | 0,* footnoteblock:[twentyfour_three]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twentyfour_three]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twentyfour_three]
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| information
+2+| 3+| | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twentyfour_three]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twentyfour_three]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Information 3+| *Additional Information* (see <<sec_25.1>>). 3+| See next row 2+| Association | 0,1
+10+| [underline]#*Associated to:*# *Airport/Airfield*, *Anchor Berth*, *Anchorage Area*, *Berth*, *Bridge*, *Building*, *Checkpoint*, *Coast Guard Station*, *Conveyor*, *Crane*, *Dock Area*, *Dry Dock*, *Floating Dock*, *Gate*, *Helipad*, *Landmark*, *Lock Basin*, *Mooring Area*, *Production/Storage Area*, *Radio Calling-In Point*, *Runway*, *Seaplane Landing Area*, *Span Fixed*, *Span Opening*
+
+|===
+
+[[twentyfour_three]]
+[NOTE]
+--
+At least one of the attributes *date fixed* or *date variable* must be populated.
+
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:#
+
+[[sec_24.3.1]]
+==== Non-standard working days
+
+If it is required to encode the date(s) when an event, festival or national holiday occurs each year, it must be done using the information type *Non-Standard Working Day*. Each instance of *Non-Standard Working Day* must be associated to the feature(s) to which the information applies using the association *Additional Information* (see <<sec_25.1>>).
+
+[underline]#Remarks:#
+
+* The attribute *date fixed* encodes the date when a festival or national holiday recurs on the same day each year in the Gregorian calendar.
+* The complex *date variable* encodes a day which is not fixed in the Gregorian calendar, for instance "the fourth Thursday in November"; "Easter Sunday".
+* The complex attributes *fixed date range* and *periodic date range*, when populated for *Non-Standard Working Day*, apply only to *Non-Standard Working Day* and not to any feature that it may be associated with.
+* The complex attribute *information* (see <<sec_2.4.6>>) is used to encode any special conditions or regulations that exist in relation to the date/day populated.
+
+[underline]#Distinction:# Nautical Information; Service Hours.
+
+[[sec_24.4]]
+=== Nautical information
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *NAUTICAL INFORMATION*. Nautical information about a related area or facility.
+10+| *S-101 Information Type:* *Nautical Information*
+10+| *[underline]#Primitives:#* *None*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twentyfour_four]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twentyfour_four]
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,* footnoteblock:[twentyfour_four]
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twentyfour_four]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twentyfour_four]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1 footnoteblock:[twentyfour_four]
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Information 3+| *Additional Information* (see <<sec_25.1>>). 3+| See next row 2+| Association | 0,1
+10+| [underline]#*Associated to:*# *Administration Area*, *Airport/Airfield*, *Anchor Berth*, *Anchorage Area*, *Archipelagic Sea Lane*, *Archipelagic Sea Lane Area*, *Archipelagic Sea Lane Axis*, *Berth*, *Bollard*, *Bridge*, *Building*, *Built-Up Area*, *Cable Area*, *Cable Overhead*, *Cable Submarine*, *Canal*, *Cardinal Beacon*, *Cardinal Buoy*, *Cargo Transhipment Area*, *Causeway*, *Caution Area*, *Checkpoint*, *Coastline*, *Coast Guard Station*, *Collision Regulations Limit*, *Contiguous Zone*, *Continental Shelf Area*, *Conveyor*, *Crane*, *Current -- Non-Gravitational*, *Custom Zone*, *Dam*, *Daymark*, *Deep Water Route*, *Deep Water Route Centreline*, *Deep Water Route Part*, *Depth Area*, *Depth Contour*, *Depth -- No Bottom Found*, *Discoloured Water*, *Distance Mark*, *Dock Area*, *Dolphin*, *Dredged Area*, *Dry Dock*, *Dumping Ground*, *Dyke*, *Emergency Wreck Marking Buoy*, *Exclusive Economic Zone*, *Fairway*, *Fairway System*, *Fence/Wall*, *Ferry Route*, *Fishery Zone*, *Fishing Facility*, *Fishing Ground*, *Floating Dock*, *Fog Signal*, *Fortified Structure*, *Foul Ground*, *Free Port Area*, *Gate*, *Gridiron*, *Harbour Area (Administrative)*, *Harbour Facility*, *Helipad*, *Hulk*, *Ice Area*, *Information Area*, *Inshore Traffic Zone*, *Installation Buoy*, *Island Group*, *Isolated Danger Beacon*, *Isolated Danger Buoy*, *Lake*, *Land Area*, *Land Elevation*, *Landmark*, *Land Region*, *Lateral Beacon*, *Lateral Buoy*, *Light Air Obstruction*, *Light All Around*, *Light Float*, *Light Fog Detector*, *Light Sectored*, *Light Vessel*, *Local Magnetic Anomaly*, *Lock Basin*, *Log Pond*, *Magnetic Variation*, *Marine Farm/Culture*, *Marine Pollution Regulations Area*, *Military Practice Area*, *Mooring Area*, *Mooring Buoy*, *Mooring Trot*, *Mooring Buoy*, *Navigation Line*, *Obstruction*, *Offshore Platform*, *Offshore Production Area*, *Oil Barrier*, *Physical AIS Aid to Navigation*, *Pile*, *Pilotage District*, *Pilot Boarding Place*, *Pipeline Overhead*, *Pipeline Submarine/On Land*, *Pontoon*, *Precautionary Area*, *Production/Storage Area*, *Pylon/Bridge Support*, *Radar Line*, *Radar Range*, *Radar Reflector*, *Radar Station*, *Radar Transponder Beacon*, *Radio Calling-In Point*, *Radio Station*, *Railway*, *Range System*, *Rapids*, *Recommended Route Centreline*, *Recommended Track*, *Recommended Traffic Lane Part*, *Rescue Station*, *Restricted Area*, *Retroreflector*, *River*, *Road*, *Runway*, *Safe Water Beacon*, *Safe Water Buoy*, *Sandwave*, *Sea Area/Named Water Area*, *Seabed Area*, *Seagrass*, *Seaplane Landing Area*, *Shoreline Construction*, *Signal Station Traffic*, *Signal Station Warning*, *Silo/Tank*, *Slope Topline*, *Sloping Ground*, *Small Craft Facility*, *Sounding*, *Span Fixed*, *Span Opening*,*Special Purpose/General Beacon*, *Special Purpose/General Buoy*, *Spring*, *Straight Territorial Sea Baseline*, *Structure Over Navigable Water*, *Submarine Pipeline Area*, *Submarine Transit Lane*, *Swept Area*, *Territorial Sea Area*, *Tidal Stream Panel Data*, *Tidal Stream -- Flood/Ebb*, *Tideway*, *Separation Zone or Line*, *Traffic Separation Scheme*, *Traffic Separation Scheme Boundary*, *Traffic Separation Scheme Crossing*, *Traffic Separation Scheme Lane Part*, *Traffic Separation Scheme Roundabout*, *Tunnel*, *Two-Way Route*, *Two-Way Route Part*, *Underwater/Awash Rock*, *Unsurveyed Area*, *Vegetation*, *Vessel Traffic Service Area*, *Virtual AIS Aid to Navigation*, *Water Turbulence*, *Waterfall*, *Weed/Kelp*, *Wind Turbine*, *Wreck*
+
+|===
+
+[[twentyfour_four]]
+[NOTE]
+--
+At least one of the attributes *information* or *pictorial representation* must be populated.
+
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:#
+
+[[sec_24.4.1]]
+==== Nautical information
+
+If it is required to encode identical information associated with multiple geo features which cannot be encoded using the descriptive attributes on those features, it should be done using the information type *Nautical Information*. Each instance of *Nautical Information* must be associated to the feature(s) to which the information applies using the association *Additional Information* (see <<sec_25.1>>).
+
+[underline]#Remarks:#
+
+* Within a dataset, individual instances of information associated with a geo feature which cannot be encoded using the descriptive attributes on the feature should be encoded using the attributes *information* or *pictorial representation* on the feature itself, not using *Nautical Information*. However where this information is shared between features contained in a single dataset, or included in multiple datasets within the ENC portfolio, *Nautical Information* may be used.
+* *Nautical Information* must not be used to include a reference to a picture file (attribute *pictorial representation*) to a feature that does not itself include *pictorial representation* as an allowable attribute.
+* The complex attributes *fixed date range* and *periodic date range*, when populated for *Nautical Information*, apply only to *Nautical Information* and not to any feature that it may be associated with.
+
+[underline]#Distinction:# Information Area; Update Information.
+
+[[sec_24.5]]
+=== Spatial quality
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *SPATIAL QUALITY*. The indication of the quality of the locational information for features in a dataset.
+10+| *S-101 Information Type:* *Spatial Quality*
+10+| *[underline]#Primitives:#* *None*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| quality of horizontal measurement 2+| (QUAPOS) 3+|
+4: approximate | EN | 0,1 footnoteblock:[twentyfour_five]
+3+| spatial accuracy
+2+| 3+| | C | 0,* footnoteblock:[twentyfour_five]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | (S) C | 0,1 footnoteblock:[twentyfour_five]
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twentyfour_five]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twentyfour_five]
+
+3+| horizontal position uncertainty 2+| _(POSACC)_ 3+| | (S) C | 0,1
+
+3+| uncertainty fixed 2+| 3+| | (S) RE | 1,1
+
+3+| uncertainty variable factor 2+| 3+| | (S) RE | 0,1
+
+3+| vertical uncertainty 2+| _(SOUACC)_ 3+| | (S) C | 0,1
+
+3+| uncertainty fixed 2+| 3+| | (S) RE | 1,1
+
+3+| uncertainty variable factor 2+| 3+| | (S) RE | 0,1
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Quality Information 3+| *Quality of Bathymetric Data Composition* (see <<sec_25.12>>) 3+| *Quality of Bathymetric Data* 2+| Association | 0,1
+| The Quality Information 3+| *Spatial Association* (see <<sec_25.15>>). 3+| Spatial types (see <<sec_2.4.7>>) 2+| Association | 0,1
+
+|===
+
+[[twentyfour_five]]
+[NOTE]
+--
+At least one of the attributes *quality of horizontal measurement* or *spatial accuracy* must be encoded.
+
+The sub-complex attribute *fixed date range* is mandatory if more than one instance of the complex attribute *spatial accuracy* is encoded.
+
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+--
+
+[underline]#INT 1 Reference:#
+
+[[sec_24.5.1]]
+==== Spatial quality
+
+Spatial attribute types must contain a referenced geometry and may be associated with spatial quality attributes. Each spatial attribute instance must be referenced by a feature instance or another spatial attribute instance. Spatial quality attributes are carried in the information type *Spatial Quality*. Only point, multipoint and curve geometry and the Meta feature *Quality of Bathymetric Data* can be associated with spatial quality. Currently no use case for associating surface geometry with spatial quality attributes is known, therefore this is prohibited. Vertical uncertainty is prohibited for curves as this dimension is not supported by curves. Each instance of *Spatial Quality* must be associated to the geometry to which the information applies using the association *Spatial Association* (see <<sec_25.15>>); or in the case of *Spatial Quality* associated with *Quality of Bathymetric Data*, using the association *Quality of Bathymetric Data Composition* (see <<sec_25.12>>).
+
+[underline]#Remarks:#
+
+* The sub-complex attributes *horizontal position uncertainty* and *vertical uncertainty* must be encoded using either *Spatial Quality* or the Meta feature *Quality of Bathymetric Data* (see <<sec_3.8>>) to provide the spatial accuracy components for provision of an overall indication of the quality of bathymetric data for an area. The decision as to which option to use should be based on whether the horizontal position and vertical uncertainty values are specific to a single *Quality of Bathymetric Data* feature or relate to multiple *Quality of Bathymetric Data* features. In general, specific values are related to areas of changeable bathymetry over time or varying bathymetric data quality in the water column (as shown in <<fig_3-2>> in <<sec_3.8.1>>); and common values are specific to general quality uncertainty values in non-changeable areas. It is prohibited to use both options for a single *Quality of Bathymetric Data* instance.
+* The complex attribute *spatial accuracy* is used to specify the vertical and horizontal position uncertainty, which may degrade in changeable areas over time. In order to provide the spatial accuracy components for provision of an overall indication of the quality of bathymetric data for an area, an instance of *Spatial Quality* may be associated with one or more instances of *Quality of Bathymetric Data* using the association *Quality of Bathymetric Data Composition* (see <<sec_3.8;and!sec_25.12>>); or encoded using the complex attribute *zone of confidence* on the *Quality of Bathymetric Data* itself. Where the attribute *category of temporal variation* for the associated *Quality of Bathymetric Data* is set to values _2_ (likely to change and significant shoaling expected) or _3_ (likely to change but significant shoaling not expected) and the spatial accuracy is encoded using *Spatial Quality*, multiple instances of *spatial accuracy* should be encoded to provide an indication of the degradation of the vertical and horizontal position accuracy of the charted bathymetric information over time. Where multiple instances of *spatial quality* are encoded, these must correspond to the number of instances and values (including the zone of confidence categories and date ranges) populated for the complex attribute *zone of confidence* on the associated *Quality of Bathymetric Data* feature.
+
+** The sub-complex attribute *fixed date range* is used, where required, to define the date range(s) where the spatial accuracy is degraded over time. Where multiple date ranges are specified, the attributes *date start* and *date end* for each instance of *fixed date range* must be equal to the corresponding instances of *zone of confidence* (*fixed date range*) for the associated *Quality of Bathymetric Data* feature (see <<sec_3.8>>).
+** The sub-complex attribute *vertical uncertainty*, where encoded, is used to specify the vertical uncertainty of the depths covered by the associated *Quality of Bathymetric Data* feature within a specified date range (where encoded); and should be adjusted to indicate the degradation of the vertical uncertainty over time where multiple instances of *zone of confidence* are encoded (see above). When *depth range minimum value* is specified for the associated *Quality of Bathymetric Data* feature, *vertical uncertainty* refers only to the uncertainty of the swept depth defined by *depth range minimum value*.
+** The sub-complex attribute *horizontal position uncertainty*, where encoded, is used to specify the positional uncertainty of the depths covered by the associated *Quality of Bathymetric Data* feature within a specified date range (where encoded); and should be adjusted to indicate the degradation of the horizontal position uncertainty over time where multiple instances of *zone of confidence* are encoded (see above).
+** The sub-attribute *quality of horizontal measurement* must not be populated for *Spatial Quality* associated to *Quality of Bathymetric Data*.
+* For the geometry associated with *Obstruction*, *Sounding*,*Underwater/Awash Rock* and *Wreck* features, an instance of *Spatial Quality* using the association *Spatial Association* (see <<sec_25.15>>) may be associated to indicate, where required, that the horizontal position and/or the vertical uncertainty for the associated feature is of different (higher or lower) accuracy than indicated by the underlying *Quality of Bathymetric Data* Meta feature. Where *Spatial Quality* is associated to *Obstruction*, *Underwater/Awash Rock* or *Wreck* and attribute *height* or *value of sounding* is populated with an empty (null) value, the value for the attribute *vertical uncertainty* (*uncertainty fixed*) on the associated *Spatial Quality*, where required, must also be populated as empty (null). See also <<sec_3.8.1.3>> (Sounding uncertainty).
+* The attribute *quality of horizontal measurement* may be used on *Spatial Quality* to provide an indication of lower accuracy quality of depth features, in addition to population of *horizontal position accuracy*, than the underlying *Quality of Bathymetric Data* indicates, however where this is done the *Spatial Quality* feature must not be associated to a *Quality of Bathymetric Data* feature.
+
+[underline]#Distinction:# Quality of Bathymetric Data; Quality of Non-Bathymetric Data; Quality of Survey.

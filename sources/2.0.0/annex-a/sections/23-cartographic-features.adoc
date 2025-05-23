@@ -1,0 +1,55 @@
+
+[[sec_23]]
+== Cartographic Features
+
+[[sec_23.1]]
+=== Text placement
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *TEXT PLACEMENT*. The Text Placement feature is used in association with the Feature Name attribute or a light description to optimize text positioning in ECDIS.
+10+| *S-101 Cartographic Feature:* *Text Placement*
+10+| *[underline]#Primitives:#* *Point*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| text offset bearing  2+| 3+| | IN | 1,1
+3+| text offset distance 2+| 3+| | IN | 1,
+3+| text rotation        2+| 3+| | BO | 0,1
+3+| text type 2+| 3+|
+1: name +
+2: feature characteristic | EN | 1,2
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Cartographic Text 3+| *Text Association* (see <<sec_25.17>>). 3+| See next row 2+| Association | 0,2
+10+| [underline]#*Associated to:*# *Administration Area*, *Airport/Airfield*, *Anchor Berth*, *Anchorage Area*, *Archipelagic Sea Lane*, *Archipelagic Sea Lane Area*, *Archipelagic Sea Lane Axis*, *Berth*, *Bollard*, *Bridge*, *Building*, *Built-Up Area*, *Cable Area*, *Cable Overhead*, *Cable Submarine*, *Canal*, *Cardinal Buoy*, *Cardinal Beacon*, *Cargo Transhipment Area*, *Causeway*, **Chart 1 Feature**, *Checkpoint*, *Coast Guard Station*, *Coastline*, *Collision Regulations Limit*, *Continental Shelf Area*, *Conveyor*, *Crane*, *Current -- Non-Gravitational*, *Dam*, *Daymark*, *Deep Water Route*, *Deep Water Route Centreline*, *Deep Water Route Part*, *Distance Mark*, *Dock Area*, *Dolphin*, *Dredged Area*, *Dry Dock*, *Dumping Ground*, *Dyke*, *Emergency Wreck Marking Buoy*, *Fairway*, *Fairway System*, *Fence/Wall*, *Ferry Route*, *Fishery Zone*, *Fishing Facility*, *Fishing Ground*, *Floating Dock*, *Fog Signal*, *Fortified Structure*, *Foul Ground*, *Free Port Area*, *Gate*, *Gridiron*, **Harbour Area (Administrative)**, *Harbour Facility*, *Helipad*, *Hulk*, *Ice Area*, *Information Area*, *Installation Buoy*, *Island Group*, *Isolated Danger Beacon*, *Isolated Danger Buoy*, *Lake*, *Land Area*, *Land Elevation*, *Land Region*, *Landmark*, *Lateral Beacon*, *Lateral Buoy*, *Light Air Obstruction*, *Light All Around*, *Light Float*, *Light Fog Detector*, *Light Sectored*, *Light Vessel*, *Local Magnetic Anomaly*, *Lock Basin*, *Log Pond*, *Marine Farm/Culture*, *Marine Pollution Regulations Area*, *Military Practice Area*, *Mooring Area*, *Mooring Buoy*, *Mooring Trot*, *Obstruction*, *Offshore Platform*, *Offshore Production Area*, *Oil Barrier*, *Physical AIS Aid to Navigation*, *Pile*, *Pilot Boarding Place*, *Pilotage District*, *Pipeline Overhead*, *Pipeline Submarine/On Land*, *Pontoon*, *Precautionary Area*, *Production/Storage Area*, *Pylon/Bridge Support*, *Radar Line*, *Radar Range*, *Radar Station*, *Radar Transponder Beacon*, *Radio Calling-In Point*, *Radio Station*, *Railway*, *Range System*, *Rapids*, *Recommended Route Centreline*, *Recommended Track*, *Rescue Station*, *Restricted Area*, *River*, *Road*, *Runway*, *Safe Water Beacon*, *Safe Water Buoy*, *Sea Area/Named Water Area*, *Seabed Area*, *Seagrass*, *Seaplane Landing Area*, *Shoreline Construction*, *Signal Station Traffic*, *Signal Station Warning*, *Silo/Tank*, *Slope Topline*, *Sloping Ground*, *Small Craft Facility*, *Sounding*, *Span Fixed*, *Span Opening*, *Special Purpose/General Beacon*, *Special Purpose/General Buoy*, *Spring*, *Structure Over Navigable Water*, *Submarine Pipeline Area*, *Submarine Transit Lane*, *Tidal Stream Panel Data*, *Tidal Stream -- Flood/Ebb*, *Tideway*, *Traffic Separation Scheme*, *Tunnel*, *Two-Way Route*, *Underwater/Awash Rock*, *Vegetation*, *Vessel Traffic Service Area*, *Virtual AIS Aid to Navigation*, *Water Turbulence*, *Waterfall*, *Weed/Kelp*, *Wind Turbine*, *Wreck*
+|===
+
+[underline]#INT 1 Reference:#
+
+[[sec_23.1.1]]
+==== Text placement
+
+If it is required to place text on an ENC to improve clarity and readability of display, it must be done using the cartographic feature *Text Placement*. In navigationally relevant areas such as shipping channels and dredged areas, where default ECDIS text positioning may cover other features, Data Producers should consider using *Text Placement*. The *Text Placement* feature must be associated with the relevant geo feature using the composition *Text Association* (see <<sec_25.17>>).
+
+NOTE: Where an associated instance of *Text Placement* has not been related to a feature having the attribute *name* and/or the attributes associated with the characteristics of a feature populated, the text will be positioned in the ECDIS display in accordance with the default position for text strings defined in the Portrayal Catalogue.
+
+[underline]#Remarks:#
+
+* The *Text Placement* cartographic feature is used by the ECDIS to optionally position text in ECDIS, which has been populated using an attribute(s) for the associated feature. The attribute(s) is identified by populating the mandatory attribute *text type*.
+* Where two instances of *text type* are populated for a *Text Placement* instance, the feature name and characteristics as derived from the target feature attribution will be vertically aligned in the ECDIS display in accordance with the defined text offset bearing and distance. If it is required to position the feature name and the feature characteristics independently, this must be done by associating two instances of *Text Placement*, one having stem:[bb "text type" = 1] (name) and the other having stem:[bb "text type" = 2] (feature characteristic), to the target feature. Note, however, that independent vertical or horizontal alignment of both the name and the characteristic of a feature is not recommended, as the text will overlap as the Mariner zooms to smaller scales than the optimum display scale for the data.
+* The attributes *text offset bearing* and *text offset distance* define the bearing (related to true north) and distance of the anchor point of the text, in millimetres in the ECDIS display, to be displayed from the associated feature. The values populated for these attributes must be determined based on the desired position of the text at the optimum display scale of the ENC data. Note that the attribute *text offset bearing* does not rotate the text itself, but determines the alignment of the anchor point (or justification) for the text location (horizontal (left, centred or right) and vertical (bottom, centre or top)) based on the encoded bearing. Displayed text will always appear horizontal regardless of the display mode set by the mariner (north-up or course-up), unless the Boolean attribute *text rotation* is set to _True_.
+* The Boolean attribute *text rotation*, when populated as _True_, will rotate the text on the ECDIS display to align along the bearing populated for the attribute *text offset bearing*.
+* Data Producers are advised to determine the best positioning for text at the optimum display scale for the data; and based on "north-up" ECDIS display. While *text offset bearing*, *text offset distance* and *text rotation* will position the text at the same location relative to the associated feature at all Mariner's Selected Viewing Scales, Data Producers are advised that, as the Mariner zooms out to smaller viewing scales, text may unintentionally cover other charted detail. Therefore, as an alternative, Data Producers may experiment with positioning the text so that it clears the majority of other charted features at the smallest scale at which the text is intended to be displayed, and populating the attribute *scale minimum* accordingly (see bullet below). Data Producers are also advised that optimum results may not be achieved when the Mariner has set the display setting for the ECDIS to screen rotations other than "north-up". Encoders should also consider the positioning of the name of a feature where the name is encoded in multiple languages, as the name displayed may be of varying character length based on the Mariner's language settings (see <<sec_2.5.8>>).
+* The attribute *scale minimum* may be used to determine a scale at which the text string is no longer visible in the ECDIS when scale minimum functionality is enabled. Where populated, the value for *scale minimum* on *Text Placement* must not be set to a smaller scale value than the value populated for the associated feature.
+* S-101 portrayal for *Text Placement* has been developed to take into account the name of a light support structure feature where included in the association *Structure/Equipment* as follows:
+
+** Where *Text Placement* containing attribute stem:[bb "text type" = 1] (name) is associated to the equipment feature and the name has been encoded only on the structure feature, the *Text Placement* inherits the name from the structure.
+** Where *Text Placement* containing attribute stem:[bb "text type" = 1] (name) is associated to the equipment feature and the name has been encoded on the equipment feature, the *Text Placement* takes the name from the equipment feature. If a name has also been included on the structure feature, this will not be considered in this case, however a separate *Text Placement* associated to the structure may be encoded to place the name of the structure feature at a desired position, if required.
+** Where *Text Placement* containing attribute stem:[bb "text type" = 2] (feature characteristic) is associated to the equipment feature, the characteristics of the structure feature will not be considered.
+* *Text Placement* should normally be associated with features of type point, but may be used for features of type curve and surface.
+
+[underline]#Distinction:#

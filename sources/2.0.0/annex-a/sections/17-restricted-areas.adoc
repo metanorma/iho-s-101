@@ -1,0 +1,228 @@
+
+[[sec_17]]
+== Geo Features -- Restricted Areas -- Overview
+
+There are many types of areas within which certain activities are discouraged or prohibited, or from which certain classes of vessels are excluded. The general term for all areas in which certain aspects of navigation may be restricted or prohibited by regulations is "Restricted Area", or equivalent. The word "prohibited", or its equivalent, may appear in terms relating to activities which are contrary to the regulations, for example "Anchoring Prohibited", "Entry Prohibited".
+
+If it is required to encode a restricted area, it must be done using the feature *Restricted Area* (see <<sec_17.8>>); or using other features having the attribute *restriction* (*Anchorage Area*, *Cable Area*, *Cargo Transhipment Area*, *Dumping Ground*, *Dredged Area*, *Deep Water Route Part*, *Fairway*, *Fishing Ground*, *Harbour Facility*, *Inshore Traffic Zone*, *Marine Farm/Culture*, *Military Practice Area*, *Offshore Production Area*, *Submarine Pipeline Area*, *Pipeline Submarine/On Land*, *Precautionary Area*, *Seaplane Landing Area*, *Submarine Transit Lane*, *Territorial Sea Area*, *Traffic Separation Scheme Crossing*, *Traffic Separation Scheme Lane Part*, *Traffic Separation Scheme Roundabout*).
+
+[underline]#Remarks:#
+
+* The attribute *category of restricted area* is used to describe the reason for the regulation, while the attribute *restriction* describes the restrictions.
+* The complex attribute *information* (see <<sec_2.4.6>>) may be used to provide an additional explanation about the regulation (for example the equivalent to a caution note from a paper chart), where required.
+* An area in which regulations apply due to recreation activities such as water skiing, jet skiing, kite surfing and rowing must be encoded, where required, as *Restricted Area* with stem:[bb "category of restricted area" = 32] (recreation area).
+* If it is required to encode an area for which the Mariner must be made aware of circumstances influencing the safety of navigation, it must be done using the feature *Caution Area* (see <<sec_16.10>>). This feature may be used to identify a danger, a risk, a rule or advice (for example an area of continually changing depths) which is not directly related to a particular feature.
+
+[[sec_17.1]]
+=== Minefields (see S-4 -- B-441.8)
+
+If it is required to encode a minefield, it must be done using a *Restricted Area* feature (see <<sec_17.8>>), with attribute stem:[bb "category of restricted area" = 14] (minefield). Former mined areas should also be encoded with attribute stem:[bb "status" = 4] (not in use).
+
+[[sec_17.2]]
+=== Degaussing ranges (see S-4 -- B-448)
+
+A degaussing (or demagnetising) range is an area, usually of about 0.2M diameter, within which ships' magnetic fields may be measured. Sensing instruments and cables are installed on the seafloor in the range and there are cables leading from the range to a control position ashore. The range is usually marked by distinctive buoys. The significance of a degaussing range to Mariners is that anchoring and trawling are prohibited and that the range may have to be avoided when vessels are using it.
+
+If it is required to encode a degaussing range, it must be done using a *Restricted Area* feature (see <<sec_17.8>>), with attribute stem:[bb "category of restricted area" = 8] (degaussing range).
+
+[[sec_17.3]]
+=== Nature reserves (see S-4 -- B-437.3)
+
+If it is required to encode a marine nature reserve area, it must be done using a *Restricted Area* feature (see <<sec_17.8>>), with attribute stem:[bb "category of restricted area" = 4] (nature reserve).
+
+[[sec_17.4]]
+=== Speed limits (see S-4 -- B-430.2)
+
+Speed is often limited inside harbours in order to prevent wakes. If it is required to encode this restriction, it must be done using a *Restricted Area* feature (see <<sec_17.8>>), with the attribute stem:[bb "category of restricted area" = 24] (no wake area) or stem:[bb "restriction" = 13] (no wake). If it is required to encode cases where the speed limit is known in general or for a certain class(es) of vessel, it must be done using a *Restricted Area* or using other features having the attribute *restriction* (see <<sec_17>> above) and having stem:[bb "restriction" = 27] (speed restricted), with the speed limit, speed units and, if appropriate, the class of vessel, encoded using an instance of the complex attribute *vessel speed limit*, sub-attributes *speed limit*, *speed units* and *vessel class*. Further detailed information regarding speed limits, for example varying speed limits based on vessel length, draught or cargo, may be encoded, if required, using the complex attribute *information*; or using the attribute *pictorial representation* (for example, to reproduce the graphic for a speed restriction table contained in a Nautical Publication).
+
+If it is required to encode the buoys/beacons marking the *Restricted Area* feature with speed limits, it must be done using *Special Purpose/General Beacon* or *Special Purpose/General Buoy* features (see <<sec_20.13;and!sec_20.5>> respectively), with the attribute stem:[bb "category of special purpose mark" = 24] (reduced wake mark) or _25_ (speed limit mark). The speed limit and its unit of measurement should be encoded using the complex attribute *information* (see <<sec_2.4.6>>), sub-attribute *text* (for example _Speed limit is 6 knots_).
+
+[[sec_17.5]]
+=== Anchoring restricted (see S-4 -- B-431.4)
+
+If it is required to encode a restricted anchoring area, it must be done using a *Restricted Area* feature (see <<sec_17.8>>), or using other features with the attribute *restriction* (see <<sec_17>>), where stem:[bb "restriction" = 1] (anchoring prohibited) or _2_ (anchoring restricted). Additional information about the restriction should be encoded using the complex attribute *information* (see <<sec_2.4.6>>).
+
+[[sec_17.6]]
+=== Areas to be avoided (see S-4 -- B-435.7)
+
+If it is required to encode an IMO Area to be Avoided, it must be done using a *Restricted Area* feature (see <<sec_17.8>>), with attribute stem:[bb "restriction" = 14] (area to be avoided). An IMO Area to be Avoided around a navigational aid must also be encoded with attribute stem:[bb "category of restricted area" = 12] (navigational aid safety zone).
+
+[underline]#Remarks:#
+
+* Areas other than IMO Area to be Avoided for which entry is prohibited or restricted should be encoded using the *Restricted Area*, having values stem:[bb "restriction" = 7] (entry prohibited) or _8_ (entry restricted).
+
+[[sec_17.7]]
+=== Environmentally Sensitive Sea Areas (see S-4 -- B-437)
+
+Environmentally Sensitive Sea Areas (ESSA) should be included on ENCs where there is a specifically identified requirement, and where it is practicable, given the optimum display scale of the ENC data and the extent of the ESSA. If there is no such requirement, or if it is not practicable, details of ESSA should only be inserted in associated publications, such as Sailing Directions. It should be noted that the inclusion of ESSA on smaller optimum display scale of the ENC data may be appropriate for voyage planning purposes.
+
+If it is required to encode an Environmentally Sensitive Sea Area, it must be done using a *Restricted Area* feature (see <<sec_17.8>>), with attribute stem:[bb "category of restricted area" = 27] (ESSA) or _28_ (PSSA).
+
+An Environmentally Sensitive Sea Area that is shown on the source as a point symbol should be encoded using a small surfacerestricted area feature.
+
+[[sec_17.8]]
+=== Restricted area
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *RESTRICTED AREA*. A specified area on land or water designated by an appropriate authority within which access or navigation is restricted in accordance with certain specified conditions. (Adapted from IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Restricted Area (RESARE)*
+10+| *[underline]#Primitives:#* *Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| category of restricted area 2+| (CATREA) 3+|
+1: offshore safety zone +
+4: nature reserve +
+5: bird sanctuary +
+6: game reserve +
+7: seal sanctuary +
+8: degaussing range +
+9: military area +
+10: historic wreck area +
+12: navigational aid safety zone +
+14: minefield +
+18: swimming area +
+19: waiting area +
+20: research area +
+21: dredging area +
+22: fish sanctuary +
+23: ecological reserve +
+24: no wake area +
+25: swinging area +
+27: environmentally sensitive sea area +
+28: particularly sensitive sea area +
+29: disengagement area +
+30: port security area +
+31: coral sanctuary +
+32: recreation area | EN | 0,*
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage
+2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[seventeen_eight]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[seventeen_eight]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[seventeen_eight]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| restriction 2+| (RESTRN) 3+|
+1: anchoring prohibited +
+2: anchoring restricted +
+3: fishing prohibited +
+4: fishing restricted +
+5: trawling prohibited +
+6: trawling restricted +
+7: entry prohibited +
+8: entry restricted +
+9: dredging prohibited +
+10: dredging restricted +
+11: diving prohibited +
+12: diving restricted +
+13: no wake +
+14: area to be avoided +
+15: construction prohibited +
+16: discharging prohibited +
+17: discharging restricted +
+18: industrial or mineral exploration/development prohibited +
+19: industrial or mineral exploration/development restricted +
+20: drilling prohibited +
+21: drilling restricted +
+22: removal of historic artifacts prohibited +
+23: cargo transhipment (lightening) prohibited +
+24: dragging prohibited +
+25: stopping prohibited +
+26: landing prohibited +
+27: speed restricted +
+39: swimming prohibited +
+42: power-driven vessels prohibited | EN | 1,*
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+3: recommended +
+4: not in use +
+5: periodic/intermittent +
+6: reserved +
+7: temporary +
+9: mandatory +
+18: existence doubtful +
+28: buoyed | EN | 0,*
+3+| vessel speed limit
+2+| 3+| | C | 0,*
+
+3+| speed limit 2+| 3+| | (S) RE | 1,1
+
+3+| speed units
+2+| 3+|
+2: kilometres per hour +
+3: miles per hour +
+4: knots | (S) EN
+| 1,1
+
+3+| vessel class 2+| 3+| | (S) TE | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[seventeen_eight]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[seventeen_eight]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Auxiliary Feature 3+| *Fairway Auxiliary* (see <<sec_25.8>>) 3+| *Fairway* 2+| Association | 0,*
+| The Component 3+| *Traffic Separation Scheme Aggregation* (see <<sec_25.18>>) 3+| *Traffic Separation Scheme* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[seventeen_eight]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# L 3; M 29.1; N 2.1-2, 20-22, 25, 31, 34, 63
+
+[[sec_17.8.1]]
+==== Restricted areas (see S-4 -- B-422; B-430.2; B-431.4; B-435.7; B-435.11; B-437.1-7; B-439; B-439.2-4; B-441,1; B-445.9; B-445.11-12; B-446.4 and B-448.1)
+
+If it is required to encode a restricted area, it must be done using the feature *Restricted Area*, or using other features having the attribute *restriction* (*Anchorage Area*, *Cable Area*, *Dumping Ground*, *Dredged Area*, *Deep Water Route Part*, *Fairway*, *Fishing Ground*, *Harbour Facility*, *Inshore Traffic Zone*, *Marine Farm/Culture*, *Military Practice Area*, *Offshore Production Area*, *Submarine Pipeline Area*, *Pipeline Submarine/On Land*, *Precautionary Area*, *Seaplane Landing Area*, *Submarine Transit Lane*, *Territorial Sea Area*, *Traffic Separation Scheme Crossing*, *Traffic Separation Scheme Lane Part*, *Traffic Separation Scheme Roundabout*).
+
+[underline]#Remarks:#
+
+* If the type of restriction for the area cannot be encoded using the mandatory attribute *restriction* it must be encoded, where required, using the complex attribute *information*, sub-attribute *text*; and *restriction* populated as empty (null).
+* For additional guidance regarding the encoding of vessel speed limits, see <<sec_17.4>>.
+* The term "no anchoring area" is used to identify the IMO routeing measure of that name. Such areas, where required, must be encoded as *Restricted Area* with attribute stem:[bb "restriction" = 1] (anchoring prohibited).
+
+[underline]#Distinction:# Anchorage Area; Cable Area; Caution Area; Collision Regulations Limit; Deep Water Route Part; Depth Area; Dredged Area; Dumping Ground; Fairway; Information Area; Military Practice Area; Submarine Pipeline Area; Swept Area.

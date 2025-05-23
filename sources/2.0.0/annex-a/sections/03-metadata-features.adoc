@@ -923,7 +923,6 @@ h| S-101 Role 4+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Collection 4+| *Update Aggregation*(see <<sec_25.20>>) 3+| *Update Information* 2+| Aggregation | 0,1
 | The Component 4+| *Update Aggregation*(see <<sec_25.20>>) 3+| *Update Information* 2+| Association | 0,*
 
-
 |===
 
 [[three_twelve]]

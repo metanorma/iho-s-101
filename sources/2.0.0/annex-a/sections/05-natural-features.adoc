@@ -106,7 +106,6 @@ If it is required to encode cuttings and embankments, this must be done in the s
 2: not visually conspicuous +
 3: prominent | EN | 0,1
 
-
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
 3+| file locator 2+| 3+| | (S) TE | 0,1
@@ -199,7 +198,6 @@ A steep coast may give a good radar return and is useful for visual identificati
 3+| status 2+| (STATUS) 3+|
 18: existence doubtful | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-
 
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
@@ -299,7 +297,6 @@ A point feature must be encoded using:
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 
-
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
 3+| file locator 2+| 3+| | (S) TE | 0,1
@@ -379,7 +376,6 @@ If it is required to encode the name of a group of islands, it must be done usin
 2: not visually conspicuous +
 3: prominent | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-
 
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
@@ -463,7 +459,6 @@ If it is required to encode a height contour or spot height, it must be done usi
 3+| status 2+| (STATUS) 3+|
 5: periodic/intermittent | EN | 0,1
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-
 
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 

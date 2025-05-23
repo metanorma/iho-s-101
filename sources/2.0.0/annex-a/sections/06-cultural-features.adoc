@@ -41,11 +41,9 @@
 
 3+| height 2+| (HEIGHT) 3+| | RE | 0,1
 
-
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
-
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 
@@ -72,7 +70,6 @@
 
 3+| in the water
 2+| 3+| | BO | 0,1
-
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -159,7 +156,6 @@ If it is required to encode a built-up area, it must be done using the feature *
 
 3+| elevation 2+| (ELEVAT) 3+| | RE | 0,1
 
-
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -221,12 +217,10 @@ If it is required to encode a built-up area, it must be done using the feature *
 48: pumping station | EN | 0,*
 3+| height 2+| (HEIGHT) 3+| | RE | 0,1
 
-
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| multiplicity of features
 2+| 3+| | C | 0,1
-
 
 3+| multiplicity known 2+| 3+| | (S) BO | 1,1
 
@@ -241,7 +235,6 @@ If it is required to encode a built-up area, it must be done using the feature *
 12: glass | EN | 0,*
 3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
 
-
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 
 3+| status 2+| (STATUS) 3+|
@@ -252,7 +245,6 @@ If it is required to encode a built-up area, it must be done using the feature *
 13: historic +
 14: public | EN | 0,*
 3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
-
 
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
@@ -277,7 +269,6 @@ If it is required to encode a built-up area, it must be done using the feature *
 
 3+| in the water
 2+| 3+| | BO | 0,1
-
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -745,7 +736,6 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 
 3+| height 2+| (HEIGHT) 3+| | RE | 0,1
 
-
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| nature of construction 2+| (NATCON) 3+|
@@ -757,7 +747,6 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 3+| opening bridge 2+| _(CATBRG)_ 3+| | BO | 0,1 footnoteblock:[six_six]
 
 3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
-
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 
@@ -887,7 +876,6 @@ image::figure-6-6.png[240,84]
 3+| horizontal clearance fixed
 2+| 3+| | C | 0,1
 
-
 3+| horizontal clearance value 2+| (HORCLR) 3+| | (S) RE | 1,1
 
 3+| horizontal distance uncertainty 2+| (HORACC) 3+| | (S) RE | 0,1
@@ -900,7 +888,6 @@ image::figure-6-6.png[240,84]
 3+| vertical clearance value 2+| (VERCLR) 3+| | (S) RE | 1,1
 
 3+| vertical uncertainty 2+| _(VERACC)_ 3+| | (S) C | 0,1
-
 
 3+| uncertainty fixed 2+| 3+| | (S) RE | 1,1
 
@@ -1000,7 +987,6 @@ The value of the vertical clearance between (high) water level and any fixed ove
 3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[six_eight]
 
 3+| horizontal clearance fixed 2+| 3+| | C | 0,1
-
 
 3+| horizontal clearance value 2+| (HORCLR) 3+| | (S) RE | 1,1
 
@@ -1175,15 +1161,12 @@ The value of the vertical clearance between (high) water level and any opening o
 
 3+| height 2+| (HEIGHT) 3+| | RE | 0,1
 
-
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| lifting capacity 2+| (LIFCAP) 3+| | RE | 0,1
 
-
 3+| multiplicity of features
 2+| 3+| | C | 0,1
-
 
 3+| multiplicity known 2+| 3+| | (S) BO | 1,1
 
@@ -1205,7 +1188,6 @@ The value of the vertical clearance between (high) water level and any opening o
 22: grain +
 25: clay | EN | 0,*
 3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
-
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 
@@ -1241,7 +1223,6 @@ The value of the vertical clearance between (high) water level and any opening o
 44: baltic sea chart datum 2000 | EN | 0,1
 
 3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
-
 
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
@@ -1339,7 +1320,6 @@ The value of the vertical clearance between (high) water level and any fixed ove
 
 3+| ice factor 2+| (ICEFAC) 3+| | RE | 0,1
 
-
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -1357,13 +1337,11 @@ The value of the vertical clearance between (high) water level and any fixed ove
 3+| multiplicity of features
 2+| 3+| | C | 0,1
 
-
 3+| multiplicity known 2+| 3+| | (S) BO | 1,1
 
 3+| number of features 2+| 3+| | (S) IN | 0,1
 
 3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
-
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 
@@ -1524,7 +1502,6 @@ For power cables or transmission lines carrying very high voltages, an additiona
 4+| multiplicity of features
 2+| 3+| | C | 0,1
 
-
 4+| multiplicity known 2+| 3+| | (S) BO | 1,1
 
 4+| number of features 2+| 3+| | (S) IN | 0,1
@@ -1541,7 +1518,6 @@ For power cables or transmission lines carrying very high voltages, an additiona
 20: wine +
 22: grain | EN | 0,*
 4+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
-
 
 4+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 
@@ -1708,12 +1684,10 @@ The value of the vertical clearance between (high) water level and any fixed ove
 
 3+| height 2+| (HEIGHT) 3+| | RE | 0,1
 
-
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| multiplicity of features
 2+| 3+| | C | 0,1
-
 
 3+| multiplicity known 2+| 3+| | (S) BO | 1,1
 
@@ -1727,14 +1701,12 @@ The value of the vertical clearance between (high) water level and any fixed ove
 11: latticed | EN | 0,*
 3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
 
-
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 
 3+| status 2+| (STATUS) 3+|
 4: not in use +
 12: illuminated | EN | 0,*
 3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
-
 
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
@@ -1850,7 +1822,6 @@ The actual position of pylons supporting bridges, pipelines and cables must be i
 
 3+| elevation 2+| (ELEVAT) 3+| | RE | 0,1
 
-
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -1865,7 +1836,6 @@ The actual position of pylons supporting bridges, pipelines and cables must be i
 
 3+| height 2+| (HEIGHT) 3+| | RE | 0,1
 
-
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| nature of construction 2+| (NATCON) 3+|
@@ -1877,7 +1847,6 @@ The actual position of pylons supporting bridges, pipelines and cables must be i
 11: latticed | EN | 0,*
 3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
 
-
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 
 3+| status 2+| (STATUS) 3+|
@@ -1886,7 +1855,6 @@ The actual position of pylons supporting bridges, pipelines and cables must be i
 12: illuminated +
 13: historic | EN | 0,*
 3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
-
 
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
@@ -1970,7 +1938,6 @@ If it is required to encode a fence or wall, it must be done using the feature *
 | 0,1 footnoteblock:[fix_fourteen]
 
 3+| height 2+| (HEIGHT) 3+| | RE | 0,1
-
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
@@ -2167,7 +2134,6 @@ If it is required to encode a road or track, it must be done using the feature *
 3+| horizontal clearance fixed
 2+| 3+| | C | 0,1
 
-
 3+| horizontal clearance value 2+| (HORCLR) 3+| | (S) RE | 1,1
 
 3+| horizontal distance uncertainty 2+| (HORACC) 3+| | (S) RE | 0,1
@@ -2185,7 +2151,6 @@ If it is required to encode a road or track, it must be done using the feature *
 14: public | EN | 0,*
 3+| vertical clearance fixed
 2+| 3+| | C | 0,1
-
 
 3+| vertical clearance value 2+| (VERCLR) 3+| | (S) RE | 1,1
 

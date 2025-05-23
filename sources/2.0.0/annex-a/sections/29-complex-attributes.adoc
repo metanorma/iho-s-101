@@ -1,0 +1,848 @@
+
+[[sec_29]]
+== Complex Attributes
+
+[[sec_29.1]]
+=== directional character
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *DIRECTIONAL CHARACTER*. A directional light is a light illuminating a sector of very narrow angle and intended to mark a direction to follow. (IHO Dictionary -- S-32).
+
+[underline]#Indication:# The complex attribute defines whether the light is a moiré effect light and encodes the orientation of the directional light sector.
+
+[underline]#Sub-attributes:#::
+*moiré effect*::: see <<sec_27.130>>
+*orientation*::: see <<sec_29.15>>
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_29.2]]
+=== feature name
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *FEATURE NAME*. Provides the name of an entity, defines the national language of the name, and provides the option to display the name at various system display settings.
+
+[underline]#Indication:# The complex attribute provides the encoder with options as to the name to display in certain system display settings.
+
+[underline]#Sub-attributes:#::
+language::: see <<sec_27.117>>
+name::: see <<sec_27.132>>
+name usage::: see <<sec_27.134>>
+
+[underline]#Remarks:#
+
+* For further information regarding the population of the complex attribute *feature name*, in particular the encoding of multiple instances of *feature name* for a single feature instance, see <<sec_2.5.8>>.
+
+|===
+
+[[sec_29.3]]
+=== features detected
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *FEATURES DETECTED*. The uniform assessment of detected features.
+
+[underline]#Indication:#
+
+[underline]#Sub-attributes:#::
+*least depth of detected features measured*::: see <<sec_28.6>>
+*significant features detected*::: see <<sec_28.19>>
+*size of features detected*::: see <<sec_28.20>>
+
+[underline]#Remarks:#
+
+* A feature in this context is meant to be any object, whether manmade or not, projecting above the seafloor, which may be a danger for surface navigation. (Refer to IHO publication S-44). *features detected* does not describe if features were actually detected during a hydrographic survey, but whether the survey had the capacity to detect features.
+
+|===
+
+[[sec_29.4]]
+=== fixed date range
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *FIXED DATE RANGE*. An active period of a single fixed event or occurrence, as the date range between discrete start and end dates.
+
+[underline]#Indication:# The complex attribute describes single fixed period, as the date range between its sub-attributes.
+
+[underline]#Sub-attributes:#::
+*date end*::: see <<sec_27.81>>
+*date start*::: see <<sec_27.83>>
+
+[underline]#Remarks:#
+
+* The sub-attributes *date start* and *date end* must be encoded in the format YYYYMMDD; using 4 digits for the calendar year (YYYY) and, optionally, 2 digits for the month (MM) (for example April = 04) and 2 digits for the day (DD). When no specific month and/or day is required/known, the values are replaced with dashes (-).
+
+|===
+
+[[sec_29.5]]
+=== frequency pair
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *FREQUENCY PAIR*. A pair of frequencies for transmitting and receiving radio signals. The shore station transmits and receives on the frequencies indicated.
+
+[underline]#Indication:# The complex attribute describes all variations of radio receiving and transmitting.
+
+[underline]#Sub-attributes:#::
+*frequency shore station receives*::: see <<sec_27.101>>
+*frequency shore station transmits*::: see <<sec_27.102>>
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_29.6]]
+=== horizontal clearance fixed
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *HORIZONTAL CLEARANCE FIXED*. The horizontal clearance measured between two points for a fixed span.
+
+[underline]#Indication:# The complex attribute encodes the horizontal distance …….
+
+[underline]#Sub-attributes:#::
+*horizontal clearance value*::: see <<sec_27.107>>
+*horizontal distance uncertainty*::: see <<sec_28.5>>
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_29.7]]
+=== horizontal clearance open
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *HORIZONTAL CLEARANCE OPEN*. The horizontal clearance measured between two points for an opening span.
+
+[underline]#Indication:# The complex attribute encodes the horizontal distance …….
+
+[underline]#Sub-attributes:#::
+*horizontal clearance value*::: see <<sec_27.107>>
+*horizontal distance uncertainty*::: see <<sec_28.5>>
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_29.8]]
+=== horizontal position uncertainty (_POSACC_)
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *HORIZONTAL POSITION UNCERTAINTY*. The best estimate of the accuracy of a position. (S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.255, November 2000).
+
+[underline]#Indication:# The complex attribute encodes the horizontal uncertainty associated with any horizontal measurement.
+
+[underline]#Sub-attributes:#::
+*uncertainty fixed*::: see <<sec_28.26>>
+*uncertainty variable factor*::: see <<sec_28.27>>
+
+[underline]#Remarks:#
+
+* The expected input is the maximum of the two-dimensional error. The error is assumed to be positive and negative.
+
+|===
+
+[[sec_29.9]]
+=== information
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *INFORMATION*. Textual information about the feature. The information may be provided as a string of text or as a file name of a single external text file that contains the text. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Pages 2.141 and 2.209, November 2000).
+
+[underline]#Indication:# The complex attribute provides additional textual information that cannot be provided using other allowable attributes for the feature, and defines the language of the text string.
+
+[underline]#Sub-attributes:#::
+*file locator*::: see <<sec_27.97>>
+*file reference*::: see <<sec_27.98>>
+*headline*::: see <<sec_27.104>>
+*language*::: see <<sec_27.117>>
+*text*::: see <<sec_27.177>>
+
+[underline]#Remarks:#
+
+* At least one of the sub-attributes *file reference* or *text* must be populated.
+* The files referenced by the sub-attribute *file reference* generally contain long text strings or those that require formatting; there is no restriction on the type of text (except for lexical level) that can be held in files referenced by sub-attribute *file reference*.
+* The sub-attribute *file locator* cannot be populated unless the attribute *file reference* is populated.
+* For further information on the population of *information*, see <<sec_2.4.6>>.
+* This complex attribute should be used, for example, to hold the information that is shown on paper charts by cautionary and explanatory notes.
+
+|===
+
+[[sec_29.10]]
+=== light sector
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *LIGHT SECTOR*. A sector is the part of a circle between two straight lines drawn from the centre to the circumference. (Advanced Learner's Dictionary, 2nd Edition).
+
+[underline]#Indication:#
+
+[underline]#Sub-attributes:#::
+*colour*::: see <<sec_27.75>>
+*directional character*::: see <<sec_29.1>>
+*light visibility*::: see <<sec_27.120>>
+*sector limit*::: see <<sec_29.21>>
+*value of nominal range*::: see <<sec_27.192>>
+*sector information*::: see <<sec_29.20>>
+*sector arc extension*::: see <<sec_30.3>>
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_29.11]]
+=== measured distance value
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *MEASURED DISTANCE VALUE*. The distance value indicated on a distance mark, or the distance between two measured distance marks.
+
+[underline]#Indication:#
+
+[underline]#Sub-attributes:#::
+*distance unit of measurement*::: see <<sec_27.91>>
+*reference location*::: see <<sec_27.149>>
+*waterway distance*::: see <<sec_27.203>>
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_29.12]]
+=== multiplicity of features
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *MULTIPLICITY OF FEATURES*. The number of features of identical character that exist as a co-located group. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.150, November 2000).
+
+[underline]#Indication:# The complex attribute provides an indication as to whether the true number of features is known and, where known, the number of features.
+
+[underline]#Sub-attributes:#::
+*multiplicity known*::: see <<sec_27.131>>
+*number of features*::: see <<sec_27.139>>
+
+[underline]#Remarks:#
+
+* The attribute *multiplicity of features* must only be used to indicate the number of entities of a feature that are co-located (for example 3 overhead cables suspended over a body of water between 2 pylons), and this information is considered to be of use to the Mariner. Where possible, features must be encoded individually.
+
+|===
+
+[[sec_29.13]]
+=== online resource
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *ONLINE RESOURCE*. Information about online sources from which a resource or data can be obtained. (Adapted from ISO 19115).
+
+[underline]#Indication:# The complex attribute describes the access to online resources according to ISO 19115.
+
+[underline]#Sub-attributes:#::
+*headline*::: see <<sec_27.104>>
+*linkage*::: see <<sec_27.121>>
+*name of resource*::: see <<sec_27.133>>
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_29.14]]
+=== orientation
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *ORIENTATION*. The angular distance measured from true north to the major axis of the feature. (Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2010).
+
+[underline]#Indication:# The complex attribute provides the orientation value together with a measure of the uncertainty of the value.
+
+[underline]#Sub-attributes:#::
+*orientation uncertainty*::: see <<sec_28.14>>
+*orientation value*::: see <<sec_27.141>>
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_29.15]]
+=== periodic date range
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *PERIODIC DATE RANGE*. The active period of a recurring event or occurrence.
+
+[underline]#Indication:# The complex attribute describes the active period for a seasonal feature (for example a buoy), as the dates between its sub-attributes.
+
+[underline]#Sub-attributes:#::
+*date end*::: see <<sec_27.81>>
+*date start*::: see <<sec_27.83>>
+
+[underline]#Remarks:#
+
+* The sub-attributes *date start* and *date end* must be encoded in the format pass:[----MMDD]; using 2 digits for the month (MM) (for example April = 04) and 2 digits for the day (DD). When no specific day is required/known, the values are replaced with dashes (-).
+
+|===
+
+[[sec_29.16]]
+=== radar wave length _(RADWAL)_
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *RADAR WAVE LENGTH*. The distance between two successive peaks (or other points of identical phase) on an electromagnetic wave in the radar band of the electromagnetic spectrum. (S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.172, November 2000).
+
+[underline]#Indication:# The complex attribute describes the wave length, as the combination of its sub-attributes.
+
+[underline]#Sub-attributes:#::
+*radar band*::: see <<sec_27.145>>
+*wave length value*::: see <<sec_27.204>>
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_29.17]]
+=== rhythm of light
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *RHYTHM OF LIGHT*. The sequence of times occupied by intervals of light/sound and eclipse/silence for all light characteristics or sound signals.
+
+[underline]#Indication:# The complex attribute describes the rhythm of a light (or a light sector).
+
+[underline]#Sub-attributes:#::
+*light characteristic*::: see <<sec_27.119>>
+*signal group*::: see <<sec_27.162>>
+*signal period*::: see <<sec_27.163>>
+*signal sequence*::: see <<sec_29.25>>
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_29.18]]
+=== schedule by day of week
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *SCHEDULE BY DAY OF WEEK*. The nature and timings of a daily schedule by days of the week.
+
+[underline]#Indication:# The complex attribute encodes the regular schedule for a service.
+
+[underline]#Sub-attributes:#::
+*category of schedule*::: see <<sec_27.59>>
+*time intervals by day of week*::: see <<sec_29.33>>
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_29.19]]
+=== sector characteristics
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *SECTOR CHARACTERISTICS*. Describes the characteristics of a light sector.
+
+[underline]#Indication:# The complex attribute describes the characteristics of a light sector.
+
+[underline]#Sub-attributes:#::
+*light characteristic*::: see <<sec_27.119>>
+*light sector*::: see <<sec_29.10>>
+*signal group*::: see <<sec_27.162>>
+*signal period*::: see <<sec_27.163>>
+*signal sequence*::: see <<sec_29.25>>
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_29.20]]
+=== sector information
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *SECTOR INFORMATION*. Additional textual information about a light sector. 
+
+[underline]#Indication:# The complex attribute provides additional textual information that cannot be provided using other allowable attributes for the feature, and defines the language of the text string.
+
+[underline]#Sub-attributes:#::
+*language*::: see <<sec_27.117>>
+*text*::: see <<sec_27.177>>
+
+[underline]#Remarks:#
+
+* This complex attribute should be used, for example, to hold the information related to the characteristics of a complex light sector.
+
+* No formatting of text is possible within *sector information*. If formatted text is required, then an associated text file referenced by the complex attribute *information*, sub-attribute *file reference* must be used (see <<sec_27.98>>).
+
+|===
+
+[[sec_29.21]]
+=== sector limit
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *SECTOR LIMIT*. A sector is the part of a circle between two straight lines drawn from the centre to the circumference. (Advanced Learner's Dictionary, 2nd Edition).
+
+The sector limit specifies the limits of the sector in a clockwise direction around the central feature (for example a light). (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.184, November 2000).
+
+[underline]#Indication:# The complex attribute describes the angle of a light sector as defined by the sub-attributes.
+
+[underline]#Sub-attributes:#::
+*sector limit one*::: see <<sec_29.22>>
+*sector limit two*::: see <<sec_29.23>>
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_29.22]]
+=== sector limit one _(SECTR1)_
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *SECTOR LIMIT ONE*. A sector is the part of a circle between two straight lines drawn from the centre to the circumference. (Advanced Learner's Dictionary, 2nd Edition).*sector limit one* specifies the first limit of the sector. The order of *sector limit one* and *sector limit two* is clockwise around the central feature (for example a light). (S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.184, November 2000).
+
+[underline]#Indication:# The complex attribute describes the line or bearing of a light where the character changes or the light is obscured.
+
+[underline]#Sub-attributes:#::
+*sector bearing*::: see <<sec_27.157>>
+*sector line length*::: see <<sec_27.158>>
+
+[underline]#Remarks:#
+
+* The values given to the common limits of adjacent sectors should be identical.
+* The orientation of the bearing is from seaward to the central feature. This conforms with the method used in "List of Lights" publications.
+
+* A generic term such as "to shore" cannot be used; a specific bearing must be encoded. Where a light sector limit is defined as "to the shore", it should be encoded using a value that ensures that, when the limit is drawn, it will fall entirely on land.
+
+|===
+
+[[sec_29.23]]
+=== sector limit two _(SECTR2)_
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *SECTOR LIMIT TWO*. A sector is the part of a circle between two straight lines drawn from the centre to the circumference. (Advanced Learner's Dictionary, 2nd Edition).*sector limit two* specifies the second limit of the sector. The order of *sector limit one* and *sector limit two* is clockwise around the central feature (for example a light). (S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.184, November 2000).
+
+[underline]#Indication:# The complex attribute describes the line or bearing of a light where the character changes or the light is obscured.
+
+[underline]#Sub-attributes:#::
+*sector bearing*::: see <<sec_27.157>>
+*sector line length*::: see <<sec_27.158>>
+
+[underline]#Remarks:#
+
+* The values given to the common limits of adjacent sectors should be identical.
+* The orientation of the bearing is from seaward to the central feature. This conforms with the method used in "List of Lights" publications.
+
+* A generic term such as "to shore" cannot be used; a specific bearing must be encoded. Where a light sector limit is defined as "to the shore", it should be encoded using a value that ensures that, when the limit is drawn, it will fall entirely on land.
+
+|===
+
+[[sec_29.24]]
+=== shape information
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *SHAPE INFORMATION*. Textual information about the shape of a non-standard topmark.
+
+[underline]#Indication:# The complex attribute provides additional textual information that cannot be provided using the attribute *topmark/daymark shape*.
+
+[underline]#Sub-attributes:#::
+*language*::: see <<sec_27.117>>
+*text*::: see <<sec_27.177>>
+
+[underline]#Remarks:#
+
+* No formatting of text is possible within *shape information*. If formatted text is required, then an associated text file referenced by the complex attribute *information* must be used (see <<sec_29.9>>).
+
+|===
+
+[[sec_29.25]]
+=== signal sequence _(SIGSEQ)_
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *SIGNAL SEQUENCE*. The sequence of times occupied by intervals of light/sound and eclipse/silence for all "light characteristics" or sound signals. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.191, November 2000).
+
+[underline]#Indication:# The complex attribute provides the signal sequence for non-fixed lights and sound signals.
+
+[underline]#Sub-attributes:#::
+*signal duration*::: see <<sec_27.159>>
+*signal status*::: see <<sec_27.164>>
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_29.26]]
+=== spatial accuracy
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *SPATIAL ACCURACY*. Provides an indication of the vertical and horizontal positional uncertainty of bathymetric data, optionally within a specified date range.
+
+[underline]#Indication:# The complex attribute defines the horizontal and vertical position accuracy of bathymetric features, which may optionally be degraded over time.
+
+[underline]#Sub-attributes:#::
+*fixed date range*::: see <<sec_29.4>>
+*horizontal position uncertainty*::: see <<sec_29.8>>
+*vertical uncertainty*::: see <<sec_29.40>>
+
+[underline]#Remarks:#
+
+* See <<sec_3.8;and!sec_24.5>> for encoding guidance for the population of the sub-complex attributes *horizontal position uncertainty* and *vertical uncertainty*.
+
+|===
+
+[[sec_29.27]]
+=== speed
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *SPEED*. Rate of motion. The terms speed and velocity are often used interchangeably, but speed is a scalar, having magnitude only, while velocity is a vector quantity, having both magnitude and direction. (Adapted from IHO Dictionary, S-32).
+
+[underline]#Indication:# The complex attribute encodes the range of the speed at a location.
+
+[underline]#Sub-attributes:#::
+*speed maximum*::: see <<sec_27.166>>
+*speed minimum*::: see <<sec_27.167>>
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_29.28]]
+=== surface characteristics
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *SURFACE CHARACTERISTICS*. The general nature of the material of which the land surface or the seabed is composed.
+
+[underline]#Indication:#
+
+[underline]#Sub-attributes:#::
+*nature of surface*::: see <<sec_27.137>>
+*nature of surface -- qualifying terms*::: see <<sec_27.138>>
+*underlying layer*::: see <<sec_27.187>>
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_29.29]]
+=== survey date range
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *SURVEY DATE RANGE*. The complex attribute describes the period of the hydrographic survey, as the time between its sub-attributes.
+
+[underline]#Indication:# The complex attribute describes the period of the hydrographic survey, as the time between its sub-attributes.
+
+[underline]#Sub-attributes:#::
+*date end*::: see <<sec_27.81>>
+*date start*::: see <<sec_27.83>>
+
+[underline]#Remarks:#
+
+* The sub-attributes *date start* and *date end* must be encoded using 4 digits for the calendar year (YYYY) and, optionally, 2 digits for the month (MM) (for example April = 04) and 2 digits for the day (DD). When no specific month and/or day is required/known, indication of the month and/or day is replaced with dashes (-).
+
+|===
+
+[[sec_29.30]]
+=== telecommunications
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *TELECOMMUNICATIONS*. A means or channel of communicating at a distance by electrical or electromagnetic means such as telegraphy, telephony, or broadcasting.
+
+[underline]#Indication:# The complex attribute describes the different telecommunications methods and contact details.
+
+[underline]#Sub-attributes:#::
+*contact instructions*::: see <<sec_27.79>>
+*telecommunication identifier*::: see <<sec_27.175>>
+*telecommunication service*::: see <<sec_27.176>>
+
+[underline]#Remarks:#
+
+* If no value is populated for the sub-attribute *telecommunication service*, this means the service is by voice communication.
+
+|===
+
+[[sec_29.31]]
+=== tidal stream panel values
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *TIDAL STREAM PANEL VALUES*. The direction of the flow and the tidal current rate from 6 hours before to 6 hours after high water (HW) or low water (LW) at the reference tide station, at hourly or sub-hourly intervals. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.210, November 2000).
+
+[underline]#Indication:#
+
+[underline]#Sub-attributes:#::
+*reference tide*::: see <<sec_27.150>>
+*reference tide type*::: see <<sec_27.161>>
+*stream depth*::: see <<sec_27.172>>
+*tidal stream value*::: see <<sec_29.32>>
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_29.32]]
+=== tidal stream value
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *TIDAL STREAM VALUE*. A measurement of the direction and speed of a tidal stream at a given time relative to the reference tide.
+
+[underline]#Indication:#
+
+[underline]#Sub-attributes:#::
+*orientation*::: see <<sec_29.14>>
+*speed maximum*::: see <<sec_27.166>>
+*time relative to tide*::: see <<sec_27.184>>
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_29.33]]
+=== time intervals by day of week
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *TIME INTERVALS BY DAY OF WEEK*. The regular weekly operation times of a service or schedule.
+
+[underline]#Indication:# The complex attribute describes the timings for a regular service schedule.
+
+[underline]#Sub-attributes:#::
+*day of week*::: see <<sec_27.85>>
+*day of week is range*::: see <<sec_27.86>>
+*time of day end*::: see <<sec_27.182>>
+*time of day start*::: see <<sec_27.183>>
+
+[underline]#Remarks:#
+
+* At least one of the sub-attributes *day of week*, *time of day start* or *time of day end* must be encoded. Where populated, the number of instances of *time of day start* must be the same as the number of instances of *time of day end*.
+* The sub-attribute *day of week is range* indicates whether an instance of *time intervals by day of week* encodes a range of days or discrete days. The day(s) or day range(s) are encoded using sub-attribute *day of week*. Where *day of week is range* is populated as _True_, there must be exactly two instances of the attribute *day of week*. If *day of week* is not populated, this indicates that the same schedule applies every day (Monday through Sunday). Multiple ranges or mixing range with discrete days(s) is not allowed (if this is required another instance of *time intervals by day of week* must be encoded).
+* An indeterminate range may be indicated with a null value at the appropriate position in the sequence.
+
+|===
+
+[[sec_29.34]]
+=== topmark _(TOPMAR)_
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *TOPMARK*. A characteristic shape secured at the top of a buoy or beacon to aid in its identification. (IHO Dictionary -- S-32).
+
+[underline]#Indication:#
+
+[underline]#Sub-attributes:#::
+*colour*::: see <<sec_27.75>>
+*colour pattern*::: see <<sec_27.76>>
+*topmark/daymark shape*::: see <<sec_27.185>>
+*shape information*::: see <<sec_29.24>>
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_29.35]]
+=== value of local magnetic anomaly
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *VALUE OF LOCAL MAGNETIC ANOMALY*. The value of the deviation from the normal magnetic variation and where required its direction. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.228, November 2000).
+
+[underline]#Indication:# The complex attribute encodes the range of the local magnetic anomaly.
+
+[underline]#Sub-attributes:#::
+*magnetic anomaly value*::: see <<sec_27.122>>
+*reference direction*::: see <<sec_27.148>>
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_29.36]]
+=== vertical clearance closed
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *VERTICAL CLEARANCE CLOSED*. The vertical clearance of a feature in closed condition (for example a closed lifting bridge) measured from the horizontal plane towards the feature overhead.(Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.235, November 2000).
+
+[underline]#Indication:# The complex attribute encodes the vertical distance from a defined vertical datum to the underside of a an opening overhead feature when it is in the closed position.
+
+[underline]#Sub-attributes:#::
+*vertical clearance value*::: see <<sec_27.195>>
+*vertical uncertainty*::: see <<sec_29.40>>
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_29.37]]
+=== vertical clearance fixed
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *VERTICAL CLEARANCE FIXED*. The vertical clearance measured from the horizontal plane towards a fixed (non-opening) feature overhead.(Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.234, November 2000).
+
+[underline]#Indication:# The complex attribute encodes the vertical distance from a defined vertical datum to the underside of a fixed overhead feature.
+
+[underline]#Sub-attributes:#::
+*vertical clearance value*::: see <<sec_27.195>>
+*vertical uncertainty*::: see <<sec_29.40>>
+
+[underline]#Remarks:#
+
+* In the case of cables carrying high voltages an additional clearance of from 2 to 5 metres may be needed to avoid an electrical discharge. When known, the authorised safe clearance (known in the UK as the Safe Overhead Clearance) which is the physical clearance minus a safety margin shall be stated, using the attribute *vertical clearance safe* (see <<sec_29.40>>). *vertical clearance fixed* must not be used to populate authorized safe clearances.
+
+|===
+
+[[sec_29.38]]
+=== vertical clearance open
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *VERTICAL CLEARANCE OPEN*. The vertical clearance of a feature in opened condition (for example an open lifting bridge) measured from the horizontal plane towards the feature overhead.(Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.236, November 2000).
+
+[underline]#Indication:# The complex attribute encodes the vertical distance from a defined vertical datum to the underside of an opening overhead feature when it is in the open position.
+
+[underline]#Sub-attributes:#::
+*vertical clearance unlimited*::: see <<sec_27.194>>
+*vertical clearance value*::: see <<sec_27.195>>
+*vertical uncertainty*::: see <<sec_29.40>>
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_29.39]]
+=== vertical clearance safe
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *VERTICAL CLEARANCE SAFE*. The safe vertical clearance of a feature measured from the horizontal plane towards the feature overhead.(Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.237, November 2000).
+
+[underline]#Indication:# The complex attribute encodes the safe vertical distance from a defined vertical datum to the lowest point of an electrical cable over navigable water.
+
+[underline]#Sub-attributes:#::
+*vertical clearance value*::: see <<sec_27.195>>
+*vertical uncertainty*::: see <<sec_29.40>>
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_29.40]]
+=== vertical uncertainty (_SOUACC, VERACC_)
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *VERTICAL UNCERTAINTY*. The best estimate of the vertical accuracy of depths, heights, vertical distances and vertical clearances.
+
+[underline]#Indication:# The complex attribute encodes the vertical uncertainty associated with any vertical measurement.
+
+[underline]#Sub-attributes:#::
+*uncertainty fixed*::: see <<sec_28.26>>
+*uncertainty variable factor*::: see <<sec_28.27>>
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_29.41]]
+=== vessel speed limit
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *VESSEL SPEED LIMIT*. The maximum allowed rate of travel for a vessel in an area in knots.
+
+[underline]#Indication:# The complex attribute describes the speed limit for vessels in an area where speed is restricted.
+
+[underline]#Sub-attributes:#::
+*speed limit*::: see <<sec_27.165>>
+*speed units*::: see <<sec_27.168>>
+*vessel class*::: see <<sec_27.198>>
+
+[underline]#Remarks:#
+
+* The speed limit in an area may differ for different classes of vessel.
+
+|===
+
+[[sec_29.42]]
+=== zone of confidence
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *ZONE OF CONFIDENCE*. The overall indication of the quality of bathymetric data within an area based on the positional accuracy, survey equipment and coverage; optionally within a specified data range.
+
+[underline]#Indication:# The complex attribute defines the overall indication of the quality of bathymetric data, which may optionally be degraded over time.
+
+[underline]#Sub-attributes:#::
+*category of zone of confidence in data*::: see <<sec_27.74>>
+*fixed date range*::: see <<sec_29.4>>
+*horizontal position uncertainty*::: see <<sec_29.8>>
+*vertical uncertainty*::: see <<sec_29.40>>
+
+[underline]#Remarks:#
+
+* See <<sec_3.8;and!sec_24.5>> for encoding guidance for the population of the sub-complex attributes *horizontal position uncertainty* and *vertical uncertainty*.
+
+|===

@@ -413,7 +413,6 @@ In addition, the wreck itself should be encoded as a *Wreck* feature, with attri
 10+| *[underline]#Primitives:#* *Point, Curve, Surface*
 3+| _Real World_ 4+| _Paper Chart Symbol_ 3+| _ECDIS Symbol_
 
-
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| category of obstruction 2+| (CATOBS) 3+|
 1: snag/stump +

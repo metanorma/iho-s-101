@@ -1,0 +1,494 @@
+
+[[sec_21]]
+== Geo Features -- Radar, Radio
+
+[[sec_21.1]]
+=== Automatic Identification System (AIS) aids to navigation (see S-4 -- B-480-484)
+
+AIS signals used as an aid to navigation may:
+
+* actually be transmitted from a physical aid to navigation, or appear to be transmitted from a physical aid to navigation but is actually transmitted from an AIS base station (Physical AIS aid to navigation); or
+* be transmitted from an AIS base station to represent an aid to navigation where a physical aid to navigation does not exist (Virtual AIS aid to navigation).
+
+It is not required to encode AIS information on ENCs, as ENCs are intended to be used in conjunction with ECDIS as part of an Integrated Navigation System (INS), in which AIS targets are displayed when in range. However, Producing Authorities may wish to indicate the presence of a physical or virtual AIS aid to navigation to aid in the route planning process or for use in ECS or other navigation systems.
+
+[[sec_21.2]]
+=== Physical AIS aid to navigation
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *PHYSICAL AIS AID TO NAVIGATION*. An Automatic Identification System (AIS) message 21 transmitted from a physical Aid to Navigation, or transmitted from an AIS station for an Aid to Navigation which physically exists. (Adapted from IALA Recommendation A-126).
+10+| *[underline]#S-101 Geo Feature:#* *Physical AIS Aid to Navigation*
+10+| *[underline]#Primitives:#* *Point*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| estimated range of transmission
+2+| (ESTRNG) 3+| | RE | 0,1
+
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage
+2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twentyone_two]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twentyone_two]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twentyone_two]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| MMSI code 2+| 3+| Unique 9 digit code | TE | 0,1
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+5: periodic/intermittent +
+7: temporary | EN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twentyone_two]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twentyone_two]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Equipment 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Cardinal Beacon*, *Cardinal Buoy*, *Bridge*, *Building*, *Crane*, *Conveyor*, *Daymark*, *Dolphin*, *Emergency Wreck Marking Buoy*, *Fishing Facility*, *Floating Dock*, *Fortified Structure*, *Hulk*, *Installation Buoy*, *Isolated Danger Beacon*, *Isolated Danger Buoy*, *Landmark*, *Lateral Beacon*, *Lateral Buoy*, *Light Float*, *Light Vessel*, *Mooring Buoy*, *Offshore Platform*, *Pile*, *Pipeline Overhead*, *Pontoon*, *Pylon/Bridge Support*, *Safe Water Beacon*, *Safe Water Buoy*, *Shoreline Construction*, *Silo/Tank*, *Span Fixed*, *Span Opening*, *Special Purpose/General Beacon*, *Special Purpose/General Buoy*, *Structure Over Navigable Water*, *Wind Turbine*, *Wreck* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twentyone_two]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# S 17
+
+[[sec_21.2.1]]
+==== Physical Automatic Identification System (AIS) aids to navigation (see S-4 -- B-480-484)
+
+If it is required to encode a physical AIS aid to navigation, it must be done using the feature *Physical AIS Aid to Navigation*.
+
+[underline]#Remarks:#
+
+* Physical AIS aids to navigation must be encoded, where required, using the geometry of the physical aid to navigation from which the AIS signal is, or appears to be, transmitted. If it is required to encode the actual location from which the signal is transmitted for a physical AIS aid to navigation where the signal is transmitted from another location, it must be done using a *Radio Station* feature (see <<sec_21.4>>), with attribute stem:[bb "category of radio station" = 16] (AIS base station).
+* The unique Maritime Mobile Service Identity (MMSI) code for the physical AIS aid to navigation should be encoded, where known, using the attribute *MMSI code*.
+* Where populated, the attribute *estimated range of transmission* for *Physical AIS Aid to Navigation* provides the Mariner with an approximate distance from the position of the aid that the broadcast signal will generate the display of the AIS symbol on the ECDIS.
+
+[underline]#Distinction:# Radar Station; Radio Station; Radio Calling-In Point; Virtual AIS Aid to Navigation.
+
+[[sec_21.3]]
+=== Virtual AIS aid to navigation
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *VIRTUAL AIS AID TO NAVIGATION*. An Automatic Identification System (AIS) message 21 transmitted from an AIS station to simulate on navigation systems an Aid to Navigation which does not physically exist. (Adapted from IALA Recommendation A-126).
+10+| *[underline]#S-101 Geo Feature:#* *Virtual AIS Aid to Navigation* *_(NEWOBJ)_*
+10+| *[underline]#Primitives:#* *Point*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| estimated range of transmission
+2+| (ESTRNG) 3+| | RE | 0,1
+
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage
+2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twentyone_three]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twentyone_three]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twentyone_three]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| MMSI code 2+| 3+| Unique 9 digit code | TE | 0,1
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+5: periodic/intermittent +
+7: temporary | EN | 0,1
+3+| virtual AIS aid to navigation type
+2+| 3+|
+1: north cardinal +
+2: east cardinal +
+3: south cardinal +
+4: west cardinal +
+5: port lateral (IALA A) +
+6: starboard lateral (IALA A) +
+7: port lateral (IALA B) +
+8: starboard lateral (IALA B) +
+9: isolated danger +
+10: safe water +
+11: special purpose +
+12: emergency wreck marking | EN
+| 1,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twentyone_three]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twentyone_three]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twentyone_three]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# S 18
+
+[[sec_21.3.1]]
+==== Virtual Automatic Identification System (AIS) aids to navigation (see S-4 -- B-480-484)
+
+If it is required to encode a virtual AIS aid to navigation, it must be done using the feature *Virtual AIS Aid to Navigation*.
+
+[underline]#Remarks:#
+
+* Virtual AIS aids to navigation should only be encoded where it is known that the Virtual aid is intended to be permanent, or deployed for a specified fixed period. Where it is known that a Virtual AIS aid to navigation is moved or withdrawn on a regular basis and/or at short notice, such that implementing these changes through the application of ENC Updates is impractical, the Virtual aid should not be encoded.
+* If the virtual AIS aid to navigation is intended to serve a purpose other than the types defined in attribute *virtual AIS aid to navigation type*, it should be encoded using stem:[bb "virtual AIS aid to navigation type" = 11] (special purpose), and the purpose encoded using the complex attribute *information*, sub-attribute *text*.
+* The unique Maritime Mobile Service Identity (MMSI) code for the virtual AIS aid to navigation should be encoded, where known, using the attribute *MMSI code*.
+* Where populated, the attribute *estimated range of transmission* for *Virtual AIS Aid to Navigation* provides the Mariner with an approximate distance from the position of the virtual aid that the broadcast signal will generate the display of the AIS symbol on the ECDIS.
+
+[underline]#Distinction:# Physical AIS Aid to Navigation; Radar Station; Radio Station; Radio Calling-In Point.
+
+[[sec_21.4]]
+=== Radio station
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *RADIO STATION*. A place equipped to transmit radio waves. Such a station may be either stationary or mobile, and may also be provided with a radio receiver. (Adapted from IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Radio Station (RDOSTA)*
+10+| *[underline]#Primitives:#* *Point*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| call sign 2+| (CALSGN) 3+| | TE | 0,1
+
+3+| category of radio station 2+| (CATROS) 3+|
+5: radio direction-finding station +
+10: differential GNSS +
+11: Toran +
+14: Chaika +
+19: radio telephone station +
+20: AIS base station | EN | 0,*
+3+| communication channel 2+| (COMCHA) 3+| | TE | 0,*
+
+3+| estimated range of transmission
+2+| (ESTRNG) 3+| | RE | 0,1
+
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage
+2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twentyone_four]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twentyone_four]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twentyone_four]
+
+3+| frequency pair
+2+| 3+| | C | 0,1
+
+3+| frequency shore station receives 2+| 3+| | (S) IN | 0,1
+
+3+| frequency shore station transmits 2+| (SIGFRQ) 3+| | (S) IN | 1,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+4: not in use +
+5: periodic/intermittent +
+7: temporary +
+8: private | EN | 0,*
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twentyone_four]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twentyone_four]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twentyone_four]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# S 10-16
+
+[[sec_21.4.1]]
+==== Radio stations (see S-4 -- B-480-484)
+
+Transmissions from radio stations may provide Mariners with a line of position. Most radio position fixing systems require Radio Direction Finding (RDF) equipment to determine the bearing of the transmitting device; such equipment is generally no longer fitted on vessels. The exception is "emergency use only" VHF-based direction finding services (which do not use RDF equipment). Consequently, the following radio position-fixing stations are now obsolete and there is no longer any value in encoding them on ENCs:
+
+* Circular (non-directional) (RC), directional (RD) and rotating pattern (RW) marine radiobeacons;
+* Consol beacons (Consol);
+* Aeronautical radiobeacons (Aero RC);
+* Radio direction-finding stations (except VHF-based emergency stations) (RG);
+* Coast Radio Stations providing 'QTG' service (R).
+The feature "radio station" is used to encode the point of transmission of the signal.
+
+If it is required to encode a radio station, it must be done using the feature *Radio Station*.
+
+[underline]#Remarks:#
+
+* The *Radio Station* must only be used to encode the technical equipment itself, independent of the building or structure in which it is installed. If it is required to encode the building or structure (for example mast, tower, radar dome), it must be done using an appropriate feature (for example *Building*, *Landmark*). There is no requirement to establish a Structure/Equipment association between the *Radio Station* feature and the structure in which it is installed.
+* Further information (for example transmission characteristic) may be encoded using the complex attribute *information* (see <<sec_2.4.6>>).
+* Each VHF-channel should be indicated, using the attribute *communication channel* (see <<sec_27.77>>). Alternately, if the same VHF-channel(s) apply to multiple features in the dataset, this should be indicated through an associated instance of the information type *Contact Details*, attribute *communication channel* (see <<sec_24.1>>).
+* If it is required to encode a DGPS station, it must be done using *Radio Station*, with attribute stem:[bb "category of radio station" = 10] (Differential GNSS).
+* Where required, the complex attribute *frequency pair*, sub-attributes *frequency shore station receives* and *frequency shore station transmits*, must be quoted in Hertz, for example a signal frequency of 950 MHz must be encoded as _950000000_.
+
+[[sec_21.4.2]]
+==== Radio direction-finding stations (see S-4 -- B-483)
+
+If it is required to encode a radio direction-finding station, it must be done using a *Radio Station* feature, with attribute stem:[bb "category of radio station" = 5] (radio direction-finding station). The identification signal may be encoded using the attribute *call sign*.
+
+[underline]#Remarks:#
+
+* Direction--finding is now only provided as an emergency service by VHF.
+
+[underline]#Distinction:# Physical AIS Aid to Navigation; Radar Station; Radio Calling-In Point; Virtual AIS Aid to Navigation.
+
+[[sec_21.5]]
+=== Radar transponder beacon
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *RADAR TRANSPONDER BEACON*. A transponder beacon transmitting a coded signal on radar frequency, permitting an interrogating craft to determine the bearing and range of the transponder. (IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Radar Transponder Beacon (RTPBCN)*
+10+| *[underline]#Primitives:#* *Point*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| category of radar transponder beacon 2+| (CATRTB) 3+|
+1: ramark, radar beacon transmitting continuously +
+2: racon, radar transponder beacon +
+3: leading racon/radar transponder beacon | EN | 1,1
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage
+2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twentyone_five]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twentyone_five]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twentyone_five]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| radar wave length
+2+| _(RADWAL)_ 3+| | C | 0,2
+
+3+| radar band 2+| 3+| | (S) TE | 1,1
+
+3+| wave length value 2+| 3+| | (S) RE | 1,1
+
+3+| sector limit
+2+| 3+| | C | 0,1
+
+3+| sector limit one 2+| _(SECTR1)_ 3+| | (S) C | 1,1
+
+3+| sector bearing 2+| 3+| *sector limit one/sector bearing* stem:[!=] *sector limit two/sector bearing* (_0_ = _360_) | (S) RE | 1,1
+
+3+| sector line length 2+| 3+| | (S) RE | 0,1
+
+3+| sector limit two 2+| _(SECTR2)_ 3+| | (S) C | 1,1
+
+3+| sector bearing 2+| 3+| *sector limit two/sector bearing* stem:[!=] *sector limit one/sector bearing* (_0_ = _360_) | (S) RE | 1,1
+
+3+| sector line length 2+| 3+| | (S) RE | 0,1
+
+3+| signal group 2+| (SIGGRP) 3+| | TE | 0,1
+
+3+| signal sequence
+2+| _(SIGSEQ)_ 3+| | C | 0,* (ordered)
+
+3+| signal duration 2+| 3+| | (S) RE | 1,1
+
+3+| signal status
+2+| 3+|
+1: lit/sound +
+2: eclipsed/silent | (S) EN | 1,1
+
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+4: not in use +
+5: periodic/intermittent +
+7: temporary +
+8: private | EN | 0,*
+3+| value of maximum range
+2+| (VALMXR) 3+| | RE | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twentyone_five]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twentyone_five]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Equipment 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Cardinal Beacon*, *Cardinal Buoy*, *Bridge*, *Building*, *Crane*, *Conveyor*, *Daymark*, *Dolphin*, *Emergency Wreck Marking Buoy*, *Fishing Facility*, *Floating Dock*, *Fortified Structure*, *Hulk*, *Installation Buoy*, *Isolated Danger Beacon*, *Isolated Danger Buoy*, *Landmark*, *Lateral Beacon*, *Lateral Buoy*, *Light Float*, *Light Vessel*, *Mooring Buoy*, *Offshore Platform*, *Pile*, *Pipeline Overhead*, *Pontoon*, *Pylon/Bridge Support*, *Safe Water Beacon*, *Safe Water Buoy*, *Shoreline Construction*, *Silo/Tank*, *Span Fixed*, *Span Opening*, *Special Purpose/General Beacon*, *Special Purpose/General Buoy*, *Structure Over Navigable Water*, *Wind Turbine*, *Wreck* 2+| Association | 0,*
+| Component of 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twentyone_five]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# S 2-3
+
+[[sec_21.5.1]]
+==== Radar beacons (see S-4 -- B-486)
+
+Radar beacons are transmitters operating in the marine radar frequency band. The signals produce a characteristic line on a vessel's radar display enabling the Mariner to determine their position with greater certainty than would be possible by means of a normal radar display alone.
+
+If it is required to encode a radar beacon, it must be done using the feature *Radar Transponder Beacon*.
+
+[underline]#Remarks:#
+
+* The *Radar Transponder Beacon* must only be used to encode the technical equipment itself, independent of the building or structure in which it is installed. If it is required to encode the building or structure (for example mast, tower, radar dome), it must be done using an appropriate feature (for example *Building*, *Landmark*).
+* The attribute *signal group* is used to encode Morse identification letter(s) for the radar beacon, where known.
+* Leading raconsare established such that, when their bearing lines are coincident on a vessel's radar display, the bearing serves to indicate the track to be followed. If it is required to encode the bearing line and the recommended track for leading racons, it must be done as described in <<sec_15.1>>. Where the bearing line coincides with a leading line defined by lights or other visual features making up a range system, navigation lines and recommended tracks must not be duplicated. The features making up the range system should be associated with a feature *Range System* (see <<sec_15.6>>) using the association *Range System Aggregation* (see <<sec_25.13>>).
+
+NOTE: All features comprising a range system must have the same value populated for the attribute *scale minimum* (see <<sec_2.5.9>>).
+
+* If, for some reason, the radar transponder beacon signal is obscured between certain bearings, this information should be encoded using the complex attribute *sector limit* to encode the "visible" sector, as for lights (see <<sec_19.3.1.1>>).
+* The sweep period may be encoded using the complex attribute *information* (see <<sec_2.4.6>>).
+
+[underline]#Distinction:# Radar Line; Radar Range; Radar Station.
