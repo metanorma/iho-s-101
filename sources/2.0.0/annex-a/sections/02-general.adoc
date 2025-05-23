@@ -24,7 +24,7 @@ S-101 makes use of the following feature types:
 [[sec_2.1.1]]
 ==== Multiple features
 
-On some sources, multiple features in close proximity are generalised to a single feature with a text string indicating the presence of the other features. In such cases, where it is considered that this information may be useful for visual navigation, one feature of the appropriate class should be encoded and the true number of features, if known, must be encoded using the complex attribute *multiplicity of features*, sub-attribute *number of features*, with Boolean sub-attribute *multiplicity known* set to _True_ (see <<sec_27.131>>). If the true number of features is not known, *multiplicity of features* Boolean sub-attribute *multiplicity known* must be populated as _False_. If *multiplicity of features* is not an allowable attribute for the feature, multiplicity may be indicated using the complex attribute *information*, sub-attribute *text* (for example _3 trees_. If the true number of features is not known, the text "__more than one__" should be encoded using *information* (*text*).
+On some sources, multiple features in close proximity are generalised to a single feature with a text string indicating the presence of the other features. In such cases, where it is considered that this information may be useful for visual navigation, one feature of the appropriate class should be encoded and the true number of features, if known, must be encoded using the complex attribute *multiplicity of features*, sub-attribute *number of features*, with Boolean sub-attribute *multiplicity known* set to _True_ (see <<sec_27.131>>). If the true number of features is not known, *multiplicity of features* Boolean sub-attribute *multiplicity known* must be populated as _False_. If *multiplicity of features* is not an allowable attribute for the feature, multiplicity may be indicated using the complex attribute *information*, sub-attribute *text* (for example _3 trees_. If the true number of features is not known, the text "_more than one_" should be encoded using *information* (*text*).
 
 Multiple submerged features in close proximity, which have been generalised to a single feature, should not have the multiplicity indicated unless the multiplicity has some significance to safe navigation. This is so as to minimise the presence of ECDIS "information" symbols, which may contribute to screen clutter (see <<sec_2.4.6>>).
 
@@ -186,7 +186,7 @@ The binding of attributes to feature types, the binding of attributes to attribu
 
 In order to control the number of allowed attribute values or sub-attribute instances within a complex, S-100 uses the concept of multiplicity. This defines lower and upper limits for the number of values, whether the order of the instances has meaning and if an attribute is mandatory or not. Common examples are shown in <<table_2-2>> below:
 
-Format : __MinOccurs__, _MaxOccurs_ (if \* Infinite) _(ordered)_ -- sequential
+Format : _MinOccurs_, _MaxOccurs_ (if ++*++ Infinite) _(ordered)_ -- sequential
 
 [[table_2-2]]
 .Multiplicity - Examples
@@ -208,7 +208,7 @@ The function of the S-57 attribute type "List" has been replaced by Enumeration 
 ====
 
 [example]
-A red and white tower is encoded with attribute *colour* = _3_ (red) and *colour* = _1_ (white). Within this document, this example would be indicated as "*colour* = __3,1__".
+A red and white tower is encoded with attribute stem:[bb "colour" = 3] (red) and stem:[bb "colour" = 1] (white). Within this document, this example would be indicated as "*colour* = _3,1_".
 
 [[sec_2.4.2]]
 ==== Simple attribute types
@@ -217,7 +217,7 @@ Each simple attribute in S-101 is assigned to one of 9types:
 
 EN:: Enumeration: A fixed list of valid identifiers of named literal values. Attributes of an enumeration type may only take values from this list. The complete list of allowable values for S-101 enumeration type attributes is included in <<sec_27;and!sec_28;and!sec_30>>; these values may be further constrained for the binding of the attribute to specific feature and information types.
 
-BO:: Boolean: A value representing binary logic. The value can be either (1) __True__, (2) _False_ or empty (Unknown). The "default state" for Boolean type attributes, unless stated otherwise in this document, is _False_ for instances where the attribute is allowable for a feature, is non-mandatory and has not been populated (and is therefore not included for the feature instance). An empty (Unknown) value should only be populated where the Boolean type attribute is mandatory but the value (_True_ or _False_) is not known to the encoder.
+BO:: Boolean: A value representing binary logic. The value can be either (1) _True_, (2) _False_ or empty (Unknown). The "default state" for Boolean type attributes, unless stated otherwise in this document, is _False_ for instances where the attribute is allowable for a feature, is non-mandatory and has not been populated (and is therefore not included for the feature instance). An empty (Unknown) value should only be populated where the Boolean type attribute is mandatory but the value (_True_ or _False_) is not known to the encoder.
 
 RE:: Real: A signed Real (floating point) number consisting of a mantissa and an exponent. The representation of a real is encapsulation and usage dependent.
 +
@@ -299,7 +299,7 @@ Some attributes are mandatory and must be populated for a given feature type. Th
 * Certain features make no logical sense without specific attributes; and
 * Some attributes are required for safety of navigation.
 
-In <<table_2-3>> below, mandatory attributes for which this is relevant for a feature (that is, the attribute should not be populated with an empty (null) value) are indicated by the superscript \*.
+In <<table_2-3>> below, mandatory attributes for which this is relevant for a feature (that is, the attribute should not be populated with an empty (null) value) are indicated by the superscript ++*++.
 
 Within this document, mandatory attributes (multiplicity 1,1; 1,n (n>1); or 1,*) are identified in the description of each feature type. For easy reference, <<table_2-3>> summarises the mandatory attributes for each feature type (note that mandatory sub-attributes of complex attributes are not included in this Table -- see NOTE 2 below Table 2-3):
 
@@ -447,7 +447,7 @@ _(point features only)_:: for *Radio Calling-In Point*
 
 _one of_:: for *Cable Overhead*, *Obstruction*, *Wreck*
 
-\* __over navigable water__, in the context of ENC encoding, is defined as areas covered by Skin of the Earth features *Depth Area*, *Dredged Area*, or *Unsurveyed Area*.
+++*++ _over navigable water_, in the context of ENC encoding, is defined as areas covered by Skin of the Earth features *Depth Area*, *Dredged Area*, or *Unsurveyed Area*.
 
 Compilers must consider these conditional circumstances when encoding features for ENC, as well as any additional information given in the feature class descriptions in this document. For example, when encoding a *Cation Area*, the mandatory attributes are _at least one of_ *information* or *pictorial representation* -- if the relevant information is textual, *information* must be populated and there is no requirement to populate *pictorial representation*, which therefore should not be populated with an empty (null) value, as it is not mandatory in this case.
 ====
@@ -546,12 +546,12 @@ When encoding dates using the attributes *dredged date*, *fixed date range*, *re
 
 * Full date: YYYYMMDD
 * No specific day required: YYYYMM--
-* No specific month required: YYYY----
+* No specific month required: pass:[YYYY----]
 
 If it is required to encode periodic/recurring dates using the attributes *date fixed* and *periodic date range*, the following values must apply in conformance to S-100.
 
-* No specific year required, same day each year: ----MMDD
-* No specific year required, same month each year: ----MM--
+* No specific year required, same day each year: pass:[----MMDD]
+* No specific year required, same month each year: pass:[----MM--]
 
 Notes: YYYY = calendar year; MM = month; DD = day.
 
@@ -563,18 +563,18 @@ Encoded date ranges are inclusive, see S-100 Part 3, clause 3-8.3. For example:
 
 *fixed date range*/*date end* = _20221022_ Ends at 240000 hours on 22 October 2022.
 
-*periodic date range*/*period start* = _----09--_ Commences annually at 000000 hours on 01 September.
+*periodic date range*/*period start* = _pass:[----09--]_ Commences annually at 000000 hours on 01 September.
 
-*periodic date range*/*date end* = _----09--_ Ends annually at 240000 hours on 30 September.
+*periodic date range*/*date end* = _pass:[----09--]_ Ends annually at 240000 hours on 30 September.
 
 Where the temporal attributes have been encoded for any feature that is the structure component of a *Structure/Equipment* feature association (see <<sec_25.16>>), all other component features within the relationship must not extend beyond the temporal attribute values encoded for the structure feature.
 
 [[sec_2.4.8.1]]
 ===== Seasonal features
 
-If it is required to show seasonality of features, it must be done using the attribute *status* = _5_ (periodic/intermittent). If it is required to encode the start and/or end dates of the season, this must be done using the complex attribute *periodic date range* (see <<sec_2.4.8;and!sec_29.15>>).
+If it is required to show seasonality of features, it must be done using the attribute stem:[bb "status" = 5] (periodic/intermittent). If it is required to encode the start and/or end dates of the season, this must be done using the complex attribute *periodic date range* (see <<sec_2.4.8;and!sec_29.15>>).
 
-Where there is a requirement to indicate the beginning or end date of a seasonal occurrence as the "last day in February", consideration must be given to allowing for the extra day (29^th^ February) added on leap years. Encoding *periodic date range*, sub-attribute *date end* with the value ----_0228_ may result in erroneous indication of seasonality in the ECDIS on the 29^th^ February for leap years, while encoding the value ----_0229_ may similarly result in ECDIS performance issues for non-leap years. Encoders are advised, therefore, that where it is required to encode the end of seasonality as the last day in February, this must be done, similar to any other month of the year, by encoding the value of *periodic date range*, sub-attribute *date end* as --_--02--_. Where the beginning of seasonality is the last day in February, this must be done by encoding the value of *periodic date range*, sub-attribute *date start* in accordance with the next occurrence of the date (--_--0228_ if the next occurrence is a non-leap year or --_--0229_ if the next occurrence is a leap year). The ENC dataset must be amended by ENC Update (see <<sec_31>>) where the date is required to be changed. For instance, if the value is --_--0228_ and the next occurrence is a leap year, an ENC Update must be created to amend the date to --_--0229_.
+Where there is a requirement to indicate the beginning or end date of a seasonal occurrence as the "last day in February", consideration must be given to allowing for the extra day (29^th^ February) added on leap years. Encoding *periodic date range*, sub-attribute *date end* with the value pass:[----]_0228_ may result in erroneous indication of seasonality in the ECDIS on the 29^th^ February for leap years, while encoding the value pass:[----]_0229_ may similarly result in ECDIS performance issues for non-leap years. Encoders are advised, therefore, that where it is required to encode the end of seasonality as the last day in February, this must be done, similar to any other month of the year, by encoding the value of *periodic date range*, sub-attribute *date end* as --_--02--_. Where the beginning of seasonality is the last day in February, this must be done by encoding the value of *periodic date range*, sub-attribute *date start* in accordance with the next occurrence of the date (--_--0228_ if the next occurrence is a non-leap year or --_--0229_ if the next occurrence is a leap year). The ENC dataset must be amended by ENC Update (see <<sec_31>>) where the date is required to be changed. For instance, if the value is --_--0228_ and the next occurrence is a leap year, an ENC Update must be created to amend the date to --_--0229_.
 
 Alternatively, if encoders consider that there is no regulatory requirement to update the start date of a period for leap years, the value of *date start* may be populated as --__--03--__, indicating a beginning date of 01 March each year.
 
@@ -583,7 +583,7 @@ Alternatively, if encoders consider that there is no regulatory requirement to u
 
 If it is required to show the beginning and end of the active time period of a feature, it must be encoded using the attributes *time of day end* (see <<sec_27.182>>)and *time of day start* (see <<sec_27.183>>). The attribute descriptions for *time of day end* and *time of day start* state that the format must conform to ISO 8601, and this format must be used (see also <<sec_2.4.2>>).
 
-Time is preferably expressed as Universal Time Coordinated (UTC). Where required, this must be done using the format __hhmmssZ__, with 2 digits for the hour (_hh_), 2 digits for the minutes (_mm_) and 2 digits for the seconds (_ss_); and "__Z__" mandatory.
+Time is preferably expressed as Universal Time Coordinated (UTC). Where required, this must be done using the format _hhmmssZ_, with 2 digits for the hour (_hh_), 2 digits for the minutes (_mm_) and 2 digits for the seconds (_ss_); and "__Z__" mandatory.
 
 [example]
 _183059Z_ to represent a UTC time of 30 minutes and 59 seconds after 6 o'clock in the evening
@@ -613,7 +613,7 @@ A feature service is available under normal operation status 24 hours/day on Mon
     *schedule by day of week*
         *category of schedule* = _1_ (normal operation)
         *time intervals by day of week*
-            *day of week* = __2__,_4_ (Monday, Wednesday)
+            *day of week* = _2_,_4_ (Monday, Wednesday)
             *day of week is range* = _0_ (false -- indicates that *day of week* includes Monday and Wednesday only)
 
         *time intervals by day of week*
@@ -631,14 +631,14 @@ A feature service is available under normal operation status 24 hours/day on Mon
 
 If it is required to encode multiple colours on a feature, they must be encoded using the attributes *colour pattern* and *colour* as follows:
 
-* For horizontal stripes (*colour pattern* = _1_), the values for *colour* must be ordered such that the first colour is the top-most, and subsequent colours follow sequentially from top to bottom. For example, *colour* = _3,1_ to encode a red stripe above a white stripe.
-* For vertical stripes (*colour pattern* = _2_), the values for *colour* must be ordered such that the first colour is the left-most, and subsequent colours follow sequentially from left to right. For example, *colour* = _3,1,3_ to encode red, white, red vertical stripes
+* For horizontal stripes (stem:[bb "colour pattern" = 1]), the values for *colour* must be ordered such that the first colour is the top-most, and subsequent colours follow sequentially from top to bottom. For example, stem:[bb "colour" = 3,1] to encode a red stripe above a white stripe.
+* For vertical stripes (stem:[bb "colour pattern" = 2]), the values for *colour* must be ordered such that the first colour is the left-most, and subsequent colours follow sequentially from left to right. For example, stem:[bb "colour" = 3,1,3] to encode red, white, red vertical stripes
 
-* For diagonal stripes (*colour pattern* = _3_), the values for *colour* must be ordered such that the first colour is the top-left-most, and subsequent colours follow sequentially from top left to bottom right. Forexample,*colour* = _1,3,1,3,1_ to encode white, red, white, red, white diagonal stripes.
+* For diagonal stripes (stem:[bb "colour pattern" = 3]), the values for *colour* must be ordered such that the first colour is the top-left-most, and subsequent colours follow sequentially from top left to bottom right. For example, stem:[bb "colour" = 1,3,1,3,1] to encode white, red, white, red, white diagonal stripes.
 
-* For squares (*colour pattern* = _4_), the values for *colour* must be ordered such that the first colour is the top-left-most square. Subsequent colours follow sequentially from left to right along the top row then repeated for subsequent rows until the bottom right-most square is reached. For example, *colour* = _1,3,3,1_ to encode white, red squares on the top row and red, white squares on the bottom row.
+* For squares (stem:[bb "colour pattern" = 4]), the values for *colour* must be ordered such that the first colour is the top-left-most square. Subsequent colours follow sequentially from left to right along the top row then repeated for subsequent rows until the bottom right-most square is reached. For example, stem:[bb "colour" = 1,3,3,1] to encode white, red squares on the top row and red, white squares on the bottom row.
 
-* For border stripes (*colour pattern* = _6_), the values for *colour* must be ordered such that the first colour is the border stripe, and the second colour that of the background. For example, *colour* = _3,1_ to encode a red border stripe on a white background. Where a border stripe is combined with other patterns, an assessment as to which pattern is most important to marine navigation must be made, and the appropriate value populated in *colour pattern*.
+* For border stripes (stem:[bb "colour pattern" = 6]), the values for *colour* must be ordered such that the first colour is the border stripe, and the second colour that of the background. For example, stem:[bb "colour" = 3,1] to encode a red border stripe on a white background. Where a border stripe is combined with other patterns, an assessment as to which pattern is most important to marine navigation must be made, and the appropriate value populated in *colour pattern*.
 
 Note that the attribute *colour pattern* is mandatory for any feature (except lights) that has more than one colour.
 
@@ -829,12 +829,12 @@ If it is required to encode a geographic name for which there is no existing fea
 
 Geographic names can be left in their original language in a non-English iteration of the sub-attribute *name*, or transliterated or transcribed and used in an English iteration of the sub-attribute *name*, in which case the original name should be populated in an additional iteration of *feature name* with the mandatory sub-attribute *language* populated with the relevant three-letter language code in accordance with ISO 639-2/T. Examples of encoding of *feature name* are included in <<table_2-5>> below. General conventions for the population of *feature name* for an encoded feature instance are as follows:
 
-* Where it is intended that a name of a feature instance is to be displayed in the ECDIS, one or more iterations of *feature name* must be encoded for the feature, with exactly one of these instances having the sub-attribute *name usage* = _1_ (default name display). This should normally be the English version of the name (mandatory attribute *language* = _eng_), however this is at the discretion of the Data Producer.
-* Where only a single instance of *feature name* and having sub-attribute *name usage* = _1_ is encoded for a feature instance, this name will be displayed in both the "default" ECDIS language setting and the "alternate" ECDIS language setting.
+* Where it is intended that a name of a feature instance is to be displayed in the ECDIS, one or more iterations of *feature name* must be encoded for the feature, with exactly one of these instances having the sub-attribute stem:[bb "name usage" = 1] (default name display). This should normally be the English version of the name (mandatory attribute *language* = _eng_), however this is at the discretion of the Data Producer.
+* Where only a single instance of *feature name* and having sub-attribute stem:[bb "name usage" = 1] is encoded for a feature instance, this name will be displayed in both the "default" ECDIS language setting and the "alternate" ECDIS language setting.
 * Multiple instances of *feature name* may be encoded for any language, and/or for multiple languages. Where multiple instances of *feature name* are encoded for a feature instance, they must be encoded as follows in order to ensure the desired ECDIS display in both the default and alternate ECDIS language display settings:
 
-** If the name is intended to be displayed in the "default" ECDIS display, exactly one of instance of *feature name* having the sub-attribute *name usage* = _1_ (default name display) must be included. Where other instances of *feature name* having the same value for the mandatory attribute *language* have been encoded, the attribute *name usage* must not be populated.
-** If an alternate language name is intended to be displayed in the "alternate" ECDIS language setting, at least one instance of *feature name* having attribute *language* populated with a value other than the "default" language must be encoded, and having the value for the sub-attribute *name usage* = _2_ (alternate name display). Only one *feature name* instance having *name usage* = _2_ can be encoded for a single language; and for all *feature name* instances having an instance(s) of *name usage* = _2_ there must be a feature instance having *name usage* = _1_ encoded as the "default" language instance.
+** If the name is intended to be displayed in the "default" ECDIS display, exactly one of instance of *feature name* having the sub-attribute stem:[bb "name usage" = 1] (default name display) must be included. Where other instances of *feature name* having the same value for the mandatory attribute *language* have been encoded, the attribute *name usage* must not be populated.
+** If an alternate language name is intended to be displayed in the "alternate" ECDIS language setting, at least one instance of *feature name* having attribute *language* populated with a value other than the "default" language must be encoded, and having the value for the sub-attribute stem:[bb "name usage" = 2] (alternate name display). Only one *feature name* instance having stem:[bb "name usage" = 2] can be encoded for a single language; and for all *feature name* instances having an instance(s) of stem:[bb "name usage" = 2] there must be a feature instance having stem:[bb "name usage" = 1] encoded as the "default" language instance.
 ** Where the language(s) selected by the Mariner as the "alternate" language(s) is different from the alternate language(s) encoded for a feature instance, the "default" name will be displayed at all times.
 ** If it is required to restrict the display of all instances of *feature name* encoded for a feature instance only to the ECDIS Pick Report, *name usage* must not be populated for any instance.
 ** All encoded instances of *feature name* will be included in the ECDIS Pick Report.
@@ -905,7 +905,7 @@ Geographic names should be encoded using *feature name* based on the following c
 . If it is required to encode an administrative area of international, national, provincial or municipal jurisdiction that may have legal inference, it must be done using an *Administration Area* feature, with the name encoded using *feature name*.
 . If it is required to encode a major city along the coast, it must be done using *Built-Up Area* or *Administration Area* features (see <<sec_6.1>>), with the name encoded using *feature name*.
 . If it is required to encode the name of a navigable river, lake or canal, it must be done using a *Sea Area/Named Water Area* feature, with the name encoded using *feature name*.
-. If it is required to encode the name of a beach and no intertidal area exists, it should be done using *feature name* for the section of sandy coast (*Coastline* with *nature of surface* = _4_ (sand)) representing the beach. If the extent of the beach cannot be determined from the source, then the name should be encoded using *Land Region*. When an intertidal area (*Depth Area*) exists in the area covered by the named beach, the name of the beach should be encoded using *feature name* for a *Sea Area* feature covering the intertidal area.
+. If it is required to encode the name of a beach and no intertidal area exists, it should be done using *feature name* for the section of sandy coast (*Coastline* with stem:[bb "nature of surface" = 4] (sand)) representing the beach. If the extent of the beach cannot be determined from the source, then the name should be encoded using *Land Region*. When an intertidal area (*Depth Area*) exists in the area covered by the named beach, the name of the beach should be encoded using *feature name* for a *Sea Area* feature covering the intertidal area.
 
 In all instances, if the exact extent of the feature to be named is known, a surface feature must be created. If the exact extent is not known, or the area is too small at the optimum display scale of the ENC dataset, an existing or specifically encoded point feature should be used to encode the geographic name.
 
@@ -1001,21 +1001,21 @@ h| FEATURE h| PRIMITIVE h| CONDITION h| scale minimum STEPS
 | *Bridge*                      | Curve/Surface
 | Covered by a surface *Depth Area*, *Dredged Area*, or *Unsurveyed Area* feature | 4
 | *Bridge* | Curve/Surface
-| If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ and covered by a surface *Land Area*, *Dock Area*, or *Lock Basin* feature
+| If stem:[bb "visual prominence" = 1] (visually conspicuous) or *radar conspicuous* = _True_ and covered by a surface *Land Area*, *Dock Area*, or *Lock Basin* feature
 | NOT SET
 | *Bridge*                  | Curve/Surface | | 1
 | *Building* | Point/Surface
-| If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ or *function* contains value _33_ (light support) | 3
+| If stem:[bb "visual prominence" = 1] (visually conspicuous) or *radar conspicuous* = _True_ or *function* contains value _33_ (light support) | 3
 | *Building* | Point/Surface
-| If *function* = _2_ (harbour masters office) or _3_ (customs office) or *visual prominence* = _2_ (not visually conspicuous) | 2
+| If stem:[bb "function" = 2] (harbour masters office) or _3_ (customs office) or stem:[bb "visual prominence" = 2] (not visually conspicuous) | 2
 | *Building* | Point/Surface | | 1
-| *Built-Up Area* | Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ or *category of built-up area* = _5_ (city) | NOT SET
+| *Built-Up Area* | Surface | If stem:[bb "visual prominence" = 1] (visually conspicuous) or *radar conspicuous* = _True_ or *category of built-up area* = _5_ (city) | NOT SET
 | *Built-up Area*   | Point/Surface | If *category of built-up area* = _4_ (town)   | 2
 | *Built-up Area*   | Point/Surface |                                               | 1
 | *Cable Area*      | Surface       | If *restriction* defined                      | 3
 | *Cable Area*      | Surface       |                                               | 2
 | *Cable Overhead*  | Curve         | Covered by an area *Depth Area*, *Dredged Area*, or *Unsurveyed Area* feature | 4
-| *Cable Overhead*  | Curve         | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
+| *Cable Overhead*  | Curve         | If stem:[bb "visual prominence" = 1] (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
 | *Cable Overhead*  | Curve         | | 1
 | *Cable Submarine* | Curve         | | 3
 | *Canal*           | Curve         | | 1
@@ -1031,25 +1031,25 @@ h| FEATURE h| PRIMITIVE h| CONDITION h| scale minimum STEPS
 | *Contiguous Zone* | Curve/Surface | | 3
 | *Continental Shelf Area* | Curve/Surface | | 3
 | *Conveyor* | Curve/Surface | Covered by a surface *Depth Area*, *Dredged Area*, or *Unsurveyed Area* feature | 4
-| *Conveyor* | Curve/Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
+| *Conveyor* | Curve/Surface | If stem:[bb "visual prominence" = 1] (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
 | *Conveyor* | Curve/Surface | | 1
-| *Crane* | Point/Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
+| *Crane* | Point/Surface | If stem:[bb "visual prominence" = 1] (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
 | *Crane* | Point/Surface | | 1
 | *Current -- Non-Gravitational* | Point | | 3
 | *Custom Zone* | Surface | | 2
-| *Dam* | Curve/Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ or if seaward edge is coincident with the coastline (see <<sec_8.12>>) | NOT SET
+| *Dam* | Curve/Surface | If stem:[bb "visual prominence" = 1] (visually conspicuous) or *radar conspicuous* = _True_ or if seaward edge is coincident with the coastline (see <<sec_8.12>>) | NOT SET
 | *Dam* | Curve/Surface | | 1
 | *Daymark* | Point | If Equipment *scale minimum* should match that of Structure | 3
 | *Deep Water Route* | Surface | | 4
 | *Deep Water Route Centreline* | Curve | | NOT SET
 | *Deep Water Route Part* | Surface | | NOT SET
-| *Depth Contour* | Curve | If *value of depth contour* = _0_ (drying line) or _30_ | 4
+| *Depth Contour* | Curve | If stem:[bb "value of depth contour" = 0] (drying line) or _30_ | 4
 | *Depth Contour* | Curve | | 2
 | *Depth -- No Bottom Found* | Pointset | | 1
 | *Discoloured Water* | Point/Surface | | NOT SET
 | *Distance Mark* | Point | | 2
 | *Dock Area* | Surface | | 1
-| *Dolphin* | Point/ Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
+| *Dolphin* | Point/ Surface | If stem:[bb "visual prominence" = 1] (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
 | *Dolphin* | Point/Surface | | 1
 | *Dry Dock* | Surface | | 1
 | *Dumping Ground* | Point/Surface | If *restriction* defined | 3
@@ -1060,17 +1060,17 @@ h| FEATURE h| PRIMITIVE h| CONDITION h| scale minimum STEPS
 | *Exclusive Economic Zone* | Curve/Surface | | 3
 | *Fairway* | Surface | | 3
 | *Fairway System* | Surface | | 3
-| *Fence/Wall* | Curve | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
+| *Fence/Wall* | Curve | If stem:[bb "visual prominence" = 1] (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
 | *Fence/Wall* | Curve | | 1
 | *Ferry Route* | Curve/Surface | | 3
 | *Fishery Zone* | Surface | | 3
 | *Fishing Facility* | Point/Curve/Surface | | 2
 | *Fishing Ground* | Surface | | 1
-| *Floating Dock* | Curve | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
+| *Floating Dock* | Curve | If stem:[bb "visual prominence" = 1] (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
 | *Floating Dock* | Curve | | 1
 | *Floating Dock* | Surface | | NOT SET
 | *Fog Signal* | Point | If Equipment *scale minimum* should match that of Structure | 3
-| *Fortified Structure* | Point/Curve/Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
+| *Fortified Structure* | Point/Curve/Surface | If stem:[bb "visual prominence" = 1] (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
 | *Fortified Structure* | Point/Curve/Surface | | 1
 | *Foul Ground* | Point/ Surface | If *value of sounding* > _30_ | 4
 | *Foul Ground* | Point/ Surface | | NOT SET
@@ -1081,7 +1081,7 @@ h| FEATURE h| PRIMITIVE h| CONDITION h| scale minimum STEPS
 | *Harbour Area (Administrative)* | Surface | | 3
 | *Harbour Facility* | Point/Surface | | 1
 | *Helipad* | Point | | 1
-| *Hulk* | Point | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
+| *Hulk* | Point | If stem:[bb "visual prominence" = 1] (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
 | *Hulk* | Point | | 1
 | *Hulk* | Surface | | NOT SET
 | *Ice Area* | Surface | | 3
@@ -1094,9 +1094,9 @@ h| FEATURE h| PRIMITIVE h| CONDITION h| scale minimum STEPS
 | *Lake* | Surface | | 1
 | *Land Area* | Surface | | NOT SET
 | *Land Area* | Point/Curve | | 4
-| *Land Elevation* | Point | If *visual prominence* = _1_ (visually conspicuous) | NOT SET | *Land Elevation* | Point/Curve | | 3
+| *Land Elevation* | Point | If stem:[bb "visual prominence" = 1] (visually conspicuous) | NOT SET | *Land Elevation* | Point/Curve | | 3
 | *Land Region* | Point/Curve/Surface | | 1
-| *Landmark* | Point/Curve/Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ or *function* contains value _33_ (light support) | NOT SET
+| *Landmark* | Point/Curve/Surface | If stem:[bb "visual prominence" = 1] (visually conspicuous) or *radar conspicuous* = _True_ or *function* contains value _33_ (light support) | NOT SET
 | *Landmark* | Point/Curve/Surface | | 1
 | *Lateral Beacon* | Point | | 3 (see Notes 2, 3 & 4 above)
 | *Lateral Buoy* | Point | | 3 (see Notes 2, 3 & 4 above)
@@ -1106,36 +1106,36 @@ h| FEATURE h| PRIMITIVE h| CONDITION h| scale minimum STEPS
 | *Lock Basin* | Surface | | 1
 | *Log Pond* | Point/Surface | Covered by a surface *Depth Area*, *Dredged Area*, or *Unsurveyed Area* feature | 4 | *Log Pond* | Point/Surface | | 1
 | *Magnetic Variation* | Point/Curve/Surface | | 1
-| *Marine Farm/Culture* | Point/Curve/Surface | If *exposition of sounding* = _2_ (shoaler than range of the surrounding depth area) and stem:[bb "value of sounding" <= 30] | 4 | *Marine Farm/Culture* | Point/Curve/Surface | If *restriction* defined | 3 | *Marine Farm/Culture* | Point/Curve/Surface | | 1
+| *Marine Farm/Culture* | Point/Curve/Surface | If stem:[bb "exposition of sounding" = 2] (shoaler than range of the surrounding depth area) and stem:[bb "value of sounding" <= 30] | 4 | *Marine Farm/Culture* | Point/Curve/Surface | If *restriction* defined | 3 | *Marine Farm/Culture* | Point/Curve/Surface | | 1
 | *Marine Pollution Regulations Area* | Surface | | 3
 | *Military Practice Area* | Point/Surface | | 3
 | *Mooring Area* | Point/Surface | | 2
 | *Mooring Buoy* | Point | | 2 (see Note 3 above)
 | *Mooring Trot* | Surface | | 3
 | *Navigation Line* | Curve | | 3
-| *Obstruction* | Point/Curve/Surface | If *value of sounding* > _30_ and *exposition of sounding* ≠ _2_ (shoaler than range of the surrounding depth area) | 4
+| *Obstruction* | Point/Curve/Surface | If *value of sounding* > _30_ and stem:[bb "exposition of sounding" != 2] (shoaler than range of the surrounding depth area) | 4
 | *Obstruction* | Point/Curve/Surface | | NOT SET
 | *Offshore Platform* | Point/Surface | Covered by a surface *Offshore Production Area* | 3 | *Offshore Platform* | Point/Surface | | 4
 | *Offshore Production Area* | Surface | | 4
 | *Oil Barrier* | Curve | | 4
 | *Physical AIS Aid to Navigation* | Point | | 3 (see Notes 2, 3 & 4 above)
-| *Pile* | Point | Where used to mark position of *Light* feature in water | 4 (see Notes 3 & 4 above) | *Pile* | Point/Curve/Surface | If *visual prominence* = _1_ (visually conspicuous) | NOT SET
+| *Pile* | Point | Where used to mark position of *Light* feature in water | 4 (see Notes 3 & 4 above) | *Pile* | Point/Curve/Surface | If stem:[bb "visual prominence" = 1] (visually conspicuous) | NOT SET
 | *Pile* | Point/Curve/Surface | | 2
 | *Pilot Boarding Place* | Point/Surface | | 3
 | *Pilotage District* | Surface | | 3
 | *Pipeline Overhead* | Curve | Covered by a surface *Depth Area*, *Dredged Area*, or *Unsurveyed Area* feature | 4
-| *Pipeline Overhead* | Curve | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
+| *Pipeline Overhead* | Curve | If stem:[bb "visual prominence" = 1] (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
 | *Pipeline Overhead* | Curve | | 1
 | *Pipeline Submarine/On Land* | Curve | Covered by a surface *Depth Area*, *Dredged Area*, or *Unsurveyed Area* feature | 3
 | *Pipeline Submarine/On Land* | Curve | | 1
-| *Pontoon* | Curve | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
+| *Pontoon* | Curve | If stem:[bb "visual prominence" = 1] (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
 | *Pontoon* | Curve | | 2
 | *Pontoon* | Surface | | 4
 | *Precautionary Area* | Point/Surface | | NOT SET
-| *Production/Storage Area* | Point/Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
+| *Production/Storage Area* | Point/Surface | If stem:[bb "visual prominence" = 1] (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
 | *Production/Storage Area* | Point/Surface | | 1
 | *Pylon/Bridge Support* | Point/Surface | Covered by a surface *Depth Area*, *Dredged Area*, or *Unsurveyed Area* feature | NOT SET
-| *Pylon/Bridge Support* | Point/Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
+| *Pylon/Bridge Support* | Point/Surface | If stem:[bb "visual prominence" = 1] (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
 | *Pylon/Bridge Support* | Point/Surface | | 1
 | *Radar Line* | Curve | | 3
 | *Radar Range* | Surface | | 3
@@ -1156,7 +1156,7 @@ h| FEATURE h| PRIMITIVE h| CONDITION h| scale minimum STEPS
 | *River* | Curve | | 1
 | *River* | Surface | | 4
 | *Road* | Curve/Surface | | 1
-| *Runway* | Curve/Surface | If *visual prominence* = _1_ (visually conspicuous) | NOT SET
+| *Runway* | Curve/Surface | If stem:[bb "visual prominence" = 1] (visually conspicuous) | NOT SET
 | *Runway* | Curve/Surface | | 1
 | *Safe Water Beacon* | Point | | 3 (see Notes 2, 3 & 4 above)
 | *Safe Water Buoy* | Point | | 3 (see Notes 2, 3 & 4 above)
@@ -1170,7 +1170,7 @@ h| FEATURE h| PRIMITIVE h| CONDITION h| scale minimum STEPS
 | *Shoreline Construction* | Point/Curve/Surface | | NOT SET
 | *Signal Station Traffic* | Point/Surface | If Equipment *scale minimum* should match that of Structure | 1
 | *Signal Station Warning* | Point/Surface | If Equipment *scale minimum* should match that of Structure | 1
-| *Silo/Tank* | Point/Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
+| *Silo/Tank* | Point/Surface | If stem:[bb "visual prominence" = 1] (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
 | *Silo/Tank* | Point/Surface | | 1
 | *Slope Topline* | Curve | | 3
 | *Sloping Ground* | Point/Surface | | 3
@@ -1198,19 +1198,19 @@ h| FEATURE h| PRIMITIVE h| CONDITION h| scale minimum STEPS
 | *Tunnel* | Curve/Surface | Covered by a surface *Depth Area*, *Dredged Area*, or *Unsurveyed Area* feature | 4 | *Tunnel* | Curve/Surface | | 1
 | *Two-Way Route* | Surface | | 4
 | *Two-Way Route Part* | Surface | | NOT SET
-| *Underwater/Awash Rock* | Point | If *value of sounding* > _30_ and *exposition of sounding* ≠ _2_ (shoaler than range of the surrounding depth area) | 4
+| *Underwater/Awash Rock* | Point | If *value of sounding* > _30_ and stem:[bb "exposition of sounding" != 2] (shoaler than range of the surrounding depth area) | 4
 | *Underwater/Awash Rock* | Point | Covered by a surface *Obstruction* feature | 2 | *Underwater/Awash Rock* | Point | | NOT SET
-| *Vegetation* | Point/Curve/Surface | If *visual prominence* = _1_ (visually conspicuous) | NOT SET | *Vegetation* | Point/Curve/Surface | | 1
+| *Vegetation* | Point/Curve/Surface | If stem:[bb "visual prominence" = 1] (visually conspicuous) | NOT SET | *Vegetation* | Point/Curve/Surface | | 1
 | *Vessel Traffic Service Area* | Surface | | 3
 | *Virtual AIS Aid to Navigation* | Point | | 3 (see Notes 2, & 4 above)
 | *Water Turbulence* | Point/Curve/Surface | | 3
-| *Waterfall* | Point/Curve | If *visual prominence* = _1_ (visually conspicuous) | NOT SET
+| *Waterfall* | Point/Curve | If stem:[bb "visual prominence" = 1] (visually conspicuous) | NOT SET
 | *Waterfall* | Point/Curve | | 1
 | *Weed/Kelp* | Point/Surface | | 3
-| *Wind Turbine* | Point | On land and if *visual prominence* = _2_ (not visually conspicuous) or _3_ (prominent) | 1
+| *Wind Turbine* | Point | On land and if stem:[bb "visual prominence" = 2] (not visually conspicuous) or _3_ (prominent) | 1
 | *Wind Turbine* | Point | Covered by a surface *Offshore Production Area* | 3 | *Wind Turbine* | Point | | 4
-| *Wreck* | Point/Surface | If *category of wreck* = _1_ or (*value of sounding* > _30_ and *exposition of sounding* ≠ _2_ (shoaler than range of the surrounding depth area)) | 3
-| *Wreck* | Point/Surface | If *visual prominence* = _1_ (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
+| *Wreck* | Point/Surface | If stem:[bb "category of wreck" = 1] or (*value of sounding* > _30_ and stem:[bb "exposition of sounding" != 2] (shoaler than range of the surrounding depth area)) | 3
+| *Wreck* | Point/Surface | If stem:[bb "visual prominence" = 1] (visually conspicuous) or *radar conspicuous* = _True_ | NOT SET
 | *Wreck* | Point/Surface | | NOT SET
 
 4+| *METADATA FEATURES*
@@ -1404,8 +1404,7 @@ Example(s) of ECDIS symbology for the Feature.
 6: bock beer +
 7: wheat beer +
 8: pale ale +
-9: indian pale ale +
-| EN | 1,1
+9: indian pale ale | EN | 1,1
 
 3+| This section lists the full list of allowable attributes for the S-101 feature. Attributes are listed in alphabetical order. Sub-attributes (Type prefix (S)) of complex (Type C) attributes are listed in alphabetical order and indented directly under the entry for the complex attribute (see below for example). Note that a complex attribute may have simple or complex attributes as sub-complex attributes.
 2+| This section liststhe corresponding S-57 attribute acronym. A blank cell indicates no corresponding S-57 acronym.

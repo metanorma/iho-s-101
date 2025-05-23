@@ -121,7 +121,7 @@ Undersea features and sea areas in general, including intertidal areas, may be i
 * This feature has a use similar to that of the feature *Land Region* (see <<sec_5.11>>), but for the sea.
 * A *Sea Area/Named Water Area* feature of type surface should be bounded, if possible, by existing curves used by other features (for example *Depth Contour*, *Coastline*). If necessary, however, this surface may be bounded by other curves created to close the surface, or to describe a new surface.
 * *Sea Area/Named Water Area* features of type surface may overlap.
-* Inactive submarine volcanos must be encoded, if required, as *Sea Area* with *category of sea area* = _56_ (submarine volcano). Active submarine volcanos must be encoded, if required, using an *Obstruction* feature (see <<sec_13.6>>).
+* Inactive submarine volcanos must be encoded, if required, as *Sea Area* with stem:[bb "category of sea area" = 56] (submarine volcano). Active submarine volcanos must be encoded, if required, using an *Obstruction* feature (see <<sec_13.6>>).
 * For additional guidance on encoding geographic names, see <<sec_2.5.8>>.
 
 [underline]#Distinction:# Administration Area; Depth Area; Seabed Area.

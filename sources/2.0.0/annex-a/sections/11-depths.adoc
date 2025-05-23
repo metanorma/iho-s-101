@@ -55,8 +55,7 @@ Some of the principles of depth depiction are summarized below:
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[eleven_three]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -150,7 +149,7 @@ h| Sounding h| S-4 h| INT 1 h| quality of horizontal measurement h| quality of v
 | Drying | B-413 | I15 | | _1_ or _<undefined>_ | Negative value
 
 | Doubtful | B-424.4 | I2 | | _3_
-| Existence doubtful should be encoded using *status* = _18_
+| Existence doubtful should be encoded using stem:[bb "status" = 18]
 
 | Reported but not confirmed | | I3I4 | _4_ | _9_
 | If available, the year of report must be encoded using the attribute *reported date*
@@ -193,8 +192,7 @@ h| Sounding h| S-4 h| INT 1 h| quality of horizontal measurement h| quality of v
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[eleven_four]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -260,8 +258,7 @@ h| Sounding h| S-4 h| INT 1 h| quality of horizontal measurement h| quality of v
 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
-4: knots +
-| (S) EN
+4: knots | (S) EN
 | 1,1
 
 3+| vessel class
@@ -377,7 +374,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
 If it is required to encode a swept area, it must be done using the feature *Swept Area*.
 
-Spot soundings and depth contours shown in these areas must be encoded using *Sounding* and *Depth Contour* features. A Meta feature *Quality of Bathymetric Data* must be encoded to provide quality information for the *Swept Area* (see <<sec_3.8>>). The *depth range maximum* value for the *Quality of Bathymetric Data* feature must be equal to the swept depth (*depth range minimum*) value for the *Swept Area*. The complex attribute *vertical uncertainty* (*uncertainty fixed*) may be used on the *Quality of Bathymetric Data* or on the associated *Spatial Quality* feature (see <<sec_24.5>>) to specify the uncertainty of the swept depth value, or otherwise must be populated as __0__; *horizontal position uncertainty* (*uncertainty fixed*) on the *Quality of Bathymetric Data* or on the associated *Spatial Quality* must be populated as _0_. Where required, a separate *Quality of Bathymetric Data* feature must be encoded to provide depth or positional accuracy information for any underlying bathymetry within the swept area.
+Spot soundings and depth contours shown in these areas must be encoded using *Sounding* and *Depth Contour* features. A Meta feature *Quality of Bathymetric Data* must be encoded to provide quality information for the *Swept Area* (see <<sec_3.8>>). The *depth range maximum* value for the *Quality of Bathymetric Data* feature must be equal to the swept depth (*depth range minimum*) value for the *Swept Area*. The complex attribute *vertical uncertainty* (*uncertainty fixed*) may be used on the *Quality of Bathymetric Data* or on the associated *Spatial Quality* feature (see <<sec_24.5>>) to specify the uncertainty of the swept depth value, or otherwise must be populated as _0_; *horizontal position uncertainty* (*uncertainty fixed*) on the *Quality of Bathymetric Data* or on the associated *Spatial Quality* must be populated as _0_. Where required, a separate *Quality of Bathymetric Data* feature must be encoded to provide depth or positional accuracy information for any underlying bathymetry within the swept area.
 
 [[fig_11-1]]
 .Swept areas -- Quality of bathymetric data
@@ -447,7 +444,7 @@ Supplementary contours, for example at 3, 8, 25, 40, 75 metres and multiples of 
 
 On the larger optimum display scale ENC datasets, for example datasets intended for harbour navigation or berthing; or in areas where vessel under keel clearance is critical, a smaller contour interval may be used (for example 1 metre, or 0.1 metre if it is desired to provide the same depth accuracy as for soundings) in the depth range suitable for the deepest draught vessels that may navigate in the area. Such encoding is intended to best utilize the safety depth indication functionality of the ECDIS.
 
-The boundary of a drying rocky area (see INT1 - J20) or coral reef (see INT1 - J22) may be coincident with the zero metre contour (see '_fg_' in the Figure). If it is required to encode this boundary, it must be done using the feature *Depth Contour* with the attribute *value of depth contour* = _0_.
+The boundary of a drying rocky area (see INT1 - J20) or coral reef (see INT1 - J22) may be coincident with the zero metre contour (see '_fg_' in the Figure). If it is required to encode this boundary, it must be done using the feature *Depth Contour* with the attribute stem:[bb "value of depth contour" = 0].
 
 On the source, the presentation of contours in areas of steep slope is sometimes generalised so that closely spaced contours are removed to leave a single contour (see '_ab_' in Figure). In such cases, this contour must be encoded using the shallowest depth of the slope.
 
@@ -532,9 +529,9 @@ image::figure-11-3.png[545,204]
 
 [underline]#Remarks:#
 
-* For short isolated sections of *Depth Contour* features such as (_fi_), it is up to the producing authority whether to encode the small areas (_efije_ and _fghif_) as separate *Depth Area* features, or to encode only the curve (_fi_) as a floating *Depth Contour* feature within a single *Depth Area* (_abcda_) having attributes *depth range minimum value* = _5_ and *depth range maximum value* = _20_.
+* For short isolated sections of *Depth Contour* features such as (_fi_), it is up to the producing authority whether to encode the small areas (_efije_ and _fghif_) as separate *Depth Area* features, or to encode only the curve (_fi_) as a floating *Depth Contour* feature within a single *Depth Area* (_abcda_) having attributes stem:[bb "depth range minimum value" = 5] and stem:[bb "depth range maximum value" = 20].
 
-NOTE: In <<fig_11-3>>, if the optional *Depth Area* features are encoded, the depth area (_abcda_) will be split into two separate *Depth Area* features (_abgea_) and (_jhcdj_), both having *depth range minimum value* = _5_ and *depth range maximum value* = _20_.
+NOTE: In <<fig_11-3>>, if the optional *Depth Area* features are encoded, the depth area (_abcda_) will be split into two separate *Depth Area* features (_abgea_) and (_jhcdj_), both having stem:[bb "depth range minimum value" = 5] and stem:[bb "depth range maximum value" = 20].
 
 [[sec_11.7.3]]
 ==== Use of attributes depth range minimum value and depth range maximum value for depth areas in general
@@ -624,7 +621,7 @@ Where these areas are required and are not navigable at the optimum display scal
 [[sec_11.7.5]]
 ==== Areas of continual change (see S-4 -- B-416)
 
-If it is required to encode an area of continually changing bathymetry, it must be done by populating the attribute *category of temporal variation* = _2_ (likely to change and significant shoaling expected) or _3_ (likely to change but significant shoaling not expected) for the underlying *Quality of Bathymetric Data* feature (see <<sec_3.8>>).
+If it is required to encode an area of continually changing bathymetry, it must be done by populating the attribute stem:[bb "category of temporal variation" = 2] (likely to change and significant shoaling expected) or _3_ (likely to change but significant shoaling not expected) for the underlying *Quality of Bathymetric Data* feature (see <<sec_3.8>>).
 
 Such areas must always overlap *Depth Area* features.
 
@@ -712,7 +709,7 @@ Inadequately surveyed areasmay be defined as those areas where bathymetry is bas
 
 An inadequately surveyed area should be encoded using either an *Unsurveyed Area* feature, within which soundings and contours may be encoded (but not depth areas), or using *Depth Area* features. The attributes *depth range minimum value* and *depth range maximum value* for such depth areas should have explicit values.
 
-The area must also be covered by *Quality of Bathymetric Data* features (see <<sec_3.8>>), having appropriate attribute values, usually *category of temporal variation* = _6_ (unassessed), *features detected* (*significant features detected*) = __False__, and *full seafloor coverage achieved* = _False_. Further information may be given using the Meta feature *Quality of Survey* (see <<sec_3.11>>), where appropriate.
+The area must also be covered by *Quality of Bathymetric Data* features (see <<sec_3.8>>), having appropriate attribute values, usually stem:[bb "category of temporal variation" = 6] (unassessed), *features detected* (*significant features detected*) = _False_, and *full seafloor coverage achieved* = _False_. Further information may be given using the Meta feature *Quality of Survey* (see <<sec_3.11>>), where appropriate.
 
 A cautionary note should also be encoded using a *Caution Area* feature of type surface (see <<sec_16.11>>), complex attribute *information* (see <<sec_2.4.6>>).
 
@@ -763,16 +760,16 @@ The "very narrow area" should be at least 0.3mm in width at optimum display scal
 
 In some areas source information may be limited to shallow water depth information derived from satellite imagery. Where defined depths can be interpolated from satellite imagery (for example the drying line, 5 metre or 10 metre depth contours), and little or no reliable source survey information exists in the area, consideration should be given to showing this information in ENCs.
 
-If it is required to encode shoal areas which have been derived from satellite imagery, *Depth Area* and *Depth Contour* features of an appropriate depth range should be used. This should only be done in areas which have not been systematically surveyed. Areas of depth information derived from satellite imagery must be covered by *Quality of Bathymetric Data* Meta features (see <<sec_3.8>>). Recommended attribute values for the *Quality of Bathymetric Data* include *category of temporal variation* = _6_ (unassessed); *features detected* (*significant features detected*) = __False__; and *full seafloor coverage achieved* = _False_. Optionally, the area may also be covered by a *Quality of Survey* feature (see <<sec_3.11>>), having attribute *technique of vertical measurement* = _11_ (satellite imagery).
+If it is required to encode shoal areas which have been derived from satellite imagery, *Depth Area* and *Depth Contour* features of an appropriate depth range should be used. This should only be done in areas which have not been systematically surveyed. Areas of depth information derived from satellite imagery must be covered by *Quality of Bathymetric Data* Meta features (see <<sec_3.8>>). Recommended attribute values for the *Quality of Bathymetric Data* include stem:[bb "category of temporal variation" = 6] (unassessed); *features detected* (*significant features detected*) = _False_; and *full seafloor coverage achieved* = _False_. Optionally, the area may also be covered by a *Quality of Survey* feature (see <<sec_3.11>>), having attribute stem:[bb "technique of vertical measurement" = 11] (satellite imagery).
 
-In some cases satellite imagery provides evidence that existing charted information derived from source survey data has changed over time. If required, the attribute *category of temporal variation* on the underlying *Quality of Bathymetric Data* Meta feature should be amended to _2_ (likely to change and significant shoaling expected) or _3_ (likely to change but significant shoaling not expected). Alternatively, if the quality of the charted bathymetry is considered by the Producing Authority to be poor, consideration may be given to replacing the existing charted detail using the satellite derived data, as described above, however with *category of temporal variation* = _2_ (likely to change and significant shoaling expected) or _3_ (likely to change but significant shoaling not expected).
+In some cases satellite imagery provides evidence that existing charted information derived from source survey data has changed over time. If required, the attribute *category of temporal variation* on the underlying *Quality of Bathymetric Data* Meta feature should be amended to _2_ (likely to change and significant shoaling expected) or _3_ (likely to change but significant shoaling not expected). Alternatively, if the quality of the charted bathymetry is considered by the Producing Authority to be poor, consideration may be given to replacing the existing charted detail using the satellite derived data, as described above, however with stem:[bb "category of temporal variation" = 2] (likely to change and significant shoaling expected) or _3_ (likely to change but significant shoaling not expected).
 
 [[sec_11.10]]
 === Unsurveyed area
 
-[cols="693,847,847,847,847,847,847,847,847,847,684", options="unnumbered"]
+[cols="11", options="unnumbered"]
 |===
-11+| [underline]#IHO Definition:# *UNSURVEYED AREA*. An area where [[hydrographic%20survey]] data is non-existent.(IHO Dictionary -- S-32).
+11+| [underline]#IHO Definition:# *UNSURVEYED AREA*. An area where hydrographic survey data is non-existent.(IHO Dictionary -- S-32).
 11+| *[underline]#S-101 Geo Feature:#* *Unsurveyed Area (UNSARE)*
 11+| *[underline]#Primitives:#* *Surface*
 
@@ -814,7 +811,7 @@ Unsurveyed areasmay be defined as those within which there is no available data 
 
 Areas with little or no bathymetric survey information must be encoded using the feature *Unsurveyed Area*.
 
-The area must also be covered, where required, by *Quality of Bathymetric Data* features (see <<sec_3.8>>), with attributes *category of temporal variation* = _6_ (unassessed), *data assessment* = _1_ (assessed), *features detected* (*least depth of detected features measured* and *significant features detected*) = _False_ and *full seafloor coverage achieved* = __False__; and (if encoded on *Quality of Bathymetric Data*)*horizontal position uncertainty* (*uncertainty fixed*) = [empty (null] and *vertical uncertainty* (*uncertainty fixed*) = [empty (null)]. If encoded on an instance of the information type *Spatial Quality* (see <<sec_24.5>>) associated to the *Quality of Bathymetric Data*, the horizontal position and vertical accuracies must be encoded as attributes *horizontal position uncertainty* (*uncertainty fixed*) = [empty (null] and *vertical uncertainty* (*uncertainty fixed*) = [empty (null)].
+The area must also be covered, where required, by *Quality of Bathymetric Data* features (see <<sec_3.8>>), with attributes stem:[bb "category of temporal variation" = 6] (unassessed), stem:[bb "data assessment" = 1] (assessed), *features detected* (*least depth of detected features measured* and *significant features detected*) = _False_ and *full seafloor coverage achieved* = _False_; and (if encoded on *Quality of Bathymetric Data*)*horizontal position uncertainty* (*uncertainty fixed*) = [empty (null] and *vertical uncertainty* (*uncertainty fixed*) = [empty (null)]. If encoded on an instance of the information type *Spatial Quality* (see <<sec_24.5>>) associated to the *Quality of Bathymetric Data*, the horizontal position and vertical accuracies must be encoded as attributes *horizontal position uncertainty* (*uncertainty fixed*) = [empty (null] and *vertical uncertainty* (*uncertainty fixed*) = [empty (null)].
 
 [underline]#Remarks:#
 

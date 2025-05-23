@@ -157,12 +157,12 @@ If it is required to encode a navigation line, it must be done using the feature
 |===
 h| Figure h| h| Navigation Line h| Recommended Track h| Navigational Aids
 
-| 1 | Recommended track on a leading line       | *category of navigation line* = _3_ | *based on fixed marks* = _True_ | at least 2
-| 2 | Clearing line on marks in line             | *category of navigation line* = _1_ | none | at least 2
-| 3 | Transit line on marks in line              | *category of navigation line* = _2_ | none | at least 2
-| 4 | Recommended track on a bearing             | *category of navigation line* = _3_ | *based on fixed marks* = _True_ | 1
-| 5 | Clearing line on a bearing                 | *category of navigation line* = _1_ | none | 1
-| 6 | Transit line on a bearing                  | *category of navigation line* = _2_ | none | 1
+| 1 | Recommended track on a leading line       | stem:[bb "category of navigation line" = 3] | *based on fixed marks* = _True_ | at least 2
+| 2 | Clearing line on marks in line             | stem:[bb "category of navigation line" = 1] | none | at least 2
+| 3 | Transit line on marks in line              | stem:[bb "category of navigation line" = 2] | none | at least 2
+| 4 | Recommended track on a bearing             | stem:[bb "category of navigation line" = 3] | *based on fixed marks* = _True_ | 1
+| 5 | Clearing line on a bearing                 | stem:[bb "category of navigation line" = 1] | none | 1
+| 6 | Transit line on a bearing                  | stem:[bb "category of navigation line" = 2] | none | 1
 | 7 | Recommended track not based on fixed marks | none | *based on fixed marks* = _False_ | none
 |===
 
@@ -181,11 +181,11 @@ image::figure-15-4.png[580,299]
 
 If the track to be followed is on a leading line or a bearing, it must be encoded in the way described in the Table and <<fig_15-4>> above (cases 1 or 4). If the track is not on a leading line or bearing, it must be encoded only as a *Navigation Line* feature with the attribute *category of navigation line* being set to an empty (null) value. In either case, if it is required to encode the measured distance, it must be done using the attribute *measured distance*.
 
-If it is required to encode the transit lines, they must be done using *Navigation Line* features, with *category of navigation line* = _2_ (transit line).
+If it is required to encode the transit lines, they must be done using *Navigation Line* features, with stem:[bb "category of navigation line" = 2] (transit line).
 
-If it is required to encode the beacons, they must be done using *Special Purpose/General Beacon* features, with attribute *category of special purpose mark* = _17_ (measured distance mark).
+If it is required to encode the beacons, they must be done using *Special Purpose/General Beacon* features, with attribute stem:[bb "category of special purpose mark" = 17] (measured distance mark).
 
-On occasions, one or more of the transits used for the measured distance may incorporate an existing landmark as the front or rear mark. In this case, if *Landmark* is encoded, *category of special purpose mark* = _17_ must also be populated.
+On occasions, one or more of the transits used for the measured distance may incorporate an existing landmark as the front or rear mark. In this case, if *Landmark* is encoded, stem:[bb "category of special purpose mark" = 17] must also be populated.
 
 Where the entire measured distance system exists within a single dataset, each transit line with its beacons must be associated with the feature *Range System* (see <<sec_15.6>>) using the association *Range System Aggregation* (see <<sec_25.13>>). These two associations and the track to be followed must be associated with another instance of *Range System* to form a hierarchical relationship.
 
@@ -227,8 +227,7 @@ Where the entire measured distance system exists within a single dataset, each t
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_five]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -350,12 +349,12 @@ The use of *Navigation Line* and *Recommended Track* is defined in more detail i
 |===
 h| Figure h| h| Navigation Line h| Recommended Track h| Navigational Aids
 
-| 1 | Recommended track on a leading line | *category of navigation line* = _3_ | *based on fixed marks* = _True_ | at least 2
-| 2 | Clearing line on marks in line | *category of navigation line* = _1_ | none | at least 2
-| 3 | Transit line on marks in line | *category of navigation line* = _2_ | none | at least 2
-| 4 | Recommended track on a bearing | *category of navigation line* = _3_ | *based on fixed marks* = _True_ | 1
-| 5 | Clearing line on a bearing | *category of navigation line* = _1_ | none | 1
-| 6 | Transit line on a bearing | *category of navigation line* = _2_ | none | 1
+| 1 | Recommended track on a leading line | stem:[bb "category of navigation line" = 3] | *based on fixed marks* = _True_ | at least 2
+| 2 | Clearing line on marks in line | stem:[bb "category of navigation line" = 1] | none | at least 2
+| 3 | Transit line on marks in line | stem:[bb "category of navigation line" = 2] | none | at least 2
+| 4 | Recommended track on a bearing | stem:[bb "category of navigation line" = 3] | *based on fixed marks* = _True_ | 1
+| 5 | Clearing line on a bearing | stem:[bb "category of navigation line" = 1] | none | 1
+| 6 | Transit line on a bearing | stem:[bb "category of navigation line" = 2] | none | 1
 | 7 | Recommended track not based on fixed marks | none | *based on fixed marks* = _False_ | none
 |===
 
@@ -369,7 +368,7 @@ image::figure-15-5.png[580,299]
 * The attribute *maximum permitted draught* is used to encode the maximum draught permitted on the track, where required.
 * The recommended track is that portion of a navigation line (see <<sec_15.4>>) that a ship should use for navigation (see <<fig_15-5>> above).
 * In the case of a two-way recommended track, only one value of orientation is encoded (in the mandatory attribute *orientation value*); the other value can be deduced (that is, the value in *orientation value* + 180 degrees). The value of orientation encoded on *orientation value* should be the value of the bearing from seaward. If it is not possible to define a seaward direction, the value that is less than 180° should be used.
-* When the traffic flow along a recommended track is one way (attribute *traffic flow* = __1__, _2_ or _3_), the resultant direction of the line (accounting for the direction of digitising and any subsequent reversal of the line) associated with the *Recommended Track* must be the same as the direction of the traffic flow, in order to ensure the correct representation in the ECDIS of the direction to be followed.
+* When the traffic flow along a recommended track is one way (attribute *traffic flow* = _1_, _2_ or _3_), the resultant direction of the line (accounting for the direction of digitising and any subsequent reversal of the line) associated with the *Recommended Track* must be the same as the direction of the traffic flow, in order to ensure the correct representation in the ECDIS of the direction to be followed.
 
 [underline]#Distinction:# Fairway; Navigation Line; Recommended Route Centreline; Recommended Traffic Lane Part.
 
@@ -394,8 +393,7 @@ image::figure-15-5.png[580,299]
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_six]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -492,8 +490,7 @@ That part of a river, harbour and so on, where the main navigable channel for ve
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_seven]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -576,8 +573,7 @@ That part of a river, harbour and so on, where the main navigable channel for ve
 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
-4: knots +
-| (S) EN
+4: knots | (S) EN
 | 1,1
 
 3+| vessel class
@@ -625,7 +621,7 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [underline]#INT 1 Reference:# M 18
 
 [[sec_15.7.1]]
-==== Fairways (see S-4 -- B-432.1\(c) and B-434.5)
+==== Fairways (see S-4 -- B-432.1(c) and B-434.5)
 
 A fairway, sometimes called Ship Channel, is the main navigable channel in the approaches to, or within, a river or harbour. Fairways which are designated by a regulatory authority are treated as Routeing Measures.
 
@@ -665,8 +661,7 @@ That part of a river, harbour and so on, where the main navigable channel for ve
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_eight]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -770,8 +765,7 @@ A fairway system is composed of two or more *Fairway* features that comprise a c
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_nine]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -881,7 +875,7 @@ If it is required to encode the centreline of a recommended route, it must be do
 
 * The attribute *depth range minimum value* is used to encode the shallowest depth on the route, where known.
 * In the case of a recommended route centreline, only one value of orientation is encoded (in the attribute *orientation value*); the other value can be deduced (that is, the value in *orientation value* + 180 degrees). The value of orientation encoded on *orientation value* should be the value of the bearing from seaward. If it is not possible to define a seaward direction, the value that is less than 180° should be used.
-* When the traffic flow is one way (attribute *traffic flow* = __1__, _2_ or _3_), the resultant direction of the line (accounting for the direction of digitising and any subsequent reversal of the line) associated with the *Recommended Route Centreline* must be the same as the direction of traffic flow, in order to ensure the correct representation in the ECDIS of the direction to be followed.
+* When the traffic flow is one way (attribute *traffic flow* = _1_, _2_ or _3_), the resultant direction of the line (accounting for the direction of digitising and any subsequent reversal of the line) associated with the *Recommended Route Centreline* must be the same as the direction of traffic flow, in order to ensure the correct representation in the ECDIS of the direction to be followed.
 
 [underline]#Distinction:# Recommended Track; Recommended Traffic Lane Part.
 
@@ -995,7 +989,7 @@ A two way route is a route within defined limits inside which two way traffic is
 .One-way traffic flow in a two-way route
 image::figure-15-6.png[359,213]
 
-If it is required to encode a two-way route with one-way sections, separate *Two-Way Route Part* features must be encoded for the different parts, with attribute *traffic flow* = _3_ (one-way) or _4_ (two-way). In one-way sections, the mandatory attribute *orientation value* must indicate the true direction of traffic flow, not its reciprocal. In two-way sections, *orientation value* may indicate either direction of traffic flow. 
+If it is required to encode a two-way route with one-way sections, separate *Two-Way Route Part* features must be encoded for the different parts, with attribute stem:[bb "traffic flow" = 3] (one-way) or _4_ (two-way). In one-way sections, the mandatory attribute *orientation value* must indicate the true direction of traffic flow, not its reciprocal. In two-way sections, *orientation value* may indicate either direction of traffic flow. 
 
 [underline]#Remarks:#
 
@@ -1028,8 +1022,7 @@ If it is required to encode a two-way route with one-way sections, separate *Two
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_eleven]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -1207,8 +1200,7 @@ The feature *Recommended Traffic Lane Part* must be used, where required, to enc
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_thirteen]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -1317,12 +1309,12 @@ If it is required to encode the centreline of a Deep Water route, the width of w
 [underline]#Remarks:#
 
 * In the case of a deep water route centreline, only one value of orientation is encoded (in the mandatory attribute *orientation value*); the other value can be deduced (that is, the value in *orientation value* + 180 degrees). The value of orientation encoded on *orientation value* should be the value of the bearing from seaward. If it is not possible to define a seaward direction, the value that is less than 180° should be used.
-* When the traffic flow is one way (attribute *traffic flow* = __1__, _2_ or _3_), the resultant direction of the line (accounting for the direction of digitising and any subsequent reversal of the line) associated with the *Deep Water Route Centreline* must be the same as the direction of traffic flow, in order to ensure the correct representation in the ECDIS of the direction to be followed.
+* When the traffic flow is one way (attribute *traffic flow* = _1_, _2_ or _3_), the resultant direction of the line (accounting for the direction of digitising and any subsequent reversal of the line) associated with the *Deep Water Route Centreline* must be the same as the direction of traffic flow, in order to ensure the correct representation in the ECDIS of the direction to be followed.
 * The complex attribute *feature name* should only be used if the individual feature is not included in an association (see <<sec_15.15.1>>).
 * To encode a complete Deep Water route, the *Deep Water Route Centreline*,*Deep Water Route Part* features, and the navigational aids features (if they are stated in the regulation defining the DW), may be associated with the feature *Deep Water Route* (see <<sec_15.15>>) using the associations *Deep Water Route Aggregation* (see <<sec_25.6>>) and *Aids to Navigation Association* (see <<sec_25.2>>). Where it is required to indicate the name of a complete DW, this should be done using the complex attribute *feature name* for the *Deep Water Route* feature; or on a single *Deep Water Route Centreline* feature where this feature defines the entire DW. Where it is required to encode textual information for the DW, this should be done using the complex attribute *information* (see <<sec_2.4.6>>) for the *Deep Water Route* feature; or on a single *Deep Water Route Centreline* feature where this feature defines the entire DW.
 * Deep Water routes, unlike dredged areas, are likely to be designated in offshore waters outside the immediate supervision of harbour authorities (although some do form the outer approaches to deep water ports). No least depth quoted can be fully guaranteed in most cases. Least depths within the route should be encoded by soundings as elsewhere on the ENC dataset so that the navigator will not assume that the depths are continually monitored. However, in those cases where a hydrographic authority feels confident to guarantee the existence of a minimum depth of water in a DW route, it must be populated using the attribute *depth range minimum value*.
 * Deep water routes may be included with other routeing measures such as traffic separation schemes to comprise a complete traffic routeing system. To encode the relationship between routeing measures, the feature defining each routeing measure within the system (or the relevant feature if the routeing measure consists of a single feature) may be associated with the feature *Traffic Separation Scheme* (see <<sec_15.23>>) using the *Traffic Separation Scheme Aggregation* (see <<sec_25.18>>) to form a hierarchical relationship. The individual elements comprising different routeing measures must not be collected into a single *Traffic Separation Scheme* feature.
-* IMO-designated Deep Water routes are listed in IMO publication "__Ships' Routeing__"Part C. Where *Deep Water Route Centreline* features are included in the associations *Deep Water Route Aggregation* or *Traffic Separation Scheme Aggregation*, the attribute *IMO adopted* must not be populated for the *Deep Water Route Centreline* features.
+* IMO-designated Deep Water routes are listed in IMO publication "__Ships' Routeing__" Part C. Where *Deep Water Route Centreline* features are included in the associations *Deep Water Route Aggregation* or *Traffic Separation Scheme Aggregation*, the attribute *IMO adopted* must not be populated for the *Deep Water Route Centreline* features.
 
 [underline]#Distinction:# Deep Water Route Part.
 
@@ -1444,8 +1436,7 @@ If it is required to encode the centreline of a Deep Water route, the width of w
 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
-4: knots +
-| (S) EN
+4: knots | (S) EN
 | 1,1
 
 3+| vessel class
@@ -1534,8 +1525,7 @@ If it is required to encode these areas, this must be done using the feature *De
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_fifteen]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -1666,8 +1656,7 @@ If it is required to define a complete Deep Water route (DW) system, the feature
 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
-4: knots +
-| (S) EN
+4: knots | (S) EN
 | 1,1
 
 3+| vessel class
@@ -1743,8 +1732,7 @@ The feature *Inshore Traffic Zone* must only be used to encode the designated ar
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_seventeen]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -1799,8 +1787,7 @@ The feature *Inshore Traffic Zone* must only be used to encode the designated ar
 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
-4: knots +
-| (S) EN
+4: knots | (S) EN
 | 1,1
 
 3+| vessel class
@@ -1925,8 +1912,7 @@ Precautionary areas are commonly designated by IMO for certain areas of convergi
 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
-4: knots +
-| (S) EN
+4: knots | (S) EN
 | 1,1
 
 3+| vessel class
@@ -2193,8 +2179,7 @@ The feature *Traffic Separation Scheme Boundary* must only be used to encode the
 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
-4: knots +
-| (S) EN
+4: knots | (S) EN
 | 1,1
 
 3+| vessel class
@@ -2312,8 +2297,7 @@ The feature *Traffic Separation Scheme Crossing* must only be used to encode the
 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
-4: knots +
-| (S) EN
+4: knots | (S) EN
 | 1,1
 
 3+| vessel class
@@ -2391,8 +2375,7 @@ The feature *Traffic Separation Scheme Roundabout* must only be used to encode t
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_twentythree]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -2462,7 +2445,7 @@ To define the complete traffic separation scheme system, these features must be 
 [underline]#Remarks:#
 
 * The name of the TSS must be populated using the complex attribute *feature name*. Where it is required for the name to be displayed in the ECDIS, the *Traffic Separation Scheme* must be encoded using surface geometry. The extent of the geometry of the *Traffic Separation Scheme* should utilise the geometry of the components of the scheme so as to cover its full extent.
-* Where it is required to encode an IMO declared Area to be Avoided within a TSS, this must be done using the feature *Restricted Area* (see <<sec_17.8>>), with attribute *restriction* = _14_ (area to be avoided).
+* Where it is required to encode an IMO declared Area to be Avoided within a TSS, this must be done using the feature *Restricted Area* (see <<sec_17.8>>), with attribute stem:[bb "restriction" = 14] (area to be avoided).
 * Where it is required to populate textual information for the TSS, this should be done using the complex attribute *information* (see <<sec_2.4.6>>) for the **Traffic Separation Scheme**; or if the information is considered essential for safe navigation, using a *Caution Area* feature (see <<sec_16.10>>).
 * All features comprising a traffic separation scheme must have the same value populated for the attribute *scale minimum* (see <<sec_2.5.9>>).
 * Multiple *Traffic Separation Scheme* features may be further aggregated hierarchically using the association *Traffic Separation Scheme Aggregation* to define a higher TSS.
@@ -2490,8 +2473,7 @@ To define the complete traffic separation scheme system, these features must be 
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_twentyfour]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -2590,8 +2572,7 @@ The encoding of relationships between these features is defined in <<sec_15.27>>
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_twentyfive]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -2652,7 +2633,7 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 
 Article 53 of the United Nations Convention on the Law of the Sea (UNCLOS) states that: "an archipelagic State may designate sea lanes ..., suitable for the continuous and expeditious passage of foreign ships ... through ... its archipelagic waters and the adjacent Territorial Sea. ... All ships ... enjoy the right of archipelagic sea lanes passage in such sea lanes ... [which] include all normal passage routes used as routes for international navigation … through archipelagic waters". (Note: references to aircraft and air routes in UNCLOS have been omitted in these extracts from Article 53). (IHO S-4 B-435.10, C-51 Appendix 2 Part II).
 
-The axis lineof an Archipelagic Sea lane (ASL) is encoded in ENCs only for the purpose of defining the sea lane. The axis line does not indicate any routes or recommended tracks as defined in IMO publication "__Ships' Routeing__"Part A.
+The axis lineof an Archipelagic Sea lane (ASL) is encoded in ENCs only for the purpose of defining the sea lane. The axis line does not indicate any routes or recommended tracks as defined in IMO publication "_Ships' Routeing_" Part A.
 
 [underline]#Remarks:#
 
@@ -2682,8 +2663,7 @@ The axis lineof an Archipelagic Sea lane (ASL) is encoded in ENCs only for the p
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_twentysix]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -2777,8 +2757,7 @@ To define the complete Archipelagic Sea Lane (ASL) system, the features *Archipe
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_twentyseven]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -2861,7 +2840,7 @@ If it is required to encode a radio reporting point or line, it must be done usi
 
 [underline]#Remarks:#
 
-* Each *Radio Calling-In Point* feature of type point must carry at least one orientation, using the attribute *orientation value*. If it is required to encode the reciprocal orientation, to indicate that a bearing and its opposite apply to a *Radio Calling-In Point* feature, it must be done using attribute *traffic flow* = _4_ (two-way). If the same position is used for another orientation (not opposite) of traffic flow, a second *orientation value* attribute must be encoded.
+* Each *Radio Calling-In Point* feature of type point must carry at least one orientation, using the attribute *orientation value*. If it is required to encode the reciprocal orientation, to indicate that a bearing and its opposite apply to a *Radio Calling-In Point* feature, it must be done using attribute stem:[bb "traffic flow" = 4] (two-way). If the same position is used for another orientation (not opposite) of traffic flow, a second *orientation value* attribute must be encoded.
 * The complex attribute *feature name*, sub-attribute *name* is used to encode the name and/or alphanumeric designator of the *Radio Calling-In Point*.
 * The complex attribute *information* (see <<sec_2.4.6>>) is used to provide additional information, where required. For example, if the requirement to report by radio relates to certain classes of vessels only.
 * *Radio Calling-In Point* features of type curve must be encoded such that resultant direction of the line (accounting for the direction of digitising and any subsequent reversal of the curve) is related such that the direction of traffic that is required to report is to the right. For curve features, it is not required to populate *orientation value*.
@@ -2896,8 +2875,7 @@ If it is required to encode a radio reporting point or line, it must be done usi
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_twentyeight]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -2974,7 +2952,7 @@ If it is required to encode a ferry route, it must be done using the feature *Fe
 
 [underline]#Remarks:#
 
-* Long distance ferrieswhich have routes varying with weather, tide and traffic should not generally be encoded, although the terminals should be shown on appropriate optimum display scale ENC datasets, using the feature *Harbour Facility* (see <<sec_22.7>>), with attribute *category of harbour facility* = _1_ (RoRo-terminal) or _3_ (ferry terminal).
+* Long distance ferrieswhich have routes varying with weather, tide and traffic should not generally be encoded, although the terminals should be shown on appropriate optimum display scale ENC datasets, using the feature *Harbour Facility* (see <<sec_22.7>>), with attribute stem:[bb "category of harbour facility" = 1] (RoRo-terminal) or _3_ (ferry terminal).
 
 [underline]#Distinction:#
 
@@ -2999,8 +2977,7 @@ If it is required to encode a ferry route, it must be done using the feature *Fe
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_twentynine]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -3090,8 +3067,7 @@ If it is required to encode a radar reference line, it must be done using the fe
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_thirty]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -3190,8 +3166,7 @@ If it is required to encode a radar range, it must be done using the feature *Ra
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnote:fifteen_thirtyone[Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
 For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]

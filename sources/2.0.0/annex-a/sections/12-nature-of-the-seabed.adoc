@@ -113,7 +113,7 @@ If it is required to encode an area of the sea where the nature of the seabed is
 
 * Generally, it is not possible to define a seabed area by its real extent, due to seabed samples usually being obtained at discrete locations. For that reason, the characteristics of the seabed area may be represented at one single position.
 * Where the seabed comprises a mixture of material, *surface characteristics* must be populated as multiple iterations, with the main constituent given first.
-* Where the seabed comprises layered material that is of relevance to navigation or anchoring, *surface characteristics* must be populated as multiple iterations, with the surface constituent given first, with a value for the attribute *underlying layer* of _0_. Successive layers below the surface must have *underlying layer* set to __1__, __2__, … .
+* Where the seabed comprises layered material that is of relevance to navigation or anchoring, *surface characteristics* must be populated as multiple iterations, with the surface constituent given first, with a value for the attribute *underlying layer* of _0_. Successive layers below the surface must have *underlying layer* set to _1_, _2_, … .
 
 [[fig_12-1]]
 .Seabed areas
@@ -126,13 +126,13 @@ image::figure-12-1.png[Shape28,612,436]
 
 . Underlying material: Should be encoded in the same way as mixed natures, and populating the sub-attribute *underlying layer* with the appropriate level of the layer below the surface layer. The surface layer must be encoded first, followed by the underlying layers.
 
-. Coral reef, which is always covered, represented as a surface (INT1 -- K16): An *Obstruction* feature of type surface must be encoded with attributes *category of obstruction* = _6_ (foul area), *nature of surface* = _14_ (coral) and *water level effect* = _3_ (always underwater/submerged). This feature must be covered by a *Depth Area* or *Unsurveyed Area* feature as appropriate. In this area, some point dangers may be shown. An *Underwater/Awash Rock* feature should be encoded for each individual point danger, with *nature of surface* = _14_ (coral).
+. Coral reef, which is always covered, represented as a surface (INT1 -- K16): An *Obstruction* feature of type surface must be encoded with attributes stem:[bb "category of obstruction" = 6] (foul area), stem:[bb "nature of surface" = 14] (coral) and stem:[bb "water level effect" = 3] (always underwater/submerged). This feature must be covered by a *Depth Area* or *Unsurveyed Area* feature as appropriate. In this area, some point dangers may be shown. An *Underwater/Awash Rock* feature should be encoded for each individual point danger, with stem:[bb "nature of surface" = 14] (coral).
 
-. Hard bottom: The attribute *nature of surface -- qualifying terms* = _10_ (hard) should be encoded, with the associated *nature of surface* populated with an empty (null) value.(e) On the source, in the intertidal area or along the drying line, the nature of surface is sometimes shown by an open line rather than a closed area. In such cases, a *Seabed Area* feature of type curve should be encoded, with attribute *water level effect* = _4_ (covers and uncovers).
+. Hard bottom: The attribute *nature of surface -- qualifying terms* = _10_ (hard) should be encoded, with the associated *nature of surface* populated with an empty (null) value.(e) On the source, in the intertidal area or along the drying line, the nature of surface is sometimes shown by an open line rather than a closed area. In such cases, a *Seabed Area* feature of type curve should be encoded, with attribute stem:[bb "water level effect" = 4] (covers and uncovers).
 
 . If it is required to encode a rock pinnacle which is dangerous to navigation, it must be done using the feature *Underwater/Awash Rock*, while a rocky nature of seabed should be encoded using a *Seabed Area* feature.
 
-. Where a *Seabed Area* feature of type surface is located in an intertidal area, it should be encoded with *water level effect* = _4_ (covers and uncovers), in order for the intertidal rock or coral symbol to be displayed in ECDIS.
+. Where a *Seabed Area* feature of type surface is located in an intertidal area, it should be encoded with stem:[bb "water level effect" = 4] (covers and uncovers), in order for the intertidal rock or coral symbol to be displayed in ECDIS.
 --
 
 * The nature of the seabed should be shown in depths of 2000m and less. The nature of the seabed may be shown in greater depths if thought to be useful.
@@ -413,8 +413,7 @@ h| - Qualifying Terms .2+h| __1__fine .2+h| __2__medium .2+h| __3__coarse .2+h| 
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twelve_two]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -487,8 +486,7 @@ If it is required to encode marine weed or kelp, it must be done using the featu
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twelve_three]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -623,8 +621,7 @@ If it is required to encode sandwaves, this must be done using the feature *Sand
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twelve_five]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1

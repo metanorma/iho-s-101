@@ -360,8 +360,8 @@ If it is required to encode a permanently moored ship, it must be done using the
 [underline]#Remarks:#
 
 * A *Hulk* feature of type surface must not be bound by curve features *Coastline* or *Shoreline Construction*, unless the edge associated with the curve feature is also the boundary of a *Land Area* feature of type surface.
-* If it is required to encode a floating production, storage and off-loading vessel, it must be done using the feature *Offshore Platform* (see <<sec_14.1>>), with attribute *category of offshore platform* = _8_ (floating production, storage and off-loading vessel).
-* If it is required to encode a hulk serving the purpose of a floating breakwater, it must be done using a *Hulk* feature, with attribute *category of hulk* = _5_ (floating breakwater). If it is required to encode a floating breakwater of any other construction, it must be done using the feature *Shoreline Construction* (see <<sec_8.6>>), with attributes *category of shoreline construction* = _1_ (breakwater) and *water level effect* = _7_ (floating).
+* If it is required to encode a floating production, storage and off-loading vessel, it must be done using the feature *Offshore Platform* (see <<sec_14.1>>), with attribute stem:[bb "category of offshore platform" = 8] (floating production, storage and off-loading vessel).
+* If it is required to encode a hulk serving the purpose of a floating breakwater, it must be done using a *Hulk* feature, with attribute stem:[bb "category of hulk" = 5] (floating breakwater). If it is required to encode a floating breakwater of any other construction, it must be done using the feature *Shoreline Construction* (see <<sec_8.6>>), with attributes stem:[bb "category of shoreline construction" = 1] (breakwater) and stem:[bb "water level effect" = 7] (floating).
 
 [underline]#Distinction:# Offshore Platform; Shoreline Construction; Wreck.
 
@@ -569,10 +569,10 @@ If it is required to encode a pile or post that is not used as a dolphin or an a
 
 [underline]#Remarks:#
 
-* Stumps of piles or posts that are dangerous to navigation must be encoded, where required, using *Obstruction* features (see <<sec_13.6>>), with attribute *category of obstruction* = _1_ (snag/stump), and must not be encoded using *Pile*.
-* *Pile* of type curve must only be used for *Pile* having *category of pile* = _5_ (piling), which is sometimes termed "row of piles" or "sheet piling". Point primitive may be used to encode piling for smaller optimum display scale ENC data.
-* *Pile* of type surface must only be used for *Pile* having *category of pile* = _6_ (area of piles). Point primitive may be used to encode an area of piles for smaller optimum display scale ENC data.
-* Stakes and posts that are identified on the source to serve the purpose of aids to navigation must be encoded, where required, using the appropriate beacon feature (for example *Special Purpose/General Beacon*), with attribute *beacon shape* = _1_ (stake, pole, perch, post).
+* Stumps of piles or posts that are dangerous to navigation must be encoded, where required, using *Obstruction* features (see <<sec_13.6>>), with attribute stem:[bb "category of obstruction" = 1] (snag/stump), and must not be encoded using *Pile*.
+* *Pile* of type curve must only be used for *Pile* having stem:[bb "category of pile" = 5] (piling), which is sometimes termed "row of piles" or "sheet piling". Point primitive may be used to encode piling for smaller optimum display scale ENC data.
+* *Pile* of type surface must only be used for *Pile* having stem:[bb "category of pile" = 6] (area of piles). Point primitive may be used to encode an area of piles for smaller optimum display scale ENC data.
+* Stakes and posts that are identified on the source to serve the purpose of aids to navigation must be encoded, where required, using the appropriate beacon feature (for example *Special Purpose/General Beacon*), with attribute stem:[bb "beacon shape" = 1] (stake, pole, perch, post).
 
 [underline]#Distinction:# Cardinal Beacon; Dolphin; Isolated Danger Beacon; Lateral Beacon; Obstruction; Safe Water Beacon; Special Purpose/General Beacon.
 
@@ -741,7 +741,7 @@ If it is required to encode a dyke, it must be done using the feature *Dyke*.
 
 * If it is required to encode a dyke whose seaward edge is coincident with the coastline, it must be done using *Dyke*, and with a *Shoreline Construction* feature of type curve along its seaward edge, with no value populated for attribute *category of shoreline construction*.
 * When a *Dyke* feature is of type surface, it must be covered by a *Land Area* feature.
-* At large optimum display scales, the dyke crown (the topline of the dyke) may be encoded as a *Slope Topline* feature (see <<sec_5.15>>), with attribute *category of slope* = _2_ (embankment).
+* At large optimum display scales, the dyke crown (the topline of the dyke) may be encoded as a *Slope Topline* feature (see <<sec_5.15>>), with attribute stem:[bb "category of slope" = 2] (embankment).
 
 [underline]#Distinction:# Dam; Sloping Ground; Slope Topline.
 
@@ -1022,14 +1022,14 @@ image::figure-8-1.png[631,332]
 * In this example,the shoreline construction surface above the high water line must also be covered by a *Land Area* feature of type surface, and the intertidal shoreline construction surface must also be covered by a *Depth Area* feature of type surface with attribute *depth range minimum value* = -H (see <<sec_11.7.3>>).
 * *Shoreline Construction* features must be broken into their constituent parts where possible, and categorised using attributes such as *category of shoreline construction* and *water level effect* as indicated on the source.
 * If the presence of a feature is only indicated on the source by a textual reference, without a clear symbol (for example 'pier', 'groyne', 'post'), it should be encoded using a *Caution Area* feature (see <<sec_16.10>>) or an *Information Area* feature (see <<sec_16.11>>), with the textual reference encoded using the complex attribute *information* (see <<sec_2.4.6>>). *Caution Area* should be used if the information is considered essential for safe navigation.
-* Intertidal or submerged artificial rock walls, such as training walls that are not attached to the shoreline, must be encoded, if required, as *Shoreline Construction* using the appropriate value for *category of shoreline construction*, and *water level effect* = _3_ (always under water/submerged) or *water level effect* = _4_ (covers and uncovers).
+* Intertidal or submerged artificial rock walls, such as training walls that are not attached to the shoreline, must be encoded, if required, as *Shoreline Construction* using the appropriate value for *category of shoreline construction*, and stem:[bb "water level effect" = 3] (always under water/submerged) or stem:[bb "water level effect" = 4] (covers and uncovers).
 
 [underline]#Distinction:# Causeway; Coastline; Dry Dock; Floating Dock; Gridiron; Land Area; Pontoon; Structure Over Navigable Water.
 
 [[sec_8.7]]
 === Structure over navigable water
 
-[cols="783,841,841,841,841,841,841,841,841,841,648", options="unnumbered"]
+[cols="11", options="unnumbered"]
 |===
 11+| [underline]#IHO Definition:# *STRUCTURE OVER NAVIGABLE WATER*. A roofed structure erected, or partly erected, over a body of water, to provide protection for a vessel or its cargo.
 11+| *[underline]#S-101 Geo Feature:#* *Structure Over Navigable Water*
@@ -1705,7 +1705,7 @@ If it is required to encode a non-navigable canal, it must be done using the fea
 
 [underline]#Remarks:#
 
-* If the canal is navigable at the optimum display scale for the ENC data, it must be encoded using the features *Depth Area* or *Dredged Area* (see <<sec_11.7;and!sec_11.4>>), and the canal banks must be encoded using the features *Coastline* or *Shoreline Construction*. The canal must not be encoded as a *Canal* feature. If it is required to encode the name of the canal, it must be done using a *Sea Area/Named Water Area* feature, with attribute *category of sea area* = _51_ (canal).
+* If the canal is navigable at the optimum display scale for the ENC data, it must be encoded using the features *Depth Area* or *Dredged Area* (see <<sec_11.7;and!sec_11.4>>), and the canal banks must be encoded using the features *Coastline* or *Shoreline Construction*. The canal must not be encoded as a *Canal* feature. If it is required to encode the name of the canal, it must be done using a *Sea Area/Named Water Area* feature, with attribute stem:[bb "category of sea area" = 51] (canal).
 * Where the canal is navigable at the optimum display scale for the ENC data, special consideration should be given to encoding features specific to the canal such as minimum depths within the navigable area; overhead clearances; distances along the canal; and locks and lock gates (and any associated traffic signals).
 * If it is required to encode a canal that is not navigable at the optimum display scale for the ENC data, it must be done using *Canal*, covered by a *Land Area* feature. The name of the canal should be encoded using the complex attribute *feature name* on the *Canal* feature.
 
@@ -1882,7 +1882,7 @@ If it is required to encode a distance mark, it must be done using the feature *
 [underline]#Remarks:#
 
 * The origin from which the distance has been measured is indicated using the sub-attribute *reference location*.
-* Where an encoded distance mark has the mandatory Boolean type attribute *distance mark visible* populated as __True__, the *Distance Mark* may also be associated to the structure supporting the mark using a *Structure/Equipment* feature association (see <<sec_25.16>>).
+* Where an encoded distance mark has the mandatory Boolean type attribute *distance mark visible* populated as _True_, the *Distance Mark* may also be associated to the structure supporting the mark using a *Structure/Equipment* feature association (see <<sec_25.16>>).
 * For encoding a measured distance between two transits of marks established on the shore, see <<sec_15.4.2>>.
 
 [underline]#Distinction:# Special Purpose/General Beacon.
@@ -2344,12 +2344,12 @@ If it is required to encode a dam, weir or flood barrage, it must be done using 
 * *Dam* features must be covered by a *Land Area* feature.
 * The geometry of the dam includes any gates. Gates should be encoded as separate *Gate* features.
 * If it is required to encode a dam whose seaward edge is coincident with the coastline, it must be done using *Dam*, with a *Shoreline Construction* feature of type curve along its seaward edge, with no value populated for the attribute *category of shoreline construction*.
-* If it is required to encode a submerged weir, it should be done using a *Dam* feature, with attribute *water level effect* = _3_ (always under water/submerged).
+* If it is required to encode a submerged weir, it should be done using a *Dam* feature, with attribute stem:[bb "water level effect" = 3] (always under water/submerged).
 
 [[sec_8.12.2]]
 ==== Flood barrages (see S-4 –B-326.7)
 
-If it is required to encode the fixed part of a flood barrage, and the flood barrage is inside an area which is navigable at the optimum display scale for the data, it must be done using a *Dam* feature, with attribute *category of dam* = _3_ (flood barrage), and must be covered by a *Land Area* feature. If it is required to encode the opening part of the flood barrage, it must be done using a *Gate* feature, with attribute *category of gate* = _2_ (flood barrage gate), and must be covered by a *Depth Area* feature.
+If it is required to encode the fixed part of a flood barrage, and the flood barrage is inside an area which is navigable at the optimum display scale for the data, it must be done using a *Dam* feature, with attribute stem:[bb "category of dam" = 3] (flood barrage), and must be covered by a *Land Area* feature. If it is required to encode the opening part of the flood barrage, it must be done using a *Gate* feature, with attribute stem:[bb "category of gate" = 2] (flood barrage gate), and must be covered by a *Depth Area* feature.
 
 When an encoded flood barrage is inside an area that is not navigable at the optimum display scale for the ENC data, the gates need not be encoded. In this case, the *Dam* feature must go all the way across the river or lake.
 
@@ -4143,7 +4143,7 @@ If it is required to encode a non-navigable dock area, it must be done using the
 * If it is required to encode a dock which is not navigable at the optimum display scale of the ENC data, it must be done using the feature *Dock Area*, covered by a *Land Area* or *Unsurveyed Area* feature. The name of the dock should be encoded using the complex attribute *feature name* on the *Dock Area*. The boundary of a dock must not be encoded as a separate feature (for example *Coastline, Shoreline Construction*), except for the gate feature (*Gate*) for a wet dock, which may be encoded.
 * The complex attribute *horizontal clearance fixed* is used to encode the size of the entrance to the dock area, where required.
 * The attributes *horizontal clearance length* and *horizontal clearance width* are used to encode the regulatory length and width of the navigable part of the dock area as declared by a competent authority, where known.
-* In a non-tidal basin (wet dock), depths may refer to a sounding datum different from that in open waters. If this area is navigable at the optimum display scale of the ENC data, the value of this datum must be encoded using the Meta feature *Sounding Datum*, with attribute *vertical datum* = _24_ (local datum), co-incident with the area covered by the dock.
+* In a non-tidal basin (wet dock), depths may refer to a sounding datum different from that in open waters. If this area is navigable at the optimum display scale of the ENC data, the value of this datum must be encoded using the Meta feature *Sounding Datum*, with attribute stem:[bb "vertical datum" = 24] (local datum), co-incident with the area covered by the dock.
 * In reality, smaller named, non-navigable dock areas (at the optimum display scale of the ENC data) may be included in major navigable dock areas, with different names or characteristics. To encode this fact, sea areas (*Sea Area/Named Water Area*) may overlap a *Dock Area*.
 
 [underline]#Distinction:# Berth; Cargo Transhipment Area; Dry Dock; Floating Dock; Gate; Harbour Area (Administrative); Harbour Facility.
@@ -4495,7 +4495,7 @@ If it is required to encode a non-navigable lock basin, it must be done using th
 
 * If the lock is navigable at the optimum display scale of the ENC data, it must be encoded using the features *Depth Area* or *Dredged Area*(see <<sec_11.7.4>>), and the geo features making up the limits of the lock must be encoded using appropriate features such as *Coastline*, *Shoreline Construction* or *Gate*. The lock must not be encoded as *Lock Basin*. If it is required to encode the name of the lock, it must be done using the feature *Sea Area/Named Water Area*.
 * It if is required to encode a lock that is not navigable at the optimum display scale of the ENC data, it must be done using *Lock Basin*, covered by a *Land Area* or *Unsurveyed Area* feature. The name of the lock should be encoded using the complex attribute *feature name* on the *Lock Basin* feature.
-* The gates should be encoded as a *Gate* feature (see <<sec_8.11>>) with attribute *category of gate* = _4_ (lock gate) or _3_ (caisson). For smaller optimum display scale ENC data, a lock may be encoded using *Gate* only, without using *Lock Basin*.
+* The gates should be encoded as a *Gate* feature (see <<sec_8.11>>) with attribute stem:[bb "category of gate" = 4] (lock gate) or _3_ (caisson). For smaller optimum display scale ENC data, a lock may be encoded using *Gate* only, without using *Lock Basin*.
 
 [underline]#Distinction:# Canal; Gate.
 
@@ -4636,15 +4636,15 @@ image::figure-8-2.png[360,216]
 
 A complete mooring trot is composed of ground tackle, mooring cables, buoys and mooring berths on junction cables. The following remarks refer to the annotations in <<fig_8-2>> above:
 
-. Ground tackle should be encoded using *Obstruction* features (see <<sec_13.6>>), with attribute *category of obstruction* = _9_ (ground tackle).
+. Ground tackle should be encoded using *Obstruction* features (see <<sec_13.6>>), with attribute stem:[bb "category of obstruction" = 9] (ground tackle).
 
-. Mooring cables should be encoded using *Cable Submarine* features (see <<sec_14.2>>), with attribute *category of cable* = _6_ (mooring cable).
+. Mooring cables should be encoded using *Cable Submarine* features (see <<sec_14.2>>), with attribute stem:[bb "category of cable" = 6] (mooring cable).
 
 . Buoys should be encoded using *Mooring Buoy* features.
 
 . Mooring berths should be encoded using *Berth* features.
 
-. Junction cables should be encoded using *Cable Submarine* features, with attribute *category of cable* = _9_ (junction cable).
+. Junction cables should be encoded using *Cable Submarine* features, with attribute stem:[bb "category of cable" = 9] (junction cable).
 
 All these features should be aggregated in a *Mooring Trot* feature, using the association *Mooring Trot Aggregation* (see <<sec_25.10>>), with the name of the mooring trot being populated using the complex attribute *feature name* for the *Mooring Trot*.
 

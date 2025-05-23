@@ -91,8 +91,7 @@ Where issues of maritime jurisdiction between two or more Coastal States are in 
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_three]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -152,8 +151,7 @@ Where issues of maritime jurisdiction between two or more Coastal States are in 
 3+| speed units 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
-4: knots +
-| (S) EN
+4: knots | (S) EN
 | 1,1
 
 3+| vessel class 2+| 3+| | (S) TE
@@ -207,16 +205,16 @@ If it is required to encode an anchorage area, including anchorages for seaplane
 
 * The complex attribute *feature name*, sub-attribute *name* is used to encode the name and/or number of the *Anchorage Area*.
 * The complex attribute *information* (see <<sec_2.4.6>>) may be used to provide additional information about the category of anchorage, where required.
-* Individual recommended anchorages without defined limits should be encoded as *Anchorage Area* features of type point, with attributes *category of anchorage* = _1_ (unrestricted anchorage) and *status* = _3_ (recommended).
-* If it is required to encode an anchorage at a location that has not been defined by a regulatory authority but has been reported to be suitable and safe for anchoring, this must be done using *Anchorage Area* of type point, with attribute *category of anchorage* = _15_ (reported anchorage).
+* Individual recommended anchorages without defined limits should be encoded as *Anchorage Area* features of type point, with attributes stem:[bb "category of anchorage" = 1] (unrestricted anchorage) and stem:[bb "status" = 3] (recommended).
+* If it is required to encode an anchorage at a location that has not been defined by a regulatory authority but has been reported to be suitable and safe for anchoring, this must be done using *Anchorage Area* of type point, with attribute stem:[bb "category of anchorage" = 15] (reported anchorage).
 
-NOTE: the encoding of *Anchorage Area* with attribute *category of anchorage* = _15_ (reported anchorage) of type surface is prohibited.
+NOTE: the encoding of *Anchorage Area* with attribute stem:[bb "category of anchorage" = 15] (reported anchorage) of type surface is prohibited.
 
-* If it is required to encode an anchorage which may be used for a period of not more than 24 hours, it must be done using *category of anchorage* = _9_ (anchorage for periods up to 24 hours).
-* If it is required to encode an anchorage with a specific, limited time period, it must be done using *category of anchorage* = _10_ (anchorage for limited period of time). The specific limit of time should be encoded using the complex attribute *information* (see <<sec_2.4.6>>), sub-attribute *text* (for example_Anchorage limited to 12 hours_).
+* If it is required to encode an anchorage which may be used for a period of not more than 24 hours, it must be done using stem:[bb "category of anchorage" = 9] (anchorage for periods up to 24 hours).
+* If it is required to encode an anchorage with a specific, limited time period, it must be done using stem:[bb "category of anchorage" = 10] (anchorage for limited period of time). The specific limit of time should be encoded using the complex attribute *information* (see <<sec_2.4.6>>), sub-attribute *text* (for example_Anchorage limited to 12 hours_).
 * Areas with numerous small craft moorings may be encoded using the feature *Mooring Area* (see <<sec_16.4>>). For the encoding of mooring buoys, see <<sec_20.8>>.
 * For additional guidance regarding the encoding of vessel speed limits, see <<sec_17.4>>.
-* Areas where anchoring is prohibited must be encoded, where required, as *Restricted Area* (see <<sec_17.8>>) with attribute *restriction* = _1_ (anchoring prohibited).
+* Areas where anchoring is prohibited must be encoded, where required, as *Restricted Area* (see <<sec_17.8>>) with attribute stem:[bb "restriction" = 1] (anchoring prohibited).
 
 [underline]#Distinction:# Anchor Berth; Mooring Area.
 
@@ -245,8 +243,7 @@ NOTE: the encoding of *Anchorage Area* with attribute *category of anchorage* = 
 
 3+| name usage 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_four]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -259,9 +256,9 @@ NOTE: the encoding of *Anchorage Area* with attribute *category of anchorage* = 
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| maximum permitted draught 2+| _(INFORM)__(NINFOM)_ 3+| | RE | 0,1
+3+| maximum permitted draught 2+| _(INFORM) (NINFOM)_ 3+| | RE | 0,1
 
-3+| maximum permitted vessel length 2+| _(INFORM)__(NINFOM)_ 3+| | RE | 0,1
+3+| maximum permitted vessel length 2+| _(INFORM) (NINFOM)_ 3+| | RE | 0,1
 
 3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
 
@@ -313,8 +310,7 @@ NOTE: the encoding of *Anchorage Area* with attribute *category of anchorage* = 
 3+| speed units 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
-4: knots +
-| EN
+4: knots | EN
 | 1,1
 
 3+| vessel class 2+| 3+| | (S) TE
@@ -408,8 +404,7 @@ If it is required to encode a mooring area, it must be done using the feature *M
 12: reefer container cargo +
 13: Ro-Ro cargo +
 14: project cargo +
-15: break bulk cargo +
-| EN
+15: break bulk cargo | EN
 | 0,*
 
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
@@ -421,8 +416,7 @@ If it is required to encode a mooring area, it must be done using the feature *M
 
 3+| name usage 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_five]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -529,8 +523,7 @@ If it is required to encode an anchor berth, it must be done using the feature *
 
 3+| name usage 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_six]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -587,8 +580,7 @@ If it is required to encode an anchor berth, it must be done using the feature *
 3+| speed units 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
-4: knots +
-| (S) EN
+4: knots | (S) EN
 | 1,1
 
 3+| vessel class 2+| 3+| | (S) TE
@@ -636,7 +628,7 @@ If it is required to encode a seaplane landing area, it must be done using the f
 
 * For additional guidance regarding the encoding of vessel speed limits, see <<sec_17.4>>.
 * If it is required to encode an area where seaplanes draw water for fire fighting activities, this must be done using *Seaplane Landing Area*.
-* If it is required to encode an anchorage for seaplanes, it must be done using an *Anchorage Area* feature (see <<sec_16.3>>), with attribute *category of anchorage* = _6_ (seaplane anchorage).
+* If it is required to encode an anchorage for seaplanes, it must be done using an *Anchorage Area* feature (see <<sec_16.3>>), with attribute stem:[bb "category of anchorage" = 6] (seaplane anchorage).
 
 [underline]#Distinction:# Airport/Airfield; Helipad; Runway.
 
@@ -670,8 +662,7 @@ If it is required to encode a seaplane landing area, it must be done using the f
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_seven]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -715,8 +706,7 @@ If it is required to encode a seaplane landing area, it must be done using the f
 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
-4: knots +
-| (S) EN
+4: knots | (S) EN
 | 1,1
 
 3+| vessel class 2+| 3+| | (S) TE | 0,1
@@ -769,7 +759,7 @@ If it is required to encode a dumping ground, it must be done using the feature 
 [underline]#Remarks:#
 
 * A *Dumping Ground* feature of type surface must be covered by features from Skin of the Earth as appropriate (*Depth Area* or *Unsurveyed Area*).
-* Disused dumping grounds for harmful materialsare considered dangerous for an indefinite period and must therefore be encoded on the largest optimum display scale ENC datasets, with attribute *status* = _4_ (not in use). The date when the area ceased to be used may be populated using the attribute *date disused*, if known.
+* Disused dumping grounds for harmful materialsare considered dangerous for an indefinite period and must therefore be encoded on the largest optimum display scale ENC datasets, with attribute stem:[bb "status" = 4] (not in use). The date when the area ceased to be used may be populated using the attribute *date disused*, if known.
 * For additional guidance regarding the encoding of vessel speed limits, see <<sec_17.4>>.
 
 [[sec_16.7.2]]
@@ -779,9 +769,9 @@ Spoil grounds are areas set aside, clear of shipping channels and in deep water 
 
 Extraction (or dredging) areas are those areas where a concentration of dredging vessels may be encountered, taking up sand or shingle to be brought ashore (for example for construction purposes). Their significance is primarily as a collision hazard, although they also indicate the likelihood of finding a greater depth of water than charted. Channels dredged to provide an adequate depth of water for navigation are "dredged areas", not to be confused with "dredging areas".
 
-If it is required to encode a spoil ground, it must be done using a *Dumping Ground* feature, with attribute *category of dumping ground* = _5_ (spoil ground).
+If it is required to encode a spoil ground, it must be done using a *Dumping Ground* feature, with attribute stem:[bb "category of dumping ground" = 5] (spoil ground).
 
-If it is required to encode a dredging area, it must be done using a *Restricted Area* feature (see <<sec_17.8>>), with attribute *category of restricted area* = _21_ (dredging area). An area in which seabed material (for example sand, shingle) is being extracted for purposes such as construction must be encoded, where required, using the feature *Offshore Production Area* (see <<sec_14.6>>), with attribute *category of production area* = _13_ (seabed material extraction area).
+If it is required to encode a dredging area, it must be done using a *Restricted Area* feature (see <<sec_17.8>>), with attribute stem:[bb "category of restricted area" = 21] (dredging area). An area in which seabed material (for example sand, shingle) is being extracted for purposes such as construction must be encoded, where required, using the feature *Offshore Production Area* (see <<sec_14.6>>), with attribute stem:[bb "category of production area" = 13] (seabed material extraction area).
 
 [underline]#Remarks:#
 
@@ -878,8 +868,7 @@ If it is required to encode a dredging area, it must be done using a *Restricted
 3+| speed units 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
-4: knots +
-| (S) EN
+4: knots | (S) EN
 | 1,1
 
 3+| vessel class 2+| 3+| | (S) TE | 0,1
@@ -968,8 +957,7 @@ If it is required to encode a military practice area, it must be done using the 
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_nine]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -1044,8 +1032,7 @@ If it is required to encode a named international or national territory, it must
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_ten]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -1102,8 +1089,7 @@ If it is required to encode a named international or national territory, it must
 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
-4: knots +
-| (S) EN
+4: knots | (S) EN
 | 1,1
 
 3+| vessel class 2+| 3+| | (S) TE | 0,1
@@ -1262,8 +1248,7 @@ If it is required to identify an area in which the Mariner must be aware of circ
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_twelve]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -1423,8 +1408,7 @@ If it is required to encode the Contiguous Zone, it must be done using the featu
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_fourteen]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -1603,8 +1587,7 @@ If it is required to encode an Exclusive Economic Zone (EEZ), it must be done us
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_seventeen]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -1683,8 +1666,7 @@ If it is required to encode a fishery zone, it must be done using the feature *F
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_eighteen]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -1739,8 +1721,7 @@ If it is required to encode a fishery zone, it must be done using the feature *F
 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
-4: knots +
-| (S) EN
+4: knots | (S) EN
 | 1,1
 
 3+| vessel class 2+| 3+| | (S) TE | 0,1
@@ -1809,8 +1790,7 @@ If it is required to encode a fishing ground, it must be done using the feature 
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_nineteen]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -1884,8 +1864,7 @@ If it is required to encode a free port area, it must be done using the feature 
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_twenty]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -1963,8 +1942,7 @@ If it is required to encode an administrative harbour area, it must be done usin
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_twentyone]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -2054,8 +2032,7 @@ If it is required to encode a log pond (also known as booming ground), it must b
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_twentytwo]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -2230,8 +2207,7 @@ If it is required to encode a Straight Territorial Sea Baseline, it must be done
 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
-4: knots +
-| (S) EN
+4: knots | (S) EN
 | 1,1
 
 3+| vessel class 2+| 3+| | (S) TE | 0,1
@@ -2301,8 +2277,7 @@ If it is required to encode a Territorial Sea area, it must be done using the fe
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_twentyfive]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -2343,8 +2318,7 @@ If it is required to encode a Territorial Sea area, it must be done using the fe
 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
-4: knots +
-| (S) EN
+4: knots | (S) EN
 | 1,1
 
 3+| vessel class 2+| 3+| | (S) TE | 0,1
@@ -2417,8 +2391,7 @@ If it is required to encode a submarine transit lane, it must be done using the 
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_twentysix]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -2491,8 +2464,7 @@ If it is required to encode the area within which regulations regarding pilotage
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_twentyseven]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -2577,8 +2549,7 @@ If it is required to encode a collision regulations (COLREGs) demarcation line, 
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_twentyeight]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -2643,53 +2614,53 @@ If it is required to encode a restricted area, it must be done using the feature
 
 * The attribute *category of restricted area* is used to describe the reason for the regulation, while the attribute *restriction* describes the restrictions.
 * The complex attribute *information* (see <<sec_2.4.6>>) may be used to provide an additional explanation about the regulation (for example the equivalent to a caution note from a paper chart), where required.
-* An area in which regulations apply due to recreation activities such as water skiing, jet skiing, kite surfing and rowing must be encoded, where required, as *Restricted Area* with *category of restricted area* = _32_ (recreation area).
+* An area in which regulations apply due to recreation activities such as water skiing, jet skiing, kite surfing and rowing must be encoded, where required, as *Restricted Area* with stem:[bb "category of restricted area" = 32] (recreation area).
 * If it is required to encode an area for which the Mariner must be made aware of circumstances influencing the safety of navigation, it must be done using the feature *Caution Area* (see <<sec_16.10>>). This feature may be used to identify a danger, a risk, a rule or advice (for example an area of continually changing depths) which is not directly related to a particular feature.
 
 [[sec_17.1]]
 === Minefields (see S-4 -- B-441.8)
 
-If it is required to encode a minefield, it must be done using a *Restricted Area* feature (see <<sec_17.8>>), with attribute *category of restricted area* = _14_ (minefield). Former mined areas should also be encoded with attribute *status* = _4_ (not in use).
+If it is required to encode a minefield, it must be done using a *Restricted Area* feature (see <<sec_17.8>>), with attribute stem:[bb "category of restricted area" = 14] (minefield). Former mined areas should also be encoded with attribute stem:[bb "status" = 4] (not in use).
 
 [[sec_17.2]]
 === Degaussing ranges (see S-4 -- B-448)
 
 A degaussing (or demagnetising) range is an area, usually of about 0.2M diameter, within which ships' magnetic fields may be measured. Sensing instruments and cables are installed on the seafloor in the range and there are cables leading from the range to a control position ashore. The range is usually marked by distinctive buoys. The significance of a degaussing range to Mariners is that anchoring and trawling are prohibited and that the range may have to be avoided when vessels are using it.
 
-If it is required to encode a degaussing range, it must be done using a *Restricted Area* feature (see <<sec_17.8>>), with attribute *category of restricted area* = _8_ (degaussing range).
+If it is required to encode a degaussing range, it must be done using a *Restricted Area* feature (see <<sec_17.8>>), with attribute stem:[bb "category of restricted area" = 8] (degaussing range).
 
 [[sec_17.3]]
 === Nature reserves (see S-4 -- B-437.3)
 
-If it is required to encode a marine nature reserve area, it must be done using a *Restricted Area* feature (see <<sec_17.8>>), with attribute *category of restricted area* = _4_ (nature reserve).
+If it is required to encode a marine nature reserve area, it must be done using a *Restricted Area* feature (see <<sec_17.8>>), with attribute stem:[bb "category of restricted area" = 4] (nature reserve).
 
 [[sec_17.4]]
 === Speed limits (see S-4 -- B-430.2)
 
-Speed is often limited inside harbours in order to prevent wakes. If it is required to encode this restriction, it must be done usinga *Restricted Area* feature (see <<sec_17.8>>), with the attribute *category of restricted area* = _24_ (no wake area) or *restriction* = _13_ (no wake). If it is required to encode cases where the speed limit is known in general or for a certain class(es) of vessel, it must be done using a *Restricted Area* or using other features having the attribute *restriction* (see <<sec_17>> above) and having *restriction* = _27_ (speed restricted), with the speed limit, speed units and, if appropriate, the class of vessel, encoded using an instance of the complex attribute *vessel speed limit*, sub-attributes *speed limit*, *speed units* and *vessel class*. Further detailed information regarding speed limits, for example varying speed limits based on vessel length, draught or cargo, may be encoded, if required, using the complex attribute *information*; or using the attribute *pictorial representation* (for example, to reproduce the graphic for a speed restriction table contained in a Nautical Publication).
+Speed is often limited inside harbours in order to prevent wakes. If it is required to encode this restriction, it must be done usinga *Restricted Area* feature (see <<sec_17.8>>), with the attribute stem:[bb "category of restricted area" = 24] (no wake area) or stem:[bb "restriction" = 13] (no wake). If it is required to encode cases where the speed limit is known in general or for a certain class(es) of vessel, it must be done using a *Restricted Area* or using other features having the attribute *restriction* (see <<sec_17>> above) and having stem:[bb "restriction" = 27] (speed restricted), with the speed limit, speed units and, if appropriate, the class of vessel, encoded using an instance of the complex attribute *vessel speed limit*, sub-attributes *speed limit*, *speed units* and *vessel class*. Further detailed information regarding speed limits, for example varying speed limits based on vessel length, draught or cargo, may be encoded, if required, using the complex attribute *information*; or using the attribute *pictorial representation* (for example, to reproduce the graphic for a speed restriction table contained in a Nautical Publication).
 
-If it is required to encode the buoys/beacons marking the *Restricted Area* feature with speed limits, it must be done using *Special Purpose/General Beacon* or *Special Purpose/General Buoy* features (see <<sec_20.13;and!sec_20.5>> respectively), with the attribute *category of special purpose mark* = _24_ (reduced wake mark) or _25_ (speed limit mark). The speed limit and its unit of measurement should be encoded using the complex attribute *information* (see <<sec_2.4.6>>), sub-attribute *text* (for example _Speed limit is 6 knots_).
+If it is required to encode the buoys/beacons marking the *Restricted Area* feature with speed limits, it must be done using *Special Purpose/General Beacon* or *Special Purpose/General Buoy* features (see <<sec_20.13;and!sec_20.5>> respectively), with the attribute stem:[bb "category of special purpose mark" = 24] (reduced wake mark) or _25_ (speed limit mark). The speed limit and its unit of measurement should be encoded using the complex attribute *information* (see <<sec_2.4.6>>), sub-attribute *text* (for example _Speed limit is 6 knots_).
 
 [[sec_17.5]]
 === Anchoring restricted (see S-4 -- B-431.4)
 
-If it is required to encode a restricted anchoring area, it must be done using a *Restricted Area* feature (see <<sec_17.8>>), or using other features with the attribute *restriction* (see <<sec_17>>), where *restriction* = _1_ (anchoring prohibited) or _2_ (anchoring restricted). Additional information about the restriction should be encoded using the complex attribute *information* (see <<sec_2.4.6>>).
+If it is required to encode a restricted anchoring area, it must be done using a *Restricted Area* feature (see <<sec_17.8>>), or using other features with the attribute *restriction* (see <<sec_17>>), where stem:[bb "restriction" = 1] (anchoring prohibited) or _2_ (anchoring restricted). Additional information about the restriction should be encoded using the complex attribute *information* (see <<sec_2.4.6>>).
 
 [[sec_17.6]]
 === Areas to be avoided (see S-4 -- B-435.7)
 
-If it is required to encode an IMO Area to be Avoided, it must be done using a *Restricted Area* feature (see <<sec_17.8>>), with attribute *restriction* = _14_ (area to be avoided). An IMO Area to be Avoided around a navigational aid must also be encoded with attribute *category of restricted area* = _12_ (navigational aid safety zone).
+If it is required to encode an IMO Area to be Avoided, it must be done using a *Restricted Area* feature (see <<sec_17.8>>), with attribute stem:[bb "restriction" = 14] (area to be avoided). An IMO Area to be Avoided around a navigational aid must also be encoded with attribute stem:[bb "category of restricted area" = 12] (navigational aid safety zone).
 
 [underline]#Remarks:#
 
-* Areas other than IMO Area to be Avoided for which entry is prohibited or restricted should be encoded using the *Restricted Area*, having values *restriction* = _7_ (entry prohibited) or _8_ (entry restricted).
+* Areas other than IMO Area to be Avoided for which entry is prohibited or restricted should be encoded using the *Restricted Area*, having values stem:[bb "restriction" = 7] (entry prohibited) or _8_ (entry restricted).
 
 [[sec_17.7]]
 === Environmentally Sensitive Sea Areas (see S-4 -- B-437)
 
 Environmentally Sensitive Sea Areas (ESSA) should be included on ENCs where there is a specifically identified requirement, and where it is practicable, given the optimum display scale of the ENC data and the extent of the ESSA. If there is no such requirement, or if it is not practicable, details of ESSA should only be inserted in associated publications, such as Sailing Directions. It should be noted that the inclusion of ESSA on smaller optimum display scale of the ENC data may be appropriate for voyage planning purposes.
 
-If it is required to encode an Environmentally Sensitive Sea Area, it must be done using a *Restricted Area* feature (see <<sec_17.8>>), with attribute *category of restricted area* = _27_ (ESSA) or _28_ (PSSA).
+If it is required to encode an Environmentally Sensitive Sea Area, it must be done using a *Restricted Area* feature (see <<sec_17.8>>), with attribute stem:[bb "category of restricted area" = 27] (ESSA) or _28_ (PSSA).
 
 An Environmentally Sensitive Sea Area that is shown on the source as a point symbol should be encoded using a small surfacerestricted area feature.
 
@@ -2739,8 +2710,7 @@ An Environmentally Sensitive Sea Area that is shown on the source as a point sym
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[seventeen_eight]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -2807,8 +2777,7 @@ An Environmentally Sensitive Sea Area that is shown on the source as a point sym
 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
-4: knots +
-| (S) EN
+4: knots | (S) EN
 | 1,1
 
 3+| vessel class 2+| 3+| | (S) TE | 0,1
@@ -2858,7 +2827,7 @@ If it is required to encode a restricted area, it must be done using the feature
 
 * If the type of restriction for the area cannot be encoded using the mandatory attribute *restriction* it must be encoded, where required, using the complex attribute *information*, sub-attribute *text*; and *restriction* populated as empty (null).
 * For additional guidance regarding the encoding of vessel speed limits, see <<sec_17.4>>.
-* The term "no anchoring area" is used to identify the IMO routeing measure of that name. Such areas, where required, must be encoded as *Restricted Area* with attribute *restriction* = _1_ (anchoring prohibited).
+* The term "no anchoring area" is used to identify the IMO routeing measure of that name. Such areas, where required, must be encoded as *Restricted Area* with attribute stem:[bb "restriction" = 1] (anchoring prohibited).
 
 [underline]#Distinction:# Anchorage Area; Cable Area; Caution Area; Collision Regulations Limit; Deep Water Route Part; Depth Area; Dredged Area; Dumping Ground; Fairway; Information Area; Military Practice Area; Submarine Pipeline Area; Swept Area.
 
@@ -3381,7 +3350,7 @@ _1_ and _2_(IALA A and B)
 
 |===
 
-\* If it is required to encode an aid to navigation that may be considered to be a topmark but has multiple colours that are considered important for navigation, this should be done using the feature *Daymark* (see <<sec_20.14>>).
+++*++ If it is required to encode an aid to navigation that may be considered to be a topmark but has multiple colours that are considered important for navigation, this should be done using the feature *Daymark* (see <<sec_20.14>>).
 
 [[sec_19]]
 == Geo Features -- Lights
@@ -3403,7 +3372,7 @@ When encoding a light, the combination of the character and purpose of the light
 
 The principal character of a light is its rhythm (although, strictly, fixed lights and some alternating lights are not "rhythmic").
 
-If it is required to encode the rhythms of lights, this must be done using the complex attribute *rhythm of light*, sub-attributes *light characteristic* and *signal group*. When populating *rhythm of light*, the sub-attributes *signal group*, *signal period* and *signal sequence* are only valid for non-fixed lights (that is, sub-attribute *light characteristic* ≠ _1_ (fixed)), with *signal group* and *signal period* being mandatory.
+If it is required to encode the rhythms of lights, this must be done using the complex attribute *rhythm of light*, sub-attributes *light characteristic* and *signal group*. When populating *rhythm of light*, the sub-attributes *signal group*, *signal period* and *signal sequence* are only valid for non-fixed lights (that is, sub-attribute stem:[bb "light characteristic" != 1] (fixed)), with *signal group* and *signal period* being mandatory.
 
 The use of these sub-attributes is defined in the following Table; it contains the most common examples of coding; other coding combinations are possible:
 
@@ -3435,7 +3404,7 @@ h| Rhythms of lights h| Q h| Q(3) h| VQ h| VQ(3) h| UQ h| IUQ
 
 |===
 
-Some lights recently constructed may appear to the Mariner as "fixed and flashing - FFL" by night, while the real-world feature actually comprises two separate lights vertically disposed, one fixed and the other flashing (F&Fl). When it is known that two separate features actually exist, they must be encoded as separate light features, in this case two *Light All Around* features, one with complex attribute *rhythm of light*, sub-attribute *light characteristic* = _1_ (fixed) and the other with *light characteristic* = _2_ (flashing), and not as one *Light**All Around* with *light characteristic* = _13_ (fixed/flash).
+Some lights recently constructed may appear to the Mariner as "fixed and flashing - FFL" by night, while the real-world feature actually comprises two separate lights vertically disposed, one fixed and the other flashing (F&Fl). When it is known that two separate features actually exist, they must be encoded as separate light features, in this case two *Light All Around* features, one with complex attribute *rhythm of light*, sub-attribute stem:[bb "light characteristic" = 1] (fixed) and the other with stem:[bb "light characteristic" = 2] (flashing), and not as one *Light**All Around* with stem:[bb "light characteristic" = 13] (fixed/flash).
 
 [[sec_19.1.2]]
 ==== Types and functions of lights (see S-4 -- B-471.1)
@@ -3457,37 +3426,37 @@ If it is required to encode the height above the water surface of a light on a f
 [[sec_19.1.4.1]]
 ===== Night lights
 
-If it is required to encode a night light, it must be done using the attribute *exhibition condition of light* = _4_ (night light) on the light feature.
+If it is required to encode a night light, it must be done using the attribute stem:[bb "exhibition condition of light" = 4] (night light) on the light feature.
 
 [[sec_19.1.4.2]]
 ===== Unwatched lights (see S-4 -- B-473.1)
 
-This information should not be encoded, but unwatched (unmanned) lights, with no standby or emergency arrangements, may be encoded using attribute *status* = _17_ (unwatched).
+This information should not be encoded, but unwatched (unmanned) lights, with no standby or emergency arrangements, may be encoded using attribute stem:[bb "status" = 17] (unwatched).
 
 [[sec_19.1.4.3]]
 ===== Occasional lights (see S-4 -- B-473.2)
 
-If it is required to encode an occasional light, it must be done using attribute *status* = _2_ (occasional). If it is required to encode a private light that is not regularly exhibited, it must be done using *status* = _2,8_ (occasional, private).
+If it is required to encode an occasional light, it must be done using attribute stem:[bb "status" = 2] (occasional). If it is required to encode a private light that is not regularly exhibited, it must be done using stem:[bb "status" = 2,8] (occasional, private).
 
 [[sec_19.1.4.4]]
 ===== Daytime lights (see S-4 -- B-473.4)
 
-If it is required to encode a light shown throughout 24 hours without change of character, it must be done using attribute *exhibition condition of light* = _1_ (light shown without change of character).
+If it is required to encode a light shown throughout 24 hours without change of character, it must be done using attribute stem:[bb "exhibition condition of light" = 1] (light shown without change of character).
 
 If it is required to encode a light having characteristics shown by day different from those shown at night, it must be done by encoding two light features sharing the same point spatial instance:
 
-* one light feature with *exhibition condition of light* = _2_ (daytime light),
-* one lightfeature with *exhibition condition of light* = _4_ (night light).
+* one light feature with stem:[bb "exhibition condition of light" = 2] (daytime light),
+* one lightfeature with stem:[bb "exhibition condition of light" = 4] (night light).
 
 [[sec_19.1.4.5]]
 ===== Fog lights (see S-4 -- B-473.5)
 
-If it is required to encode a light which is exhibited in fog or conditions of reduced visibility, it must be done using a light feature, with attributes *exhibition condition of light* = _3_ (fog light)and *status* = _2_ (occasional)_._
+If it is required to encode a light which is exhibited in fog or conditions of reduced visibility, it must be done using a light feature, with attributes stem:[bb "exhibition condition of light" = 3] (fog light)and stem:[bb "status" = 2] (occasional)_._
 
 If it is required to encode a light having characteristics shown in fog that are different from those shown in conditions of normal visibility, it must be done by encoding two light features sharing the same point spatial instance:
 
-* one light feature with *exhibition condition of light* = _3_ (fog light) and *status* = _2_ (occasional)
-* one light feature with *exhibition condition of light* = _2_ (daytime light) or _4_ (night light) and the complex attribute *information* (see <<sec_2.4.6>>), sub-attribute *text* = _Character of the light changes in fog_.
+* one light feature with stem:[bb "exhibition condition of light" = 3] (fog light) and stem:[bb "status" = 2] (occasional)
+* one light feature with stem:[bb "exhibition condition of light" = 2] (daytime light) or _4_ (night light) and the complex attribute *information* (see <<sec_2.4.6>>), sub-attribute *text* = _Character of the light changes in fog_.
 
 Note the distinction between fog lights and fog detector lights, which are lights used to automatically determine conditions of visibility which warrant the turning on or off of a sound signal. Fog detector lights must be encoded, where required, using the feature *Light Fog Detector* (see <<sec_19.4>>).
 
@@ -3503,29 +3472,25 @@ If a light is activated by calling into a manned station, the attribute *signal 
 
 If it is required to encode a leading light, it must be done using an appropriate light feature, with attribute:
 
-*category of light*  = _4,12_ - front leading light
-
-_4,13_ - rear leading light
-
-_4,14_ - lower leading light
-
-_4,15_ - upper leading light
+stem:[bb "category of light" =]::
+_4,12_::: front leading light
+_4,13_::: rear leading light
+_4,14_::: lower leading light
+_4,15_::: upper leading light
 
 [underline]#Remarks:#
 
-* Even if, on the source, the leading lights are merged into a single symbol, a light feature must be created for each light. These lights must be placed in their true position; that is, where the source shows a single light with a legend such as __2F.
-
-Bu__, further investigation must be done in order to determine the true position of each light, and its full attribution. Compilers should note that where this occurs on paper charts, the position of the light shown on the chart normally corresponds with the rear leading light.
+* Even if, on the source, the leading lights are merged into a single symbol, a light feature must be created for each light. These lights must be placed in their true position; that is, where the source shows a single light with a legend such as _2F.Bu_, further investigation must be done in order to determine the true position of each light, and its full attribution. Compilers should note that where this occurs on paper charts, the position of the light shown on the chart normally corresponds with the rear leading light.
 * The leading line must be encoded using the method described in <<sec_15.1>>.
 
 [[sec_19.1.6]]
 ==== Lighthouses (see S-4 -- B-457.3)
 
-If it is required to encode a lighthouse, it must be done using a *Landmark* feature (see <<sec_7.2>>), with attributes *category of landmark* = _17_ (tower)and *function* = _33_ (light support)for towers, or using a *Building* feature (see <<sec_6.2>>), with the attribute *function* = _33_, for any other shapes.
+If it is required to encode a lighthouse, it must be done using a *Landmark* feature (see <<sec_7.2>>), with attributes stem:[bb "category of landmark" = 17] (tower) and stem:[bb "function" = 33] (light support)for towers, or using a *Building* feature (see <<sec_6.2>>), with the attribute stem:[bb "function" = 33], for any other shapes.
 
 If it is required to encode the attributes *elevation*, *height* and *vertical length* for a lighthouse, this must be done as described in <<sec_19.1.3>>.
 
-If the lighthouse is permanently extinguished/unlit, this must be indicated by population of the attribute *status* = _4_ (not in use) for the *Landmark*/*Building*, and the lightfeature must be removed. Where a lighthouse is illuminated by flood lights, the additional value of *status* = _12_ (illuminated) must also be populated. For lights that are temporarily extinguished, see <<sec_31.2.2>> -- paragraph 10(i).
+If the lighthouse is permanently extinguished/unlit, this must be indicated by population of the attribute stem:[bb "status" = 4] (not in use) for the *Landmark*/*Building*, and the lightfeature must be removed. Where a lighthouse is illuminated by flood lights, the additional value of stem:[bb "status" = 12] (illuminated) must also be populated. For lights that are temporarily extinguished, see <<sec_31.2.2>> -- paragraph 10(i).
 
 [[sec_19.1.7]]
 ==== Various special types of lights
@@ -3559,7 +3524,7 @@ h| Type h| S-4 h| category of light h| Remarks
 | _18_
 |
 
-| Flood light | B-478.2 | _8_ | Only to encode flood lights that are visible from seaward. The illuminated structure should be encoded using appropriate feature classes, with attribute *status* = _12_ (illuminated) and, if the flood lit colour of the structure is considered important for navigation, complex attribute *information*, sub-attribute *text* indicating the colour; for example, _Purple when flood lit_.
+| Flood light | B-478.2 | _8_ | Only to encode flood lights that are visible from seaward. The illuminated structure should be encoded using appropriate feature classes, with attribute stem:[bb "status" = 12] (illuminated) and, if the flood lit colour of the structure is considered important for navigation, complex attribute *information*, sub-attribute *text* indicating the colour; for example, _Purple when flood lit_.
 | Synchronized lights
 | B-478.3
 |
@@ -3575,7 +3540,7 @@ h| Type h| S-4 h| category of light h| Remarks
 |
 
 | _11_
-| Only to encode spot lights that are visible from seaward. The illuminated feature should be encoded using appropriate feature classes, with attribute *status* = _12_ (illuminated)
+| Only to encode spot lights that are visible from seaward. The illuminated feature should be encoded using appropriate feature classes, with attribute stem:[bb "status" = 12] (illuminated)
 
 | Emergency light
 |
@@ -3597,7 +3562,7 @@ h| Type h| S-4 h| category of light h| Remarks
 
 Light features located in the water must have a structure feature, generally a beacon (for example *Lateral Beacon*, *Special Purpose/General Beacon*) or other fixed structure (for example *Offshore Platform*), or a buoy structure (for example *Lateral Buoy*, *Special Purpose/General Buoy*) for floating aids to navigation. When a light is located in the water with no indication on the source of the structure feature, regardless of the height of the light, a *Pile* feature of type surface or a *Special Purpose/General Beacon* feature should be encoded as the structure feature. This will ensure that a symbol will be shown on ECDIS systems when the light features are not displayed during daytime navigation.
 
-The light portrayal rules for ECDIS result in the display of *Light All Around* features with Boolean attribute *major light* = _True_ using a 360 light sector. On land, if no aid to navigation structure object has been encoded at the position of these lights, the Mariner does not have a displayed centre point to take bearings to:
+The light portrayal rules for ECDIS result in the display of *Light All Around* features with Boolean attribute *major light* = _True_ using a stem:[360 "unitsml(deg)"] light sector. On land, if no aid to navigation structure object has been encoded at the position of these lights, the Mariner does not have a displayed centre point to take bearings to:
 
 [[fig_19-1]]
 .Omnidirectional light display in ECDIS
@@ -3655,8 +3620,7 @@ Encoders are advised, therefore, that an aid to navigation structure object (for
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[nineteen_two]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -3806,7 +3770,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[nineteen_two]]
 [NOTE]
 --
-For non-fixed lights (that is, sub-attribute *light characteristic* ≠ _1_ (fixed)), the sub-attributes *signal group* and *signal period* are mandatory.
+For non-fixed lights (that is, sub-attribute stem:[bb "light characteristic" != 1] (fixed)), the sub-attributes *signal group* and *signal period* are mandatory.
 
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
@@ -3883,8 +3847,7 @@ Further guidance for encoding various types and characteristics of lights can be
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[nineteen_three]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -3977,13 +3940,13 @@ Further guidance for encoding various types and characteristics of lights can be
 
 3+| sector limit one 2+| 3+| | (S) C | 1,1
 
-3+| sector bearing 2+| _(SECTR1)_ 3+| *sector limit one/sector bearing* ≠ *sector limit two/sector bearing* (_0_ = _360_) | (S) RE | 1,1
+3+| sector bearing 2+| _(SECTR1)_ 3+| *sector limit one/sector bearing* stem:[!=] *sector limit two/sector bearing* (_0_ = _360_) | (S) RE | 1,1
 
 3+| sector line length 2+| 3+| | (S) RE | 0,1
 
 3+| sector limit two 2+| 3+| | (S) C | 1,1
 
-3+| sector bearing 2+| _(SECTR2)_ 3+| *sector limit two/sector bearing* ≠ *sector limit one/sector bearing*; (_0_ = _360_) | (S) RE | 1,1
+3+| sector bearing 2+| _(SECTR2)_ 3+| *sector limit two/sector bearing* stem:[!=] *sector limit one/sector bearing*; (_0_ = _360_) | (S) RE | 1,1
 
 3+| sector line length 2+| 3+| | (S) RE | 0,1
 
@@ -4057,11 +4020,8 @@ Further guidance for encoding various types and characteristics of lights can be
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
-| The Structure 3+| **Structure/Equipment**^**
-
-== ^2^
-
-**^ (see <<sec_25.16>>) 3+| *Fog Signal*, *Light Air Obstruction*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Radar Transponder Beacon*, *Retroreflector* 2+| Composition | 0,1
+| The Structure 3+| *Structure/Equipment* footnote:[See <<sec_18.2>>] (see <<sec_25.16>>)
+3+| *Fog Signal*, *Light Air Obstruction*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Radar Transponder Beacon*, *Retroreflector* 2+| Composition | 0,1
 | The Equipment 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Bridge*, *Building*, *Crane*, *Cardinal Beacon*, *Conveyor*, *Dolphin*, *Fishing Facility*, *Fortified Structure*, *Isolated Danger Beacon*, *Landmark*, *Lateral Beacon*, *Offshore Platform*, *Pile*, *Pipeline Overhead*, *Pylon/Bridge Support*, *Safe Water Beacon*, *Shoreline Construction*, *Silo/Tank*, *Span Fixed*, *Span Opening*, *Special Purpose/General Beacon*, *Structure Over Navigable Water*, *Wind Turbine*, *Wreck* 2+| Association | 0,*
 | The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
@@ -4074,7 +4034,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[nineteen_three]]
 [NOTE]
 --
-For non-fixed lights (that is, sub-attribute *light characteristic* ≠ _1_ (fixed)), the sub-attributes *signal group* and *signal period* are mandatory.
+For non-fixed lights (that is, sub-attribute stem:[bb "light characteristic" != 1] (fixed)), the sub-attributes *signal group* and *signal period* are mandatory.
 
 For a light sector that is a directional sector, the sub-complex attribute *directional character* is mandatory.
 
@@ -4101,8 +4061,8 @@ Further guidance for encoding various types and characteristics of lights can be
 [underline]#Remarks:#
 
 * The complex attribute *sector characteristics*, sub-complex attribute *light sector* is used to populate each sector for the light, except for sectors in which there is no light exhibited. Where there is a different rhythm of light between sectors (for example, for complex lights), separate instances of *sector characteristics* must be populated.
-* Population of the sub-complex attribute *sector limit* having sub-attributes *sector limit one* = _0_ and *sector limit two* = _360_ (that is, encoding an all around light as a sectored light) is prohibited.
-* If a sector of a sectored light is intended to have a directional function, this must be encoded using the *light sector* complex sub-attribute *directional character*. If the light is intensified in this sector, *light sector* sub-attribute *light visibility* = _4_ (intensified) must be populated. The sub-complex attribute *sector limit* is optional for directional light sectors.
+* Population of the sub-complex attribute *sector limit* having sub-attributes stem:[bb "sector limit one" = 0] and stem:[bb "sector limit two" = 360] (that is, encoding an all around light as a sectored light) is prohibited.
+* If a sector of a sectored light is intended to have a directional function, this must be encoded using the *light sector* complex sub-attribute *directional character*. If the light is intensified in this sector, *light sector* sub-attribute stem:[bb "light visibility" = 4] (intensified) must be populated. The sub-complex attribute *sector limit* is optional for directional light sectors.
 * The sub-attribute *sector line length* (see <<sec_27.158>>) may be used for critical light sectors to extend the sector line when the ECDIS display settings are set to display default sector lines. The intended usage of the ENC dataset must be considered when determining the usage of *sector line length* so as to avoid excessive screen clutter when default sector display is enabled; and consistent display of light sectors across the entire ENC portfolio should also be a consideration when determining the population of this attribute. Where populated, the value of *sector line length* must not exceed the value populated for the sub-attribute *value of nominal range* for the light sector.
 * In some cases the area defined by the intersecting sectors of two discrete sector lights are used to indicate the existence of isolated and sometimes substantial dangers to navigation, the precise position of which may not be known. When default sectors are displayed in ECDIS, the extent and intent of these sectors may not be clearly defined to the Mariner. In order to more clearly indicate these areas, compilers should consider appropriate use of *sector line length* for the relevant sectors in the impacted area. Where it is considered important that the area of possible danger is defined, this should be done by encoding a *Caution Area* feature (see <<sec_16.10>>) covering the intersection area. Information relating to the definition of the area by sector lights and a précis of the danger should be encoded using the complex attribute *information* (see <<sec_2.4.6>>) for the *Caution Area*.
 * The fairway defined by the succession of navigable areas in the white sectors of a series of *Light Sectored* features may be encoded using the feature *Fairway* (see <<sec_15.7>>).
@@ -4120,9 +4080,9 @@ Further guidance for encoding various types and characteristics of lights can be
 .Obscured light sectors
 image::figure-19-2.png[498,198]
 
-If an encoded light is obscured in a part of the navigable area of a sector (see <<fig_19-2>> (A) above) beyond an offshore obstruction, it must be encoded using *Light Sectored*, with each of the sectors (a) -- (c) encoded using the complex attribute *light sector*. The partially obscured sector of (b) must have *light sector* with sub-attributes *light visibility* = _8_ (partially obscured) and sub-attribute *value of nominal range* set to the distance from the light to the obstruction. The sectors in which the light is visible from seaward ((a) and (c)) must be encoded as separate iterations of *light sector*.
+If an encoded light is obscured in a part of the navigable area of a sector (see <<fig_19-2>> (A) above) beyond an offshore obstruction, it must be encoded using *Light Sectored*, with each of the sectors (a) -- (c) encoded using the complex attribute *light sector*. The partially obscured sector of (b) must have *light sector* with sub-attributes stem:[bb "light visibility" = 8] (partially obscured) and sub-attribute *value of nominal range* set to the distance from the light to the obstruction. The sectors in which the light is visible from seaward ((a) and (c)) must be encoded as separate iterations of *light sector*.
 
-If there is no navigable water between the light and the obstacle (see (e) in <<fig_19-2>> (B) above), the masked sector must not have an iteration of *light sector* encoded, unless a faint light is visible in the navigable part of the sector, which should be encoded using *light sector*, with sub-attribute *light visibility* = _3_ (faint). The sectors in which the light is visible from seaward ((d) and (f)) must be encoded as separate iterations of *sector characteristics*.
+If there is no navigable water between the light and the obstacle (see (e) in <<fig_19-2>> (B) above), the masked sector must not have an iteration of *light sector* encoded, unless a faint light is visible in the navigable part of the sector, which should be encoded using *light sector*, with sub-attribute stem:[bb "light visibility" = 3] (faint). The sectors in which the light is visible from seaward ((d) and (f)) must be encoded as separate iterations of *sector characteristics*.
 
 [[sec_19.3.1.2]]
 ===== Directional lights (see S-4 -- B-475.7-8)
@@ -4153,27 +4113,27 @@ Evolving technology in the development of navigational lights has resulted in th
 
 If is required to encode an oscillating light sector, it should be done using a *Light Sectored* feature, with iterations of the complex attribute *sector characteristics* as follows: For light sectors in the IALA A system that are alternating and oscillate increasingly from white to green (to starboard) and red (to port) with increasing deviation from the track defined by the directional light:
 
-*sector characteristics*: *light characteristic* = _28_ (Alternating); *colour* = _1,3_ (White, Red); *sector limit*; *sector information* (*text*) = _White phase decreases as bearing to light increases_
+*sector characteristics*: stem:[bb "light characteristic" = 28] (Alternating); stem:[bb "colour" = 1,3] (White, Red); *sector limit*; *sector information* (*text*) = _White phase decreases as bearing to light increases_
 
-*sector characteristics*: *light characteristic* = _28_ (Alternating); *colour* = _1,4_ (White, Green); *sector limit*; *sector information* (*text*) = _White phase increases as bearing to light increases_
+*sector characteristics*: stem:[bb "light characteristic" = 28] (Alternating); stem:[bb "colour" = 1,4] (White, Green); *sector limit*; *sector information* (*text*) = _White phase increases as bearing to light increases_
 
 For lights in the IALA B system that are alternating and oscillate increasingly from white to red (to starboard) and green (to port) with increasing deviation from the track defined by the directional light; transpose the colours red and green in the above encoding.
 
 For lights in the IALA A system that are occulting green (to starboard) and red (to port) which oscillate with increasing period of eclipse to isophased or flashing with increasing deviation from the track defined by the directional light:
 
-*sector characteristics*: *light characteristic* = _8_ (Occulting); *colour* = _3_ (Red); *sector limit*; *sector information* (*text*) = _Light phase decreases as bearing to light increases_
+*sector characteristics*: stem:[bb "light characteristic" = 8] (Occulting); stem:[bb "colour" = 3] (Red); *sector limit*; *sector information* (*text*) = _Light phase decreases as bearing to light increases_
 
-**sector characteristics*: *light characteristic* = _8_ (Occulting); *colour* = _4_ (Green); *sector limit*; *sector information* (*text*) = _Light phase increases as bearing to light increases_
+**sector characteristics*: stem:[bb "light characteristic" = 8] (Occulting); stem:[bb "colour" = 4] (Green); *sector limit*; *sector information* (*text*) = _Light phase increases as bearing to light increases_
 
 For lights in the IALA B system that are occulting red (to starboard) and green (to port) which oscillate with increasing period of eclipse to isophased or flashing with increasing deviation from the track defined by the directional light; transpose the colours red and green in the above encoding.
 
 Oscillating lights which are not IALA should be encoded similar to the above. For instance, where a light contains white sectors that are occulting and oscillate with increasing period of eclipse to isophased or flashing with increasing deviation from the track defined by the directional light:For the sector to port of the track defined by the directional light:
 
-*sector characteristics*: *light characteristic* = _8_ (Occulting); *colour* = _1_ (White); *sector limit*; *sector information* (*text*) = _Light phase decreases as bearing to light increases_
+*sector characteristics*: stem:[bb "light characteristic" = 8] (Occulting); stem:[bb "colour" = 1] (White); *sector limit*; *sector information* (*text*) = _Light phase decreases as bearing to light increases_
 
 For the sector to starboard of the track defined by the directional light:
 
-*sector characteristics*: *light characteristic* = _8_ (Occulting); *colour* = _1_ (White); *sector limit*; *sector information* (*text*) = _Light phase increases as bearing to light increases_
+*sector characteristics*: stem:[bb "light characteristic" = 8] (Occulting); stem:[bb "colour" = 1] (White); *sector limit*; *sector information* (*text*) = _Light phase increases as bearing to light increases_
 
 All other light sectors must be encoded using additional iterations of *sector characteristics*, with sub-attributes (including *light sector* or *directional character*) populated in accordance with the characteristics of the sector.
 
@@ -4209,8 +4169,7 @@ All other light sectors must be encoded using additional iterations of *sector c
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[nineteen_four]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -4333,7 +4292,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[nineteen_four]]
 [NOTE]
 --
-For non-fixed lights (that is, sub-attribute *light characteristic* ≠ _1_ (fixed)), the sub-attributes *signal group* and *signal period* are mandatory.
+For non-fixed lights (that is, sub-attribute stem:[bb "light characteristic" != 1] (fixed)), the sub-attributes *signal group* and *signal period* are mandatory.
 
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
@@ -4366,7 +4325,7 @@ Further guidance for encoding various types and characteristics of lights can be
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *AIR OBSTRUCTION**LIGHT*. An air obstruction light is a light marking an obstacle which constitutes a danger to air navigation. (IHO Dictionary -- S-32).
+10+| [underline]#IHO Definition:# *AIR OBSTRUCTION LIGHT*. An air obstruction light is a light marking an obstacle which constitutes a danger to air navigation. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Light Air Obstruction (LIGHTS)*
 10+| *[underline]#Primitives:#* *Point*
 
@@ -4396,8 +4355,7 @@ Further guidance for encoding various types and characteristics of lights can be
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[nineteen_five]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -4533,7 +4491,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[nineteen_five]]
 [NOTE]
 --
-For non-fixed lights (that is, sub-attribute *light characteristic* ≠ _1_ (fixed)), the sub-attributes *signal group* and *signal period* are mandatory.
+For non-fixed lights (that is, sub-attribute stem:[bb "light characteristic" != 1] (fixed)), the sub-attributes *signal group* and *signal period* are mandatory.
 
 Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
 
@@ -4619,8 +4577,7 @@ Further guidance for encoding various types and characteristics of lights can be
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_one]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -4844,8 +4801,7 @@ image::figure-20-1.png["",475,406]
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_two]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -5058,8 +5014,7 @@ image::figure-20-2.png["",517,636]
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_three]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -5272,8 +5227,7 @@ image::figure-20-3.png["",549,263]
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_four]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -5549,8 +5503,7 @@ image::figure-20-4.png["",664,217]
 
 3+| name usage 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN | 0,1 footnoteblock:[twenty_five]
+2: alternate name display | (S) EN | 0,1 footnoteblock:[twenty_five]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
 
@@ -5709,25 +5662,25 @@ In the following Table, a blank indicates that the encoder may choose a relevant
 |===
 h| Feature | INT1 h| Feature h| buoy shape h| category of special purpose mark h| Other attributes
 
-| Firing danger area buoy           | Q50 | *Special Purpose/General Buoy* | | _1_ |
-| Target                            | Q51 | *Special Purpose/General Buoy* | | _2_ |
-| Marker ship                       | Q52 | *Special Purpose/General Buoy* | | _3_ |
-| Barge                             | Q53 | *Special Purpose/General Buoy* | | _5_ |
-| Degaussing range buoy             | Q54 | *Special Purpose/General Buoy* | | _4_ |
-| Buoy marking cable                | Q55 | *Special Purpose/General Buoy* | | _6_ |
-| Spoil ground buoy                 | Q56 | *Special Purpose/General Buoy* | | _7_ |
-| Buoy marking outfall              | Q57 | *Special Purpose/General Buoy* | | _8_ |
-| Buoy marking pipeline             | | *Special Purpose/General Buoy* | | _39_ |
-| Superbuoy                         | Q26 | \*\*\* *Buoy* | _7_ | |
+| Firing danger area buoy          | Q50 | *Special Purpose/General Buoy* | | _1_ |
+| Target                           | Q51 | *Special Purpose/General Buoy* | | _2_ |
+| Marker ship                      | Q52 | *Special Purpose/General Buoy* | | _3_ |
+| Barge                            | Q53 | *Special Purpose/General Buoy* | | _5_ |
+| Degaussing range buoy            | Q54 | *Special Purpose/General Buoy* | | _4_ |
+| Buoy marking cable               | Q55 | *Special Purpose/General Buoy* | | _6_ |
+| Spoil ground buoy                | Q56 | *Special Purpose/General Buoy* | | _7_ |
+| Buoy marking outfall             | Q57 | *Special Purpose/General Buoy* | | _8_ |
+| Buoy marking pipeline            | | *Special Purpose/General Buoy* | | _39_ |
+| Superbuoy                        | Q26 | ++***++*Buoy* | _7_ | |
 | Large automatic navigational buoy |  P6 | *Special Purpose/General Buoy* | _7_ | _15_ |
 
 | Ocean data acquisition system (ODAS) buoy |  Q58 | *Special Purpose/General Buoy* | | _9_ | Subsurface ODAS encoded as *Obstruction* (see <<sec_13.6>>)
 
-| Seaplane anchorage buoy                | Q60 | *Special Purpose/General Buoy* | | _11_ |
+| Seaplane anchorage buoy               | Q60 | *Special Purpose/General Buoy* | | _11_ |
 | Buoy marking traffic separation scheme | Q61 | *Special Purpose/General Buoy* | | _19_ |
-| Buoy marking recreation zone           | Q62 | *Special Purpose/General Buoy* | | _12_ |
-| Floating waste bin                     | | *Special Purpose/General Buoy* | | _Empty (null) value_ | *information* = _waste bin_ (for example)
-| Fish Aggregating Device (FAD)             | | *Special Purpose/General Buoy* | *_/_* | _59_ | Fish havens are encoded as *Obstruction* (see <<sec_13.6>>)
+| Buoy marking recreation zone          | Q62 | *Special Purpose/General Buoy* | | _12_ |
+| Floating waste bin                    | | *Special Purpose/General Buoy* | | _Empty (null) value_ | *information* = _waste bin_ (for example)
+| Fish Aggregating Device (FAD)            | | *Special Purpose/General Buoy* | *_/_* | _59_ | Fish havens are encoded as *Obstruction* (see <<sec_13.6>>)
 | Buoy marking wave recorder (or current meter) | Q59 | *Special Purpose/General Buoy* | | _63_ |
 |===
 
@@ -5737,7 +5690,7 @@ h| Feature | INT1 h| Feature h| buoy shape h| category of special purpose mark h
 * If it is required to encode the total vertical length, including the topmark and any equipment features (for example light), of the buoy above the water level, it must be done using the attribute *vertical length*.
 * If a special purpose buoy does not conform to the system of navigational marks defined by *Navigational System of Marks* (see <<sec_3.6>>), the attribute *marks navigational -- system of* on the *Special Purpose/General Buoy* should be populated as _9_ (no system).
 * Fish havens (sometimes referred to as subsurface Fish Aggregating Devices (FAD)) and subsurface Ocean Data Acquisition System (ODAS) equipment must be encoded, where required, using an *Obstruction* feature (see <<sec_13.6>>).
-* A buoy deployed as an emergency measure to mark a newly identified danger, such as a wreck, must be encoded using the feature *Emergency Wreck Marking Buoy* (see <<sec_20.6>>). A special purpose buoy intended to permanently mark a wreck as a danger must be encoded, where required, as a *Special Purpose/General Buoy* feature, with attribute *category of special purpose mark* = _60_ (wreck mark).
+* A buoy deployed as an emergency measure to mark a newly identified danger, such as a wreck, must be encoded using the feature *Emergency Wreck Marking Buoy* (see <<sec_20.6>>). A special purpose buoy intended to permanently mark a wreck as a danger must be encoded, where required, as a *Special Purpose/General Buoy* feature, with attribute stem:[bb "category of special purpose mark" = 60] (wreck mark).
 
 [underline]#Distinction:# Cardinal Buoy; Emergency Wreck Marking Buoy; Installation Buoy; Isolated Danger Buoy; Lateral Buoy; Mooring Buoy; Safe Water Buoy.
 
@@ -5790,8 +5743,7 @@ h| Feature | INT1 h| Feature h| buoy shape h| category of special purpose mark h
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_six]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -5937,11 +5889,11 @@ If it is required to encode a buoy having the function of an emergency wreck mar
 
 * If it is required to encode a buoy or topmark that has more than one colour, the attributes *colour* and *colour pattern* must be encoded, according to the rules laid out in <<sec_2.4.10>>.
 * If it is required to encode the total vertical length, including the topmark and any equipment features (for example light), of the buoy above the water level, it must be done using the attribute *vertical length*.
-* An IALA compliant emergency wreck marking buoy topmark should be populated using the complex attribute *topmark*, with sub-attributes *topmark shape* = _8_ (upright cross) and *colour* = _6_ (yellow).
+* An IALA compliant emergency wreck marking buoy topmark should be populated using the complex attribute *topmark*, with sub-attributes stem:[bb "topmark shape" = 8] (upright cross) and stem:[bb "colour" = 6] (yellow).
 * An IALA compliant emergency wreck marking buoy should also have the following associated equipment features:
 
-** A *Light All Around* feature (see <<sec_19.2>>), with attributes *colour* = _5,6_ (blue, yellow), *light characteristic* = _17_ (occulting alternating), *signal group* = _(1)_ and *signal period* = _3_. The complex attribute *signal sequence*, sub-attributes *signal duration* and *signal status*, should be populated equivalent to __(___00.50)+01.00+(00.50)+01.00_ (bracketed values corresponding to periods of eclipse and non-bracketed values corresponding to periods of light);and the attribute *value of nominal range* should be populated as _4_.
-** A *Radar Transponder Beacon* feature (see <<sec_21.5>>), with attributes *category of radar transponder beacon* = _2_ (racon, radar transponder beacon) and *signal group* = _(D)_.
+** A *Light All Around* feature (see <<sec_19.2>>), with attributes stem:[bb "colour" = 5,6] (blue, yellow), stem:[bb "light characteristic" = 17] (occulting alternating), *signal group* = _(1)_ and stem:[bb "signal period" = 3]. The complex attribute *signal sequence*, sub-attributes *signal duration* and *signal status*, should be populated equivalent to __(___00.50)+01.00+(00.50)+01.00_ (bracketed values corresponding to periods of eclipse and non-bracketed values corresponding to periods of light);and the attribute *value of nominal range* should be populated as _4_.
+** A *Radar Transponder Beacon* feature (see <<sec_21.5>>), with attributes stem:[bb "category of radar transponder beacon" = 2] (racon, radar transponder beacon) and *signal group* = _(D)_.
 
 [underline]#Distinction:# Cardinal Buoy; Installation Buoy; Lateral Buoy; Mooring Buoy; Safe Water Buoy; Special Purpose/General Buoy.
 
@@ -5999,8 +5951,7 @@ If it is required to encode a buoy having the function of an emergency wreck mar
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_seven]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -6142,8 +6093,7 @@ If it is required to encode an installation buoy, it must be done using the feat
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_eight]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -6155,10 +6105,10 @@ If it is required to encode an installation buoy, it must be done using the feat
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| maximum permitted draught
-2+| _(INFORM)__(NINFOM)_ 3+| | RE | 0,1
+2+| _(INFORM) (NINFOM)_ 3+| | RE | 0,1
 
 3+| maximum permitted vessel length
-2+| _(INFORM)__(NINFOM)_ 3+| | RE | 0,1
+2+| _(INFORM) (NINFOM)_ 3+| | RE | 0,1
 
 3+| nature of construction 2+| (NATCON) 3+|
 7: metal +
@@ -6300,8 +6250,7 @@ If it is required to encode a mooring buoy, it must be done using the feature *M
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_nine]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -6544,8 +6493,7 @@ image::figure-20-1.png["",544,466]
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_ten]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -6605,7 +6553,7 @@ image::figure-20-1.png["",544,466]
 10: violet +
 11: orange +
 12: magenta +
-13: pink | (S) EN | 0,1 \* (ordered)
+13: pink | (S) EN | 0,1 * (ordered)
 3+| colour pattern 2+| (COLPAT) 3+|
 1: horizontal stripes +
 2: vertical stripes +
@@ -6777,8 +6725,7 @@ image::figure-20-2.png["",508,624]
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_eleven]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -7012,8 +6959,7 @@ image::figure-20-3.png["",549,263]
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_twelve]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -7305,8 +7251,7 @@ image::figure-20-4.png["",568,184]
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_thirteen]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -7473,191 +7418,24 @@ In the following Table, a blank indicates that the encoder may choose a relevant
 
 [[table_20-2]]
 .IALA special purpose beacons -- Common types
-[cols="10"]
+[cols="<,^,^,^,^"]
 |===
-|
-*Feature*
-|
-*INT1*
-|
-*Feature*
-|
-*beacon shape*
-|
-*category of special purpose mark*
-|
-|
-|
-|
-|
+h| Feature h| INT1 h| Feature h| beacon shape h| category of special purpose mark
 
-| Minor not permanent mark
-| Q90
-| *Beacon \*\*\**
-| _1_
-|
-
-|
-|
-|
-|
-|
-
-| Cairn
-| Q100
-| *Beacon \*\*\**
-| _6_
-|
-
-|
-|
-|
-|
-|
-
-| Beacon tower
-| Q110
-| *Beacon \*\*\**
-| _3_
-|
-
-|
-|
-|
-|
-|
-
-| Lattice beacon
-| Q111
-| *Beacon \*\*\**| _4_
-|
-
-|
-|
-|
-|
-|
-
-| Leading beacon
-| Q120
-| *Special Purpose/General Beacon*
-|
-
-| _16_
-|
-|
-|
-|
-|
-
-| Beacon marking a clearing line
-| Q121
-| *Special Purpose/General Beacon*
-|
-
-| _41_
-|
-|
-|
-|
-|
-
-| Beacon marking measured distance
-| Q122
-| *Special Purpose/General Beacon*
-|
-
-| _17_
-|
-|
-|
-|
-|
-
-| Cable landing beacon
-| Q123
-| *Special Purpose/General Beacon*
-|
-
-| _6_
-|
-|
-|
-|
-|
-
-| Outfall landing beacon
-| Q123
-| *Special Purpose/General Beacon*
-|
-
-| _8_
-|
-|
-|
-|
-|
-
-| Pipeline landing beacon
-| Q123
-| *Special Purpose/General Beacon*
-|
-
-| _39_
-|
-|
-|
-|
-|
-
-| Refuge beacon
-| Q124
-| *Special Purpose/General Beacon*
-|
-
-| _44_
-|
-|
-|
-|
-|
-
-| Firing practice area beacon
-| Q125
-| *Special Purpose/General Beacon*
-|
-
-| _1_
-|
-|
-|
-|
-|
-
-| Notice board
-| Q126
-| *Special Purpose/General Beacon*
-|
-
-| _18_
-|
-|
-|
-|
-|
-
-| Buoyant beacon
-| P5
-| *Special Purpose/General Beacon*
-| _7_
-|
-
-|
-|
-|
-|
-|
-
+| Minor not permanent mark        | Q90 | *Beacon ++***++*                 | _1_ |
+| Cairn                           | Q100 | *Beacon ++***++*                 | _6_ |
+| Beacon tower                    | Q110 | *Beacon ++***++*                 | _3_ |
+| Lattice beacon                  | Q111 | *Beacon ++***++*                 | _4_ |
+| Leading beacon                  | Q120 | *Special Purpose/General Beacon* |    | _16_
+| Beacon marking a clearing line  | Q121 | *Special Purpose/General Beacon* |    | _41_
+| Beacon marking measured distance | Q122 | *Special Purpose/General Beacon* |    | _17_
+| Cable landing beacon            | Q123 | *Special Purpose/General Beacon* |    | _6_
+| Outfall landing beacon          | Q123 | *Special Purpose/General Beacon* |    | _8_
+| Pipeline landing beacon         | Q123 | *Special Purpose/General Beacon* |    | _39_
+| Refuge beacon                   | Q124 | *Special Purpose/General Beacon* |    | _44_
+| Firing practice area beacon     | Q125 | *Special Purpose/General Beacon* |    | _1_
+| Notice board                    | Q126 | *Special Purpose/General Beacon* |    | _18_
+| Buoyant beacon                  | P5  | *Special Purpose/General Beacon* | _7_ |
 |===
 
 [underline]#Remarks:#
@@ -7671,7 +7449,7 @@ In the following Table, a blank indicates that the encoder may choose a relevant
 [[sec_20.13.2]]
 ==== Signs and notice boards
 
-If it is required to encode a fixed or floating sign or notice board, it must be done using a *Special Purpose/General Beacon* feature or *Special Purpose/General Buoy* feature (see <<sec_20.5>>), with attribute *category of special purpose mark* = _18_ (notice mark), or using the feature *Daymark* (see <<sec_20.14>>).
+If it is required to encode a fixed or floating sign or notice board, it must be done using a *Special Purpose/General Beacon* feature or *Special Purpose/General Buoy* feature (see <<sec_20.5>>), with attribute stem:[bb "category of special purpose mark" = 18] (notice mark), or using the feature *Daymark* (see <<sec_20.14>>).
 
 [underline]#Remarks:#
 
@@ -7787,8 +7565,7 @@ If it is required to encode a fixed or floating sign or notice board, it must be
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_fourteen]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -7925,50 +7702,13 @@ In the following Table, a blank indicates that the encoder may choose a relevant
 
 [[table_20-3]]
 .Daymarks -- Examples
-[cols="10"]
+[cols="<,^,^,^,^"]
 |===
-|
-*Feature*
-|
-*INT1*
-|
-*Feature*
-|
-*category of special purpose mark*
-|
-*Other attributes*
-|
-|
-|
-|
-|
+h| Feature h| INT1 h| Feature h| category of special purpose mark h| Other attributes
 
-| Coloured or white mark
-| Q101
-| *Daymark*
-|
-
-| *nature of construction* =_ 9_
-|
-|
-|
-|
-|
-
-| Coloured topmark with function of beacon
-| Q102.1
-| *Daymark*
-|
-
-| *nature of construction* =_ 9_
-|
-|
-|
-|
-|
-
-| Painted board with function of leading beacon | Q102.2 | *Daymark* | _16_ | *topmark shape* = _6_ | | | | |
-
+| Coloured or white mark                       | Q101  | *Daymark* |     | stem:[bb "nature of construction" = 9]
+| Coloured topmark with function of beacon     | Q102.1 | *Daymark* |     | stem:[bb "nature of construction" = 9]
+| Painted board with function of leading beacon | Q102.2 | *Daymark* | _16_ | stem:[bb "topmark shape" = 6]
 |===
 
 [underline]#Remarks:#
@@ -8022,8 +7762,7 @@ In the following Table, a blank indicates that the encoder may choose a relevant
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_fifteen]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -8228,8 +7967,7 @@ If it is required to encode a light float, it must be done using the feature *Li
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_sixteen]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -8541,8 +8279,7 @@ If it is required to encode radar reflectors on curve features (for instance ove
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_nineteen]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -8685,8 +8422,7 @@ It is not required to encode AIS information on ENCs, as ENCs are intended to be
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twentyone_two]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -8751,7 +8487,7 @@ If it is required to encode a physical AIS aid to navigation, it must be done us
 
 [underline]#Remarks:#
 
-* Physical AIS aids to navigation must be encoded, where required, using the geometry of the physical aid to navigation from which the AIS signal is, or appears to be, transmitted. If it is required to encode the actual location from which the signal is transmitted for a physical AIS aid to navigation where the signal is transmitted from another location, it must be done using a *Radio Station* feature (see <<sec_21.4>>), with attribute *category of radio station* = _16_ (AIS base station).
+* Physical AIS aids to navigation must be encoded, where required, using the geometry of the physical aid to navigation from which the AIS signal is, or appears to be, transmitted. If it is required to encode the actual location from which the signal is transmitted for a physical AIS aid to navigation where the signal is transmitted from another location, it must be done using a *Radio Station* feature (see <<sec_21.4>>), with attribute stem:[bb "category of radio station" = 16] (AIS base station).
 * The unique Maritime Mobile Service Identity (MMSI) code for the physical AIS aid to navigation should be encoded, where known, using the attribute *MMSI code*.
 * Where populated, the attribute *estimated range of transmission* for *Physical AIS Aid to Navigation* provides the Mariner with an approximate distance from the position of the aid that the broadcast signal will generate the display of the AIS symbol on the ECDIS.
 
@@ -8781,8 +8517,7 @@ If it is required to encode a physical AIS aid to navigation, it must be done us
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twentyone_three]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -8818,8 +8553,7 @@ If it is required to encode a physical AIS aid to navigation, it must be done us
 9: isolated danger +
 10: safe water +
 11: special purpose +
-12: emergency wreck marking +
-| EN
+12: emergency wreck marking | EN
 | 1,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
@@ -8864,7 +8598,7 @@ If it is required to encode a virtual AIS aid to navigation, it must be done usi
 [underline]#Remarks:#
 
 * Virtual AIS aids to navigation should only be encoded where it is known that the Virtual aid is intended to be permanent, or deployed for a specified fixed period. Where it is known that a Virtual AIS aid to navigation is moved or withdrawn on a regular basis and/or at short notice, such that implementing these changes through the application of ENC Updates is impractical, the Virtual aid should not be encoded.
-* If the virtual AIS aid to navigation is intended to serve a purpose other than the types defined in attribute *virtual AIS aid to navigation type*, it should be encoded using *virtual AIS aid to navigation type* = _11_ (special purpose), and the purpose encoded using the complex attribute *information*, sub-attribute *text*.
+* If the virtual AIS aid to navigation is intended to serve a purpose other than the types defined in attribute *virtual AIS aid to navigation type*, it should be encoded using stem:[bb "virtual AIS aid to navigation type" = 11] (special purpose), and the purpose encoded using the complex attribute *information*, sub-attribute *text*.
 * The unique Maritime Mobile Service Identity (MMSI) code for the virtual AIS aid to navigation should be encoded, where known, using the attribute *MMSI code*.
 * Where populated, the attribute *estimated range of transmission* for *Virtual AIS Aid to Navigation* provides the Mariner with an approximate distance from the position of the virtual aid that the broadcast signal will generate the display of the AIS symbol on the ECDIS.
 
@@ -8905,8 +8639,7 @@ If it is required to encode a virtual AIS aid to navigation, it must be done usi
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twentyone_four]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -8990,13 +8723,13 @@ If it is required to encode a radio station, it must be done using the feature *
 * The *Radio Station* must only be used to encode the technical equipment itself, independent of the building or structure in which it is installed. If it is required to encode the building or structure (for example mast, tower, radar dome), it must be done using an appropriate feature (for example *Building*, *Landmark*). There is no requirement to establish a Structure/Equipment association between the *Radio Station* feature and the structure in which it is installed.
 * Further information (for example transmission characteristic) may be encoded using the complex attribute *information* (see <<sec_2.4.6>>).
 * Each VHF-channel should be indicated, using the attribute *communication channel* (see <<sec_27.77>>). Alternately, if the same VHF-channel(s) apply to multiple features in the dataset, this should be indicated through an associated instance of the information type *Contact Details*, attribute *communication channel* (see <<sec_24.1>>).
-* If it is required to encode a DGPS station, it must be done using *Radio Station*, with attribute *category of radio station* = _10_ (Differential GNSS).
+* If it is required to encode a DGPS station, it must be done using *Radio Station*, with attribute stem:[bb "category of radio station" = 10] (Differential GNSS).
 * Where required, the complex attribute *frequency pair*, sub-attributes *frequency shore station receives* and *frequency shore station transmits*, must be quoted in Hertz, for example a signal frequency of 950 MHz must be encoded as _950000000_.
 
 [[sec_21.4.2]]
 ==== Radio direction-finding stations (see S-4 -- B-483)
 
-If it is required to encode a radio direction-finding station, it must be done using a *Radio Station* feature, with attribute *category of radio station* = _5_ (radio direction-finding station). The identification signal may be encoded using the attribute *call sign*.
+If it is required to encode a radio direction-finding station, it must be done using a *Radio Station* feature, with attribute stem:[bb "category of radio station" = 5] (radio direction-finding station). The identification signal may be encoded using the attribute *call sign*.
 
 [underline]#Remarks:#
 
@@ -9029,8 +8762,7 @@ If it is required to encode a radio direction-finding station, it must be done u
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twentyone_five]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -9059,13 +8791,13 @@ If it is required to encode a radio direction-finding station, it must be done u
 
 3+| sector limit one 2+| _(SECTR1)_ 3+| | (S) C | 1,1
 
-3+| sector bearing 2+| 3+| *sector limit one/sector bearing* ≠ *sector limit two/sector bearing* (_0_ = _360_) | (S) RE | 1,1
+3+| sector bearing 2+| 3+| *sector limit one/sector bearing* stem:[!=] *sector limit two/sector bearing* (_0_ = _360_) | (S) RE | 1,1
 
 3+| sector line length 2+| 3+| | (S) RE | 0,1
 
 3+| sector limit two 2+| _(SECTR2)_ 3+| | (S) C | 1,1
 
-3+| sector bearing 2+| 3+| *sector limit two/sector bearing* ≠ *sector limit one/sector bearing* (_0_ = _360_) | (S) RE | 1,1
+3+| sector bearing 2+| 3+| *sector limit two/sector bearing* stem:[!=] *sector limit one/sector bearing* (_0_ = _360_) | (S) RE | 1,1
 
 3+| sector line length 2+| 3+| | (S) RE | 0,1
 
@@ -9169,8 +8901,7 @@ NOTE: All features comprising a range system must have the same value populated 
 3+| category of preference
 2+| 3+|
 1: primary +
-2: alternate +
-| EN
+2: alternate | EN
 | 0,1
 
 3+| communication channel 2+| (COMCHA) 3+| | TE | 0,*
@@ -9186,8 +8917,7 @@ NOTE: All features comprising a range system must have the same value populated 
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twentytwo_one]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -9208,8 +8938,7 @@ NOTE: All features comprising a range system must have the same value populated 
 2+| 3+|
 1: embarkation +
 2: disembarkation +
-3: pilot change +
-| EN
+3: pilot change | EN
 | 0,*
 
 3+| status 2+| (STATUS) 3+|
@@ -9271,7 +9000,7 @@ If it is required to encode a pilot boarding place, it must be done using the fe
 [[sec_22.1.2]]
 ==== Pilot stations ashore (see S-4 -- B-491.4)
 
-If it is required to encode a pilot station ashore, it must be done using a *Building* or *Landmark* feature, with attribute *function* = _11_ (pilot office) or _12_ (pilot lookout).
+If it is required to encode a pilot station ashore, it must be done using a *Building* or *Landmark* feature, with attribute stem:[bb "function" = 11] (pilot office) or _12_ (pilot lookout).
 
 [underline]#Distinction:# Pilotage District.
 
@@ -9296,8 +9025,7 @@ If it is required to encode a pilot station ashore, it must be done using a *Bui
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twentytwo_two]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -9350,7 +9078,7 @@ If it is required to encode an area within which a competent authority provides 
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *COAST GUARD STATION.*A station at which a visual/[[radio]]/[[radar]][[marine]] watch is kept either continuously or at certain times only.(IHO Dictionary -- S-32).
+10+| [underline]#IHO Definition:# *COAST GUARD STATION.* A station at which a visual/radio/radar marine watch is kept either continuously or at certain times only.(IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Coast Guard Station (CGUSTA)*
 10+| *[underline]#Primitives:#* *Point, Surface*
 
@@ -9365,11 +9093,9 @@ If it is required to encode an area within which a competent authority provides 
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twentytwo_three]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -9486,8 +9212,7 @@ If it is required to encode a Coast Guard station, it must be done using the fea
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twentytwo_four]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -9599,8 +9324,7 @@ If it is required to encode a warning signal station, it must be done using the 
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twentytwo_five]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -9716,8 +9440,7 @@ If it is required to encode a traffic signal station, it must be done using the 
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twentytwo_six]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -9790,7 +9513,7 @@ If it is required to encode a rescue station, it must be done using the feature 
 [underline]#Remarks:#
 
 * The *Rescue Station* must only be used to describe the function of the rescue station, independent of the building or structure itself. If it is required to encode the building or structure housing the service, it must be done using an appropriate feature (for example *Building*, *Landmark*).
-* If it is required to encode a refuge beacon, it must be done using a *Special Purpose/General Beacon* feature, with attribute *category of special purpose mark* = _44_ (refuge beacon), not by using *Rescue Station*.
+* If it is required to encode a refuge beacon, it must be done using a *Special Purpose/General Beacon* feature, with attribute stem:[bb "category of special purpose mark" = 44] (refuge beacon), not by using *Rescue Station*.
 * Each VHF-channel should be indicated, using the attribute *communication channel* (see <<sec_27.77>>). Alternately, if the same VHF-channel(s) apply to multiple features in the dataset, this should be indicated through an associated instance of the information type *Contact Details*, attribute *communication channel* (see <<sec_24.1>>).
 
 [underline]#Distinction:# Building; Coast Guard Station; Special Purpose/General Beacon.
@@ -9838,8 +9561,7 @@ If it is required to encode a rescue station, it must be done using the feature 
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twentytwo_seven]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -9932,8 +9654,7 @@ If it is required to encode a rescue station, it must be done using the feature 
 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
-4: knots +
-| (S) EN
+4: knots | (S) EN
 | 1,1
 
 3+| vessel class 2+| 3+| | (S) TE | 0,1
@@ -9982,7 +9703,7 @@ If it is required to encode a harbour facility, it must be done using the featur
 
 * Fishing harbours or portsare equipped to provide for the particular needs of fishing boats. Boat harbours and marinasare areas of sheltered water, generally within harbours or ports, set aside for the use of small craft, usually with moorings, buoys, and, in the case of marinas, berthing facilities.
 * Depending on the navigational purpose, harbour facilities are defined by: an area including docks, basins, infrastructure such as buildings, and dockside equipment; or a point.
-* If it is required to encode a terminal with facilities to load/unload or store shipping containers, this should be done using *Harbour Facility* with attribute *category of harbour facility* = _10_ (container terminal).
+* If it is required to encode a terminal with facilities to load/unload or store shipping containers, this should be done using *Harbour Facility* with attribute stem:[bb "category of harbour facility" = 10] (container terminal).
 * If it is required to encode a covered structure into which ships can go, this must be done using the feature *Structure Over Navigable Water* (see <<sec_8.7>>). These structures may be part of the larger harbour facility, which should be encoded as *Harbour Facility*.
 * Each VHF-channel should be indicated using the attribute *communication channel* (see <<sec_27.77>>). Alternately, if the same VHF-channel(s) apply to multiple features in the dataset, this should be indicated through an associated instance of the information type *Contact Details*, attribute *communication channel* (see <<sec_24.1>>).
 * For additional guidance regarding the encoding of vessel speed limits, see <<sec_17.4>>.
@@ -10043,8 +9764,7 @@ If it is required to encode a harbour facility, it must be done using the featur
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twentytwo_eight]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -10129,27 +9849,18 @@ If it is required to encode a small craft facility, it must be done using the fe
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| text offset bearing
-2+| 3+| | IN | 1,1
-
-3+| text offset distance
-2+| 3+| | IN | 1,1
-
-3+| text rotation
-2+| 3+| | BO | 0,1
-
-3+| text type
-2+| 3+|
+3+| text offset bearing  2+| 3+| | IN | 1,1
+3+| text offset distance 2+| 3+| | IN | 1,
+3+| text rotation        2+| 3+| | BO | 0,1
+3+| text type 2+| 3+|
 1: name +
-2: feature characteristic +
-| EN
-| 1,2
-
+2: feature characteristic | EN | 1,2
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Cartographic Text 3+| *Text Association* (see <<sec_25.17>>). 3+| See next row 2+| Association | 0,2
-10+| *Associated to:* *Administration Area*, *Airport/Airfield*, *Anchor Berth*, *Anchorage Area*, *Archipelagic Sea Lane*, *Archipelagic Sea Lane Area*, *Archipelagic Sea Lane Axis*, *Berth*, *Bollard*, *Bridge*, *Building*, *Built-Up Area*, *Cable Area*, *Cable Overhead*, *Cable Submarine*, *Canal*, *Cardinal Buoy*, *Cardinal Beacon*, *Cargo Transhipment Area*, *Causeway*, **Chart 1 Feature**, *Checkpoint*, *Coast Guard Station*, *Coastline*, *Collision Regulations Limit*, *Continental Shelf Area*, *Conveyor*, *Crane*, *Current -- Non-Gravitational*, *Dam*, *Daymark*, *Deep Water Route*, *Deep Water Route Centreline*, *Deep Water Route Part*, *Distance Mark*, *Dock Area*, *Dolphin*, *Dredged Area*, *Dry Dock*, *Dumping Ground*, *Dyke*, *Emergency Wreck Marking Buoy*, *Fairway*, *Fairway System*, *Fence/Wall*, *Ferry Route*, *Fishery Zone*, *Fishing Facility*, *Fishing Ground*, *Floating Dock*, *Fog Signal*, *Fortified Structure*, *Foul Ground*, *Free Port Area*, *Gate*, *Gridiron*, **Harbour Area (Administrative)**, *Harbour Facility*, *Helipad*, *Hulk*, *Ice Area*, *Information Area*, *Installation Buoy*, *Island Group*, *Isolated Danger Beacon*, *Isolated Danger Buoy*, *Lake*, *Land Area*, *Land Elevation*, *Land Region*, *Landmark*, *Lateral Beacon*, *Lateral Buoy*, *Light Air Obstruction*, *Light All Around*, *Light Float*, *Light Fog Detector*, *Light Sectored*, *Light Vessel*, *Local Magnetic Anomaly*, *Lock Basin*, *Log Pond*, *Marine Farm/Culture*, *Marine Pollution Regulations Area*, *Military Practice Area*, *Mooring Area*, *Mooring Buoy*, *Mooring Trot*, *Obstruction*, *Offshore Platform*, *Offshore Production Area*, *Oil Barrier*, *Physical AIS Aid to Navigation*, *Pile*, *Pilot Boarding Place*, *Pilotage District*, *Pipeline Overhead*, *Pipeline Submarine/On Land*, *Pontoon*, *Precautionary Area*, *Production/Storage Area*, *Pylon/Bridge Support*, *Radar Line*, *Radar Range*, *Radar Station*, *Radar Transponder Beacon*, *Radio Calling-In Point*, *Radio Station*, *Railway*, *Range System*, *Rapids*, *Recommended Route Centreline*, *Recommended Track*, *Rescue Station*, *Restricted Area*, *River*, *Road*, *Runway*, *Safe Water Beacon*, *Safe Water Buoy*, *Sea Area/Named Water Area*, *Seabed Area*, *Seagrass*, *Seaplane Landing Area*, *Shoreline Construction*, *Signal Station Traffic*, *Signal Station Warning*, *Silo/Tank*, *Slope Topline*, *Sloping Ground*, *Small Craft Facility*, *Sounding*, *Span Fixed*, *Span Opening*, *Special Purpose/General Beacon*, *Special Purpose/General Buoy*, *Spring*, *Structure Over Navigable Water*, *Submarine Pipeline Area*, *Submarine Transit Lane*, *Tidal Stream Panel Data*, *Tidal Stream -- Flood/Ebb*, *Tideway*, *Traffic Separation Scheme*, *Tunnel*, *Two-Way Route*, *Underwater/Awash Rock*, *Vegetation*, *Vessel Traffic Service Area*, *Virtual AIS Aid to Navigation*, *Water Turbulence*, *Waterfall*, *Weed/Kelp*, *Wind Turbine*, *Wreck*
+10+| [underline]#*Associated to:*# *Administration Area*, *Airport/Airfield*, *Anchor Berth*, *Anchorage Area*, *Archipelagic Sea Lane*, *Archipelagic Sea Lane Area*, *Archipelagic Sea Lane Axis*, *Berth*, *Bollard*, *Bridge*, *Building*, *Built-Up Area*, *Cable Area*, *Cable Overhead*, *Cable Submarine*, *Canal*, *Cardinal Buoy*, *Cardinal Beacon*, *Cargo Transhipment Area*, *Causeway*, **Chart 1 Feature**, *Checkpoint*, *Coast Guard Station*, *Coastline*, *Collision Regulations Limit*, *Continental Shelf Area*, *Conveyor*, *Crane*, *Current -- Non-Gravitational*, *Dam*, *Daymark*, *Deep Water Route*, *Deep Water Route Centreline*, *Deep Water Route Part*, *Distance Mark*, *Dock Area*, *Dolphin*, *Dredged Area*, *Dry Dock*, *Dumping Ground*, *Dyke*, *Emergency Wreck Marking Buoy*, *Fairway*, *Fairway System*, *Fence/Wall*, *Ferry Route*, *Fishery Zone*, *Fishing Facility*, *Fishing Ground*, *Floating Dock*, *Fog Signal*, *Fortified Structure*, *Foul Ground*, *Free Port Area*, *Gate*, *Gridiron*, **Harbour Area (Administrative)**, *Harbour Facility*, *Helipad*, *Hulk*, *Ice Area*, *Information Area*, *Installation Buoy*, *Island Group*, *Isolated Danger Beacon*, *Isolated Danger Buoy*, *Lake*, *Land Area*, *Land Elevation*, *Land Region*, *Landmark*, *Lateral Beacon*, *Lateral Buoy*, *Light Air Obstruction*, *Light All Around*, *Light Float*, *Light Fog Detector*, *Light Sectored*, *Light Vessel*, *Local Magnetic Anomaly*, *Lock Basin*, *Log Pond*, *Marine Farm/Culture*, *Marine Pollution Regulations Area*, *Military Practice Area*, *Mooring Area*, *Mooring Buoy*, *Mooring Trot*, *Obstruction*, *Offshore Platform*, *Offshore Production Area*, *Oil Barrier*, *Physical AIS Aid to Navigation*, *Pile*, *Pilot Boarding Place*, *Pilotage District*, *Pipeline Overhead*, *Pipeline Submarine/On Land*, *Pontoon*, *Precautionary Area*, *Production/Storage Area*, *Pylon/Bridge Support*, *Radar Line*, *Radar Range*, *Radar Station*, *Radar Transponder Beacon*, *Radio Calling-In Point*, *Radio Station*, *Railway*, *Range System*, *Rapids*, *Recommended Route Centreline*, *Recommended Track*, *Rescue Station*, *Restricted Area*, *River*, *Road*, *Runway*, *Safe Water Beacon*, *Safe Water Buoy*, *Sea Area/Named Water Area*, *Seabed Area*, *Seagrass*, *Seaplane Landing Area*, *Shoreline Construction*, *Signal Station Traffic*, *Signal Station Warning*, *Silo/Tank*, *Slope Topline*, *Sloping Ground*, *Small Craft Facility*, *Sounding*, *Span Fixed*, *Span Opening*, *Special Purpose/General Beacon*, *Special Purpose/General Buoy*, *Spring*, *Structure Over Navigable Water*, *Submarine Pipeline Area*, *Submarine Transit Lane*, *Tidal Stream Panel Data*, *Tidal Stream -- Flood/Ebb*, *Tideway*, *Traffic Separation Scheme*, *Tunnel*, *Two-Way Route*, *Underwater/Awash Rock*, *Vegetation*, *Vessel Traffic Service Area*, *Virtual AIS Aid to Navigation*, *Water Turbulence*, *Waterfall*, *Weed/Kelp*, *Wind Turbine*, *Wreck*
 |===
 
 [underline]#INT 1 Reference:#
@@ -10164,16 +9875,16 @@ NOTE: Where an associated instance of *Text Placement* has not been related to a
 [underline]#Remarks:#
 
 * The *Text Placement* cartographic feature is used by the ECDIS to optionally position text in ECDIS, which has been populated using an attribute(s) for the associated feature. The attribute(s) is identified by populating the mandatory attribute *text type*.
-* Where two instances of *text type* are populated for a *Text Placement* instance, the feature name and characteristics as derived from the target feature attribution will be vertically aligned in the ECDIS display in accordance with the defined text offset bearing and distance. If it is required to position the feature name and the feature characteristics independently, this must be done by associating two instances of *Text Placement*, one having *text type* = _1_ (name) and the other having *text type* = _2_ (feature characteristic), to the target feature. Note, however, that independent vertical or horizontal alignment of both the name and the characteristic of a feature is not recommended, as the text will overlap as the Mariner zooms to smaller scales than the optimum display scale for the data.
+* Where two instances of *text type* are populated for a *Text Placement* instance, the feature name and characteristics as derived from the target feature attribution will be vertically aligned in the ECDIS display in accordance with the defined text offset bearing and distance. If it is required to position the feature name and the feature characteristics independently, this must be done by associating two instances of *Text Placement*, one having stem:[bb "text type" = 1] (name) and the other having stem:[bb "text type" = 2] (feature characteristic), to the target feature. Note, however, that independent vertical or horizontal alignment of both the name and the characteristic of a feature is not recommended, as the text will overlap as the Mariner zooms to smaller scales than the optimum display scale for the data.
 * The attributes *text offset bearing* and *text offset distance* define the bearing (related to true north) and distance of the anchor point of the text, in millimetres in the ECDIS display, to be displayed from the associated feature. The values populated for these attributes must be determined based on the desired position of the text at the optimum display scale of the ENC data. Note that the attribute *text offset bearing* does not rotate the text itself, but determines the alignment of the anchor point (or justification) for the text location (horizontal (left, centred or right) and vertical (bottom, centre or top)) based on the encoded bearing. Displayed text will always appear horizontal regardless of the display mode set by the mariner (north-up or course-up), unless the Boolean attribute *text rotation* is set to _True_.
-* The Boolean attribute *text rotation*, when populated as __True__, will rotate the text on the ECDIS display to align along the bearing populated for the attribute *text offset bearing*.
+* The Boolean attribute *text rotation*, when populated as _True_, will rotate the text on the ECDIS display to align along the bearing populated for the attribute *text offset bearing*.
 * Data Producers are advised to determine the best positioning for text at the optimum display scale for the data; and based on "north-up" ECDIS display. While *text offset bearing*, *text offset distance* and *text rotation* will position the text at the same location relative to the associated feature at all Mariner's Selected Viewing Scales, Data Producers are advised that, as the Mariner zooms out to smaller viewing scales, text may unintentionally cover other charted detail. Therefore, as an alternative, Data Producers may experiment with positioning the text so that it clears the majority of other charted features at the smallest scale at which the text is intended to be displayed, and populating the attribute *scale minimum* accordingly (see bullet below). Data Producers are also advised that optimum results may not be achieved when the Mariner has set the display setting for the ECDIS to screen rotations other than "north-up". Encoders should also consider the positioning of the name of a feature where the name is encoded in multiple languages, as the name displayed may be of varying character length based on the Mariner's language settings (see <<sec_2.5.8>>).
 * The attribute *scale minimum* may be used to determine a scale at which the text string is no longer visible in the ECDIS when scale minimum functionality is enabled. Where populated, the value for *scale minimum* on *Text Placement* must not be set to a smaller scale value than the value populated for the associated feature.
 * S-101 portrayal for *Text Placement* has been developed to take into account the name of a light support structure feature where included in the association *Structure/Equipment* as follows:
 
-** Where *Text Placement* containing attribute *text type* = _1_ (name) is associated to the equipment feature and the name has been encoded only on the structure feature, the *Text Placement* inherits the name from the structure.
-** Where *Text Placement* containing attribute *text type* = _1_ (name) is associated to the equipment feature and the name has been encoded on the equipment feature, the *Text Placement* takes the name from the equipment feature. If a name has also been included on the structure feature, this will not be considered in this case, however a separate *Text Placement* associated to the structure may be encoded to place the name of the structure feature at a desired position, if required.
-** Where *Text Placement* containing attribute *text type* = _2_ (feature characteristic) is associated to the equipment feature, the characteristics of the structure feature will not be considered.
+** Where *Text Placement* containing attribute stem:[bb "text type" = 1] (name) is associated to the equipment feature and the name has been encoded only on the structure feature, the *Text Placement* inherits the name from the structure.
+** Where *Text Placement* containing attribute stem:[bb "text type" = 1] (name) is associated to the equipment feature and the name has been encoded on the equipment feature, the *Text Placement* takes the name from the equipment feature. If a name has also been included on the structure feature, this will not be considered in this case, however a separate *Text Placement* associated to the structure may be encoded to place the name of the structure feature at a desired position, if required.
+** Where *Text Placement* containing attribute stem:[bb "text type" = 2] (feature characteristic) is associated to the equipment feature, the characteristics of the structure feature will not be considered.
 * *Text Placement* should normally be associated with features of type point, but may be used for features of type curve and surface.
 
 [underline]#Distinction:#
@@ -10242,14 +9953,13 @@ Information on how to reach a person or organisation by postal, internet, teleph
 5: streamed data +
 6: telex +
 7: telegraph +
-8: email +
-| (S) EN
+8: email | (S) EN
 | 0,1
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Information 3+| *Additional Information* (see <<sec_25.1>>). 3+| See next row 2+| Association | 0,1
-10+| *Associated to:* *Administration Area*, *Airport/Airfield*, *Anchor Berth*, *Anchorage Area*, *Berth*, *Bridge*, *Building*, *Cable Area*, *Cable Overhead*, *Cable Submarine*, *Cardinal Beacon*, *Cardinal Buoy*, *Checkpoint*, *Coast Guard Station*, *Conveyor*, *Crane*, *Daymark*, *Dock Area*, *Dolphin*, *Dry Dock*, *Emergency Wreck Marking Buoy*, *Fishing Facility*, *Floating Dock*, *Fog Signal*, *Gate*, **Harbour Area (Administrative)**, *Harbour Facility*, *Helipad*, *Installation Buoy*, *Isolated Danger Beacon*, *Isolated Danger Buoy*, *Landmark*, *Land Region*, *Lateral Beacon*, *Lateral Buoy*, *Light All Around*, *Light Float*, *Light Sectored*, *Light Vessel*, *Lock Basin*, *Marine Farm/Culture*, *Mooring Area*, *Mooring Buoy*, *Mooring Trot*, *Mooring Buoy*, *Offshore Platform*, *Offshore Production Area*, *Pilot Boarding Place*, *Pilotage District*, *Pipeline Overhead*, *Pipeline Submarine/On Land*, *Production/Storage Area*, *Radar Range*, *Radar Station*, *Radio Calling-In Point*, *Radio Station*, *Railway*, *Rescue Station*, *Runway*, *Safe Water Beacon*, *Safe Water Buoy*, *Seaplane Landing Area*, *Signal Station Traffic*, *Signal Station Warning*, *Silo/Tank*, *Small Craft Facility*, *Span Fixed*, *Span Opening*,*Special Purpose/General Beacon*, *Special Purpose/General Buoy*, *Submarine Pipeline Area*, *Tunnel*, *Vessel Traffic Service Area*, *Wind Turbine*
+10+| [underline]#*Associated to:*# *Administration Area*, *Airport/Airfield*, *Anchor Berth*, *Anchorage Area*, *Berth*, *Bridge*, *Building*, *Cable Area*, *Cable Overhead*, *Cable Submarine*, *Cardinal Beacon*, *Cardinal Buoy*, *Checkpoint*, *Coast Guard Station*, *Conveyor*, *Crane*, *Daymark*, *Dock Area*, *Dolphin*, *Dry Dock*, *Emergency Wreck Marking Buoy*, *Fishing Facility*, *Floating Dock*, *Fog Signal*, *Gate*, **Harbour Area (Administrative)**, *Harbour Facility*, *Helipad*, *Installation Buoy*, *Isolated Danger Beacon*, *Isolated Danger Buoy*, *Landmark*, *Land Region*, *Lateral Beacon*, *Lateral Buoy*, *Light All Around*, *Light Float*, *Light Sectored*, *Light Vessel*, *Lock Basin*, *Marine Farm/Culture*, *Mooring Area*, *Mooring Buoy*, *Mooring Trot*, *Mooring Buoy*, *Offshore Platform*, *Offshore Production Area*, *Pilot Boarding Place*, *Pilotage District*, *Pipeline Overhead*, *Pipeline Submarine/On Land*, *Production/Storage Area*, *Radar Range*, *Radar Station*, *Radio Calling-In Point*, *Radio Station*, *Railway*, *Rescue Station*, *Runway*, *Safe Water Beacon*, *Safe Water Buoy*, *Seaplane Landing Area*, *Signal Station Traffic*, *Signal Station Warning*, *Silo/Tank*, *Small Craft Facility*, *Span Fixed*, *Span Opening*,*Special Purpose/General Beacon*, *Special Purpose/General Buoy*, *Submarine Pipeline Area*, *Tunnel*, *Vessel Traffic Service Area*, *Wind Turbine*
 
 |===
 
@@ -10298,8 +10008,7 @@ If it is required to encode the contact information (communication channel, call
 2+| 3+|
 1: normal operation +
 2: closure +
-3: unmanned operation +
-| (S) EN
+3: unmanned operation | (S) EN
 | 0,1
 
 3+| time intervals by day of week 2+| 3+| | (S) C | 1,*
@@ -10312,8 +10021,7 @@ If it is required to encode the contact information (communication channel, call
 4: Wednesday +
 5: Thursday +
 6: Friday +
-7: Saturday +
-| (S) EN
+7: Saturday | (S) EN
 | 0,7 (ordered) footnoteblock:[twentyfour_two]
 
 3+| day of week is range 2+| 3+| | (S) BO | 0,1
@@ -10338,7 +10046,7 @@ If it is required to encode the contact information (communication channel, call
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Information 3+| *Additional Information* (see <<sec_25.1>>). 3+| See next row 2+| Association | 0,1
-10+| *Associated to:**Airport/Airfield*, *Anchor Berth*, *Anchorage Area*, *Berth*, *Bridge*, *Building*, *Checkpoint*, *Coast Guard Station*, *Conveyor*, *Crane*, *Dock Area*, *Dry Dock*, *Floating Dock*, *Gate*, *Helipad*, *Landmark*, *Lock Basin*, *Mooring Area*, *Production/Storage Area*, *Radio Calling-In Point*, *Runway*, *Seaplane Landing Area*, *Span Fixed*, *Span Opening*
+10+| [underline]#*Associated to:*# *Airport/Airfield*, *Anchor Berth*, *Anchorage Area*, *Berth*, *Bridge*, *Building*, *Checkpoint*, *Coast Guard Station*, *Conveyor*, *Crane*, *Dock Area*, *Dry Dock*, *Floating Dock*, *Gate*, *Helipad*, *Landmark*, *Lock Basin*, *Mooring Area*, *Production/Storage Area*, *Radio Calling-In Point*, *Runway*, *Seaplane Landing Area*, *Span Fixed*, *Span Opening*
 
 |===
 
@@ -10361,7 +10069,7 @@ If it is required to encode the time schedules for the operation of a service (f
 
 [underline]#Remarks:#
 
-* The complex attribute *time intervals by day of week*, sub-attribute *day of week is range* indicates whether an instance of *time intervals by day of week* encodes a range of days or discrete days. The day(s) or day range(s) are encoded using sub-attribute *day of week*. Where *day of week is range* is populated as __True__, there must be exactly two instances of the attribute *day of week*. If *day of week* is not populated, this indicates that the same schedule applies every day (Monday through Sunday). Multiple ranges or mixing range with discrete days(s) is not allowed (if this is required another instance of *time intervals by day of week* must be encoded). See <<sec_2.4.9>>.
+* The complex attribute *time intervals by day of week*, sub-attribute *day of week is range* indicates whether an instance of *time intervals by day of week* encodes a range of days or discrete days. The day(s) or day range(s) are encoded using sub-attribute *day of week*. Where *day of week is range* is populated as _True_, there must be exactly two instances of the attribute *day of week*. If *day of week* is not populated, this indicates that the same schedule applies every day (Monday through Sunday). Multiple ranges or mixing range with discrete days(s) is not allowed (if this is required another instance of *time intervals by day of week* must be encoded). See <<sec_2.4.9>>.
 * Overlapping intervals bound to the same feature using the association *Additional Information* are not permitted.
 * The complex attributes *fixed date range* and *periodic date range*, when populated for *Service Hours*, apply only to *Service Hours* and not to any feature that it may be associated with.
 
@@ -10411,7 +10119,7 @@ If it is required to encode the time schedules for the operation of a service (f
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Information 3+| *Additional Information* (see <<sec_25.1>>). 3+| See next row 2+| Association | 0,1
-10+| *Associated to:**Airport/Airfield*, *Anchor Berth*, *Anchorage Area*, *Berth*, *Bridge*, *Building*, *Checkpoint*, *Coast Guard Station*, *Conveyor*, *Crane*, *Dock Area*, *Dry Dock*, *Floating Dock*, *Gate*, *Helipad*, *Landmark*, *Lock Basin*, *Mooring Area*, *Production/Storage Area*, *Radio Calling-In Point*, *Runway*, *Seaplane Landing Area*, *Span Fixed*, *Span Opening*
+10+| [underline]#*Associated to:*# *Airport/Airfield*, *Anchor Berth*, *Anchorage Area*, *Berth*, *Bridge*, *Building*, *Checkpoint*, *Coast Guard Station*, *Conveyor*, *Crane*, *Dock Area*, *Dry Dock*, *Floating Dock*, *Gate*, *Helipad*, *Landmark*, *Lock Basin*, *Mooring Area*, *Production/Storage Area*, *Radio Calling-In Point*, *Runway*, *Seaplane Landing Area*, *Span Fixed*, *Span Opening*
 
 |===
 
@@ -10481,7 +10189,7 @@ If it is required to encode the date(s) when an event, festival or national holi
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Information 3+| *Additional Information* (see <<sec_25.1>>). 3+| See next row 2+| Association | 0,1
-10+| *Associated to:* *Administration Area*, *Airport/Airfield*, *Anchor Berth*, *Anchorage Area*, *Archipelagic Sea Lane*, *Archipelagic Sea Lane Area*, *Archipelagic Sea Lane Axis*, *Berth*, *Bollard*, *Bridge*, *Building*, *Built-Up Area*, *Cable Area*, *Cable Overhead*, *Cable Submarine*, *Canal*, *Cardinal Beacon*, *Cardinal Buoy*, *Cargo Transhipment Area*, *Causeway*, *Caution Area*, *Checkpoint*, *Coastline*, *Coast Guard Station*, *Collision Regulations Limit*, *Contiguous Zone*, *Continental Shelf Area*, *Conveyor*, *Crane*, *Current -- Non-Gravitational*, *Custom Zone*, *Dam*, *Daymark*, *Deep Water Route*, *Deep Water Route Centreline*, *Deep Water Route Part*, *Depth Area*, *Depth Contour*, *Depth -- No Bottom Found*, *Discoloured Water*, *Distance Mark*, *Dock Area*, *Dolphin*, *Dredged Area*, *Dry Dock*, *Dumping Ground*, *Dyke*, *Emergency Wreck Marking Buoy*, *Exclusive Economic Zone*, *Fairway*, *Fairway System*, *Fence/Wall*, *Ferry Route*, *Fishery Zone*, *Fishing Facility*, *Fishing Ground*, *Floating Dock*, *Fog Signal*, *Fortified Structure*, *Foul Ground*, *Free Port Area*, *Gate*, *Gridiron*, *Harbour Area (Administrative)*, *Harbour Facility*, *Helipad*, *Hulk*, *Ice Area*, *Information Area*, *Inshore Traffic Zone*, *Installation Buoy*, *Island Group*, *Isolated Danger Beacon*, *Isolated Danger Buoy*, *Lake*, *Land Area*, *Land Elevation*, *Landmark*, *Land Region*, *Lateral Beacon*, *Lateral Buoy*, *Light Air Obstruction*, *Light All Around*, *Light Float*, *Light Fog Detector*, *Light Sectored*, *Light Vessel*, *Local Magnetic Anomaly*, *Lock Basin*, *Log Pond*, *Magnetic Variation*, *Marine Farm/Culture*, *Marine Pollution Regulations Area*, *Military Practice Area*, *Mooring Area*, *Mooring Buoy*, *Mooring Trot*, *Mooring Buoy*, *Navigation Line*, *Obstruction*, *Offshore Platform*, *Offshore Production Area*, *Oil Barrier*, *Physical AIS Aid to Navigation*, *Pile*, *Pilotage District*, *Pilot Boarding Place*, *Pipeline Overhead*, *Pipeline Submarine/On Land*, *Pontoon*, *Precautionary Area*, *Production/Storage Area*, *Pylon/Bridge Support*, *Radar Line*, *Radar Range*, *Radar Reflector*, *Radar Station*, *Radar Transponder Beacon*, *Radio Calling-In Point*, *Radio Station*, *Railway*, *Range System*, *Rapids*, *Recommended Route Centreline*, *Recommended Track*, *Recommended Traffic Lane Part*, *Rescue Station*, *Restricted Area*, *Retroreflector*, *River*, *Road*, *Runway*, *Safe Water Beacon*, *Safe Water Buoy*, *Sandwave*, *Sea Area/Named Water Area*, *Seabed Area*, *Seagrass*, *Seaplane Landing Area*, *Shoreline Construction*, *Signal Station Traffic*, *Signal Station Warning*, *Silo/Tank*, *Slope Topline*, *Sloping Ground*, *Small Craft Facility*, *Sounding*, *Span Fixed*, *Span Opening*,*Special Purpose/General Beacon*, *Special Purpose/General Buoy*, *Spring*, *Straight Territorial Sea Baseline*, *Structure Over Navigable Water*, *Submarine Pipeline Area*, *Submarine Transit Lane*, *Swept Area*, *Territorial Sea Area*, *Tidal Stream Panel Data*, *Tidal Stream -- Flood/Ebb*, *Tideway*, *Separation Zone or Line*, *Traffic Separation Scheme*, *Traffic Separation Scheme Boundary*, *Traffic Separation Scheme Crossing*, *Traffic Separation Scheme Lane Part*, *Traffic Separation Scheme Roundabout*, *Tunnel*, *Two-Way Route*, *Two-Way Route Part*, *Underwater/Awash Rock*, *Unsurveyed Area*, *Vegetation*, *Vessel Traffic Service Area*, *Virtual AIS Aid to Navigation*, *Water Turbulence*, *Waterfall*, *Weed/Kelp*, *Wind Turbine*, *Wreck*
+10+| [underline]#*Associated to:*# *Administration Area*, *Airport/Airfield*, *Anchor Berth*, *Anchorage Area*, *Archipelagic Sea Lane*, *Archipelagic Sea Lane Area*, *Archipelagic Sea Lane Axis*, *Berth*, *Bollard*, *Bridge*, *Building*, *Built-Up Area*, *Cable Area*, *Cable Overhead*, *Cable Submarine*, *Canal*, *Cardinal Beacon*, *Cardinal Buoy*, *Cargo Transhipment Area*, *Causeway*, *Caution Area*, *Checkpoint*, *Coastline*, *Coast Guard Station*, *Collision Regulations Limit*, *Contiguous Zone*, *Continental Shelf Area*, *Conveyor*, *Crane*, *Current -- Non-Gravitational*, *Custom Zone*, *Dam*, *Daymark*, *Deep Water Route*, *Deep Water Route Centreline*, *Deep Water Route Part*, *Depth Area*, *Depth Contour*, *Depth -- No Bottom Found*, *Discoloured Water*, *Distance Mark*, *Dock Area*, *Dolphin*, *Dredged Area*, *Dry Dock*, *Dumping Ground*, *Dyke*, *Emergency Wreck Marking Buoy*, *Exclusive Economic Zone*, *Fairway*, *Fairway System*, *Fence/Wall*, *Ferry Route*, *Fishery Zone*, *Fishing Facility*, *Fishing Ground*, *Floating Dock*, *Fog Signal*, *Fortified Structure*, *Foul Ground*, *Free Port Area*, *Gate*, *Gridiron*, *Harbour Area (Administrative)*, *Harbour Facility*, *Helipad*, *Hulk*, *Ice Area*, *Information Area*, *Inshore Traffic Zone*, *Installation Buoy*, *Island Group*, *Isolated Danger Beacon*, *Isolated Danger Buoy*, *Lake*, *Land Area*, *Land Elevation*, *Landmark*, *Land Region*, *Lateral Beacon*, *Lateral Buoy*, *Light Air Obstruction*, *Light All Around*, *Light Float*, *Light Fog Detector*, *Light Sectored*, *Light Vessel*, *Local Magnetic Anomaly*, *Lock Basin*, *Log Pond*, *Magnetic Variation*, *Marine Farm/Culture*, *Marine Pollution Regulations Area*, *Military Practice Area*, *Mooring Area*, *Mooring Buoy*, *Mooring Trot*, *Mooring Buoy*, *Navigation Line*, *Obstruction*, *Offshore Platform*, *Offshore Production Area*, *Oil Barrier*, *Physical AIS Aid to Navigation*, *Pile*, *Pilotage District*, *Pilot Boarding Place*, *Pipeline Overhead*, *Pipeline Submarine/On Land*, *Pontoon*, *Precautionary Area*, *Production/Storage Area*, *Pylon/Bridge Support*, *Radar Line*, *Radar Range*, *Radar Reflector*, *Radar Station*, *Radar Transponder Beacon*, *Radio Calling-In Point*, *Radio Station*, *Railway*, *Range System*, *Rapids*, *Recommended Route Centreline*, *Recommended Track*, *Recommended Traffic Lane Part*, *Rescue Station*, *Restricted Area*, *Retroreflector*, *River*, *Road*, *Runway*, *Safe Water Beacon*, *Safe Water Buoy*, *Sandwave*, *Sea Area/Named Water Area*, *Seabed Area*, *Seagrass*, *Seaplane Landing Area*, *Shoreline Construction*, *Signal Station Traffic*, *Signal Station Warning*, *Silo/Tank*, *Slope Topline*, *Sloping Ground*, *Small Craft Facility*, *Sounding*, *Span Fixed*, *Span Opening*,*Special Purpose/General Beacon*, *Special Purpose/General Buoy*, *Spring*, *Straight Territorial Sea Baseline*, *Structure Over Navigable Water*, *Submarine Pipeline Area*, *Submarine Transit Lane*, *Swept Area*, *Territorial Sea Area*, *Tidal Stream Panel Data*, *Tidal Stream -- Flood/Ebb*, *Tideway*, *Separation Zone or Line*, *Traffic Separation Scheme*, *Traffic Separation Scheme Boundary*, *Traffic Separation Scheme Crossing*, *Traffic Separation Scheme Lane Part*, *Traffic Separation Scheme Roundabout*, *Tunnel*, *Two-Way Route*, *Two-Way Route Part*, *Underwater/Awash Rock*, *Unsurveyed Area*, *Vegetation*, *Vessel Traffic Service Area*, *Virtual AIS Aid to Navigation*, *Water Turbulence*, *Waterfall*, *Weed/Kelp*, *Wind Turbine*, *Wreck*
 
 |===
 
@@ -10597,7 +10305,7 @@ image::figure-25-1.png["",602,324]
 The association *Spatial Association* (see <<sec_25.15>>) is not included in <<fig_25-1>> above, as this association identifies the relationship between an information type (*Spatial Quality*) and the spatial type to which a feature is bound (that is, the geometry to which the feature is bound, rather than the feature itself).
 ====
 
-The tables included in this Section are structured such that each row of the table shows all components of the relationship as they would be included at the association end for the entries included in the "Associated With" column. For example, for the *Two Way Route* end of the *Two-Way Route Aggregation* association (indicated by the red outline included in <<fig_25-1>> above), the "Role Type" is __Aggregation__; the "Role" is __The Collection__; and the "Multiplicity" is _0,1_ (see <<sec_25.19>>):
+The tables included in this Section are structured such that each row of the table shows all components of the relationship as they would be included at the association end for the entries included in the "Associated With" column. For example, for the *Two Way Route* end of the *Two-Way Route Aggregation* association (indicated by the red outline included in <<fig_25-1>> above), the "Role Type" is _Aggregation_; the "Role" is _The Collection_; and the "Multiplicity" is _0,1_ (see <<sec_25.19>>):
 
 [cols="68,90,383,69", options="unnumbered"]
 |===
@@ -10606,9 +10314,7 @@ h| Role Type h| Role h| Associated With h| Multiplicity
 
 |===
 
-Within the tables, features are grouped in separate table entries where the features included at either end of the relationship may differ for the association. For example <<table_25-2>>\* below shows that, for the feature/information association *Additional Information*, the feature *Anchor Berth* may be associated with any of the information types *Contact Details*, *Non-Standard Working Day*, *Service Hours* or *Nautical Information*; while the feature *Two Way Route Part* may only be associated with the information type *Nautical Information* (as shown in <<fig_25-1>> above and <<fig_25-5>>).
-
-\* <<table_25-2>> is derived from <<sec_25.1>>.
+Within the tables, features are grouped in separate table entries where the features included at either end of the relationship may differ for the association. For example <<table_25-2>> footnote:[<<table_25-2>> is derived from <<sec_25.1>>.] below shows that, for the feature/information association *Additional Information*, the feature *Anchor Berth* may be associated with any of the information types *Contact Details*, *Non-Standard Working Day*, *Service Hours* or *Nautical Information*; while the feature *Two Way Route Part* may only be associated with the information type *Nautical Information* (as shown in <<fig_25-1>> above and <<fig_25-5>>).
 
 [[table_25-2]]
 .Example of different allowable Additional Information associations
@@ -10668,7 +10374,7 @@ In <<fig_25-3>> above, the table should be interpreted as follows:
 
 * A *Two-Way Route* instance, if it exists, _aggregates_ (or is the container for)_the collection_ of one or more *Two-Way Route Part* features.
 * A *Two-Way Route Part* instance is _the_ __component__ (or is a containee) of a *Two-Way Route* feature, if the *Two-Way Route Aggregation* association is created.
-* The _1,*_ multiplicity at the *Two-Way Route Part* end of the relationship indicates that, where a *Two-Way Route Aggregation* exists, there must be to at least one *Two-Way Route Part* feature included in the *Two-Way Route Aggregation*. 
+* The _1,++*++_ multiplicity at the *Two-Way Route Part* end of the relationship indicates that, where a *Two-Way Route Aggregation* exists, there must be to at least one *Two-Way Route Part* feature included in the *Two-Way Route Aggregation*. 
 
 NOTE: This does not mean that all encoded instances of *Two-Way Route Part* must be included in a *Two-Way Route Aggregation* (see next bullet).
 
@@ -10695,11 +10401,11 @@ h| Role Type h| Role h| Associated With h| Multiplicity
 
 |===
 
-The components of the feature/feature association *Traffic Separation Scheme Aggregation* should be interpreted as for the corresponding components of the feature/feature association *Two-Way Route Aggregation* described for <<fig_25-3>>, except for the multiplicity at the *Two-Way Route Part* end of the association (indicated with the arrow in <<fig_25-4>>). The multiplicity as indicated in the UML as "0..\* {1..\* [C]}" in this case is an example of "collective multiplicity" notation. Collective multiplicities are described in the following clauses in the Remarks section of the tables.
+The components of the feature/feature association *Traffic Separation Scheme Aggregation* should be interpreted as for the corresponding components of the feature/feature association *Two-Way Route Aggregation* described for <<fig_25-3>>, except for the multiplicity at the *Two-Way Route Part* end of the association (indicated with the arrow in <<fig_25-4>>). The multiplicity as indicated in the UML as "0..++*++ {1..++*++ [C]}" in this case is an example of "collective multiplicity" notation. Collective multiplicities are described in the following clauses in the Remarks section of the tables.
 
 * A collective multiplicity can only exist when there is more than one feature type that may be used in a given role. A collective multiplicity indicates the multiplicity of the collection.
 * The "0..*" component of the multiplicity shown in the UML in this example is the "individual multiplicity". An individual multiplicity indicates the multiplicity for each component of the collection, and in this example indicates that that none of the listed features are required to be included.
-* The collective component of the multiplicity ({1..\* [C]} in the UML) indicates that where the association *Traffic Separation Scheme Aggregation* exists, there must be at least one of any of the features (collectively) that may be included as "containees". The allowable list of features is included in the following table entries, noting in this example that at least one instance of *Two-Way Route Part* is allowable, if required, for the *Traffic Separation Scheme Aggregation* (as highlighted in <<fig_25-4>>).
+* The collective component of the multiplicity ({1..++*++ [C]} in the UML) indicates that where the association *Traffic Separation Scheme Aggregation* exists, there must be at least one of any of the features (collectively) that may be included as "containees". The allowable list of features is included in the following table entries, noting in this example that at least one instance of *Two-Way Route Part* is allowable, if required, for the *Traffic Separation Scheme Aggregation* (as highlighted in <<fig_25-4>>).
 * The individual component of the multiplicity (0,*) indicates there is no requirement for a *Two-Way Route Part* feature (or any other feature in the list) to be included in a *Traffic Separation Scheme Aggregation* (due to the lower multiplicity being zero). However where the relationship exists, there may be an unlimited number of *Two-Way Route Part* features or any other feature included in the list (due to the upper multiplicity being "*").
 * Upright style (non-italicized) features in the tables are members of the collective multiplicity, italicized features are not. The individual multiplicity applies to all listed features; the collective multiplicity only applies to the upright features, which may or may not comprise the entire list.
 
@@ -10920,7 +10626,7 @@ h| Role Type h| Role h| Associated With h| Multiplicity
 
 h| Role Type h| Role h| Associated With h| Multiplicity
 | Aggregation | The Collection | *Fairway System* | 0,1
-| Association | The Component  | *Fairway*        | 0,*
+| Association | The Component | *Fairway*       | 0,*
 
 |===
 
@@ -10953,8 +10659,8 @@ h| Role Type h| Role h| Associated With h| Multiplicity
 * An *Island Aggregation* must, if required, include at least one *Land Area* or *Island Group* feature associated to an *Island Group* feature.
 
 h| Role Type h| Role h| Associated With h| Multiplicity
-| Aggregation | The Collection | *Island Group*                | 0,1
-| Association | The Component  | *Land Area*, *Island Group* | 0,*
+| Aggregation | The Collection | *Island Group*               | 0,1
+| Association | The Component | *Land Area*, *Island Group* | 0,*
 
 |===
 
@@ -11197,7 +10903,7 @@ h| Role Type h| Role h| Associated With h| Multiplicity
 
 [underline]#Remarks:#
 
-* An *Update Aggregation* must, if required, include at least two *Update Information* features associated to an *Update Information* feature having attribute *update type* = _3_ (modify). See <<sec_3.12>>.
+* An *Update Aggregation* must, if required, include at least two *Update Information* features associated to an *Update Information* feature having attribute stem:[bb "update type" = 3] (modify). See <<sec_3.12>>.
 
 h| Role Type h| Role h| Associated With h| Multiplicity
 | Aggregation | The Collection | *Update Information* | 0,1
@@ -16542,7 +16248,10 @@ Modern survey echo sounder -- high precision single beam depth measuring equipme
 
 [underline]#Indication:# Dates should be encoded using 4 digits for the calendar year (YYYY), 2 digits for the month (MM) (for example April = 04) and 2 digits for the day (DD). When no specific year, month and/or day is required/known, indication of the year, month and/or day is omitted, and replaced with dashes (-). See also <<sec_2.4.8>>.
 
-[underline]#Format:# YYYYMMDD (full date, *mandatory*)YYYYMM-- (no specific day required -- *mandatory*)YYYY---- (no specific month required -- *mandatory*)
+[underline]#Format:# YYYYMMDD (full date, *mandatory*)
+
+pass:[YYYYMM--]:: (no specific day required -- *mandatory*)
+pass:[YYYY----]:: (no specific month required -- *mandatory*)
 
 [underline]#Example:# *20160908* for 08 September 2016 as the date an entity ceased to be used.
 
@@ -16553,7 +16262,7 @@ Modern survey echo sounder -- high precision single beam depth measuring equipme
 |===
 
 [[sec_27.81]]
-=== date end (DATEND, __PEREND__, _SUREND_)
+=== date end (DATEND, _PEREND_, _SUREND_)
 
 [cols="a",options="noheader,unnumbered"]
 |===
@@ -16566,13 +16275,13 @@ Modern survey echo sounder -- high precision single beam depth measuring equipme
 [underline]#Format:#
 
 YYYYMMDD:: (full date, *mandatory*)
-YYYYMM--:: (no specific day required -- *mandatory*)
-YYYY----:: (no specific month required -- *mandatory*)
-----MMDD:: (same day each year, *mandatory*)
-----MM--:: (same month each year, *mandatory*)
+pass:[YYYYMM--]:: (no specific day required -- *mandatory*)
+pass:[YYYY----]:: (no specific month required -- *mandatory*)
+pass:[----MMDD]:: (same day each year, *mandatory*)
+pass:[----MM--]:: (same month each year, *mandatory*)
 
 [underline]#Example:# *20101203* for 03 December 2010 at 240000 hours as ending date. +
-*----02--* for 28 February at 240000 hours as ending date for non-leap years; and 29 February at 240000 hours as ending date for leap years.
+*pass:[----02--]* for 28 February at 240000 hours as ending date for non-leap years; and 29 February at 240000 hours as ending date for leap years.
 
 [underline]#Remarks:#
 
@@ -16593,10 +16302,10 @@ YYYY----:: (no specific month required -- *mandatory*)
 
 [underline]#Format:#
 
-----MMDD:: (same day each year, *mandatory*)
-----MM--:: (same month each year, *mandatory*)
+pass:[----MMDD]:: (same day each year, *mandatory*)
+pass:[----MM--]:: (same month each year, *mandatory*)
 
-[underline]#Example:# *----0908* for 08 September each year.*----02--* for February of each year.
+[underline]#Example:# *pass:[----0908]* for 08 September each year.*pass:[----02--]* for February of each year.
 
 [underline]#Remarks:#
 
@@ -16605,7 +16314,7 @@ YYYY----:: (no specific month required -- *mandatory*)
 |===
 
 [[sec_27.83]]
-=== date start (DATSTA, __PERSTA__, _SURSTA_)
+=== date start (DATSTA, _PERSTA_, _SURSTA_)
 
 [cols="a",options="noheader,unnumbered"]
 |===
@@ -16618,13 +16327,13 @@ YYYY----:: (no specific month required -- *mandatory*)
 [underline]#Format:#
 
 YYYYMMDD:: (full date, *mandatory*)
-YYYYMM--:: (no specific day required -- *mandatory*)
-YYYY----:: (no specific month required -- *mandatory*)
-----MMDD:: (same day each year, *mandatory*)
-----MM--:: (same month each year, *mandatory*)
+pass:[YYYYMM--]:: (no specific day required -- *mandatory*)
+pass:[YYYY----]:: (no specific month required -- *mandatory*)
+pass:[----MMDD]:: (same day each year, *mandatory*)
+pass:[----MM--]:: (same month each year, *mandatory*)
 
 [underline]#Example:# *20101129* for 29 November 2010 at 000000 hours as starting date. +
-*----02--* for 01 February at 000000 hours annually as starting date.
+*pass:[----02--]* for 01 February at 000000 hours annually as starting date.
 
 [underline]#Remarks:#
 
@@ -16871,8 +16580,8 @@ YYYY----:: (no specific month required -- *mandatory*)
 [underline]#Format:#
 
 YYYYMMDD:: (full date, *mandatory*)
-YYYYMM--:: (no specific day required -- *mandatory*)
-YYYY----:: (no specific month required -- *mandatory*)
+pass:[YYYYMM--]:: (no specific day required -- *mandatory*)
+pass:[YYYY----]:: (no specific month required -- *mandatory*)
 
 [underline]#Example:# *20101203* for 03 December 2010 as the dredged date.
 
@@ -17038,18 +16747,13 @@ YYYY----:: (no specific month required -- *mandatory*)
 
 [underline]#Indication:# For S-101, the string encodes the file name of a single textual ENC support file that contains the textual information.
 
-[underline]#Format:# *101CCCCØØØØØØØØØØ.
-
-EEE*(See S-101 Main document, clause 11.4.3 (mandatory))
+[underline]#Format:# *101CCCCØØØØØØØØØØ.EEE*(See S-101 Main document, clause 11.4.3 (mandatory))
 
 [underline]#Remarks:#
 
 * The attribute *file reference* indicates that a file containing text extracted from relevant pilot books or nautical publications is available.
-* The files referenced by *file reference* must be.
-
-TXT and may contain formatted text.
+* The files referenced by *file reference* must be .TXT and may contain formatted text.
 * The files referenced by this attribute generally contain long text strings.
-
 |===
 
 [[sec_27.99]]
@@ -17678,7 +17382,7 @@ TXT and may contain formatted text.
 
 [underline]#Indication:# The identifier is encoded using the Maritime Resource Name (MRN) concept and namespace, administered by IALA, that follows the syntax and semantics for URNs specified in RFC 2141.
 
-[underline]#Format:# *urn:mrn:*_[Organisational ID]_*:*…*:*... (mandatory)
+[underline]#Format:# **urn:mrn:**__[Organisational ID]__**:...:...** (mandatory)
 
 [underline]#Example:# **urn:mrn:iho:mc:1234.5**
 
@@ -18041,9 +17745,9 @@ TXT and may contain formatted text.
 
 [underline]#Attribute Type:# Real
 
-[underline]#Unit:# Degree ()
+[underline]#Unit:# Degree (stem:["unitsml(deg)"])
 
-[underline]#Precision:# 0.1
+[underline]#Precision:# stem:[0.1 "unitsml(deg)"]
 
 [underline]#Minimum range:# 0
 
@@ -18271,7 +17975,7 @@ TXT and may contain formatted text.
 |===
 
 [[sec_27.132]]
-=== name (__OBJNAM__, _NOBJNM_)
+=== name (_OBJNAM_, _NOBJNM_)
 
 [cols="a",options="noheader,unnumbered"]
 |===
@@ -18354,7 +18058,9 @@ TXT and may contain formatted text.
 
 [underline]#Format:# c2 (mandatory)
 
-[underline]#Example:# *AU* for Australia**US** for the United States of America
+[underline]#Example:#::
+*AU*::: for Australia
+*US*::: for the United States of America
 
 [underline]#Remarks:#
 
@@ -19074,13 +18780,13 @@ Default value:__False__
 
 [underline]#Unit:# Four digit year indication (YYYY)
 
-[underline]#Format:# YYYY----
+[underline]#Format:# pass:[YYYY----]
 
-[underline]#Example:# **2009----**
+[underline]#Example:# *pass:[2009----]*
 
 [underline]#Remarks:#
 
-** The dashes (----) must be included in all cases.
+** The dashes (pass:[----]) must be included in all cases.
 
 |===
 
@@ -19116,7 +18822,11 @@ Default value:__False__
 
 [underline]#Indication:# Dates should be encoded using 4 digits for the calendar year (YYYY), 2 digits for the month (MM) (for example April = 04) and 2 digits for the day (DD). When no specific year, month and/or day is required/known, indication of the year, month and/or day is omitted, and replaced with dashes (-). See also <<sec_2.4.8>>.
 
-[underline]#Format:# YYYYMMDD (full date, *mandatory*)YYYYMM-- (no specific day required -- *mandatory*)YYYY---- (no specific month required -- *mandatory*)
+[underline]#Format:#
+
+YYYYMMDD:: (full date, *mandatory*)
+pass:[YYYYMM--]:: (no specific day required -- *mandatory*)
+pass:[YYYY----]:: (no specific month required -- *mandatory*)
 
 [underline]#Example:# *20101129* for 29 November 2010 as the reported date.
 
@@ -19522,15 +19232,31 @@ A fixed light has no signal group.
 
 Where no specific signal group is given for one of the light characteristics, this should be shown by an empty pair of brackets.
 
-[underline]#Format:# (c)(c)...
+[underline]#Format:# ++(c)(c)++...
 
-Examples:Light CharacteristicSignal GroupVQ(6)+LFl -> **(6)(1)**LFl+Fl(2+3) -> **(1)(2+3)**Fl(2)+LFl -> **(2)(1)**FFl -> **()(1)**Mo(AA) -> **(AA)**AlFl(2W+1R) -> **(2+1)**AlLFlWR -> **(1)**FOcW -> **()(1)**AlOc(4)WR -> **(4)**AlWR -> **()**Iso -> **(1)**IQ -> **()**
+[underline]#Examples:#
+
+[cols="^,^"]
+!===
+h! Light Characteristic  h! Signal Group
+! VQ(6)+LFl      ! *(6)(1)*
+! LFl+Fl(2+3)    ! *(1)(2+3)*
+! Fl(2)+LFl      ! *(2)(1)*
+! FFl            ! *()(1)*
+! Mo(AA)         ! *(AA)*
+! AlFl(2W+1R)    ! *(2+1)*
+! AlLFlWR        ! *(1)*
+! FOcW           ! *()(1)*
+! AlOc(4)WR      ! *(4)*
+! AlWR           ! *()*
+! Iso            ! *(1)*
+! IQ             ! *()*
+!===
 
 [underline]#Remarks:#
 
 * In the above examples, where there is more than one group included in the rhythm of the light (for example (6)(1)), each group is encoded using a separate instance of *signal group*; in this case the first instance of *signal group* would be _(6)_ and the second instance would be _(1)_.
 * The attribute *signal group* should contain no more than 15 characters.
-
 |===
 
 [[sec_27.163]]
@@ -19906,7 +19632,11 @@ Speed minimum is the minimum rate of travel that can occur. (Adapted from S-57 E
 
 [underline]#Indication:# Dates should be encoded using 4 digits for the calendar year (YYYY), 2 digits for the month (MM) (for example April = 04) and 2 digits for the day (DD). When no specific year, month and/or day is required/known, indication of the year, month and/or day is omitted, and replaced with dashes (-). See also <<sec_2.4.8>>.
 
-[underline]#Format:# YYYYMMDD (full date, *mandatory*)YYYYMM-- (no specific day required -- *mandatory*)YYYY---- (no specific month required -- *mandatory*)
+[underline]#Format:#
+
+YYYYMMDD:: (full date, *mandatory*)
+pass:[YYYYMM--]:: (no specific day required -- *mandatory*)
+pass:[YYYY----] (no specific month required -- *mandatory*)
 
 [underline]#Example:# *20101203* for 03 December 2010 as the swept date.
 
@@ -20105,7 +19835,7 @@ Speed minimum is the minimum rate of travel that can occur. (Adapted from S-57 E
 |===
 
 [[sec_27.177]]
-=== text (__INFORM__, _NINFOM_)
+=== text (_INFORM_, _NINFOM_)
 
 [cols="a",options="noheader,unnumbered"]
 |===
@@ -20212,8 +19942,8 @@ Speed minimum is the minimum rate of travel that can occur. (Adapted from S-57 E
 
 [underline]#Remarks:#
 
-* For *text type* = _1_ (name), ~the t~~ext display preference is the name of the feature (see <<sec_27.132>>)~.
-* For *text type* = _2_ (feature characteristic), ~the t~~ext display preference is the textual feature characteristics for which the corresponding S-101 portrayal rule implements a standardized textual string based on the attribution for the binding feature. If the portrayal rule implements more than one textual string for a feature based on multiple attributes (for example the vertical and horizontal clearances for a bridge span, or the construction of a light characteristic), the text labels will all be listed, one after the other.~
+* For stem:[bb "text type" = 1] (name), ~the t~~ext display preference is the name of the feature (see <<sec_27.132>>)~.
+* For stem:[bb "text type" = 2] (feature characteristic), ~the t~~ext display preference is the textual feature characteristics for which the corresponding S-101 portrayal rule implements a standardized textual string based on the attribution for the binding feature. If the portrayal rule implements more than one textual string for a feature based on multiple attributes (for example the vertical and horizontal clearances for a bridge span, or the construction of a light characteristic), the text labels will all be listed, one after the other.~
 
 |===
 
@@ -20228,9 +19958,16 @@ Speed minimum is the minimum rate of travel that can occur. (Adapted from S-57 E
 
 [underline]#Indication:# The "time of day end" must be encoded using 2 digits for the hour (hh), 2 digits for the minutes (mm) and 2 digits for the seconds (ss). Additional characters are added dependant on the time zone indication (UTC or offset to UTC). This conforms to ISO 8601.
 
-[underline]#Format:# hhmmssZ *(mandatory* for UTC time**)**hhmmss+hhmm *(mandatory* for local time with UTC offset**)**hhmmss *(mandatory* for local time without offset**)**
+[underline]#Format:#
 
-[underline]#Example:# *162000Z* for a period ending at 04:20 pm UTC.*162000+0100* for a period ending at 04:20 pm local time, 1 hour ahead of UTC.*162000* for a period ending at 04:20 pm local time, without specified offset to UTC.
+hhmmssZ:: (*mandatory* for UTC time)
+hhmmss+hhmm:: (*mandatory* for local time with UTC offset)
+hhmmss:: (*mandatory* for local time without offset)
+
+[underline]#Example:#::
+*162000Z* for a period ending at 04:20 pm UTC. +
+*162000+0100* for a period ending at 04:20 pm local time, 1 hour ahead of UTC. +
+*162000* for a period ending at 04:20 pm local time, without specified offset to UTC.
 
 [underline]#Remarks:#
 
@@ -20249,9 +19986,15 @@ Speed minimum is the minimum rate of travel that can occur. (Adapted from S-57 E
 
 [underline]#Indication:# The "time of day start" must be encoded using 2 digits for the hour (hh), 2 digits for the minutes (mm) and 2 digits for the seconds (ss). Additional characters are added dependant on the time zone indication (UTC or offset to UTC). This conforms to ISO 8601.
 
-[underline]#Format:# hhmmssZ *(mandatory* for UTC time**)**hhmmss+hhmm *(mandatory* for local time with UTC offset**)**hhmmss *(mandatory* for local time without offset**)**
+[underline]#Format:#
+hhmmssZ:: (*mandatory* for UTC time)
+hhmmss+hhmm:: (*mandatory* for local time with UTC offset)
+hhmmss:: (*mandatory* for local time without offset)
 
-[underline]#Example:# *094500Z* for a period starting at 09:45 am UTC.*094500+0100* for a period starting at 09:45 am local time, 1 hour ahead of UTC.*094500* for a period starting at 09:45 am local time, without specified offset to UTC.
+[underline]#Example:#::
+*094500Z* for a period starting at 09:45 am UTC. +
+*094500+0100* for a period starting at 09:45 am local time, 1 hour ahead of UTC. +
+*094500* for a period starting at 09:45 am local time, without specified offset to UTC.
 
 [underline]#Remarks:#
 
@@ -22094,9 +21837,9 @@ In this example, at a depth of 25 metres, the variable uncertainty would be 2.5 
 
 [underline]#Indication:# The complex attribute defines whether the light is a moiré effect light and encodes the orientation of the directional light sector.
 
-Sub-attributes:
-*moiré effect* see <<sec_27.130>>
-*orientation* see <<sec_29.15>>
+[underline]#Sub-attributes:#::
+*moiré effect*::: see <<sec_27.130>>
+*orientation*::: see <<sec_29.15>>
 
 [underline]#Remarks:#
 
@@ -22113,10 +21856,10 @@ Sub-attributes:
 
 [underline]#Indication:# The complex attribute provides the encoder with options as to the name to display in certain system display settings.
 
-Sub-attributes:
-language:: see <<sec_27.117>>
-name:: see <<sec_27.132>>
-name usage:: see <<sec_27.134>>
+[underline]#Sub-attributes:#::
+language::: see <<sec_27.117>>
+name::: see <<sec_27.132>>
+name usage::: see <<sec_27.134>>
 
 [underline]#Remarks:#
 
@@ -22131,7 +21874,12 @@ name usage:: see <<sec_27.134>>
 |===
 | [underline]#IHO Definition:# *FEATURES DETECTED*. The uniform assessment of detected features.
 
-Indication:Sub-attributes: *least depth of detected features measured* see <<sec_28.6>> *significant features detected* see <<sec_28.19>> *size of features detected* see <<sec_28.20>>
+[underline]#Indication:#
+
+[underline]#Sub-attributes:#::
+*least depth of detected features measured*::: see <<sec_28.6>>
+*significant features detected*::: see <<sec_28.19>>
+*size of features detected*::: see <<sec_28.20>>
 
 [underline]#Remarks:#
 
@@ -22148,9 +21896,9 @@ Indication:Sub-attributes: *least depth of detected features measured* see <<sec
 
 [underline]#Indication:# The complex attribute describes single fixed period, as the date range between its sub-attributes.
 
-Sub-attributes:
-*date end* see <<sec_27.81>>
-*date start* see <<sec_27.83>>
+[underline]#Sub-attributes:#::
+*date end*::: see <<sec_27.81>>
+*date start*::: see <<sec_27.83>>
 
 [underline]#Remarks:#
 
@@ -22167,9 +21915,9 @@ Sub-attributes:
 
 [underline]#Indication:# The complex attribute describes all variations of radio receiving and transmitting.
 
-Sub-attributes:
-*frequency shore station receives* see <<sec_27.101>>
-*frequency shore station transmits* see <<sec_27.102>>
+[underline]#Sub-attributes:#::
+*frequency shore station receives*::: see <<sec_27.101>>
+*frequency shore station transmits*::: see <<sec_27.102>>
 
 [underline]#Remarks:#
 
@@ -22186,9 +21934,9 @@ Sub-attributes:
 
 [underline]#Indication:# The complex attribute encodes the horizontal distance …….
 
-Sub-attributes:
-*horizontal clearance value* see <<sec_27.107>>
-*horizontal distance uncertainty* see <<sec_28.5>>
+[underline]#Sub-attributes:#::
+*horizontal clearance value*::: see <<sec_27.107>>
+*horizontal distance uncertainty*::: see <<sec_28.5>>
 
 [underline]#Remarks:#
 
@@ -22205,9 +21953,9 @@ Sub-attributes:
 
 [underline]#Indication:# The complex attribute encodes the horizontal distance …….
 
-Sub-attributes:
-*horizontal clearance value* see <<sec_27.107>>
-*horizontal distance uncertainty* see <<sec_28.5>>
+[underline]#Sub-attributes:#::
+*horizontal clearance value*::: see <<sec_27.107>>
+*horizontal distance uncertainty*::: see <<sec_28.5>>
 
 [underline]#Remarks:#
 
@@ -22224,9 +21972,9 @@ Sub-attributes:
 
 [underline]#Indication:# The complex attribute encodes the horizontal uncertainty associated with any horizontal measurement.
 
-Sub-attributes:
-*uncertainty fixed* see <<sec_28.26>>
-*uncertainty variable factor* see <<sec_28.27>>
+[underline]#Sub-attributes:#::
+*uncertainty fixed*::: see <<sec_28.26>>
+*uncertainty variable factor*::: see <<sec_28.27>>
 
 [underline]#Remarks:#
 
@@ -22243,12 +21991,12 @@ Sub-attributes:
 
 [underline]#Indication:# The complex attribute provides additional textual information that cannot be provided using other allowable attributes for the feature, and defines the language of the text string.
 
-Sub-attributes:
-*file locator* see <<sec_27.97>>
-*file reference* see <<sec_27.98>>
-*headline* see <<sec_27.104>>
-*language* see <<sec_27.117>>
-*text* see <<sec_27.177>>
+[underline]#Sub-attributes:#::
+*file locator*::: see <<sec_27.97>>
+*file reference*::: see <<sec_27.98>>
+*headline*::: see <<sec_27.104>>
+*language*::: see <<sec_27.117>>
+*text*::: see <<sec_27.177>>
 
 [underline]#Remarks:#
 
@@ -22267,14 +22015,16 @@ Sub-attributes:
 |===
 | [underline]#IHO Definition:# *LIGHT SECTOR*. A sector is the part of a circle between two straight lines drawn from the centre to the circumference. (Advanced Learner's Dictionary, 2nd Edition).
 
-Indication:Sub-attributes:
-*colour* see <<sec_27.75>>
-*directional character* see <<sec_29.1>>
-*light visibility* see <<sec_27.120>>
-*sector limit* see <<sec_29.21>>
-*value of nominal range* see <<sec_27.192>>
-*sector information* see <<sec_29.20>>
-*sector arc extension* see <<sec_30.3>>
+[underline]#Indication:#
+
+[underline]#Sub-attributes:#::
+*colour*::: see <<sec_27.75>>
+*directional character*::: see <<sec_29.1>>
+*light visibility*::: see <<sec_27.120>>
+*sector limit*::: see <<sec_29.21>>
+*value of nominal range*::: see <<sec_27.192>>
+*sector information*::: see <<sec_29.20>>
+*sector arc extension*::: see <<sec_30.3>>
 
 [underline]#Remarks:#
 
@@ -22289,10 +22039,12 @@ Indication:Sub-attributes:
 |===
 | [underline]#IHO Definition:# *MEASURED DISTANCE VALUE*. The distance value indicated on a distance mark, or the distance between two measured distance marks.
 
-Indication:Sub-attributes:
-*distance unit of measurement* see <<sec_27.91>>
-*reference location* see <<sec_27.149>>
-*waterway distance* see <<sec_27.203>>
+[underline]#Indication:#
+
+[underline]#Sub-attributes:#::
+*distance unit of measurement*::: see <<sec_27.91>>
+*reference location*::: see <<sec_27.149>>
+*waterway distance*::: see <<sec_27.203>>
 
 [underline]#Remarks:#
 
@@ -22309,9 +22061,9 @@ Indication:Sub-attributes:
 
 [underline]#Indication:# The complex attribute provides an indication as to whether the true number of features is known and, where known, the number of features.
 
-Sub-attributes:
-*multiplicity known* see <<sec_27.131>>
-*number of features* see <<sec_27.139>>
+[underline]#Sub-attributes:#::
+*multiplicity known*::: see <<sec_27.131>>
+*number of features*::: see <<sec_27.139>>
 
 [underline]#Remarks:#
 
@@ -22328,10 +22080,10 @@ Sub-attributes:
 
 [underline]#Indication:# The complex attribute describes the access to online resources according to ISO 19115.
 
-Sub-attributes:
-*headline* see <<sec_27.104>>
-*linkage* see <<sec_27.121>>
-*name of resource* see <<sec_27.133>>
+[underline]#Sub-attributes:#::
+*headline*::: see <<sec_27.104>>
+*linkage*::: see <<sec_27.121>>
+*name of resource*::: see <<sec_27.133>>
 
 [underline]#Remarks:#
 
@@ -22348,9 +22100,9 @@ Sub-attributes:
 
 [underline]#Indication:# The complex attribute provides the orientation value together with a measure of the uncertainty of the value.
 
-Sub-attributes:
-*orientation uncertainty* see <<sec_28.14>>
-*orientation value* see <<sec_27.141>>
+[underline]#Sub-attributes:#::
+*orientation uncertainty*::: see <<sec_28.14>>
+*orientation value*::: see <<sec_27.141>>
 
 [underline]#Remarks:#
 
@@ -22367,13 +22119,13 @@ Sub-attributes:
 
 [underline]#Indication:# The complex attribute describes the active period for a seasonal feature (for example a buoy), as the dates between its sub-attributes.
 
-Sub-attributes:
-*date end* see <<sec_27.81>>
-*date start* see <<sec_27.83>>
+[underline]#Sub-attributes:#::
+*date end*::: see <<sec_27.81>>
+*date start*::: see <<sec_27.83>>
 
 [underline]#Remarks:#
 
-* The sub-attributes *date start* and *date end* must be encoded in the format ----MMDD; using 2 digits for the month (MM) (for example April = 04) and 2 digits for the day (DD). When no specific day is required/known, the values are replaced with dashes (-).
+* The sub-attributes *date start* and *date end* must be encoded in the format pass:[----MMDD]; using 2 digits for the month (MM) (for example April = 04) and 2 digits for the day (DD). When no specific day is required/known, the values are replaced with dashes (-).
 
 |===
 
@@ -22386,9 +22138,9 @@ Sub-attributes:
 
 [underline]#Indication:# The complex attribute describes the wave length, as the combination of its sub-attributes.
 
-Sub-attributes:
-*radar band* see <<sec_27.145>>
-*wave length value* see <<sec_27.204>>
+[underline]#Sub-attributes:#::
+*radar band*::: see <<sec_27.145>>
+*wave length value*::: see <<sec_27.204>>
 
 [underline]#Remarks:#
 
@@ -22405,11 +22157,11 @@ Sub-attributes:
 
 [underline]#Indication:# The complex attribute describes the rhythm of a light (or a light sector).
 
-Sub-attributes:
-*light characteristic* see <<sec_27.119>>
-*signal group* see <<sec_27.162>>
-*signal period* see <<sec_27.163>>
-*signal sequence* see <<sec_29.25>>
+[underline]#Sub-attributes:#::
+*light characteristic*::: see <<sec_27.119>>
+*signal group*::: see <<sec_27.162>>
+*signal period*::: see <<sec_27.163>>
+*signal sequence*::: see <<sec_29.25>>
 
 [underline]#Remarks:#
 
@@ -22426,9 +22178,9 @@ Sub-attributes:
 
 [underline]#Indication:# The complex attribute encodes the regular schedule for a service.
 
-Sub-attributes:
-*category of schedule* see <<sec_27.59>>
-*time intervals by day of week* see <<sec_29.33>>
+[underline]#Sub-attributes:#::
+*category of schedule*::: see <<sec_27.59>>
+*time intervals by day of week*::: see <<sec_29.33>>
 
 [underline]#Remarks:#
 
@@ -22445,12 +22197,12 @@ Sub-attributes:
 
 [underline]#Indication:# The complex attribute describes the characteristics of a light sector.
 
-Sub-attributes:
-*light characteristic* see <<sec_27.119>>
-*light sector* see <<sec_29.10>>
-*signal group* see <<sec_27.162>>
-*signal period* see <<sec_27.163>>
-*signal sequence* see <<sec_29.25>>
+[underline]#Sub-attributes:#::
+*light characteristic*::: see <<sec_27.119>>
+*light sector*::: see <<sec_29.10>>
+*signal group*::: see <<sec_27.162>>
+*signal period*::: see <<sec_27.163>>
+*signal sequence*::: see <<sec_29.25>>
 
 [underline]#Remarks:#
 
@@ -22467,9 +22219,9 @@ Sub-attributes:
 
 [underline]#Indication:# The complex attribute provides additional textual information that cannot be provided using other allowable attributes for the feature, and defines the language of the text string.
 
-Sub-attributes:
-*language* see <<sec_27.117>>
-*text* see <<sec_27.177>>
+[underline]#Sub-attributes:#::
+*language*::: see <<sec_27.117>>
+*text*::: see <<sec_27.177>>
 
 [underline]#Remarks:#
 
@@ -22490,9 +22242,9 @@ The sector limit specifies the limits of the sector in a clockwise direction aro
 
 [underline]#Indication:# The complex attribute describes the angle of a light sector as defined by the sub-attributes.
 
-Sub-attributes:
-*sector limit one* see <<sec_29.22>>
-*sector limit two* see <<sec_29.23>>
+[underline]#Sub-attributes:#::
+*sector limit one*::: see <<sec_29.22>>
+*sector limit two*::: see <<sec_29.23>>
 
 [underline]#Remarks:#
 
@@ -22509,9 +22261,9 @@ Sub-attributes:
 
 [underline]#Indication:# The complex attribute describes the line or bearing of a light where the character changes or the light is obscured.
 
-Sub-attributes:
-*sector bearing* see <<sec_27.157>>
-*sector line length* see <<sec_27.158>>
+[underline]#Sub-attributes:#::
+*sector bearing*::: see <<sec_27.157>>
+*sector line length*::: see <<sec_27.158>>
 
 [underline]#Remarks:#
 
@@ -22531,9 +22283,9 @@ Sub-attributes:
 
 [underline]#Indication:# The complex attribute describes the line or bearing of a light where the character changes or the light is obscured.
 
-Sub-attributes:
-*sector bearing* see <<sec_27.157>>
-*sector line length* see <<sec_27.158>>
+[underline]#Sub-attributes:#::
+*sector bearing*::: see <<sec_27.157>>
+*sector line length*::: see <<sec_27.158>>
 
 [underline]#Remarks:#
 
@@ -22553,9 +22305,9 @@ Sub-attributes:
 
 [underline]#Indication:# The complex attribute provides additional textual information that cannot be provided using the attribute *topmark/daymark shape*.
 
-Sub-attributes:
-*language* see <<sec_27.117>>
-*text* see <<sec_27.177>>
+[underline]#Sub-attributes:#::
+*language*::: see <<sec_27.117>>
+*text*::: see <<sec_27.177>>
 
 [underline]#Remarks:#
 
@@ -22572,9 +22324,9 @@ Sub-attributes:
 
 [underline]#Indication:# The complex attribute provides the signal sequence for non-fixed lights and sound signals.
 
-Sub-attributes:
-*signal duration* see <<sec_27.159>>
-*signal status* see <<sec_27.164>>
+[underline]#Sub-attributes:#::
+*signal duration*::: see <<sec_27.159>>
+*signal status*::: see <<sec_27.164>>
 
 [underline]#Remarks:#
 
@@ -22591,10 +22343,10 @@ Sub-attributes:
 
 [underline]#Indication:# The complex attribute defines the horizontal and vertical position accuracy of bathymetric features, which may optionally be degraded over time.
 
-Sub-attributes:
-*fixed date range* see <<sec_29.4>>
-*horizontal position uncertainty* see <<sec_29.8>>
-*vertical uncertainty* see <<sec_29.40>>
+[underline]#Sub-attributes:#::
+*fixed date range*::: see <<sec_29.4>>
+*horizontal position uncertainty*::: see <<sec_29.8>>
+*vertical uncertainty*::: see <<sec_29.40>>
 
 [underline]#Remarks:#
 
@@ -22611,9 +22363,9 @@ Sub-attributes:
 
 [underline]#Indication:# The complex attribute encodes the range of the speed at a location.
 
-Sub-attributes:
-*speed maximum* see <<sec_27.166>>
-*speed minimum* see <<sec_27.167>>
+[underline]#Sub-attributes:#::
+*speed maximum*::: see <<sec_27.166>>
+*speed minimum*::: see <<sec_27.167>>
 
 [underline]#Remarks:#
 
@@ -22628,10 +22380,12 @@ Sub-attributes:
 |===
 | [underline]#IHO Definition:# *SURFACE CHARACTERISTICS*. The general nature of the material of which the land surface or the seabed is composed.
 
-Indication:Sub-attributes:
-*nature of surface* see <<sec_27.137>>
-*nature of surface -- qualifying terms* see <<sec_27.138>>
-*underlying layer* see <<sec_27.187>>
+[underline]#Indication:#
+
+[underline]#Sub-attributes:#::
+*nature of surface*::: see <<sec_27.137>>
+*nature of surface -- qualifying terms*::: see <<sec_27.138>>
+*underlying layer*::: see <<sec_27.187>>
 
 [underline]#Remarks:#
 
@@ -22648,9 +22402,9 @@ Indication:Sub-attributes:
 
 [underline]#Indication:# The complex attribute describes the period of the hydrographic survey, as the time between its sub-attributes.
 
-Sub-attributes:
-*date end* see <<sec_27.81>>
-*date start* see <<sec_27.83>>
+[underline]#Sub-attributes:#::
+*date end*::: see <<sec_27.81>>
+*date start*::: see <<sec_27.83>>
 
 [underline]#Remarks:#
 
@@ -22667,10 +22421,10 @@ Sub-attributes:
 
 [underline]#Indication:# The complex attribute describes the different telecommunications methods and contact details.
 
-Sub-attributes:
-*contact instructions* see <<sec_27.79>>
-*telecommunication identifier* see <<sec_27.175>>
-*telecommunication service* see <<sec_27.176>>
+[underline]#Sub-attributes:#::
+*contact instructions*::: see <<sec_27.79>>
+*telecommunication identifier*::: see <<sec_27.175>>
+*telecommunication service*::: see <<sec_27.176>>
 
 [underline]#Remarks:#
 
@@ -22685,11 +22439,13 @@ Sub-attributes:
 |===
 | [underline]#IHO Definition:# *TIDAL STREAM PANEL VALUES*. The direction of the flow and the tidal current rate from 6 hours before to 6 hours after high water (HW) or low water (LW) at the reference tide station, at hourly or sub-hourly intervals. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.210, November 2000).
 
-Indication:Sub-attributes:
-*reference tide* see <<sec_27.150>>
-*reference tide type* see <<sec_27.161>>
-*stream depth* see <<sec_27.172>>
-*tidal stream value* see <<sec_29.32>>
+[underline]#Indication:#
+
+[underline]#Sub-attributes:#::
+*reference tide*::: see <<sec_27.150>>
+*reference tide type*::: see <<sec_27.161>>
+*stream depth*::: see <<sec_27.172>>
+*tidal stream value*::: see <<sec_29.32>>
 
 [underline]#Remarks:#
 
@@ -22704,10 +22460,12 @@ Indication:Sub-attributes:
 |===
 | [underline]#IHO Definition:# *TIDAL STREAM VALUE*. A measurement of the direction and speed of a tidal stream at a given time relative to the reference tide.
 
-Indication:Sub-attributes:
-*orientation* see <<sec_29.14>>
-*speed maximum* see <<sec_27.166>>
-*time relative to tide* see <<sec_27.184>>
+[underline]#Indication:#
+
+[underline]#Sub-attributes:#::
+*orientation*::: see <<sec_29.14>>
+*speed maximum*::: see <<sec_27.166>>
+*time relative to tide*::: see <<sec_27.184>>
 
 [underline]#Remarks:#
 
@@ -22724,16 +22482,16 @@ Indication:Sub-attributes:
 
 [underline]#Indication:# The complex attribute describes the timings for a regular service schedule.
 
-Sub-attributes:
-*day of week* see <<sec_27.85>>
-*day of week is range* see <<sec_27.86>>
-*time of day end* see <<sec_27.182>>
-*time of day start* see <<sec_27.183>>
+[underline]#Sub-attributes:#::
+*day of week*::: see <<sec_27.85>>
+*day of week is range*::: see <<sec_27.86>>
+*time of day end*::: see <<sec_27.182>>
+*time of day start*::: see <<sec_27.183>>
 
 [underline]#Remarks:#
 
 * At least one of the sub-attributes *day of week*, *time of day start* or *time of day end* must be encoded. Where populated, the number of instances of *time of day start* must be the same as the number of instances of *time of day end*.
-* The sub-attribute *day of week is range* indicates whether an instance of *time intervals by day of week* encodes a range of days or discrete days. The day(s) or day range(s) are encoded using sub-attribute *day of week*. Where *day of week is range* is populated as __True__, there must be exactly two instances of the attribute *day of week*. If *day of week* is not populated, this indicates that the same schedule applies every day (Monday through Sunday). Multiple ranges or mixing range with discrete days(s) is not allowed (if this is required another instance of *time intervals by day of week* must be encoded).
+* The sub-attribute *day of week is range* indicates whether an instance of *time intervals by day of week* encodes a range of days or discrete days. The day(s) or day range(s) are encoded using sub-attribute *day of week*. Where *day of week is range* is populated as _True_, there must be exactly two instances of the attribute *day of week*. If *day of week* is not populated, this indicates that the same schedule applies every day (Monday through Sunday). Multiple ranges or mixing range with discrete days(s) is not allowed (if this is required another instance of *time intervals by day of week* must be encoded).
 * An indeterminate range may be indicated with a null value at the appropriate position in the sequence.
 
 |===
@@ -22745,11 +22503,13 @@ Sub-attributes:
 |===
 | [underline]#IHO Definition:# *TOPMARK*. A characteristic shape secured at the top of a buoy or beacon to aid in its identification. (IHO Dictionary -- S-32).
 
-Indication:Sub-attributes:
-*colour* see <<sec_27.75>>
-*colour pattern* see <<sec_27.76>>
-*topmark/daymark shape* see <<sec_27.185>>
-*shape information* see <<sec_29.24>>
+[underline]#Indication:#
+
+[underline]#Sub-attributes:#::
+*colour*::: see <<sec_27.75>>
+*colour pattern*::: see <<sec_27.76>>
+*topmark/daymark shape*::: see <<sec_27.185>>
+*shape information*::: see <<sec_29.24>>
 
 [underline]#Remarks:#
 
@@ -22766,9 +22526,9 @@ Indication:Sub-attributes:
 
 [underline]#Indication:# The complex attribute encodes the range of the local magnetic anomaly.
 
-Sub-attributes:
-*magnetic anomaly value* see <<sec_27.122>>
-*reference direction* see <<sec_27.148>>
+[underline]#Sub-attributes:#::
+*magnetic anomaly value*::: see <<sec_27.122>>
+*reference direction*::: see <<sec_27.148>>
 
 [underline]#Remarks:#
 
@@ -22785,9 +22545,9 @@ Sub-attributes:
 
 [underline]#Indication:# The complex attribute encodes the vertical distance from a defined vertical datum to the underside of a an opening overhead feature when it is in the closed position.
 
-Sub-attributes:
-*vertical clearance value* see <<sec_27.195>>
-*vertical uncertainty* see <<sec_29.40>>
+[underline]#Sub-attributes:#::
+*vertical clearance value*::: see <<sec_27.195>>
+*vertical uncertainty*::: see <<sec_29.40>>
 
 [underline]#Remarks:#
 
@@ -22804,9 +22564,9 @@ Sub-attributes:
 
 [underline]#Indication:# The complex attribute encodes the vertical distance from a defined vertical datum to the underside of a fixed overhead feature.
 
-Sub-attributes:
-*vertical clearance value* see <<sec_27.195>>
-*vertical uncertainty* see <<sec_29.40>>
+[underline]#Sub-attributes:#::
+*vertical clearance value*::: see <<sec_27.195>>
+*vertical uncertainty*::: see <<sec_29.40>>
 
 [underline]#Remarks:#
 
@@ -22823,10 +22583,10 @@ Sub-attributes:
 
 [underline]#Indication:# The complex attribute encodes the vertical distance from a defined vertical datum to the underside of an opening overhead feature when it is in the open position.
 
-Sub-attributes:
-*vertical clearance unlimited* see <<sec_27.194>>
-*vertical clearance value* see <<sec_27.195>>
-*vertical uncertainty* see <<sec_29.40>>
+[underline]#Sub-attributes:#::
+*vertical clearance unlimited*::: see <<sec_27.194>>
+*vertical clearance value*::: see <<sec_27.195>>
+*vertical uncertainty*::: see <<sec_29.40>>
 
 [underline]#Remarks:#
 
@@ -22843,9 +22603,9 @@ Sub-attributes:
 
 [underline]#Indication:# The complex attribute encodes the safe vertical distance from a defined vertical datum to the lowest point of an electrical cable over navigable water.
 
-Sub-attributes:
-*vertical clearance value* see <<sec_27.195>>
-*vertical uncertainty* see <<sec_29.40>>
+[underline]#Sub-attributes:#::
+*vertical clearance value*::: see <<sec_27.195>>
+*vertical uncertainty*::: see <<sec_29.40>>
 
 [underline]#Remarks:#
 
@@ -22862,9 +22622,9 @@ Sub-attributes:
 
 [underline]#Indication:# The complex attribute encodes the vertical uncertainty associated with any vertical measurement.
 
-Sub-attributes:
-*uncertainty fixed* see <<sec_28.26>>
-*uncertainty variable factor* see <<sec_28.27>>
+[underline]#Sub-attributes:#::
+*uncertainty fixed*::: see <<sec_28.26>>
+*uncertainty variable factor*::: see <<sec_28.27>>
 
 [underline]#Remarks:#
 
@@ -22881,10 +22641,10 @@ Sub-attributes:
 
 [underline]#Indication:# The complex attribute describes the speed limit for vessels in an area where speed is restricted.
 
-Sub-attributes:
-*speed limit* see <<sec_27.165>>
-*speed units* see <<sec_27.168>>
-*vessel class* see <<sec_27.198>>
+[underline]#Sub-attributes:#::
+*speed limit*::: see <<sec_27.165>>
+*speed units*::: see <<sec_27.168>>
+*vessel class*::: see <<sec_27.198>>
 
 [underline]#Remarks:#
 
@@ -22901,11 +22661,11 @@ Sub-attributes:
 
 [underline]#Indication:# The complex attribute defines the overall indication of the quality of bathymetric data, which may optionally be degraded over time.
 
-Sub-attributes:
-*category of zone of confidence in data* see <<sec_27.74>>
-*fixed date range* see <<sec_29.4>>
-*horizontal position uncertainty* see <<sec_29.8>>
-*vertical uncertainty* see <<sec_29.40>>
+[underline]#Sub-attributes:#::
+*category of zone of confidence in data*::: see <<sec_27.74>>
+*fixed date range*::: see <<sec_29.4>>
+*horizontal position uncertainty*::: see <<sec_29.8>>
+*vertical uncertainty*::: see <<sec_29.40>>
 
 [underline]#Remarks:#
 
@@ -22919,7 +22679,7 @@ Sub-attributes:
 [[sec_30.1]]
 === default clearance depth
 
-[cols="1", options="unnumbered"]
+[cols="a", options="unnumbered"]
 |===
 | [underline]#IHO Definition:# *DEFAULT CLEARANCE DEPTH*. The depth value determined for an underwater hazard of unknown depth, based on the depth of the surrounding area.
 
@@ -22933,7 +22693,12 @@ Sub-attributes:
 
 [underline]#Maximum range:# 12500
 
-[underline]#Range closure:# Open interval (stem:["minimum" < bb "default clearance depth" < "maximum"])Examples:*12.5* for a default clearance depth of 12.5 metres**-2.4** for a drying default clearance height of 2∙4 metres
+[underline]#Range closure:#::
+Open interval::: (stem:["minimum" < bb "default clearance depth" < "maximum"])
+
+[underline]#Examples:#::
+*12.5*::: for a default clearance depth of 12.5 metres
+*-2.4*::: for a drying default clearance height of 2∙4 metres
 
 [underline]#Remarks:#
 
@@ -22964,146 +22729,43 @@ The following Tables provide an indication for the values (if relevant) to be po
 |===
 h| category of obstruction h| exposition of sounding h| height h| value of sounding h| water level effect h| default clearance depth
 5+h| For features where all covering depth range minimum values are known |
-|
 
-h| /
-h| Known
-h| /
-h| _1,2_
-h| */*
+|             | /                 | Known   | /       | _1,2_            | */*
+|             | /                 | Unknown | /       | _1,2,7_          | */*
+|             |                   | /       | Known   | _3,4,5,_ Unknown | */*
+|             | _1,3_             | /       | Unknown | _3_              | *Least Depth*
+| _6_         | _2,_ Empty (null) | /       | Unknown |                  | *_0.1_*
+|             | _2,_ Empty (null) | /       | Unknown | _3_              | *_0.1_*
+| stem:[!= 6] | _2,_ Empty (null) | /       | Unknown | _5_              | *_0_*
+| stem:[!= 6] | _2,_ Empty (null) | /       | Unknown | _4,_ Unknown     | *_-15_*
 
-|
+6+h| For features of unknown depth, covered or partially covered by Unsurveyed Area; or Depth/Dredged Area where depth range minimum value is unknown
 
-h| /
-h| Unknown
-h| /
-h| _1,2,7_
-h| */*
-
-|
-
-|
-
-h| /
-h| Known
-h| _3,4,5,_ Unknown
-h| */*
-
-|
-
-h| _1,3_
-h| /
-h| Unknown
-h| _3_
-h| Least Depth
-
-h| _6_
-h| _2,_ Empty (null)
-h| /
-h| Unknown
-|
-
-h| *_0.1_*
-
-|
-
-h| _2,_ Empty (null)
-h| /
-h| Unknown
-h| _3_
-h| *_0.1_*
-
-h| ≠ _6_ h| _2,_ Empty (null) h| / h| Unknown h| _5_ h| *_0_*
-h| ≠ _6_ h| _2,_ Empty (null) h| / h| Unknown h| _4,_ Unknown h| *_-15_*
-5+h| *For features of unknown depth, covered or partially covered by Unsurveyed Area; or Depth/Dredged Area where depth range minimum value is unknown* |
-h| _6_
-|
-
-h| /
-h| Unknown
-|
-
-h| *_0.1_*
-
-|
-
-|
-
-h| /
-h| Unknown
-h| _3_
-h| *_0.1_*
-
-h| ≠ _6_
-|
-
-h| /
-h| Unknown
-h| _5_
-h| *_0_*
-
-h| ≠ _6_
-|
-
-h| /
-h| Unknown
-h| _4,_ Unknown
-h| *_-15_*
-
+| _6_           | | / | Unknown |              | *_0.1_*
+|               | | / | Unknown | _3_          | *_0.1_*
+| stem:[!= 6]   | | / | Unknown | _5_          | *_0_*
+| stem:[!= 6]   | | / | Unknown | _4,_ Unknown | *_-15_*
 |===
 
 [[table_30.2]]
 .Values for default clearance depth -- Underwater/Awash Rock features
-[cols="79,62,79,96,342,342"]
+[cols="79,62,79,96"]
 |===
-h| exposition of sounding h| value of sounding h| water level effect h| default clearance depth | |
-4+h| For features where all covering depth range minimum values are known | |
-|
+h| exposition of sounding h| value of sounding h| water level effect h| default clearance depth
+4+h| For features where all covering depth range minimum values are known
 
-h| Known
-|
+|                   | Known     |              | /
+| _1,3_             | Unknown   | _3_          | *Least Depth*
+| _2,_ Empty (null) | Unknown   | _3_          | *_0.1_*
+| _2,_ Empty (null) | Unknown   | _5_          | *_0_*
+| _2,_ Empty (null) | Unknown   | _4,_ Unknown | *_-15_*
 
-h| */*
-|
-|
+4+h| For features of unknown depth, covered by Unsurveyed Area; or Depth/Dredged Area where depth range minimum value is unknown
 
-h| _1,3_ h| Unknown h| _3_ h| Least Depth | |
-h| _2,_ Empty (null) h| Unknown h| _3_ h| *_0.1_* | |
-h| _2,_ Empty (null) h| Unknown h| _5_ h| *_0_* | |
-h| _2,_ Empty (null) h| Unknown h| _4,_ Unknown h| *_-15_* | |
-4+h| *For features of unknown depth, covered by Unsurveyed Area; or Depth/Dredged Area where depth range minimum value is unknown* | |
-|
-
-h| Unknown
-h| _3_
-h| *_0.1_*
-|
-|
-
-|
-
-h| Unknown
-h| _5_
-h| *_0_*
-|
-|
-
-|
-
-h| Unknown
-h| _4,_ Unknown
-h| *_-15_*
-|
-|
-
-|
-
-h| Unknown
-h| _3_
-h| *_0.1_*
-|
-|
-
+| | Unknown | _3_           | *_0.1_*
+| | Unknown | _5_           | *_0_*
+| | Unknown | _4,_ Unknown  | *_-15_*
+| | Unknown | _3_           | *_0.1_*
 |===
 
 [[table_30.3]]
@@ -23112,106 +22774,26 @@ h| *_0.1_*
 |===
 h| category of wreck h| exposition of sounding h| height h| value of sounding h| water level effect h| default clearance depth
 5+h| For features where all covering depth range minimum values are known |
-h| _4,5_ h| / h| Known h| / h| _1,2,_ Unknown h| */*
-h| /
-|
 
-h| /
-h| Known
-h| _3,4,5,_ Unknown
-h| */*
+| _4,5_ | / | Known | / | _1,2,_ Unknown | /
+| / | | / | Known | _3,4,5,_ Unknown | /
+| / | _1,3_ | / | Unknown | _3_ | *Least Depth*
+| | _1,3_ | / | / | _3_ | *Least Depth*
+| _1_ | | / | / | _1,2,4,5,_ Unknown | *_20.1_* or *{Least Depth -- 66}* (whichever value is larger)
+| _1_ | _2,_ Empty (null) | / | / | | *_20.1_* or *{Least Depth -- 66}* (whichever value is larger)
+| / | _2,_ Empty (null) | / | Unknown | _3,5_ | *_0_*
+| / | _2,_ Empty (null) | / | Unknown | _4,_ Unknown | *_-15_*
+| _2,3,4,5,_ Unknown | | / | / | _1,2,4,5_ Unknown | *_-15_*
+| _2,3,4,5,_ Unknown | _2,_ Empty (null) | / | / | | *_-15_*
 
-h| / h| _1,3_ h| / h| Unknown h| _3_ h| Least Depth
-|
+6+h| For features of unknown depth, covered or partially covered by Unsurveyed Area; or Depth/Dredged Area where depth range minimum value is unknown
 
-h| _1,3_
-h| /
-h| /
-h| _3_
-h| Least Depth
-
-h| _1_
-|
-
-h| /
-h| /
-h| _1,2,4,5,_ Unknown
-h| *_20.1_* or *{Least Depth -- 66}* (whichever value is larger)
-
-h| _1_
-h| _2,_ Empty (null)
-h| /
-h| /
-|
-
-h| *_20.1_* or *{Least Depth -- 66}* (whichever value is larger)
-
-h| / h| _2,_ Empty (null) h| / h| Unknown h| _3,5_ h| *_0_*
-h| / h| _2,_ Empty (null) h| / h| Unknown h| _4,_ Unknown h| *_-15_*
-h| _2,3,4,5,_ Unknown
-|
-
-h| /
-h| /
-h| _1,2,4,5_ Unknown
-h| *_-15_*
-
-h| _2,3,4,5,_ Unknown
-h| _2,_ Empty (null)
-h| /
-h| /
-|
-
-h| *_-15_*
-
-5+h| *For features of unknown depth, covered or partially covered by Unsurveyed Area; or Depth/Dredged Area where depth range minimum value is unknown* |
-h| _1_
-|
-
-h| /
-h| /
-h| _3,_ Unknown
-h| *_20.1_*
-
-h| /
-|
-
-h| /
-h| Unknown
-h| _3,5_
-h| *_0_*
-
-h| /
-|
-
-h| /
-h| Unknown
-h| _4,_ Unknown
-h| *_-15_*
-
-h| Unknown
-|
-
-h| /
-h| /
-h| _3,5_
-h| *_0_*
-
-h| _2,3,4,5_
-|
-
-h| /
-h| /
-h| _3,5_
-h| *_-15_*
-
-h| _2,3,4,5,_ Unknown
-|
-
-h| /
-h| /
-h| _4,_ Unknown
-h| *_-15_*
+| _1_ | | / | / | _3,_ Unknown | *_20.1_*
+| / | | / | Unknown | _3,5_ | *_0_*
+| / | | / | Unknown | _4,_ Unknown | *_-15_*
+| Unknown | | / | / | _3,5_ | *_0_*
+| _2,3,4,5_ | | / | / | _3,5_ | *_-15_*
+| _2,3,4,5,_ Unknown | | / | / | _4,_ Unknown | *_-15_*
 
 |===
 
@@ -23282,7 +22864,7 @@ h| *_-15_*
 
 [underline]#Remarks:#
 
-* An ENC Update will be rejected by the ECDIS if it is located outside the area of data coverage for the dataset (that is, area covered by the Meta feature *Data Coverage* with attribute *category of coverage* = _1_ (coverage available)) or if it changes the extent of this area. Where the area of data coverage for a base ENC dataset is to be changed, this must be done by issuing a New Edition of the dataset.
+* An ENC Update will be rejected by the ECDIS if it is located outside the area of data coverage for the dataset (that is, area covered by the Meta feature *Data Coverage* with attribute stem:[bb "category of coverage" = 1] (coverage available)) or if it changes the extent of this area. Where the area of data coverage for a base ENC dataset is to be changed, this must be done by issuing a New Edition of the dataset.
 * It has been reported that some ECDIS experience problems in loading large Update datasets. Therefore, as a guide, ENC Updates should not exceed 50 Kilobytes in size.
 * It has been reported that grouping new or modified soundings into existing sounding groups (see <<sec_11.3>>) in an ENC Update negatively impacts the discovery of the changes to the bathymetry by Mariners. Therefore, encoders are advised that soundings added or modified as part of an ENC Update should be encoded as individual sounding objects or, if in close proximity, may be included as a single grouped sounding object. When a New Edition of the ENC is produced, soundings may be re-grouped in accordance with the Data Producer's standard practices.
 * When updating the geometry of curve features, compilers must note S-101 clause X.
@@ -23413,7 +22995,7 @@ When an ENC Update promulgates information well in advance and uses *fixed date 
 
 .. Buoy temporarily moved:
 
-*** When a buoy is temporarily moved then it, and any associated features, are "moved" to the new position and the attribute *status* = _7_ (temporary) is populated. Alternative encodings are possible, for example, if the move is for a fixed period of time. In these cases the feature, and any associated components, can be created in the temporary position with sub-attribute *date end* for the complex attribute *fixed date range* populated with the date corresponding to the end of the fixed period of time. The currently charted feature, and any associated components, should have *date start* for the complex attribute *fixed date range* also populated with the date corresponding to the end of the fixed period of time. A *Caution Area* feature may, if considered necessary, be added.
+*** When a buoy is temporarily moved then it, and any associated features, are "moved" to the new position and the attribute stem:[bb "status" = 7] (temporary) is populated. Alternative encodings are possible, for example, if the move is for a fixed period of time. In these cases the feature, and any associated components, can be created in the temporary position with sub-attribute *date end* for the complex attribute *fixed date range* populated with the date corresponding to the end of the fixed period of time. The currently charted feature, and any associated components, should have *date start* for the complex attribute *fixed date range* also populated with the date corresponding to the end of the fixed period of time. A *Caution Area* feature may, if considered necessary, be added.
 
 .. Light temporarily extinguished:
 
@@ -23422,7 +23004,7 @@ When an ENC Update promulgates information well in advance and uses *fixed date 
 .. Change to a maintained depth in a dredged area:
 
 *** When information is received from an official or recognised survey authority relating to a dredged area where the dredged depth has changed, the attribute value of *depth range minimum value* for the *Dredged Area* feature should be changed to the value provided by the survey.
-*** Where a *Sounding* feature is encoded in a dredged area to indicate shoaler depths, the attribute value *exposition of sounding* = _2_ (shoaler than the depth of the surrounding depth area) should not be populated (see <<sec_11.3.1;and!sec_11.4.1>>). Where required, the shoal depths should be encoded using *Sounding*, with the appropriate underlying depth information (*Depth Contour* and *Depth Area*) to support the depths. Alternatively, the attribute *depth range maximum value* for the *Dredged Area* may be set to the designed dredged depth for the dredged area and the attribute *depth range minimum value* set to the value of the shoalest depth, or a *Caution Area* feature may be encoded covering the shoaler depth area with the depth information provided using the complex attribute *information* (see <<sec_2.4.6>>). Where the shoal depths are close to the edge of the dredged area, the dredged area limit may be adjusted to exclude the shoal depths from the area. See also S-4 -- B-414.5.
+*** Where a *Sounding* feature is encoded in a dredged area to indicate shoaler depths, the attribute value stem:[bb "exposition of sounding" = 2] (shoaler than the depth of the surrounding depth area) should not be populated (see <<sec_11.3.1;and!sec_11.4.1>>). Where required, the shoal depths should be encoded using *Sounding*, with the appropriate underlying depth information (*Depth Contour* and *Depth Area*) to support the depths. Alternatively, the attribute *depth range maximum value* for the *Dredged Area* may be set to the designed dredged depth for the dredged area and the attribute *depth range minimum value* set to the value of the shoalest depth, or a *Caution Area* feature may be encoded covering the shoaler depth area with the depth information provided using the complex attribute *information* (see <<sec_2.4.6>>). Where the shoal depths are close to the edge of the dredged area, the dredged area limit may be adjusted to exclude the shoal depths from the area. See also S-4 -- B-414.5.
 
 [[sec_31.2.3]]
 ==== Preliminary (P) Notices to Mariners (see S-4 -- B-634)
@@ -23482,14 +23064,14 @@ When information is issued as advance notification for an ENC it is necessary to
 .. Complex information within an area of change (for example works in progress):
 +
 --
-* A *Caution Area* feature (see <<sec_16.10>>) should be created to cover the area. Information is provided using the complex attribute *information* (see <<sec_2.4.6>>), sub-attribute *text*, for example __under construction__, or sub-attribute *file reference* to encode a reference to an ENC support file when it is necessary to give more detailed information. If sufficiently detailed information is available, then navigationally significant information such as navigational aids, fairways, regulated areas, etc. can be encoded or modified within the *Caution Area* if time permits. A reference to a picture file may also be included, if required, using the attribute *pictorial representation* on the *Caution Area*.
-* Alternatively, and if considered appropriate a *Restricted Area* feature (see <<sec_17.8>>), with attribute *restriction* = _7_ (entry prohibited) may be encoded instead of the *Caution Area* feature.
+* A *Caution Area* feature (see <<sec_16.10>>) should be created to cover the area. Information is provided using the complex attribute *information* (see <<sec_2.4.6>>), sub-attribute *text*, for example _under construction_, or sub-attribute *file reference* to encode a reference to an ENC support file when it is necessary to give more detailed information. If sufficiently detailed information is available, then navigationally significant information such as navigational aids, fairways, regulated areas, etc. can be encoded or modified within the *Caution Area* if time permits. A reference to a picture file may also be included, if required, using the attribute *pictorial representation* on the *Caution Area*.
+* Alternatively, and if considered appropriate a *Restricted Area* feature (see <<sec_17.8>>), with attribute stem:[bb "restriction" = 7] (entry prohibited) may be encoded instead of the *Caution Area* feature.
 --
 
 .. Simple information which does not need an additional notification of caution:
 +
 --
-* The relevant feature(s) and the appropriate attributes should be encoded with any additional contextual information provided using the complex attribute *information* (see <<sec_2.4.6>>). In this case it is not necessary to use a *Caution Area* feature. This could apply, for example, to submarine cables or pipelines being laid (*Cable Submarine* or *Pipeline Submarine/On Land* features), or an area under reclamation (*Land Area* feature with attribute *condition* = _3_ (under reclamation)). If required the encoding should reflect that positions are approximate using the spatial attribute *quality of horizontal measurement*= _4_ (approximate) on the spatial type(s).
+* The relevant feature(s) and the appropriate attributes should be encoded with any additional contextual information provided using the complex attribute *information* (see <<sec_2.4.6>>). In this case it is not necessary to use a *Caution Area* feature. This could apply, for example, to submarine cables or pipelines being laid (*Cable Submarine* or *Pipeline Submarine/On Land* features), or an area under reclamation (*Land Area* feature with attribute stem:[bb "condition" = 3] (under reclamation)). If required the encoding should reflect that positions are approximate using the spatial attribute *quality of horizontal measurement*= _4_ (approximate) on the spatial type(s).
 --
 
 .. Depths less than those charted within a defined area:
@@ -23526,8 +23108,7 @@ When information is issued as advance notification for an ENC it is necessary to
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[thirtytwo_one]
 
 10+h| Feature Associations
@@ -23572,7 +23153,7 @@ If it is required to encode a custom feature required, for example, to encode su
 
 [underline]#Format:# (c...)
 
-[underline]#Example:# **('PointInstruction:BOYMOR11')**
+[underline]#Example:# *('PointInstruction:BOYMOR11')*
 
 [underline]#Remarks:#
 

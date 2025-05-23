@@ -560,8 +560,7 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[seven_two]
 
 3+| function 2+| (FUNCTN) 3+|
@@ -721,7 +720,7 @@ If it is required to encode a landmark (other than a tank, silo or roofed struct
 * For buildings, see <<sec_6.2>>; for silos, tanks and water towers, see <<sec_7.3>>. For common encoding combinations, see <<sec_7.1>>. For wind turbines, see <<sec_7.4>>. For roofed structures such as boathouses erected or extending over navigable water to provide protection for a vessel or its cargo, see <<sec_8.7>>. For flare stacks on offshore platforms, see <<sec_14.1.1>>.
 * The feature association *Structure/Equipment* (see <<sec_25.16>>) must only be used with *Landmark* features if the main purpose of the structure is to act as an aid to navigation (for example a lighthouse).
 * A water tower must be encoded, where required, using the feature *Silo/Tank* (see <<sec_7.3>>).
-* A ruined landmark should be encoded in the same way as the feature in good condition, but with attribute *condition* = _2_ (ruined).
+* A ruined landmark should be encoded in the same way as the feature in good condition, but with attribute stem:[bb "condition" = 2] (ruined).
 * Radio and television masts and towers are likely to be visible over long distances and should be encoded as landmarks, even when well inland. They will usually carry air obstruction lights.
 * To aid identification of landmarks by the Mariner it may be useful to add the height of the top of the structure above ground level (*vertical length*) or above the general height datum (*height*).
 * Buildings constructed as places of worship often form significant landmarks; their size and structure incorporating towers, spires, cupolas, etc often render them conspicuous. These buildings when known to be prominent or conspicuous should be encoded up to several miles inland (see <<fig_7-1>> below, examples (a) and (b)).
@@ -801,8 +800,7 @@ image::figure-7-1.png[Shape21,624,183]
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[seven_three]
 
 3+| height
@@ -973,8 +971,7 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[seven_four]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -1126,7 +1123,7 @@ If it is required to encode a wind turbine, it must be done using the feature *W
 * For offshore wind turbines, the Boolean attribute *in the water* must be set to _True_ to indicate that the feature is to be included in the ECDIS Base Display. Where such structures are located in the water it is not required to encode any supporting structures (for example piles).
 * For offshore wind turbines (attribute *in the water* = _True_), the attribute *height* is only relevant for fixed turbines, and is referred to the vertical datum (see <<sec_2.5.7>>).
 * For offshore wind turbines, the attribute *vertical length* is only relevant for floating wind turbines, and is referred to the sea level.
-* A ruined wind turbine should be encoded in the same way as the feature in good condition, but with attribute *condition* = _4_ (wingless).
+* A ruined wind turbine should be encoded in the same way as the feature in good condition, but with attribute stem:[bb "condition" = 4] (wingless).
 * If it is required to encode sites of dismantled offshore wind turbines, this must be done using *Foul Ground* features (see <<sec_13.7>>), unless the source indicates that any remaining structure protrudes far enough above the seabed so as to be an obstruction to surface navigation, in which case this must be encoded using an *Obstruction* feature (see <<sec_13.6>>).
 * If it is required to encode an offshore wind farm, it must be done using the feature *Offshore Production Area* (see <<sec_14.6>>). An onshore wind farm must be encoded, where required, using the feature *Production/Storage Area* (see <<sec_7.6>>).
 * Wind turbines may carry lights (see <<sec_19>>) or fog signals (see <<sec_20.19>>). Where fitted, lights should be encoded as described in <<sec_19>>, with the *Wind Turbine* being used as the structure feature for the light equipment feature(s).
@@ -1173,8 +1170,7 @@ A structure that is specifically designed or reinforced to provide for defence f
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[seven_five]
 
 3+| height
@@ -1264,7 +1260,7 @@ If it is required to encode a fortified structure, it must be done using the fea
 
 [underline]#Remarks:#
 
-* If it is required to encode a Martello tower, it must be done using *Fortified Structure* with attribute *category of fort* = _5_ (fortified tower).
+* If it is required to encode a Martello tower, it must be done using *Fortified Structure* with attribute stem:[bb "category of fort" = 5] (fortified tower).
 * Where fitted, lights should be encoded as described in <<sec_19>>, with the *Fortified Structure* being used as the structure feature for the relevant light equipment feature(s) (see <<sec_18.1>>).
 * For fortified structures located in navigable water, the Boolean attribute *in the water* must be set to _True_ to indicate that the feature is to be included in the ECDIS Base Display. Where such structures are located in the water it is not required to encode any supporting structures (for example piles).
 
@@ -1313,8 +1309,7 @@ If it is required to encode a fortified structure, it must be done using the fea
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[seven_six]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -1418,6 +1413,6 @@ If it is required to encode production or storage area, it must be done using th
 
 * If there are individual buildings or equipment features contained within this area, they should be encoded as separate features such as *Building*, *Crane*, *Landmark* or *Silo/Tank* within the *Production/Storage Area* feature of type surface if the optimum display scale of the ENC data permits.
 
-* If visible from seaward, a quarry face should be encoded as for a cliff (see <<sec_5.1>>), with attribute *category of slope* = _6_ (cliff).
+* If visible from seaward, a quarry face should be encoded as for a cliff (see <<sec_5.1>>), with attribute stem:[bb "category of slope" = 6] (cliff).
 
 [underline]#Distinction:# Free Port Area; Offshore Production Area.

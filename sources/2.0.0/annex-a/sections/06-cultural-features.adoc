@@ -36,8 +36,7 @@
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display  | (S) EN
 | 0,1 footnoteblock:[six_one]
 
 3+| height 2+| (HEIGHT) 3+| | RE | 0,1
@@ -106,7 +105,7 @@ If it is required to encode a built-up area, it must be done using the feature *
 
 * A built-up area crossed by curve features (for example roads, streets, railways) should not be divided into multiple features, unless separate sections of the built-up area have at least one different attribute value.
 * However, for presentation purposes, a built-up area of type surface crossed by a river or canal of type surface must be divided into several features, with the built-up area features not overlapping the river or canal feature. A built-up area of type surface should not overlap a lake, dock or lock basin feature of type surface.
-* Several buildings or built-up areas may be referred to by the same settlement, village or town name on the source. In such cases, the individual buildings or built-up areas should be encoded as separate unnamed features, using the features *Building* or *Built-Up Area*, and additionally, an *Administration Area* feature (see <<sec_16.8>>) covering the whole named area should be created with the name encoded using the attribute *feature name*. The encoded *Administration Area* feature should also have the attribute *jurisdiction* = _3_ (national sub-division).
+* Several buildings or built-up areas may be referred to by the same settlement, village or town name on the source. In such cases, the individual buildings or built-up areas should be encoded as separate unnamed features, using the features *Building* or *Built-Up Area*, and additionally, an *Administration Area* feature (see <<sec_16.8>>) covering the whole named area should be created with the name encoded using the attribute *feature name*. The encoded *Administration Area* feature should also have the attribute stem:[bb "jurisdiction" = 3] (national sub-division).
 * *Built-Up Area* should be covered by *Land Area* features of type surface, or be coincident with *Land Area* features of type point.
 * Where the source indicates that a built-up area extends into navigable water (over *Depth Area* or *Unsurveyed Area* object(s)), the *Built-Up Area* should be extended over the water area and the Boolean attribute *in the water* must be set to _True_ to indicate that the feature is to be included in the ECDIS Base Display. The actual coastline should be encoded as *coastline*, having no value populated for *category of coastline*. There is no requirement to split the *Built-Up Area* into two separate features where it crosses the coastline; or to encode the "apparent" coastline (seaward edge of the built-up[ area). Underlying bathymetry (depth contours, soundings) may be encoded as required. Exceptionally, encoders may extend the underlying *Land Area* and *Coastline* features seaward to the "apparent" coastline. This encoding should be considered for generalization purposes on smaller scale ENCs. Where the built-up area extends over navigable water it is not required to encode any supporting structures (for example piles, stilts).
 * For encoding individual buildings over navigable water, see <<sec_6.2.1>>.
@@ -170,8 +169,7 @@ If it is required to encode a built-up area, it must be done using the feature *
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display  | (S) EN
 | 0,1 footnoteblock:[six_two]
 
 3+| function 2+| (FUNCTN) 3+|
@@ -326,7 +324,7 @@ If it is required to encode a building (other than a landmark, tank, silo or roo
 
 * For landmarks, see <<sec_7.2>>; for silos, tanks and water towers, see <<sec_7.3>>. For common encoding combinations, see <<sec_7.1>>. For roofed structures such as boathouses erected or extending over navigable water to provide protection for a vessel or its cargo, see <<sec_8.7>>.
 * The feature association *Structure/Equipment* (see <<sec_25.16>>) must only be used with *Building* features if the main purpose of the building is to act as an aid to navigation (for example a lighthouse).
-* A ruined building should be encoded in the same way as the feature in good condition, but with attribute *condition* = _2_ (ruined).
+* A ruined building should be encoded in the same way as the feature in good condition, but with attribute stem:[bb "condition" = 2] (ruined).
 * For an encoded *Building* feature located in navigable water, the Boolean attribute *in the water* must be set to _True_ to indicate that the feature is to be included in the ECDIS Base Display. Where such structures are located in the water it is not required to encode any supporting structures (for example piles, stilts).
 * If it is required to encode vertical and/or horizontal clearances and any other information relevant for allowing vessels to enter or berth beneath/within the structure, this must be done by encoding the structure using the feature *Structure Over Navigable Water* (see <<sec_8.7>>).
 * When a building is shown as a surface, indicating its true shape, and it is required to encode a prominent feature such as a tower or spire that is part of the structure, two features must be created (see <<fig_6-1>> below):
@@ -347,7 +345,7 @@ If it is required to encode a harbour office, it must be done using a *Building*
 [[sec_6.2.3]]
 ==== Transit sheds and warehouses (see S-4 -- B-328.1)
 
-If it is required to encode a transit shed or warehouse, it must be done using a *Building* feature, with attributes *function* = _15_ (transit shed/warehouse), and if it is required, *feature name* (*name*) = name or number of the shed.
+If it is required to encode a transit shed or warehouse, it must be done using a *Building* feature, with attributes stem:[bb "function" = 15] (transit shed/warehouse), and if it is required, *feature name* (*name*) = name or number of the shed.
 
 [underline]#Distinction:# Built-Up Area; Coast Guard Station; Landmark; Rescue Station; Silo/Tank; Structure Over Navigable Water.
 
@@ -389,8 +387,7 @@ A defined area on land (including any buildings, installations and equipment) in
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display  | (S) EN
 | 0,1 footnoteblock:[six_three]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -455,7 +452,7 @@ For ENC data at smaller optimum display scales, an airport should be encoded as 
 [underline]#Remarks:#
 
 * If individual buildings are visually conspicuous, they must be encoded as separate features.
-* If it is required to encode the control tower, it must be done using a *Landmark* feature, with attributes *function* = _39_ (control) and *category of landmark* = _17_ (tower). If it is required to encode other buildings, thismust be done using the feature *Building*.
+* If it is required to encode the control tower, it must be done using a *Landmark* feature, with attributes stem:[bb "function" = 39] (control) and stem:[bb "category of landmark" = 17] (tower). If it is required to encode other buildings, thismust be done using the feature *Building*.
 * If it is required to encode a seaplane landing area, it must be done using the feature *Seaplane Landing Area* (see <<sec_16.5>>).
 * For navigational aids associated with air navigation, and air obstruction lights, see clauses related to navigational aids.
 
@@ -593,8 +590,7 @@ For larger optimum display scale ENC data, an airport should be encoded using a 
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display  | (S) EN
 | 0,1 footnoteblock:[six_five]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -738,8 +734,7 @@ If it is required to encode a helipad, it must be done using the feature *Helipa
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display  | (S) EN
 | 0,1 footnoteblock:[six_six]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -840,10 +835,10 @@ The value of the vertical clearance between (high) water level and any fixed ove
 * Water under a bridge must be encoded using the features *Depth Area*, *Dredged Area* or *Unsurveyed Area* (and appropriate *Depth Contour* and *Sounding* features) if the waterway is navigable at the optimum display scale for the ENC data, or using the feature *Land Area* if the waterway is not navigable at the optimum display scale for the ENC data.
 * When there is a fixed vertical clearance, closed vertical clearance, or open vertical clearance given for a bridge, it should be applied only to the portion of the bridge to which the clearance refers, using the features *Span Fixed* or *Span Opening* (see <<sec_6.7;and!sec_6.8>>). All encoded bridge spans must be associated with the *Bridge* feature using the association *Bridge Aggregation* (see <<sec_25.4>>). See examples in the Figures below. If there are no vertical clearances given for a bridge and it is over water that is navigable at the optimum display scale of the ENC data, a single *Span Fixed* or *Span Opening* feature must be encoded covering the area of the bridge, having mandatory vertical clearance attributes populated with an empty (null) value.
 * The attribute *height* is used, where required, to encode the height of the highest point on the bridge structure (see <<sec_2.5.7>>).
-* If it is required to encode a bridge for which part or the entire span is moved aside or backwards, it must be done using a *Bridge* feature, with attributes *opening bridge* = _True_ and *category of opening bridge* = _7_ (drawbridge).
-* If it is required to encode a pontoon bridge where a pontoon section may be temporarily removed or rotated so as to allow passage of vessels, this must be done using a *Bridge* feature, with attributes *bridge construction* = _3_ (pontoon bridge), *opening bridge* = _True_ and *category of opening bridge* = _3_ (swing bridge).
+* If it is required to encode a bridge for which part or the entire span is moved aside or backwards, it must be done using a *Bridge* feature, with attributes *opening bridge* = _True_ and stem:[bb "category of opening bridge" = 7] (drawbridge).
+* If it is required to encode a pontoon bridge where a pontoon section may be temporarily removed or rotated so as to allow passage of vessels, this must be done using a *Bridge* feature, with attributes stem:[bb "bridge construction" = 3] (pontoon bridge), *opening bridge* = _True_ and stem:[bb "category of opening bridge" = 3] (swing bridge).
 * If it is required to encode a distance mark that is included on or associated with a bridge, this must be done using the feature *Distance Mark* (see <<sec_8.10>>).
-* In navigable water, bridge supports must be encoded, where possible, using a *Pylon/Bridge Support* feature (see <<sec_6.12>>), with attribute *category of pylon* = _4_ (bridge/pylon tower) or _5_ (bridge pier); or if the bridge is a pontoon bridge as *Pontoon* features (see <<sec_8.19>>).
+* In navigable water, bridge supports must be encoded, where possible, using a *Pylon/Bridge Support* feature (see <<sec_6.12>>), with attribute stem:[bb "category of pylon" = 4] (bridge/pylon tower) or _5_ (bridge pier); or if the bridge is a pontoon bridge as *Pontoon* features (see <<sec_8.19>>).
 * It is not mandatory to encode roads or railways on bridges.
 
 [[sec_6.6.2]]
@@ -1169,8 +1164,7 @@ The value of the vertical clearance between (high) water level and any opening o
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display  | (S) EN
 | 0,1 footnoteblock:[six_nine]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -1308,8 +1302,8 @@ The value of the vertical clearance between (high) water level and any fixed ove
 
 [underline]#Remarks:#
 
-* If it is required to encode an overhead cable car, it must be done using a *Conveyor* feature, with attribute *category of conveyor* = _1_ (aerial cableway).
-* In navigable water, conveyor supports must be encoded, where possible, using a *Pylon/Bridge Support* feature (see <<sec_6.11>>), with attribute *category of pylon* = _3_ (aerial cableway pylon).
+* If it is required to encode an overhead cable car, it must be done using a *Conveyor* feature, with attribute stem:[bb "category of conveyor" = 1] (aerial cableway).
+* In navigable water, conveyor supports must be encoded, where possible, using a *Pylon/Bridge Support* feature (see <<sec_6.11>>), with attribute stem:[bb "category of pylon" = 3] (aerial cableway pylon).
 * Value _13_ (low water) for attribute *vertical datum* is only applicable to enclosed (inland) waterways; and must not be used to indicate the reference datum for vertical clearances in tidal waters.
 
 * If available and considered important for route planning and/or monitoring, the vertical uncertainty associated with encoded vertical clearance values should also be encoded.
@@ -1355,8 +1349,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display  | (S) EN
 | 0,1 footnoteblock:[six_ten]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -1488,7 +1481,7 @@ For power cables or transmission lines carrying very high voltages, an additiona
 [[sec_6.11]]
 === Pipeline overhead
 
-[cols="100,100,100,100,100,100,100,100,100,84,154", options="unnumbered"]
+[cols="11", options="unnumbered"]
 |===
 11+| [underline]#IHO Definition:# *OVERHEAD PIPELINE*. A string of interconnected pipes, supported by pylons and passing over or nearby navigable waters, used for the transport of matter, nowadays mainly oil or gas. (Adapted from IHO Dictionary -- S-32 and S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.119, November 2000).
 11+| *[underline]#S-101 Geo Feature:#* *Pipeline Overhead (PIPOHD)*
@@ -1517,8 +1510,7 @@ For power cables or transmission lines carrying very high voltages, an additiona
 4+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display  | (S) EN
 | 0,1 footnoteblock:[six_eleven]
 
 4+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -1642,9 +1634,9 @@ The value of the vertical clearance between (high) water level and any fixed ove
 
 [underline]#Remarks:#
 
-* Where an overhead pipeline is disused, it should be encoded with the attribute *status* = _4_ (not in use), and the attributes *category of pipe* and *product* must not be encoded.
+* Where an overhead pipeline is disused, it should be encoded with the attribute stem:[bb "status" = 4] (not in use), and the attributes *category of pipe* and *product* must not be encoded.
 * Where a pipeline has radar reflectors at known positions, they must be encoded as separate *Radar Reflector* features (see <<sec_20.18>>). If the whole pipeline is radar conspicuous, the optimum display scale for the ENC data is too small to show individual reflectors, or the positions of the radar reflectors are not known, the *Pipeline Overhead* should be encoded with attribute *radar conspicuous*.
-* In navigable water, overhead pipeline supports must be encoded, where possible, using a *Pylon/Bridge Support* feature (see <<sec_6.12>>), with attribute *category of pylon* = _6_ (pipeline pylon).
+* In navigable water, overhead pipeline supports must be encoded, where possible, using a *Pylon/Bridge Support* feature (see <<sec_6.12>>), with attribute stem:[bb "category of pylon" = 6] (pipeline pylon).
 * Value _13_ (low water) for attribute *vertical datum* is only applicable to enclosed (inland) waterways; and must not be used to indicate the reference datum for vertical clearances in tidal waters.
 
 * If available and considered important for route planning and/or monitoring, the vertical uncertainty associated with encoded vertical clearance values should also be encoded.
@@ -1705,8 +1697,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display  | (S) EN
 | 0,1 footnoteblock:[six_twelve]
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -1810,7 +1801,7 @@ The actual position of pylons supporting bridges, pipelines and cables must be i
 
 [underline]#Remarks:#
 
-* A *Pylon/Bridge Support* feature of type surface with attribute *water level effect* = __1__, _2_ or _6_ must be covered by a *Land Area* feature of type surface (see <<sec_5.4>>).
+* A *Pylon/Bridge Support* feature of type surface with attribute *water level effect* = _1_, _2_ or _6_ must be covered by a *Land Area* feature of type surface (see <<sec_5.4>>).
 
 [underline]#Distinction:# Landmark.
 
@@ -1869,8 +1860,7 @@ The actual position of pylons supporting bridges, pipelines and cables must be i
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display  | (S) EN
 | 0,1 footnoteblock:[six_thirteen]
 
 3+| height 2+| (HEIGHT) 3+| | RE | 0,1
@@ -1976,8 +1966,7 @@ If it is required to encode a fence or wall, it must be done using the feature *
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display  | (S) EN
 | 0,1 footnoteblock:[fix_fourteen]
 
 3+| height 2+| (HEIGHT) 3+| | RE | 0,1
@@ -2039,8 +2028,8 @@ If it is required to encode a railway, it must be done using the feature *Railwa
 
 [underline]#Remarks:#
 
-* If it is required to encode a railway station, it must be done using a *Building* feature, with attribute *function* = _8_ (railway station). On the largest optimum display scale ENC data, the names of railway terminals or main stations may be populated using the attribute *feature name* for the *Building*.
-* Abandoned railways (those which are mostly still intact) should be encoded, if required, as *Railway* with the attribute *status* = _4_ (not in use).
+* If it is required to encode a railway station, it must be done using a *Building* feature, with attribute stem:[bb "function" = 8] (railway station). On the largest optimum display scale ENC data, the names of railway terminals or main stations may be populated using the attribute *feature name* for the *Building*.
+* Abandoned railways (those which are mostly still intact) should be encoded, if required, as *Railway* with the attribute stem:[bb "status" = 4] (not in use).
 
 [underline]#Distinction:# Road; Shoreline Construction; Tunnel.
 
@@ -2078,8 +2067,7 @@ If it is required to encode a railway, it must be done using the feature *Railwa
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display  | (S) EN
 | 0,1 footnoteblock:[fix_fifteen]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -2173,8 +2161,7 @@ If it is required to encode a road or track, it must be done using the feature *
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display  | (S) EN
 | 0,1 footnoteblock:[six_sixteen]
 
 3+| horizontal clearance fixed

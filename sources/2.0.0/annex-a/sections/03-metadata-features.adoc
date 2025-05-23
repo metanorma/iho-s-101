@@ -60,22 +60,22 @@ The following Table indicates individual feature attributes that supersede Meta 
 h| Meta feature class h| Meta feature attribute h| Geo feature attribute
 
 | *Navigational System of Marks*    | *marks navigational -- system of*  | *marks navigational -- system of*
-| *Quality of Bathymetric Data*     | *horizontal position uncertainty** | *horizontal position uncertainty***
-| *Quality of Bathymetric Data*     | *vertical uncertainty**            | *vertical uncertainty*
-| *Quality of Bathymetric Data*     | *vertical uncertainty**            | *vertical uncertainty***
+| *Quality of Bathymetric Data*     | *horizontal position uncertainty*++*++ | *horizontal position uncertainty*++**++
+| *Quality of Bathymetric Data*     | *vertical uncertainty*++*++            | *vertical uncertainty*
+| *Quality of Bathymetric Data*     | *vertical uncertainty*++*++            | *vertical uncertainty*++**++
 | *Quality of Non-Bathymetric Data* | *horizontal distance uncertainty*  | *horizontal clearance fixed*, *horizontal clearance open*
-| *Quality of Non-Bathymetric Data* | *horizontal position uncertainty*  | *horizontal position uncertainty***
+| *Quality of Non-Bathymetric Data* | *horizontal position uncertainty*  | *horizontal position uncertainty*++**++
 | *Quality of Non-Bathymetric Data* | *orientation uncertainty*          | *orientation uncertainty*
-| *Quality of Non-Bathymetric Data* | *vertical uncertainty*             | *vertical clearance closed*, *vertical clearance fixed*, *vertical clearance open*, *vertical uncertainty***
-| *Quality of Survey* | *quality of horizontal measurement* | *quality of horizontal measurement***
+| *Quality of Non-Bathymetric Data* | *vertical uncertainty*             | *vertical clearance closed*, *vertical clearance fixed*, *vertical clearance open*, *vertical uncertainty*++**++
+| *Quality of Survey* | *quality of horizontal measurement* | *quality of horizontal measurement*++**++
 | *Quality of Survey* | *quality of vertical measurement* | *quality of vertical measurement*
 | *Quality of Survey* | *technique of vertical measurement* | *technique of vertical measurement*
 | *Vertical Datum of Data* | *vertical datum* | *vertical datum*
 |===
 
-\* The information type *Spatial Quality*, attributes *horizontal position uncertainty* and *vertical uncertainty*, may be associated to *Quality of Bathymetric Data* using the information to feature association *Quality of Bathymetric Data Composition* (see <<sec_25.12>>).
+++*++ The information type *Spatial Quality*, attributes *horizontal position uncertainty* and *vertical uncertainty*, may be associated to *Quality of Bathymetric Data* using the information to feature association *Quality of Bathymetric Data Composition* (see <<sec_25.12>>).
 
-\*\* As populated on an associated instance of the information type *Spatial Quality*, using the information to feature association *Spatial Association* (see <<sec_25.15>>).
+++**++ As populated on an associated instance of the information type *Spatial Quality*, using the information to feature association *Spatial Association* (see <<sec_25.15>>).
 
 Features and attributes shown in grey text in <<table_3-1>> above do not play an active role in regard to ECDIS display and/or performance in terms of hierarchy of the encoding. However, where both the S-101 Meta feature and the attribute for the Geo feature are encoded, end-user interpretation of the ECDIS Pick Report is that the value populated for the attribute on the Geo feature provides the relevant value.
 
@@ -96,8 +96,7 @@ It is prohibited to use an attribute on an individual object, if this attribute 
 
 3+| category of temporal variation 2+| 3+|
 1: extreme event +
-4: likely to change +
-| EN | 0,1
+4: likely to change | EN | 0,1
 
 3+| horizontal distance uncertainty 2+| (HORACC) 3+| | RE | 0,1
 
@@ -379,16 +378,14 @@ Within a dataset, there may be some areas where the direction of buoyage is defi
 2: likely to change and significant shoaling expected +
 3: likely to change but significant shoaling not expected +
 5: unlikely to change +
-6: unassessed +
-| EN
+6: unassessed | EN
 | 1,1
 
 3+| data assessment
 2+| 3+|
 1: assessed +
 2: assessed (oceanic) +
-3: unassessed +
-| EN
+3: unassessed | EN
 | 1,1
 
 3+| depth range maximum value 2+| (DRVAL2) 3+| | RE | 0,1
@@ -517,13 +514,13 @@ NOTE: <<fig_3-2>> demonstrates the two options for the encoding of the horizonta
 
 ** Where the value for *data assessment* is set to _1_ (assessed), all additional attribution for the *Quality of Bathymetric Data* feature must be indicative of the quality of bathymetric data for the area.
 ** Where the value for *data assessment* is set to _2_ (assessed (oceanic)), all additional attribution for the *Quality of Bathymetric Data* feature should be indicative of the quality of bathymetric data for the area for a Mariner's ECDIS pick report, however no portrayal of the quality information will display on the ECDIS. This value should only be used to cover open ocean (oceanic) depths in waters deeper than 200 metres.
-** [[OLE_LINK11]][[OLE_LINK10]]Where the value for *data assessment* is set to _3_ (unassessed), the mandatory attributes *category of temporal variation* = _6_ (unassessed); *features detected* (*least depth of detected features measured* and *significant features detected*) = __False__; *full seafloor coverage achieved* = __False__; and *category of zone of confidence in data* = _6_ (zone of confidence U); and *horizontal position uncertainty* (*uncertainty fixed*) and *vertical uncertainty* (*uncertainty fixed*) on *Quality of Bathymetric Data* or the associated *Spatial Quality* = empty (null) must be populated.
+** [[OLE_LINK11]][[OLE_LINK10]]Where the value for *data assessment* is set to _3_ (unassessed), the mandatory attributes stem:[bb "category of temporal variation" = 6] (unassessed); *features detected* (*least depth of detected features measured* and *significant features detected*) = _False_; *full seafloor coverage achieved* = _False_; and stem:[bb "category of zone of confidence in data" = 6] (zone of confidence U); and *horizontal position uncertainty* (*uncertainty fixed*) and *vertical uncertainty* (*uncertainty fixed*) on *Quality of Bathymetric Data* or the associated *Spatial Quality* = empty (null) must be populated.
 * Wherever possible, meaningful and useful values for the attributes *category of temporal variation*, *full seafloor coverage achieved*, and the complex attribute *features detected* must be used for areas of bathymetry. For areas of unstable seafloors, the complex attribute *survey date range* (*date end*) should be used to indicate the date of the survey of the underlying bathymetric data.
-* As a result of some disasters, for example earthquakes, tsunamis, hurricanes, it is possible that large areas of seafloor have moved and/or become cluttered with dangerous obstructions. Emergency surveys may subsequently be conducted over essential shipping routes and inside harbours. Outside these surveys, all existing detail is now suspect, whatever the quality of the previous surveys. In such cases, the attribute *category of temporal variation* should be reclassified to value _1_ (extreme event), the Boolean attribute *full seafloor coverage achieved* set to __False__; complex attribute *features detected*, Boolean sub-attributes *least depth of detected features measured* and *significant features detected* set to __False__; the *zone of confidence* sub-attribute *category of zone of confidence in data* reclassified to _5_ (zone of confidence D); and the sub-attributes *horizontal position accuracy* (*uncertainty fixed*) and *vertical uncertainty* (*uncertainty fixed*) on *Quality of Bathymetric Data* or the associated *Spatial Quality* populated with an empty (null) value in the affected areas outside the area covered by emergency surveys.
+* As a result of some disasters, for example earthquakes, tsunamis, hurricanes, it is possible that large areas of seafloor have moved and/or become cluttered with dangerous obstructions. Emergency surveys may subsequently be conducted over essential shipping routes and inside harbours. Outside these surveys, all existing detail is now suspect, whatever the quality of the previous surveys. In such cases, the attribute *category of temporal variation* should be reclassified to value _1_ (extreme event), the Boolean attribute *full seafloor coverage achieved* set to _False_; complex attribute *features detected*, Boolean sub-attributes *least depth of detected features measured* and *significant features detected* set to _False_; the *zone of confidence* sub-attribute *category of zone of confidence in data* reclassified to _5_ (zone of confidence D); and the sub-attributes *horizontal position accuracy* (*uncertainty fixed*) and *vertical uncertainty* (*uncertainty fixed*) on *Quality of Bathymetric Data* or the associated *Spatial Quality* populated with an empty (null) value in the affected areas outside the area covered by emergency surveys.
 * To express completeness of bathymetric data, the complex attribute *features detected* must be encoded. *features detected* indicates that a systematic method of exploring the seafloor, or the water column to the depth indicated by population of the attribute *depth range maximum value*, was undertaken to detect significant features. The sub-attributes *size of features detected* and *least depth of detected features measured* must not be encoded unless the sub-attribute *significant features detected* is set to _True_.
 * The mandatory complex attribute *zone of confidence* is used on a *Quality of Bathymetric Data* feature to provide an overall indication of the accuracy of the bathymetric data in the area; and may be used to specify the vertical and horizontal position uncertainty of the depths covered by the surface. Where *category of temporal variation* is set to values _2_ (likely to change and significant shoaling expected) or _3_ (likely to change but significant shoaling not expected), multiple instances of the complex attribute *zone of confidence* should be encoded to provide an indication of the degradation of the overall accuracy as well as the vertical and horizontal position uncertainty of the charted bathymetric information over time.
 
-** Wherever possible, meaningful and useful values of the mandatory sub-attribute *category of zone of confidence in data* should be used (that is, values other than *category of zone of confidence in data* = _6_ (zone of confidence U)) for areas of bathymetry. These values must be determined from the *category of zone of confidence in data* definition table (see <<sec_27.74>>) in accordance with the values populated for the attribute *full seafloor coverage achieved*,the complex attribute *features detected* and the sub-complex attributes *horizontal position uncertainty* and *vertical uncertainty* on the *Quality of Bathymetric Data* or the associated *Spatial Quality* (see the following Remarks bullet).
+** Wherever possible, meaningful and useful values of the mandatory sub-attribute *category of zone of confidence in data* should be used (that is, values other than stem:[bb "category of zone of confidence in data" = 6] (zone of confidence U)) for areas of bathymetry. These values must be determined from the *category of zone of confidence in data* definition table (see <<sec_27.74>>) in accordance with the values populated for the attribute *full seafloor coverage achieved*,the complex attribute *features detected* and the sub-complex attributes *horizontal position uncertainty* and *vertical uncertainty* on the *Quality of Bathymetric Data* or the associated *Spatial Quality* (see the following Remarks bullet).
 ** The sub-complex attribute *fixed date range* is used to define the date range(s) where the quality is degraded over time. Where multiple date ranges are specified, the *date start* of an instance must be equal to the *date end* of the previous instance. Within the sequence, the *date start* of the first instance and the *date end* of the last instance should not be populated; the values populated for *fixed date range* must not result in the removal of the indication of bathymetric data quality for an area from the Mariner.
 * The sub-complex attributes *horizontal position uncertainty* and *vertical uncertainty* must be encoded using either *Quality of Bathymetric Data* or the Information feature *Spatial Quality* (see <<sec_24.5>>). The decision as to which option to use should be based on whether the horizontal position and vertical uncertainty values are specific to a single *Quality of Bathymetric Data* feature or relates to multiple *Quality of Bathymetric Data* features. In general, specific values are related to areas of changeable bathymetry over time or varying bathymetric data quality in the water column (as shown in <<fig_3-2>> above); and repeating values are specific to general quality uncertainty values in non-changeable areas. It is prohibited to use both options for a single *Quality of Bathymetric Data* instance.
 
@@ -531,7 +528,7 @@ NOTE: <<fig_3-2>> demonstrates the two options for the encoding of the horizonta
 ** *horizontal position uncertainty* on the *Quality of Bathymetric Data* or the associated *Spatial Quality* is used to specify the positional uncertainty of the depths covered by the surface within a specified date range (where encoded); and should be adjusted to indicate the degradation of the horizontal position uncertainty over time where multiple instances of *zone of confidence* are encoded (see above).
 * *depth range minimum value* must only be used on a *Quality of Bathymetric Data* feature where a swept area occupies the entire *Quality of Bathymetric Data* surface, or *Quality of Bathymetric Data* features overlap. Where these features overlap such that varying bathymetric data qualities exist at different depths in the water column, the *depth range minimum value* for a *Quality of Bathymetric Data* must be set to a value 0.1 metres deeper than the *depth range maximum value* for the *Quality of Bathymetric Data* feature defining the quality for the level above; and the topmost *Quality of Bathymetric Data* must have *depth range minimum value* set to an empty (null) value (see <<fig_3-2>> above).
 * *depth range maximum value* must only be used on a *Quality of Bathymetric Data* feature to specify the maximum depth to which all other attributes for the *Quality of Bathymetric Data* feature applies. When *depth range maximum value* is specified, values populated for all other attributes apply only to depths equal to or shoaler than *depth range maximum value*. No quality information is provided for depths deeper than *depth range maximum value*. Where *Quality of Bathymetric Data* features overlap such that varying bathymetric data qualities exist at different depths in the water column, the *depth range maximum value* for a *Quality of Bathymetric Data* must be set to a value 0.1 metres shoaler than the *depth range minimum value* for the *Quality of Bathymetric Data* feature defining the quality for the level below; and the bottommost *Quality of Bathymetric Data* must have *depth range maximum value* set to an empty (null) value (see <<fig_3-2>> above).
-* *Quality of Bathymetric Data* must be encoded over *Unsurveyed Area* features that contain any depth data or bathymetry (depth contours, obstructions, soundings, underwater rocks, wrecks); and must have mandatory attributes *data assessment* = _1_ (assessed) *category of temporal variation* = _6_ (unassessed); *features detected* (*least depth of detected features measured* and *significant features detected*) = __False__; *full seafloor coverage achieved* = __False__; and *zone of confidence* (*category of zone of confidence in data*) = _5_ (zone of confidence D). The *vertical uncertainty* (*uncertainty fixed*) and *horizontal position uncertainty* (*uncertainty fixed*)for the *Quality of Bathymetric Data* or the associated *Spatial Quality* should be populated with an empty (null) value.
+* *Quality of Bathymetric Data* must be encoded over *Unsurveyed Area* features that contain any depth data or bathymetry (depth contours, obstructions, soundings, underwater rocks, wrecks); and must have mandatory attributes stem:[bb "data assessment" = 1] (assessed) stem:[bb "category of temporal variation" = 6] (unassessed); *features detected* (*least depth of detected features measured* and *significant features detected*) = _False_; *full seafloor coverage achieved* = _False_; and *zone of confidence* (*category of zone of confidence in data*) = _5_ (zone of confidence D). The *vertical uncertainty* (*uncertainty fixed*) and *horizontal position uncertainty* (*uncertainty fixed*)for the *Quality of Bathymetric Data* or the associated *Spatial Quality* should be populated with an empty (null) value.
 * For *Unsurveyed Area* features that do not contain any depth data or bathymetry, it is not required to encode a *Quality of Bathymetric Data* feature that covers the area.
 
 * If the attribute *technique of vertical measurement* is required, it must be encoded on either the Meta feature *Quality of Survey* (see <<sec_3.11>>) or on individual geo features (for example *Sounding*).
@@ -880,7 +877,7 @@ The technique of sounding measurement must not be encoded using *technique of ve
 [[sec_3.12]]
 === Update information
 
-[cols="340,340,340,340,340,340,340,340,340,172,280", options="unnumbered"]
+[cols="11", options="unnumbered"]
 |===
 11+| [underline]#IHO Definition:# *UPDATE INFORMATION*. The Update Information metadata feature is used to represent a change to the information shown.
 11+| *S-101 Metadata Feature:* *Update Information*
@@ -955,10 +952,10 @@ The Meta feature *Update Information* may be used by the ECDIS to provide inform
 * The complex attribute *information* (see <<sec_2.4.6>>) should be used to provide a textual description of the changes to the associated feature(s) as included in the Update.
 * The process of moving a segment of a curve or edge of a surface feature via an ENC Update requires the two-step application of the deletion of the segment at the original position and the insertion of the new segment in the new position. Where required, in order to indicate the move of a segment by ENC Update, three *Update Information* features should be created and associated, if required, as follows:
 
-** An *Update Information* feature having *update type* = _2_ (delete) using the geometry of the deleted segment at the original position;
-** An *Update Information* feature of type curve having *update type* = _1_ (insert) associated to the inserted segment at the new position;
-** An *Update Information* feature having no geometry and *update type* = _4_ (move) associated to the above "delete" and "insert" *Update Information* features using the association *Update Aggregation* (see <<sec_25.20>>).
-* The association *Update Aggregation* may also be used to group several related updates, for example changes to a routeing measure or aids to navigation range system. Where this is done, the *Update Information* forming the collection (container) end of the relationship should have no geometry and have *update type* = _3_ (modify).
+** An *Update Information* feature having stem:[bb "update type" = 2] (delete) using the geometry of the deleted segment at the original position;
+** An *Update Information* feature of type curve having stem:[bb "update type" = 1] (insert) associated to the inserted segment at the new position;
+** An *Update Information* feature having no geometry and stem:[bb "update type" = 4] (move) associated to the above "delete" and "insert" *Update Information* features using the association *Update Aggregation* (see <<sec_25.20>>).
+* The association *Update Aggregation* may also be used to group several related updates, for example changes to a routeing measure or aids to navigation range system. Where this is done, the *Update Information* forming the collection (container) end of the relationship should have no geometry and have stem:[bb "update type" = 3] (modify).
 * Where the changed information is related to an information type, the *Update Information* may be associated with the features to which the information type is associated.
 * The attribute *source* may be used to indicate the related paper chart Notice to Mariner's number.
 * At each New Edition of an ENC cell, *Update Information* features which are no longer relevant must be deleted; and for the next Update to an ENC cell *Update Information* features included in the previous Update dataset should be considered for deletion. Where a new Update impacts a feature that has previously been updated, any existing instance of *Update Information* associated to the feature must be deleted as part of the new Update; this must be done by deleting the existing *Update Information* from the dataset.

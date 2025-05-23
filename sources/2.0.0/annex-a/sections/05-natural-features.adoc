@@ -23,7 +23,7 @@ Additional guidance regarding the level of depiction of topographic detail in re
 
 A coast backed by rock or earth cliffs gives a good radar return and is useful for visual identification from a considerable distance off, where cliffs alternate with low lying coast along the shoreline. Where cliffs are prominent features they should be encoded on the larger optimum display scale for the ENC data; as an exception, where cliffs predominate over extensive stretches of coastline, it may be neither feasible nor particularly useful to insert a cliff throughout. Cliff top heights are useful for calculating or estimating distance off, (for clearing inshore dangers) and should be encoded where possible.
 
-If it is required to encode a non-coastal cliff, it must be done using the feature *Sloping Ground* (see <<sec_5.14>>) and/or using the feature *Slope Topline* (see <<sec_5.15>>), with attribute *category of slope* = _6_ (cliff). For example:
+If it is required to encode a non-coastal cliff, it must be done using the feature *Sloping Ground* (see <<sec_5.14>>) and/or using the feature *Slope Topline* (see <<sec_5.15>>), with attribute stem:[bb "category of slope" = 6] (cliff). For example:
 
 *Sloping Ground* may be used at large scale to indicate the horizontal extent of the cliff.
 
@@ -31,12 +31,12 @@ If it is required to encode a non-coastal cliff, it must be done using the featu
 
 [underline]#Remarks:#
 
-* When the cliff is coincident with the coastline, a *Coastline* feature, with attribute *category of coastline* = _1_ (steep coast) should be encoded, and there should be no *Sloping Ground* or *Slope Topline* encoded.
+* When the cliff is coincident with the coastline, a *Coastline* feature, with attribute stem:[bb "category of coastline" = 1] (steep coast) should be encoded, and there should be no *Sloping Ground* or *Slope Topline* encoded.
 
 [[sec_5.2]]
 === Cuttings and embankments (see S-4 -- B-363.2 and B-364.1)
 
-If it is required to encode cuttings and embankments, this must be done in the same way as cliffs; using *Sloping Ground* and/or *Slope Topline* features (see <<sec_5.14;and!sec_5.15>>), with attribute *category of slope* = _1_ (cutting) or _2_ (embankment).
+If it is required to encode cuttings and embankments, this must be done in the same way as cliffs; using *Sloping Ground* and/or *Slope Topline* features (see <<sec_5.14;and!sec_5.15>>), with attribute stem:[bb "category of slope" = 1] (cutting) or _2_ (embankment).
 
 [underline]#Remarks:#
 
@@ -80,12 +80,9 @@ If it is required to encode cuttings and embankments, this must be done in the s
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
-| 0,1 footnoteblock:[five_three]
+2: alternate name display | (S) EN | 0,1 footnoteblock:[five_three]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
@@ -150,7 +147,7 @@ Natural sections of coastlines, lakeshores and riverbanks should be encoded as *
 [[sec_5.3.2]]
 ==== Natural coastline (see S-4 -- B-312 and B-353.8)
 
-Spatial types associated with coastlines considered to be inadequately surveyed at the optimum display scale for the ENC data (see S-4 -- B-311) should be encoded using spatial attribute *quality of horizontal measurement* = _4_ (approximate).
+Spatial types associated with coastlines considered to be inadequately surveyed at the optimum display scale for the ENC data (see S-4 -- B-311) should be encoded using spatial attribute stem:[bb "quality of horizontal measurement" = 4] (approximate).
 
 If it is required to encode a description of the nature of the coastline, it must be done using the attributes *category of coastline* and *nature of surface*. Other surface features may be used to describe the land region adjacent to the coastline (see <<sec_5.11>>).
 
@@ -160,10 +157,10 @@ A steep coast may give a good radar return and is useful for visual identificati
 
 * *Coastline* must only exist at the boundary of *Land Area* of type surface.
 * *Coastline* and *Shoreline Construction* of type curve must not overlap. Similarly, *Coastline* should not share an edge with a *Shoreline Construction* of type surface (see <<sec_8.6>>) having attribute *water level effect* undefined or populated with the values _2_ (always dry) or _1_ (partly submerged at high water), which is covered by *Land Area*.
-* If the seaward edge of an encoded saltpan area is coincident with the coastline, it should be encoded using *Coastline*, with *category of coastline* = _2_ (flat coast).
-* If the seaward edge of a marsh area or glacier is coincident with the coastline, the coastline should be encoded as *Coastline*, with attribute *category of coastline* = _8_ (marshy shore) or _9_ (glacier, seaward end). The coastline's spatial type should have the attribute *quality of horizontal measurement* = _4_ (approximate). If it is required to encode the area behind the coastline, this must be done using a *Land Region* feature (for marsh -- see <<sec_5.11.1.1>>) or an *Ice Area* feature (for glacier -- see <<sec_5.13>>).
-* If it is required to encode mangroves in the intertidal area, this should be done using an *Obstruction* feature (see <<sec_13.6>>). However, on smaller optimum display scale ENC datasets where the mangroves are required to be encoded to indicate the seaward edge of a mangrove area only as the "apparent" coastline, this must be done using *Coastline* with *category of coastline* = _7_ (mangrove). The coastline's spatial type should have the attribute *quality of horizontal measurement* = _4_ (approximate).
-* Where the source indicates the top of a cliff is coincident with the coastline at the optimum display scale of the ENC data, a *Coastline* feature, with *category of coastline* = _1_ (steep coast) should be encoded. In such cases, there should be no *Slope Topline* or *Sloping Ground* features encoded, in order to avoid clutter. If it is required to indicate that such a section of the coastline provides a good radar return, it must be done using attribute *radar conspicuous* on the *Coastline* feature. If it is required to encode a section of the coastline that is visually conspicuous, it must be done using attribute *visual prominence* on the *Coastline* feature.
+* If the seaward edge of an encoded saltpan area is coincident with the coastline, it should be encoded using *Coastline*, with stem:[bb "category of coastline" = 2] (flat coast).
+* If the seaward edge of a marsh area or glacier is coincident with the coastline, the coastline should be encoded as *Coastline*, with attribute stem:[bb "category of coastline" = 8] (marshy shore) or _9_ (glacier, seaward end). The coastline's spatial type should have the attribute stem:[bb "quality of horizontal measurement" = 4] (approximate). If it is required to encode the area behind the coastline, this must be done using a *Land Region* feature (for marsh -- see <<sec_5.11.1.1>>) or an *Ice Area* feature (for glacier -- see <<sec_5.13>>).
+* If it is required to encode mangroves in the intertidal area, this should be done using an *Obstruction* feature (see <<sec_13.6>>). However, on smaller optimum display scale ENC datasets where the mangroves are required to be encoded to indicate the seaward edge of a mangrove area only as the "apparent" coastline, this must be done using *Coastline* with stem:[bb "category of coastline" = 7] (mangrove). The coastline's spatial type should have the attribute stem:[bb "quality of horizontal measurement" = 4] (approximate).
+* Where the source indicates the top of a cliff is coincident with the coastline at the optimum display scale of the ENC data, a *Coastline* feature, with stem:[bb "category of coastline" = 1] (steep coast) should be encoded. In such cases, there should be no *Slope Topline* or *Sloping Ground* features encoded, in order to avoid clutter. If it is required to indicate that such a section of the coastline provides a good radar return, it must be done using attribute *radar conspicuous* on the *Coastline* feature. If it is required to encode a section of the coastline that is visually conspicuous, it must be done using attribute *visual prominence* on the *Coastline* feature.
 * If the source indicates that the top of a coastal cliff is offset inshore from the coastline at the optimum display scale of the ENC data, a *Slope Topline* feature (see <<sec_5.15>>) and/or a *Sloping Ground* feature (see <<sec_5.14>>) may be encoded. In such cases, the *Coastline* feature should not have a value populated for *category of coastline*. If it is required to indicate that such a section of the coastline provides a good radar return, it must be done using attribute *radar conspicuous* on the *Slope Topline* and/or *Sloping Ground* feature. If it is required to encode a section of the coastline that is visually conspicuous, it must be done using attribute *visual prominence* on the *Slope Topline* and/or *Sloping Ground* feature.
 
 [underline]#Distinction:# Shoreline Construction; Slope Topline; Sloping Ground.
@@ -193,8 +190,7 @@ A steep coast may give a good radar return and is useful for visual identificati
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[five_four]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -253,7 +249,7 @@ Rivers, canals, lakes, basins and docks, which are not navigable at the optimum 
 
 ** *Coastline*, *Shoreline Construction*, *Gate*, *Dam* of type curve;
 ** *Data Coverage*, *Dolphin*, *Gate*, *Dam*, *River*, *Tunnel*, *Dry Dock*, *Canal*, *Lake*, *Lock Basin*, *Dock Area*, *Land Area* of type surface;
-** *Causeway*, *Shoreline Construction*, *Wreck*, *Obstruction*, *Pylon/Bridge Support* of type surface; and having attribute *water level effect* = _1_ (partly submerged at high water), _2_ (always dry) or _6_ (subject to inundation or flooding).
+** *Causeway*, *Shoreline Construction*, *Wreck*, *Obstruction*, *Pylon/Bridge Support* of type surface; and having attribute stem:[bb "water level effect" = 1] (partly submerged at high water), _2_ (always dry) or _6_ (subject to inundation or flooding).
 
 [[sec_5.4.2]]
 ==== Rocks which do not cover (islets) (see S-4 -- B-421.1)
@@ -296,8 +292,7 @@ A point feature must be encoded using:
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[five_five]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -374,8 +369,7 @@ If it is required to encode the name of a group of islands, it must be done usin
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[five_six]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -429,7 +423,7 @@ It is assumed that Mariners will understand most methods of representation of re
 * show relief by form lines (and spot heights).
 Spot heights on ENC datasets should be confined to summits of hills, mountains and cliffs, particularly on datasets from which contours and form lines have been omitted; navigators will generally assume that heights selected for ENC are summits.
 
-If it is required to encode a height contour or spot height, it must be done using the feature *Land Elevation*.*Land Elevation* features must be covered by a *Land Area* feature of type surface; or a *Wreck* feature of type surface having attribute *water level effect* = _1_ (partially submerged at high water) or _2_ (always dry); or fall on a *Land Area* feature of type curve; or share the geometry of a *Land Area* of type point or a *Wreck* feature of type point having attribute *water level effect* = _1_ (partially submerged at high water) or _2_ (always dry). Spatial types associated with approximate contours or spot heights should be encoded using the attribute *quality of horizontal measurement* = _4_ (approximate).
+If it is required to encode a height contour or spot height, it must be done using the feature *Land Elevation*.*Land Elevation* features must be covered by a *Land Area* feature of type surface; or a *Wreck* feature of type surface having attribute stem:[bb "water level effect" = 1] (partially submerged at high water) or _2_ (always dry); or fall on a *Land Area* feature of type curve; or share the geometry of a *Land Area* of type point or a *Wreck* feature of type point having attribute stem:[bb "water level effect" = 1] (partially submerged at high water) or _2_ (always dry). Spatial types associated with approximate contours or spot heights should be encoded using the attribute stem:[bb "quality of horizontal measurement" = 4] (approximate).
 
 [underline]#Remarks:#
 
@@ -461,8 +455,7 @@ If it is required to encode a height contour or spot height, it must be done usi
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[five_seven]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -511,10 +504,10 @@ If it is required to encode a non-navigable river, stream or creek, it must be d
 
 [underline]#Remarks:#
 
-* If the river is navigable at the optimum display scale for the ENC data, it must be encoded using the feature *Depth Area*, *Dredged Area* (see <<sec_11.4>>) or *Unsurveyed Area*, and the riverbanks must be encoded using the feature *Coastline* or *Shoreline Construction*. The river must not be encoded as a *River* feature in this case. If it is required to encode the name of the river, it must be done using a *Sea Area/Named Water Area* feature with attribute *category of sea area* = _53_ (river).
+* If the river is navigable at the optimum display scale for the ENC data, it must be encoded using the feature *Depth Area*, *Dredged Area* (see <<sec_11.4>>) or *Unsurveyed Area*, and the riverbanks must be encoded using the feature *Coastline* or *Shoreline Construction*. The river must not be encoded as a *River* feature in this case. If it is required to encode the name of the river, it must be done using a *Sea Area/Named Water Area* feature with attribute stem:[bb "category of sea area" = 53] (river).
 * Where the river is navigable at the optimum display scale for the ENC data, special consideration should be given to encoding features specific to the river such as minimum depths within the navigable area; overhead clearances; distances along the river; and locks and lock gates (and any associated traffic signals).
 * If it is required to encode a river that is not navigable at the optimum display scale for the ENC data, it must be done using *River*, covered by a *Land Area* feature. The name of the river should be encoded using the complex attribute *feature name* on the *River* feature.
-* Intermittent riversare those that are dry most of the time, and where required must be encoded as a *River* feature with attribute *status* = _5_ (periodic/intermittent).
+* Intermittent riversare those that are dry most of the time, and where required must be encoded as a *River* feature with attribute stem:[bb "status" = 5] (periodic/intermittent).
 * If it is required to encode an island in a non-navigable river encoded on *Land Area*, this must be done by encoding a "hole" in the *River* feature if the island is a surface at the optimum display scale for the ENC data, or encoding *Land Area* of type point if the island is a point at the optimum display scale for the ENC data. Encoders must not encode *Land Area* surfaces on top of *Land Area* surfaces. If it is required to encode an island in a non-navigable river encoded on *Unsurveyed Area*, this must be done by encoding a "hole" in both the *River* and *Unsurveyed Area* features and replacing with *Land Area* if the island is a surface at the optimum display scale for the ENC data, or encoding *Land Area* of type point if the island is a point at the optimum display scale for the ENC data. Encoders must not encode *Land Area* surfaces on top of *Unsurveyed Area* surfaces.
 * Some dry riverbeds, known as wadi's, may be prominent topographic features. If it is required to encode a wadi, it should be done using a *Land Region* feature (see <<sec_5.11>>), with the name of the wadi encoded using the complex attribute *feature name*.
 
@@ -541,8 +534,7 @@ If it is required to encode a non-navigable river, stream or creek, it must be d
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[five_eight]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -614,8 +606,7 @@ If it is required to encode rapids within a river, it must be done using the fea
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[five_nine]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -693,8 +684,7 @@ If it is required to encode a waterfall within a river, it must be done using th
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[five_ten]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -743,10 +733,10 @@ If it is required to encode a non-navigable lake, it must be done using the feat
 
 [underline]#Remarks:#
 
-* If the lake is navigable at the optimum display scale for the ENC data, it must be encoded using the feature *Depth Area*, *Dredged Area* (see <<sec_11.4>>) or *Unsurveyed Area*, and the lake shore must be encoded using the feature *Coastline* or *Shoreline Construction*. The lake must not be encoded as a *Lake* feature in this case. If it is required to encode the name of the lake, it must be done using a *Sea Area/Named Water Area* feature, with attribute *category of sea area* = _52_ (lake).
+* If the lake is navigable at the optimum display scale for the ENC data, it must be encoded using the feature *Depth Area*, *Dredged Area* (see <<sec_11.4>>) or *Unsurveyed Area*, and the lake shore must be encoded using the feature *Coastline* or *Shoreline Construction*. The lake must not be encoded as a *Lake* feature in this case. If it is required to encode the name of the lake, it must be done using a *Sea Area/Named Water Area* feature, with attribute stem:[bb "category of sea area" = 52] (lake).
 * If it is required to encode a lake that is not navigable at the optimum display scale for the ENC data, it must be done using *Lake*, covered by a *Land Area* feature. The name of the lake should be encoded using the complex attribute *feature name* on the *Lake* feature.
 * If it is required to encode an island in a non-navigable lake encoded on *Land Area*, this must be done by encoding a "hole" in the *Lake* feature if the island is a surface at the optimum display scale for the ENC data, or encoding *Land Area* of type point if the island is a point at the optimum display scale for the ENC data. Encoders must not encode *Land Area* surfaces on top of *Land Area* surfaces. If it is required to encode an island in a non-navigable lake encoded on *Unsurveyed Area*, this must be done by encoding a "hole" in both the *Lake* and *Unsurveyed Area* features and replacing with *Land Area* if the island is a surface at the optimum display scale for the ENC data, or encoding *Land Area* of type point if the island is a point at the optimum display scale for the ENC data. Encoders must not encode *Land Area* surfaces on top of *Unsurveyed Area* surfaces.
-* Intermittent lakesare those that are dry most of the time, and where required must be encoded as a *Lake* feature with attribute *status* = _5_ (periodic/intermittent).
+* Intermittent lakesare those that are dry most of the time, and where required must be encoded as a *Lake* feature with attribute stem:[bb "status" = 5] (periodic/intermittent).
 
 [underline]#Distinction:# Canal; Depth Area; River.
 
@@ -793,8 +783,7 @@ If it is required to encode a non-navigable lake, it must be done using the feat
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[five_eleven]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -868,23 +857,23 @@ If it is required to describe the natural scenery of the land, or to give the ge
 [[sec_5.11.1.1]]
 ===== Marsh (see S-4 -- B-312.2)
 
-If it is required to encode a marshy area behind the coastline, it must be done using a *Land Region* feature, with attribute *category of land region* = _2_ (marsh).
+If it is required to encode a marshy area behind the coastline, it must be done using a *Land Region* feature, with attribute stem:[bb "category of land region" = 2] (marsh).
 
-If the seaward edge of a marsh area is coincident with the coastline, the coastline should be encoded as a *Coastline* feature, with attribute *category of coastline* = _8_ (marshy shore), and the coastline's spatial type should have the attribute *quality of horizontal measurement* = _4_ (approximate) for the visible coastline.
+If the seaward edge of a marsh area is coincident with the coastline, the coastline should be encoded as a *Coastline* feature, with attribute stem:[bb "category of coastline" = 8] (marshy shore), and the coastline's spatial type should have the attribute stem:[bb "quality of horizontal measurement" = 4] (approximate) for the visible coastline.
 
 [[sec_5.11.1.2]]
 ===== Salt pans (see S-4 -- B-353.7)
 
-If it is required to encode an area on land in which seawater is evaporated, it must be done using a *Land Region* feature, with attribute *category of land region* = _15_ (salt pan) covered by a *Land Area* feature (that is, the salt pan must not form a hole in the land area).
+If it is required to encode an area on land in which seawater is evaporated, it must be done using a *Land Region* feature, with attribute stem:[bb "category of land region" = 15] (salt pan) covered by a *Land Area* feature (that is, the salt pan must not form a hole in the land area).
 
-If the seaward edge of an encoded salt pan area is coincident with the coastline, this edge should also be encoded using a *Coastline* feature, with attribute *category of coastline* = _2_ (flat coast).
+If the seaward edge of an encoded salt pan area is coincident with the coastline, this edge should also be encoded using a *Coastline* feature, with attribute stem:[bb "category of coastline" = 2] (flat coast).
 
 [[sec_5.11.1.3]]
 ===== Lava flow (see S-4 -- B-355)
 
-If it is required to encode a lava flow, it must be done using a *Land Region* feature, with attribute *category of land region* = _14_ (lava flow).
+If it is required to encode a lava flow, it must be done using a *Land Region* feature, with attribute stem:[bb "category of land region" = 14] (lava flow).
 
-If the seaward edge of an encoded lava flow area is coincident with the coastline, this edge should also be encoded using a *Coastline* feature (see <<sec_5.3>>), with attribute *nature of surface* = _11_ (lava). If the source indicates that the lava flow is active, the coastline's spatial type should have the attribute *quality of horizontal measurement* = _4_ (approximate).
+If the seaward edge of an encoded lava flow area is coincident with the coastline, this edge should also be encoded using a *Coastline* feature (see <<sec_5.3>>), with attribute stem:[bb "nature of surface" = 11] (lava). If the source indicates that the lava flow is active, the coastline's spatial type should have the attribute stem:[bb "quality of horizontal measurement" = 4] (approximate).
 
 [underline]#Distinction:# Land Area; Sea Area/Named Water Area; Slope Topline; Sloping Ground; Vegetation.
 
@@ -926,8 +915,7 @@ If the seaward edge of an encoded lava flow area is coincident with the coastlin
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[five_twelve]
 
 3+| height 2+| (HEIGHT) 3+| | RE | 0,1
@@ -992,7 +980,7 @@ If it is required to encode an isolated tree used as a landmark, it must be done
 [underline]#Remarks:#
 
 * The attribute *height* is used to encode the approximate altitude of the highest point of the top of the vegetation. Where the source shows an island with the approximate height of the top of the vegetation above height datum (see INT1 - C14), a *Vegetation* feature should be encoded co-incident with the *Land Area* feature of the island, with attribute *height* corresponding to the value shown on the source.
-* Where it is required to encode a mangrove area or tree located in the intertidal area, this should be done using the feature *Obstruction* (see <<sec_13.6;and!sec_13.6.1.1>>), with attribute *category of obstruction* = _23_ (mangrove). Where it is required to encode the generalised seaward edge only of a mangrove area to represent the "apparent" coastline, this must be done using the feature *Coastline* (see <<sec_5.3>>).
+* Where it is required to encode a mangrove area or tree located in the intertidal area, this should be done using the feature *Obstruction* (see <<sec_13.6;and!sec_13.6.1.1>>), with attribute stem:[bb "category of obstruction" = 23] (mangrove). Where it is required to encode the generalised seaward edge only of a mangrove area to represent the "apparent" coastline, this must be done using the feature *Coastline* (see <<sec_5.3>>).
 
 [underline]#Distinction:# Seabed Area; Seagrass; Weed/Kelp.
 
@@ -1023,8 +1011,7 @@ If it is required to encode an isolated tree used as a landmark, it must be done
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[five_thirteen]
 
 3+| height 2+| (HEIGHT) 3+| | RE | 0,1
@@ -1095,9 +1082,9 @@ If it is required to encode an ice area, it must be done using the feature *Ice 
 [[sec_5.13.1.1]]
 ===== Glaciers (see S-4 -- B-353.8)
 
-If it is required to encode the portion of a glacier that is on land, it must be done using an *Ice Area* feature, with attribute *category of ice* = _5_ (glacier) covered by a *Land Area* feature (that is, the glacier does not form a hole in the land area).
+If it is required to encode the portion of a glacier that is on land, it must be done using an *Ice Area* feature, with attribute stem:[bb "category of ice" = 5] (glacier) covered by a *Land Area* feature (that is, the glacier does not form a hole in the land area).
 
-If the seaward edge of an encoded glacier is coincident with the coastline, this edge should be encoded using a *Coastline* feature, with attribute *category of coastline* = _6_ (glacier, seaward end), and the coastline's spatial type should have the attribute *quality of horizontal measurement* = _4_ (approximate) for the visible coastline.
+If the seaward edge of an encoded glacier is coincident with the coastline, this edge should be encoded using a *Coastline* feature, with attribute stem:[bb "category of coastline" = 6] (glacier, seaward end), and the coastline's spatial type should have the attribute stem:[bb "quality of horizontal measurement" = 4] (approximate) for the visible coastline.
 
 [underline]#Distinction:# Depth Area; Land Area.
 
@@ -1140,8 +1127,7 @@ If the seaward edge of an encoded glacier is coincident with the coastline, this
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[five_fourteen]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -1204,7 +1190,7 @@ If it is required to encode the characteristics of a prominent or visually consp
 [[sec_5.14.1.1]]
 ===== Dunes, sand hills (see S-4 -- B-312.3)
 
-If it is required to encode a sand dune or sand hill, it must be done using the feature *Sloping Ground* with attribute *category of slope* = _3_ (dune) or _4_ (hill) and attribute *nature of surface* = _4_ (sand). If these features are positioned along the coastline, a *Coastline* feature must also be encoded.
+If it is required to encode a sand dune or sand hill, it must be done using the feature *Sloping Ground* with attribute stem:[bb "category of slope" = 3] (dune) or _4_ (hill) and attribute stem:[bb "nature of surface" = 4] (sand). If these features are positioned along the coastline, a *Coastline* feature must also be encoded.
 
 If it is required to encode the height of a dune or sand hill, a *Land Elevation* feature (see <<sec_5.6>>) must also be encoded.
 
@@ -1247,8 +1233,7 @@ If it is required to encode the height of a dune or sand hill, a *Land Elevation
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[five_fifteen]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -1331,8 +1316,7 @@ If it is required to encode the upper marking of a prominent or visually conspic
 3+| name usage
 2+| 3+|
 1: default name display +
-2: alternate name display +
-| (S) EN
+2: alternate name display | (S) EN
 | 0,1 footnoteblock:[five_sixteen]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
