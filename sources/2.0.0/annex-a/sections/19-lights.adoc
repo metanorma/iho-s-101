@@ -2,14 +2,25 @@
 [[sec_19]]
 == Geo Features -- Lights
 
-For the purpose of encoding lights in ENC, the following features must be used, depending on the type of light:
+For the purpose of encoding lights in ENC, the following features
+must be used, depending on the type of light:
 
-* *Light All Around* (see <<sec_19.2>>) for lights having the same character over the whole horizon of interest to marine navigation (all-round lights)), excluding fog detector and air obstruction lights;
-* *Light Sectored* (see <<sec_19.3>>) for lights having one or more sectors which have different characteristics, including directional lights and lights having obscured or partially obscured sectors;
-* *Light Fog Detector* (see <<sec_19.4>>) for lights used to automatically determine conditions of visibility which warrant the turning on or off of a sound signal; and
-* *Light Air Obstruction* (see <<sec_19.5>>) for lights marking an obstacle which constitutes a danger to air navigation.
+* *Light All Around* (see <<sec_19.2>>) for lights having the same
+character over the whole horizon of interest to marine navigation
+(all-round lights), excluding fog detector and air obstruction
+lights;
+* *Light Sectored* (see <<sec_19.3>>) for lights having one or more
+sectors which have different characteristics, including directional
+lights and lights having obscured or partially obscured sectors;
+* *Light Fog Detector* (see <<sec_19.4>>) for lights used to
+automatically determine conditions of visibility which warrant the
+turning on or off of a sound signal; and
+* *Light Air Obstruction* (see <<sec_19.5>>) for lights marking an
+obstacle which constitutes a danger to air navigation.
 
-When encoding a light, the combination of the character and purpose of the light must be evaluated in order to determine the most appropriate light feature from the above list.
+When encoding a light, the combination of the character and purpose
+of the light must be evaluated in order to determine the most
+appropriate light feature from the above list.
 
 [[sec_19.1]]
 === Lights: General
@@ -17,11 +28,20 @@ When encoding a light, the combination of the character and purpose of the light
 [[sec_19.1.1]]
 ==== Rhythms of lights (see S-4 -- B-471.2)
 
-The principal character of a light is its rhythm (although, strictly, fixed lights and some alternating lights are not "rhythmic").
+The principal character of a light is its rhythm (although, strictly,
+fixed lights and some alternating lights are not "rhythmic").
 
-If it is required to encode the rhythms of lights, this must be done using the complex attribute *rhythm of light*, sub-attributes *light characteristic* and *signal group*. When populating *rhythm of light*, the sub-attributes *signal group*, *signal period* and *signal sequence* are only valid for non-fixed lights (that is, sub-attribute stem:[bb "light characteristic" != 1] (fixed)), with *signal group* and *signal period* being mandatory.
+If it is required to encode the rhythms of lights, this must be done
+using the complex attribute *rhythm of light*, sub-attributes *light
+characteristic* and *signal group*. When populating *rhythm of
+light*, the sub-attributes *signal group*, *signal period* and
+*signal sequence* are only valid for non-fixed lights (that is,
+sub-attribute stem:[bb "light characteristic" != 1] (fixed)), with
+*signal group* and *signal period* being mandatory.
 
-The use of these sub-attributes is defined in the following Table; it contains the most common examples of coding; other coding combinations are possible:
+The use of these sub-attributes is defined in the following Table; it
+contains the most common examples of coding; other coding
+combinations are possible:
 
 [[table_19-1]]
 .Rhythms of lights -- Common encoding examples
@@ -48,21 +68,36 @@ h| Rhythms of lights h| Q h| Q(3) h| VQ h| VQ(3) h| UQ h| IUQ
 
 |===
 
-Some lights recently constructed may appear to the Mariner as "fixed and flashing - FFL" by night, while the real-world feature actually comprises two separate lights vertically disposed, one fixed and the other flashing (F&Fl). When it is known that two separate features actually exist, they must be encoded as separate light features, in this case two *Light All Around* features, one with complex attribute *rhythm of light*, sub-attribute stem:[bb "light characteristic" = 1] (fixed) and the other with stem:[bb "light characteristic" = 2] (flashing), and not as one *Light All Around* with stem:[bb "light characteristic" = 13] (fixed/flash).
+Some lights recently constructed may appear to the Mariner as "fixed
+and flashing - FFL" by night, while the real-world feature actually
+comprises two separate lights vertically disposed, one fixed and the
+other flashing (F&Fl). When it is known that two separate features
+actually exist, they must be encoded as separate light features, in
+this case two *Light All Around* features, one with complex attribute
+*rhythm of light*, sub-attribute stem:[bb "light characteristic" = 1]
+(fixed) and the other with stem:[bb "light characteristic" = 2]
+(flashing), and not as one *Light All Around* with stem:[bb "light
+characteristic" = 13] (fixed/flash).
 
 [[sec_19.1.2]]
 ==== Types and functions of lights (see S-4 -- B-471.1)
 
-If it is required to encode types and functions of lights, this must be done using the attribute *category of light* (see <<sec_27.37>>).
+If it is required to encode types and functions of lights, this must
+be done using the attribute *category of light* (see <<sec_27.37>>).
 
 [[sec_19.1.3]]
 ==== Elevations of lights (see S-4 -- B-471.6)
 
-The elevationof a light is the vertical distance between the light source and the plane of reference for heights for the ENC data (see <<sec_2.5.7>>).
+The elevationof a light is the vertical distance between the light
+source and the plane of reference for heights for the ENC data (see
+<<sec_2.5.7>>).
 
-If it is required to encode the elevation of a light on a fixed structure, it must be done using the attribute *height*.
+If it is required to encode the elevation of a light on a fixed
+structure, it must be done using the attribute *height*.
 
-If it is required to encode the height above the water surface of a light on a floating structure, it must be done using the attribute *vertical length* on the relevant light feature (see <<sec_2.5.7>>).
+If it is required to encode the height above the water surface of a
+light on a floating structure, it must be done using the attribute
+*vertical length* on the relevant light feature (see <<sec_2.5.7>>).
 
 [[sec_19.1.4]]
 ==== Times of exhibition and exhibition conditions (see S-4 -- B-473)
@@ -70,51 +105,90 @@ If it is required to encode the height above the water surface of a light on a f
 [[sec_19.1.4.1]]
 ===== Night lights
 
-If it is required to encode a night light, it must be done using the attribute stem:[bb "exhibition condition of light" = 4] (night light) on the light feature.
+If it is required to encode a night light, it must be done using the
+attribute stem:[bb "exhibition condition of light" = 4] (night light)
+on the light feature.
 
 [[sec_19.1.4.2]]
 ===== Unwatched lights (see S-4 -- B-473.1)
 
-This information should not be encoded, but unwatched (unmanned) lights, with no standby or emergency arrangements, may be encoded using attribute stem:[bb "status" = 17] (unwatched).
+This information should not be encoded, but unwatched (unmanned)
+lights, with no standby or emergency arrangements, may be encoded
+using attribute stem:[bb "status" = 17] (unwatched).
 
 [[sec_19.1.4.3]]
 ===== Occasional lights (see S-4 -- B-473.2)
 
-If it is required to encode an occasional light, it must be done using attribute stem:[bb "status" = 2] (occasional). If it is required to encode a private light that is not regularly exhibited, it must be done using stem:[bb "status" = 2,8] (occasional, private).
+If it is required to encode an occasional light, it must be done
+using attribute stem:[bb "status" = 2] (occasional). If it is
+required to encode a private light that is not regularly exhibited,
+it must be done using stem:[bb "status" = 2,8] (occasional, private).
 
 [[sec_19.1.4.4]]
 ===== Daytime lights (see S-4 -- B-473.4)
 
-If it is required to encode a light shown throughout 24 hours without change of character, it must be done using attribute stem:[bb "exhibition condition of light" = 1] (light shown without change of character).
+If it is required to encode a light shown throughout 24 hours without
+change of character, it must be done using attribute stem:[bb
+"exhibition condition of light" = 1] (light shown without change of
+character).
 
-If it is required to encode a light having characteristics shown by day different from those shown at night, it must be done by encoding two light features sharing the same point spatial instance:
+If it is required to encode a light having characteristics shown by
+day different from those shown at night, it must be done by encoding
+two light features sharing the same point spatial instance:
 
-* one light feature with stem:[bb "exhibition condition of light" = 2] (daytime light),
-* one light feature with stem:[bb "exhibition condition of light" = 4] (night light).
+* one light feature with
+stem:[bb "exhibition condition of light" = 2] (daytime light),
+* one light feature with
+stem:[bb "exhibition condition of light" = 4] (night light).
 
 [[sec_19.1.4.5]]
 ===== Fog lights (see S-4 -- B-473.5)
 
-If it is required to encode a light which is exhibited in fog or conditions of reduced visibility, it must be done using a light feature, with attributes stem:[bb "exhibition condition of light" = 3] (fog light)and stem:[bb "status" = 2] (occasional)_._
+If it is required to encode a light which is exhibited in fog or
+conditions of reduced visibility, it must be done using a light
+feature, with attributes stem:[bb "exhibition condition of light" =
+3] (fog light)and stem:[bb "status" = 2] (occasional)_._
 
-If it is required to encode a light having characteristics shown in fog that are different from those shown in conditions of normal visibility, it must be done by encoding two light features sharing the same point spatial instance:
+If it is required to encode a light having characteristics shown in
+fog that are different from those shown in conditions of normal
+visibility, it must be done by encoding two light features sharing
+the same point spatial instance:
 
-* one light feature with stem:[bb "exhibition condition of light" = 3] (fog light) and stem:[bb "status" = 2] (occasional)
-* one light feature with stem:[bb "exhibition condition of light" = 2] (daytime light) or _4_ (night light) and the complex attribute *information* (see <<sec_2.4.6>>), sub-attribute *text* = _Character of the light changes in fog_.
+* one light feature with stem:[bb "exhibition condition of light" =
+3] (fog light) and stem:[bb "status" = 2] (occasional)
+* one light feature with stem:[bb "exhibition condition of light" =
+2] (daytime light) or _4_ (night light) and the complex attribute
+*information* (see <<sec_2.4.6>>), sub-attribute *text* = _Character
+of the light changes in fog_.
 
-Note the distinction between fog lights and fog detector lights, which are lights used to automatically determine conditions of visibility which warrant the turning on or off of a sound signal. Fog detector lights must be encoded, where required, using the feature *Light Fog Detector* (see <<sec_19.4>>).
+Note the distinction between fog lights and fog detector lights,
+which are lights used to automatically determine conditions of
+visibility which warrant the turning on or off of a sound signal. Fog
+detector lights must be encoded, where required, using the feature
+*Light Fog Detector* (see <<sec_19.4>>).
 
 [[sec_19.1.4.6]]
 ===== Manually-activated lights (see S-4 -- B-473.5)
 
-If a light is radio activated, the attribute *signal generation* must be populated with value _5_ (radio activated). To encode the contact information for activation of the light, it must be done using the information type *Contact Details* (see <<sec_24.1>>). The *Contact Details* must be associated to the light feature using the association *Additional Information*.
+If a light is radio activated, the attribute *signal generation* must
+be populated with value _5_ (radio activated). To encode the contact
+information for activation of the light, it must be done using the
+information type *Contact Details* (see <<sec_24.1>>). The *Contact
+Details* must be associated to the light feature using the
+association *Additional Information*.
 
-If a light is activated by calling into a manned station, the attribute *signal generation* must be populated with value _6_ (call activated). To encode the contact information for the manned station, it must be done using the information type *Contact Details*. The *Contact Details* must be associated to the light feature using the association *Additional Information*.
+If a light is activated by calling into a manned station, the
+attribute *signal generation* must be populated with value _6_ (call
+activated). To encode the contact information for the manned station,
+it must be done using the information type *Contact Details*. The
+*Contact Details* must be associated to the light feature using the
+association *Additional Information*.
 
 [[sec_19.1.5]]
 ==== Leading lights (see S-4 -- B-475.6)
 
-If it is required to encode a leading light, it must be done using an appropriate light feature, with attribute:
+If it is required to encode a leading light, it must be done using an
+appropriate light feature, with attribute:
 
 stem:[bb "category of light" =]::
 _4,12_::: front leading light
@@ -124,17 +198,38 @@ _4,15_::: upper leading light
 
 [underline]#Remarks:#
 
-* Even if, on the source, the leading lights are merged into a single symbol, a light feature must be created for each light. These lights must be placed in their true position; that is, where the source shows a single light with a legend such as _2F.Bu_, further investigation must be done in order to determine the true position of each light, and its full attribution. Compilers should note that where this occurs on paper charts, the position of the light shown on the chart normally corresponds with the rear leading light.
-* The leading line must be encoded using the method described in <<sec_15.1>>.
+* Even if, on the source, the leading lights are merged into a single
+symbol, a light feature must be created for each light. These lights
+must be placed in their true position; that is, where the source
+shows a single light with a legend such as _2F.Bu_, further
+investigation must be done in order to determine the true position of
+each light, and its full attribution. Compilers should note that
+where this occurs on paper charts, the position of the light shown on
+the chart normally corresponds with the rear leading light.
+* The leading line must be encoded using the method described in
+<<sec_15.1>>.
 
 [[sec_19.1.6]]
 ==== Lighthouses (see S-4 -- B-457.3)
 
-If it is required to encode a lighthouse, it must be done using a *Landmark* feature (see <<sec_7.2>>), with attributes stem:[bb "category of landmark" = 17] (tower) and stem:[bb "function" = 33] (light support)for towers, or using a *Building* feature (see <<sec_6.2>>), with the attribute stem:[bb "function" = 33], for any other shapes.
+If it is required to encode a lighthouse, it must be done using a
+*Landmark* feature (see <<sec_7.2>>), with attributes stem:[bb
+"category of landmark" = 17] (tower) and stem:[bb "function" = 33]
+(light support)for towers, or using a *Building* feature (see
+<<sec_6.2>>), with the attribute stem:[bb "function" = 33], for any
+other shapes.
 
-If it is required to encode the attributes *elevation*, *height* and *vertical length* for a lighthouse, this must be done as described in <<sec_19.1.3>>.
+If it is required to encode the attributes *elevation*, *height* and
+*vertical length* for a lighthouse, this must be done as described in
+<<sec_19.1.3>>.
 
-If the lighthouse is permanently extinguished/unlit, this must be indicated by population of the attribute stem:[bb "status" = 4] (not in use) for the *Landmark*/*Building*, and the lightfeature must be removed. Where a lighthouse is illuminated by flood lights, the additional value of stem:[bb "status" = 12] (illuminated) must also be populated. For lights that are temporarily extinguished, see <<sec_31.2.2>> -- paragraph 10(i).
+If the lighthouse is permanently extinguished/unlit, this must be
+indicated by population of the attribute stem:[bb "status" = 4] (not
+in use) for the *Landmark*/*Building*, and the lightfeature must be
+removed. Where a lighthouse is illuminated by flood lights, the
+additional value of stem:[bb "status" = 12] (illuminated) must also
+be populated. For lights that are temporarily extinguished, see
+<<sec_31.2.2>> -- paragraph 10(i).
 
 [[sec_19.1.7]]
 ==== Various special types of lights
@@ -144,29 +239,12 @@ If the lighthouse is permanently extinguished/unlit, this must be indicated by p
 [cols="103,51,53,328"]
 |===
 h| Type h| S-4 h| category of light h| Remarks
+
 | Subsidiary light | B-471.8 | _10_ | Encoded as a separate light from the main light feature
-| Aero light
-| B-476.1
-| _5_
-|
-
-| Air obstruction light
-| B-476.2
-|
-
-| Encode using feature *Light Air Obstruction*
-
-| Fog detector light
-| B-477
-|
-
-| Encode using feature *Light Fog Detector*
-
-| Bearing light
-|
-
-| _18_
-|
+| Aero light | B-476.1 | _5_ |
+| Air obstruction light | B-476.2 | | Encode using feature *Light Air Obstruction*
+| Fog detector light | B-477 | | Encode using feature *Light Fog Detector*
+| Bearing light | | _18_ |
 
 | Flood light | B-478.2 | _8_ | Only to encode flood lights that are visible from seaward. The illuminated structure should be encoded using appropriate feature classes, with attribute stem:[bb "status" = 12] (illuminated) and, if the flood lit colour of the structure is considered important for navigation, complex attribute *information*, sub-attribute *text* indicating the colour; for example, _Purple when flood lit_.
 | Synchronized lights
@@ -175,14 +253,10 @@ h| Type h| S-4 h| category of light h| Remarks
 
 | *status* =_15._ A series of synchronized lights may be defined by associating the lights features with a *Range System* feature using the feature association *Range System Aggregation* (see <<sec_25.13>>)
 
-| Strip light
-| B-478.5
-| _9_
-|
+| Strip light | B-478.5 | _9_ |
 
 | Spot light
 |
-
 | _11_
 | Only to encode spot lights that are visible from seaward. The illuminated feature should be encoded using appropriate feature classes, with attribute stem:[bb "status" = 12] (illuminated)
 
@@ -204,22 +278,45 @@ h| Type h| S-4 h| category of light h| Remarks
 [[sec_19.1.8]]
 ==== Light structures
 
-Light features located in the water must have a structure feature, generally a beacon (for example *Lateral Beacon*, *Special Purpose/General Beacon*) or other fixed structure (for example *Offshore Platform*), or a buoy structure (for example *Lateral Buoy*, *Special Purpose/General Buoy*) for floating aids to navigation. When a light is located in the water with no indication on the source of the structure feature, regardless of the height of the light, a *Pile* feature of type surface or a *Special Purpose/General Beacon* feature should be encoded as the structure feature. This will ensure that a symbol will be shown on ECDIS systems when the light features are not displayed during daytime navigation.
+Light features located in the water must have a structure feature,
+generally a beacon (for example *Lateral Beacon*, *Special
+Purpose/General Beacon*) or other fixed structure (for example
+*Offshore Platform*), or a buoy structure (for example *Lateral
+Buoy*, *Special Purpose/General Buoy*) for floating aids to
+navigation. When a light is located in the water with no indication
+on the source of the structure feature, regardless of the height of
+the light, a *Pile* feature of type surface or a *Special
+Purpose/General Beacon* feature should be encoded as the structure
+feature. This will ensure that a symbol will be shown on ECDIS
+systems when the light features are not displayed during daytime
+navigation.
 
-The light portrayal rules for ECDIS result in the display of *Light All Around* features with Boolean attribute *major light* = _True_ using a stem:[360 "unitsml(deg)"] light sector. On land, if no aid to navigation structure object has been encoded at the position of these lights, the Mariner does not have a displayed centre point to take bearings to:
+The light portrayal rules for ECDIS result in the display of *Light
+All Around* features with Boolean attribute *major light* = _True_
+using a stem:[360 "unitsml(deg)"] light sector. On land, if no aid to
+navigation structure object has been encoded at the position of these
+lights, the Mariner does not have a displayed centre point to take
+bearings to:
 
 [[fig_19-1]]
 .Omnidirectional light display in ECDIS
 image::figure-19-1.jpeg["",602,315]
 
-Encoders are advised, therefore, that an aid to navigation structure object (for example *Special Purpose/General Beacon*, *Pile*) should be encoded as a light structure object for all *Light All Around* features on land encoded as major lights, where the nature of the structure object is unknown.
+Encoders are advised, therefore, that an aid to navigation structure
+object (for example *Special Purpose/General Beacon*, *Pile*) should
+be encoded as a light structure object for all *Light All Around*
+features on land encoded as major lights, where the nature of the
+structure object is unknown.
 
 [[sec_19.2]]
 === Light all around
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *ALL AROUND LIGHT*. An all around light is a light that is visible over the whole horizon of interest to marine navigation and having no change in the characteristics of the light.
+10+| [underline]#IHO Definition:# *ALL AROUND LIGHT*. An all around
+light is a light that is visible over the whole horizon of interest
+to marine navigation and having no change in the characteristics of
+the light.
 10+| *[underline]#S-101 Geo Feature:#* *Light All Around (LIGHTS)*
 10+| *[underline]#Primitives:#* *Point*
 
@@ -414,13 +511,19 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[nineteen_two]]
 [NOTE]
 --
-For non-fixed lights (that is, sub-attribute stem:[bb "light characteristic" != 1] (fixed)), the sub-attributes *signal group* and *signal period* are mandatory.
+For non-fixed lights (that is, sub-attribute stem:[bb "light
+characteristic" != 1] (fixed)), the sub-attributes *signal group* and
+*signal period* are mandatory.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# P 1-65
@@ -428,34 +531,88 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_19.2.1]]
 ==== All around lights (see S-4 -- B-470)
 
-If it is required to encode an all around light (excluding fog detector and air obstruction lights), it must be done using the feature *Light All Around*. This feature must be an equipment feature of a structure feature (see <<sec_18.2>>), which may be another light feature at the same position (if it exists and there is no structure feature available), using a *Structure/Equipment* feature association.
+If it is required to encode an all around light (excluding fog
+detector and air obstruction lights), it must be done using the
+feature *Light All Around*. This feature must be an equipment feature
+of a structure feature (see <<sec_18.2>>), which may be another light
+feature at the same position (if it exists and there is no structure
+feature available), using a *Structure/Equipment* feature association.
 
-The IALA Maritime Buoyage Systemrules do not apply for most landfall lights and will apply to minor lights, but not to leading lights, some sector lights or major floating lights. In general, sector lights follow IALA convention when used for marking a channel.
+The IALA Maritime Buoyage Systemrules do not apply for most landfall
+lights and will apply to minor lights, but not to leading lights,
+some sector lights or major floating lights. In general, sector
+lights follow IALA convention when used for marking a channel.
 
-Further guidance for encoding various types and characteristics of lights can be found in <<sec_19.1.1;to!sec_19.1.7>>.
+Further guidance for encoding various types and characteristics of
+lights can be found in <<sec_19.1.1;to!sec_19.1.7>>.
 
 [underline]#Remarks:#
 
-* All sector lights, whether single sectored, multi-sectored or having sectors that are deliberately obscured or completely or partially obscured by obstructions, must be encoded, where required, using the feature *Light Sectored* (see <<sec_19.3>>); for encoding a directional sector or bearing, see <<sec_19.3.1.2>>.
-* Fog detector and air obstruction lights must be encoded, where required, using the features *Light Fog Detector* and *Light Air Obstruction* (see <<sec_19.4;and!sec_19.5>>).
-* If it is required to encode details of the lighting technology (for example neon), it must be done using the complex attribute *information* (see <<sec_2.4.6>>).
+* All sector lights, whether single sectored, multi-sectored or
+having sectors that are deliberately obscured or completely or
+partially obscured by obstructions, must be encoded, where required,
+using the feature *Light Sectored* (see <<sec_19.3>>); for encoding a
+directional sector or bearing, see <<sec_19.3.1.2>>.
+* Fog detector and air obstruction lights must be encoded, where
+required, using the features *Light Fog Detector* and *Light Air
+Obstruction* (see <<sec_19.4;and!sec_19.5>>).
+* If it is required to encode details of the lighting technology (for
+example neon), it must be done using the complex attribute
+*information* (see <<sec_2.4.6>>).
 
-* If it is required to encode the purpose of a marine spotlight, it must be done using the complex attribute *information*.
-* Lights on land encoded as major lights (Boolean attribute *major light* = _True_) must have a structure feature encoded (see <<sec_19.1.8>>) in order for the position of the light to be clearly indicated in the ECDIS.
-* The attribute *vertical datum* applies only to *height*; this value must only be encoded if it is different from the value of *vertical datum* encoded on the underlying Meta feature *Vertical Datum of Data* (see <<sec_3.10>>).
-* Value _13_ (low water) for attribute *vertical datum* is only applicable to enclosed (inland) waterways; and must not be used to indicate the reference datum for the height of the light in tidal waters.
-* The attribute *vertical length* only applies to lights attached to floating structures (see <<sec_2.5.7>>).
-* The indication that a light is a "major" light through the population of the Boolean attribute *major light* with a _True_ value determines the way the light is displayed in ECDIS, and is not based on any legal or formal classification of the importance of lights. Generally, a major light may be considered to be a light intended for use at sea, usually with a range of 15 miles or more, and in outer approaches to harbours. However the determination of what is a major light may be based on a number of additional factors, including the number and characteristics of navigational (and non-navigational) lights in the geographical area, and specific navigational requirements for the area. Indication in a dataset that a light is a major light should be based only on the requirements for ECDIS display, at the discretion of the Producing Authority.
-* Names of major lightsare very important. If a light has a name which is unrelated to any other encoded feature, the name must be populated using the complex attribute *feature name* (see <<sec_2.5.8>>) on at least the largest optimum display scale ENC data. If the name of a light is obviously that of the named feature on which the light stands, for example Saint Catherine's Point, the name of the light need not be repeated for the light.
+* If it is required to encode the purpose of a marine spotlight, it
+must be done using the complex attribute *information*.
+* Lights on land encoded as major lights (Boolean attribute *major
+light* = _True_) must have a structure feature encoded (see
+<<sec_19.1.8>>) in order for the position of the light to be clearly
+indicated in the ECDIS.
+* The attribute *vertical datum* applies only to *height*; this value
+must only be encoded if it is different from the value of *vertical
+datum* encoded on the underlying Meta feature *Vertical Datum of
+Data* (see <<sec_3.10>>).
+* Value _13_ (low water) for attribute *vertical datum* is only
+applicable to enclosed (inland) waterways; and must not be used to
+indicate the reference datum for the height of the light in tidal
+waters.
+* The attribute *vertical length* only applies to lights attached to
+floating structures (see <<sec_2.5.7>>).
+* The indication that a light is a "major" light through the
+population of the Boolean attribute *major light* with a _True_ value
+determines the way the light is displayed in ECDIS, and is not based
+on any legal or formal classification of the importance of lights.
+Generally, a major light may be considered to be a light intended for
+use at sea, usually with a range of 15 miles or more, and in outer
+approaches to harbours. However the determination of what is a major
+light may be based on a number of additional factors, including the
+number and characteristics of navigational (and non-navigational)
+lights in the geographical area, and specific navigational
+requirements for the area. Indication in a dataset that a light is a
+major light should be based only on the requirements for ECDIS
+display, at the discretion of the Producing Authority.
+* Names of major lightsare very important. If a light has a name
+which is unrelated to any other encoded feature, the name must be
+populated using the complex attribute *feature name* (see
+<<sec_2.5.8>>) on at least the largest optimum display scale ENC
+data. If the name of a light is obviously that of the named feature
+on which the light stands, for example Saint Catherine's Point, the
+name of the light need not be repeated for the light.
 
-[underline]#Distinction:# Cardinal Beacon; Cardinal Buoy; Emergency Wreck Marking Buoy; Installation Buoy; Isolated Danger Beacon; Isolated Danger Buoy; Lateral Beacon; Lateral Buoy; Light Air Obstruction; Light Float; Light Fog Detector; Light Sectored; Light Vessel; Safe Water Beacon; Safe Water Buoy; Special Purpose/General Beacon; Special Purpose/General Buoy.
+[underline]#Distinction:# Cardinal Beacon; Cardinal Buoy; Emergency
+Wreck Marking Buoy; Installation Buoy; Isolated Danger Beacon;
+Isolated Danger Buoy; Lateral Beacon; Lateral Buoy; Light Air
+Obstruction; Light Float; Light Fog Detector; Light Sectored; Light
+Vessel; Safe Water Beacon; Safe Water Buoy; Special Purpose/General
+Beacon; Special Purpose/General Buoy.
 
 [[sec_19.3]]
 === Light sectored
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *SECTOR LIGHT*. A light presenting different appearances (in particular, different colours) over various parts of the horizon of interest to maritime navigation. (IHO Dictionary -- S-32).
+10+| [underline]#IHO Definition:# *SECTOR LIGHT*. A light presenting
+different appearances (in particular, different colours) over various
+parts of the horizon of interest to maritime navigation.
+(IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Light Sectored (LIGHTS)*
 10+| *[underline]#Primitives:#* *Point*
 
@@ -678,17 +835,26 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[nineteen_three]]
 [NOTE]
 --
-For non-fixed lights (that is, sub-attribute stem:[bb "light characteristic" != 1] (fixed)), the sub-attributes *signal group* and *signal period* are mandatory.
+For non-fixed lights (that is, sub-attribute stem:[bb "light
+characteristic" != 1] (fixed)), the sub-attributes *signal group* and
+*signal period* are mandatory.
 
-For a light sector that is a directional sector, the sub-complex attribute *directional character* is mandatory.
+For a light sector that is a directional sector, the sub-complex
+attribute *directional character* is mandatory.
 
-For a light sector that is not a directional sector (that is, sub-complex attribute *directional character* is not populated), the sub-complex attribute *sector limit* is mandatory.
+For a light sector that is not a directional sector (that is,
+sub-complex attribute *directional character* is not populated), the
+sub-complex attribute *sector limit* is mandatory.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# P 1-65
@@ -696,26 +862,93 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_19.3.1]]
 ==== Sectored lights (see S-4 -- B-475)
 
-If it is required to encode a light that consists of one or more sectors, it must be done using the feature *Light Sectored*. This feature must be an equipment feature of a structure feature (see <<sec_18.1>>), which may be another light feature at the same position (if it exists and there is no structure feature available), using a *Structure/equipment* feature association.
+If it is required to encode a light that consists of one or more
+sectors, it must be done using the feature *Light Sectored*. This
+feature must be an equipment feature of a structure feature (see
+<<sec_18.1>>), which may be another light feature at the same
+position (if it exists and there is no structure feature available),
+using a *Structure/equipment* feature association.
 
-The IALA Maritime Buoyage Systemrules do not apply for most landfall lights and will apply to minor lights, but not to leading lights, some sector lights or major floating lights. In general, sector lights follow IALA convention when used for marking a channel.
+The IALA Maritime Buoyage Systemrules do not apply for most landfall
+lights and will apply to minor lights, but not to leading lights,
+some sector lights or major floating lights. In general, sector
+lights follow IALA convention when used for marking a channel.
 
-Further guidance for encoding various types and characteristics of lights can be found in <<sec_9.1.1>>.
+Further guidance for encoding various types and characteristics of
+lights can be found in <<sec_9.1.1>>.
 
 [underline]#Remarks:#
 
-* The complex attribute *sector characteristics*, sub-complex attribute *light sector* is used to populate each sector for the light, except for sectors in which there is no light exhibited. Where there is a different rhythm of light between sectors (for example, for complex lights), separate instances of *sector characteristics* must be populated.
-* Population of the sub-complex attribute *sector limit* having sub-attributes stem:[bb "sector limit one" = 0] and stem:[bb "sector limit two" = 360] (that is, encoding an all around light as a sectored light) is prohibited.
-* If a sector of a sectored light is intended to have a directional function, this must be encoded using the *light sector* complex sub-attribute *directional character*. If the light is intensified in this sector, *light sector* sub-attribute stem:[bb "light visibility" = 4] (intensified) must be populated. The sub-complex attribute *sector limit* is optional for directional light sectors.
-* The sub-attribute *sector line length* (see <<sec_27.158>>) may be used for critical light sectors to extend the sector line when the ECDIS display settings are set to display default sector lines. The intended usage of the ENC dataset must be considered when determining the usage of *sector line length* so as to avoid excessive screen clutter when default sector display is enabled; and consistent display of light sectors across the entire ENC portfolio should also be a consideration when determining the population of this attribute. Where populated, the value of *sector line length* must not exceed the value populated for the sub-attribute *value of nominal range* for the light sector.
-* In some cases the area defined by the intersecting sectors of two discrete sector lights are used to indicate the existence of isolated and sometimes substantial dangers to navigation, the precise position of which may not be known. When default sectors are displayed in ECDIS, the extent and intent of these sectors may not be clearly defined to the Mariner. In order to more clearly indicate these areas, compilers should consider appropriate use of *sector line length* for the relevant sectors in the impacted area. Where it is considered important that the area of possible danger is defined, this should be done by encoding a *Caution Area* feature (see <<sec_16.10>>) covering the intersection area. Information relating to the definition of the area by sector lights and a précis of the danger should be encoded using the complex attribute *information* (see <<sec_2.4.6>>) for the *Caution Area*.
-* The fairway defined by the succession of navigable areas in the white sectors of a series of *Light Sectored* features may be encoded using the feature *Fairway* (see <<sec_15.7>>).
-* If there is additional information required to be encoded that is relevant to all sectors of the light, this must be done using the *information* (see <<sec_2.4.6>>). If the additional information is relevant to individual sectors of the light only (for example, for complex (oscillating) light sectors (see <<sec_19.3.1.3>> below)), this must be encoded using the complex sub-attribute *sector information* for the sub-complex attribute *light sector*.
-* If it is required to encode details of the lighting technology (for example neon), it must be done using the complex attribute *information*.
+* The complex attribute *sector characteristics*, sub-complex
+attribute *light sector* is used to populate each sector for the
+light, except for sectors in which there is no light exhibited. Where
+there is a different rhythm of light between sectors (for example,
+for complex lights), separate instances of *sector characteristics*
+must be populated.
+* Population of the sub-complex attribute *sector limit* having
+sub-attributes stem:[bb "sector limit one" = 0] and stem:[bb "sector
+limit two" = 360] (that is, encoding an all around light as a
+sectored light) is prohibited.
+* If a sector of a sectored light is intended to have a directional
+function, this must be encoded using the *light sector* complex
+sub-attribute *directional character*. If the light is intensified in
+this sector, *light sector* sub-attribute stem:[bb "light visibility"
+= 4] (intensified) must be populated. The sub-complex attribute
+*sector limit* is optional for directional light sectors.
+* The sub-attribute *sector line length* (see <<sec_27.158>>) may be
+used for critical light sectors to extend the sector line when the
+ECDIS display settings are set to display default sector lines. The
+intended usage of the ENC dataset must be considered when determining
+the usage of *sector line length* so as to avoid excessive screen
+clutter when default sector display is enabled; and consistent
+display of light sectors across the entire ENC portfolio should also
+be a consideration when determining the population of this attribute.
+Where populated, the value of *sector line length* must not exceed
+the value populated for the sub-attribute *value of nominal range*
+for the light sector.
+* In some cases the area defined by the intersecting sectors of two
+discrete sector lights are used to indicate the existence of isolated
+and sometimes substantial dangers to navigation, the precise position
+of which may not be known. When default sectors are displayed in
+ECDIS, the extent and intent of these sectors may not be clearly
+defined to the Mariner. In order to more clearly indicate these
+areas, compilers should consider appropriate use of *sector line
+length* for the relevant sectors in the impacted area. Where it is
+considered important that the area of possible danger is defined,
+this should be done by encoding a *Caution Area* feature (see
+<<sec_16.10>>) covering the intersection area. Information relating
+to the definition of the area by sector lights and a précis of the
+danger should be encoded using the complex attribute *information*
+(see <<sec_2.4.6>>) for the *Caution Area*.
+* The fairway defined by the succession of navigable areas in the
+white sectors of a series of *Light Sectored* features may be encoded
+using the feature *Fairway* (see <<sec_15.7>>).
+* If there is additional information required to be encoded that is
+relevant to all sectors of the light, this must be done using the
+*information* (see <<sec_2.4.6>>). If the additional information is
+relevant to individual sectors of the light only (for example, for
+complex (oscillating) light sectors (see <<sec_19.3.1.3>> below)),
+this must be encoded using the complex sub-attribute *sector
+information* for the sub-complex attribute *light sector*.
+* If it is required to encode details of the lighting technology (for
+example neon), it must be done using the complex attribute
+*information*.
 
-* The attribute *vertical datum* applies only to *height*; this value must only be encoded if it is different from the value of *vertical datum* encoded on the underlying Meta feature *Vertical Datum of Data* (see <<sec_3.10>>).
-* Value _13_ (low water) for attribute *vertical datum* is only applicable to enclosed (inland) waterways; and must not be used to indicate the reference datum for the height of the light in tidal waters.
-* Names of major lightsare very important. If a light has a name which is unrelated to any other encoded feature, the name must be populated using the complex attribute *feature name* (see <<sec_2.5.8>>) on at least the largest scale optimum display scale ENC data. If the name of a light is obviously that of the named feature on which the light stands, for example Saint Catherine's Point, the name of the light need not be repeated for the light.
+* The attribute *vertical datum* applies only to *height*; this value
+must only be encoded if it is different from the value of *vertical
+datum* encoded on the underlying Meta feature *Vertical Datum of
+Data* (see <<sec_3.10>>).
+* Value _13_ (low water) for attribute *vertical datum* is only
+applicable to enclosed (inland) waterways; and must not be used to
+indicate the reference datum for the height of the light in tidal
+waters.
+* Names of major lightsare very important. If a light has a name
+which is unrelated to any other encoded feature, the name must be
+populated using the complex attribute *feature name* (see
+<<sec_2.5.8>>) on at least the largest scale optimum display scale
+ENC data. If the name of a light is obviously that of the named
+feature on which the light stands, for example Saint Catherine's
+Point, the name of the light need not be repeated for the light.
 
 [[sec_19.3.1.1]]
 ===== Lights obscured by obstructions (see S-4 -- B-475.3)
@@ -724,71 +957,181 @@ Further guidance for encoding various types and characteristics of lights can be
 .Obscured light sectors
 image::figure-19-2.png[498,198]
 
-If an encoded light is obscured in a part of the navigable area of a sector (see <<fig_19-2>> (A) above) beyond an offshore obstruction, it must be encoded using *Light Sectored*, with each of the sectors (a) -- (c) encoded using the complex attribute *light sector*. The partially obscured sector of (b) must have *light sector* with sub-attributes stem:[bb "light visibility" = 8] (partially obscured) and sub-attribute *value of nominal range* set to the distance from the light to the obstruction. The sectors in which the light is visible from seaward ((a) and (c)) must be encoded as separate iterations of *light sector*.
+If an encoded light is obscured in a part of the navigable area of a
+sector (see <<fig_19-2>> (A) above) beyond an offshore obstruction,
+it must be encoded using *Light Sectored*, with each of the sectors
+(a) -- (c) encoded using the complex attribute *light sector*. The
+partially obscured sector of (b) must have *light sector* with
+sub-attributes stem:[bb "light visibility" = 8] (partially obscured)
+and sub-attribute *value of nominal range* set to the distance from
+the light to the obstruction. The sectors in which the light is
+visible from seaward ((a) and (c)) must be encoded as separate
+iterations of *light sector*.
 
-If there is no navigable water between the light and the obstacle (see (e) in <<fig_19-2>> (B) above), the masked sector must not have an iteration of *light sector* encoded, unless a faint light is visible in the navigable part of the sector, which should be encoded using *light sector*, with sub-attribute stem:[bb "light visibility" = 3] (faint). The sectors in which the light is visible from seaward ((d) and (f)) must be encoded as separate iterations of *sector characteristics*.
+If there is no navigable water between the light and the obstacle
+(see (e) in <<fig_19-2>> (B) above), the masked sector must not have
+an iteration of *light sector* encoded, unless a faint light is
+visible in the navigable part of the sector, which should be encoded
+using *light sector*, with sub-attribute stem:[bb "light visibility"
+= 3] (faint). The sectors in which the light is visible from seaward
+((d) and (f)) must be encoded as separate iterations of *sector
+characteristics*.
 
 [[sec_19.3.1.2]]
 ===== Directional lights (see S-4 -- B-475.7-8)
 
-Directional (or direction) lightsof several types are in use but all have in common a very narrow sector intended to mark a direction to be followed. The narrow sector may be flanked by:
+Directional (or direction) lightsof several types are in use but all
+have in common a very narrow sector intended to mark a direction to
+be followed. The narrow sector may be flanked by:
 
 * Unlit sectors or unintensified light.
 * Sectors of different colour or character.
 
-Some direction lights are so precise that a complete colour change at a sector boundary occurs over an angle of less than 1 minute (0∙02°). This corresponds to a lateral distance of just 1 metre at a viewing distance of 3.5 km. In addition the intensity may be maintained right to the edge of the beam, and does not reduce the further the observer is away from the axis.
-A moiré effect mark (or variable arrow mark)is a short-range (normally up to 2 km) type of directional "light". Sodium lighting gives a yellow background to a screen (up to 3 m square) on which a vertical black line will be seen by an observer on the centreline, or variable arrow marks when course alteration is needed. The system can be used by day and night. It can also be used as a stop line (seen abeam) for vessels berthing along quays.
+Some direction lights are so precise that a complete colour change at
+a sector boundary occurs over an angle of less than 1 minute (0∙02°).
+This corresponds to a lateral distance of just 1 metre at a viewing
+distance of 3.5 km. In addition the intensity may be maintained right
+to the edge of the beam, and does not reduce the further the observer
+is away from the axis.
+A moiré effect mark (or variable arrow mark)is a short-range
+(normally up to 2 km) type of directional "light". Sodium lighting
+gives a yellow background to a screen (up to 3 m square) on which a
+vertical black line will be seen by an observer on the centreline, or
+variable arrow marks when course alteration is needed. The system can
+be used by day and night. It can also be used as a stop line (seen
+abeam) for vessels berthing along quays.
 
-If it is required to encode a light sector having a directional function, it must be done using the feature *Light Sectored*.
+If it is required to encode a light sector having a directional
+function, it must be done using the feature *Light Sectored*.
 
 [underline]#Remarks:#
 
-* The indication that a particular light sector has a directional function is encoded by populating the complex attribute *sector characteristics*, sub-complex attribute *directional character*.
-* The mandatory complex sub-attribute *orientation* must only be encoded to indicate the orientation, measured from seaward, of the leading line of the directional light sector when there is no *Recommended Track* or *Navigation Line* feature associated with the directional light. Where the directional sector has an associated *Recommended Track* and/or *Navigation Line*, *orientation* (*orientation value*) for the light sector must be populated with an empty (null) value.
-* For a sector indicated as directional, the *light sector* complex sub-complex attribute *sector limit* is optional.
-* For moiré effect lights, the Boolean sub-attribute *moiré effect* must be set to _True_.
+* The indication that a particular light sector has a directional
+function is encoded by populating the complex attribute *sector
+characteristics*, sub-complex attribute *directional character*.
+* The mandatory complex sub-attribute *orientation* must only be
+encoded to indicate the orientation, measured from seaward, of the
+leading line of the directional light sector when there is no
+*Recommended Track* or *Navigation Line* feature associated with the
+directional light. Where the directional sector has an associated
+*Recommended Track* and/or *Navigation Line*, *orientation*
+(*orientation value*) for the light sector must be populated with an
+empty (null) value.
+* For a sector indicated as directional, the *light sector* complex
+sub-complex attribute *sector limit* is optional.
+* For moiré effect lights, the Boolean sub-attribute *moiré effect*
+must be set to _True_.
 
-* If it is required to encode the recommended track and/or navigation line associated with a directional light, it must be done using the methods described in <<sec_15.1>>.
+* If it is required to encode the recommended track and/or navigation
+line associated with a directional light, it must be done using the
+methods described in <<sec_15.1>>.
 
 [[sec_19.3.1.3]]
 ===== Oscillating light sectors
 
-Evolving technology in the development of navigational lights has resulted in the installation of complex directional navigation lights with multiple sectors, colours and characteristics, some with oscillating sectors, in many areas where navigation is restricted. These lights may have up to 7 sectors, with the central sector being a very narrow, sometimes intensified, fixed white sector performing the directional function of the light. In the IALA A System, the sectors flanking this directional light may be alternating and oscillate increasingly from white to green (to starboard) and red (to port) with increasing deviation from the track defined by the directional light. These lights will normally be flanked by narrow sectors of fixed green (to starboard) and red (to port). Additionally, there may be outer sectors that are occulting green (to starboard) and red (to port) which oscillate with increasing period of eclipse to isophased or flashing with increasing deviation from the track defined by the directional light. For the IALA B System the colours are reversed. In some cases these complex lights may not conform to IALA. Each of the outer sectors may be very narrow.
+Evolving technology in the development of navigational lights has
+resulted in the installation of complex directional navigation lights
+with multiple sectors, colours and characteristics, some with
+oscillating sectors, in many areas where navigation is restricted.
+These lights may have up to 7 sectors, with the central sector being
+a very narrow, sometimes intensified, fixed white sector performing
+the directional function of the light. In the IALA A System, the
+sectors flanking this directional light may be alternating and
+oscillate increasingly from white to green (to starboard) and red (to
+port) with increasing deviation from the track defined by the
+directional light. These lights will normally be flanked by narrow
+sectors of fixed green (to starboard) and red (to port).
+Additionally, there may be outer sectors that are occulting green (to
+starboard) and red (to port) which oscillate with increasing period
+of eclipse to isophased or flashing with increasing deviation from
+the track defined by the directional light. For the IALA B System the
+colours are reversed. In some cases these complex lights may not
+conform to IALA. Each of the outer sectors may be very narrow.
 
-If is required to encode an oscillating light sector, it should be done using a *Light Sectored* feature, with iterations of the complex attribute *sector characteristics* as follows: For light sectors in the IALA A system that are alternating and oscillate increasingly from white to green (to starboard) and red (to port) with increasing deviation from the track defined by the directional light:
+If is required to encode an oscillating light sector, it should be
+done using a *Light Sectored* feature, with iterations of the complex
+attribute *sector characteristics* as follows: For light sectors in
+the IALA A system that are alternating and oscillate increasingly
+from white to green (to starboard) and red (to port) with increasing
+deviation from the track defined by the directional light:
 
-*sector characteristics*: stem:[bb "light characteristic" = 28] (Alternating); stem:[bb "colour" = 1,3] (White, Red); *sector limit*; *sector information* (*text*) = _White phase decreases as bearing to light increases_
+*sector characteristics*: stem:[bb "light characteristic" = 28]
+(Alternating); stem:[bb "colour" = 1,3] (White, Red); *sector limit*;
+*sector information* (*text*) = _White phase decreases as bearing to
+light increases_
 
-*sector characteristics*: stem:[bb "light characteristic" = 28] (Alternating); stem:[bb "colour" = 1,4] (White, Green); *sector limit*; *sector information* (*text*) = _White phase increases as bearing to light increases_
+*sector characteristics*: stem:[bb "light characteristic" = 28]
+(Alternating); stem:[bb "colour" = 1,4] (White, Green); *sector
+limit*; *sector information* (*text*) = _White phase increases as
+bearing to light increases_
 
-For lights in the IALA B system that are alternating and oscillate increasingly from white to red (to starboard) and green (to port) with increasing deviation from the track defined by the directional light; transpose the colours red and green in the above encoding.
+For lights in the IALA B system that are alternating and oscillate
+increasingly from white to red (to starboard) and green (to port)
+with increasing deviation from the track defined by the directional
+light; transpose the colours red and green in the above encoding.
 
-For lights in the IALA A system that are occulting green (to starboard) and red (to port) which oscillate with increasing period of eclipse to isophased or flashing with increasing deviation from the track defined by the directional light:
+For lights in the IALA A system that are occulting green (to
+starboard) and red (to port) which oscillate with increasing period
+of eclipse to isophased or flashing with increasing deviation from
+the track defined by the directional light:
 
-*sector characteristics*: stem:[bb "light characteristic" = 8] (Occulting); stem:[bb "colour" = 3] (Red); *sector limit*; *sector information* (*text*) = _Light phase decreases as bearing to light increases_
+*sector characteristics*: stem:[bb "light characteristic" = 8]
+(Occulting); stem:[bb "colour" = 3] (Red); *sector limit*; *sector
+information* (*text*) = _Light phase decreases as bearing to light
+increases_
 
-**sector characteristics*: stem:[bb "light characteristic" = 8] (Occulting); stem:[bb "colour" = 4] (Green); *sector limit*; *sector information* (*text*) = _Light phase increases as bearing to light increases_
+**sector characteristics*: stem:[bb "light characteristic" = 8]
+(Occulting); stem:[bb "colour" = 4] (Green); *sector limit*; *sector
+information* (*text*) = _Light phase increases as bearing to light
+increases_
 
-For lights in the IALA B system that are occulting red (to starboard) and green (to port) which oscillate with increasing period of eclipse to isophased or flashing with increasing deviation from the track defined by the directional light; transpose the colours red and green in the above encoding.
+For lights in the IALA B system that are occulting red (to starboard)
+and green (to port) which oscillate with increasing period of eclipse
+to isophased or flashing with increasing deviation from the track
+defined by the directional light; transpose the colours red and green
+in the above encoding.
 
-Oscillating lights which are not IALA should be encoded similar to the above. For instance, where a light contains white sectors that are occulting and oscillate with increasing period of eclipse to isophased or flashing with increasing deviation from the track defined by the directional light:For the sector to port of the track defined by the directional light:
+Oscillating lights which are not IALA should be encoded similar to
+the above. For instance, where a light contains white sectors that
+are occulting and oscillate with increasing period of eclipse to
+isophased or flashing with increasing deviation from the track
+defined by the directional light:For the sector to port of the track
+defined by the directional light:
 
-*sector characteristics*: stem:[bb "light characteristic" = 8] (Occulting); stem:[bb "colour" = 1] (White); *sector limit*; *sector information* (*text*) = _Light phase decreases as bearing to light increases_
+*sector characteristics*: stem:[bb "light characteristic" = 8]
+(Occulting); stem:[bb "colour" = 1] (White); *sector limit*; *sector
+information* (*text*) = _Light phase decreases as bearing to light
+increases_
 
-For the sector to starboard of the track defined by the directional light:
+For the sector to starboard of the track defined by the directional
+light:
 
-*sector characteristics*: stem:[bb "light characteristic" = 8] (Occulting); stem:[bb "colour" = 1] (White); *sector limit*; *sector information* (*text*) = _Light phase increases as bearing to light increases_
+*sector characteristics*: stem:[bb "light characteristic" = 8]
+(Occulting); stem:[bb "colour" = 1] (White); *sector limit*; *sector
+information* (*text*) = _Light phase increases as bearing to light
+increases_
 
-All other light sectors must be encoded using additional iterations of *sector characteristics*, with sub-attributes (including *light sector* or *directional character*) populated in accordance with the characteristics of the sector.
+All other light sectors must be encoded using additional iterations
+of *sector characteristics*, with sub-attributes (including *light
+sector* or *directional character*) populated in accordance with the
+characteristics of the sector.
 
-[underline]#Distinction:# Cardinal Beacon; Cardinal Buoy; Emergency Wreck Marking Buoy; Installation Buoy; Isolated Danger Beacon; Isolated Danger Buoy; Lateral Beacon; Lateral Buoy; Light Air Obstruction; Light All Around; Light Float; Light Fog Detector; Light Vessel; Safe Water Beacon; Safe Water Buoy; Special Purpose/General Beacon; Special Purpose/General Buoy.
+[underline]#Distinction:# Cardinal Beacon; Cardinal Buoy; Emergency
+Wreck Marking Buoy; Installation Buoy; Isolated Danger Beacon;
+Isolated Danger Buoy; Lateral Beacon; Lateral Buoy; Light Air
+Obstruction; Light All Around; Light Float; Light Fog Detector; Light
+Vessel; Safe Water Beacon; Safe Water Buoy; Special Purpose/General
+Beacon; Special Purpose/General Buoy.
 
 [[sec_19.4]]
 === Light fog detector
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *FOG DETECTOR LIGHT*. A fog detector light is a light used to automatically determine conditions of visibility which warrant the turning on or off of a sound signal. (IHO Dictionary -- S-32).
+10+| [underline]#IHO Definition:# *FOG DETECTOR LIGHT*. A fog detector
+light is a light used to automatically determine conditions of visibility
+which warrant the turning on or off of a sound signal.
+(IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Light Fog Detector (LIGHTS)*
 10+| *[underline]#Primitives:#* *Point*
 
@@ -936,13 +1279,19 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[nineteen_four]]
 [NOTE]
 --
-For non-fixed lights (that is, sub-attribute stem:[bb "light characteristic" != 1] (fixed)), the sub-attributes *signal group* and *signal period* are mandatory.
+For non-fixed lights (that is, sub-attribute stem:[bb "light
+characteristic" != 1] (fixed)), the sub-attributes *signal group* and
+*signal period* are mandatory.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# P 62
@@ -950,19 +1299,39 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_19.4.1]]
 ==== Fog detector lights (see S-4 -- B-477)
 
-If it is required to encode a light used to automatically determine conditions of visibility which warrant the turning on or off of a sound signal, it must be done using the feature *Light Fog Detector*. This feature must be an equipment feature of a structure feature (see <<sec_18.1>>), if it exists, using a *Structure/Equipment* feature association.
+If it is required to encode a light used to automatically determine
+conditions of visibility which warrant the turning on or off of a
+sound signal, it must be done using the feature *Light Fog Detector*.
+This feature must be an equipment feature of a structure feature (see
+<<sec_18.1>>), if it exists, using a *Structure/Equipment* feature
+association.
 
-Further guidance for encoding various types and characteristics of lights can be found in <<sec_19.1.1;to!sec_19.1.7>>.
+Further guidance for encoding various types and characteristics of
+lights can be found in <<sec_19.1.1;to!sec_19.1.7>>.
 
 [underline]#Remarks:#
 
-* If it is required to encode details of the lighting technology (for instance neon), it must be done using the complex attribute *information* (see <<sec_2.4.6>>).
+* If it is required to encode details of the lighting technology (for
+instance neon), it must be done using the complex attribute
+*information* (see <<sec_2.4.6>>).
 
-* The attribute *vertical datum* applies only to *height*; this value must only be encoded if it is different from the value of *vertical datum* encoded on the underlying Meta feature *Vertical Datum of Data* (see <<sec_3.10>>).
-* Value _13_ (low water) for attribute *vertical datum* is only applicable to enclosed (inland) waterways; and must not be used to indicate the reference datum for the height of the light in tidal waters.
-* The attribute *vertical length* only applies to lights attached to floating structures (see <<sec_2.5.7>>).
+* The attribute *vertical datum* applies only to *height*; this value
+must only be encoded if it is different from the value of *vertical
+datum* encoded on the underlying Meta feature *Vertical Datum of
+Data* (see <<sec_3.10>>).
+* Value _13_ (low water) for attribute *vertical datum* is only
+applicable to enclosed (inland) waterways; and must not be used to
+indicate the reference datum for the height of the light in tidal
+waters.
+* The attribute *vertical length* only applies to lights attached to
+floating structures (see <<sec_2.5.7>>).
 
-[underline]#Distinction:# Cardinal Beacon; Cardinal Buoy; Emergency Wreck Marking Buoy; Installation Buoy; Isolated Danger Beacon; Isolated Danger Buoy; Lateral Beacon; Lateral Buoy; Light Air Obstruction; Light All Around; Light Float; Light Sectored; Light Vessel; Safe Water Beacon; Safe Water Buoy; Special Purpose/General Beacon; Special Purpose/General Buoy.
+[underline]#Distinction:# Cardinal Beacon; Cardinal Buoy; Emergency
+Wreck Marking Buoy; Installation Buoy; Isolated Danger Beacon;
+Isolated Danger Buoy; Lateral Beacon; Lateral Buoy; Light Air
+Obstruction; Light All Around; Light Float; Light Sectored; Light
+Vessel; Safe Water Beacon; Safe Water Buoy; Special Purpose/General
+Beacon; Special Purpose/General Buoy.
 
 [[sec_19.5]]
 === Light air obstruction
@@ -1135,13 +1504,19 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[nineteen_five]]
 [NOTE]
 --
-For non-fixed lights (that is, sub-attribute stem:[bb "light characteristic" != 1] (fixed)), the sub-attributes *signal group* and *signal period* are mandatory.
+For non-fixed lights (that is, sub-attribute stem:[bb "light
+characteristic" != 1] (fixed)), the sub-attributes *signal group* and
+*signal period* are mandatory.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# P 61.2
@@ -1149,15 +1524,34 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_19.5.1]]
 ==== Air obstruction lights (see S-4 -- B-476.2)
 
-If it is required to encode a light marking an obstacle which constitutes a danger to air navigation, which may also be used as a marine navigational aid, it must be done using the feature *Light Air Obstruction*. This feature must be an equipment feature of a structure feature (see <<sec_18.1>>) using a *Structure/Equipment* feature association.
+If it is required to encode a light marking an obstacle which
+constitutes a danger to air navigation, which may also be used as a
+marine navigational aid, it must be done using the feature *Light Air
+Obstruction*. This feature must be an equipment feature of a
+structure feature (see <<sec_18.1>>) using a *Structure/Equipment*
+feature association.
 
-Further guidance for encoding various types and characteristics of lights can be found in <<sec_19.1.1;to!sec_19.1.7>>.
+Further guidance for encoding various types and characteristics of
+lights can be found in <<sec_19.1.1;to!sec_19.1.7>>.
 
 [underline]#Remarks:#
 
-* If it is required to encode details of the lighting technology (for example neon), it must be done using the complex attribute *information* (see <<sec_2.4.6>>).
+* If it is required to encode details of the lighting technology (for
+example neon), it must be done using the complex attribute
+*information* (see <<sec_2.4.6>>).
 
-* The attribute *vertical datum* applies only to *height*; this value must only be encoded if it is different from the value of *vertical datum* encoded on the underlying Meta feature *Vertical Datum of Data* (see <<sec_3.10>>).
-* Value _13_ (low water) for attribute *vertical datum* is only applicable to enclosed (inland) waterways; and must not be used to indicate the reference datum for the height of the light in tidal waters.
+* The attribute *vertical datum* applies only to *height*; this value
+must only be encoded if it is different from the value of *vertical
+datum* encoded on the underlying Meta feature *Vertical Datum of
+Data* (see <<sec_3.10>>).
+* Value _13_ (low water) for attribute *vertical datum* is only
+applicable to enclosed (inland) waterways; and must not be used to
+indicate the reference datum for the height of the light in tidal
+waters.
 
-[underline]#Distinction:# Cardinal Beacon; Cardinal Buoy; Emergency Wreck Marking Buoy; Installation Buoy; Isolated Danger Beacon; Isolated Danger Buoy; Lateral Beacon; Lateral Buoy; Light All Around; Light Float; Light Fog Detector; Light Sectored; Light Vessel; Safe Water Beacon; Safe Water Buoy; Special Purpose/General Beacon; Special Purpose/General Buoy.
+[underline]#Distinction:# Cardinal Beacon; Cardinal Buoy; Emergency
+Wreck Marking Buoy; Installation Buoy; Isolated Danger Beacon;
+Isolated Danger Buoy; Lateral Beacon; Lateral Buoy; Light All Around;
+Light Float; Light Fog Detector; Light Sectored; Light Vessel; Safe
+Water Beacon; Safe Water Buoy; Special Purpose/General Beacon;
+Special Purpose/General Buoy.
