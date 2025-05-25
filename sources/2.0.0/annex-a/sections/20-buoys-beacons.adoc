@@ -1529,14 +1529,15 @@ buoy above the water level, it must be done using the attribute
 *vertical length*.
 * An IALA compliant emergency wreck marking buoy topmark should be
 populated using the complex attribute *topmark*, with sub-attributes
-stem:[bb "topmark shape" = 8] (upright cross) and stem:[bb "colour" =
-6] (yellow).
+stem:[bb "topmark shape" = 8] (upright cross) and
+stem:[bb "colour" = 6] (yellow).
 * An IALA compliant emergency wreck marking buoy should also have the
 following associated equipment features:
 
 ** A *Light All Around* feature (see <<sec_19.2>>), with attributes
-stem:[bb "colour" = 5,6] (blue, yellow), stem:[bb "light
-characteristic" = 17] (occulting alternating), *signal group* = _(1)_
+stem:[bb "colour" = 5,6] (blue, yellow),
+stem:[bb "light characteristic" = 17]
+(occulting alternating), *signal group* = _(1)_
 and stem:[bb "signal period" = 3]. The complex attribute *signal
 sequence*, sub-attributes *signal duration* and *signal status*,
 should be populated equivalent to __(___00.50)+01.00+(00.50)+01.00_

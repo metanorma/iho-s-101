@@ -116,8 +116,8 @@ a common value are intended to form a seamless presentation.
 
 [underline]#Minimum range:# 1
 
-[underline]#Range closure:# Left closed ray (stem:["minimum" <=  bb
-"drawing index"])
+[underline]#Range closure:# Left closed ray
+(stem:["minimum" <=  bb "drawing index"])
 
 [underline]#Example:# *1* for a dataset intended to be viewed seamlessly
 with other datasets having drawing index value set to 1.

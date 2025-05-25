@@ -339,8 +339,8 @@ be used to warn the Mariner if it is considered necessary.
 .. Buoy temporarily moved:
 
 *** When a buoy is temporarily moved then it, and any associated
-features, are "moved" to the new position and the attribute stem:[bb
-"status" = 7] (temporary) is populated. Alternative encodings are
+features, are "moved" to the new position and the attribute
+stem:[bb "status" = 7] (temporary) is populated. Alternative encodings are
 possible, for example, if the move is for a fixed period of time. In
 these cases the feature, and any associated components, can be
 created in the temporary position with sub-attribute *date end* for
@@ -364,8 +364,9 @@ has changed, the attribute value of *depth range minimum value* for
 the *Dredged Area* feature should be changed to the value provided by
 the survey.
 *** Where a *Sounding* feature is encoded in a dredged area to
-indicate shoaler depths, the attribute value stem:[bb "exposition of
-sounding" = 2] (shoaler than the depth of the surrounding depth area)
+indicate shoaler depths, the attribute value
+stem:[bb "exposition of sounding" = 2]
+(shoaler than the depth of the surrounding depth area)
 should not be populated (see <<sec_11.3.1;and!sec_11.4.1>>). Where
 required, the shoal depths should be encoded using *Sounding*, with
 the appropriate underlying depth information (*Depth Contour* and
@@ -534,9 +535,9 @@ modified within the *Caution Area* if time permits. A reference to a
 picture file may also be included, if required, using the attribute
 *pictorial representation* on the *Caution Area*.
 * Alternatively, and if considered appropriate a *Restricted Area*
-feature (see <<sec_17.8>>), with attribute stem:[bb "restriction" =
-7] (entry prohibited) may be encoded instead of the *Caution Area*
-feature.
+feature (see <<sec_17.8>>), with attribute
+stem:[bb "restriction" = 7] (entry prohibited) may be encoded
+instead of the *Caution Area* feature.
 --
 
 .. Simple information which does not need an additional notification
@@ -549,8 +550,8 @@ complex attribute *information* (see <<sec_2.4.6>>). In this case it
 is not necessary to use a *Caution Area* feature. This could apply,
 for example, to submarine cables or pipelines being laid (*Cable
 Submarine* or *Pipeline Submarine/On Land* features), or an area
-under reclamation (*Land Area* feature with attribute stem:[bb
-"condition" = 3] (under reclamation)). If required the encoding
+under reclamation (*Land Area* feature with attribute
+stem:[bb "condition" = 3] (under reclamation)). If required the encoding
 should reflect that positions are approximate using the spatial
 attribute *quality of horizontal measurement*= _4_ (approximate) on
 the spatial type(s).

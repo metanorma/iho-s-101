@@ -739,14 +739,14 @@ image::figure-11-3.png[545,204]
 small areas (_efije_ and _fghif_) as separate *Depth Area* features,
 or to encode only the curve (_fi_) as a floating *Depth Contour*
 feature within a single *Depth Area* (_abcda_) having attributes
-stem:[bb "depth range minimum value" = 5] and stem:[bb "depth range
-maximum value" = 20].
+stem:[bb "depth range minimum value" = 5] and
+stem:[bb "depth range maximum value" = 20].
 
 NOTE: In <<fig_11-3>>, if the optional *Depth Area* features are
 encoded, the depth area (_abcda_) will be split into two separate
-*Depth Area* features (_abgea_) and (_jhcdj_), both having stem:[bb
-"depth range minimum value" = 5] and stem:[bb "depth range maximum
-value" = 20].
+*Depth Area* features (_abgea_) and (_jhcdj_), both having
+stem:[bb "depth range minimum value" = 5] and
+stem:[bb "depth range maximum value" = 20].
 
 [[sec_11.7.3]]
 ==== Use of attributes depth range minimum value and depth range maximum value for depth areas in general
@@ -906,8 +906,8 @@ by *Land Area* features.
 ==== Areas of continual change (see S-4 -- B-416)
 
 If it is required to encode an area of continually changing
-bathymetry, it must be done by populating the attribute stem:[bb
-"category of temporal variation" = 2] (likely to change and
+bathymetry, it must be done by populating the attribute
+stem:[bb "category of temporal variation" = 2] (likely to change and
 significant shoaling expected) or _3_ (likely to change but
 significant shoaling not expected) for the underlying *Quality of
 Bathymetric Data* feature (see <<sec_3.8>>).
@@ -1163,8 +1163,9 @@ or _3_ (likely to change but significant shoaling not expected).
 Alternatively, if the quality of the charted bathymetry is considered
 by the Producing Authority to be poor, consideration may be given to
 replacing the existing charted detail using the satellite derived
-data, as described above, however with stem:[bb "category of temporal
-variation" = 2] (likely to change and significant shoaling expected)
+data, as described above, however with
+stem:[bb "category of temporal variation" = 2]
+(likely to change and significant shoaling expected)
 or _3_ (likely to change but significant shoaling not expected).
 
 [[sec_11.10]]
@@ -1219,10 +1220,11 @@ encoded using the feature *Unsurveyed Area*.
 
 The area must also be covered, where required, by *Quality of
 Bathymetric Data* features (see <<sec_3.8>>), with attributes
-stem:[bb "category of temporal variation" = 6] (unassessed), stem:[bb
-"data assessment" = 1] (assessed), *features detected* (*least depth
-of detected features measured* and *significant features detected*) =
-_False_ and *full seafloor coverage achieved* = _False_; and (if
+stem:[bb "category of temporal variation" = 6] (unassessed),
+stem:[bb "data assessment" = 1] (assessed), *features detected*
+(*least depth of detected features measured* and
+*significant features detected*) = _False_ and
+*full seafloor coverage achieved* = _False_; and (if
 encoded on *Quality of Bathymetric Data*)*horizontal position
 uncertainty* (*uncertainty fixed*) = [empty (null] and *vertical
 uncertainty* (*uncertainty fixed*) = [empty (null)]. If encoded on an

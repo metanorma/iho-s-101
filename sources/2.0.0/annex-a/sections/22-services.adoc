@@ -148,8 +148,9 @@ feature association *Pilotage District Association* (see
 ==== Pilot stations ashore (see S-4 -- B-491.4)
 
 If it is required to encode a pilot station ashore, it must be done
-using a *Building* or *Landmark* feature, with attribute stem:[bb
-"function" = 11] (pilot office) or _12_ (pilot lookout).
+using a *Building* or *Landmark* feature, with attribute
+stem:[bb "function" = 11]
+(pilot office) or _12_ (pilot lookout).
 
 [underline]#Distinction:# Pilotage District.
 
@@ -778,9 +779,9 @@ If it is required to encode the building or structure housing the
 service, it must be done using an appropriate feature (for example
 *Building*, *Landmark*).
 * If it is required to encode a refuge beacon, it must be done using
-a *Special Purpose/General Beacon* feature, with attribute stem:[bb
-"category of special purpose mark" = 44] (refuge beacon), not by
-using *Rescue Station*.
+a *Special Purpose/General Beacon* feature, with attribute
+stem:[bb "category of special purpose mark" = 44]
+(refuge beacon), not by using *Rescue Station*.
 * Each VHF-channel should be indicated, using the attribute
 *communication channel* (see <<sec_27.77>>). Alternately, if the same
 VHF-channel(s) apply to multiple features in the dataset, this should
@@ -988,8 +989,8 @@ defined by: an area including docks, basins, infrastructure such as
 buildings, and dockside equipment; or a point.
 * If it is required to encode a terminal with facilities to
 load/unload or store shipping containers, this should be done using
-*Harbour Facility* with attribute stem:[bb "category of harbour
-facility" = 10] (container terminal).
+*Harbour Facility* with attribute
+stem:[bb "category of harbour facility" = 10] (container terminal).
 * If it is required to encode a covered structure into which ships
 can go, this must be done using the feature *Structure Over Navigable
 Water* (see <<sec_8.7>>). These structures may be part of the larger

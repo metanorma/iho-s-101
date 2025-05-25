@@ -261,8 +261,8 @@ measured distance, it must be done using the attribute *measured
 distance*.
 
 If it is required to encode the transit lines, they must be done
-using *Navigation Line* features, with stem:[bb "category of
-navigation line" = 2] (transit line).
+using *Navigation Line* features, with
+stem:[bb "category of navigation line" = 2] (transit line).
 
 If it is required to encode the beacons, they must be done using
 *Special Purpose/General Beacon* features, with attribute
@@ -3901,7 +3901,6 @@ be displayed when display of names is enabled by the Mariner. See
 For each instance of *information*, at least one of the
 sub-attributes *file reference* or *text* must be populated.
 --
-
 
 [underline]#INT 1 Reference:# M 30; S 1
 

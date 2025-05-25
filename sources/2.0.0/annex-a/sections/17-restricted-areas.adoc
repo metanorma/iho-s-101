@@ -34,8 +34,8 @@ example the equivalent to a caution note from a paper chart), where
 required.
 * An area in which regulations apply due to recreation activities
 such as water skiing, jet skiing, kite surfing and rowing must be
-encoded, where required, as *Restricted Area* with stem:[bb "category
-of restricted area" = 32] (recreation area).
+encoded, where required, as *Restricted Area* with
+stem:[bb "category of restricted area" = 32] (recreation area).
 * If it is required to encode an area for which the Mariner must be
 made aware of circumstances influencing the safety of navigation, it
 must be done using the feature *Caution Area* (see <<sec_16.10>>).
@@ -47,8 +47,8 @@ not directly related to a particular feature.
 === Minefields (see S-4 -- B-441.8)
 
 If it is required to encode a minefield, it must be done using a
-*Restricted Area* feature (see <<sec_17.8>>), with attribute stem:[bb
-"category of restricted area" = 14] (minefield). Former mined areas
+*Restricted Area* feature (see <<sec_17.8>>), with attribute
+stem:[bb "category of restricted area" = 14] (minefield). Former mined areas
 should also be encoded with attribute stem:[bb "status" = 4] (not in
 use).
 

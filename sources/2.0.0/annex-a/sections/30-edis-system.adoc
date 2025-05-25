@@ -23,8 +23,7 @@ Discovery Metadata: metre (m)
 [underline]#Maximum range:# 12500
 
 [underline]#Range closure:#::
-Open interval::: (stem:["minimum" < bb "default clearance depth" <
-"maximum"])
+Open interval::: (stem:["minimum" < bb "default clearance depth" < "maximum"])
 
 [underline]#Examples:#::
 *12.5*::: for a default clearance depth of 12.5 metres

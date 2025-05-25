@@ -388,8 +388,8 @@ the feature *Cable Submarine*.
 * If the buried depth varies along the cable, the cable must be
 encoded as several features.
 * Telecommunications cables such as telephone and optic fibre cable
-must be populated, where required, by populating attribute stem:[bb
-"category of cable" = 10] (telecommunications cable).
+must be populated, where required, by populating attribute
+stem:[bb "category of cable" = 10] (telecommunications cable).
 * Where a cable is disused, it should be encoded with the attribute
 stem:[bb "status" = 4] (not in use), and the attribute *category of
 cable* should not be encoded. Few disused cables are recovered and so
@@ -744,8 +744,9 @@ value* are used to encode the shallowest and deepest depth over the
 pipeline.
 * Where a bubble curtain pipeline is intended for the retention of
 oil, this must be encoded as an *Oil Barrier* feature (see
-<<sec_16.21>>), with attribute stem:[bb "category of oil barrier" =
-1] (oil retention -- high pressure pipe).
+<<sec_16.21>>), with attribute
+stem:[bb "category of oil barrier" = 1]
+(oil retention -- high pressure pipe).
 * Where a pipeline is disused, it should be encoded with the
 attribute stem:[bb "status" = 4] (not in use), and the attributes
 *category of pipeline/pipe* and *product* should not be encoded.

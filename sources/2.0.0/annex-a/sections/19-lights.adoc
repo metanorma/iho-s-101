@@ -76,8 +76,8 @@ actually exist, they must be encoded as separate light features, in
 this case two *Light All Around* features, one with complex attribute
 *rhythm of light*, sub-attribute stem:[bb "light characteristic" = 1]
 (fixed) and the other with stem:[bb "light characteristic" = 2]
-(flashing), and not as one *Light All Around* with stem:[bb "light
-characteristic" = 13] (fixed/flash).
+(flashing), and not as one *Light All Around* with
+stem:[bb "light characteristic" = 13] (fixed/flash).
 
 [[sec_19.1.2]]
 ==== Types and functions of lights (see S-4 -- B-471.1)
@@ -128,8 +128,8 @@ it must be done using stem:[bb "status" = 2,8] (occasional, private).
 ===== Daytime lights (see S-4 -- B-473.4)
 
 If it is required to encode a light shown throughout 24 hours without
-change of character, it must be done using attribute stem:[bb
-"exhibition condition of light" = 1] (light shown without change of
+change of character, it must be done using attribute
+stem:[bb "exhibition condition of light" = 1] (light shown without change of
 character).
 
 If it is required to encode a light having characteristics shown by
@@ -146,18 +146,21 @@ stem:[bb "exhibition condition of light" = 4] (night light).
 
 If it is required to encode a light which is exhibited in fog or
 conditions of reduced visibility, it must be done using a light
-feature, with attributes stem:[bb "exhibition condition of light" =
-3] (fog light)and stem:[bb "status" = 2] (occasional)_._
+feature, with attributes
+stem:[bb "exhibition condition of light" = 3]
+(fog light)and stem:[bb "status" = 2] (occasional).
 
 If it is required to encode a light having characteristics shown in
 fog that are different from those shown in conditions of normal
 visibility, it must be done by encoding two light features sharing
 the same point spatial instance:
 
-* one light feature with stem:[bb "exhibition condition of light" =
-3] (fog light) and stem:[bb "status" = 2] (occasional)
-* one light feature with stem:[bb "exhibition condition of light" =
-2] (daytime light) or _4_ (night light) and the complex attribute
+* one light feature with
+stem:[bb "exhibition condition of light" = 3]
+(fog light) and stem:[bb "status" = 2] (occasional)
+* one light feature with
+stem:[bb "exhibition condition of light" = 2]
+(daytime light) or _4_ (night light) and the complex attribute
 *information* (see <<sec_2.4.6>>), sub-attribute *text* = _Character
 of the light changes in fog_.
 
@@ -213,8 +216,9 @@ the chart normally corresponds with the rear leading light.
 ==== Lighthouses (see S-4 -- B-457.3)
 
 If it is required to encode a lighthouse, it must be done using a
-*Landmark* feature (see <<sec_7.2>>), with attributes stem:[bb
-"category of landmark" = 17] (tower) and stem:[bb "function" = 33]
+*Landmark* feature (see <<sec_7.2>>), with attributes
+stem:[bb "category of landmark" = 17]
+(tower) and stem:[bb "function" = 33]
 (light support)for towers, or using a *Building* feature (see
 <<sec_6.2>>), with the attribute stem:[bb "function" = 33], for any
 other shapes.
@@ -504,8 +508,9 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[nineteen_two]]
 [NOTE]
 --
-For non-fixed lights (that is, sub-attribute stem:[bb "light
-characteristic" != 1] (fixed)), the sub-attributes *signal group* and
+For non-fixed lights (that is, sub-attribute
+stem:[bb "light characteristic" != 1]
+(fixed)), the sub-attributes *signal group* and
 *signal period* are mandatory.
 
 Complex attribute *feature name*, sub-attribute *name usage* is
@@ -822,8 +827,9 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[nineteen_three]]
 [NOTE]
 --
-For non-fixed lights (that is, sub-attribute stem:[bb "light
-characteristic" != 1] (fixed)), the sub-attributes *signal group* and
+For non-fixed lights (that is, sub-attribute
+stem:[bb "light characteristic" != 1]
+(fixed)), the sub-attributes *signal group* and
 *signal period* are mandatory.
 
 For a light sector that is a directional sector, the sub-complex
@@ -873,14 +879,16 @@ there is a different rhythm of light between sectors (for example,
 for complex lights), separate instances of *sector characteristics*
 must be populated.
 * Population of the sub-complex attribute *sector limit* having
-sub-attributes stem:[bb "sector limit one" = 0] and stem:[bb "sector
-limit two" = 360] (that is, encoding an all around light as a
+sub-attributes stem:[bb "sector limit one" = 0] and
+stem:[bb "sector limit two" = 360]
+(that is, encoding an all around light as a
 sectored light) is prohibited.
 * If a sector of a sectored light is intended to have a directional
 function, this must be encoded using the *light sector* complex
 sub-attribute *directional character*. If the light is intensified in
-this sector, *light sector* sub-attribute stem:[bb "light visibility"
-= 4] (intensified) must be populated. The sub-complex attribute
+this sector, *light sector* sub-attribute
+stem:[bb "light visibility" = 4]
+(intensified) must be populated. The sub-complex attribute
 *sector limit* is optional for directional light sectors.
 * The sub-attribute *sector line length* (see <<sec_27.158>>) may be
 used for critical light sectors to extend the sector line when the
@@ -959,8 +967,9 @@ If there is no navigable water between the light and the obstacle
 (see (e) in <<fig_19-2>> (B) above), the masked sector must not have
 an iteration of *light sector* encoded, unless a faint light is
 visible in the navigable part of the sector, which should be encoded
-using *light sector*, with sub-attribute stem:[bb "light visibility"
-= 3] (faint). The sectors in which the light is visible from seaward
+using *light sector*, with sub-attribute
+stem:[bb "light visibility" = 3]
+(faint). The sectors in which the light is visible from seaward
 ((d) and (f)) must be encoded as separate iterations of *sector
 characteristics*.
 
@@ -1260,8 +1269,9 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[nineteen_four]]
 [NOTE]
 --
-For non-fixed lights (that is, sub-attribute stem:[bb "light
-characteristic" != 1] (fixed)), the sub-attributes *signal group* and
+For non-fixed lights (that is, sub-attribute
+stem:[bb "light characteristic" != 1]
+(fixed)), the sub-attributes *signal group* and
 *signal period* are mandatory.
 
 Complex attribute *feature name*, sub-attribute *name usage* is
@@ -1479,9 +1489,9 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[nineteen_five]]
 [NOTE]
 --
-For non-fixed lights (that is, sub-attribute stem:[bb "light
-characteristic" != 1] (fixed)), the sub-attributes *signal group* and
-*signal period* are mandatory.
+For non-fixed lights (that is, sub-attribute
+stem:[bb "light characteristic" != 1] (fixed)),
+the sub-attributes *signal group* and *signal period* are mandatory.
 
 Complex attribute *feature name*, sub-attribute *name usage* is
 mandatory if the name is intended to be displayed when display of

@@ -263,19 +263,21 @@ stem:[bb "status" = 3] (recommended).
 * If it is required to encode an anchorage at a location that has not
 been defined by a regulatory authority but has been reported to be
 suitable and safe for anchoring, this must be done using *Anchorage
-Area* of type point, with attribute stem:[bb "category of anchorage"
-= 15] (reported anchorage).
+Area* of type point, with attribute
+stem:[bb "category of anchorage" = 15] (reported anchorage).
 
-NOTE: the encoding of *Anchorage Area* with attribute stem:[bb
-"category of anchorage" = 15] (reported anchorage) of type surface is
-prohibited.
+NOTE: the encoding of *Anchorage Area* with attribute
+stem:[bb "category of anchorage" = 15]
+(reported anchorage) of type surface is prohibited.
 
 * If it is required to encode an anchorage which may be used for a
-period of not more than 24 hours, it must be done using stem:[bb
-"category of anchorage" = 9] (anchorage for periods up to 24 hours).
+period of not more than 24 hours, it must be done using
+stem:[bb "category of anchorage" = 9]
+(anchorage for periods up to 24 hours).
 * If it is required to encode an anchorage with a specific, limited
-time period, it must be done using stem:[bb "category of anchorage" =
-10] (anchorage for limited period of time). The specific limit of
+time period, it must be done using
+stem:[bb "category of anchorage" = 10]
+(anchorage for limited period of time). The specific limit of
 time should be encoded using the complex attribute *information* (see
 <<sec_2.4.6>>), sub-attribute *text* (for example_Anchorage limited
 to 12 hours_).
@@ -917,12 +919,13 @@ navigation are "dredged areas", not to be confused with "dredging
 areas".
 
 If it is required to encode a spoil ground, it must be done using a
-*Dumping Ground* feature, with attribute stem:[bb "category of
-dumping ground" = 5] (spoil ground).
+*Dumping Ground* feature, with attribute
+stem:[bb "category of dumping ground" = 5] (spoil ground).
 
 If it is required to encode a dredging area, it must be done using a
-*Restricted Area* feature (see <<sec_17.8>>), with attribute stem:[bb
-"category of restricted area" = 21] (dredging area). An area in which
+*Restricted Area* feature (see <<sec_17.8>>), with attribute
+stem:[bb "category of restricted area" = 21]
+(dredging area). An area in which
 seabed material (for example sand, shingle) is being extracted for
 purposes such as construction must be encoded, where required, using
 the feature *Offshore Production Area* (see <<sec_14.6>>), with

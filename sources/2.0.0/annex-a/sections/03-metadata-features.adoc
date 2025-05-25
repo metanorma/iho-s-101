@@ -880,8 +880,8 @@ above).
 * *Quality of Bathymetric Data* must be encoded over *Unsurveyed Area*
 features that contain any depth data or bathymetry (depth contours,
 obstructions, soundings, underwater rocks, wrecks); and must have
-mandatory attributes stem:[bb "data assessment" = 1] (assessed) stem:[bb
-"category of temporal variation" = 6] (unassessed); *features detected*
+mandatory attributes stem:[bb "data assessment" = 1] (assessed)
+stem:[bb "category of temporal variation" = 6] (unassessed); *features detected*
 (*least depth of detected features measured* and *significant features
 detected*) = _False_; *full seafloor coverage achieved* = _False_;
 and *zone of confidence* (*category of zone of confidence in data*)

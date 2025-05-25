@@ -425,9 +425,9 @@ one of the values:_2_ - harbour-masters office_3_ - customs office_4_
 ==== Transit sheds and warehouses (see S-4 -- B-328.1)
 
 If it is required to encode a transit shed or warehouse, it must be
-done using a *Building* feature, with attributes stem:[bb "function"
-= 15] (transit shed/warehouse), and if it is required, *feature name*
-(*name*) = name or number of the shed.
+done using a *Building* feature, with attributes
+stem:[bb "function" = 15] (transit shed/warehouse), and if it is required,
+*feature name* (*name*) = name or number of the shed.
 
 [underline]#Distinction:# Built-Up Area; Coast Guard Station; Landmark;
 Rescue Station; Silo/Tank; Structure Over Navigable Water.

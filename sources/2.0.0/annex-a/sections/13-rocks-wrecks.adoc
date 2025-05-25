@@ -516,8 +516,9 @@ may be dangerous to their type of vessel.
 * If it is required to encode a submerged *Wreck* feature where the
 attribute *value of sounding* is populated with an empty (null)
 value, but the source information indicates the depth of the feature
-is within the range of the surrounding depth area, the value stem:[bb
-"exposition of sounding" = 1] (within the range of the surrounding
+is within the range of the surrounding depth area, the value
+stem:[bb "exposition of sounding" = 1]
+(within the range of the surrounding
 depth area) must be populated in order to avoid the unnecessary
 display of isolated danger symbols in ECDIS.
 * For wrecks visible or partly visible at sounding datum, the height
@@ -572,8 +573,9 @@ optimum display scale ENC data covering the wreck.
 
 If it is required to encode a restricted area around a historic
 wreck, it must be done using a *Restricted Area* feature (see
-<<sec_17.8>>), with attribute stem:[bb "category of restricted area"
-= 10] (historic wreck area).
+<<sec_17.8>>), with attribute
+stem:[bb "category of restricted area" = 10]
+(historic wreck area).
 
 In addition, the wreck itself should be encoded as a *Wreck* feature,
 with attribute stem:[bb "status" = 13] (historic).
@@ -800,11 +802,13 @@ measurement* does not apply to the depth of the seabed near the
 obstruction.
 
 It is important when encoding obstructions to be aware of the
-distinction between attribute value stem:[bb "category of
-obstruction" = 6] (foul area) and foul ground: Foul areas are defined
+distinction between attribute value
+stem:[bb "category of obstruction" = 6]
+(foul area) and foul ground: Foul areas are defined
 as areas of numerous uncharted dangers to navigation. When encoded on
-ENC, *Obstruction* features of type surface with attribute stem:[bb
-"category of obstruction" = 6] (foul area) will display in the ECDIS
+ENC, *Obstruction* features of type surface with attribute
+stem:[bb "category of obstruction" = 6]
+(foul area) will display in the ECDIS
 "base display" as an obstruction to navigation, with all associated
 alarms to indicate that it is unsafe for vessels to enter or transit
 the area.
@@ -850,8 +854,9 @@ draught*.
 * The attribute *height* must be populated for *Obstruction* features
 having attribute stem:[bb "water level effect" = 1] (partly submerged
 at high water) or _2_ (always dry).
-* *Obstruction* features having attribute stem:[bb "water level
-effect" = 7] (floating) must have the attribute *height* populated
+* *Obstruction* features having attribute
+stem:[bb "water level effect" = 7]
+(floating) must have the attribute *height* populated
 with an empty (null) value.
 * The attribute *vertical length* is used to populate the distance of
 an obstruction above the seabed; or the height of a floating
@@ -882,8 +887,9 @@ attribute stem:[bb "category of obstruction" = 6] (foul area).
 * If it is required to encode a submerged *Obstruction* feature where
 the attribute *value of sounding* is populated with an empty (null)
 value, but the source information indicates the depth of the feature
-is within the range of the surrounding depth area, the value stem:[bb
-"exposition of sounding" = 1] (within the range of the surrounding
+is within the range of the surrounding depth area, the value
+stem:[bb "exposition of sounding" = 1]
+(within the range of the surrounding
 depth area) must be populated in order to avoid the unnecessary
 display of isolated danger symbols in ECDIS.
 * Active submarine volcanos can be a significant navigational hazard;
@@ -893,8 +899,9 @@ B-428.4). If it is required to encode an active submarine volcano, it
 must be done using an *Obstruction* feature of type point, with
 attributes stem:[bb "category of obstruction" = 21] (active submarine
 volcano), stem:[bb "exposition of sounding" = 2] (shoaler than the
-range of depth of the surrounding depth area) and stem:[bb "quality
-of vertical measurement" = 2] (depth or least depth unknown). To
+range of depth of the surrounding depth area) and
+stem:[bb "quality of vertical measurement" = 2]
+(depth or least depth unknown). To
 indicate the unpredictable nature of the volcano (it may be
 periodically submerged or extend above the surface), the mandatory
 attributes *value of sounding* and *water level effect* must be
@@ -926,8 +933,9 @@ level of the seabed should be encoded as *Foul Ground* (see
 * In certain circumstances where an obstruction is always dry (for
 example cribs), it must be covered by a *Land Area* feature.
 * Features that are considered to be subsurface Fish Aggregating
-Devices (FAD) must be encoded as *Obstruction*,with stem:[bb
-"category of obstruction" = 5] (fish haven), unless the feature is a
+Devices (FAD) must be encoded as *Obstruction*,with
+stem:[bb "category of obstruction" = 5]
+(fish haven), unless the feature is a
 vessel that has been deliberately sunk to perform the function of a
 fish haven, which should be encoded as a *Wreck* feature (see
 <<sec_13.5>>).
@@ -942,11 +950,13 @@ acquisition system (ODAS)). An ODAS buoy must be encoded as a
 ===== Mangroves (see S-4 -- B-312.4)
 
 Where the source indicates that a mangrove area is in the intertidal
-area, an *Obstruction* feature of type area, with attribute stem:[bb
-"category of obstruction" = 23] (mangrove) should be encoded on top
+area, an *Obstruction* feature of type area, with attribute
+stem:[bb "category of obstruction" = 23]
+(mangrove) should be encoded on top
 of the portion of the intertidal area (*Depth Area* with attributes
-stem:[bb "depth range minimum value" = -H] and stem:[bb "depth range
-maximum value" = 0] -- see <<sec_11.7.3>>) where the mangrove
+stem:[bb "depth range minimum value" = -H] and
+stem:[bb "depth range maximum value" = 0]
+-- see <<sec_11.7.3>>) where the mangrove
 coverage exists. The mandatory attribute *water level effect* should
 be populated with _1_ (partially submerged at high water); and the
 conditional mandatory attribute *height* populated with the
@@ -1089,8 +1099,9 @@ sub-attributes *file reference* or *text* must be populated.
 If it is required to encode an area where seabed operations are
 unsafe, but over which it is safe to navigate for surface vessels, it
 must be done using the feature *Foul Ground*. Such areas are distinct
-from the feature *Obstruction*, attribute stem:[bb "category of
-obstruction" = 6] (foul area), where navigation is considered to be
+from the feature *Obstruction*, attribute
+stem:[bb "category of obstruction" = 6]
+(foul area), where navigation is considered to be
 unsafe for surface vessels (see <<sec_13.6>>).
 
 It is important when encoding foul ground to be aware of the
@@ -1532,7 +1543,8 @@ encoded as *Obstruction* features (see <<sec_13.6>>).
 ==== Fish havens (see S-4 -- B- 447.5)
 
 If it is required to encode a fish haven, it must be done using an
-*Obstruction* feature (see <<sec_13.6>>), with attribute stem:[bb
-"category of obstruction" = 5] (fish haven).
+*Obstruction* feature (see <<sec_13.6>>), with attribute
+stem:[bb "category of obstruction" = 5]
+(fish haven).
 
 [underline]#Distinction:# Fishing Facility; Obstruction.

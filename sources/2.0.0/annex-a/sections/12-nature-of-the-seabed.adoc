@@ -156,8 +156,9 @@ layer must be encoded first, followed by the underlying layers.
 . Coral reef, which is always covered, represented as a surface (INT1
 -- K16): An *Obstruction* feature of type surface must be encoded
 with attributes stem:[bb "category of obstruction" = 6] (foul area),
-stem:[bb "nature of surface" = 14] (coral) and stem:[bb "water level
-effect" = 3] (always underwater/submerged). This feature must be
+stem:[bb "nature of surface" = 14] (coral) and
+stem:[bb "water level effect" = 3]
+(always underwater/submerged). This feature must be
 covered by a *Depth Area* or *Unsurveyed Area* feature as
 appropriate. In this area, some point dangers may be shown. An
 *Underwater/Awash Rock* feature should be encoded for each individual
@@ -177,8 +178,9 @@ Rock*, while a rocky nature of seabed should be encoded using a
 *Seabed Area* feature.
 
 . Where a *Seabed Area* feature of type surface is located in an
-intertidal area, it should be encoded with stem:[bb "water level
-effect" = 4] (covers and uncovers), in order for the intertidal rock
+intertidal area, it should be encoded with
+stem:[bb "water level effect" = 4]
+(covers and uncovers), in order for the intertidal rock
 or coral symbol to be displayed in ECDIS.
 --
 

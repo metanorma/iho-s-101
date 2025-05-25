@@ -246,8 +246,8 @@ level effect* undefined or populated with the values _2_ (always dry)
 or _1_ (partly submerged at high water), which is covered by *Land
 Area*.
 * If the seaward edge of an encoded saltpan area is coincident with
-the coastline, it should be encoded using *Coastline*, with stem:[bb
-"category of coastline" = 2] (flat coast).
+the coastline, it should be encoded using *Coastline*, with
+stem:[bb "category of coastline" = 2] (flat coast).
 * If the seaward edge of a marsh area or glacier is coincident with
 the coastline, the coastline should be encoded as *Coastline*, with
 attribute stem:[bb "category of coastline" = 8] (marshy shore) or
@@ -262,8 +262,8 @@ However, on smaller optimum display scale ENC datasets where the mangroves
 are required to be encoded to indicate the seaward edge of a mangrove
 area only as the "apparent" coastline, this must be done using *Coastline*
 with stem:[bb "category of coastline" = 7] (mangrove). The coastline's
-spatial type should have the attribute stem:[bb "quality of horizontal
-measurement" = 4] (approximate).
+spatial type should have the attribute
+stem:[bb "quality of horizontal measurement" = 4] (approximate).
 * Where the source indicates the top of a cliff is coincident with
 the coastline at the optimum display scale of the ENC data, a *Coastline*
 feature, with stem:[bb "category of coastline" = 1] (steep coast)
@@ -1324,8 +1324,9 @@ be encoded co-incident with the *Land Area* feature of the island,
 with attribute *height* corresponding to the value shown on the source.
 * Where it is required to encode a mangrove area or tree located in
 the intertidal area, this should be done using the feature *Obstruction*
-(see <<sec_13.6;and!sec_13.6.1.1>>), with attribute stem:[bb "category
-of obstruction" = 23] (mangrove). Where it is required to encode the
+(see <<sec_13.6;and!sec_13.6.1.1>>), with attribute
+stem:[bb "categoryof obstruction" = 23] (mangrove).
+Where it is required to encode the
 generalised seaward edge only of a mangrove area to represent the
 "apparent" coastline, this must be done using the feature *Coastline*
 (see <<sec_5.3>>).

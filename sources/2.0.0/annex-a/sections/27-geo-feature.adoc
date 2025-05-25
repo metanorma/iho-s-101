@@ -383,8 +383,8 @@ metadata: metre (m)
 
 [underline]#Maximum range:# 20
 
-[underline]#Range closure:# Left half-open interval (stem:["minimum"
-< bb "buried depth" <= "maximum"])
+[underline]#Range closure:# Left half-open interval
+(stem:["minimum" < bb "buried depth" <= "maximum"])
 
 [underline]#Example:# *2.5* for a depth of 2∙5 metres
 
@@ -6484,8 +6484,9 @@ but may be estimated based on type of equipment, calibration regime,
 historical accuracy etc.]
 
 2+| Depth Accuracy
-footnote:[Depth accuracy of depicted soundings stem:[= a + (b **
-d)//100] at 95% CI (2.00 sigma), where d = depth in metres at the
+footnote:[Depth accuracy of depicted soundings
+stem:[= a + (b ** d)//100] at 95% CI (2.00 sigma),
+where stem:[d = "depth"] in metres at the
 critical depth. Depth accuracy need not be rigorously computed for
 ZOCs B, C and D but may be estimated based on type of equipment,
 calibration regime, historical accuracy etc.]
@@ -7126,8 +7127,8 @@ Chapter 2, Page 2.125, November 2000).
 
 [underline]#Maximum range:# 12500
 
-[underline]#Range closure:# Open interval (stem:["minimum" < bb
-"depth range maximum" < "maximum"])
+[underline]#Range closure:# Open interval
+(stem:["minimum" < bb "depth range maximum" < "maximum"])
 
 [underline]#Example:# *100* for a maximum depth of 100 metres**-0.5**
 for a deepest drying depth of 0.5 metres
@@ -7161,8 +7162,8 @@ Chapter 2, Page 2.124, November 2000).
 
 [underline]#Maximum range:# 12500
 
-[underline]#Range closure:# Open interval (stem:["minimum" < bb
-"depth range minimum" < "maximum"])
+[underline]#Range closure:# Open interval
+(stem:["minimum" < bb "depth range minimum" < "maximum"])
 
 [underline]#Example:# *50* for a minimum depth of 50 metres**-3.5**
 for a minimum drying depth of 3.5 metres
@@ -7327,8 +7328,8 @@ metadata: metre (m).
 
 [underline]#Maximum range:# 8850
 
-[underline]#Range closure:# Closed interval (stem:["minimum" <= bb
-"elevation" <= "maximum"])
+[underline]#Range closure:# Closed interval
+(stem:["minimum" <= bb "elevation" <= "maximum"])
 
 [underline]#Example:# *47* for an elevation of 47 metres
 
@@ -7357,8 +7358,8 @@ The estimated range of a non-optical electromagnetic transmission.
 
 [underline]#Maximum range:# 1000
 
-[underline]#Range closure:# Open interval (stem:["minimum" < bb
-"estimated range of transmission" < "maximum"])
+[underline]#Range closure:# Open interval
+(stem:["minimum" < bb "estimated range of transmission" < "maximum"])
 
 [underline]#Example:# *45* for a maximum range of 45 nautical miles
 
@@ -7534,8 +7535,8 @@ corresponds to a bearing away from the position of the light.
 
 [underline]#Maximum range:# 360
 
-[underline]#Range closure:# Right half-open interval (stem:["minimum"
-<= bb "flare bearing" < "maximum"])
+[underline]#Range closure:# Right half-open interval
+(stem:["minimum" <= bb "flare bearing" < "maximum"])
 
 [underline]#Example:# *270* for an flare bearing of 270 degrees away
 from the light
@@ -8070,8 +8071,8 @@ metadata: metre (m)
 
 [underline]#Maximum range:# 8850
 
-[underline]#Range closure:# Left half-open interval (stem:["minimum"
-< bb "height" <= "maximum"])
+[underline]#Range closure:# Left half-open interval
+(stem:["minimum" < bb "height" <= "maximum"])
 
 [underline]#Example:# *73* for a height of 73 metres
 
@@ -8253,8 +8254,8 @@ metadata: metre (m)
 
 [underline]#Maximum range:# 20
 
-[underline]#Range closure:# Left half-open interval (stem:["minimum"
-< bb "ice factor" <= "maximum"])
+[underline]#Range closure:# Left half-open interval
+(stem:["minimum" < bb "ice factor" <= "maximum"])
 
 [underline]#Example:# *2.5* for a reduction of 2∙5 metres in the
 vertical clearance.
@@ -8815,8 +8816,8 @@ November 2000).
 
 [underline]#Maximum range:# 180
 
-[underline]#Range closure:# Left half-open interval (stem:["minimum"
-< bb "magnetic anomaly value" <= "maximum"])
+[underline]#Range closure:# Left half-open interval
+(stem:["minimum" < bb "magnetic anomaly value" <= "maximum"])
 
 [underline]#Example:# *5* for a deviation of 5 degrees
 
@@ -8925,8 +8926,8 @@ metadata: metre (m)
 
 [underline]#Maximum range:# 30
 
-[underline]#Range closure:# Left half-open interval (stem:["minimum"
-< bb "maximum permitted draught" <= "maximum"])
+[underline]#Range closure:# Left half-open interval
+(stem:["minimum" < bb "maximum permitted draught" <= "maximum"])
 
 [underline]#Example:# *14.5* for a maximum permitted draught of 14·5
 metres
@@ -9015,8 +9016,8 @@ metadata: metre (m)
 
 [underline]#Maximum range:# 30
 
-[underline]#Range closure:# Left half-open interval (stem:["minimum"
-< bb "minimum berth depth" <= "maximum"])
+[underline]#Range closure:# Left half-open interval
+(stem:["minimum" < bb "minimum berth depth" <= "maximum"])
 
 [underline]#Example:# *14.6* for a minimum berth depth of 14.6 metres
 
@@ -9543,8 +9544,8 @@ November 2000).
 
 [underline]#Minimum range:# 2
 
-[underline]#Range closure:# Left closed ray (stem:["minimum" <= bb
-"number of features"])
+[underline]#Range closure:# Left closed ray
+(stem:["minimum" <= bb "number of features"])
 
 [underline]#Example:# *3* for 3 co-located cables
 
@@ -9601,8 +9602,8 @@ Register, 2010).
 
 [underline]#Maximum range:# 360
 
-[underline]#Range closure:# Right half-open interval (stem:["minimum"
-<= bb "orientation value" < "maximum"])
+[underline]#Range closure:# Right half-open interval
+(stem:["minimum" <= bb "orientation value" < "maximum"])
 
 [underline]#Example:# *246.7* for an orientation value of 246∙7
 degrees
@@ -10454,8 +10455,8 @@ is 1:89&nbsp;999 is encoded as 89999.
 
 [underline]#Maximum range:# 19999999
 
-[underline]#Range closure:# Closed interval (stem:["minimum" <=
-bb"scale minimum" <= "maximum"])
+[underline]#Range closure:# Closed interval
+(stem:["minimum" <= bb"scale minimum" <= "maximum"])
 
 [underline]#Example:# If a particular minimum scale is specified as
 1:89&nbsp;999 (encoded as *89999*), and an example of a smaller scale
@@ -10512,8 +10513,8 @@ S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.184, November 2000).
 
 [underline]#Maximum range:# 360
 
-[underline]#Range closure:# Right half-open interval (stem:["minimum"
-<= bb "sector bearing" < "maximum"])
+[underline]#Range closure:# Right half-open interval
+(stem:["minimum" <= bb "sector bearing" < "maximum"])
 
 [underline]#Example:# *125* for a sector bearing of 125 degrees
 
@@ -10588,8 +10589,8 @@ sequence.
 
 [underline]#Maximum range:# 60
 
-[underline]#Range closure:# Left half-open interval (stem:["minimum"
-< bb "signal duration" <= "maximum"])
+[underline]#Range closure:# Left half-open interval
+(stem:["minimum" < bb "signal duration" <= "maximum"])
 
 [underline]#Example:# *2.5* for an duration of 2·5 seconds
 
@@ -10761,8 +10762,8 @@ by an entire cycle of intervals of light and eclipse. (S-57 Edition
 
 [underline]#Maximum range:# 120
 
-[underline]#Range closure:# Left half-open interval (stem:["minimum"
-< bb "signal period" <= "maximum"])
+[underline]#Range closure:# Left half-open interval
+(stem:["minimum" < bb "signal period" <= "maximum"])
 
 [underline]#Example:# *12* for an interval of 12 seconds
 
@@ -10821,8 +10822,8 @@ sub-attribute *speed units* (see <<sec_27.168>>).
 
 [underline]#Maximum range:# 35
 
-[underline]#Range closure:# Left half-open interval (stem:["minimum"
-< bb "speed limit" <= "maximum"])
+[underline]#Range closure:# Left half-open interval
+(stem:["minimum" < bb "speed limit" <= "maximum"])
 
 [underline]#Example:# *4.5* for a speed limit of 4.5 knots (or other
 speed unit of measure as defined by *speed units*)
@@ -10858,8 +10859,8 @@ from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.121, November
 
 [underline]#Maximum range:# 35
 
-[underline]#Range closure:# Left half-open interval (stem:["minimum"
-< bb "speed maximum" <= "maximum"])
+[underline]#Range closure:# Left half-open interval
+(stem:["minimum" < bb "speed maximum" <= "maximum"])
 
 [underline]#Example:# *2.1* for a maximum speed of 2·1 knots
 
@@ -10894,8 +10895,8 @@ from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.121, November
 
 [underline]#Maximum range:# 20
 
-[underline]#Range closure:# Left half-open interval (stem:["minimum"
-< bb "speed minimum" <= "maximum"])
+[underline]#Range closure:# Left half-open interval
+(stem:["minimum" < bb "speed minimum" <= "maximum"])
 
 [underline]#Example:# *1.6* for a maximum speed of 1·6 knots
 
@@ -11165,8 +11166,8 @@ metadata: metre (m)
 
 [underline]#Maximum range:# 200
 
-[underline]#Range closure:# Closed interval (stem:["minimum" <= bb
-"stream depth" <= "maximum"])
+[underline]#Range closure:# Closed interval
+(stem:["minimum" <= bb "stream depth" <= "maximum"])
 
 [underline]#Examples:#::
 *0*::: for surface tidal stream data
@@ -11500,8 +11501,8 @@ is positioned from the feature in an end-user system.
 
 [underline]#Maximum range:# 360
 
-[underline]#Range closure:# Right half-open interval (stem:["minimum"
-<= bb "text offset bearing" < "maximum"])
+[underline]#Range closure:# Right half-open interval
+(stem:["minimum" <= bb "text offset bearing" < "maximum"])
 
 [underline]#Example:# *246* for a text offset bearing of 246 degrees
 
@@ -11534,8 +11535,8 @@ scale of the ENC data in millimetres (mm).
 
 [underline]#Maximum range:# 50
 
-[underline]#Range closure:# Left half-open interval (stem:["minimum"
-< bb "text offset distance" <= "maximum"])
+[underline]#Range closure:# Left half-open interval
+(stem:["minimum" < bb "text offset distance" <= "maximum"])
 
 [underline]#Example:# *15* for a text offset of 15 mm
 
@@ -11699,8 +11700,8 @@ relative to the reference tide.
 
 [underline]#Maximum range:# 6
 
-[underline]#Range closure:# Closed interval (stem:["minimum" <= bb
-"tide relative to tide" <= "maximum"])
+[underline]#Range closure:# Closed interval
+(stem:["minimum" <= bb "tide relative to tide" <= "maximum"])
 
 [underline]#Example:# *1.5* for 1·5 hours after the referenced
 tide**-1.5** for 1·5 hours before the referenced tide
@@ -12089,8 +12090,8 @@ in a layered seabed, with the value _0_ indicating the topmost level.
 
 [underline]#Maximum range:# 5
 
-[underline]#Range closure:# Left half-open interval (stem:["minimum"
-< bb "underlying layer" <= "maximum"])
+[underline]#Range closure:# Left half-open interval
+(stem:["minimum" < bb "underlying layer" <= "maximum"])
 
 [underline]#Example:# *1* where the seabed type is the layer below
 the top of the seabed surface.
@@ -12154,8 +12155,8 @@ Chapter 2, Page 2.227, November 2000).
 
 [underline]#Maximum range:# 12500
 
-[underline]#Range closure:# Open interval (stem:["minimum" < bb
-"value of depth contour" < "maximum"])
+[underline]#Range closure:# Open interval
+(stem:["minimum" < bb "value of depth contour" < "maximum"])
 
 [underline]#Example:# *50* for a depth contour of 50 metres
 
@@ -12185,8 +12186,8 @@ north from true north. (IHO Dictionary -- S-32).
 
 [underline]#Maximum range:# 180
 
-[underline]#Range closure:# Left half-open interval (stem:["minimum"
-< bb "value of magnetic variation" <= "maximum"])
+[underline]#Range closure:# Left half-open interval
+(stem:["minimum" < bb "value of magnetic variation" <= "maximum"])
 
 [underline]#Example:# *2.3* for a magnetic north oriented at 2.3
 degrees (2°18') east from the geographic (true) north-*1.5* for a
@@ -12251,8 +12252,8 @@ S-32).
 
 [underline]#Maximum range:# 30
 
-[underline]#Range closure:# Left half-open interval (stem:["minimum"
-< bb "value of nominal range" <= "maximum"])
+[underline]#Range closure:# Left half-open interval
+(stem:["minimum" < bb "value of nominal range" <= "maximum"])
 
 [underline]#Example:# *14* for a nominal range of 14 nautical miles
 
@@ -12282,8 +12283,8 @@ metadata: metre (m)
 
 [underline]#Maximum range:# 12500
 
-[underline]#Range closure:# Open interval (stem:["minimum" < bb
-"value of sounding" < "maximum"])
+[underline]#Range closure:# Open interval
+(stem:["minimum" < bb "value of sounding" < "maximum"])
 
 [underline]#Examples:#::
 *18.2*::: for a sounding of 18∙2 metres
@@ -12640,8 +12641,8 @@ Discovery Metadata: metre (m)
 
 [underline]#Maximum range:# 900
 
-[underline]#Range closure:# Left half-open interval (stem:["minimum"
-< bb "vertical length" <= "maximum"])Minimum value: 0
+[underline]#Range closure:# Left half-open interval
+(stem:["minimum" < bb "vertical length" <= "maximum"])Minimum value: 0
 
 [underline]#Example:# *24.5* for a vertical length of 24.5 metres
 

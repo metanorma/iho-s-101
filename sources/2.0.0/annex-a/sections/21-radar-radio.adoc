@@ -125,8 +125,9 @@ AIS signal is, or appears to be, transmitted. If it is required to
 encode the actual location from which the signal is transmitted for a
 physical AIS aid to navigation where the signal is transmitted from
 another location, it must be done using a *Radio Station* feature
-(see <<sec_21.4>>), with attribute stem:[bb "category of radio
-station" = 16] (AIS base station).
+(see <<sec_21.4>>), with attribute
+stem:[bb "category of radio station" = 16]
+(AIS base station).
 * The unique Maritime Mobile Service Identity (MMSI) code for the
 physical AIS aid to navigation should be encoded, where known, using
 the attribute *MMSI code*.
@@ -257,8 +258,9 @@ application of ENC Updates is impractical, the Virtual aid should not
 be encoded.
 * If the virtual AIS aid to navigation is intended to serve a purpose
 other than the types defined in attribute *virtual AIS aid to
-navigation type*, it should be encoded using stem:[bb "virtual AIS
-aid to navigation type" = 11] (special purpose), and the purpose
+navigation type*, it should be encoded using
+stem:[bb "virtual AIS aid to navigation type" = 11]
+(special purpose), and the purpose
 encoded using the complex attribute *information*, sub-attribute
 *text*.
 * The unique Maritime Mobile Service Identity (MMSI) code for the
@@ -422,8 +424,8 @@ be indicated through an associated instance of the information type
 *Contact Details*, attribute *communication channel* (see
 <<sec_24.1>>).
 * If it is required to encode a DGPS station, it must be done using
-*Radio Station*, with attribute stem:[bb "category of radio station"
-= 10] (Differential GNSS).
+*Radio Station*, with attribute
+stem:[bb "category of radio station" = 10] (Differential GNSS).
 * Where required, the complex attribute *frequency pair*,
 sub-attributes *frequency shore station receives* and *frequency
 shore station transmits*, must be quoted in Hertz, for example a
@@ -433,10 +435,10 @@ signal frequency of 950 MHz must be encoded as _950000000_.
 ==== Radio direction-finding stations (see S-4 -- B-483)
 
 If it is required to encode a radio direction-finding station, it
-must be done using a *Radio Station* feature, with attribute stem:[bb
-"category of radio station" = 5] (radio direction-finding station).
-The identification signal may be encoded using the attribute *call
-sign*.
+must be done using a *Radio Station* feature, with attribute
+stem:[bb "category of radio station" = 5]
+(radio direction-finding station). The identification signal ma
+be encoded using the attribute *call sign*.
 
 [underline]#Remarks:#
 
