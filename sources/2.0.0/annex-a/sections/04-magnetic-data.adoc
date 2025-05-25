@@ -108,8 +108,7 @@ or magnetic anomaly. (IHO Dictionary -- S-32).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[four_two]
@@ -122,8 +121,7 @@ or magnetic anomaly. (IHO Dictionary -- S-32).
 
 3+| magnetic anomaly value 2+| (VALLMA) 3+| | (S) RE | 1,1
 
-3+| reference direction
-2+| 3+|
+3+| reference direction 2+| 3+|
 5: east +
 13: west | (S) EN
 | 0,1 footnoteblock:[four_two]
@@ -179,7 +177,7 @@ exceed 3° from the norm for the area (see <<sec_4.1>>), because diurnal
 and seasonal fluctuations in the Earth's magnetic field can change
 the stated variation by up to 1° and, in some parts of the world,
 the data on which isogonals are based may not ensure the accuracy
-of charted values to better than ±2°.
+of charted values to better than stem:[pm 2 "unitsml(deg)"].
 
 If it is required to encode an abnormality in magnetic variation for
 a localised area, it must be done using the feature

@@ -1004,13 +1004,13 @@ is indicated, that is a factor of 5% is encoded as 0.05.
 
 Example: The positional accuracy for the highest accuracy for hydrographic
 data in a *Spatial Quality* feature is quoted as
-"±5 metres + 10% depth". The variable component in this example is
+"stem:[pm 5 " metres" + 10% " depth"]". The variable component in this example is
 depth, and the factor to be applied to the depth at a location in
 order to provide the variable uncertainty is *0.1*.
 
 In this example, at a depth of 25 metres, the variable uncertainty
 would be 2.5 metres, and the overall best estimate of the positional
-accuracy would be ±7.5 metres.
+accuracy would be stem:[pm 7.5 " metres"].
 
 [underline]#Remarks:#
 

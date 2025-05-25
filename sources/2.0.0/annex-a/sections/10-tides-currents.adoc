@@ -36,8 +36,7 @@ during springs. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[ten_two]
@@ -50,17 +49,14 @@ during springs. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| orientation
-2+| 3+| | C | 1,1
+3+| orientation 2+| 3+| | C | 1,1
 
-3+| orientation uncertainty
-2+| 3+| | (S) RE
+3+| orientation uncertainty 2+| 3+| | (S) RE
 | 0,1
 
 3+| orientation value 2+| _(ORIENT)_ 3+| | (S) RE | 1,1
 
-3+| speed
-2+| 3+| | C | 1,1
+3+| speed 2+| 3+| | C | 1,1
 
 3+| speed maximum 2+| (CURVEL) 3+| stem:[35.0 >= "speed maximum" > "speed minimum"] | (S) RE | 1,1
 
@@ -70,14 +66,12 @@ during springs. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter
 
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[ten_two]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -171,8 +165,7 @@ Any current that is caused by other than tide producing force.
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[ten_three]
@@ -185,11 +178,9 @@ Any current that is caused by other than tide producing force.
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| orientation
-2+| 3+| | C | 1,1
+3+| orientation 2+| 3+| | C | 1,1
 
-3+| orientation uncertainty
-2+| 3+| | (S) RE
+3+| orientation uncertainty 2+| 3+| | (S) RE
 | 0,1
 
 3+| orientation value 2+| _(ORIENT)_ 3+| | (S) RE | 1,1
@@ -200,8 +191,7 @@ Any current that is caused by other than tide producing force.
 
 3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
 
-3+| speed
-2+| 3+| | C | 1,1
+3+| speed 2+| 3+| | C | 1,1
 
 3+| speed maximum 2+| (CURVEL) 3+| stem:[35.0 >= "speed maximum" > "speed minimum"] | (S) RE | 1,1
 
@@ -213,14 +203,12 @@ Any current that is caused by other than tide producing force.
 
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[ten_three]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -339,8 +327,7 @@ tidal streams, wind, shoal patches and obstructions. (IHO Dictionary
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[ten_four]
@@ -350,14 +337,12 @@ tidal streams, wind, shoal patches and obstructions. (IHO Dictionary
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[ten_four]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1

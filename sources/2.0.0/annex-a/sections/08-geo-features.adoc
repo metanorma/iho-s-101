@@ -113,8 +113,7 @@ Data Dictionary Register, 2010).
 | (S) TE
 | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
+3+| name 2+| _(OBJNAM) (NOBJNM)_
 3+a| | (S) TE
 | 1,1
 
@@ -148,8 +147,7 @@ Data Dictionary Register, 2010).
 3+a| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_two]
 
@@ -166,8 +164,7 @@ Data Dictionary Register, 2010).
 | (S) TE
 | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
+3+| text 2+| _(INFORM) (NINFOM)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_two]
 
@@ -274,8 +271,7 @@ It may be abandoned or put to some other use. (Adapted from IHO Dictionary
 | (S) TE
 | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
+3+| name 2+| _(OBJNAM) (NOBJNM)_
 3+a| | (S) TE
 | 1,1
 
@@ -285,25 +281,17 @@ It may be abandoned or put to some other use. (Adapted from IHO Dictionary
 
 3+| fixed date range 2+a| 3+| See <<sec_2.4.8>> | C | 0,1
 
-3+| date end
-2+| (DATEND)
-3+a| | (S) TD
-| 0,1 footnoteblock:[eight_three]
+3+| date end 2+| (DATEND) 3+a| | (S) TD | 0,1 footnoteblock:[eight_three]
 
-3+| date start
-2+| (DATSTA)
-3+a| | (S) TD
-| 0,1 footnoteblock:[eight_three]
+3+| date start 2+| (DATSTA) 3+a| | (S) TD | 0,1 footnoteblock:[eight_three]
 
-3+| horizontal length
-2+| (HORLEN)
+3+| horizontal length 2+| (HORLEN)
 3+a|
 
 | RE
 | 0,1
 
-3+| horizontal width
-2+| (HORWID)
+3+| horizontal width 2+| (HORWID)
 3+a|
 
 | RE
@@ -323,18 +311,15 @@ It may be abandoned or put to some other use. (Adapted from IHO Dictionary
 | C
 | 0,*
 
-3+| date end
-2+| _(PEREND)_
+3+| date end 2+| _(PEREND)_
 3+a| | (S) TD
 | 1,1
 
-3+| date start
-2+| _(PERSTA)_
+3+| date start 2+| _(PERSTA)_
 3+a| | (S) TD
 | 1,1
 
-3+| radar conspicuous
-2+| (CONRAD)
+3+| radar conspicuous 2+| (CONRAD)
 3+a|
 
 | BO
@@ -342,8 +327,7 @@ It may be abandoned or put to some other use. (Adapted from IHO Dictionary
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 
-3+| vertical length
-2+| (VERLEN)
+3+| vertical length 2+| (VERLEN)
 3+a|
 
 | RE
@@ -367,8 +351,7 @@ It may be abandoned or put to some other use. (Adapted from IHO Dictionary
 3+a| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_three]
 
@@ -385,8 +368,7 @@ It may be abandoned or put to some other use. (Adapted from IHO Dictionary
 | (S) TE
 | 0,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
+3+| text 2+| _(INFORM) (NINFOM)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_three]
 
@@ -515,8 +497,7 @@ or as a free standing pole within a marine environment. (IHO Dictionary
 | (S) TE
 | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
+3+| name 2+| _(OBJNAM) (NOBJNM)_
 3+a| | (S) TE
 | 1,1
 
@@ -534,18 +515,15 @@ or as a free standing pole within a marine environment. (IHO Dictionary
 | C
 | 0,1
 
-3+| date end
-2+| (DATEND)
+3+| date end 2+| (DATEND)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_four]
 
-3+| date start
-2+| (DATSTA)
+3+| date start 2+| (DATSTA)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_four]
 
-3+| height
-2+| (HEIGHT)
+3+| height 2+| (HEIGHT)
 3+a|
 
 | RE
@@ -558,8 +536,7 @@ or as a free standing pole within a marine environment. (IHO Dictionary
 | URN
 | 0,1
 
-3+| radar conspicuous
-2+| (CONRAD)
+3+| radar conspicuous 2+| (CONRAD)
 3+a|
 
 | BO
@@ -574,8 +551,7 @@ or as a free standing pole within a marine environment. (IHO Dictionary
 8: private +
 12: illuminated +
 14: public | EN | 0,*
-3+| vertical length
-2+| (VERLEN)
+3+| vertical length 2+| (VERLEN)
 3+a|
 
 | RE
@@ -599,8 +575,7 @@ or as a free standing pole within a marine environment. (IHO Dictionary
 3+a| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_four]
 
@@ -617,8 +592,7 @@ or as a free standing pole within a marine environment. (IHO Dictionary
 | (S) TE
 | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
+3+| text 2+| _(INFORM) (NINFOM)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_four]
 
@@ -721,8 +695,7 @@ embankment to contain or hold back water. (Adapted from IHO Dictionary
 | (S) TE
 | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
+3+| name 2+| _(OBJNAM) (NOBJNM)_
 3+a| | (S) TE
 | 1,1
 
@@ -740,18 +713,15 @@ embankment to contain or hold back water. (Adapted from IHO Dictionary
 | C
 | 0,1
 
-3+| date end
-2+| (DATEND)
+3+| date end 2+| (DATEND)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_five]
 
-3+| date start
-2+| (DATSTA)
+3+| date start 2+| (DATSTA)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_five]
 
-3+| height
-2+| (HEIGHT)
+3+| height 2+| (HEIGHT)
 3+a|
 
 | RE
@@ -797,8 +767,7 @@ embankment to contain or hold back water. (Adapted from IHO Dictionary
 3+a| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_five]
 
@@ -815,8 +784,7 @@ embankment to contain or hold back water. (Adapted from IHO Dictionary
 | (S) TE
 | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
+3+| text 2+| _(INFORM) (NINFOM)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_five]
 
@@ -948,8 +916,7 @@ A -- Chapter 1, Page 1.154, November 2000, as amended).
 | (S) TE
 | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
+3+| name 2+| _(OBJNAM) (NOBJNM)_
 3+a| | (S) TE
 | 1,1
 
@@ -959,18 +926,15 @@ A -- Chapter 1, Page 1.154, November 2000, as amended).
 
 3+| fixed date range 2+a| 3+| See <<sec_2.4.8>> | C | 0,1
 
-3+| date end
-2+| (DATEND)
+3+| date end 2+| (DATEND)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_six]
 
-3+| date start
-2+| (DATSTA)
+3+| date start 2+| (DATSTA)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_six]
 
-3+| height
-2+| (HEIGHT)
+3+| height 2+| (HEIGHT)
 3+a|
 
 | RE
@@ -984,25 +948,21 @@ A -- Chapter 1, Page 1.154, November 2000, as amended).
 | C
 | 0,1
 
-3+| horizontal clearance value
-2+| (HORCLR)
+3+| horizontal clearance value 2+| (HORCLR)
 3+a| | (S) RE
 | 1,1
 
-3+| horizontal distance uncertainty
-2+| (HORACC)
+3+| horizontal distance uncertainty 2+| (HORACC)
 3+a| | (S) RE
 | 0,1
 
-3+| horizontal length
-2+| (HORLEN)
+3+| horizontal length 2+| (HORLEN)
 3+a|
 
 | RE
 | 0,1
 
-3+| horizontal width
-2+| (HORWID)
+3+| horizontal width 2+| (HORWID)
 3+a|
 
 | RE
@@ -1025,8 +985,7 @@ A -- Chapter 1, Page 1.154, November 2000, as amended).
 7: metal +
 8: glass reinforced plastic +
 11: latticed | EN | 0,*
-3+| radar conspicuous
-2+| (CONRAD)
+3+| radar conspicuous 2+| (CONRAD)
 3+a|
 
 | BO
@@ -1045,8 +1004,7 @@ A -- Chapter 1, Page 1.154, November 2000, as amended).
 13: historic +
 14: public +
 28: buoyed | EN | 0,*
-3+| vertical length
-2+| (VERLEN)
+3+| vertical length 2+| (VERLEN)
 3+a|
 
 | RE
@@ -1078,8 +1036,7 @@ A -- Chapter 1, Page 1.154, November 2000, as amended).
 3+a| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_six]
 
@@ -1096,8 +1053,7 @@ A -- Chapter 1, Page 1.154, November 2000, as amended).
 | (S) TE
 | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
+3+| text 2+| _(INFORM) (NINFOM)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_six]
 
@@ -1273,12 +1229,10 @@ to provide protection for a vessel or its cargo.
 3+| language
 2+a|
 
-3+| ISO 639-2/T
-2+| (S) TE
+3+| ISO 639-2/T 2+| (S) TE
 | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
+3+| name 2+| _(OBJNAM) (NOBJNM)_
 3+a|
 
 2+| (S) TE
@@ -1294,26 +1248,22 @@ to provide protection for a vessel or its cargo.
 3+| fixed date range
 2+a|
 
-3+| See <<sec_2.4.8>>
-2+| C
+3+| See <<sec_2.4.8>> 2+| C
 | 0,1
 
-3+| date end
-2+| (DATEND)
+3+| date end 2+| (DATEND)
 3+a|
 
 2+| (S) TD
 | 0,1 footnoteblock:[eight_seven]
 
-3+| date start
-2+| (DATSTA)
+3+| date start 2+| (DATSTA)
 3+a|
 
 2+| (S) TD
 | 0,1 footnoteblock:[eight_seven]
 
-3+| height
-2+| (HEIGHT)
+3+| height 2+| (HEIGHT)
 3+a|
 
 2+| RE
@@ -1327,29 +1277,25 @@ to provide protection for a vessel or its cargo.
 2+| C
 | 1,1
 
-3+| horizontal clearance value
-2+| (HORCLR)
+3+| horizontal clearance value 2+| (HORCLR)
 3+a|
 
 2+| (S) RE
 | 1,1
 
-3+| horizontal distance uncertainty
-2+| (HORACC)
+3+| horizontal distance uncertainty 2+| (HORACC)
 3+a|
 
 2+| (S) RE
 | 0,1
 
-3+| horizontal length
-2+| (HORLEN)
+3+| horizontal length 2+| (HORLEN)
 3+a|
 
 2+| RE
 | 0,1
 
-3+| horizontal width
-2+| (HORWID)
+3+| horizontal width 2+| (HORWID)
 3+a|
 
 2+| RE
@@ -1358,8 +1304,7 @@ to provide protection for a vessel or its cargo.
 3+| interoperability identifier
 2+a|
 
-3+| MRN (see <<sec_27.114>>)
-2+| URN
+3+| MRN (see <<sec_27.114>>) 2+| URN
 | 0,1
 
 3+| nature of construction 2+| (NATCON) 3+|
@@ -1373,19 +1318,16 @@ to provide protection for a vessel or its cargo.
 3+| periodic date range
 2+a|
 
-3+| See <<sec_2.4.8>>
-2+| C
+3+| See <<sec_2.4.8>> 2+| C
 | 0,*
 
-3+| date end
-2+| _(PEREND)_
+3+| date end 2+| _(PEREND)_
 3+a|
 
 2+| (S) TD
 | 1,1
 
-3+| date start
-2+| _(PERSTA)_
+3+| date start 2+| _(PERSTA)_
 3+a|
 
 2+| (S) TD
@@ -1398,8 +1340,7 @@ to provide protection for a vessel or its cargo.
 21: cement +
 22: grain +
 25: clay 2+| EN | 0,1
-3+| radar conspicuous
-2+| (CONRAD)
+3+| radar conspicuous 2+| (CONRAD)
 3+a|
 
 2+| BO
@@ -1422,15 +1363,13 @@ to provide protection for a vessel or its cargo.
 2+| C
 | 1,1
 
-3+| vertical clearance value
-2+| (VERCLR)
+3+| vertical clearance value 2+| (VERCLR)
 3+a|
 
 2+| (S) RE
 | 1,1
 
-3+| vertical uncertainty
-2+| _(VERACC)_
+3+| vertical uncertainty 2+| _(VERACC)_
 3+a|
 
 2+| (S) C
@@ -1468,8 +1407,7 @@ to provide protection for a vessel or its cargo.
 29: nearly highest high water +
 30: highest astronomical tide +
 44: baltic sea chart datum 2000 2+| EN | 0,1
-3+| vertical length
-2+| (VERLEN)
+3+| vertical length 2+| (VERLEN)
 3+a|
 
 2+| RE
@@ -1483,8 +1421,7 @@ to provide protection for a vessel or its cargo.
 3+| information
 2+a|
 
-3+| See <<sec_2.4.6>>
-2+| C
+3+| See <<sec_2.4.6>> 2+| C
 | 0,*
 
 3+| file locator
@@ -1495,8 +1432,7 @@ to provide protection for a vessel or its cargo.
 2+| (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_
 3+a|
 
 2+| (S) TE
@@ -1513,12 +1449,10 @@ to provide protection for a vessel or its cargo.
 3+| language
 2+a|
 
-3+| ISO 639-2/T
-2+| (S) TE
+3+| ISO 639-2/T 2+| (S) TE
 | 0,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
+3+| text 2+| _(INFORM) (NINFOM)_
 3+a|
 
 2+| (S) TE
@@ -1650,8 +1584,7 @@ Shoreline Construction; Small Craft Facility.
 | (S) TE
 | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
+3+| name 2+| _(OBJNAM) (NOBJNM)_
 3+a| | (S) TE
 | 1,1
 
@@ -1705,8 +1638,7 @@ Shoreline Construction; Small Craft Facility.
 3+a| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_eight]
 
@@ -1723,8 +1655,7 @@ Shoreline Construction; Small Craft Facility.
 | (S) TE
 | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
+3+| text 2+| _(INFORM) (NINFOM)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_eight]
 
@@ -1806,8 +1737,7 @@ or irrigating land (ditch). (IHO Dictionary -- S-32).
 | (S) TE
 | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
+3+| name 2+| _(OBJNAM) (NOBJNM)_
 3+a| | (S) TE
 | 1,1
 
@@ -1825,13 +1755,11 @@ or irrigating land (ditch). (IHO Dictionary -- S-32).
 | C
 | 0,1
 
-3+| date end
-2+| (DATEND)
+3+| date end 2+| (DATEND)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_nine]
 
-3+| date start
-2+| (DATSTA)
+3+| date start 2+| (DATSTA)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_nine]
 
@@ -1843,18 +1771,15 @@ or irrigating land (ditch). (IHO Dictionary -- S-32).
 | C
 | 0,1
 
-3+| horizontal clearance value
-2+| (HORCLR)
+3+| horizontal clearance value 2+| (HORCLR)
 3+a| | (S) RE
 | 1,1
 
-3+| horizontal distance uncertainty
-2+| (HORACC)
+3+| horizontal distance uncertainty 2+| (HORACC)
 3+a| | (S) RE
 | 0,1
 
-3+| horizontal width
-2+| (HORWID)
+3+| horizontal width 2+| (HORWID)
 3+a|
 
 | RE
@@ -1890,8 +1815,7 @@ or irrigating land (ditch). (IHO Dictionary -- S-32).
 3+a| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_nine]
 
@@ -1908,8 +1832,7 @@ or irrigating land (ditch). (IHO Dictionary -- S-32).
 | (S) TE
 | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
+3+| text 2+| _(INFORM) (NINFOM)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_nine]
 
@@ -1988,8 +1911,7 @@ Page 1.55, November 2000).
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 
-3+| distance mark visible
-2+| (_CATDIS_)
+3+| distance mark visible 2+| (_CATDIS_)
 3+a|
 
 | BO
@@ -2009,8 +1931,7 @@ Page 1.55, November 2000).
 | (S) TE
 | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
+3+| name 2+| _(OBJNAM) (NOBJNM)_
 3+a| | (S) TE
 | 1,1
 
@@ -2028,13 +1949,11 @@ Page 1.55, November 2000).
 | C
 | 0,1
 
-3+| date end
-2+| (DATEND)
+3+| date end 2+| (DATEND)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_ten]
 
-3+| date start
-2+| (DATSTA)
+3+| date start 2+| (DATSTA)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_ten]
 
@@ -2045,8 +1964,7 @@ Page 1.55, November 2000).
 | URN
 | 0,1
 
-3+| measured distance value
-2+| _(INFORM) (NINFOM)_
+3+| measured distance value 2+| _(INFORM) (NINFOM)_
 3+a|
 
 | C
@@ -2088,8 +2006,7 @@ Page 1.55, November 2000).
 3+a| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_ten]
 
@@ -2106,8 +2023,7 @@ Page 1.55, November 2000).
 | (S) TE
 | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
+3+| text 2+| _(INFORM) (NINFOM)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_ten]
 
@@ -2189,8 +2105,7 @@ Register, 2012).
 1: under construction +
 2: ruined +
 5: planned construction | EN | 0,1
-3+| depth range minimum value
-2+| (DRVAL1)
+3+| depth range minimum value 2+| (DRVAL1)
 3+a|
 
 | RE
@@ -2210,8 +2125,7 @@ Register, 2012).
 | (S) TE
 | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
+3+| name 2+| _(OBJNAM) (NOBJNM)_
 3+a| | (S) TE
 | 1,1
 
@@ -2230,13 +2144,11 @@ Register, 2012).
 | C
 | 0,1 footnoteblock:[eight_eleven]
 
-3+| horizontal clearance value
-2+| _(HORCLR)_
+3+| horizontal clearance value 2+| _(HORCLR)_
 3+a| | (S) RE
 | 1,1
 
-3+| horizontal distance uncertainty
-2+| (HORACC)
+3+| horizontal distance uncertainty 2+| (HORACC)
 3+a| | (S) RE
 | 0,1
 
@@ -2280,13 +2192,11 @@ Register, 2012).
 | S (BO)
 | 1,1
 
-3+| vertical clearance value
-2+| _(VERCLR)_
+3+| vertical clearance value 2+| _(VERCLR)_
 3+a| | (S) RE
 | 0,1 footnoteblock:[eight_eleven]
 
-3+| vertical uncertainty
-2+| _(VERACC)_
+3+| vertical uncertainty 2+| _(VERACC)_
 3+a| | (S) C
 | 0,1
 
@@ -2318,8 +2228,7 @@ Register, 2012).
 29: nearly highest high water +
 30: highest astronomical tide +
 44: baltic sea chart datum 2000 | EN | 0,1
-3+| vertical uncertainty
-2+| _(SOUACC)_
+3+| vertical uncertainty 2+| _(SOUACC)_
 3+a|
 
 | C
@@ -2351,8 +2260,7 @@ Register, 2012).
 3+a| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_eleven]
 
@@ -2369,8 +2277,7 @@ Register, 2012).
 | (S) TE
 | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
+3+| text 2+| _(INFORM) (NINFOM)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_eleven]
 
@@ -2487,8 +2394,7 @@ and raise its level to form a reservoir, or to prevent flooding.
 | (S) TE
 | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
+3+| name 2+| _(OBJNAM) (NOBJNM)_
 3+a| | (S) TE
 | 1,1
 
@@ -2506,18 +2412,15 @@ and raise its level to form a reservoir, or to prevent flooding.
 | C
 | 0,1
 
-3+| date end
-2+| (DATEND)
+3+| date end 2+| (DATEND)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_twelve]
 
-3+| date start
-2+| (DATSTA)
+3+| date start 2+| (DATSTA)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_twelve]
 
-3+| height
-2+| (HEIGHT)
+3+| height 2+| (HEIGHT)
 3+a|
 
 | RE
@@ -2536,8 +2439,7 @@ and raise its level to form a reservoir, or to prevent flooding.
 3: loose boulders +
 6: wooden +
 7: metal | EN | 0,*
-3+| radar conspicuous
-2+| (CONRAD)
+3+| radar conspicuous 2+| (CONRAD)
 3+a|
 
 | BO
@@ -2551,8 +2453,7 @@ and raise its level to form a reservoir, or to prevent flooding.
 8: private +
 14: public +
 28: buoyed | EN | 0,*
-3+| vertical length
-2+| (VERLEN)
+3+| vertical length 2+| (VERLEN)
 3+a|
 
 | RE
@@ -2581,8 +2482,7 @@ and raise its level to form a reservoir, or to prevent flooding.
 3+a| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_twelve]
 
@@ -2599,8 +2499,7 @@ and raise its level to form a reservoir, or to prevent flooding.
 | (S) TE
 | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
+3+| text 2+| _(INFORM) (NINFOM)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_twelve]
 
@@ -2740,8 +2639,7 @@ Geospatial Information Working Group; Feature Data Dictionary Register,
 | (S) TE
 | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
+3+| name 2+| _(OBJNAM) (NOBJNM)_
 3+a| | (S) TE
 | 1,1
 
@@ -2752,8 +2650,7 @@ Geospatial Information Working Group; Feature Data Dictionary Register,
 1: default name display +
 2: alternate name display | (S) EN | 0,1 footnoteblock:[eight_thirteen]
 
-3+| height
-2+| (HEIGHT)
+3+| height 2+| (HEIGHT)
 3+a|
 
 | RE
@@ -2766,8 +2663,7 @@ Geospatial Information Working Group; Feature Data Dictionary Register,
 | URN
 | 0,1
 
-3+| lifting capacity
-2+| (LIFCAP)
+3+| lifting capacity 2+| (LIFCAP)
 3+a|
 
 | RE
@@ -2787,13 +2683,11 @@ Geospatial Information Working Group; Feature Data Dictionary Register,
 3+a| | (S) RE
 | 0,1
 
-3+| orientation value
-2+| _(ORIENT)_
+3+| orientation value 2+| _(ORIENT)_
 3+a| | (S) RE
 | 1,1
 
-3+| radar conspicuous
-2+| (CONRAD)
+3+| radar conspicuous 2+| (CONRAD)
 3+a|
 
 | BO
@@ -2813,13 +2707,11 @@ Geospatial Information Working Group; Feature Data Dictionary Register,
 | C
 | 0,1
 
-3+| vertical clearance value
-2+| (VERCLR)
+3+| vertical clearance value 2+| (VERCLR)
 3+a| | (S) RE
 | 1,1
 
-3+| vertical uncertainty
-2+| _(VERACC)_
+3+| vertical uncertainty 2+| _(VERACC)_
 3+a| | (S) C
 | 0,1
 
@@ -2851,8 +2743,7 @@ Geospatial Information Working Group; Feature Data Dictionary Register,
 29: nearly highest high water +
 30: highest astronomical tide +
 44: baltic sea chart datum 2000 | EN | 0,1
-3+| vertical length
-2+| (VERLEN)
+3+| vertical length 2+| (VERLEN)
 3+a|
 
 | RE
@@ -2876,8 +2767,7 @@ Geospatial Information Working Group; Feature Data Dictionary Register,
 3+a| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_thirteen]
 
@@ -2894,8 +2784,7 @@ Geospatial Information Working Group; Feature Data Dictionary Register,
 | (S) TE
 | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
+3+| text 2+| _(INFORM) (NINFOM)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_thirteen]
 
@@ -3018,8 +2907,7 @@ or numbered, where a vessel may moor or anchor.
 | (S) TE
 | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
+3+| name 2+| _(OBJNAM) (NOBJNM)_
 3+a| | (S) TE
 | 1,1
 
@@ -3034,13 +2922,11 @@ or numbered, where a vessel may moor or anchor.
 | C
 | 0,1
 
-3+| date end
-2+| (DATEND)
+3+| date end 2+| (DATEND)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_fourteen]
 
-3+| date start
-2+| (DATSTA)
+3+| date start 2+| (DATSTA)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_fourteen]
 
@@ -3067,15 +2953,13 @@ or numbered, where a vessel may moor or anchor.
 | URN
 | 0,1
 
-3+| maximum permitted draught
-2+| _(INFORM) (NINFOM)_
+3+| maximum permitted draught 2+| _(INFORM) (NINFOM)_
 3+a|
 
 | RE
 | 0,1
 
-3+| minimum berth depth
-2+| _(DRVAL1)_
+3+| minimum berth depth 2+| _(DRVAL1)_
 3+a|
 
 | RE
@@ -3088,13 +2972,11 @@ or numbered, where a vessel may moor or anchor.
 | C
 | 0,*
 
-3+| date end
-2+| _(PEREND)_
+3+| date end 2+| _(PEREND)_
 3+a| | (S) TD
 | 1,1
 
-3+| date start
-2+| _(PERSTA)_
+3+| date start 2+| _(PERSTA)_
 3+a| | (S) TD
 | 1,1
 
@@ -3108,8 +2990,7 @@ or numbered, where a vessel may moor or anchor.
 7: temporary +
 9: mandatory +
 12: illuminated | EN | 0,*
-3+| vertical uncertainty
-2+| _(SOUACC)_
+3+| vertical uncertainty 2+| _(SOUACC)_
 3+a|
 
 | C
@@ -3141,8 +3022,7 @@ or numbered, where a vessel may moor or anchor.
 3+a| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_fourteen]
 
@@ -3159,8 +3039,7 @@ or numbered, where a vessel may moor or anchor.
 | (S) TE
 | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
+3+| text 2+| _(INFORM) (NINFOM)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_fourteen]
 
@@ -3274,8 +3153,7 @@ The dolphin may be in the water, on a wharf or on the beach.
 1: under construction +
 2: ruined +
 5: planned construction | EN | 0,1
-3+| elevation
-2+| (ELEVAT)
+3+| elevation 2+| (ELEVAT)
 3+a|
 
 | RE
@@ -3295,8 +3173,7 @@ The dolphin may be in the water, on a wharf or on the beach.
 | (S) TE
 | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
+3+| name 2+| _(OBJNAM) (NOBJNM)_
 3+a| | (S) TE
 | 1,1
 
@@ -3314,18 +3191,15 @@ The dolphin may be in the water, on a wharf or on the beach.
 | C
 | 0,1
 
-3+| date end
-2+| (DATEND)
+3+| date end 2+| (DATEND)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_fifteen]
 
-3+| date start
-2+| (DATSTA)
+3+| date start 2+| (DATSTA)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_fifteen]
 
-3+| height
-2+| (HEIGHT)
+3+| height 2+| (HEIGHT)
 3+a|
 
 | RE
@@ -3350,18 +3224,15 @@ The dolphin may be in the water, on a wharf or on the beach.
 | C
 | 0,*
 
-3+| date end
-2+| _(PEREND)_
+3+| date end 2+| _(PEREND)_
 3+a| | (S) TD
 | 1,1
 
-3+| date start
-2+| _(PERSTA)_
+3+| date start 2+| _(PERSTA)_
 3+a| | (S) TD
 | 1,1
 
-3+| radar conspicuous
-2+| (CONRAD)
+3+| radar conspicuous 2+| (CONRAD)
 3+a|
 
 | BO
@@ -3380,8 +3251,7 @@ The dolphin may be in the water, on a wharf or on the beach.
 12: illuminated +
 14: public +
 18: existence doubtful | EN | 0,*
-3+| vertical length
-2+| (VERLEN)
+3+| vertical length 2+| (VERLEN)
 3+a|
 
 | RE
@@ -3405,8 +3275,7 @@ The dolphin may be in the water, on a wharf or on the beach.
 3+a| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_fifteen]
 
@@ -3423,8 +3292,7 @@ The dolphin may be in the water, on a wharf or on the beach.
 | (S) TE
 | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
+3+| text 2+| _(INFORM) (NINFOM)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_fifteen]
 
@@ -3513,8 +3381,7 @@ on a wharf or dolphin used to secure ship's lines.
 | (S) TE
 | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
+3+| name 2+| _(OBJNAM) (NOBJNM)_
 3+a| | (S) TE
 | 1,1
 
@@ -3533,13 +3400,11 @@ on a wharf or dolphin used to secure ship's lines.
 | C
 | 0,1
 
-3+| date end
-2+| (DATEND)
+3+| date end 2+| (DATEND)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_sixteen]
 
-3+| date start
-2+| (DATSTA)
+3+| date start 2+| (DATSTA)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_sixteen]
 
@@ -3557,13 +3422,11 @@ on a wharf or dolphin used to secure ship's lines.
 | C
 | 0,*
 
-3+| date end
-2+| _(PEREND)_
+3+| date end 2+| _(PEREND)_
 3+a| | (S) TD
 | 1,1
 
-3+| date start
-2+| _(PERSTA)_
+3+| date start 2+| _(PERSTA)_
 3+a| | (S) TD
 | 1,1
 
@@ -3591,8 +3454,7 @@ on a wharf or dolphin used to secure ship's lines.
 3+a| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_sixteen]
 
@@ -3609,8 +3471,7 @@ on a wharf or dolphin used to secure ship's lines.
 | (S) TE
 | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
+3+| text 2+| _(INFORM) (NINFOM)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_sixteen]
 
@@ -3680,15 +3541,13 @@ dock. (IHO Dictionary -- S-32).
 2: ruined +
 3: under reclamation +
 5: planned construction | EN | 0,1
-3+| depth range minimum value
-2+| (DRVAL1)
+3+| depth range minimum value 2+| (DRVAL1)
 3+a|
 
 | RE
 | 0,1
 
-3+| elevation
-2+| (ELEVAT)
+3+| elevation 2+| (ELEVAT)
 3+a|
 
 | RE
@@ -3708,8 +3567,7 @@ dock. (IHO Dictionary -- S-32).
 | (S) TE
 | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
+3+| name 2+| _(OBJNAM) (NOBJNM)_
 3+a| | (S) TE
 | 1,1
 
@@ -3728,13 +3586,11 @@ dock. (IHO Dictionary -- S-32).
 | C
 | 0,1
 
-3+| date end
-2+| (DATEND)
+3+| date end 2+| (DATEND)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_seventeen]
 
-3+| date start
-2+| (DATSTA)
+3+| date start 2+| (DATSTA)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_seventeen]
 
@@ -3746,22 +3602,19 @@ dock. (IHO Dictionary -- S-32).
 | RE
 | 0,1
 
-3+| horizontal clearance width
-2+| _(HORCLR)_
+3+| horizontal clearance width 2+| _(HORCLR)_
 3+a|
 
 | RE
 | 0,1
 
-3+| horizontal length
-2+| (HORLEN)
+3+| horizontal length 2+| (HORLEN)
 3+a|
 
 | RE
 | 0,1
 
-3+| horizontal width
-2+| (HORWID)
+3+| horizontal width 2+| (HORWID)
 3+a|
 
 | RE
@@ -3774,8 +3627,7 @@ dock. (IHO Dictionary -- S-32).
 | URN
 | 0,1
 
-3+| maximum permitted draught
-2+| _(INFORM) (NINFOM)_
+3+| maximum permitted draught 2+| _(INFORM) (NINFOM)_
 3+a|
 
 | RE
@@ -3796,8 +3648,7 @@ dock. (IHO Dictionary -- S-32).
 8: private +
 12: illuminated +
 14: public | EN | 0,*
-3+| vertical uncertainty
-2+| _(SOUACC)_
+3+| vertical uncertainty 2+| _(SOUACC)_
 3+a|
 
 | C
@@ -3829,8 +3680,7 @@ dock. (IHO Dictionary -- S-32).
 3+a| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_seventeen]
 
@@ -3847,8 +3697,7 @@ dock. (IHO Dictionary -- S-32).
 | (S) TE
 | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
+3+| text 2+| _(INFORM) (NINFOM)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_seventeen]
 
@@ -3953,8 +3802,7 @@ exposed. (IHO Dictionary -- S-32).
 1: under construction +
 2: ruined +
 5: planned construction | EN | 0,1
-3+| depth range minimum value
-2+| (DRVAL1)
+3+| depth range minimum value 2+| (DRVAL1)
 3+a|
 
 | RE
@@ -3974,8 +3822,7 @@ exposed. (IHO Dictionary -- S-32).
 | (S) TE
 | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
+3+| name 2+| _(OBJNAM) (NOBJNM)_
 3+a| | (S) TE
 | 1,1
 
@@ -3993,13 +3840,11 @@ exposed. (IHO Dictionary -- S-32).
 | C
 | 0,1
 
-3+| date end
-2+| (DATEND)
+3+| date end 2+| (DATEND)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_eighteen]
 
-3+| date start
-2+| (DATSTA)
+3+| date start 2+| (DATSTA)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_eighteen]
 
@@ -4011,22 +3856,19 @@ exposed. (IHO Dictionary -- S-32).
 | RE
 | 0,1
 
-3+| horizontal clearance width
-2+| _(HORCLR)_
+3+| horizontal clearance width 2+| _(HORCLR)_
 3+a|
 
 | RE
 | 0,1
 
-3+| horizontal length
-2+| (HORLEN)
+3+| horizontal length 2+| (HORLEN)
 3+a|
 
 | RE
 | 0,1
 
-3+| horizontal width
-2+| (HORWID)
+3+| horizontal width 2+| (HORWID)
 3+a|
 
 | RE
@@ -4039,22 +3881,19 @@ exposed. (IHO Dictionary -- S-32).
 | URN
 | 0,1
 
-3+| lifting capacity
-2+| (LIFCAP)
+3+| lifting capacity 2+| (LIFCAP)
 3+a|
 
 | RE
 | 0,1
 
-3+| maximum permitted draught
-2+| _(INFORM) (NINFOM)_
+3+| maximum permitted draught 2+| _(INFORM) (NINFOM)_
 3+a|
 
 | RE
 | 0,1
 
-3+| radar conspicuous
-2+| (CONRAD)
+3+| radar conspicuous 2+| (CONRAD)
 3+a|
 
 | BO
@@ -4067,8 +3906,7 @@ exposed. (IHO Dictionary -- S-32).
 7: temporary +
 8: private +
 12: illuminated | EN | 0,*
-3+| vertical length
-2+| (VERLEN)
+3+| vertical length 2+| (VERLEN)
 3+a|
 
 | RE
@@ -4092,8 +3930,7 @@ exposed. (IHO Dictionary -- S-32).
 3+a| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_eighteen]
 
@@ -4110,8 +3947,7 @@ exposed. (IHO Dictionary -- S-32).
 | (S) TE
 | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
+3+| text 2+| _(INFORM) (NINFOM)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_eighteen]
 
@@ -4207,8 +4043,7 @@ support, etc. (Adapted from IHO Dictionary -- S-32).
 | (S) TE
 | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
+3+| name 2+| _(OBJNAM) (NOBJNM)_
 3+a| | (S) TE
 | 1,1
 
@@ -4227,13 +4062,11 @@ support, etc. (Adapted from IHO Dictionary -- S-32).
 | C
 | 0,1
 
-3+| date end
-2+| (DATEND)
+3+| date end 2+| (DATEND)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_nineteen]
 
-3+| date start
-2+| (DATSTA)
+3+| date start 2+| (DATSTA)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_nineteen]
 
@@ -4244,8 +4077,7 @@ support, etc. (Adapted from IHO Dictionary -- S-32).
 | URN
 | 0,1
 
-3+| radar conspicuous
-2+| (CONRAD)
+3+| radar conspicuous 2+| (CONRAD)
 3+a|
 
 | BO
@@ -4258,13 +4090,11 @@ support, etc. (Adapted from IHO Dictionary -- S-32).
 | C
 | 0,*
 
-3+| date end
-2+| _(PEREND)_
+3+| date end 2+| _(PEREND)_
 3+a| | (S) TD
 | 1,1
 
-3+| date start
-2+| _(PERSTA)_
+3+| date start 2+| _(PERSTA)_
 3+a| | (S) TD
 | 1,1
 
@@ -4278,8 +4108,7 @@ support, etc. (Adapted from IHO Dictionary -- S-32).
 8: private +
 12: illuminated +
 14: public | EN | 0,*
-3+| vertical length
-2+| (VERLEN)
+3+| vertical length 2+| (VERLEN)
 3+a|
 
 | RE
@@ -4303,8 +4132,7 @@ support, etc. (Adapted from IHO Dictionary -- S-32).
 3+a| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_nineteen]
 
@@ -4321,8 +4149,7 @@ support, etc. (Adapted from IHO Dictionary -- S-32).
 | (S) TE
 | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
+3+| text 2+| _(INFORM) (NINFOM)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_nineteen]
 
@@ -4413,8 +4240,7 @@ November 2000).
 | (S) TE
 | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
+3+| name 2+| _(OBJNAM) (NOBJNM)_
 3+a| | (S) TE
 | 1,1
 
@@ -4433,13 +4259,11 @@ November 2000).
 | C
 | 0,1
 
-3+| date end
-2+| (DATEND)
+3+| date end 2+| (DATEND)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_twenty]
 
-3+| date start
-2+| (DATSTA)
+3+| date start 2+| (DATSTA)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_twenty]
 
@@ -4451,13 +4275,11 @@ November 2000).
 | C
 | 0,1
 
-3+| horizontal clearance value
-2+| (HORCLR)
+3+| horizontal clearance value 2+| (HORCLR)
 3+a| | (S) RE
 | 1,1
 
-3+| horizontal distance uncertainty
-2+| (HORACC)
+3+| horizontal distance uncertainty 2+| (HORACC)
 3+a| | (S) RE
 | 0,1
 
@@ -4499,13 +4321,11 @@ November 2000).
 | C
 | 0,*
 
-3+| date end
-2+| _(PEREND)_
+3+| date end 2+| _(PEREND)_
 3+a| | (S) TD
 | 1,1
 
-3+| date start
-2+| _(PERSTA)_
+3+| date start 2+| _(PERSTA)_
 3+a| | (S) TD
 | 1,1
 
@@ -4529,8 +4349,7 @@ November 2000).
 3+a| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_twenty]
 
@@ -4547,8 +4366,7 @@ November 2000).
 | (S) TE
 | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
+3+| text 2+| _(INFORM) (NINFOM)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_twenty]
 
@@ -4655,8 +4473,7 @@ permit work on the exposed portion of the vessel's hull.
 | (S) TE
 | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
+3+| name 2+| _(OBJNAM) (NOBJNM)_
 3+a| | (S) TE
 | 1,1
 
@@ -4668,15 +4485,13 @@ permit work on the exposed portion of the vessel's hull.
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[eight_twenty-one]
 
-3+| horizontal length
-2+| (HORLEN)
+3+| horizontal length 2+| (HORLEN)
 3+a|
 
 | RE
 | 0,1
 
-3+| horizontal width
-2+| (HORWID)
+3+| horizontal width 2+| (HORWID)
 3+a|
 
 | RE
@@ -4702,8 +4517,7 @@ permit work on the exposed portion of the vessel's hull.
 8: private +
 14: public +
 28: buoyed | EN | 0,*
-3+| vertical length
-2+| (VERLEN)
+3+| vertical length 2+| (VERLEN)
 3+a|
 
 | RE
@@ -4727,8 +4541,7 @@ permit work on the exposed portion of the vessel's hull.
 3+a| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_twenty-one]
 
@@ -4745,8 +4558,7 @@ permit work on the exposed portion of the vessel's hull.
 | (S) TE
 | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
+3+| text 2+| _(INFORM) (NINFOM)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_twenty-one]
 
@@ -4818,8 +4630,7 @@ permitting a ship to pass from one level to another.
 | (S) TE
 | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
+3+| name 2+| _(OBJNAM) (NOBJNM)_
 3+a| | (S) TE
 | 1,1
 
@@ -4838,13 +4649,11 @@ permitting a ship to pass from one level to another.
 | C
 | 0,1
 
-3+| date end
-2+| (DATEND)
+3+| date end 2+| (DATEND)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_twenty-two]
 
-3+| date start
-2+| (DATSTA)
+3+| date start 2+| (DATSTA)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_twenty-two]
 
@@ -4856,25 +4665,21 @@ permitting a ship to pass from one level to another.
 | C
 | 0,1
 
-3+| horizontal clearance value
-2+| (HORCLR)
+3+| horizontal clearance value 2+| (HORCLR)
 3+a| | (S) RE
 | 1,1
 
-3+| horizontal distance uncertainty
-2+| (HORACC)
+3+| horizontal distance uncertainty 2+| (HORACC)
 3+a| | (S) RE
 | 0,1
 
-3+| horizontal length
-2+| (HORLEN)
+3+| horizontal length 2+| (HORLEN)
 3+a|
 
 | RE
 | 0,1
 
-3+| horizontal width
-2+| (HORWID)
+3+| horizontal width 2+| (HORWID)
 3+a|
 
 | RE
@@ -4894,13 +4699,11 @@ permitting a ship to pass from one level to another.
 | C
 | 0,*
 
-3+| date end
-2+| _(PEREND)_
+3+| date end 2+| _(PEREND)_
 3+a| | (S) TD
 | 1,1
 
-3+| date start
-2+| _(PERSTA)_
+3+| date start 2+| _(PERSTA)_
 3+a| | (S) TD
 | 1,1
 
@@ -4927,8 +4730,7 @@ permitting a ship to pass from one level to another.
 3+a| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_twenty-two]
 
@@ -4945,8 +4747,7 @@ permitting a ship to pass from one level to another.
 | (S) TE
 | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
+3+| text 2+| _(INFORM) (NINFOM)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_twenty-two]
 
@@ -5039,8 +4840,7 @@ cables, buoys and mooring berths on junction cables.
 | (S) TE
 | 1,1
 
-3+| name
-2+| _(OBJNAM) (NOBJNM)_
+3+| name 2+| _(OBJNAM) (NOBJNM)_
 3+a| | (S) TE
 | 1,1
 
@@ -5059,13 +4859,11 @@ cables, buoys and mooring berths on junction cables.
 | C
 | 0,1
 
-3+| date end
-2+| (DATEND)
+3+| date end 2+| (DATEND)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_twenty-three]
 
-3+| date start
-2+| (DATSTA)
+3+| date start 2+| (DATSTA)
 3+a| | (S) TD
 | 0,1 footnoteblock:[eight_twenty-three]
 
@@ -5090,8 +4888,7 @@ cables, buoys and mooring berths on junction cables.
 3+a| | (S) TE
 | 0,1
 
-3+| file reference
-2+| _(TXTDSC) (NTXTDS)_
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_twenty-three]
 
@@ -5108,8 +4905,7 @@ cables, buoys and mooring berths on junction cables.
 | (S) TE
 | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_
+3+| text 2+| _(INFORM) (NINFOM)_
 3+a| | (S) TE
 | 0,1 footnoteblock:[eight_twenty-three]
 

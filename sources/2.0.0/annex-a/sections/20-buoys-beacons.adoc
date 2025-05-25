@@ -59,8 +59,7 @@ used in conjunction with a conventional direction of buoyage.
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_one]
@@ -89,8 +88,7 @@ used in conjunction with a conventional direction of buoyage.
 
 3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
 
-3+| radar conspicuous
-2+| (CONRAD) 3+| | BO | 0,1
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
 
 3+| status 2+| (STATUS) 3+|
 1: permanent +
@@ -99,8 +97,7 @@ used in conjunction with a conventional direction of buoyage.
 7: temporary +
 8: private +
 18: existence doubtful | EN | 0,*
-3+| topmark
-2+| (*_TOPMAR_*) 3+| | C | 0,1
+3+| topmark 2+| (*_TOPMAR_*) 3+| | C | 0,1
 
 3+| colour 2+| (COLOUR) 3+|
 1: white +
@@ -163,8 +160,7 @@ used in conjunction with a conventional direction of buoyage.
 
 3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 1,1
 
-3+| vertical length
-2+| (VERLEN) 3+| | RE | 0,1
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
@@ -315,8 +311,7 @@ bearings from the point marked. (UKHO NP 735, 5^th^ Edition).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_two]
@@ -345,8 +340,7 @@ bearings from the point marked. (UKHO NP 735, 5^th^ Edition).
 
 3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
 
-3+| radar conspicuous
-2+| (CONRAD) 3+| | BO | 0,1
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
 
 3+| status 2+| (STATUS) 3+|
 1: permanent +
@@ -355,8 +349,7 @@ bearings from the point marked. (UKHO NP 735, 5^th^ Edition).
 7: temporary +
 8: private +
 18: existence doubtful | EN | 0,*
-3+| topmark
-2+| (*_TOPMAR_*) 3+| | C | 0,1
+3+| topmark 2+| (*_TOPMAR_*) 3+| | C | 0,1
 
 3+| colour 2+| (COLOUR) 3+|
 1: white +
@@ -419,8 +412,7 @@ bearings from the point marked. (UKHO NP 735, 5^th^ Edition).
 
 3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 1,1
 
-3+| vertical length
-2+| (VERLEN) 3+| | RE | 0,1
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
@@ -559,8 +551,7 @@ extent, which has navigable water all around it.
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_three]
@@ -589,8 +580,7 @@ extent, which has navigable water all around it.
 
 3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
 
-3+| radar conspicuous
-2+| (CONRAD) 3+| | BO | 0,1
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
 
 3+| status 2+| (STATUS) 3+|
 1: permanent +
@@ -599,8 +589,7 @@ extent, which has navigable water all around it.
 7: temporary +
 8: private +
 18: existence doubtful | EN | 0,*
-3+| topmark
-2+| (*_TOPMAR_*) 3+| | C | 0,1
+3+| topmark 2+| (*_TOPMAR_*) 3+| | C | 0,1
 
 3+| colour 2+| (COLOUR) 3+|
 1: white +
@@ -663,8 +652,7 @@ extent, which has navigable water all around it.
 
 3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 1,1
 
-3+| vertical length
-2+| (VERLEN) 3+| | RE | 0,1
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
@@ -795,8 +783,7 @@ mark. (UKHO NP 735, 5^th^ Edition).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_four]
@@ -825,8 +812,7 @@ mark. (UKHO NP 735, 5^th^ Edition).
 
 3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
 
-3+| radar conspicuous
-2+| (CONRAD) 3+| | BO | 0,1
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
 
 3+| status 2+| (STATUS) 3+|
 1: permanent +
@@ -835,8 +821,7 @@ mark. (UKHO NP 735, 5^th^ Edition).
 7: temporary +
 8: private +
 18: existence doubtful | EN | 0,*
-3+| topmark
-2+| (*_TOPMAR_*) 3+| | C | 0,1
+3+| topmark 2+| (*_TOPMAR_*) 3+| | C | 0,1
 
 3+| colour 2+| (COLOUR) 3+|
 1: white +
@@ -899,8 +884,7 @@ mark. (UKHO NP 735, 5^th^ Edition).
 
 3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 1,1
 
-3+| vertical length
-2+| (VERLEN) 3+| | RE | 0,1
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
@@ -1125,8 +1109,7 @@ Directions or Notices to Mariners. (UKHO NP 735, 5^th^ Edition).
 
 3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
 
-3+| radar conspicuous
-2+| (CONRAD) 3+| | BO | 0,1
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
 
 3+| status 2+| (STATUS) 3+|
 1: permanent +
@@ -1135,8 +1118,7 @@ Directions or Notices to Mariners. (UKHO NP 735, 5^th^ Edition).
 7: temporary +
 8: private +
 18: existence doubtful | EN | 0,*
-3+| topmark
-2+| (*_TOPMAR_*) 3+| | C | 0,1
+3+| topmark 2+| (*_TOPMAR_*) 3+| | C | 0,1
 
 3+| colour 2+| (COLOUR) 3+|
 1: white +
@@ -1199,8 +1181,7 @@ Directions or Notices to Mariners. (UKHO NP 735, 5^th^ Edition).
 
 3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 1,1
 
-3+| vertical length
-2+| (VERLEN) 3+| | RE | 0,1
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
@@ -1382,8 +1363,7 @@ easily identifiable temporary first response. (Adapted from UKHO NP
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_six]
@@ -1406,11 +1386,9 @@ easily identifiable temporary first response. (Adapted from UKHO NP
 7: metal +
 8: glass reinforced plastic +
 11: latticed | EN | 0,*
-3+| radar conspicuous
-2+| (CONRAD) 3+| | BO | 0,1
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
 
-3+| topmark
-2+| (*_TOPMAR_*) 3+| | C | 0,1
+3+| topmark 2+| (*_TOPMAR_*) 3+| | C | 0,1
 
 3+| colour 2+| (COLOUR) 3+|
 1: white +
@@ -1473,8 +1451,7 @@ easily identifiable temporary first response. (Adapted from UKHO NP
 
 3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 1,1
 
-3+| vertical length
-2+| (VERLEN) 3+| | RE | 0,1
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
@@ -1626,8 +1603,7 @@ buoy is a buoy used for loading tankers with gas or oil.
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_seven]
@@ -1654,8 +1630,7 @@ buoy is a buoy used for loading tankers with gas or oil.
 2: gas +
 18: liquefied natural gas +
 19: liquefied petroleum gas | EN | 0,*
-3+| radar conspicuous
-2+| (CONRAD) 3+| | BO | 0,1
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
 
 3+| status 2+| (STATUS) 3+|
 1: permanent +
@@ -1787,8 +1762,7 @@ use of its anchor chain or mooring lines. (IHO Dictionary -- S-32).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_eight]
@@ -1801,11 +1775,9 @@ use of its anchor chain or mooring lines. (IHO Dictionary -- S-32).
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| maximum permitted draught
-2+| _(INFORM) (NINFOM)_ 3+| | RE | 0,1
+3+| maximum permitted draught 2+| _(INFORM) (NINFOM)_ 3+| | RE | 0,1
 
-3+| maximum permitted vessel length
-2+| _(INFORM) (NINFOM)_ 3+| | RE | 0,1
+3+| maximum permitted vessel length 2+| _(INFORM) (NINFOM)_ 3+| | RE | 0,1
 
 3+| nature of construction 2+| (NATCON) 3+|
 7: metal +
@@ -1825,11 +1797,9 @@ use of its anchor chain or mooring lines. (IHO Dictionary -- S-32).
 7: temporary +
 8: private +
 18: existence doubtful | EN | 0,*
-3+| vertical length
-2+| (VERLEN) 3+| | RE | 0,1
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
 
-3+| visitors mooring
-2+| _(SMCFAC)_ 3+| | BO | 0,1
+3+| visitors mooring 2+| _(SMCFAC)_ 3+| | BO | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
@@ -1953,8 +1923,7 @@ are used in conjunction with a conventional direction of buoyage.
 1: under construction +
 2: ruined +
 5: planned construction | EN | 0,1
-3+| elevation
-2+| (ELEVAT) 3+| | RE | 0,1
+3+| elevation 2+| (ELEVAT) 3+| | RE | 0,1
 
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
@@ -1962,8 +1931,7 @@ are used in conjunction with a conventional direction of buoyage.
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_nine]
@@ -1974,8 +1942,7 @@ are used in conjunction with a conventional direction of buoyage.
 
 3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_nine]
 
-3+| height
-2+| (HEIGHT) 3+| | RE | 0,1
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
@@ -1996,8 +1963,7 @@ are used in conjunction with a conventional direction of buoyage.
 
 3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
 
-3+| radar conspicuous
-2+| (CONRAD) 3+| | BO | 0,1
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
@@ -2009,8 +1975,7 @@ are used in conjunction with a conventional direction of buoyage.
 8: private +
 12: illuminated +
 18: existence doubtful | EN | 0,*
-3+| topmark
-2+| (*_TOPMAR_*) 3+| | C | 0,1
+3+| topmark 2+| (*_TOPMAR_*) 3+| | C | 0,1
 
 3+| colour 2+| (COLOUR) 3+|
 1: white +
@@ -2073,8 +2038,7 @@ are used in conjunction with a conventional direction of buoyage.
 
 3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 1,1
 
-3+| vertical length
-2+| (VERLEN) 3+| | RE | 0,1
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
 
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
@@ -2227,8 +2191,7 @@ bearings from the point marked. (UKHO NP 735, 5^th^ Edition).
 1: under construction +
 2: ruined +
 5: planned construction | EN | 0,1
-3+| elevation
-2+| (ELEVAT) 3+| | RE | 0,1
+3+| elevation 2+| (ELEVAT) 3+| | RE | 0,1
 
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
@@ -2236,8 +2199,7 @@ bearings from the point marked. (UKHO NP 735, 5^th^ Edition).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_ten]
@@ -2248,8 +2210,7 @@ bearings from the point marked. (UKHO NP 735, 5^th^ Edition).
 
 3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_ten]
 
-3+| height
-2+| (HEIGHT) 3+| | RE | 0,1
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
@@ -2270,8 +2231,7 @@ bearings from the point marked. (UKHO NP 735, 5^th^ Edition).
 
 3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
 
-3+| radar conspicuous
-2+| (CONRAD) 3+| | BO | 0,1
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
@@ -2283,8 +2243,7 @@ bearings from the point marked. (UKHO NP 735, 5^th^ Edition).
 8: private +
 12: illuminated +
 18: existence doubtful | EN | 0,*
-3+| topmark
-2+| (*_TOPMAR_*) 3+| | C | 0,1
+3+| topmark 2+| (*_TOPMAR_*) 3+| | C | 0,1
 
 3+| colour 2+| (COLOUR) 3+|
 1: white +
@@ -2347,8 +2306,7 @@ bearings from the point marked. (UKHO NP 735, 5^th^ Edition).
 
 3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 1,1
 
-3+| vertical length
-2+| (VERLEN) 3+| | RE | 0,1
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
 
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
@@ -2491,8 +2449,7 @@ h| Type h| Multiplicity
 1: under construction +
 2: ruined +
 5: planned construction | EN | 0,1
-3+| elevation
-2+| (ELEVAT) 3+| | RE | 0,1
+3+| elevation 2+| (ELEVAT) 3+| | RE | 0,1
 
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
@@ -2500,8 +2457,7 @@ h| Type h| Multiplicity
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_eleven]
@@ -2512,8 +2468,7 @@ h| Type h| Multiplicity
 
 3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_eleven]
 
-3+| height
-2+| (HEIGHT) 3+| | RE | 0,1
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) |
 URN | 0,1
@@ -2535,8 +2490,7 @@ URN | 0,1
 
 3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
 
-3+| radar conspicuous
-2+| (CONRAD) 3+| | BO | 0,1
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
@@ -2548,8 +2502,7 @@ URN | 0,1
 8: private +
 12: illuminated +
 18: existence doubtful | EN | 0,*
-3+| topmark
-2+| (*_TOPMAR_*) 3+| | C | 0,1
+3+| topmark 2+| (*_TOPMAR_*) 3+| | C | 0,1
 
 3+| colour 2+| (COLOUR) 3+|
 1: white +
@@ -2612,8 +2565,7 @@ URN | 0,1
 
 3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 1,1
 
-3+| vertical length
-2+| (VERLEN) 3+| | RE | 0,1
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
 
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
@@ -2749,8 +2701,7 @@ around the mark. (UKHO NP735, 5^th^ Edition).
 1: under construction +
 2: ruined +
 5: planned construction | EN | 0,1
-3+| elevation
-2+| (ELEVAT) 3+| | RE | 0,1
+3+| elevation 2+| (ELEVAT) 3+| | RE | 0,1
 
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
@@ -2758,8 +2709,7 @@ around the mark. (UKHO NP735, 5^th^ Edition).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_twelve]
@@ -2770,8 +2720,7 @@ around the mark. (UKHO NP735, 5^th^ Edition).
 
 3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_twelve]
 
-3+| height
-2+| (HEIGHT) 3+| | RE | 0,1
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
@@ -2792,8 +2741,7 @@ around the mark. (UKHO NP735, 5^th^ Edition).
 
 3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
 
-3+| radar conspicuous
-2+| (CONRAD) 3+| | BO | 0,1
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
@@ -2805,8 +2753,7 @@ around the mark. (UKHO NP735, 5^th^ Edition).
 8: private +
 12: illuminated +
 18: existence doubtful | EN | 0,*
-3+| topmark
-2+| (*_TOPMAR_*) 3+| | C | 0,1
+3+| topmark 2+| (*_TOPMAR_*) 3+| | C | 0,1
 
 3+| colour 2+| (COLOUR) 3+|
 1: white +
@@ -2869,8 +2816,7 @@ around the mark. (UKHO NP735, 5^th^ Edition).
 
 3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 1,1
 
-3+| vertical length
-2+| (VERLEN) 3+| | RE | 0,1
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
 
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
@@ -3065,8 +3011,7 @@ Sailing Directions or Notices to Mariners. (UKHO NP 735, 5^th^ Edition).
 1: under construction +
 2: ruined +
 5: planned construction | EN | 0,1
-3+| elevation
-2+| (ELEVAT) 3+| | RE | 0,1
+3+| elevation 2+| (ELEVAT) 3+| | RE | 0,1
 
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
@@ -3074,8 +3019,7 @@ Sailing Directions or Notices to Mariners. (UKHO NP 735, 5^th^ Edition).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_thirteen]
@@ -3086,8 +3030,7 @@ Sailing Directions or Notices to Mariners. (UKHO NP 735, 5^th^ Edition).
 
 3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_thirteen]
 
-3+| height
-2+| (HEIGHT) 3+| | RE | 0,1
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
@@ -3108,8 +3051,7 @@ Sailing Directions or Notices to Mariners. (UKHO NP 735, 5^th^ Edition).
 
 3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
 
-3+| radar conspicuous
-2+| (CONRAD) 3+| | BO | 0,1
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
 3+| status 2+| (STATUS) 3+|
@@ -3121,8 +3063,7 @@ Sailing Directions or Notices to Mariners. (UKHO NP 735, 5^th^ Edition).
 8: private +
 12: illuminated +
 18: existence doubtful | EN | 0,*
-3+| topmark
-2+| (*_TOPMAR_*) 3+| | C | 0,1
+3+| topmark 2+| (*_TOPMAR_*) 3+| | C | 0,1
 
 3+| colour 2+| (COLOUR) 3+|
 1: white +
@@ -3185,8 +3126,7 @@ Sailing Directions or Notices to Mariners. (UKHO NP 735, 5^th^ Edition).
 
 3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 1,1
 
-3+| vertical length
-2+| (VERLEN) 3+| | RE | 0,1
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
 
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
@@ -3427,8 +3367,7 @@ Edition 5).
 4: squared +
 5: stripes (direction unknown) +
 6: border stripe | EN | 0,1 footnoteblock:[twenty_fourteen]
-3+| elevation
-2+| (ELEVAT) 3+| | RE | 0,1
+3+| elevation 2+| (ELEVAT) 3+| | RE | 0,1
 
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
@@ -3436,8 +3375,7 @@ Edition 5).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_fourteen]
@@ -3448,8 +3386,7 @@ Edition 5).
 
 3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_fourteen]
 
-3+| height
-2+| (HEIGHT) 3+| | RE | 0,1
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
@@ -3511,8 +3448,7 @@ Edition 5).
 31: rhombus over a circle +
 32: circle over a triangle pointing up +
 33: other shape (see *shape information*) | EN | 1,1
-3+| vertical length
-2+| (VERLEN) 3+| | RE | 0,1
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
 
 3+| shape information 2+| 3+| | C | 0,*
 
@@ -3661,8 +3597,7 @@ buoy is necessary. (IHO Dictionary -- S-32).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_fifteen]
@@ -3673,11 +3608,9 @@ buoy is necessary. (IHO Dictionary -- S-32).
 
 3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_fifteen]
 
-3+| horizontal length
-2+| (HORLEN) 3+| | RE | 0,1
+3+| horizontal length 2+| (HORLEN) 3+| | RE | 0,1
 
-3+| horizontal width
-2+| (HORWID) 3+| | RE | 0,1
+3+| horizontal width 2+| (HORWID) 3+| | RE | 0,1
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
@@ -3691,8 +3624,7 @@ buoy is necessary. (IHO Dictionary -- S-32).
 
 3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
 
-3+| radar conspicuous
-2+| (CONRAD) 3+| | BO | 0,1
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
 
 3+| status 2+| (STATUS) 3+|
 1: permanent +
@@ -3704,8 +3636,7 @@ buoy is necessary. (IHO Dictionary -- S-32).
 14: public +
 16: watched +
 17: unwatched | EN | 0,*
-3+| topmark
-2+| (*_TOPMAR_*) 3+| | C | 0,1
+3+| topmark 2+| (*_TOPMAR_*) 3+| | C | 0,1
 
 3+| colour 2+| (COLOUR) 3+|
 1: white +
@@ -3768,8 +3699,7 @@ buoy is necessary. (IHO Dictionary -- S-32).
 
 3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 1,1
 
-3+| vertical length
-2+| (VERLEN) 3+| | RE | 0,1
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
 
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
@@ -3883,8 +3813,7 @@ sound signal, and radio-beacon, to assist navigation. (IHO Dictionary
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_sixteen]
@@ -3895,11 +3824,9 @@ sound signal, and radio-beacon, to assist navigation. (IHO Dictionary
 
 3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_sixteen]
 
-3+| horizontal length
-2+| (HORLEN) 3+| | RE | 0,1
+3+| horizontal length 2+| (HORLEN) 3+| | RE | 0,1
 
-3+| horizontal width
-2+| (HORWID) 3+| | RE | 0,1
+3+| horizontal width 2+| (HORWID) 3+| | RE | 0,1
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
@@ -3912,8 +3839,7 @@ sound signal, and radio-beacon, to assist navigation. (IHO Dictionary
 
 3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
 
-3+| radar conspicuous
-2+| (CONRAD) 3+| | BO | 0,1
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
 
 3+| status 2+| (STATUS) 3+|
 1: permanent +
@@ -3925,8 +3851,7 @@ sound signal, and radio-beacon, to assist navigation. (IHO Dictionary
 14: public +
 16: watched +
 17: unwatched | EN | 0,*
-3+| vertical length
-2+| (VERLEN) 3+| | RE | 0,1
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
 
 3+| visual prominence 2+| (CONVIS) 3+|
 1: visually conspicuous +
@@ -4045,8 +3970,7 @@ mark in a particular pattern to reflect back light. (UKHO NP 735,
 
 3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_seventeen]
 
-3+| height
-2+| (HEIGHT) 3+| | RE | 0,1
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
@@ -4141,8 +4065,7 @@ S-32).
 
 3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_eighteen]
 
-3+| height
-2+| (HEIGHT) 3+| | RE | 0,1
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
@@ -4248,8 +4171,7 @@ Also, the device producing such a signal. (IHO Dictionary -- S-32).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twenty_nineteen]
@@ -4268,8 +4190,7 @@ Also, the device producing such a signal. (IHO Dictionary -- S-32).
 
 3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
 
-3+| signal frequency
-2+| (SIGFRQ) 3+| | IN | 0,1
+3+| signal frequency 2+| (SIGFRQ) 3+| | IN | 0,1
 
 3+| signal generation 2+| (SIGGEN) 3+|
 1: automatically +
@@ -4280,16 +4201,13 @@ Also, the device producing such a signal. (IHO Dictionary -- S-32).
 6: call activated | EN | 0,1
 3+| signal group 2+| (SIGGRP) 3+| | TE | 0,1
 
-3+| signal period
-2+| (SIGPER) 3+| | RE | 0,1
+3+| signal period 2+| (SIGPER) 3+| | RE | 0,1
 
-3+| signal sequence
-2+| _(SIGSEQ)_ 3+| | C | 0,* (ordered)
+3+| signal sequence 2+| _(SIGSEQ)_ 3+| | C | 0,* (ordered)
 
 3+| signal duration 2+| 3+| | (S) RE | 1,1
 
-3+| signal status
-2+| 3+|
+3+| signal status 2+| 3+|
 1: lit/sound +
 2: eclipsed/silent | (S) EN | 1,1
 
@@ -4301,8 +4219,7 @@ Also, the device producing such a signal. (IHO Dictionary -- S-32).
 7: temporary +
 8: private +
 15: synchronized | EN | 0,*
-3+| value of maximum range
-2+| (VALMXR) 3+| | RE | 0,1
+3+| value of maximum range 2+| (VALMXR) 3+| | RE | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*

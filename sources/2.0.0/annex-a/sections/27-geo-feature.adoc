@@ -12614,9 +12614,9 @@ Amsterdams Peil (NAP). (Baltic Sea Hydrographic Commission).
 locks, the value "local datum" should be used, and further details
 may be encoded using the complex attribute *information* (see
 <<sec_2.4.6>>).
-* The ± 0.3m approximation quoted in the "approximate" levels is
-arbitrary and follows the British example of their definition for
-"approximate LAT".
+* The stem:[pm 0.3 "unitsml(m)"] approximation quoted in the
+"approximate" levels is arbitrary and follows the British example
+of their definition for "approximate LAT".
 
 |===
 

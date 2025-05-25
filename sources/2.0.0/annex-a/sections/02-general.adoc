@@ -480,9 +480,9 @@ h| Feature h| Mandatory Attributes
 
 2+h| [underline]#GEO FEATURES#
 | *Administration Area*             | *jurisdiction*
-| *Archipelagic Sea Lane*           | *nationality* ++*++
-| *Archipelagic Sea Lane Area*      | *nationality* ++*++ (except when included in *ASL Aggregation* association)
-| *Archipelagic Sea Lane Axis*      | *nationality* ++*++ (except when included in *ASL Aggregation* association)
+| *Archipelagic Sea Lane*           | *nationality ++*++*
+| *Archipelagic Sea Lane Area*      | *nationality ++*++* (except when included in *ASL Aggregation* association)
+| *Archipelagic Sea Lane Axis*      | *nationality ++*++* (except when included in *ASL Aggregation* association)
 | *Berth*                           | *feature name*
 | *Bridge*                          |
 over navigable water: **opening bridge** +
@@ -492,35 +492,35 @@ other cases: none
 other cases: none
 | *Cardinal Beacon*                 | *beacon shape*; *category of cardinal mark*; *colour*
 | *Cardinal Buoy*                   | *buoy shape*; *category of cardinal mark*; *colour*
-| *Caution Area*                    | at least one of: *information* **; *pictorial representation* ++*++
-| *Contiguous Zone*                 | *nationality* ++*++
-| *Continental Shelf Area*          | *nationality* ++*++
+| *Caution Area*                    | at least one of: *information ++*++*; *pictorial representation ++*++*
+| *Contiguous Zone*                 | *nationality ++*++*
+| *Continental Shelf Area*          | *nationality ++*++*
 | *Conveyor*                        | over navigable water: **vertical clearance fixed** +
 other cases: none
 | *Current -- Non-Gravitational*    | *orientation*; *speed*
-| *Custom Zone*                     | *nationality* ++*++
+| *Custom Zone*                     | *nationality ++*++*
 | *Daymark*                         | *colour*; *topmark shape*
 | *Deep Water Route Centreline*     | *based on fixed marks*; **orientation value* **; *traffic flow*
 | *Deep Water Route Part*           | *depth range minimum value*; **orientation value* **; *traffic flow*
-| *Depth Area*                      | **depth range maximum value* **; *depth range minimum value* ++*++
-| *Depth Contour*                   | *value of depth contour* ++*++
+| *Depth Area*                      | **depth range maximum value* **; *depth range minimum value ++*++*
+| *Depth Contour*                   | *value of depth contour ++*++*
 | *Distance Mark*                   | **distance mark visible* **; *measured distance value*
 | *Dolphin*                         | *category of dolphin*
-| *Dredged Area*                    | *depth range minimum value* ++*++
+| *Dredged Area*                    | *depth range minimum value ++*++*
 | *Emergency Wreck Marking Buoy*    | *buoy shape*; *colour*
-| *Exclusive Economic Zone*         | *nationality* ++*++
+| *Exclusive Economic Zone*         | *nationality ++*++*
 | *Ferry Route*                     | *category of ferry*
-| *Fishery Zone*                    | *nationality* ++*++
+| *Fishery Zone*                    | *nationality ++*++*
 | *Fog Signal*                      | *category of fog signal*
 | *Gate*                            | if navigable at optimum display scale for the data: *horizontal clearance open*
 | *Harbour Facility*                | *category of harbour facility*
 | *Ice Area*                        | *category of ice*
-| *Information Area*                | at least one of: **information* **; *pictorial representation* ++*++
+| *Information Area*                | at least one of: **information ++*++**; **pictorial representation ++*++**
 | *Installation Buoy*               | *buoy shape*; *colour*
 | *Island Group*                    | *feature name*
 | *Isolated Danger Beacon*          | *beacon shape*; *colour*
 | *Isolated Danger Buoy*            | *buoy shape*; *colour*
-| *Land Elevation*                  | *elevation* ++*++
+| *Land Elevation*                  | *elevation ++*++*
 | *Land Region*                     | at least one of: *category of land region*; *feature name*
 | *Landmark*                        | *category of landmark*; *visual prominence*
 | *Lateral Beacon*                  | *beacon shape*; *category of lateral mark*; *colour*
@@ -530,7 +530,7 @@ other cases: none
 | *Light Sectored*                  | *sector characteristics*
 | *Light Vessel*                    | *colour*
 | *Local Magnetic Anomaly*          | *value of local magnetic anomaly*
-| *Magnetic Variation*              | *reference year for magnetic variation*; *value of annual change in magnetic variation*; *value of magnetic variation* ++*++
+| *Magnetic Variation*              | *reference year for magnetic variation*; *value of annual change in magnetic variation*; *value of magnetic variation ++*++*
 | *Marine Farm/Culture*             | **water level effect** +
 at least one of: *height*; *value of sounding*
 | *Mooring Buoy*                    | *buoy shape*
@@ -547,8 +547,8 @@ one of: *height*; *value of sounding*
 | *Radio Calling-In Point*          | *orientation value* (point features only); *traffic flow*
 | *Recommended Route Centreline*    | *based on fixed marks*
 | *Recommended Track*               | *based on fixed marks*; *orientation value*; *traffic flow*
-| *Recommended Traffic Lane Part*   | *orientation value* ++*++
-| *Restricted Area*                 | *restriction* ++*++
+| *Recommended Traffic Lane Part*   | *orientation value ++*++*
+| *Restricted Area*                 | *restriction ++*++*
 | *Safe Water Beacon*               | *beacon shape*; *colour*
 | *Safe Water Buoy*                 | *buoy shape*; *colour*
 | *Sea Area/Named Water Area*       | at least one of: *category of sea area*; *feature name*
@@ -560,43 +560,43 @@ one of: *height*; *value of sounding*
 | *Span Opening*                    | *vertical clearance closed*; *vertical clearance open*
 | *Special Purpose/General Beacon*  | *beacon shape*; *category of special purpose mark*; *colour*
 | *Special Purpose/General Buoy*    | *buoy shape*; *category of special purpose mark*; *colour*
-| *Straight Territorial Sea Baseline*   | *nationality* ++*++
+| *Straight Territorial Sea Baseline*   | *nationality ++*++*
 | *Structure Over Navigable Water*      | *horizontal clearance fixed*; *vertical clearance fixed*
-| *Swept Area*                          | *depth range minimum value* ++*++
-| *Territorial Sea Area*                | *nationality* ++*++
+| *Swept Area*                          | *depth range minimum value ++*++*
+| *Territorial Sea Area*                | *nationality ++*++*
 | *Tidal Stream -- Flood/Ebb*           | *category of tidal stream*; *orientation*; *speed*
-| *Tidal Stream Panel Data*             | *station name*; *tidal stream panel values* ++*++
+| *Tidal Stream Panel Data*             | *station name*; *tidal stream panel values ++*++*
 | *Traffic Separation Scheme Lane Part* | *orientation value* (except when the lane part is a junction)
 | *Two-Way Route Part*                  | *orientation value*; *traffic flow*
 | *Underwater/Awash Rock*               | *value of sounding*; *water level effect*; *surrounding depth*
 | *Vegetation*                          | *category of vegetation*
-| *Virtual AIS Aid to Navigation*       | *virtual AIS aid to navigation type* ++*++
+| *Virtual AIS Aid to Navigation*       | *virtual AIS aid to navigation type ++*++*
 | *Water Turbulence*                    | *category of water turbulence*
 | *Wreck*                               | *water level effect*; **surrounding depth** +
 one of: *category of wreck*; *value of sounding*
 
 2+h| [underline]#METADATA FEATURES#
-| *Data Coverage*                       | **maximum display scale* **; *minimum display scale*; *optimum display scale* ++*++
-| *Local Direction of Buoyage*          | *marks navigational -- system of*; *orientation value* ++*++
-| *Navigational System of Marks*        | *marks navigational -- system of* ++*++
-| *Quality of Bathymetric Data*         | *category of temporal variation*; *data assessment*; *features detected*; *full seafloor coverage achieved*; *zone of confidence* ++*++
+| *Data Coverage*                       | **maximum display scale* **; *minimum display scale*; *optimum display scale ++*++*
+| *Local Direction of Buoyage*          | *marks navigational -- system of*; *orientation value ++*++*
+| *Navigational System of Marks*        | *marks navigational -- system of ++*++*
+| *Quality of Bathymetric Data*         | *category of temporal variation*; *data assessment*; *features detected*; *full seafloor coverage achieved*; *zone of confidence ++*++*
 | *Quality of Non-Bathymetric Data*     | *horizontal position uncertainty*
 | *Quality of Survey*                   | *survey authority*; *survey date range*; *survey type*
-| *Sounding Datum*                      | *vertical datum* ++*++
+| *Sounding Datum*                      | *vertical datum ++*++*
 | *Update Information*                  | *update number*; *update type*
-| *Vertical Datum of Data*              | *vertical datum* ++*++
+| *Vertical Datum of Data*              | *vertical datum ++*++*
 
 2+h| [underline]#CARTOGRAPHIC FEATURES#
-| *Text Placement*                      | **text offset bearing* **; **text offset distance** *; *text type* ++*++
+| *Text Placement*                      | **text offset bearing* **; **text offset distance** *; *text type ++*++*
 
 2+h| [underline]#INFORMATION TYPES#
-| *Nautical Information*                | at least one of: **information* **; *pictorial representation* ++*++
-| *Non-Standard Working Day*            | at least one of: **date fixed* **; *date variable* ++*++
-| *Service Hours*                       | *schedule by day of week* ++*++
+| *Nautical Information*                | at least one of: **information* **; *pictorial representation ++*++*
+| *Non-Standard Working Day*            | at least one of: **date fixed* **; *date variable ++*++*
+| *Service Hours*                       | *schedule by day of week ++*++*
 | *Spatial Quality*                     | at least one of: *quality of horizontal measurement*; *spatial accuracy*
 
 2+h| [underline]#ECDIS CHART 1 FEATURES#
-| *Chart 1 Feature*                     | at least one of: *drawing instruction* *; *feature name* ++*++
+| *Chart 1 Feature*                     | at least one of: *drawing instruction* *; *feature name ++*++*
 
 |===
 

@@ -28,8 +28,7 @@ bottom, or quality of the bottom.(Adapted from IHO Dictionary -- S-32).
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| surface characteristics
-2+| 3+| | C | 1,* (ordered)
+3+| surface characteristics 2+| 3+| | C | 1,* (ordered)
 
 3+| nature of surface 2+| (NATSUR) 3+|
 1: mud  +
@@ -65,19 +64,13 @@ bottom, or quality of the bottom.(Adapted from IHO Dictionary -- S-32).
 4: covers and uncovers +
 5: awash | EN | 0,1
 
-3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
-
-3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
-
-3+| file locator 2+| 3+| | (S) TE | 0,1
-
+3+| scale minimum  2+| (SCAMIN)            3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information    2+|                     3+| See <<sec_2.4.6>> | C | 0,*
+3+| file locator   2+|                     3+| | (S) TE | 0,1
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twelve_one]
-
-3+| headline 2+| 3+| | (S) TE | 0,1
-
-3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
-
-3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twelve_one]
+3+| headline       2+|                     3+| | (S) TE | 0,1
+3+| language       2+|                     3+| ISO 639-2/T | (S) TE | 1,1
+3+| text           2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twelve_one]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -199,249 +192,47 @@ other coding combinations are possible.
 
 [[table_12-1]]
 .Seabed area -- Common encoding combinations
-[cols="61,52,52,52,52,52,52,52,52,52,41"]
+[cols="^.^,^.^,^.^,^.^,^.^,^.^,^.^,^.^,^.^,^.^,^.^"]
 |===
-h| - Qualifying Terms .2+h| __1__fine .2+h| __2__medium .2+h| __3__coarse .2+h| __4__broken .2+h| __5__sticky .2+h| __6__soft .2+h| __7__stiff .2+h| __8__volcanic .2+h| __9__calcareous .2+h| __10__hard
+h| - Qualifying Terms .2+h| _1_ +
+fine .2+h| _2_ +
+medium .2+h| _3_ +
+coarse .2+h| _4_ +
+broken .2+h| _5_ +
+sticky .2+h| _6_ +
+soft .2+h| _7_ +
+stiff .2+h| _8_ +
+volcanic .2+h| _9_ +
+calcareous .2+h| _10_ +
+hard
 | *Nature of Surface*
-.<| __1__Mud
-|
 
-|
-
-|
-
-|
-
-| *x*
-| *x*
-| *x*
-| *x*
-| *x*
-|
-
-.<| __2__Clay
-|
-
-|
-
-|
-
-|
-
-| *x*
-| *x*
-| *x*
-|
-
-|
-
-|
-
-.<| __3__Silt
-|
-
-|
-
-|
-
-|
-
-| *x*
-| *x*
-| *x*
-|
-
-|
-
-|
-
-.<| __4__Sand
-| *x*
-| *x*
-| *x*
-|
-
-|
-
-| *x*
-|
-
-| *x*
-| *x*
-|
-
-.<| __5__Stone
-|
-
-|
-
-|
-
-|
-
-|
-
-|
-
-|
-
-| *x*
-| *x*
-|
-
-.<| __6__Gravel
-|
-
-|
-
-|
-
-|
-
-|
-
-|
-
-|
-
-| *x*
-| *x*
-|
-
-.<| __7__Pebbles
-|
-
-|
-
-|
-
-|
-
-|
-
-|
-
-|
-
-| *x*
-| *x*
-|
-
-.<| __8__Cobbles
-|
-
-|
-
-|
-
-|
-
-|
-
-|
-
-|
-
-| *x*
-| *x*
-|
-
-.<| __9__Rock
-|
-
-|
-
-|
-
-|
-
-|
-
-|
-
-|
-
-| *x*
-| *x*
-|
-
-.<| __11__Lava
-|
-
-|
-
-|
-
-|
-
-|
-
-|
-
-|
-
-| *x*
-|
-
-|
-
-.<| __14__Coral
-|
-
-|
-
-|
-
-| *x*
-|
-
-| *x*
-|
-
-|
-
-|
-
-|
-
-.<| __17__Shells
-|
-
-|
-
-|
-
-| *x*
-|
-
-|
-
-|
-
-|
-
-| *x*
-|
-
-.<| __18__Boulder
-.<|
-
-.<|
-
-.<|
-
-.<|
-
-.<|
-
-.<|
-
-.<|
-
-| *x*
-| *x*
-.<|
-
+| _1_ +
+Mud     |       |     |     |     | *x* | *x* | *x* | *x* | *x* |
+| _2_ +
+Clay    |       |     |     |     | *x* | *x* | *x* |     |     |
+| _3_ +
+Silt    |       |     |     |     | *x* | *x* | *x* |     |     |
+| _4_ +
+Sand    | *x*   | *x* | *x* |     |     | *x* |     | *x* | *x* |
+| _5_ +
+Stone   |       |     |     |     |     |     |     | *x* | *x* |
+| _6_ +
+Gravel  |       |     |     |     |     |     |     | *x* | *x* |
+| _7_ +
+Pebbles |       |     |     |     |     |     |     | *x* | *x* |
+| _8_ +
+Cobbles |       |     |     |     |     |     |     | *x* | *x* |
+| _9_ +
+Rock    |       |     |     |     |     |     |     | *x* | *x* |
+| _11_ +
+Lava    |       |     |     |     |     |     |     | *x* |     |
+| _14_ +
+Coral   |       |     |     | *x* |     | *x* |     |     |     |
+| _17_ +
+Shells  |       |     |     | *x* |     |     |     |     | *x* |
+| _18_ +
+Boulder |       |     |     |     |     |     |     | *x* | *x* |
 |===
 
 [underline]#Distinction:# Sandwave; Sea Area/Named Water Area;
@@ -470,29 +261,18 @@ alga. (Adapted from IHO Dictionary -- S-32).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twelve_two]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
-
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
-
-3+| file locator
-2+| 3+| | (S) TE
-| 0,1
-
+3+| file locator 2+| 3+| | (S) TE | 0,1
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twelve_two]
-
-3+| headline
-2+| 3+| | (S) TE
-| 0,1
-
+3+| headline 2+| 3+| | (S) TE | 0,1
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
-
 3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twelve_two]
 
 10+h| Feature Associations
@@ -552,8 +332,7 @@ have narrow grass-like leaves and often form dense underwater meadows.
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twelve_three]
@@ -563,14 +342,12 @@ have narrow grass-like leaves and often form dense underwater meadows.
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twelve_three]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -632,21 +409,18 @@ may reach 100 metres, the amplitude may be up to 20 metres.
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| vertical length
-2+| (VERLEN)
+3+| vertical length 2+| (VERLEN)
 3+| | RE | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnote:twelve_four[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -727,8 +501,7 @@ called a submarine spring. (IHO Dictionary -- S-32).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[twelve_five]
@@ -738,14 +511,12 @@ called a submarine spring. (IHO Dictionary -- S-32).
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twelve_five]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1

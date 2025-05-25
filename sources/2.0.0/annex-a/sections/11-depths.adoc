@@ -105,8 +105,7 @@ IHO Dictionary -- S-32).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[eleven_three]
@@ -140,14 +139,12 @@ IHO Dictionary -- S-32).
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[eleven_three]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -299,16 +296,14 @@ of a body of water which has been deepened by dredging. (IHO Dictionary
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[eleven_four]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| maximum permitted draught
-2+| 3+| | RE | 0,1
+3+| maximum permitted draught 2+| 3+| | RE | 0,1
 
 3+| quality of vertical measurement 2+| (QUASOU) 3+|
 10: maintained depth +
@@ -345,46 +340,37 @@ of a body of water which has been deepened by dredging. (IHO Dictionary
 16: synthetic aperture radar +
 17: hyperspectral imagery +
 18: mechanically swept | EN | 0,*
-3+| vertical uncertainty
-2+| _(SOUACC)_
+3+| vertical uncertainty 2+| _(SOUACC)_
 3+| | C | 0,1
 
-3+| uncertainty fixed
-2+| 3+| | (S) RE
+3+| uncertainty fixed 2+| 3+| | (S) RE
 | 1,1
 
-3+| uncertainty variable factor
-2+| 3+| | (S) RE
+3+| uncertainty variable factor 2+| 3+| | (S) RE
 | 0,1
 
-3+| vessel speed limit
-2+| 3+| | C | 0,*
+3+| vessel speed limit 2+| 3+| | C | 0,*
 
-3+| speed limit
-2+| 3+| | (S) RE
+3+| speed limit 2+| 3+| | (S) RE
 | 1,1
 
-3+| speed units
-2+| 3+|
+3+| speed units 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots | (S) EN
 | 1,1
 
-3+| vessel class
-2+| 3+| | (S) TE
+3+| vessel class 2+| 3+| | (S) TE
 | 0,1
 
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[eleven_four]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -471,27 +457,23 @@ limits, see <<sec_17.4>>.
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| depth range minimum value
-2+| (DRVAL1)
+3+| depth range minimum value 2+| (DRVAL1)
 3+| | RE | 1,1
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| swept date
-2+| _(SORDAT)_
+3+| swept date 2+| _(SORDAT)_
 3+| | TD | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnote:eleven_five[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -574,21 +556,18 @@ on the source. (IHO Dictionary -- S-32).
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| value of depth contour
-2+| (VALDCO)
+3+| value of depth contour 2+| (VALDCO)
 3+| | RE | 1,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnote:eleven_six[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -693,16 +672,14 @@ A -- Chapter 1, Page 1.51, November 2000).
 
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1
 footnote:eleven_seven[For each instance of *information*, at least
 one of the sub-attributes *file reference* or *text* must be populated.]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -979,14 +956,12 @@ Upon investigation the bottom was not found at this depth.
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnote:eleven_eight[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -1209,14 +1184,12 @@ hydrographic survey data is non-existent.(IHO Dictionary -- S-32).
 
 3+| information 2+| 3+| See <<sec_2.4.6>> 2+| C | 0,*
 
-3+| file locator
-2+| 3+| 2+| (S) TE
+3+| file locator 2+| 3+| 2+| (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| 2+| (S) TE | 0,1 footnote:eleven_ten[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
-3+| headline
-2+| 3+| 2+| (S) TE
+3+| headline 2+| 3+| 2+| (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T 2+| (S) TE | 1,1

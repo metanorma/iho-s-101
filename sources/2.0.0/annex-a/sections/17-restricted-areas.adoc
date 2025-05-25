@@ -203,8 +203,7 @@ conditions. (Adapted from IHO Dictionary -- S-32).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[seventeen_eight]
@@ -264,13 +263,11 @@ conditions. (Adapted from IHO Dictionary -- S-32).
 9: mandatory +
 18: existence doubtful +
 28: buoyed | EN | 0,*
-3+| vessel speed limit
-2+| 3+| | C | 0,*
+3+| vessel speed limit 2+| 3+| | C | 0,*
 
 3+| speed limit 2+| 3+| | (S) RE | 1,1
 
-3+| speed units
-2+| 3+|
+3+| speed units 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots | (S) EN

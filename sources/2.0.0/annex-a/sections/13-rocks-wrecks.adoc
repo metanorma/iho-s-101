@@ -295,14 +295,12 @@ stranded or sunken vessel which has been rendered useless.
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[thirteen_five]
 
-3+| height
-2+| (HEIGHT)
+3+| height 2+| (HEIGHT)
 3+| | RE | 0,1
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -316,8 +314,7 @@ stranded or sunken vessel which has been rendered useless.
 7: least depth unknown, safe clearance at value shown +
 8: value reported (not surveyed) +
 9: value reported (not confirmed) | EN | 0,*
-3+| radar conspicuous
-2+| (CONRAD)
+3+| radar conspicuous 2+| (CONRAD)
 3+| | BO | 0,1
 
 3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
@@ -341,8 +338,7 @@ stranded or sunken vessel which has been rendered useless.
 16: synthetic aperture radar +
 17: hyperspectral imagery +
 18: mechanically swept | EN | 0,*
-3+| value of sounding
-2+| (VALSOU)
+3+| value of sounding 2+| (VALSOU)
 3+| | RE | 0,1 footnoteblock:[thirteen_five]
 
 3+| visual prominence 2+| (CONVIS) 3+|
@@ -358,14 +354,12 @@ stranded or sunken vessel which has been rendered useless.
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[thirteen_five]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -375,8 +369,7 @@ stranded or sunken vessel which has been rendered useless.
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 3+| default clearance depth 2+| 3+| See <<sec_30.1>> | RE | 0,1 footnoteblock:[thirteen_five]
 
-3+| surrounding depth
-2+| 3+| | RE | 1,1
+3+| surrounding depth 2+| 3+| | RE | 1,1
 
 10+h| Feature Associations
 
@@ -635,20 +628,17 @@ Underwater/Awash Rock.
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[thirteen_six]
 
-3+| height
-2+| (HEIGHT)
+3+| height 2+| (HEIGHT)
 3+| | RE | 0,1 footnoteblock:[thirteen_six]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| maximum permitted draught
-2+| 3+| | RE | 0,1
+3+| maximum permitted draught 2+| 3+| | RE | 0,1
 
 3+| nature of surface 2+| (NATSUR) 3+|
 1: mud +
@@ -705,12 +695,10 @@ Underwater/Awash Rock.
 16: synthetic aperture radar +
 17: hyperspectral imagery +
 18: mechanically swept | EN | 0,*
-3+| value of sounding
-2+| (VALSOU)
+3+| value of sounding 2+| (VALSOU)
 3+| | RE | 0,1 footnoteblock:[thirteen_six]
 
-3+| vertical length
-2+| (VERLEN)
+3+| vertical length 2+| (VERLEN)
 3+| | RE | 0,1
 
 3+| water level effect 2+| (WATLEV) 3+|
@@ -723,14 +711,12 @@ Underwater/Awash Rock.
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[thirteen_six]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -739,8 +725,7 @@ Underwater/Awash Rock.
 
 3+| default clearance depth 2+| 3+| See <<sec_30.1>> | RE | 0,1 footnoteblock:[thirteen_six]
 
-3+| surrounding depth
-2+| 3+| | RE | 1,1
+3+| surrounding depth 2+| 3+| | RE | 1,1
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -1012,8 +997,7 @@ Marine Farm/Culture; Underwater/awash Rock; Water Turbulence; Wreck.
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[thirteen_seven]
@@ -1050,33 +1034,27 @@ Marine Farm/Culture; Underwater/awash Rock; Water Turbulence; Wreck.
 16: synthetic aperture radar +
 17: hyperspectral imagery +
 18: mechanically swept | EN | 0,*
-3+| value of sounding
-2+| (VALSOU)
+3+| value of sounding 2+| (VALSOU)
 3+| | RE | 0,1
 
-3+| vertical uncertainty
-2+| _(SOUACC)_
+3+| vertical uncertainty 2+| _(SOUACC)_
 3+| | C | 0,1
 
-3+| uncertainty fixed
-2+| 3+| | (S) RE
+3+| uncertainty fixed 2+| 3+| | (S) RE
 | 1,1
 
-3+| uncertainty variable factor
-2+| 3+| | (S) RE
+3+| uncertainty variable factor 2+| 3+| | (S) RE
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[thirteen_seven]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -1174,14 +1152,12 @@ Turbulence; Wreck.
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnote:thirteen_eight[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -1244,8 +1220,7 @@ Rock; Wreck.
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[thirteen_nine]
@@ -1269,21 +1244,18 @@ Rock; Wreck.
 12: illuminated +
 18: existence doubtful +
 28: buoyed | EN | 0,*
-3+| vertical length
-2+| (VERLEN)
+3+| vertical length 2+| (VERLEN)
 3+| | RE | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[thirteen_nine]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -1369,8 +1341,7 @@ required, as *Obstruction* features (see <<sec_13.6>>).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[thirteen_ten]
@@ -1381,8 +1352,7 @@ required, as *Obstruction* features (see <<sec_13.6>>).
 
 3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[thirteen_ten]
 
-3+| height
-2+| (HEIGHT)
+3+| height 2+| (HEIGHT)
 3+| | RE | 0,1 footnoteblock:[thirteen_ten]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -1443,42 +1413,33 @@ required, as *Obstruction* features (see <<sec_13.6>>).
 16: watched +
 17: unwatched +
 28: buoyed | EN | 0,*
-3+| value of sounding
-2+| (VALSOU)
+3+| value of sounding 2+| (VALSOU)
 3+| | RE | 0,1 footnoteblock:[thirteen_ten]
 
-3+| vertical length
-2+| (VERLEN)
+3+| vertical length 2+| (VERLEN)
 3+| | RE | 0,1
 
-3+| vertical uncertainty
-2+| _(SOUACC)_
+3+| vertical uncertainty 2+| _(SOUACC)_
 3+| | C | 0,1
 
-3+| uncertainty fixed
-2+| 3+| | (S) RE
+3+| uncertainty fixed 2+| 3+| | (S) RE
 | 1,1
 
-3+| uncertainty variable factor
-2+| 3+| | (S) RE
+3+| uncertainty variable factor 2+| 3+| | (S) RE
 | 0,1
 
-3+| vessel speed limit
-2+| 3+| | C | 0,*
+3+| vessel speed limit 2+| 3+| | C | 0,*
 
-3+| speed limit
-2+| 3+| | (S) RE
+3+| speed limit 2+| 3+| | (S) RE
 | 1,1
 
-3+| speed units
-2+| 3+|
+3+| speed units 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots | (S) EN
 | 1,1
 
-3+| vessel class
-2+| 3+| | (S) TE
+3+| vessel class 2+| 3+| | (S) TE
 | 0,1
 
 3+| water level effect 2+| (WATLEV) 3+|
@@ -1491,14 +1452,12 @@ required, as *Obstruction* features (see <<sec_13.6>>).
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[thirteen_ten]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1

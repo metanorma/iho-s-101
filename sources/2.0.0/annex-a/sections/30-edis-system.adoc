@@ -156,30 +156,29 @@ Depth/Dredged Area where depth range minimum value is unknown
 [cols="68,80,51,62,80,96"]
 |===
 h| category of wreck h| exposition of sounding h| height h| value of sounding h| water level effect h| default clearance depth
-5+h| For features where all covering depth range minimum values are known
-|
-| _4,5_ | / | Known | / | _1,2,_ Unknown | /
-| / | | / | Known | _3,4,5,_ Unknown | /
-| / | _1,3_ | / | Unknown | _3_ | *Least Depth*
-| | _1,3_ | / | / | _3_ | *Least Depth*
-| _1_ | | / | / | _1,2,4,5,_ Unknown | *_20.1_* or *{Least Depth -- 66}* (whichever value is larger)
-| _1_ | _2,_ Empty (null) | / | / | | *_20.1_* or *{Least Depth -- 66}* (whichever value is larger)
-| / | _2,_ Empty (null) | / | Unknown | _3,5_ | *_0_*
-| / | _2,_ Empty (null) | / | Unknown | _4,_ Unknown | *_-15_*
-| _2,3,4,5,_ Unknown | | / | / | _1,2,4,5_ Unknown | *_-15_*
-| _2,3,4,5,_ Unknown | _2,_ Empty (null) | / | / | | *_-15_*
+6+h| For features where all covering depth range minimum values are known
+
+| _4,5_ | /     | Known | /       | _1,2,_ Unknown     | /
+| /     |       | /     | Known   | _3,4,5,_ Unknown   | /
+| /     | _1,3_ | /     | Unknown | _3_                | *Least Depth*
+|       | _1,3_ | /     | /       | _3_                | *Least Depth*
+| _1_   |       | /     | /       | _1,2,4,5,_ Unknown | *_20.1_* or *{Least Depth -- 66}* (whichever value is larger)
+| _1_ | _2,_ Empty (null) | /     | /       |              | *_20.1_* or *{Least Depth -- 66}* (whichever value is larger)
+| /   | _2,_ Empty (null) | /     | Unknown | _3,5_        | *_0_*
+| /   | _2,_ Empty (null) | /     | Unknown | _4,_ Unknown | *_-15_*
+| _2,3,4,5,_ Unknown |                   | /     | /       | _1,2,4,5_ Unknown  | *_-15_*
+| _2,3,4,5,_ Unknown | _2,_ Empty (null) | /     | /       |                    | *_-15_*
 
 6+h| For features of unknown depth, covered or partially covered by
 Unsurveyed Area; or Depth/Dredged Area where depth range minimum
 value is unknown
 
-| _1_ | | / | / | _3,_ Unknown | *_20.1_*
-| / | | / | Unknown | _3,5_ | *_0_*
-| / | | / | Unknown | _4,_ Unknown | *_-15_*
-| Unknown | | / | / | _3,5_ | *_0_*
-| _2,3,4,5_ | | / | / | _3,5_ | *_-15_*
-| _2,3,4,5,_ Unknown | | / | / | _4,_ Unknown | *_-15_*
-
+| _1_                | | / | /       | _3,_ Unknown | *_20.1_*
+| /                  | | / | Unknown | _3,5_        | *_0_*
+| /                  | | / | Unknown | _4,_ Unknown | *_-15_*
+| Unknown            | | / | /       | _3,5_        | *_0_*
+| _2,3,4,5_          | | / | /       | _3,5_        | *_-15_*
+| _2,3,4,5,_ Unknown | | / | /       | _4,_ Unknown | *_-15_*
 |===
 
 [[sec_30.2]]

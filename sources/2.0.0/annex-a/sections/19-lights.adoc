@@ -240,39 +240,42 @@ be populated. For lights that are temporarily extinguished, see
 |===
 h| Type h| S-4 h| category of light h| Remarks
 
-| Subsidiary light | B-471.8 | _10_ | Encoded as a separate light from the main light feature
-| Aero light | B-476.1 | _5_ |
-| Air obstruction light | B-476.2 | | Encode using feature *Light Air Obstruction*
-| Fog detector light | B-477 | | Encode using feature *Light Fog Detector*
-| Bearing light | | _18_ |
+| Subsidiary light      | B-471.8 | _10_ | Encoded as a separate light from the main light feature
+| Aero light            | B-476.1 | _5_  |
+| Air obstruction light | B-476.2 |      | Encode using feature *Light Air Obstruction*
+| Fog detector light    | B-477   |      | Encode using feature *Light Fog Detector*
+| Bearing light         |         | _18_ |
 
-| Flood light | B-478.2 | _8_ | Only to encode flood lights that are visible from seaward. The illuminated structure should be encoded using appropriate feature classes, with attribute stem:[bb "status" = 12] (illuminated) and, if the flood lit colour of the structure is considered important for navigation, complex attribute *information*, sub-attribute *text* indicating the colour; for example, _Purple when flood lit_.
-| Synchronized lights
-| B-478.3
-|
+| Flood light | B-478.2 | _8_ | Only to encode flood lights that are
+visible from seaward. The illuminated structure should be encoded
+using appropriate feature classes, with attribute
+stem:[bb "status" = 12] (illuminated) and, if the flood lit colour
+of the structure is considered important for navigation, complex attribute
+*information*, sub-attribute *text* indicating the colour; for example,
+_Purple when flood lit_.
 
-| *status* =_15._ A series of synchronized lights may be defined by associating the lights features with a *Range System* feature using the feature association *Range System Aggregation* (see <<sec_25.13>>)
+| Synchronized lights | B-478.3 | | stem:[bb "status" = 15]. A series
+of synchronized lights may be defined by associating the lights features
+with a *Range System* feature using the feature association
+*Range System Aggregation* (see <<sec_25.13>>)
 
 | Strip light | B-478.5 | _9_ |
 
-| Spot light
-|
-| _11_
-| Only to encode spot lights that are visible from seaward. The illuminated feature should be encoded using appropriate feature classes, with attribute stem:[bb "status" = 12] (illuminated)
+| Spot light | | _11_ | Only to encode spot lights that are visible
+from seaward. The illuminated feature should be encoded using appropriate
+feature classes, with attribute stem:[bb "status" = 12] (illuminated)
 
-| Emergency light
-|
+| Emergency light | | _17_ | Must be encoded as a separate feature
+to the main light feature
 
-| _17_
-| Must be encoded as a separate feature to the main light feature
-
-| Horizontally disposed lights | B-471.8 | _19_ | The number of lights must be encoded using complex attribute *multiplicity of features*
-| Vertically disposed lights | B-471.8 | _20_ | The number of lights must be encoded using complex attribute *multiplicity of features*
-| Specific pattern of lights
-| B-471.8
-|
-
-| The pattern must be encoded using complex attribute *information*, sub-attribute *text*; for example _lights disposed in the shape of a triangle_. The number of lights must be encoded using complex attribute *multiplicity of features*
+| Horizontally disposed lights | B-471.8 | _19_ | The number of lights
+must be encoded using complex attribute *multiplicity of features*
+| Vertically disposed lights | B-471.8 | _20_ | The number of lights
+must be encoded using complex attribute *multiplicity of features*
+| Specific pattern of lights | B-471.8 | | The pattern must be encoded
+using complex attribute *information*, sub-attribute *text*; for example
+_lights disposed in the shape of a triangle_. The number of lights
+must be encoded using complex attribute *multiplicity of features*
 |===
 
 [[sec_19.1.8]]
@@ -358,8 +361,7 @@ the light.
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[nineteen_two]
@@ -370,27 +372,23 @@ the light.
 
 3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[nineteen_two]
 
-3+| flare bearing
-2+| 3+| | IN | 0,1
+3+| flare bearing 2+| 3+| | IN | 0,1
 
-3+| height
-2+| (HEIGHT) 3+| | RE | 0,1
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
 3+| light visibility 2+| (LITVIS) 3+|
 1: high intensity +
 2: low intensity | EN | 0,1
-3+| major light
-2+| 3+| | BO | 0,1
+3+| major light 2+| 3+| | BO | 0,1
 
 3+| marks navigational -- system of 2+| (MARSYS) 3+|
 1: IALA A +
 2: IALA B +
 9: no system +
 11: main European inland waterway marking system | EN | 0,1
-3+| multiplicity of features
-2+| 3+| | C | 0,1
+3+| multiplicity of features 2+| 3+| | C | 0,1
 
 3+| multiplicity known 2+| 3+| | (S) BO | 1,1
 
@@ -402,8 +400,7 @@ the light.
 
 3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
 
-3+| rhythm of light
-2+| 3+| | C | 1,1
+3+| rhythm of light 2+| 3+| | C | 1,1
 
 3+| light characteristic 2+| (LITCHR) 3+|
 1: fixed +
@@ -436,8 +433,7 @@ the light.
 
 3+| signal duration 2+| 3+| | (S) RE | 1,1
 
-3+| signal status
-2+| 3+|
+3+| signal status 2+| 3+|
 1: lit/sound +
 2: eclipsed/silent | (S) EN | 1,1
 
@@ -457,8 +453,7 @@ the light.
 15: synchronized +
 16: watched +
 17: unwatched | EN | 0,*
-3+| value of nominal range
-2+| (VALNMR) 3+| | RE | 0,1
+3+| value of nominal range 2+| (VALNMR) 3+| | RE | 0,1
 
 3+| vertical datum 2+| (VERDAT) 3+|
 3: mean sea level +
@@ -476,8 +471,7 @@ the light.
 29: nearly highest high water +
 30: highest astronomical tide +
 44: baltic sea chart datum 2000 | EN | 0,1
-3+| vertical length
-2+| (VERLEN) 3+| | RE | 0,1
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
@@ -495,8 +489,7 @@ the light.
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 
-| The Structure
-3+| *Structure/Equipment* footnote:[See <<sec_18.2;and!sec_19.1.8>>.] (see <<sec_25.16>>)
+| The Structure 3+| *Structure/Equipment* footnote:[See <<sec_18.2;and!sec_19.1.8>>.] (see <<sec_25.16>>)
 3+| *Fog Signal*, *Light Air Obstruction*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Radar Transponder Beacon*, *Retroreflector* 2+| Composition | 0,1
 
 | The Equipment 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Cardinal Beacon*, *Cardinal Buoy*, *Bridge*, *Building*, *Crane*, *Conveyor*, *Daymark*, *Dolphin*, *Emergency Wreck Marking Buoy*, *Fishing Facility*, *Floating Dock*, *Fortified Structure*, *Hulk*, *Installation Buoy*, *Isolated Danger Beacon*, *Isolated Danger Buoy*, *Landmark*, *Lateral Beacon*, *Lateral Buoy*, *Light Float*, *Light Vessel*, *Mooring Buoy*, *Offshore Platform*, *Pile*, *Pipeline Overhead*, *Pontoon*, *Pylon/Bridge Support*, *Safe Water Beacon*, *Safe Water Buoy*, *Shoreline Construction*, *Silo/Tank*, *Span Fixed*, *Span Opening*, *Special Purpose/General Beacon*, *Special Purpose/General Buoy*, *Structure Over Navigable Water*, *Wind Turbine*, *Wreck* 2+| Association | 0,*
@@ -645,8 +638,7 @@ parts of the horizon of interest to maritime navigation.
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[nineteen_three]
@@ -657,8 +649,7 @@ parts of the horizon of interest to maritime navigation.
 
 3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[nineteen_three]
 
-3+| height
-2+| (HEIGHT) 3+| | RE | 0,1
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
@@ -667,8 +658,7 @@ parts of the horizon of interest to maritime navigation.
 2: IALA B +
 9: no system +
 11: main European inland waterway marking system | EN | 0,1
-3+| multiplicity of features
-2+| 3+| | C | 0,1
+3+| multiplicity of features 2+| 3+| | C | 0,1
 
 3+| multiplicity known 2+| 3+| | (S) BO | 1,1
 
@@ -680,8 +670,7 @@ parts of the horizon of interest to maritime navigation.
 
 3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
 
-3+| sector characteristics
-2+| 3+| | C | 1,*
+3+| sector characteristics 2+| 3+| | C | 1,*
 
 3+| light characteristic 2+| (LITCHR) 3+|
 1: fixed +
@@ -736,8 +725,7 @@ parts of the horizon of interest to maritime navigation.
 6: visibility deliberately restricted +
 8: partially obscured +
 9: visible in line of range | (S) EN | 0,*
-3+| sector limit
-2+| 3+| | (S) C | 0,1 footnoteblock:[nineteen_three]
+3+| sector limit 2+| 3+| | (S) C | 0,1 footnoteblock:[nineteen_three]
 
 3+| sector limit one 2+| 3+| | (S) C | 1,1
 
@@ -769,8 +757,7 @@ parts of the horizon of interest to maritime navigation.
 
 3+| signal duration 2+| 3+| | (S) RE | 1,1
 
-3+| signal status
-2+| 3+|
+3+| signal status 2+| 3+|
 1: lit/sound +
 2: eclipsed/silent | (S) EN | 1,1
 
@@ -1153,8 +1140,7 @@ which warrant the turning on or off of a sound signal.
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[nineteen_four]
@@ -1165,11 +1151,9 @@ which warrant the turning on or off of a sound signal.
 
 3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[nineteen_four]
 
-3+| flare bearing
-2+| 3+| | IN | 0,1
+3+| flare bearing 2+| 3+| | IN | 0,1
 
-3+| height
-2+| (HEIGHT) 3+| | RE | 0,1
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
@@ -1179,8 +1163,7 @@ which warrant the turning on or off of a sound signal.
 
 3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
 
-3+| rhythm of light
-2+| 3+| | C | 0,1
+3+| rhythm of light 2+| 3+| | C | 0,1
 
 3+| light characteristic 2+| (LITCHR) 3+|
 1: fixed +
@@ -1213,8 +1196,7 @@ which warrant the turning on or off of a sound signal.
 
 3+| signal duration 2+| 3+| | (S) RE | 1,1
 
-3+| signal status
-2+| 3+|
+3+| signal status 2+| 3+|
 1: lit/sound +
 2: eclipsed/silent | (S) EN | 1,1
 
@@ -1250,8 +1232,7 @@ which warrant the turning on or off of a sound signal.
 29: nearly highest high water +
 30: highest astronomical tide +
 44: baltic sea chart datum 2000 | EN | 0,1
-3+| vertical length
-2+| (VERLEN) 3+| | RE | 0,1
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
@@ -1365,8 +1346,7 @@ Beacon; Special Purpose/General Buoy.
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[nineteen_five]
@@ -1377,13 +1357,11 @@ Beacon; Special Purpose/General Buoy.
 
 3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[nineteen_five]
 
-3+| flare bearing
-2+| 3+| | IN | 0,1
+3+| flare bearing 2+| 3+| | IN | 0,1
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| height
-2+| (HEIGHT) 3+| | RE | 0,1
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
 
 3+| light visibility 2+| (LITVIS) 3+|
 1: high intensity +
@@ -1395,8 +1373,7 @@ Beacon; Special Purpose/General Buoy.
 7: obscured +
 8: partially obscured +
 9: visible in line of range | EN | 0,*
-3+| multiplicity of features
-2+| 3+| | C | 0,1
+3+| multiplicity of features 2+| 3+| | C | 0,1
 
 3+| multiplicity known 2+| 3+| | (S) BO | 1,1
 
@@ -1408,8 +1385,7 @@ Beacon; Special Purpose/General Buoy.
 
 3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
 
-3+| rhythm of light
-2+| 3+| | C | 0,1
+3+| rhythm of light 2+| 3+| | C | 0,1
 
 3+| light characteristic 2+| (LITCHR) 3+|
 1: fixed +
@@ -1459,8 +1435,7 @@ Beacon; Special Purpose/General Buoy.
 15: synchronized +
 16: watched +
 17: unwatched | EN | 0,*
-3+| value of nominal range
-2+| (VALNMR) 3+| | RE | 0,1
+3+| value of nominal range 2+| (VALNMR) 3+| | RE | 0,1
 
 3+| vertical datum 2+| (VERDAT) 3+|
 3: mean sea level +

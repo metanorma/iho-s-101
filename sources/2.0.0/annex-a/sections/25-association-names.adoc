@@ -68,26 +68,17 @@ role.
 
 h| Role Type h| Role h| Associated With h| Multiplicity
 .2+| Association | The Information | *Contact Details*,
-*Non-Standard Working Day*, *Service Hours*, *Nautical Information* | 0,1
-|
+*Non-Standard Working Day*, *Service Hours*, *Nautical Information* | 0,1 |
 
-| *Airport/Airfield*, *Anchor Berth*, *Anchorage Area*, *…*
-| 0,*
+| *Airport/Airfield*, *Anchor Berth*, *Anchorage Area*, *…* | 0,*
 
 h| Role Type h| Role h| Associated With h| Multiplicity
 .2+| Association | The Information | *Contact Details*, *Nautical Information* | 0,1
-|
-
-| *Administration Area*, **…**, *Wind Turbine*
-| 0,*
+| | *Administration Area*, **…**, *Wind Turbine* | 0,*
 
 h| Role Type h| Role h| Associated With h| Multiplicity
 .2+| Association | The Information | *Nautical Information* | 0,1
-|
-
-| …, *Two-Way Route*, *Two-Way Route Part*, *Underwater/Awash Rock*, *…*
-| 0,*
-
+| | …, *Two-Way Route*, *Two-Way Route Part*, *Underwater/Awash Rock*, *…* | 0,*
 |===
 
 <<fig_25-3>> below shows the representation of the feature/feature
@@ -114,8 +105,8 @@ navigation marking the components of the Route using the association
 *Aids to Navigation Association* (see <<sec_25.2>>).
 
 h| Role Type h| Role h| Associated With h| Multiplicity
-| Aggregation | The Collection | *Two-Way Route* | 0,1
-| Association | The Component | *Two-Way Route Part* | 1,*
+| Aggregation | The Collection | *Two-Way Route*      | 0,1
+| Association | The Component  | *Two-Way Route Part* | 1,*
 
 |===
 
@@ -124,7 +115,7 @@ In <<fig_25-3>> above, the table should be interpreted as follows:
 * A *Two-Way Route* instance, if it exists, _aggregates_ (or is the
 container for)_the collection_ of one or more *Two-Way Route Part*
 features.
-* A *Two-Way Route Part* instance is _the_ __component__ (or is a
+* A *Two-Way Route Part* instance is _the component_ (or is a
 containee) of a *Two-Way Route* feature, if the *Two-Way Route
 Aggregation* association is created.
 * The _1,++*++_ multiplicity at the *Two-Way Route Part* end of the
@@ -253,9 +244,7 @@ role.
 
 h| Role Type h| Role h| Associated With h| Multiplicity
 .2+| Association | The Information | *Nautical Information* | 0,1
-|
-
-| …, *Two-Way Route*, *Two-Way Route Part*, *Underwater/Awash Rock*,
+| | …, *Two-Way Route*, *Two-Way Route Part*, *Underwater/Awash Rock*,
 *Unsurveyed Area*, *Vegetation*, *Virtual AIS Aid to Navigation*,
 *Water Turbulence*, *Waterfall*, *Weed/Kelp*, *Wreck*
 | 0,*
@@ -279,7 +268,11 @@ an example as included for the feature *Lateral Buoy* (see
 [cols="87,175,184,72,77"]
 |===
 5+h| Feature Associations
-h| S-101 Role ^**(4)**^ | *Association Type* ^**(1)**^ | *Associated to* ^**(2)**^ h| Type ^**(3)**^ h| Multiplicity ^**(5)**^
+h| S-101 Role footnoteblock:[footnote_25_6_4]
+h| Association Type footnoteblock:[footnote_25_6_1]
+h| Associated to footnoteblock:[footnote_25_6_2]
+h| Type footnoteblock:[footnote_25_6_3]
+h| Multiplicity footnoteblock:[footnote_25_6_5]
 | The Structure | *Structure/Equipment* (see <<sec_25.16>>) | *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* | Composition | 0,1
 | The Component | *Aids to Navigation Association* (see <<sec_25.2>>) | *Archipelagic Sea Lane*, *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* | Association | 0,*
 | The Auxiliary Feature | *Fairway Auxiliary* (see <<sec_25.8>>) | *Fairway* | Association | 0,*
@@ -290,44 +283,61 @@ h| S-101 Role ^**(4)**^ | *Association Type* ^**(1)**^ | *Associated to* ^**(2)*
 
 |===
 
-Each row included in <<table_25-6>> above describes a S-101
+NOTE: Each row included in <<table_25-6>> above describes a S-101
 association instance that may be created and include one or more
 instances of the feature type *Lateral Buoy* as a member; and is
 structured such that all components of the association are grouped as
-they would appear at the end of the association containing *Lateral
-Buoy* (see <<fig_25-1>> and associated guidance).
+they would appear at the end of the association containing
+*Lateral Buoy* (see <<fig_25-1>> and associated guidance).
 
-. The name of the association as specified in the following clauses.
-. The list of features that *Lateral Buoy* may be associated to for
+[[footnote_25_6_1]]
+[NOTE]
+--
+The name of the association as specified in the following clauses.
+--
+
+[[footnote_25_6_2]]
+[NOTE]
+--
+The list of features that *Lateral Buoy* may be associated to for
 the association (in UML terms, the list of features at the "other
 end" of the association).
-. The type of association as defined for the *Lateral Buoy* end of
+--
+
+[[footnote_25_6_3]]
+[NOTE]
+--
+The type of association as defined for the *Lateral Buoy* end of
 the association -- "Association", "Aggregation" or "Composition" as
 described in S-100 Part 1, clause 1-4.9; and included in the tables
 in this Section in the "Role Type" column.
-+
---
+
 NOTE: The association type for a feature/information association will
 always be "Association".
 --
 
-. The role name as defined for the *Lateral Buoy* end of the
+[[footnote_25_6_4]]
+[NOTE]
+--
+The role name as defined for the *Lateral Buoy* end of the
 association and as described in <<sec_26>>; and included in the
 tables in this Section in the "Role" column.
-+
---
+
 NOTE: a dash "-" in this column indicates the one-way nature of a
 feature/information association -- the role name is included at the
 information end of the association only.
 --
 
-. The multiplicity as defined for the *Lateral Buoy* end of the
+[[footnote_25_6_5]]
+[NOTE]
+--
+The multiplicity as defined for the *Lateral Buoy* end of the
 association and included in the tables in this Section in the
 "Multiplicity" column. For *Lateral Buoy*, these multiplicities are
 interpreted as follows:
 
-* 0,1 for the *Structure/Equipment* association means that a *Lateral
-Buoy* can exist in isolation (lower multiplicity 0) but, if the
+* 0,1 for the *Structure/Equipment* association means that a
+*Lateral Buoy* can exist in isolation (lower multiplicity 0) but, if the
 association exists, exactly one instance of *Lateral Buoy* must be
 included in the "The Structure" role of type Composition. The same
 principle applies for the *Text Association* association.
@@ -336,6 +346,7 @@ multiplicity 0) but, if the association exists, one or more instances
 of *Lateral Buoy* may (but are not required) to be included in the
 association. In general this is an indication of "collective
 multiplicity" (see <<fig_15-4>> above and associated guidance).
+--
 
 [[sec_25.1]]
 === Additional information
@@ -356,30 +367,19 @@ role.
 
 h| Role Type h| Role h| Associated With h| Multiplicity
 .2+| Association
-| The Information
-| *Contact Details*, *Non-Standard Working Day*, *Service Hours*,
-*Nautical Information*
-| 0,1
+| The Information | *Contact Details*, *Non-Standard Working Day*, *Service Hours*,
+*Nautical Information* | 0,1
 
-|
-
-| *Airport/Airfield*, *Anchor Berth*, *Anchorage Area*, *Berth*, *Bridge*,
+| | *Airport/Airfield*, *Anchor Berth*, *Anchorage Area*, *Berth*, *Bridge*,
 *Building*, *Checkpoint*, *Coast Guard Station*, *Conveyor*, *Crane*,
 *Dock Area*, *Dry Dock*, *Floating Dock*, *Gate*, *Helipad*, *Landmark*,
 *Lock Basin*, *Mooring Area*, *Production/Storage Area*,
 *Radio Calling-In Point*, *Runway*, *Seaplane Landing Area*,
-*Span Fixed*, *Span Opening*
-| 0,*
+*Span Fixed*, *Span Opening* | 0,*
 
 h| Role Type h| Role h| Associated With h| Multiplicity
-.2+| Association
-| The Information
-| *Contact Details*, *Nautical Information*
-| 0,1
-
-|
-
-| *Administration Area*, *Cable Area*, *Cable Overhead*, *Cable Submarine*,
+.2+| Association | The Information | *Contact Details*, *Nautical Information* | 0,1
+| | *Administration Area*, *Cable Area*, *Cable Overhead*, *Cable Submarine*,
 *Cardinal Beacon*, *Cardinal Buoy*, *Daymark*, *Dolphin*,
 *Emergency Wreck Marking Buoy*, *Fishing Facility*, *Fog Signal*,
 *Harbour Area (Administrative)*, *Harbour Facility*,
@@ -394,14 +394,11 @@ h| Role Type h| Role h| Associated With h| Multiplicity
 *Signal Station Warning*, *Silo/Tank*, *Small Craft Facility*,
 *Special Purpose/General Beacon*, *Special Purpose/General Buoy*,
 *Submarine Pipeline Area*, *Tunnel*, *Vessel Traffic Service Area*,
-*Wind Turbine*
-| 0,*
+*Wind Turbine* | 0,*
 
 h| Role Type h| Role h| Associated With h| Multiplicity
 .2+| Association | The Information | *Nautical Information* | 0,1
-|
-
-| *Archipelagic Sea Lane*, *Archipelagic Sea Lane Area*,
+| | *Archipelagic Sea Lane*, *Archipelagic Sea Lane Area*,
 *Archipelagic Sea Lane Axis*, *Bollard*, *Built-Up Area*, *Canal*,
 *Cargo Transhipment Area*, *Causeway*, *Caution Area*, *Coastline*,
 *Collision Regulations Limit*, *Contiguous Zone*,
@@ -696,10 +693,7 @@ to a *Spatial Quality* feature..
 
 h| Role Type h| Role h| Associated With h| Multiplicity
 .2+| Association | The Quality Information | *Spatial Quality* | 0,1
-|
-
-| *Quality of Bathymetric Data*
-| 0,*
+| | *Quality of Bathymetric Data* | 0,*
 
 |===
 
@@ -769,10 +763,7 @@ edges (boundaries) of the surface.
 
 h| Role Type h| Role h| Associated With h| Multiplicity
 .2+| Association | The Quality Information | *Spatial Quality* | 0,1
-|
-
-| Spatial types (see <<sec_2.4.7>>)
-| 0,*
+| | Spatial types (see <<sec_2.4.7>>) | 0,*
 
 |===
 

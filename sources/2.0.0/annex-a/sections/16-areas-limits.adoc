@@ -105,8 +105,7 @@ IHO Dictionary -- S-32).
 10: anchorage for a limited period of time +
 14: waiting anchorage +
 15: reported anchorage | EN | 0,*
-3+| category of cargo
-2+| 3+|
+3+| category of cargo 2+| 3+|
 1: bulk +
 2: container +
 3: general +
@@ -129,8 +128,7 @@ IHO Dictionary -- S-32).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_three]
@@ -771,8 +769,7 @@ explosives, chemical waste, is deliberately deposited. (S-57 Edition
 4: explosives dumping ground +
 5: spoil ground +
 6: vessel dumping ground | EN | 0,*
-3+| date disused
-2+| 3+| | TD | 0,1
+3+| date disused 2+| 3+| | TD | 0,1
 
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
 
@@ -780,8 +777,7 @@ explosives, chemical waste, is deliberately deposited. (S-57 Edition
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_seven]
@@ -818,13 +814,11 @@ explosives, chemical waste, is deliberately deposited. (S-57 Edition
 4: not in use +
 6: reserved +
 7: temporary | EN | 0,*
-3+| vessel speed limit
-2+| 3+| | C | 0,*
+3+| vessel speed limit 2+| 3+| | C | 0,*
 
 3+| speed limit 2+| 3+| | (S) RE | 1,1
 
-3+| speed units
-2+| 3+|
+3+| speed units 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots | (S) EN
@@ -973,8 +967,7 @@ Bathymetric Data* feature (see <<sec_3.8>>).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN | 0,1 footnoteblock:[sixteen_eight]
 
@@ -1147,8 +1140,7 @@ not be named.
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| in dispute
-2+| 3+| | BO | 0,1
+3+| in dispute 2+| 3+| | BO | 0,1
 
 3+| jurisdiction 2+| (JRSDTN) 3+|
 1: international +
@@ -1160,8 +1152,7 @@ not be named.
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_nine]
@@ -1257,8 +1248,7 @@ in order to reduce a vessel's draught. (IHO Dictionary -- S-32).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_ten]
@@ -1308,13 +1298,11 @@ in order to reduce a vessel's draught. (IHO Dictionary -- S-32).
 6: reserved +
 7: temporary +
 9: mandatory | EN | 0,*
-3+| vessel speed limit
-2+| 3+| | C | 0,*
+3+| vessel speed limit 2+| 3+| | C | 0,*
 
 3+| speed limit 2+| 3+| | (S) RE | 1,1
 
-3+| speed units
-2+| 3+|
+3+| speed units 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots | (S) EN
@@ -1526,8 +1514,7 @@ to safety of navigation, is available.
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_twelve]
@@ -1634,8 +1621,7 @@ control in this zone subject to the provisions of International Law.
 
 3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[sixteen_thirteen]
 
-3+| in dispute
-2+| 3+| | BO | 0,1
+3+| in dispute 2+| 3+| | BO | 0,1
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
@@ -1725,8 +1711,7 @@ outer edge of the continental margin does not extend up to that distance.
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_fourteen]
@@ -1867,8 +1852,7 @@ of the Sea under which the coastal state has certain rights and jurisdiction.
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| in dispute
-2+| 3+| | BO | 0,1
+3+| in dispute 2+| 3+| | BO | 0,1
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
@@ -1946,8 +1930,7 @@ nation. (IHO Dictionary -- S-32).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_seventeen]
@@ -2046,8 +2029,7 @@ Restricted Area; Territorial Sea Area.
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_eighteen]
@@ -2095,13 +2077,11 @@ Restricted Area; Territorial Sea Area.
 16: watched +
 17: unwatched +
 28: buoyed | EN | 0,*
-3+| vessel speed limit
-2+| 3+| | C | 0,*
+3+| vessel speed limit 2+| 3+| | C | 0,*
 
 3+| speed limit 2+| 3+| | (S) RE | 1,1
 
-3+| speed units
-2+| 3+|
+3+| speed units 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots | (S) EN
@@ -2177,8 +2157,7 @@ to facilitate reshipment to other countries. (IHO Dictionary -- S-32).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_nineteen]
@@ -2257,8 +2236,7 @@ Appendix A -- Chapter 1, Page 1.80, November 2000).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_twenty]
@@ -2346,8 +2324,7 @@ with connected floating timbers used as a staging area for sawn logs.
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_twentyone]
@@ -2445,8 +2422,7 @@ Register, 2010).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_twentytwo]
@@ -2618,8 +2594,7 @@ seaward from the Territorial Sea Baseline. (IHO Dictionary -- S-32).
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| in dispute
-2+| 3+| | BO | 0,1
+3+| in dispute 2+| 3+| | BO | 0,1
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
@@ -2642,13 +2617,11 @@ seaward from the Territorial Sea Baseline. (IHO Dictionary -- S-32).
 23: cargo transhipment (lightening) prohibited +
 24: dragging prohibited +
 27: speed restricted | EN | 0,*
-3+| vessel speed limit
-2+| 3+| | C | 0,*
+3+| vessel speed limit 2+| 3+| | C | 0,*
 
 3+| speed limit 2+| 3+| | (S) RE | 1,1
 
-3+| speed units
-2+| 3+|
+3+| speed units 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots | (S) EN
@@ -2731,8 +2704,7 @@ where submarines may navigate under water or at the surface.
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_twentyfive]
@@ -2766,13 +2738,11 @@ where submarines may navigate under water or at the surface.
 24: dragging prohibited +
 25: stopping prohibited +
 27: speed restricted | EN | 0,*
-3+| vessel speed limit
-2+| 3+| | C | 0,*
+3+| vessel speed limit 2+| 3+| | C | 0,*
 
 3+| speed limit 2+| 3+| | (S) RE | 1,1
 
-3+| speed units
-2+| 3+|
+3+| speed units 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots | (S) EN
@@ -2857,8 +2827,7 @@ they apply. (UK Pilotage Act 1987).
 
 3+| name 2+| _(PILDST) (NPLDST)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_twentysix]
@@ -2948,8 +2917,7 @@ and international navigation rules.
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_twentyseven]
@@ -3051,8 +3019,7 @@ accidental causes. (International Maritime Organization).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[sixteen_twentyeight]

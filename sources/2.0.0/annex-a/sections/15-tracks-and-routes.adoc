@@ -153,14 +153,11 @@ sub-attributes *file reference* or *text* must be populated.]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| measured distance
-2+| 3+| | IN | 0,1
+3+| measured distance 2+| 3+| | IN | 0,1
 
-3+| orientation
-2+| 3+| | C | 1,1
+3+| orientation 2+| 3+| | C | 1,1
 
-3+| orientation uncertainty
-2+| 3+| | (S) RE
+3+| orientation uncertainty 2+| 3+| | (S) RE
 | 0,1
 
 3+| orientation value 2+| _(ORIENT)_ 3+| | (S) RE | 1,1
@@ -312,12 +309,10 @@ free of dangers and along which ships are advised to navigate.
 3+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| based on fixed marks
-2+| _(CATTRK)_
+3+| based on fixed marks 2+| _(CATTRK)_
 3+| | BO | 1,1
 
-3+| depth range minimum value
-2+| (DRVAL1)
+3+| depth range minimum value 2+| (DRVAL1)
 3+| | RE | 0,1
 
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
@@ -326,8 +321,7 @@ free of dangers and along which ships are advised to navigate.
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_five]
@@ -340,12 +334,10 @@ free of dangers and along which ships are advised to navigate.
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| maximum permitted draught
-2+| _(INFORM) (NINFOM)_
+3+| maximum permitted draught 2+| _(INFORM) (NINFOM)_
 3+| | RE | 0,1
 
-3+| orientation value
-2+| _(ORIENT)_
+3+| orientation value 2+| _(ORIENT)_
 3+| | RE | 1,1
 
 3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
@@ -382,23 +374,19 @@ free of dangers and along which ships are advised to navigate.
 2: outbound +
 3: one-way +
 4: two-way | EN | 1,1
-3+| vertical uncertainty
-2+| _(SOUACC)_
+3+| vertical uncertainty 2+| _(SOUACC)_
 3+| | C | 0,1
 
-3+| uncertainty fixed
-2+| 3+| | (S) RE
+3+| uncertainty fixed 2+| 3+| | (S) RE
 | 1,1
 
-3+| uncertainty variable factor
-2+| 3+| | (S) RE
+3+| uncertainty variable factor 2+| 3+| | (S) RE
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fifteen_five]
@@ -537,8 +525,7 @@ one farthest from the observer is the rear mark.
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_six]
@@ -551,20 +538,17 @@ one farthest from the observer is the rear mark.
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| maximum permitted draught
-2+| 3+| | RE | 0,1
+3+| maximum permitted draught 2+| 3+| | RE | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fifteen_six]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -647,8 +631,7 @@ channel". (International Maritime Dictionary, 2^nd^ Edition).
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| depth range minimum value
-2+| (DRVAL1)
+3+| depth range minimum value 2+| (DRVAL1)
 3+| | RE | 0,1
 
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
@@ -657,8 +640,7 @@ channel". (International Maritime Dictionary, 2^nd^ Edition).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_seven]
@@ -671,11 +653,9 @@ channel". (International Maritime Dictionary, 2^nd^ Edition).
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| maximum permitted draught
-2+| 3+| | RE | 0,1
+3+| maximum permitted draught 2+| 3+| | RE | 0,1
 
-3+| orientation value
-2+| _(ORIENT)_
+3+| orientation value 2+| _(ORIENT)_
 3+| | RE | 0,1
 
 3+| quality of vertical measurement 2+| (QUASOU) 3+|
@@ -720,47 +700,38 @@ channel". (International Maritime Dictionary, 2^nd^ Edition).
 2: outbound +
 3: one-way +
 4: two-way | EN | 0,1
-3+| vertical uncertainty
-2+| _(SOUACC)_
+3+| vertical uncertainty 2+| _(SOUACC)_
 3+| | C | 0,1
 
-3+| uncertainty fixed
-2+| 3+| | (S) RE
+3+| uncertainty fixed 2+| 3+| | (S) RE
 | 1,1
 
-3+| uncertainty variable factor
-2+| 3+| | (S) RE
+3+| uncertainty variable factor 2+| 3+| | (S) RE
 | 0,1
 
-3+| vessel speed limit
-2+| 3+| | C | 0,*
+3+| vessel speed limit 2+| 3+| | C | 0,*
 
-3+| speed limit
-2+| 3+| | (S) RE
+3+| speed limit 2+| 3+| | (S) RE
 | 1,1
 
-3+| speed units
-2+| 3+|
+3+| speed units 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots | (S) EN
 | 1,1
 
-3+| vessel class
-2+| 3+| | (S) TE
+3+| vessel class 2+| 3+| | (S) TE
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fifteen_seven]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -861,8 +832,7 @@ complex fairway system.
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_eight]
@@ -875,8 +845,7 @@ complex fairway system.
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| maximum permitted draught
-2+| 3+| | RE | 0,1
+3+| maximum permitted draught 2+| 3+| | RE | 0,1
 
 3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
 
@@ -887,14 +856,12 @@ complex fairway system.
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fifteen_eight]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -977,12 +944,10 @@ route. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.137, November
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| based on fixed marks
-2+| _(CATTRK)_
+3+| based on fixed marks 2+| _(CATTRK)_
 3+| | BO | 1,1
 
-3+| depth range minimum value
-2+| (DRVAL1)
+3+| depth range minimum value 2+| (DRVAL1)
 3+| | RE | 0,1
 
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
@@ -991,8 +956,7 @@ route. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.137, November
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_nine]
@@ -1005,8 +969,7 @@ route. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.137, November
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| orientation value
-2+| _(ORIENT)_
+3+| orientation value 2+| _(ORIENT)_
 3+| | RE | 0,1
 
 3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
@@ -1041,29 +1004,24 @@ route. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.137, November
 2: outbound +
 3: one-way +
 4: two-way | EN | 0,1
-3+| vertical uncertainty
-2+| _(SOUACC)_
+3+| vertical uncertainty 2+| _(SOUACC)_
 3+| | C | 0,1
 
-3+| uncertainty fixed
-2+| 3+| | (S) RE
+3+| uncertainty fixed 2+| 3+| | (S) RE
 | 1,1
 
-3+| uncertainty variable factor
-2+| 3+| | (S) RE
+3+| uncertainty variable factor 2+| 3+| | (S) RE
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fifteen_nine]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -1149,12 +1107,10 @@ a two-way route within which traffic flow is generally along one bearing
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| based on fixed marks
-2+| _(CATTRK)_
+3+| based on fixed marks 2+| _(CATTRK)_
 3+| | BO | 0,1
 
-3+| depth range minimum value
-2+| (DRVAL1)
+3+| depth range minimum value 2+| (DRVAL1)
 3+| | RE | 0,1
 
 3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
@@ -1165,8 +1121,7 @@ a two-way route within which traffic flow is generally along one bearing
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| orientation value
-2+| (ORIENT)
+3+| orientation value 2+| (ORIENT)
 3+| | RE | 1,1
 
 3+| quality of vertical measurement 2+| (QUASOU) 3+|
@@ -1196,8 +1151,7 @@ a two-way route within which traffic flow is generally along one bearing
 2: outbound +
 3: one-way +
 4: two-way | EN | 1,1
-3+| vertical uncertainty
-2+| _(SOUACC)_
+3+| vertical uncertainty 2+| _(SOUACC)_
 3+| | C | 0,1
 
 3+| uncertainty fixed 2+| 3+| | (S) RE | 1,1
@@ -1215,8 +1169,7 @@ a two-way route within which traffic flow is generally along one bearing
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
 
-3+| text
-2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[fifteen_ten]
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[fifteen_ten]
 
 10+h| Feature Associations
 h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
@@ -1321,8 +1274,7 @@ is difficult or dangerous. (IMO Ships' Routeing).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_eleven]
@@ -1335,20 +1287,17 @@ is difficult or dangerous. (IMO Ships' Routeing).
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| maximum permitted draught
-2+| 3+| | RE | 0,1
+3+| maximum permitted draught 2+| 3+| | RE | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fifteen_eleven]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -1432,8 +1381,7 @@ direction of traffic flow. (IMO Ships' Routeing).
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| orientation value
-2+| _(ORIENT)_
+3+| orientation value 2+| _(ORIENT)_
 3+| | RE | 1,1
 
 3+| status 2+| (STATUS) 3+|
@@ -1443,14 +1391,12 @@ direction of traffic flow. (IMO Ships' Routeing).
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fifteen_twelve]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -1523,12 +1469,10 @@ A -- Chapter 1, Page 1.49, November 2000).
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| based on fixed marks
-2+| _(CATTRK)_
+3+| based on fixed marks 2+| _(CATTRK)_
 3+| | BO | 1,1
 
-3+| depth range minimum value
-2+| (DRVAL1)
+3+| depth range minimum value 2+| (DRVAL1)
 3+| | RE | 0,1
 
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
@@ -1537,8 +1481,7 @@ A -- Chapter 1, Page 1.49, November 2000).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_thirteen]
@@ -1549,14 +1492,12 @@ A -- Chapter 1, Page 1.49, November 2000).
 
 3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[fifteen_thirteen]
 
-3+| IMO adopted
-2+| _(CATTSS)_
+3+| IMO adopted 2+| _(CATTSS)_
 3+| | BO | 0,1
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| orientation value
-2+| _(ORIENT)_
+3+| orientation value 2+| _(ORIENT)_
 3+| | RE | 1,1
 
 3+| quality of vertical measurement 2+| (QUASOU) 3+|
@@ -1587,29 +1528,24 @@ A -- Chapter 1, Page 1.49, November 2000).
 2: outbound +
 3: one-way +
 4: two-way | EN | 1,1
-3+| vertical uncertainty
-2+| _(SOUACC)_
+3+| vertical uncertainty 2+| _(SOUACC)_
 3+| | C | 0,1
 
-3+| uncertainty fixed
-2+| 3+| | (S) RE
+3+| uncertainty fixed 2+| 3+| | (S) RE
 | 1,1
 
-3+| uncertainty variable factor
-2+| 3+| | (S) RE
+3+| uncertainty variable factor 2+| 3+| | (S) RE
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fifteen_thirteen]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -1729,8 +1665,7 @@ Route Centreline* features.
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| depth range minimum value
-2+| (DRVAL1)
+3+| depth range minimum value 2+| (DRVAL1)
 3+| | RE | 1,1
 
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
@@ -1749,14 +1684,12 @@ Route Centreline* features.
 
 3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[fifteen_fourteen]
 
-3+| IMO adopted
-2+| _(CATTSS)_
+3+| IMO adopted 2+| _(CATTSS)_
 3+| | BO | 0,1
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| orientation value
-2+| (ORIENT)
+3+| orientation value 2+| (ORIENT)
 3+| | RE | 1,1
 
 3+| quality of vertical measurement 2+| (QUASOU) 3+|
@@ -1812,47 +1745,38 @@ Route Centreline* features.
 2: outbound +
 3: one-way +
 4: two-way | EN | 1,1
-3+| vertical uncertainty
-2+| _(SOUACC)_
+3+| vertical uncertainty 2+| _(SOUACC)_
 3+| | C | 0,1
 
-3+| uncertainty fixed
-2+| 3+| | (S) RE
+3+| uncertainty fixed 2+| 3+| | (S) RE
 | 1,1
 
-3+| uncertainty variable factor
-2+| 3+| | (S) RE
+3+| uncertainty variable factor 2+| 3+| | (S) RE
 | 0,1
 
-3+| vessel speed limit
-2+| 3+| | C | 0,*
+3+| vessel speed limit 2+| 3+| | C | 0,*
 
-3+| speed limit
-2+| 3+| | (S) RE
+3+| speed limit 2+| 3+| | (S) RE
 | 1,1
 
-3+| speed units
-2+| 3+|
+3+| speed units 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots | (S) EN
 | 1,1
 
-3+| vessel class
-2+| 3+| | (S) TE
+3+| vessel class 2+| 3+| | (S) TE
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fifteen_fourteen]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -1972,8 +1896,7 @@ Part.
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_fifteen]
@@ -1984,8 +1907,7 @@ Part.
 
 3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[fifteen_fifteen]
 
-3+| IMO adopted
-2+| _(CATTSS)_
+3+| IMO adopted 2+| _(CATTSS)_
 3+| | BO | 0,1
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -1993,14 +1915,12 @@ Part.
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fifteen_fifteen]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -2119,35 +2039,29 @@ for Preventing Collisions at Sea. (Adapted from IMO Ships' Routeing).
 9: mandatory +
 16: watched +
 17: unwatched | EN | 0,*
-3+| vessel speed limit
-2+| 3+| | C | 0,*
+3+| vessel speed limit 2+| 3+| | C | 0,*
 
-3+| speed limit
-2+| 3+| | (S) RE
+3+| speed limit 2+| 3+| | (S) RE
 | 1,1
 
-3+| speed units
-2+| 3+|
+3+| speed units 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots | (S) EN
 | 1,1
 
-3+| vessel class
-2+| 3+| | (S) TE
+3+| vessel class 2+| 3+| | (S) TE
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fifteen_sixteen]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -2217,8 +2131,7 @@ of traffic flow may be recommended. (IMO Ships' Routeing).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_seventeen]
@@ -2229,8 +2142,7 @@ of traffic flow may be recommended. (IMO Ships' Routeing).
 
 3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[fifteen_seventeen]
 
-3+| IMO adopted
-2+| _(CATTSS)_
+3+| IMO adopted 2+| _(CATTSS)_
 3+| | BO | 0,1
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -2264,35 +2176,29 @@ of traffic flow may be recommended. (IMO Ships' Routeing).
 1: permanent +
 9: mandatory +
 28: buoyed | EN | 0,*
-3+| vessel speed limit
-2+| 3+| | C | 0,*
+3+| vessel speed limit 2+| 3+| | C | 0,*
 
-3+| speed limit
-2+| 3+| | (S) RE
+3+| speed limit 2+| 3+| | (S) RE
 | 1,1
 
-3+| speed units
-2+| 3+|
+3+| speed units 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots | (S) EN
 | 1,1
 
-3+| vessel class
-2+| 3+| | (S) TE
+3+| vessel class 2+| 3+| | (S) TE
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 1,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fifteen_seventeen]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -2376,8 +2282,7 @@ a boundary. (IHO Dictionary -- S-32).
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| orientation value
-2+| (ORIENT)
+3+| orientation value 2+| (ORIENT)
 3+| | RE | 0,1 footnoteblock:[fifteen_eighteen]
 
 3+| restriction 2+| (RESTRN) 3+|
@@ -2410,35 +2315,28 @@ a boundary. (IHO Dictionary -- S-32).
 6: reserved +
 9: mandatory +
 28: buoyed | EN | 0,*
-3+| vessel speed limit
-2+| 3+| | C | 0,*
+3+| vessel speed limit 2+| 3+| | C | 0,*
 
-3+| speed limit
-2+| 3+| | (S) RE
+3+| speed limit 2+| 3+| | (S) RE
 | 1,1
 
-3+| speed units
-2+| 3+|
+3+| speed units 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots | (S) EN
 | 1,1
 
-3+| vessel class
-2+| 3+| | (S) TE
+3+| vessel class 2+| 3+| | (S) TE
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
-| 0,1
+3+| file locator 2+| 3+| | (S) TE | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fifteen_eighteen]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -2537,14 +2435,12 @@ for particular classes of ships proceeding in the same direction.
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fifteen_nineteen]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -2619,14 +2515,12 @@ November 2000).
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fifteen_twenty]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -2723,35 +2617,29 @@ Appendix A -- Chapter 1, Page 1.186, November 2000).
 3: recommended +
 6: reserved +
 9: mandatory | EN | 0,*
-3+| vessel speed limit
-2+| 3+| | C | 0,*
+3+| vessel speed limit 2+| 3+| | C | 0,*
 
-3+| speed limit
-2+| 3+| | (S) RE
+3+| speed limit 2+| 3+| | (S) RE
 | 1,1
 
-3+| speed units
-2+| 3+|
+3+| speed units 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots | (S) EN
 | 1,1
 
-3+| vessel class
-2+| 3+| | (S) TE
+3+| vessel class 2+| 3+| | (S) TE
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fifteen_twentyone]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -2855,35 +2743,29 @@ around the separation point or zone. (IMO Ships' Routeing).
 3: recommended +
 6: reserved +
 9: mandatory | EN | 0,*
-3+| vessel speed limit
-2+| 3+| | C | 0,*
+3+| vessel speed limit 2+| 3+| | C | 0,*
 
-3+| speed limit
-2+| 3+| | (S) RE
+3+| speed limit 2+| 3+| | (S) RE
 | 1,1
 
-3+| speed units
-2+| 3+|
+3+| speed units 2+| 3+|
 2: kilometres per hour +
 3: miles per hour +
 4: knots | (S) EN
 | 1,1
 
-3+| vessel class
-2+| 3+| | (S) TE
+3+| vessel class 2+| 3+| | (S) TE
 | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fifteen_twentytwo]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -2955,8 +2837,7 @@ traffic by appropriate means and by the establishment of traffic lanes.
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_twentythree]
@@ -2967,26 +2848,22 @@ traffic by appropriate means and by the establishment of traffic lanes.
 
 3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[fifteen_twentythree]
 
-3+| IMO adopted
-2+| _(CATTSS)_
+3+| IMO adopted 2+| _(CATTSS)_
 3+| | BO | 0,1
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| maximum permitted draught
-2+| 3+| | RE | 0,1
+3+| maximum permitted draught 2+| 3+| | RE | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fifteen_twentythree]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -3093,8 +2970,7 @@ and aircraft. (IHO Dictionary -- S-32).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_twentyfour]
@@ -3107,21 +2983,18 @@ and aircraft. (IHO Dictionary -- S-32).
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| nationality
-2+| (NATION)
+3+| nationality 2+| (NATION)
 3+| | TE | 0,1 footnoteblock:[fifteen_twentyfour]
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fifteen_twentyfour]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -3246,8 +3119,7 @@ of the Sea (UNCLOS)).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_twentyfive]
@@ -3260,21 +3132,18 @@ of the Sea (UNCLOS)).
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| nationality
-2+| (NATION)
+3+| nationality 2+| (NATION)
 3+| | TE | 0,1 footnoteblock:[fifteen_twentyfive]
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fifteen_twentyfive]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -3378,8 +3247,7 @@ IHO Dictionary -- S-32).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_twentysix]
@@ -3392,21 +3260,18 @@ IHO Dictionary -- S-32).
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| nationality
-2+| (NATION)
+3+| nationality 2+| (NATION)
 3+| | TE | 1,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fifteen_twentysix]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -3486,8 +3351,7 @@ point. (IHO Dictionary -- S-32).
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| communication channel
-2+| (COMCHA)
+3+| communication channel 2+| (COMCHA)
 3+| | TE | 0,*
 
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
@@ -3496,8 +3360,7 @@ point. (IHO Dictionary -- S-32).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_twentyseven]
@@ -3510,8 +3373,7 @@ point. (IHO Dictionary -- S-32).
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| orientation value
-2+| _(ORIENT)_
+3+| orientation value 2+| _(ORIENT)_
 3+| | RE | 0,2 footnoteblock:[fifteen_twentyseven]
 
 3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
@@ -3536,14 +3398,12 @@ point. (IHO Dictionary -- S-32).
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fifteen_twentyseven]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -3653,8 +3513,7 @@ Register, 2010).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_twentyeight]
@@ -3686,14 +3545,12 @@ Register, 2010).
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fifteen_twentyeight]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -3771,16 +3628,14 @@ of bad visibility. (IHO Dictionary -- S-32).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_twentynine]
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| orientation value
-2+| _(ORIENT)_
+3+| orientation value 2+| _(ORIENT)_
 3+| | RE | 1,1
 
 3+| status 2+| (STATUS) 3+|
@@ -3792,14 +3647,12 @@ of bad visibility. (IHO Dictionary -- S-32).
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fifteen_twentynine]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -3870,8 +3723,7 @@ Feature Data Dictionary Register, 2010).
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| communication channel
-2+| (COMCHA)
+3+| communication channel 2+| (COMCHA)
 3+| | TE | 0,*
 
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
@@ -3880,8 +3732,7 @@ Feature Data Dictionary Register, 2010).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_thirty]
@@ -3902,14 +3753,12 @@ Feature Data Dictionary Register, 2010).
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fifteen_thirty]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
@@ -3978,15 +3827,13 @@ to the sending station. (International Maritime Dictionary, 2^nd^ Edition).
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
 3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
-3+| call sign
-2+| (CALSGN)
+3+| call sign 2+| (CALSGN)
 3+| | TE | 0,1
 
 3+| category of radar station 2+| (CATRAS) 3+|
 1: radar surveillance station +
 2: coast radar station | EN | 0,*
-3+| communication channel
-2+| (COMCHA)
+3+| communication channel 2+| (COMCHA)
 3+| | TE | 0,*
 
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
@@ -3995,14 +3842,12 @@ to the sending station. (International Maritime Dictionary, 2^nd^ Edition).
 
 3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
 
-3+| name usage
-2+| 3+|
+3+| name usage 2+| 3+|
 1: default name display +
 2: alternate name display | (S) EN
 | 0,1 footnoteblock:[fifteen_thirtyone]
 
-3+| height
-2+| (HEIGHT)
+3+| height 2+| (HEIGHT)
 3+| | RE | 0,1
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
@@ -4019,21 +3864,18 @@ to the sending station. (International Maritime Dictionary, 2^nd^ Edition).
 4: not in use +
 7: temporary +
 8: private | EN | 0,*
-3+| value of maximum range
-2+| (VALMXR)
+3+| value of maximum range 2+| (VALMXR)
 3+| | RE | 0,1
 
 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
 
-3+| file locator
-2+| 3+| | (S) TE
+3+| file locator 2+| 3+| | (S) TE
 | 0,1
 
 3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fifteen_thirtyone]
 
-3+| headline
-2+| 3+| | (S) TE
+3+| headline 2+| 3+| | (S) TE
 | 0,1
 
 3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
