@@ -7,7 +7,11 @@
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *LATERAL BUOY*. A lateral buoy is used to indicate the port or starboard hand side of the route to be followed. They are generally used for well-defined channels and are used in conjunction with a conventional direction of buoyage. (UKHO NP 735, 5^th^ Edition).
+10+| [underline]#IHO Definition:# *LATERAL BUOY*. A lateral buoy is
+used to indicate the port or starboard hand side of the route to be
+followed. They are generally used for well-defined channels and are
+used in conjunction with a conventional direction of buoyage.
+(UKHO NP 735, 5^th^ Edition).
 10+| *[underline]#S-101 Geo Feature:#* *Lateral Buoy (BOYLAT)*
 10+| *[underline]#Primitives:#* *Point*
 
@@ -191,13 +195,19 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[twenty_one]]
 [NOTE]
 --
-The attribute/sub-attribute *colour pattern* is mandatory for buoys/topmarks that have more than one value populated for the attribute/sub-attribute *colour*.
+The attribute/sub-attribute *colour pattern* is mandatory for
+buoys/topmarks that have more than one value populated for the
+attribute/sub-attribute *colour*.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# Q 130.1
@@ -205,15 +215,30 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_20.1.1]]
 ==== Lateral buoys (see S-4 -- B-461.3 and B-467)
 
-Lateral buoysare generally used for well-defined channels, in conjunction with a direction of buoyage. They indicate the port and starboard sides of the route to be followed.
+Lateral buoysare generally used for well-defined channels, in
+conjunction with a direction of buoyage. They indicate the port and
+starboard sides of the route to be followed.
 
-To conform to the IALA Maritime Buoyage System (see <<sec_18.3.1.1>>), port handbuoys are usually can shaped, but may be another shape (except conical or spherical). Other shaped buoys have a can topmark. The colour of port hand buoys, topmarks and lights (if fitted) will be red in IALA region A and green in IALA region B.
+To conform to the IALA Maritime Buoyage System (see
+<<sec_18.3.1.1>>), port handbuoys are usually can shaped, but may be
+another shape (except conical or spherical). Other shaped buoys have
+a can topmark. The colour of port hand buoys, topmarks and lights (if
+fitted) will be red in IALA region A and green in IALA region B.
 
-To conform to the IALA Maritime Buoyage System, starboard hand buoys are usually conical shaped, but may be another shape (except can or spherical). Other shaped buoys have a conical topmark. The colour of starboard hand buoys, topmarks and lights (if fitted) will be green in IALA region A and red in IALA region B.
+To conform to the IALA Maritime Buoyage System, starboard hand buoys
+are usually conical shaped, but may be another shape (except can or
+spherical). Other shaped buoys have a conical topmark. The colour of
+starboard hand buoys, topmarks and lights (if fitted) will be green
+in IALA region A and red in IALA region B.
 
-A preferred channel markis a modified lateral mark, with horizontal colour bands. The shape and predominant colour indicates which side is the preferred channel, the other colour indicates the secondary channel. If fitted, the light is Fl(2+1), the colour indicating the preferred channel.
+A preferred channel markis a modified lateral mark, with horizontal
+colour bands. The shape and predominant colour indicates which side
+is the preferred channel, the other colour indicates the secondary
+channel. If fitted, the light is Fl(2+1), the colour indicating the
+preferred channel.
 
-If it is required to encode a buoy having the function of a lateral mark, it must be done using the feature *Lateral Buoy*.
+If it is required to encode a buoy having the function of a lateral
+mark, it must be done using the feature *Lateral Buoy*.
 
 [[fig_20-1]]
 .IALA lateral buoys -- Characteristics
@@ -221,17 +246,28 @@ image::figure-20-1.png["",475,406]
 
 [underline]#Remarks:#
 
-* If it is required to encode a buoy or topmark that has more than one colour, the attributes *colour* and *colour pattern* must be encoded, according to the rules laid out in <<sec_2.4.10>>.
-* If it is required to encode the total vertical length, including the topmark and any equipment features (for example light), of the buoy above the water level, it must be done using the attribute *vertical length*.
+* If it is required to encode a buoy or topmark that has more than
+one colour, the attributes *colour* and *colour pattern* must be
+encoded, according to the rules laid out in <<sec_2.4.10>>.
+* If it is required to encode the total vertical length, including
+the topmark and any equipment features (for example light), of the
+buoy above the water level, it must be done using the attribute
+*vertical length*.
 
-[underline]#Distinction:# Cardinal Buoy; Emergency Wreck Marking Buoy; Installation Buoy; Isolated Danger Buoy; Mooring Buoy; Safe Water Buoy; Special Purpose/General Buoy.
+[underline]#Distinction:# Cardinal Buoy; Emergency Wreck Marking
+Buoy; Installation Buoy; Isolated Danger Buoy; Mooring Buoy; Safe
+Water Buoy; Special Purpose/General Buoy.
 
 [[sec_20.2]]
 === Cardinal buoy
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *CARDINAL BUOY*. A cardinal buoy is used in conjunction with the compass to indicate where the mariner may find the best navigable water. It is placed in one of the four quadrants (North, East, South and West), bounded by inter-cardinal bearings from the point marked. (UKHO NP 735, 5^th^ Edition).
+10+| [underline]#IHO Definition:# *CARDINAL BUOY*. A cardinal buoy
+is used in conjunction with the compass to indicate where the mariner
+may find the best navigable water. It is placed in one of the four
+quadrants (North, East, South and West), bounded by inter-cardinal
+bearings from the point marked. (UKHO NP 735, 5^th^ Edition).
 10+| *[underline]#S-101 Geo Feature:#* *Cardinal Buoy (BOYCAR)*
 10+| *[underline]#Primitives:#* *Point*
 
@@ -415,13 +451,19 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[twenty_two]]
 [NOTE]
 --
-The attribute/sub-attribute *colour pattern* is mandatory for buoys/topmarks that have more than one value populated for the attribute/sub-attribute *colour*.
+The attribute/sub-attribute *colour pattern* is mandatory for
+buoys/topmarks that have more than one value populated for the
+attribute/sub-attribute *colour*.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# Q 130.3
@@ -429,9 +471,24 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_20.2.1]]
 ==== Cardinal buoys (see S-4 -- B-461.3 and B-467)
 
-Cardinal marksare used in conjunction with the compass to indicate where a Mariner may find best navigable water, taking their name from the quadrant in which they are placed in relation to the point marked. The Mariner should pass N of a North mark, E of an East mark, etc. The shape of cardinal buoys is not significant (although they are usually pillar or spar). To conform to the IALA Maritime Buoyage System (see <<sec_18.3.1.1>>), the body has black and yellow bands, configured with black reflecting the points of the topmark cones (for example black above yellow for north). Black double-cone topmarks are an important feature of cardinal marks and are carried wherever practicable. The points are up for a north mark, down for a south mark, apart for an east mark and together for a west mark. Lights (if fitted) are white Q or VQ, uninterrupted for the north, 3 flashes for east, 6 flashes + LFl for south and 9 flashes for west (resembling an analogue clock).
+Cardinal marksare used in conjunction with the compass to indicate
+where a Mariner may find best navigable water, taking their name from
+the quadrant in which they are placed in relation to the point
+marked. The Mariner should pass N of a North mark, E of an East mark,
+etc. The shape of cardinal buoys is not significant (although they
+are usually pillar or spar). To conform to the IALA Maritime Buoyage
+System (see <<sec_18.3.1.1>>), the body has black and yellow bands,
+configured with black reflecting the points of the topmark cones (for
+example black above yellow for north). Black double-cone topmarks are
+an important feature of cardinal marks and are carried wherever
+practicable. The points are up for a north mark, down for a south
+mark, apart for an east mark and together for a west mark. Lights (if
+fitted) are white Q or VQ, uninterrupted for the north, 3 flashes for
+east, 6 flashes + LFl for south and 9 flashes for west (resembling an
+analogue clock).
 
-If it is required to encode a buoy having the function of a cardinal mark, it must be done using the feature *Cardinal Buoy*.
+If it is required to encode a buoy having the function of a cardinal
+mark, it must be done using the feature *Cardinal Buoy*.
 
 [[fig_20-2]]
 .IALA cardinal buoys -- Characteristics
@@ -439,17 +496,27 @@ image::figure-20-2.png["",517,636]
 
 [underline]#Remarks:#
 
-* If it is required to encode a buoy or topmark that has more than one colour, the attributes *colour* and *colour pattern* must be encoded, according to the rules laid out in <<sec_2.4.10>>.
-* If it is required to encode the total vertical length, including the topmark and any equipment features (for example light), of the buoy above the water level, it must be done using the attribute *vertical length*.
+* If it is required to encode a buoy or topmark that has more than
+one colour, the attributes *colour* and *colour pattern* must be
+encoded, according to the rules laid out in <<sec_2.4.10>>.
+* If it is required to encode the total vertical length, including
+the topmark and any equipment features (for example light), of the
+buoy above the water level, it must be done using the attribute
+*vertical length*.
 
-[underline]#Distinction:# Emergency Wreck Marking Buoy; Installation Buoy; Isolated Danger Buoy; Lateral Buoy; Mooring Buoy; Safe Water Buoy; Special Purpose/General Buoy.
+[underline]#Distinction:# Emergency Wreck Marking Buoy; Installation
+Buoy; Isolated Danger Buoy; Lateral Buoy; Mooring Buoy; Safe Water
+Buoy; Special Purpose/General Buoy.
 
 [[sec_20.3]]
 === Isolated danger buoy
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *ISOLATED DANGER BUOY*. An isolated danger buoy is a buoy moored on or above an isolated danger of limited extent, which has navigable water all around it. (UKHO NP 735, 5^th^ Edition).
+10+| [underline]#IHO Definition:# *ISOLATED DANGER BUOY*. An isolated
+danger buoy is a buoy moored on or above an isolated danger of limited
+extent, which has navigable water all around it.
+(UKHO NP 735, 5^th^ Edition).
 10+| *[underline]#S-101 Geo Feature:#* *Isolated Danger Buoy (BOYISD)*
 10+| *[underline]#Primitives:#* *Point*
 
@@ -628,13 +695,19 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[twenty_three]]
 [NOTE]
 --
-The attribute/sub-attribute *colour pattern* is mandatory for buoys/topmarks that have more than one value populated for the attribute/sub-attribute *colour*.
+The attribute/sub-attribute *colour pattern* is mandatory for
+buoys/topmarks that have more than one value populated for the
+attribute/sub-attribute *colour*.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# Q 130.4
@@ -642,9 +715,17 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_20.3.1]]
 ==== Isolated danger buoys (see S-4 -- B-461.3 and B-467)
 
-Isolated danger buoysare moored above isolated dangers of limited extent with navigable water all around them. The shape of isolated danger buoys is not significant (although they are usually pillar or spar shaped). To conform to the IALA Maritime Buoyage System (see <<sec_18.3.1.1>>), the body is black, with one or more red bands. Black double-sphere topmarks are an important feature of isolated danger buoys and carried wherever practicable. The light (if fitted) is white Fl(2).
+Isolated danger buoysare moored above isolated dangers of limited
+extent with navigable water all around them. The shape of isolated
+danger buoys is not significant (although they are usually pillar or
+spar shaped). To conform to the IALA Maritime Buoyage System (see
+<<sec_18.3.1.1>>), the body is black, with one or more red bands.
+Black double-sphere topmarks are an important feature of isolated
+danger buoys and carried wherever practicable. The light (if fitted)
+is white Fl(2).
 
-If it is required to encode a buoy having the function of an isolated danger mark, it must be done using the feature *Isolated Danger Buoy*.
+If it is required to encode a buoy having the function of an isolated
+danger mark, it must be done using the feature *Isolated Danger Buoy*.
 
 [[fig_20-3]]
 .IALA isolated danger buoys -- Characteristics
@@ -652,17 +733,26 @@ image::figure-20-3.png["",549,263]
 
 [underline]#Remarks:#
 
-* If it is required to encode a buoy or topmark that has more than one colour, the attributes *colour* and *colour pattern* must be encoded, according to the rules laid out in <<sec_2.4.10>>.
-* If it is required to encode the total vertical length, including the topmark and any equipment features (for example light), of the buoy above the water level, it must be done using the attribute *vertical length*.
+* If it is required to encode a buoy or topmark that has more than
+one colour, the attributes *colour* and *colour pattern* must be
+encoded, according to the rules laid out in <<sec_2.4.10>>.
+* If it is required to encode the total vertical length, including
+the topmark and any equipment features (for example light), of the
+buoy above the water level, it must be done using the attribute
+*vertical length*.
 
-[underline]#Distinction:# Cardinal Buoy; Emergency Wreck Marking Buoy; Installation Buoy; Lateral Buoy; Mooring Buoy; Safe Water Buoy; Special Purpose/General Buoy.
+[underline]#Distinction:# Cardinal Buoy; Emergency Wreck Marking
+Buoy; Installation Buoy; Lateral Buoy; Mooring Buoy; Safe Water Buoy;
+Special Purpose/General Buoy.
 
 [[sec_20.4]]
 === Safe water buoy
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *SAFE WATER BUOY*. A safe water buoy is used to indicate that there is navigable water around the mark. (UKHO NP 735, 5^th^ Edition).
+10+| [underline]#IHO Definition:# *SAFE WATER BUOY*. A safe water
+buoy is used to indicate that there is navigable water around the
+mark. (UKHO NP 735, 5^th^ Edition).
 10+| *[underline]#S-101 Geo Feature:#* *Safe Water Buoy (BOYSAW)*
 10+| *[underline]#Primitives:#* *Point*
 
@@ -841,13 +931,19 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[twenty_four]]
 [NOTE]
 --
-The attribute/sub-attribute *colour pattern* is mandatory for buoys/topmarks that have more than one value populated for the attribute/sub-attribute *colour*.
+The attribute/sub-attribute *colour pattern* is mandatory for
+buoys/topmarks that have more than one value populated for the
+attribute/sub-attribute *colour*.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# Q 130.5
@@ -855,11 +951,19 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_20.4.1]]
 ==== Safe water buoys (see S-4 -- B-461.3 and B-467)
 
-Safe water marksare used to indicate there is safe water all around the mark. It may be used as a centre-line, mid-channel or landfall buoy, or to mark the best point of passage under a bridge.
+Safe water marksare used to indicate there is safe water all around
+the mark. It may be used as a centre-line, mid-channel or landfall
+buoy, or to mark the best point of passage under a bridge.
 
-To conform to the IALA Maritime Buoyage System (see <<sec_18.3.1.1>>), the shape of a safe water buoy is spherical, pillar or spar. The body of the mark has red and white vertical stripes. If the shape of the buoy is not spherical a red spherical topmark is carried wherever practicable. The light (if fitted) is white Oc, Iso, LFl or Mo(A) with a period of 10s.
+To conform to the IALA Maritime Buoyage System (see
+<<sec_18.3.1.1>>), the shape of a safe water buoy is spherical,
+pillar or spar. The body of the mark has red and white vertical
+stripes. If the shape of the buoy is not spherical a red spherical
+topmark is carried wherever practicable. The light (if fitted) is
+white Oc, Iso, LFl or Mo(A) with a period of 10s.
 
-If it is required to encode a buoy having the function of a safe water mark, it must be done using the feature *Safe Water Buoy*.
+If it is required to encode a buoy having the function of a safe
+water mark, it must be done using the feature *Safe Water Buoy*.
 
 [[fig_20-4]]
 .IALA safe water buoys -- Characteristics
@@ -867,17 +971,27 @@ image::figure-20-4.png["",664,217]
 
 [underline]#Remarks:#
 
-* If it is required to encode a buoy or topmark that has more than one colour, the attributes *colour* and *colour pattern* must be encoded, according to the rules laid out in <<sec_2.4.10>>.
-* If it is required to encode the total vertical length, including the topmark and any equipment features (for example light), of the buoy above the water level, it must be done using the attribute *vertical length*.
+* If it is required to encode a buoy or topmark that has more than
+one colour, the attributes *colour* and *colour pattern* must be
+encoded, according to the rules laid out in <<sec_2.4.10>>.
+* If it is required to encode the total vertical length, including
+the topmark and any equipment features (for example light), of the
+buoy above the water level, it must be done using the attribute
+*vertical length*.
 
-[underline]#Distinction:# Cardinal Buoy; Emergency Wreck Marking Buoy; Installation Buoy; Isolated Danger Buoy; Lateral Buoy; Mooring Buoy; Special Purpose/General Buoy.
+[underline]#Distinction:# Cardinal Buoy; Emergency Wreck Marking
+Buoy; Installation Buoy; Isolated Danger Buoy; Lateral Buoy; Mooring
+Buoy; Special Purpose/General Buoy.
 
 [[sec_20.5]]
 === Special purpose/general buoy
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *SPECIAL PURPOSE/GENERAL BUOY*. A special purpose buoy is primarily used to indicate an area or feature, the nature of which is apparent from reference to a chart, Sailing Directions or Notices to Mariners. (UKHO NP 735, 5^th^ Edition).
+10+| [underline]#IHO Definition:# *SPECIAL PURPOSE/GENERAL BUOY*.
+A special purpose buoy is primarily used to indicate an area or feature,
+the nature of which is apparent from reference to a chart, Sailing
+Directions or Notices to Mariners. (UKHO NP 735, 5^th^ Edition).
 10+| *[underline]#S-101 Geo Feature:#* *Special Purpose/General Buoy (BOYSPP)*
 10+| *[underline]#Primitives:#* *Point*
 
@@ -1117,13 +1231,19 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[twenty_five]]
 [NOTE]
 --
-The attribute/sub-attribute *colour pattern* is mandatory for buoys/topmarks that have more than one value populated for the attribute/sub-attribute *colour*.
+The attribute/sub-attribute *colour pattern* is mandatory for
+buoys/topmarks that have more than one value populated for the
+attribute/sub-attribute *colour*.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# Q 50-62, 130.6
@@ -1131,11 +1251,29 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_20.5.1]]
 ==== Special purpose/general buoys (see S-4 -- B-461.3 and B-467)
 
-Special marksare used to indicate to the Mariner a special area or feature, the nature of which is usually apparent from the ENC, paper chart or associated publication. Special marks may also be used to mark a channel within a channel (for example a Deep Water route), using yellow buoys of the appropriate lateral shape, or yellow spherical buoys to mark the centreline. A special buoy may be any shape but must not conflict with lateral or safe water marks (for example an outfall buoy on the port-side of a channel could be can but should not be conical). To conform to the IALA Maritime Buoyage System (see <<sec_18.3.1.1>>), the body of the buoy is yellow. The topmark (if fitted) is a yellow diagonal 'X' (St Andrew's cross). Lights (if fitted) are yellow and of any rhythm except those used for cardinal, isolated danger and safe water marks.
+Special marksare used to indicate to the Mariner a special area or
+feature, the nature of which is usually apparent from the ENC, paper
+chart or associated publication. Special marks may also be used to
+mark a channel within a channel (for example a Deep Water route),
+using yellow buoys of the appropriate lateral shape, or yellow
+spherical buoys to mark the centreline. A special buoy may be any
+shape but must not conflict with lateral or safe water marks (for
+example an outfall buoy on the port-side of a channel could be can
+but should not be conical). To conform to the IALA Maritime Buoyage
+System (see <<sec_18.3.1.1>>), the body of the buoy is yellow. The
+topmark (if fitted) is a yellow diagonal 'X' (St Andrew's cross).
+Lights (if fitted) are yellow and of any rhythm except those used for
+cardinal, isolated danger and safe water marks.
 
-If it is required to encode a buoy having the function of a special purpose mark, or a buoy whose appearance or purpose is inadequately known, it must be done using the feature *Special Purpose/General Buoy*.
+If it is required to encode a buoy having the function of a special
+purpose mark, or a buoy whose appearance or purpose is inadequately
+known, it must be done using the feature *Special Purpose/General
+Buoy*.
 
-In the following Table, a blank indicates that the encoder may choose a relevant value for the attribute. The Table contains the most common examples of coding; other coding combinations are possible for *Special Purpose/General Buoy* features.
+In the following Table, a blank indicates that the encoder may choose
+a relevant value for the attribute. The Table contains the most
+common examples of coding; other coding combinations are possible for
+*Special Purpose/General Buoy* features.
 
 [[table_20-1]]
 .IALA special purpose buoys -- Common types
@@ -1167,20 +1305,43 @@ h| Feature | INT1 h| Feature h| buoy shape h| category of special purpose mark h
 
 [underline]#Remarks:#
 
-* If it is required to encode a buoy or topmark that has more than one colour, the attributes *colour* and *colour pattern* must be encoded, according to the rules laid out in <<sec_2.4.10>>.
-* If it is required to encode the total vertical length, including the topmark and any equipment features (for example light), of the buoy above the water level, it must be done using the attribute *vertical length*.
-* If a special purpose buoy does not conform to the system of navigational marks defined by *Navigational System of Marks* (see <<sec_3.6>>), the attribute *marks navigational -- system of* on the *Special Purpose/General Buoy* should be populated as _9_ (no system).
-* Fish havens (sometimes referred to as subsurface Fish Aggregating Devices (FAD)) and subsurface Ocean Data Acquisition System (ODAS) equipment must be encoded, where required, using an *Obstruction* feature (see <<sec_13.6>>).
-* A buoy deployed as an emergency measure to mark a newly identified danger, such as a wreck, must be encoded using the feature *Emergency Wreck Marking Buoy* (see <<sec_20.6>>). A special purpose buoy intended to permanently mark a wreck as a danger must be encoded, where required, as a *Special Purpose/General Buoy* feature, with attribute stem:[bb "category of special purpose mark" = 60] (wreck mark).
+* If it is required to encode a buoy or topmark that has more than
+one colour, the attributes *colour* and *colour pattern* must be
+encoded, according to the rules laid out in <<sec_2.4.10>>.
+* If it is required to encode the total vertical length, including
+the topmark and any equipment features (for example light), of the
+buoy above the water level, it must be done using the attribute
+*vertical length*.
+* If a special purpose buoy does not conform to the system of
+navigational marks defined by *Navigational System of Marks* (see
+<<sec_3.6>>), the attribute *marks navigational -- system of* on the
+*Special Purpose/General Buoy* should be populated as _9_ (no system).
+* Fish havens (sometimes referred to as subsurface Fish Aggregating
+Devices (FAD)) and subsurface Ocean Data Acquisition System (ODAS)
+equipment must be encoded, where required, using an *Obstruction*
+feature (see <<sec_13.6>>).
+* A buoy deployed as an emergency measure to mark a newly identified
+danger, such as a wreck, must be encoded using the feature *Emergency
+Wreck Marking Buoy* (see <<sec_20.6>>). A special purpose buoy
+intended to permanently mark a wreck as a danger must be encoded,
+where required, as a *Special Purpose/General Buoy* feature, with
+attribute stem:[bb "category of special purpose mark" = 60] (wreck
+mark).
 
-[underline]#Distinction:# Cardinal Buoy; Emergency Wreck Marking Buoy; Installation Buoy; Isolated Danger Buoy; Lateral Buoy; Mooring Buoy; Safe Water Buoy.
+[underline]#Distinction:# Cardinal Buoy; Emergency Wreck Marking
+Buoy; Installation Buoy; Isolated Danger Buoy; Lateral Buoy; Mooring
+Buoy; Safe Water Buoy.
 
 [[sec_20.6]]
 === Emergency wreck marking buoy
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *EMERGENCY WRECK MARKING BUOY*. An emergency wreck marking buoy is a buoy moored on or above a new wreck, designed to provide a prominent (both visual and radio) and easily identifiable temporary first response. (Adapted from UKHO NP 735, 6^th^ Edition).
+10+| [underline]#IHO Definition:# *EMERGENCY WRECK MARKING BUOY*.
+An emergency wreck marking buoy is a buoy moored on or above a new
+wreck, designed to provide a prominent (both visual and radio) and
+easily identifiable temporary first response. (Adapted from UKHO NP
+735, 6^th^ Edition).
 10+| *[underline]#S-101 Geo Feature:#* *Emergency Wreck Marking Buoy*
 10+| *[underline]#Primitives:#* *Point*
 
@@ -1342,13 +1503,19 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[twenty_six]]
 [NOTE]
 --
-The attribute/sub-attribute *colour pattern* is mandatory for buoys/topmarks that have more than one value populated for the attribute/sub-attribute *colour*.
+The attribute/sub-attribute *colour pattern* is mandatory for
+buoys/topmarks that have more than one value populated for the
+attribute/sub-attribute *colour*.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# Q 130.7
@@ -1356,34 +1523,64 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_20.6.1]]
 ==== Emergency wreck marking buoys (see S-4 -- B-461.3 and B-467)
 
-Emergency wreck marking buoysare used to mark new wrecks until a permanent form of marking has been established and the wreck itself has been promulgated by Notice to Mariners, or removed.
+Emergency wreck marking buoysare used to mark new wrecks until a
+permanent form of marking has been established and the wreck itself
+has been promulgated by Notice to Mariners, or removed.
 
-To conform to the IALA Maritime Buoyage System (see <<sec_18.3.1.1>>), the shape of an emergency wreck marking buoy is pillar or spar. The body of the mark has blue and yellow vertical stripes. The topmark (if fitted) is a standing/upright yellow '+' (St. George's cross). Lights (if fitted) are Al.
+To conform to the IALA Maritime Buoyage System (see
+<<sec_18.3.1.1>>), the shape of an emergency wreck marking buoy is
+pillar or spar. The body of the mark has blue and yellow vertical
+stripes. The topmark (if fitted) is a standing/upright yellow '+'
+(St. George's cross). Lights (if fitted) are Al.
 
 Oc.
 
 BuY.3s.
 
-If it is required to encode a buoy having the function of an emergency wreck mark, it must be done using the feature *Emergency Wreck Marking Buoy*.
+If it is required to encode a buoy having the function of an
+emergency wreck mark, it must be done using the feature *Emergency
+Wreck Marking Buoy*.
 
 [underline]#Remarks:#
 
-* If it is required to encode a buoy or topmark that has more than one colour, the attributes *colour* and *colour pattern* must be encoded, according to the rules laid out in <<sec_2.4.10>>.
-* If it is required to encode the total vertical length, including the topmark and any equipment features (for example light), of the buoy above the water level, it must be done using the attribute *vertical length*.
-* An IALA compliant emergency wreck marking buoy topmark should be populated using the complex attribute *topmark*, with sub-attributes stem:[bb "topmark shape" = 8] (upright cross) and stem:[bb "colour" = 6] (yellow).
-* An IALA compliant emergency wreck marking buoy should also have the following associated equipment features:
+* If it is required to encode a buoy or topmark that has more than
+one colour, the attributes *colour* and *colour pattern* must be
+encoded, according to the rules laid out in <<sec_2.4.10>>.
+* If it is required to encode the total vertical length, including
+the topmark and any equipment features (for example light), of the
+buoy above the water level, it must be done using the attribute
+*vertical length*.
+* An IALA compliant emergency wreck marking buoy topmark should be
+populated using the complex attribute *topmark*, with sub-attributes
+stem:[bb "topmark shape" = 8] (upright cross) and stem:[bb "colour" =
+6] (yellow).
+* An IALA compliant emergency wreck marking buoy should also have the
+following associated equipment features:
 
-** A *Light All Around* feature (see <<sec_19.2>>), with attributes stem:[bb "colour" = 5,6] (blue, yellow), stem:[bb "light characteristic" = 17] (occulting alternating), *signal group* = _(1)_ and stem:[bb "signal period" = 3]. The complex attribute *signal sequence*, sub-attributes *signal duration* and *signal status*, should be populated equivalent to __(___00.50)+01.00+(00.50)+01.00_ (bracketed values corresponding to periods of eclipse and non-bracketed values corresponding to periods of light);and the attribute *value of nominal range* should be populated as _4_.
-** A *Radar Transponder Beacon* feature (see <<sec_21.5>>), with attributes stem:[bb "category of radar transponder beacon" = 2] (racon, radar transponder beacon) and *signal group* = _(D)_.
+** A *Light All Around* feature (see <<sec_19.2>>), with attributes
+stem:[bb "colour" = 5,6] (blue, yellow), stem:[bb "light
+characteristic" = 17] (occulting alternating), *signal group* = _(1)_
+and stem:[bb "signal period" = 3]. The complex attribute *signal
+sequence*, sub-attributes *signal duration* and *signal status*,
+should be populated equivalent to __(___00.50)+01.00+(00.50)+01.00_
+(bracketed values corresponding to periods of eclipse and
+non-bracketed values corresponding to periods of light);and the
+attribute *value of nominal range* should be populated as _4_.
+** A *Radar Transponder Beacon* feature (see <<sec_21.5>>), with
+attributes stem:[bb "category of radar transponder beacon" = 2]
+(racon, radar transponder beacon) and *signal group* = _(D)_.
 
-[underline]#Distinction:# Cardinal Buoy; Installation Buoy; Lateral Buoy; Mooring Buoy; Safe Water Buoy; Special Purpose/General Buoy.
+[underline]#Distinction:# Cardinal Buoy; Installation Buoy; Lateral
+Buoy; Mooring Buoy; Safe Water Buoy; Special Purpose/General Buoy.
 
 [[sec_20.7]]
 === Installation buoy
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *INSTALLATION BUOY*. An installation buoy is a buoy used for loading tankers with gas or oil. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.20, November 2000).
+10+| [underline]#IHO Definition:# *INSTALLATION BUOY*. An installation
+buoy is a buoy used for loading tankers with gas or oil.
+(S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.20, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Installation Buoy (BOYINB)*
 10+| *[underline]#Primitives:#* *Point*
 
@@ -1499,13 +1696,18 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[twenty_seven]]
 [NOTE]
 --
-The attribute *colour pattern* is mandatory for buoys that have more than one value populated for the attribute *colour*.
+The attribute *colour pattern* is mandatory for buoys that have more
+than one value populated for the attribute *colour*.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# L 16
@@ -1513,22 +1715,36 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_20.7.1]]
 ==== Installation buoys (see S-4 -- B-445.4)
 
-Although the oil and gas from some fields are sent ashore by submarine pipeline, a variety of mooring systems have been developed for use in deep water and in the vicinity of certain ports, to allow the loading of large vessels and the permanent mooring of floating storage vessels or units. These offshore systems include large mooring buoys, designed for mooring vessels up to 500,000 tonnes, and platforms on structures fixed at their lower ends to the seafloor. They allow a vessel to moor forward or aft to them, and to swing to the wind or stream, and are termed installation buoys.
+Although the oil and gas from some fields are sent ashore by
+submarine pipeline, a variety of mooring systems have been developed
+for use in deep water and in the vicinity of certain ports, to allow
+the loading of large vessels and the permanent mooring of floating
+storage vessels or units. These offshore systems include large
+mooring buoys, designed for mooring vessels up to 500,000 tonnes, and
+platforms on structures fixed at their lower ends to the seafloor.
+They allow a vessel to moor forward or aft to them, and to swing to
+the wind or stream, and are termed installation buoys.
 
-If it is required to encode an installation buoy, it must be done using the feature *Installation Buoy*.
+If it is required to encode an installation buoy, it must be done
+using the feature *Installation Buoy*.
 
 [underline]#Remarks:#
 
-* If it is required to encode a buoy that has more than one colour, the attributes *colour* and *colour pattern* must be encoded, according to the rules laid out in <<sec_2.4.10>>.
+* If it is required to encode a buoy that has more than one colour,
+the attributes *colour* and *colour pattern* must be encoded,
+according to the rules laid out in <<sec_2.4.10>>.
 
-[underline]#Distinction:# Mooring Buoy; Offshore Platform; Special Purpose/General Buoy.
+[underline]#Distinction:# Mooring Buoy; Offshore Platform; Special
+Purpose/General Buoy.
 
 [[sec_20.8]]
 === Mooring buoy
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *MOORING BUOY*. A buoy secured to the bottom by permanent moorings with means for mooring a vessel by use of its anchor chain or mooring lines. (IHO Dictionary -- S-32).
+10+| [underline]#IHO Definition:# *MOORING BUOY*. A buoy secured to
+the bottom by permanent moorings with means for mooring a vessel by
+use of its anchor chain or mooring lines. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Mooring Buoy* *_(MORFAC)_*
 10+| *[underline]#Primitives:#* *Point*
 
@@ -1643,13 +1859,18 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[twenty_eight]]
 [NOTE]
 --
-The attribute *colour pattern* is mandatory for buoys that have more than one value populated for the attribute *colour*.
+The attribute *colour pattern* is mandatory for buoys that have more
+than one value populated for the attribute *colour*.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# Q 40-45
@@ -1657,24 +1878,37 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_20.8.1]]
 ==== Mooring buoys (see S-4 -- B-431.5)
 
-Mooring buoys must be shown on charts of appropriate scale to indicate buoys and moored vessels as possible hazards to navigation as well as, on the largest scales, to facilitate mooring operations.
+Mooring buoys must be shown on charts of appropriate scale to
+indicate buoys and moored vessels as possible hazards to navigation
+as well as, on the largest scales, to facilitate mooring operations.
 
-If it is required to encode a mooring buoy, it must be done using the feature *Mooring Buoy*.
+If it is required to encode a mooring buoy, it must be done using the
+feature *Mooring Buoy*.
 
 [underline]#Remarks:#
 
-* If it is required to encode a buoy that has more than one colour, the attributes *colour* and *colour pattern* must be encoded, according to the rules laid out in <<sec_2.4.10>>.
-* If it is required to encode the total vertical length, including any equipment features (for example light), of the buoy above the water level, it must be done using the attribute *vertical length*.
-* If it is required to encode a visitors mooring, it must be done by populating the attribute *visitors mooring* as _True_.
+* If it is required to encode a buoy that has more than one colour,
+the attributes *colour* and *colour pattern* must be encoded,
+according to the rules laid out in <<sec_2.4.10>>.
+* If it is required to encode the total vertical length, including
+any equipment features (for example light), of the buoy above the
+water level, it must be done using the attribute *vertical length*.
+* If it is required to encode a visitors mooring, it must be done by
+populating the attribute *visitors mooring* as _True_.
 
-[underline]#Distinction:# Mooring Area; Mooring Trot; Small Craft Facility; Special Purpose/General Buoy.
+[underline]#Distinction:# Mooring Area; Mooring Trot; Small Craft
+Facility; Special Purpose/General Buoy.
 
 [[sec_20.9]]
 === Lateral beacon
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *LATERAL BEACON*. A lateral beacon is used to indicate the port or starboard hand side of the route to be followed. They are generally used for well defined channels and are used in conjunction with a conventional direction of buoyage. (UKHO NP 735, 5^th^ Edition).
+10+| [underline]#IHO Definition:# *LATERAL BEACON*. A lateral beacon
+is used to indicate the port or starboard hand side of the route to
+be followed. They are generally used for well defined channels and
+are used in conjunction with a conventional direction of buoyage.
+(UKHO NP 735, 5^th^ Edition).
 10+| *[underline]#S-101 Geo Feature:#* *Lateral Beacon (BCNLAT)*
 10+| *[underline]#Primitives:#* *Point*
 
@@ -1876,13 +2110,19 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[twenty_nine]]
 [NOTE]
 --
-The attribute/sub-attribute *colour pattern* is mandatory for beacons/topmarks that have more than one value populated for the attribute/sub-attribute *colour*.
+The attribute/sub-attribute *colour pattern* is mandatory for
+beacons/topmarks that have more than one value populated for the
+attribute/sub-attribute *colour*.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# Q 91-92, 130.1
@@ -1890,15 +2130,28 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_20.9.1]]
 ==== Lateral Beacons (see S-4 -- B-461.3 and B-467)
 
-Lateral beaconsare generally used for well defined channels, in conjunction with a direction of buoyage. They indicate the port and starboard sides of the route to be followed.
+Lateral beaconsare generally used for well defined channels, in
+conjunction with a direction of buoyage. They indicate the port and
+starboard sides of the route to be followed.
 
-To conform to the IALA Maritime Buoyage System (see <<sec_18.3.1.1>>), port handbeacons have a can shaped topmark. The colour of port hand beacons, topmarks and lights (if fitted) will be red in IALA region A and green in IALA region B.
+To conform to the IALA Maritime Buoyage System (see
+<<sec_18.3.1.1>>), port handbeacons have a can shaped topmark. The
+colour of port hand beacons, topmarks and lights (if fitted) will be
+red in IALA region A and green in IALA region B.
 
-To conform to the IALA Maritime Buoyage System, starboard hand beacons have a conical shaped topmark. The colour of starboard hand beacons, topmarks and lights (if fitted) will be green in IALA region A and red in IALA region B.
+To conform to the IALA Maritime Buoyage System, starboard hand
+beacons have a conical shaped topmark. The colour of starboard hand
+beacons, topmarks and lights (if fitted) will be green in IALA region
+A and red in IALA region B.
 
-A preferred channel beaconis a modified lateral beacon, with horizontal colour bands. The predominant colour indicates which side is the preferred channel, the other colour indicates the secondary channel. If fitted, the light is Fl(2+1), the colour indicating the preferred channel.
+A preferred channel beaconis a modified lateral beacon, with
+horizontal colour bands. The predominant colour indicates which side
+is the preferred channel, the other colour indicates the secondary
+channel. If fitted, the light is Fl(2+1), the colour indicating the
+preferred channel.
 
-If it is required to encode a beacon having the function of a lateral mark, it must be done using the feature *Lateral Beacon*.
+If it is required to encode a beacon having the function of a lateral
+mark, it must be done using the feature *Lateral Beacon*.
 
 [[fig_20-5]]
 .IALA lateral beacons -- Characteristics
@@ -1906,18 +2159,30 @@ image::figure-20-1.png["",544,466]
 
 [underline]#Remarks:#
 
-* If it is required to encode a beacon or topmark that has more than one colour, the attributes *colour* and *colour pattern* must be encoded, according to the rules laid out in <<sec_2.4.10>>.
-* For guidance on the encoding of the attributes *elevation*, *height* and *vertical length* see <<sec_2.5.7>>. *elevation* applies only to beacons on land. Values populated for *height* and *vertical length* must include the topmark and any equipment features.
-* If it is required to encode a cairn that bears the colour(s) specified by a navigational system of marks, it must be done using a beacon feature.
+* If it is required to encode a beacon or topmark that has more than
+one colour, the attributes *colour* and *colour pattern* must be
+encoded, according to the rules laid out in <<sec_2.4.10>>.
+* For guidance on the encoding of the attributes *elevation*,
+*height* and *vertical length* see <<sec_2.5.7>>. *elevation* applies
+only to beacons on land. Values populated for *height* and *vertical
+length* must include the topmark and any equipment features.
+* If it is required to encode a cairn that bears the colour(s)
+specified by a navigational system of marks, it must be done using a
+beacon feature.
 
-[underline]#Distinction:# Cardinal Beacon; Daymark; Isolated Danger Beacon; Safe Water Beacon; Special Purpose/General Beacon.
+[underline]#Distinction:# Cardinal Beacon; Daymark; Isolated Danger
+Beacon; Safe Water Beacon; Special Purpose/General Beacon.
 
 [[sec_20.10]]
 === Cardinal beacon
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *CARDINAL BEACON*. A cardinal beacon is used in conjunction with the compass to indicate where the mariner may find the best navigable water. It is placed in one of the four quadrants (North, East, South and West), bounded by inter-cardinal bearings from the point marked. (UKHO NP 735, 5^th^ Edition).
+10+| [underline]#IHO Definition:# *CARDINAL BEACON*. A cardinal beacon
+is used in conjunction with the compass to indicate where the mariner
+may find the best navigable water. It is placed in one of the four
+quadrants (North, East, South and West), bounded by inter-cardinal
+bearings from the point marked. (UKHO NP 735, 5^th^ Edition).
 10+| *[underline]#S-101 Geo Feature:#* *Cardinal Beacon (BCNCAR)*
 10+| *[underline]#Primitives:#* *Point*
 
@@ -2119,13 +2384,19 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[twenty_ten]]
 [NOTE]
 --
-The attribute/sub-attribute *colour pattern* is mandatory for beacons/topmarks that have more than one value populated for the attribute/sub-attribute *colour*.
+The attribute/sub-attribute *colour pattern* is mandatory for
+beacons/topmarks that have more than one value populated for the
+attribute/sub-attribute *colour*.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# Q 130.3
@@ -2133,9 +2404,23 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_20.10.1]]
 ==== Cardinal beacons (see S-4 -- B-461.3 and B-467)
 
-Cardinal marksare used in conjunction with the compass to indicate where a Mariner may find best navigable water, taking their name from the quadrant in which they are placed in relation to the point marked. The Mariner should pass N of a North mark, E of an East mark, etc. To conform to the IALA Maritime Buoyage System (see <<sec_18.3.1.1>>), the body of the beacon has black and yellow bands, configured with black reflecting the points of the topmark cones (for example black above yellow for north). Black double-cone topmarks are an important feature of cardinal marks and are carried wherever practicable. The points are up for a north mark, down for a south mark, apart for an east mark and together for a west mark. Lights (if fitted) are white Q or VQ, uninterrupted for the north, 3 flashes for east, 6 flashes + LFl for south and 9 flashes for west (resembling an analogue clock).
+Cardinal marksare used in conjunction with the compass to indicate
+where a Mariner may find best navigable water, taking their name from
+the quadrant in which they are placed in relation to the point
+marked. The Mariner should pass N of a North mark, E of an East mark,
+etc. To conform to the IALA Maritime Buoyage System (see
+<<sec_18.3.1.1>>), the body of the beacon has black and yellow bands,
+configured with black reflecting the points of the topmark cones (for
+example black above yellow for north). Black double-cone topmarks are
+an important feature of cardinal marks and are carried wherever
+practicable. The points are up for a north mark, down for a south
+mark, apart for an east mark and together for a west mark. Lights (if
+fitted) are white Q or VQ, uninterrupted for the north, 3 flashes for
+east, 6 flashes + LFl for south and 9 flashes for west (resembling an
+analogue clock).
 
-If it is required to encode a beacon having the function of a cardinal mark, it must be done using the feature *Cardinal Beacon*.
+If it is required to encode a beacon having the function of a
+cardinal mark, it must be done using the feature *Cardinal Beacon*.
 
 [[fig_20-6]]
 .IALA cardinal beacons -- Characteristics
@@ -2143,24 +2428,36 @@ image::figure-20-2.png["",508,624]
 
 [underline]#Remarks:#
 
-* If it is required to encode a beacon or topmark that has more than one colour, the attributes *colour* and *colour pattern* must be encoded, according to the rules laid out in <<sec_2.4.10>>.
-* For guidance on the encoding of the attributes *elevation*, *height* and *vertical length* see <<sec_2.5.7>>. *elevation* applies only to beacons on land. Values populated for *height* and *vertical length* must include the topmark and any equipment features.
-* If it is required to encode a cairn that bears the colour(s) specified by a navigational system of marks, it must be done using a beacon feature.
+* If it is required to encode a beacon or topmark that has more than
+one colour, the attributes *colour* and *colour pattern* must be
+encoded, according to the rules laid out in <<sec_2.4.10>>.
+* For guidance on the encoding of the attributes *elevation*,
+*height* and *vertical length* see <<sec_2.5.7>>. *elevation* applies
+only to beacons on land. Values populated for *height* and *vertical
+length* must include the topmark and any equipment features.
+* If it is required to encode a cairn that bears the colour(s)
+specified by a navigational system of marks, it must be done using a
+beacon feature.
 
-[underline]#Distinction:# Daymark; Isolated Danger Beacon; Lateral Beacon; Safe Water Beacon; Special Purpose/General Beacon.
+[underline]#Distinction:# Daymark; Isolated Danger Beacon; Lateral
+Beacon; Safe Water Beacon; Special Purpose/General Beacon.
 
 [[sec_20.11]]
 === Isolated danger beacon
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *ISOLATED DANGER BEACON*. An isolated danger beacon is a beacon erected on an isolated danger of limited extent, which has navigable water all around it. (UKHO NP735, 5^th^ Edition).
+10+| [underline]#IHO Definition:# *ISOLATED DANGER BEACON*. An isolated
+danger beacon is a beacon erected on an isolated danger of limited
+extent, which has navigable water all around it.
+(UKHO NP735, 5^th^ Edition).
 10+| *[underline]#S-101 Geo Feature:#* *Isolated Danger Beacon (BCNISD)*
 10+| *[underline]#Primitives:#* *Point*
 
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
-3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value
+h| Type h| Multiplicity
 3+| beacon shape 2+| (BCNSHP) 3+|
 1: stake, pole, perch, post +
 2: withy +
@@ -2218,7 +2515,8 @@ image::figure-20-2.png["",508,624]
 3+| height
 2+| (HEIGHT) 3+| | RE | 0,1
 
-3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) |
+URN | 0,1
 
 3+| marks navigational -- system of 2+| (MARSYS) 3+|
 1: IALA A +
@@ -2351,13 +2649,19 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[twenty_eleven]]
 [NOTE]
 --
-The attribute/sub-attribute *colour pattern* is mandatory for beacons/topmarks that have more than one value populated for the attribute/sub-attribute *colour*.
+The attribute/sub-attribute *colour pattern* is mandatory for
+beacons/topmarks that have more than one value populated for the
+attribute/sub-attribute *colour*.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# IQ 130.4
@@ -2365,11 +2669,18 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_20.11.1]]
 ==== Isolated danger beacons (see S-4 -- B-461.3 and B-467)
 
-Isolated danger beacons are placed on isolated dangers of limited extent with navigable water all around them.
+Isolated danger beacons are placed on isolated dangers of limited
+extent with navigable water all around them.
 
-To conform to the IALA Maritime Buoyage System (see <<sec_18.3.1.1>>), the body of an isolated danger beacon is black, with one or more red bands. Black double-sphere topmarks are an important feature of isolated danger beacons and carried wherever practicable. The light (if fitted) is white Fl(2).
+To conform to the IALA Maritime Buoyage System (see
+<<sec_18.3.1.1>>), the body of an isolated danger beacon is black,
+with one or more red bands. Black double-sphere topmarks are an
+important feature of isolated danger beacons and carried wherever
+practicable. The light (if fitted) is white Fl(2).
 
-If it is required to encode a beacon having the function of an isolated danger mark, it must be done using the feature *Isolated Danger Beacon*.
+If it is required to encode a beacon having the function of an
+isolated danger mark, it must be done using the feature *Isolated
+Danger Beacon*.
 
 [[fig_20-7]]
 .IALA isolated danger beacons -- Characteristics
@@ -2377,18 +2688,28 @@ image::figure-20-3.png["",549,263]
 
 [underline]#Remarks:#
 
-* If it is required to encode a beacon or topmark that has more than one colour, the attributes *colour* and *colour pattern* must be encoded, according to the rules laid out in <<sec_2.4.10>>.
-* For guidance on the encoding of the attributes *elevation*, *height* and *vertical length* see <<sec_2.5.7>>. *elevation* applies only to beacons on land. Values populated for *height* and *vertical length* must include the topmark and any equipment features.
-* If it is required to encode a cairn that bears the colour(s) specified by a navigational system of marks, it must be done using a beacon feature.
+* If it is required to encode a beacon or topmark that has more than
+one colour, the attributes *colour* and *colour pattern* must be
+encoded, according to the rules laid out in <<sec_2.4.10>>.
+* For guidance on the encoding of the attributes *elevation*,
+*height* and *vertical length* see <<sec_2.5.7>>. *elevation* applies
+only to beacons on land. Values populated for *height* and *vertical
+length* must include the topmark and any equipment features.
+* If it is required to encode a cairn that bears the colour(s)
+specified by a navigational system of marks, it must be done using a
+beacon feature.
 
-[underline]#Distinction:# Cardinal Beacon; Daymark; Lateral Beacon; Safe Water Beacon; Special Purpose/General Beacon;.
+[underline]#Distinction:# Cardinal Beacon; Daymark; Lateral Beacon;
+Safe Water Beacon; Special Purpose/General Beacon;.
 
 [[sec_20.12]]
 === Safe water beacon
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *SAFE WATER BEACON*. A safe water beacon is used to indicate that there is navigable water around the mark. (UKHO NP735, 5^th^ Edition).
+10+| [underline]#IHO Definition:# *SAFE WATER BEACON*.
+A safe water beacon is used to indicate that there is navigable water
+around the mark. (UKHO NP735, 5^th^ Edition).
 10+| *[underline]#S-101 Geo Feature:#* *Safe Water Beacon (BCNSAW)*
 10+| *[underline]#Primitives:#* *Point*
 
@@ -2585,13 +2906,19 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[twenty_twelve]]
 [NOTE]
 --
-The attribute/sub-attribute *colour pattern* is mandatory for beacons/topmarks that have more than one value populated for the attribute/sub-attribute *colour*.
+The attribute/sub-attribute *colour pattern* is mandatory for
+beacons/topmarks that have more than one value populated for the
+attribute/sub-attribute *colour*.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# Q 130.5
@@ -2599,11 +2926,18 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_20.12.1]]
 ==== Safe water beacons (see S-4 -- B-461.3 and B-467)
 
-Safe water marksare used to indicate there is safe water all around the mark. It may be used as a centre-line, mid-channel or landfall beacon, or to mark the best point of passage under a bridge.
+Safe water marksare used to indicate there is safe water all around
+the mark. It may be used as a centre-line, mid-channel or landfall
+beacon, or to mark the best point of passage under a bridge.
 
-To conform to the IALA Maritime Buoyage System (see <<sec_18.3.1.1>>), the body of the mark has red and white vertical stripes. A red spherical topmark is an important feature and carried wherever practicable. The light (if fitted) is white Oc, Iso, LFl or Mo(A) with a period of 10s.
+To conform to the IALA Maritime Buoyage System (see
+<<sec_18.3.1.1>>), the body of the mark has red and white vertical
+stripes. A red spherical topmark is an important feature and carried
+wherever practicable. The light (if fitted) is white Oc, Iso, LFl or
+Mo(A) with a period of 10s.
 
-If it is required to encode a beacon having the function of a safe water mark, it must be done using the feature *Safe Water Beacon*.
+If it is required to encode a beacon having the function of a safe
+water mark, it must be done using the feature *Safe Water Beacon*.
 
 [[fig_20-8]]
 .IALA safe water beacons -- Characteristics
@@ -2611,18 +2945,29 @@ image::figure-20-4.png["",568,184]
 
 [underline]#Remarks:#
 
-* If it is required to encode a beacon or topmark that has more than one colour, the attributes *colour* and *colour pattern* must be encoded, according to the rules laid out in <<sec_2.4.10>>.
-* For guidance on the encoding of the attributes *elevation*, *height* and *vertical length* see <<sec_2.5.7>>. *elevation* applies only to beacons on land. Values populated for *height* and *vertical length* must include the topmark and any equipment features.
-* If it is required to encode a cairn that bears the colour(s) specified by a navigational system of marks, it must be done using a beacon feature.
+* If it is required to encode a beacon or topmark that has more than
+one colour, the attributes *colour* and *colour pattern* must be
+encoded, according to the rules laid out in <<sec_2.4.10>>.
+* For guidance on the encoding of the attributes *elevation*,
+*height* and *vertical length* see <<sec_2.5.7>>. *elevation* applies
+only to beacons on land. Values populated for *height* and *vertical
+length* must include the topmark and any equipment features.
+* If it is required to encode a cairn that bears the colour(s)
+specified by a navigational system of marks, it must be done using a
+beacon feature.
 
-[underline]#Distinction:# Cardinal Beacon; Daymark; Isolated Danger Beacon; Lateral Beacon; Special Purpose/General Beacon.
+[underline]#Distinction:# Cardinal Beacon; Daymark; Isolated Danger
+Beacon; Lateral Beacon; Special Purpose/General Beacon.
 
 [[sec_20.13]]
 === Special purpose/general beacon
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *SPECIAL PURPOSE/GENERAL BEACON*. A special purpose beacon is primarily used to indicate an area or feature, the nature of which is apparent from reference to a chart, Sailing Directions or Notices to Mariners. (UKHO NP 735, 5^th^ Edition).
+10+| [underline]#IHO Definition:# *SPECIAL PURPOSE/GENERAL BEACON*.
+A special purpose beacon is primarily used to indicate an area or
+feature, the nature of which is apparent from reference to a chart,
+Sailing Directions or Notices to Mariners. (UKHO NP 735, 5^th^ Edition).
 10+| *[underline]#S-101 Geo Feature:#* *Special Purpose/General Beacon (BCNSPP)*
 10+| *[underline]#Primitives:#* *Point*
 3+| _Real World_ 4+| _Paper Chart Symbol_ 3+| _ECDIS Symbol_
@@ -2877,13 +3222,19 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[twenty_thirteen]]
 [NOTE]
 --
-The attribute/sub-attribute *colour pattern* is mandatory for beacons/topmarks that have more than one value populated for the attribute/sub-attribute *colour*.
+The attribute/sub-attribute *colour pattern* is mandatory for
+beacons/topmarks that have more than one value populated for the
+attribute/sub-attribute *colour*.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# Q 130.6
@@ -2891,11 +3242,22 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_20.13.1]]
 ==== Special purpose/general beacons (see S-4 -- B-461.3 and B-467)
 
-Special beaconsare used to indicate to the Mariner a special area or feature, the nature of which is usually apparent from the chart or associated publication. To conform to the IALA Maritime Buoyage System (see <<sec_18.3.1.1>>), the body of the beacon is yellow. The topmark (if fitted) is a yellow diagonal 'X' (St Andrew's cross). Lights (if fitted) are yellow and of any rhythm except those used for cardinal, isolated danger and safe water marks.
+Special beaconsare used to indicate to the Mariner a special area or
+feature, the nature of which is usually apparent from the chart or
+associated publication. To conform to the IALA Maritime Buoyage
+System (see <<sec_18.3.1.1>>), the body of the beacon is yellow. The
+topmark (if fitted) is a yellow diagonal 'X' (St Andrew's cross).
+Lights (if fitted) are yellow and of any rhythm except those used for
+cardinal, isolated danger and safe water marks.
 
-If it is required to encode a beacon having the function of a special purpose mark, or a beacon whose appearance or purpose is inadequately known, it must be done using the feature *Special Purpose/General Beacon*.
+If it is required to encode a beacon having the function of a special
+purpose mark, or a beacon whose appearance or purpose is inadequately
+known, it must be done using the feature *Special Purpose/General
+Beacon*.
 
-In the following Table, a blank indicates that the encoder may choose a relevant value for the attribute. The Table contains the most common examples of coding; other coding combinations are possible.
+In the following Table, a blank indicates that the encoder may choose
+a relevant value for the attribute. The Table contains the most
+common examples of coding; other coding combinations are possible.
 
 [[table_20-2]]
 .IALA special purpose beacons -- Common types
@@ -2921,31 +3283,62 @@ h| Feature h| INT1 h| Feature h| beacon shape h| category of special purpose mar
 
 [underline]#Remarks:#
 
-* Non-beacon structures (for example chimneys, masts, towers) that are also used to serve the purpose of a special purpose beacon must be encoded, where required, using the feature *Landmark* (see <<sec_7.2>>).
-* If it is required to encode a beacon or topmark that has more than one colour, the attributes *colour* and *colour pattern* must be encoded, according to the rules laid out in <<sec_2.4.10>>.
-* For guidance on the encoding of the attributes *elevation*, *height* and *vertical length* see <<sec_2.5.7>>. *elevation* applies only to beacons on land. Values populated for *height* and *vertical length* must include the topmark and any equipment features.
-* If a special purpose beacon does not conform to the system of navigational marks defined by *Navigational System of Marks* (see <<sec_3.6>>), the attribute *marks navigational -- system of* on the *Special Purpose/General Beacon* should be populated as _9_ (no system).
-* If it is required to encode a cairn that bears the colour(s) specified by a navigational system of marks, it must be done using a beacon feature.
+* Non-beacon structures (for example chimneys, masts, towers) that
+are also used to serve the purpose of a special purpose beacon must
+be encoded, where required, using the feature *Landmark* (see
+<<sec_7.2>>).
+* If it is required to encode a beacon or topmark that has more than
+one colour, the attributes *colour* and *colour pattern* must be
+encoded, according to the rules laid out in <<sec_2.4.10>>.
+* For guidance on the encoding of the attributes *elevation*,
+*height* and *vertical length* see <<sec_2.5.7>>. *elevation* applies
+only to beacons on land. Values populated for *height* and *vertical
+length* must include the topmark and any equipment features.
+* If a special purpose beacon does not conform to the system of
+navigational marks defined by *Navigational System of Marks* (see
+<<sec_3.6>>), the attribute *marks navigational -- system of* on the
+*Special Purpose/General Beacon* should be populated as _9_ (no
+system).
+* If it is required to encode a cairn that bears the colour(s)
+specified by a navigational system of marks, it must be done using a
+beacon feature.
 
 [[sec_20.13.2]]
 ==== Signs and notice boards
 
-If it is required to encode a fixed or floating sign or notice board, it must be done using a *Special Purpose/General Beacon* feature or *Special Purpose/General Buoy* feature (see <<sec_20.5>>), with attribute stem:[bb "category of special purpose mark" = 18] (notice mark), or using the feature *Daymark* (see <<sec_20.14>>).
+If it is required to encode a fixed or floating sign or notice board,
+it must be done using a *Special Purpose/General Beacon* feature or
+*Special Purpose/General Buoy* feature (see <<sec_20.5>>), with
+attribute stem:[bb "category of special purpose mark" = 18] (notice
+mark), or using the feature *Daymark* (see <<sec_20.14>>).
 
 [underline]#Remarks:#
 
-* If it is required to encode a sign or notice board that has more than one colour, the attributes *colour* and *colour pattern* must be used, according to the rules laid out in <<sec_2.4.10>>.
-* If it is required to encode any text shown on a notice board or sign, it must be done using the complex attribute *information* (see <<sec_2.4.6>>).
-* If it is required to encode the shape and colour of a notice board, it must be done by encoding the board as a *Daymark* feature.
+* If it is required to encode a sign or notice board that has more
+than one colour, the attributes *colour* and *colour pattern* must be
+used, according to the rules laid out in <<sec_2.4.10>>.
+* If it is required to encode any text shown on a notice board or
+sign, it must be done using the complex attribute *information* (see
+<<sec_2.4.6>>).
+* If it is required to encode the shape and colour of a notice board,
+it must be done by encoding the board as a *Daymark* feature.
 
-[underline]#Distinction:# Cardinal Beacon; Daymark; Isolated Danger Beacon; Landmark; Lateral Beacon; Safe Water Beacon.
+[underline]#Distinction:# Cardinal Beacon; Daymark; Isolated Danger
+Beacon; Landmark; Lateral Beacon; Safe Water Beacon.
 
 [[sec_20.14]]
 === Daymark
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *DAYMARK*. The identifying characteristics of an aid to navigation which serve to facilitate its recognition against a daylight viewing background. On those structures that do not by themselves present an adequate viewing area to be seen at the required distance, the aid is made more visible by affixing a daymark to the structure. A daymark so affixed has a distinctive colour and shape depending on the purpose of the aid. (IHO Dictionary -- S-32, Edition 5).
+10+| [underline]#IHO Definition:# *DAYMARK*. The identifying characteristics
+of an aid to navigation which serve to facilitate its recognition
+against a daylight viewing background. On those structures that do
+not by themselves present an adequate viewing area to be seen at the
+required distance, the aid is made more visible by affixing a daymark
+to the structure. A daymark so affixed has a distinctive colour and
+shape depending on the purpose of the aid. (IHO Dictionary -- S-32,
+Edition 5).
 10+| *[underline]#S-101 Geo Feature:#* *Daymark (DAYMAR)*
 10+| *[underline]#Primitives:#* *Point*
 
@@ -3161,13 +3554,18 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[twenty_fourteen]]
 [NOTE]
 --
-The attribute *colour pattern* is mandatory for daymarks that have more than one value populated for the attribute *colour*.
+The attribute *colour pattern* is mandatory for daymarks that have
+more than one value populated for the attribute *colour*.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# Q 101
@@ -3175,11 +3573,16 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_20.14.1]]
 ==== Daymarks (see S-4 -- B-455.9)
 
-If it is required to encode a daymark, it must be done using the feature *Daymark*.
+If it is required to encode a daymark, it must be done using the
+feature *Daymark*.
 
-The term "daymark"may also simply refer to any unlit aid to navigation, particularly for leading marks. In North America, the term "daybeacon"is used for an unlit beacon.
+The term "daymark"may also simply refer to any unlit aid to
+navigation, particularly for leading marks. In North America, the
+term "daybeacon"is used for an unlit beacon.
 
-In the following Table, a blank indicates that the encoder may choose a relevant value for the attribute. The Table contains the most common examples of coding; other coding combinations are possible.
+In the following Table, a blank indicates that the encoder may choose
+a relevant value for the attribute. The Table contains the most
+common examples of coding; other coding combinations are possible.
 
 [[table_20-3]]
 .Daymarks -- Examples
@@ -3194,19 +3597,37 @@ h| Feature h| INT1 h| Feature h| category of special purpose mark h| Other attri
 
 [underline]#Remarks:#
 
-* For guidance on the encoding of the attributes *elevation*, *height* and *vertical length* see <<sec_2.5.7>>. *elevation* applies only to daymarks on land. Values populated for *height* and *vertical length* must include any equipment features.
-* If it is required to encode a cairn that bears the colour(s) specified by a navigational system of marks, it must be done using a beacon feature.
-* If it is required to encode an aid to navigation that may be considered to be a topmark but has multiple colours that are considered important for navigation, this should be done using *Daymark*.
-* If it is required to encode a daymark that has more than one colour, the attributes *colour* and *colour pattern* must be encoded, according to the rules laid out in <<sec_2.4.10>>. If the colour pattern for the daymark is complex, it is strongly recommended that an image of the daymark is included, using the attribute *pictorial representation*.
+* For guidance on the encoding of the attributes *elevation*,
+*height* and *vertical length* see <<sec_2.5.7>>. *elevation* applies
+only to daymarks on land. Values populated for *height* and *vertical
+length* must include any equipment features.
+* If it is required to encode a cairn that bears the colour(s)
+specified by a navigational system of marks, it must be done using a
+beacon feature.
+* If it is required to encode an aid to navigation that may be
+considered to be a topmark but has multiple colours that are
+considered important for navigation, this should be done using
+*Daymark*.
+* If it is required to encode a daymark that has more than one
+colour, the attributes *colour* and *colour pattern* must be encoded,
+according to the rules laid out in <<sec_2.4.10>>. If the colour
+pattern for the daymark is complex, it is strongly recommended that
+an image of the daymark is included, using the attribute *pictorial
+representation*.
 
-[underline]#Distinction:# Cardinal Beacon; Isolated Danger Beacon; Lateral Beacon; Safe Water Beacon; Special Purpose/General Beacon; Topmark.
+[underline]#Distinction:# Cardinal Beacon; Isolated Danger Beacon;
+Lateral Beacon; Safe Water Beacon; Special Purpose/General Beacon;
+Topmark.
 
 [[sec_20.15]]
 === Light float
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *LIGHT FLOAT*. A boat-like structure used instead of a light buoy in waters where strong streams or currents are experienced, or when a greater elevation than that of a light buoy is necessary. (IHO Dictionary -- S-32).
+10+| [underline]#IHO Definition:# *LIGHT FLOAT*. A boat-like structure
+used instead of a light buoy in waters where strong streams or currents
+are experienced, or when a greater elevation than that of a light
+buoy is necessary. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Light Float (LITFLT)*
 10+| *[underline]#Primitives:#* *Point*
 
@@ -3383,13 +3804,19 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[twenty_fifteen]]
 [NOTE]
 --
-The attribute/sub-attribute *colour pattern* is mandatory for light floats/topmarks that have more than one value populated for the attribute/sub-attribute *colour*.
+The attribute/sub-attribute *colour pattern* is mandatory for light
+floats/topmarks that have more than one value populated for the
+attribute/sub-attribute *colour*.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# Q 30
@@ -3397,21 +3824,32 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_20.15.1]]
 ==== Lights floats (see S-4 -- B-462.8)
 
-If it is required to encode a light float, it must be done using the feature *Light Float*.
+If it is required to encode a light float, it must be done using the
+feature *Light Float*.
 
 [underline]#Remarks:#
 
-* If it is required to encode a light float or topmark that has more than one colour, the attributes *colour* and *colour pattern* must be encoded, according to the rules laid out in <<sec_2.4.10>>.
-* The light on a light float is a separate feature, handled as with buoys, beacons, etc.
+* If it is required to encode a light float or topmark that has more
+than one colour, the attributes *colour* and *colour pattern* must be
+encoded, according to the rules laid out in <<sec_2.4.10>>.
+* The light on a light float is a separate feature, handled as with
+buoys, beacons, etc.
 
-[underline]#Distinction:# Cardinal Buoy; Emergency Wreck Marking Buoy; Installation Buoy; Isolated Danger Buoy; Lateral Buoy; Light Vessel; Safe Water Buoy; Special Purpose/General Buoy.
+[underline]#Distinction:# Cardinal Buoy; Emergency Wreck Marking
+Buoy; Installation Buoy; Isolated Danger Buoy; Lateral Buoy; Light
+Vessel; Safe Water Buoy; Special Purpose/General Buoy.
 
 [[sec_20.16]]
 === Light vessel
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *LIGHT VESSEL*. A distinctively marked vessel anchored or moored at a charted point, to serve as an aid to navigation. By night, it displays a characteristic light(s) and is usually equipped with other devices, such as fog signal, submarine sound signal, and radio-beacon, to assist navigation. (IHO Dictionary -- S-32).
+10+| [underline]#IHO Definition:# *LIGHT VESSEL*. A distinctively
+marked vessel anchored or moored at a charted point, to serve as an
+aid to navigation. By night, it displays a characteristic light(s)
+and is usually equipped with other devices, such as fog signal, submarine
+sound signal, and radio-beacon, to assist navigation. (IHO Dictionary
+-- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Light Vessel (LITVES)*
 10+| *[underline]#Primitives:#* *Point*
 
@@ -3523,13 +3961,18 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[twenty_sixteen]]
 [NOTE]
 --
-The attribute *colour pattern* is mandatory for light vessels that have more than one value populated for the attribute *colour*.
+The attribute *colour pattern* is mandatory for light vessels that
+have more than one value populated for the attribute *colour*.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# P 6
@@ -3537,23 +3980,39 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_20.16.1]]
 ==== Lights vessels (see S-4 -- B-474.1-3)
 
-Major floating lightsare generally classed as those with a nominal range in excess of 10 nautical miles. Special circumstances, for example an isolated location, may mean that a floating light of lower range is given this status. The structure on which the light is fixed will be a light vessel, a major light float or a LANBY (Large Automatic Navigational Buoy, which is a type of superbuoy).
+Major floating lightsare generally classed as those with a nominal
+range in excess of 10 nautical miles. Special circumstances, for
+example an isolated location, may mean that a floating light of lower
+range is given this status. The structure on which the light is fixed
+will be a light vessel, a major light float or a LANBY (Large
+Automatic Navigational Buoy, which is a type of superbuoy).
 
-If it is required to encode a light vessel, it must be done using the feature *Light Vessel*.
+If it is required to encode a light vessel, it must be done using the
+feature *Light Vessel*.
 
 [underline]#Remarks:#
 
-* If it is required to encode a light vessel that has more than one colour, the attributes *colour* and *colour pattern* must be encoded, according to the rules laid out in <<sec_2.4.10>>.
-* The light on a light vessel is a separate feature, handled as with buoys, beacons, etc.
+* If it is required to encode a light vessel that has more than one
+colour, the attributes *colour* and *colour pattern* must be encoded,
+according to the rules laid out in <<sec_2.4.10>>.
+* The light on a light vessel is a separate feature, handled as with
+buoys, beacons, etc.
 
-[underline]#Distinction:# Cardinal Beacon; Cardinal Buoy; Emergency Wreck Marking Buoy; Installation Buoy; Isolated Danger Beacon; Isolated Danger Buoy; Lateral Buoy; Lateral Beacon; Light Float; Safe Water Beacon; Safe Water Buoy; Special Purpose/General Beacon; Special Purpose/General Buoy.
+[underline]#Distinction:# Cardinal Beacon; Cardinal Buoy; Emergency
+Wreck Marking Buoy; Installation Buoy; Isolated Danger Beacon;
+Isolated Danger Buoy; Lateral Buoy; Lateral Beacon; Light Float; Safe
+Water Beacon; Safe Water Buoy; Special Purpose/General Beacon;
+Special Purpose/General Buoy.
 
 [[sec_20.17]]
 === Retroreflector
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *RETROREFLECTOR*. A means of distinguishing unlighted marks at night. Retroreflective material is secured to the mark in a particular pattern to reflect back light. (UKHO NP 735, 5^th^ Edition).
+10+| [underline]#IHO Definition:# *RETROREFLECTOR*. A means of distinguishing
+unlighted marks at night. Retroreflective material is secured to the
+mark in a particular pattern to reflect back light. (UKHO NP 735,
+5^th^ Edition).
 10+| *[underline]#S-101 Geo Feature:#* *Retroreflector (RETRFL)*
 10+| *[underline]#Primitives:#* *Point*
 
@@ -3626,11 +4085,14 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[twenty_seventeen]]
 [NOTE]
 --
-The attribute *colour pattern* is mandatory for retroreflectors that have more than one value populated for the attribute *colour*.
+The attribute *colour pattern* is mandatory for retroreflectors that
+have more than one value populated for the attribute *colour*.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# Q 6
@@ -3638,23 +4100,35 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_20.17.1]]
 ==== Retroreflectors (see S-4 -- B-460.7)
 
-Retroreflective material may be secured to unlit marks to aid their identification at night. The material is coloured according to one of two recognized IALA codes ("Standard" and "Comprehensive"). In any specified area only one of the codes will be used and this may be given in nautical publications.
+Retroreflective material may be secured to unlit marks to aid their
+identification at night. The material is coloured according to one of
+two recognized IALA codes ("Standard" and "Comprehensive"). In any
+specified area only one of the codes will be used and this may be
+given in nautical publications.
 
-If it is required to encode a retroreflector, it must be done using the feature *Retroreflector*.
+If it is required to encode a retroreflector, it must be done using
+the feature *Retroreflector*.
 
 [underline]#Remarks:#
 
-* The complex attribute *information* (see <<sec_2.4.6>>) may be used to describe letters, patterns or numerals shown on the retroreflector.
+* The complex attribute *information* (see <<sec_2.4.6>>) may be used
+to describe letters, patterns or numerals shown on the retroreflector.
 * The body carrying the retroreflector is a separate feature.
 
-[underline]#Distinction:# Cardinal Beacon; Cardinal Buoy; Emergency Wreck Marking Buoy; Installation Buoy; Isolated Danger Beacon; Isolated Danger Buoy; Lateral Beacon; Lateral Buoy; Radar Reflector; Safe Water Beacon; Safe Water Buoy; Special Purpose/General Beacon; Special Purpose/General Buoy.
+[underline]#Distinction:# Cardinal Beacon; Cardinal Buoy; Emergency
+Wreck Marking Buoy; Installation Buoy; Isolated Danger Beacon;
+Isolated Danger Buoy; Lateral Beacon; Lateral Buoy; Radar Reflector;
+Safe Water Beacon; Safe Water Buoy; Special Purpose/General Beacon;
+Special Purpose/General Buoy.
 
 [[sec_20.18]]
 === Radar reflector
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *RADAR REFLECTOR*. A device capable of, or intended for, reflecting radar signals. (IHO Dictionary -- S-32).
+10+| [underline]#IHO Definition:# *RADAR REFLECTOR*. A device capable
+of, or intended for, reflecting radar signals. (IHO Dictionary --
+S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Radar Reflector (RADRFL)*
 10+| *[underline]#Primitives:#* *Point*
 
@@ -3707,9 +4181,11 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[twenty_eighteen]]
 [NOTE]
 --
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# S 4
@@ -3717,14 +4193,27 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_20.18.1]]
 ==== Radar reflectors (see S-4 -- B-455.8 and B-465)
 
-If it is required to encode radar reflectors on curve features (for instance overhead cables, overhead pipelines, conveyors), this must be done using the feature *Radar Reflector*.
+If it is required to encode radar reflectors on curve features (for
+instance overhead cables, overhead pipelines, conveyors), this must
+be done using the feature *Radar Reflector*.
 
 [underline]#Remarks:#
 
-* A radar reflector is usually a tetrahedron or pentagonal corner reflector to facilitate reflection towards the sender. (International Maritime Dictionary, 2^nd^ Edition).
-* If it is required to encode a feature which has no radar reflector, but is radar conspicuous, it must be indicated using the mandatory attribute *radar conspicuous* = _True_ on the feature.
-* Where the location of a radar reflector(s) is known on an overhead cable or pipeline, a *Radar Reflector*(s) should be encoded, and associated to the *Cable Overhead* or *Pipeline Overhead* using a *Structure/Equipment* feature association (see <<sec_6.10;and!sec_6.11;and!sec_25.16>>).
-* If it is required to encode a surface or point feature which is radar conspicuous because it is fitted with a radar reflector, it must be indicated using *radar conspicuous* = _True_ on the feature. A *Radar Reflector* feature must not be encoded in this case.
+* A radar reflector is usually a tetrahedron or pentagonal corner
+reflector to facilitate reflection towards the sender. (International
+Maritime Dictionary, 2^nd^ Edition).
+* If it is required to encode a feature which has no radar reflector,
+but is radar conspicuous, it must be indicated using the mandatory
+attribute *radar conspicuous* = _True_ on the feature.
+* Where the location of a radar reflector(s) is known on an overhead
+cable or pipeline, a *Radar Reflector*(s) should be encoded, and
+associated to the *Cable Overhead* or *Pipeline Overhead* using a
+*Structure/Equipment* feature association (see
+<<sec_6.10;and!sec_6.11;and!sec_25.16>>).
+* If it is required to encode a surface or point feature which is
+radar conspicuous because it is fitted with a radar reflector, it
+must be indicated using *radar conspicuous* = _True_ on the feature.
+A *Radar Reflector* feature must not be encoded in this case.
 
 [underline]#Distinction:# Retroreflector.
 
@@ -3733,7 +4222,9 @@ If it is required to encode radar reflectors on curve features (for instance ove
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *FOG SIGNAL*. A warning signal transmitted by a vessel, or aid to navigation, during periods of low visibility. Also, the device producing such a signal. (IHO Dictionary -- S-32).
+10+| [underline]#IHO Definition:# *FOG SIGNAL*. A warning signal transmitted
+by a vessel, or aid to navigation, during periods of low visibility.
+Also, the device producing such a signal. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Fog Signal (FOGSIG)*
 10+| *[underline]#Primitives:#* *Point*
 
@@ -3839,11 +4330,15 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[twenty_nineteen]]
 [NOTE]
 --
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# R 1, 10-16, 20-22
@@ -3851,17 +4346,44 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_20.19.1]]
 ==== Fog signals (see S-4 -- B-451-454)
 
-The term "fog signal" refers to the sound emitted, not the apparatus. Fog signals are short range aids to navigation, principally used as hazard warnings. For various reasons they are unreliable as indicators of position. Their importance relative to other aids to navigation has declined but they are still considered useful for the safe navigation of vessels with very limited (or non-functioning) electronic equipment. A fog signal should be shown on ENCs at an optimum display scale on which vessels may navigate within range.
+The term "fog signal" refers to the sound emitted, not the apparatus.
+Fog signals are short range aids to navigation, principally used as
+hazard warnings. For various reasons they are unreliable as
+indicators of position. Their importance relative to other aids to
+navigation has declined but they are still considered useful for the
+safe navigation of vessels with very limited (or non-functioning)
+electronic equipment. A fog signal should be shown on ENCs at an
+optimum display scale on which vessels may navigate within range.
 
-The positionfrom which a fog signal is emitted is usually on a buoy, or close enough to a light to be treated as sounded from the same position as the light.
+The positionfrom which a fog signal is emitted is usually on a buoy,
+or close enough to a light to be treated as sounded from the same
+position as the light.
 
-If it is required to encode a fog signal, it must be done using the feature *Fog Signal*.
+If it is required to encode a fog signal, it must be done using the
+feature *Fog Signal*.
 
 [underline]#Remarks:#
 
-* The characteristic rhythm of fog signals (other than those actuated by waves, which are irregular) may be more important than their type when Mariners are attempting to identify them. The number of sound emissions (for example blasts, strokes) and the period must therefore be encoded, where known, using the attributes *signal group*, *signal period* and *signal sequence*.
-* Where required, the attribute *signal frequency* must be quoted in Hertz, for example a signal frequency of 950 MHz must be encoded as _950000000_.
-* If the fog signal is radio activated, the attribute *signal generation* must be populated with value _5_ (radio activated). To encode the contact information for activation of the signal, it must be done using the information type *Contact Details* (see <<sec_24.1>>). The *Contact Details* must be associated to the *Fog Signal* feature using the association *Additional Information*.
-* If the fog signal is activated by calling into a manned station, the attribute *signal generation* must be populated with value _6_ (call activated). To encode the contact information for the manned station, it must be done using the information type *Contact Details*. The *Contact Details* must be associated to the *Fog Signal* feature using the association *Additional Information*.
+* The characteristic rhythm of fog signals (other than those actuated
+by waves, which are irregular) may be more important than their type
+when Mariners are attempting to identify them. The number of sound
+emissions (for example blasts, strokes) and the period must therefore
+be encoded, where known, using the attributes *signal group*, *signal
+period* and *signal sequence*.
+* Where required, the attribute *signal frequency* must be quoted in
+Hertz, for example a signal frequency of 950 MHz must be encoded as
+_950000000_.
+* If the fog signal is radio activated, the attribute *signal
+generation* must be populated with value _5_ (radio activated). To
+encode the contact information for activation of the signal, it must
+be done using the information type *Contact Details* (see
+<<sec_24.1>>). The *Contact Details* must be associated to the *Fog
+Signal* feature using the association *Additional Information*.
+* If the fog signal is activated by calling into a manned station,
+the attribute *signal generation* must be populated with value _6_
+(call activated). To encode the contact information for the manned
+station, it must be done using the information type *Contact
+Details*. The *Contact Details* must be associated to the *Fog
+Signal* feature using the association *Additional Information*.
 
 [underline]#Distinction:# Signal Station Warning.

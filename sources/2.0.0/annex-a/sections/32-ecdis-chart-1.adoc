@@ -7,13 +7,16 @@
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *CHART 1 FEATURE.* A feature which exists to support the rendering of graphics or text in order to provide additional information that cannot be encoded using other features.
+10+| [underline]#IHO Definition:# *CHART 1 FEATURE.* A feature which
+exists to support the rendering of graphics or text in order to provide
+additional information that cannot be encoded using other features.
 10+| *[underline]#S-101 Geo Feature:#* *Chart 1 Feature*
 10+| *[underline]#Primitives:#* *Point*, *Pointset*, *Curve*, *Surface*
 
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
 
-3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value
+h| Type h| Multiplicity
 3+| drawing instruction 2+| (SYMINS) 3+| | TE | 0,* footnoteblock:[thirtytwo_one]
 
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,* footnoteblock:[thirtytwo_one]
@@ -37,9 +40,12 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[thirtytwo_one]]
 [NOTE]
 --
-At least one of the attributes *drawing instruction* or *feature name* must be populated.
+At least one of the attributes *drawing instruction* or *feature name*
+must be populated.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 --
 
 [underline]#INT 1 Reference:#
@@ -47,13 +53,30 @@ Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the
 [[sec_32.1.1]]
 ==== ECDIS Chart 1 custom features
 
-If it is required to encode a custom feature required, for example, to encode supporting features such as table structures and texts used in the ECDIS Chart 1 datasets, it must be done using the feature *Chart 1 Feature*.
+If it is required to encode a custom feature required, for example,
+to encode supporting features such as table structures and texts used
+in the ECDIS Chart 1 datasets, it must be done using the feature
+*Chart 1 Feature*.
 
 [underline]#Remarks:#
 
-* The *Chart 1 Feature* must only be used for specific purposes such as within test datasets and the ECDIS Chart 1 datasets. It is prohibited to use *Chart 1 Feature* in navigational ENC datasets.
-* The attribute *drawing instruction* must be populated, if required, with one or more symbol instructions as defined in S-100 Part 9a.
-* If it is required for textual information related to a *Chart 1 Feature* instance to be included in the ECDIS display, this must be done by populating the complex attribute *feature name*, sub-attribute *name usage* with value _1_ (default name display) for the *feature name* instance. To locate the text at the appropriate position (for example for an instance of *Chart 1 Feature* encoded only to include textual information in the dataset), this must be done, if required, using an associated instance of the Cartographic feature *Text Placement* (see <<sec_23.1>>). If it is required to restrict the inclusion of the contents of *feature name* only to the ECDIS Pick Report, *name usage* must not be populated for the *feature name* instance. See also <<sec_2.5.8>>.
+* The *Chart 1 Feature* must only be used for specific purposes such
+as within test datasets and the ECDIS Chart 1 datasets. It is prohibited
+to use *Chart 1 Feature* in navigational ENC datasets.
+* The attribute *drawing instruction* must be populated, if required,
+with one or more symbol instructions as defined in S-100 Part 9a.
+* If it is required for textual information related to a
+*Chart 1 Feature* instance to be included in the ECDIS display, this
+must be done by populating the complex attribute *feature name*, sub-attribute
+*name usage* with value _1_ (default name display) for the
+*feature name* instance. To locate the text at the appropriate position
+(for example for an instance of *Chart 1 Feature* encoded only to
+include textual information in the dataset), this must be done, if
+required, using an associated instance of the Cartographic feature
+*Text Placement* (see <<sec_23.1>>). If it is required to restrict
+the inclusion of the contents of *feature name* only to the ECDIS
+Pick Report, *name usage* must not be populated for the *feature name*
+instance. See also <<sec_2.5.8>>.
 
 [underline]#Distinction:#
 
@@ -62,11 +85,14 @@ If it is required to encode a custom feature required, for example, to encode su
 
 [cols="a",options="noheader,unnumbered"]
 |===
-| [underline]#IHO Definition:# *DRAWING INSTRUCTION*. Text describing one or more graphic elements that must be rendered in an end-user system.
+| [underline]#IHO Definition:# *DRAWING INSTRUCTION*. Text describing
+one or more graphic elements that must be rendered in an end-user
+system.
 
 [underline]#Attribute Type:# Text
 
-[underline]#Indication:# The string encodes one or more drawing instructions as described in S-100 Part 9a and S-100 clause 13-6.1.
+[underline]#Indication:# The string encodes one or more drawing instructions
+as described in S-100 Part 9a and S-100 clause 13-6.1.
 
 [underline]#Format:# (c...)
 

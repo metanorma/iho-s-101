@@ -7,7 +7,9 @@
 
 [cols="a",options="noheader,unnumbered"]
 |===
-| [underline]#IHO Definition:# *THE AUXILIARY FEATURE*. A pointer to incidental, secondary or supplementary features related to the referenced feature.
+| [underline]#IHO Definition:# *THE AUXILIARY FEATURE*. A pointer
+to incidental, secondary or supplementary features related to the
+referenced feature.
 
 |===
 
@@ -16,7 +18,8 @@
 
 [cols="a",options="noheader,unnumbered"]
 |===
-| [underline]#IHO Definition:# *THE CARTOGRAPHIC TEXT*. A pointer to a specific cartographically positioned location for text.
+| [underline]#IHO Definition:# *THE CARTOGRAPHIC TEXT*. A pointer
+to a specific cartographically positioned location for text.
 
 |===
 
@@ -25,7 +28,8 @@
 
 [cols="a",options="noheader,unnumbered"]
 |===
-| [underline]#IHO Definition:# *THE COLLECTION*. A pointer to the aggregate in a whole-part relationship.
+| [underline]#IHO Definition:# *THE COLLECTION*. A pointer to the
+aggregate in a whole-part relationship.
 
 |===
 
@@ -34,7 +38,8 @@
 
 [cols="a",options="noheader,unnumbered"]
 |===
-| [underline]#IHO Definition:# *THE COMPONENT*. A pointer to a part in a whole-part relationship.
+| [underline]#IHO Definition:# *THE COMPONENT*. A pointer to a part
+in a whole-part relationship.
 
 |===
 
@@ -43,7 +48,8 @@
 
 [cols="a",options="noheader,unnumbered"]
 |===
-| [underline]#IHO Definition:# *THE EQUIPMENT*. A pointer to the feature(s) supported by a structure feature.
+| [underline]#IHO Definition:# *THE EQUIPMENT*. A pointer to the feature(s)
+supported by a structure feature.
 
 |===
 
@@ -52,7 +58,9 @@
 
 [cols="a",options="noheader,unnumbered"]
 |===
-| [underline]#IHO Definition:# *THE INFORMATION*. A pointer to an object that provides more information about the referencing feature or information type.
+| [underline]#IHO Definition:# *THE INFORMATION*. A pointer to an
+object that provides more information about the referencing feature
+or information type.
 
 |===
 
@@ -61,7 +69,8 @@
 
 [cols="a",options="noheader,unnumbered"]
 |===
-| [underline]#IHO Definition:# *THE POSITION PROVIDER*. A pointer to a specific feature(s).
+| [underline]#IHO Definition:# *THE POSITION PROVIDER*. A pointer
+to a specific feature(s).
 
 |===
 
@@ -70,7 +79,9 @@
 
 [cols="a",options="noheader,unnumbered"]
 |===
-| [underline]#IHO Definition:# *THE PRIMARY FEATURE*. A pointer to a feature to which incidental, secondary or supplementary features are related.
+| [underline]#IHO Definition:# *THE PRIMARY FEATURE*. A pointer to
+a feature to which incidental, secondary or supplementary features
+are related.
 
 |===
 
@@ -79,7 +90,8 @@
 
 [cols="a",options="noheader,unnumbered"]
 |===
-| [underline]#IHO Definition:# *THE QUALITY INFORMATION*. A pointer to an information type providing spatial quality information.
+| [underline]#IHO Definition:# *THE QUALITY INFORMATION*. A pointer
+to an information type providing spatial quality information.
 
 |===
 
@@ -88,7 +100,8 @@
 
 [cols="a",options="noheader,unnumbered"]
 |===
-| [underline]#IHO Definition:# *THE ROOFED STRUCTURE*. A pointer to a supported roofed structure.
+| [underline]#IHO Definition:# *THE ROOFED STRUCTURE*. A pointer to
+a supported roofed structure.
 
 |===
 
@@ -97,7 +110,8 @@
 
 [cols="a",options="noheader,unnumbered"]
 |===
-| [underline]#IHO Definition:# *THE STRUCTURE*. A pointer to the feature that equipment feature(s) are supported by.
+| [underline]#IHO Definition:# *THE STRUCTURE*. A pointer to the feature
+that equipment feature(s) are supported by.
 
 |===
 
@@ -106,7 +120,8 @@
 
 [cols="a",options="noheader,unnumbered"]
 |===
-| [underline]#IHO Definition:# *THE SUPPORT*. A pointer to the feature(s) that support a structure.
+| [underline]#IHO Definition:# *THE SUPPORT*. A pointer to the feature(s)
+that support a structure.
 
 |===
 
@@ -115,7 +130,8 @@
 
 [cols="a",options="noheader,unnumbered"]
 |===
-| [underline]#IHO Definition:# *THE UPDATE*. A pointer to a feature that describes changes made to a dataset.
+| [underline]#IHO Definition:# *THE UPDATE*. A pointer to a feature
+that describes changes made to a dataset.
 
 |===
 
@@ -124,6 +140,7 @@
 
 [cols="a",options="noheader,unnumbered"]
 |===
-| [underline]#IHO Definition:# *THE UPDATED OBJECT*. A pointer to a feature that has been updated.
+| [underline]#IHO Definition:# *THE UPDATED OBJECT*. A pointer to
+a feature that has been updated.
 
 |===
