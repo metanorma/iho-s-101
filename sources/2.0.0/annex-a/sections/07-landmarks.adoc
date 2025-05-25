@@ -1,0 +1,1161 @@
+
+[[sec_7]]
+== Geo Features -- Landmarks
+
+[[sec_7.1]]
+=== Buildings, landmarks, tanks, silos: Common encoding combinations
+
+In the following Table, the symbol '/' indicates that this attribute
+does not exist for that particular feature class. A blank indicates
+that the encoder may choose a relevant value for the attribute. The
+Table contains the most common examples of coding; other coding combinations
+are possible.
+
+[[table_7-1]]
+.Buildings, landmarks, tanks and silos -- Encoding
+[cols="129,35,55,52,50,51,50"]
+|===
+h| Feature h| INT1 h| Feature class h| function h| category of landmark h| product h| category of silo/tank
+
+| Administrative                     |            | *Building*     | _18_ | _/_  | _/_        | _/_
+| Bank office                        |            | *Building*     | _13_ | _/_  | _/_        | _/_
+| Boundary mark                      |            | *Landmark*     |      | _23_ | _/_        | _/_
+| Buddhist temple                    | E16        | *Building*     | _25_ | _/_  | _/_        | _/_
+| Bus station                        |            | *Building*     | _42_ | _/_  | _/_        | _/_
+| Cairn                              | Q100       | *Landmark*     | _/_  | _1_  | _/_        | _/_
+| Cemetery                           | E19        | *Landmark*     |      | _2_  | _/_        | _/_
+| Chapel                             | E11        | *Building*     | _21_ | _/_  | _/_        | _/_
+| Chimney                            | E22        | *Landmark*     |      | _3_  | _/_        |
+| Church                             | E10.1      | *Building*     | _20_ | _/_  | _/_        | _/_
+| Church dome, Cupola                | E10.4      | *Landmark*     | _20_ | _15_ | _/_        | _/_
+| Church spire                       | E10.3      | *Landmark*     | _20_ | _20_ | _/_        | _/_
+| Church tower                       | E10.2      | *Landmark*     | _20_ | _17_ | _/_        | _/_
+| Clock tower                        |            | *Landmark*     | _38_ | _17_ | _/_        | _/_
+| Column                             | E24        | *Landmark*     | _/_  | _10_ | _/_        | _/_
+| Communication mast                 |            | *Landmark*     | _29_ | _7_  | _/_        | _/_
+| Communication tower                |            | *Landmark*     | _29_ | _17_ | _/_        | _/_
+| Control tower                      |            | *Landmark*     | _39_ | _17_ | _/_        | _/_
+| Cooling tower                      |            | *Landmark*     | _35_ | _17_ | _/_        | _/_
+| Cross, Calvary                     | E12        | *Landmark*     |      | _14_ | _/_        | _/_
+| Customs office                     | F61        | *Building*     | _3_  | _/_  | _/_        | _/_
+| Dish aerial                        | E31        | *Landmark*     |      | _4_  | _/_        | _/_
+| Dome or cupola, part of a building |            | *Landmark*     |      | _15_ | _/_        | _/_
+| Educational facility               |            | *Building*     | _19_ | _/_  | _/_        | _/_
+| Factory                            |            | *Building*     | _16_ | _/_  | _/_        | _/_
+| Flagstaff, Flagpole                | E27        | *Landmark*     |      | _5_  | _/_        | _/_
+| Flare stack on land                | E23        | *Landmark*     |      | _6_  | _/_        | _/_
+| Grain elevator                     |            | *Silo/Tank*    | _/_  | _/_  | _22_       | _3_
+| Harbour-masters office             | F60        | *Building*     | _2_  | _/_  | _/_        | _/_
+| Headquarters for district control  |            | *Building*     | _14_ | _/_  | _/_        | _/_
+| Health office                      | F62.1      | *Building*     | _4_  | _/_  | _/_        | _/_
+| Hospital                           | F62.2      | *Building*     | _5_  | _/_  | _/_        | _/_
+| Hotel                              | D6         | *Building*     | _7_  | _/_  | _/_        | _/_
+| House, Building                    | D5         | *Building*     |      | _/_  | _/_        | _/_
+| Large rock or boulder on land      |            | *Landmark*     | _/_  | _21_ | _/_        | _/_
+| Light house (tower)                | P1         | *Landmark*     | _33_ | _17_ | _/_        | _/_
+| Light house (other shapes)         | P1         | *Building*     | _33_ | _/_  | _/_        | _/_
+| Lookout station in general         |            | *Building*     | _28_ | _/_  | _/_        | _/_
+| Lookout tower                      |            | *Landmark*     | _28_ | _17_ | _/_        | _/_
+| Marabout                           | E18        | *Building*     | _27_ | _/_  | _/_        | _/_
+| Mast in general                    |            | *Landmark*     |      | _7_  | _/_        | _/_
+| Memorial plaque                    |            | *Landmark*     |      | _11_ | _/_        | _/_
+| Microwave tower                    |            | *Landmark*     | _34_ | _17_ | _/_        | _/_
+| Minaret                            | E17        | *Landmark*     | _26_ | _20_ | _/_        | _/_
+| Monument                           | E24        | *Landmark*     |      | _9_  | _/_        | _/_
+| Mooring mast                       |            | *Landmark*     | _40_ | _7_  | _/_        | _/_
+| Mosque                             | E17        | *Building*     | _26_ | _/_  | _/_        | _/_
+| Obelisk                            | E24        | *Landmark*     | _/_  | _12_ | _/_        | _/_
+| Observation tower                  |            | *Landmark*     | _36_ | _17_ | _/_        | _/_
+| Observation wheel                  |            | *Landmark*     | _/_  | _24_ | _/_        | _/_
+| Pagoda                             | E14        | *Building*     | _23_ | _/_  | _/_        | _/_
+| Pilot lookout                      | T2         | *Building*     | _12_ | _/_  | _/_        | _/_
+| Pilot office                       | T3         | *Building*     | _11_ | _/_  | _/_        | _/_
+| Police station                     |            | *Building*     | _9_  | _/_  | _/_        | _/_
+| Post office                        | F63        | *Building*     | _6_  | _/_  | _/_        | _/_
+| Power station                      |            | *Building*     | _17_ | _/_  | _/_        | _/_
+| Radar dome                         | E30.4      | *Landmark*     | _32_ | _15_ | _/_        | _/_
+| Radar mast                         | E30.1      | *Landmark*     | _32_ | _7_  | _/_        | _/_
+| Radar scanner                      | E30.3      | *Landmark*     |      | _16_ | _/_        | _/_
+| Radar tower                        | E30.2      | *Landmark*     | _32_ | _17_ | _/_        | _/_
+| Radio mast                         | E28        | *Landmark*     | _31_ | _7_  | _/_        | _/_
+| Radio tower                        | E29        | *Landmark*     | _31_ | _17_ | _/_        | _/_
+| Railway station                    | D13        | *Building*     | _8_  | _/_  | _/_        | _/_
+| Shinto shrine                      | E15        | *Building*     | _24_ | _/_  | _/_        | _/_
+| Silo                               | E33        | *Silo/Tank*    | _/_  | _/_  |            | _1_
+| Spire, part of a building          |            | *Landmark*     |      | _20_ | _/_        | _/_
+| Stadium                            |            | *Building*     | _41_ | /    | /          | /
+| Statue                             | E24        | *Landmark*     |      | _13_ | _/_        | _/_
+| Tank                               | E32        | *Silo/Tank*    | _/_  | _/_  |            | _2_
+| Television mast                    | E28        | *Landmark*     | _30_ | _7_  | _/_        | _/_
+| Television tower                   | E29        | *Landmark*     | _30_ | _17_ | _/_        | _/_
+| Temple                             | E13        | *Building*     | _22_ | _/_  | _/_        | _/_
+| Timeball tower                     |            | *Landmark*     | _37_ | _17_ | _/_        | _/_
+| Torii                              |            | *Landmark*     | _/_  | _25_ | _/_        | _/_
+| Tower                              | E20        | *Landmark*     |      | _17_ | _/_        | _/_
+| Tower, part of a building          |            | *Landmark*     |      | _17_ | _/_        | _/_
+| Transit shed, Warehouse            | F51        | *Building*     | _15_ | _/_  | _/_        | _/_
+| Triangulation mark                 |            | *Landmark*     |      | _22_ | _/_        | _/_
+| Water tower                        | E21        | *Silo/Tank*    | _/_  | _/_  | _3_ or _8_ | _4_
+| Water-police station               |            | *Building*     | _10_ | _/_  | _/_        | _/_
+| Windmill                           | E25        | *Landmark*     |      | _18_ | _/_        | _/_
+| Windmotor                          | E26.1 L5.1 | *Wind Turbine* | _/_  | _/_  | _/_        | _/_
+|===
+
+[underline]#Remarks:#
+
+* If it is required to encode an offshore landmark (as defined by
+the attribute *category of landmark*), the ECDIS system attribute
+*in the water* (see <<sec_30.2>>) must be populated to ensure the
+feature is always displayed on the ECDIS. Where fitted, lights should
+be encoded as described in <<sec_19>>, with the *Building*,
+*Wind Turbine*, *Landmark* or *Silo/Tank* being used as the structure
+feature for the relevant light equipment feature(s) (see <<sec_18.1>>).
+* For encoding wind turbines, see <<sec_7.4>>.
+
+[[sec_7.2]]
+=== Landmark
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *LANDMARK*. Any prominent object
+at a fixed location on land which can be used in determining a location
+or a direction. (IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Landmark (LNDMRK)*
+10+| *[underline]#Primitives:#* *Point, Curve, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| category of landmark 2+| (CATLMK) 3+|
+1: cairn +
+2: cemetery +
+3: chimney +
+4: dish aerial +
+5: flagstaff +
+6: flare stack +
+7: mast +
+8: windsock +
+9: monument +
+10: column/pillar +
+11: memorial plaque +
+12: obelisk +
+13: statue +
+14: cross +
+15: dome +
+16: radar scanner +
+17: tower +
+18: windmill +
+20: spire/minaret +
+21: large rock or boulder on land +
+22: triangulation mark +
+23: boundary mark +
+24: observation wheel +
+25: torii +
+26: bridge +
+27: dam | EN | 1,*
+3+| category of special purpose mark 2+| (CATSPM) 3+|
+16: leading mark +
+17: measured distance mark +
+41: clearing mark | EN | 0,*
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | EN | 0,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | EN | 0,1 footnoteblock:[seven_two]
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+2: ruined +
+4: wingless +
+5: planned construction | EN | 0,1
+3+| elevation 2+| (ELEVAT)
+3+| | RE | 0,1
+
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[seven_two]
+
+3+| function 2+| (FUNCTN) 3+|
+2: harbour-masters office +
+3: customs office +
+4: health office +
+5: hospital +
+6: post office +
+7: hotel +
+8: railway station +
+9: police station +
+10: water-police station +
+11: pilot office +
+12: pilot lookout +
+13: bank office +
+14: headquarters for district control +
+15: transit shed/warehouse +
+16: factory +
+17: power station +
+18: administrative +
+19: educational facility +
+20: church +
+21: chapel +
+22: temple +
+23: pagoda +
+24: Shinto shrine +
+25: Buddhist temple +
+26: mosque +
+27: marabout +
+28: lookout +
+29: communication +
+30: television +
+31: radio +
+32: radar +
+33: light support +
+34: microwave +
+35: cooling +
+36: observation +
+37: timeball +
+38: clock +
+39: control +
+40: airship mooring +
+41: stadium +
+42: bus station +
+44: sea rescue control +
+45: observatory +
+46: ore crusher +
+47: boathouse +
+48: pumping station | EN | 0,*
+3+| height 2+| (HEIGHT)
+3+| | RE | 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| multiplicity of features 2+| 3+| | C | 0,1
+
+3+| multiplicity known 2+| 3+| | (S) BO
+| 1,1
+
+3+| number of features 2+| 3+| | (S) IN
+| 0,1
+
+3+| nature of construction 2+| (NATCON) 3+|
+1: masonry +
+2: concreted +
+3: loose boulders +
+6: wooden +
+7: metal +
+8: glass reinforced plastic +
+11: latticed +
+12: glass | EN | 0,*
+3+| radar conspicuous 2+| (CONRAD)
+3+| | BO | 0,1
+
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+3+| status 2+| (STATUS) 3+|
+2: occasional +
+4: not in use +
+5: periodic/intermittent +
+7: temporary +
+8: private +
+12: illuminated +
+13: historic +
+14: public | EN | 0,*
+3+| vertical length 2+| (VERLEN)
+3+| | RE | 0,1
+
+3+| visual prominence 2+| (CONVIS) 3+|
+1: visually conspicuous +
+2: not visually conspicuous +
+3: prominent | EN | 1,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[seven_two]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[seven_two]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
+3+| in the water 2+| 3+| | BO | 0,1
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Helipad*, *Light Air Obstruction*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
+| The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
+| The Auxiliary Feature 3+| *Fairway Auxiliary* (see <<sec_25.8>>) 3+| *Fairway* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[seven_two]]
+[NOTE]
+--
+The attribute *colour pattern* is mandatory for landmarks that have
+more than one value populated for the attribute *colour*.
+
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# D 8; E 10.2-10.4, 22-31; L 11; Q 100
+
+[[sec_7.2.1]]
+==== Buildings, landmarks, tanks, silos (see S-4 -- B-373; B-373.6; B-374.3-5; B-374.7; B-375.1-2; B-456.2; B-487.3)
+
+Depending on height and the topographic relief, structures considered
+to be landmarks should be encoded up to several miles inland.
+
+Waterfront, landmark and some public buildings should be encoded precisely
+and individually on the larger optimum display scale ENC data. When
+representing buildings generally, including urban and other built-up
+areas, the aim of the compiler must be to create the correct impression
+of the extent of the built-up area and the density of the buildings.
+
+If it is required to encode a landmark (other than a tank, silo or
+roofed structure erected or extending over navigable water), it must
+be done using the feature *Landmark*.
+
+[underline]#Remarks:#
+
+* For buildings, see <<sec_6.2>>; for silos, tanks and water towers,
+see <<sec_7.3>>. For common encoding combinations, see <<sec_7.1>>.
+For wind turbines, see <<sec_7.4>>. For roofed structures such as
+boathouses erected or extending over navigable water to provide protection
+for a vessel or its cargo, see <<sec_8.7>>. For flare stacks on offshore
+platforms, see <<sec_14.1.1>>.
+* The feature association *Structure/Equipment* (see <<sec_25.16>>)
+must only be used with *Landmark* features if the main purpose of
+the structure is to act as an aid to navigation (for example a lighthouse).
+* A water tower must be encoded, where required, using the feature
+*Silo/Tank* (see <<sec_7.3>>).
+* A ruined landmark should be encoded in the same way as the feature
+in good condition, but with attribute stem:[bb "condition" = 2] (ruined).
+* Radio and television masts and towers are likely to be visible over
+long distances and should be encoded as landmarks, even when well
+inland. They will usually carry air obstruction lights.
+* To aid identification of landmarks by the Mariner it may be useful
+to add the height of the top of the structure above ground level
+(*vertical length*) or above the general height datum (*height*).
+* Buildings constructed as places of worship often form significant
+landmarks; their size and structure incorporating towers, spires,
+cupolas, etc often render them conspicuous. These buildings when known
+to be prominent or conspicuous should be encoded up to several miles
+inland (see <<fig_7-1>> below, examples (a) and (b)).
+* The attribute *category of special purpose mark* should only be
+used if the *Landmark* is used as the front or rear lead for a transit,
+clearing line or measured distance, or for a leading line. Values
+for *category of special purpose mark* such as _16_ (leading mark),
+_17_ (measured distance mark) or _41_ (clearing mark) in particular
+should be used for these purposes.
+* Values *category of landmark* = _26_ (bridge) and _27_ (dam) must
+only be used if the feature is encoded using point geometry; and must
+not be encoded over navigable water. Bridges and dams encoded using
+curve or surface geometry must be encoded using features *Bridge*
+(see <<sec_6.6>>) and *Dam* (see <<sec_8.12>>) respectively.
+* For landmarks located in navigable water, the Boolean attribute
+*in the water* must be set to _True_ to indicate that the feature
+is to be included in the ECDIS Base Display. Where such structures
+are located in the water it is not required to encode any supporting
+structures (for example piles).
+* When a building is shown as a surface, indicating its true shape,
+and it is required to encode a prominent feature such as a tower or
+spire that is part of the structure, two features must be created
+(see <<fig_7-1>> (b) below):
+- a *Building* feature of type surface for the main building,
+
+[[fig_7-1]]
+.Landmarks
+image::figure-7-1.png[Shape21,624,183]
+
+- a *Landmark* feature of type point for the prominent feature.
+
+* Not all landmarks are visually conspicuous. If a feature is visually
+conspicuous (that is, it is distinctly and noticeably visible from
+seaward), the attribute *visual prominence* must be encoded (see S-4
+-- B-340).
+
+[underline]#Distinction:# Building; Daymark; Pylon/Bridge Support;
+Silo/Tank; Special Purpose/General Beacon; Structure Over Navigable
+Water; Wind Turbine.
+
+[[sec_7.3]]
+=== Silo/tank
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *SILO/TANK*. A large storage structure
+used for storing loose materials, liquids and/or gases. (Adapted from
+Defence Geospatial Information Working Group; Feature Data Dictionary
+Register, 2012).
+10+| *[underline]#S-101 Geo Feature:#* *Silo/Tank (SILTNK)*
+10+| *[underline]#Primitives:#* *Point, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| building shape 2+| (BUISHP) 3+|
+5: high-rise building +
+6: pyramid +
+7: cylindrical +
+8: spherical +
+9: cubic | EN | 0,1
+3+| category of silo/tank 2+| (CATSIL) 3+|
+1: silo in general +
+2: tank in general +
+3: grain elevator +
+4: water tower | EN | 0,1
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | EN | 0,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | EN | 0,1 footnoteblock:[seven_three]
+
+3+| condition 2+| (CONDTN) 3+| 1: under construction +
+2: ruined +
+5: planned construction | EN | 0,1
+
+3+| elevation 2+| (ELEVAT) 3+| | RE | 0,1
+
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[seven_three]
+
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| multiplicity of features 2+| 3+| | C | 0,1
+
+3+| multiplicity known 2+| 3+| | (S) BO
+| 1,1
+
+3+| number of features 2+| 3+| | (S) IN
+| 0,1
+
+3+| nature of construction 2+| (NATCON) 3+|
+1: masonry +
+2: concreted +
+6: wooden +
+7: metal +
+8: glass reinforced plastic | EN | 0,*
+3+| product 2+| (PRODCT) 3+|
+1: oil +
+2: gas +
+3: water +
+5: coal +
+7: chemicals +
+8: drinking water +
+9: milk +
+13: salt +
+14: sand +
+16: sawdust/wood chips +
+18: liquefied natural gas +
+19: liquefied petroleum gas +
+20: wine +
+21: cement +
+22: grain +
+24: ice | EN | 0,*
+3+| radar conspicuous 2+| (CONRAD)
+3+| | BO | 0,1
+
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+3+| status 2+| (STATUS) 3+|
+4: not in use +
+12: illuminated +
+13: historic | EN | 0,*
+3+| vertical length 2+| (VERLEN)
+3+| | RE | 0,1
+
+3+| visual prominence 2+| (CONVIS) 3+|
+1: visually conspicuous +
+2: not visually conspicuous +
+3: prominent | EN | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE
+| 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[seven_three]
+
+3+| headline 2+| 3+| | (S) TE
+| 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[seven_three]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
+3+| in the water 2+| 3+| | BO | 0,1
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
+| The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[seven_three]]
+[NOTE]
+--
+The attribute *colour pattern* is mandatory for silos or tanks that
+have more than one value populated for the attribute *colour*.
+
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# E 2, 32-33
+
+[[sec_7.3.1]]
+==== Tanks, silos (see S-4 -- B-340.2 and B-376)
+
+Isolated tanks or gasholders may be good landmarks and should be represented
+true to scale (that is, as surface) where possible, to enable them
+to be used as fixing marks. Groups of tanks, as at a refinery, may
+be useful for general identification of position but cannot usually
+be used for precise position-fixing because of uncertainty of the
+location of individual tanks.
+
+If it is required to encode a tank or silo, it must be done using
+the feature *Silo/Tank*.
+
+[underline]#Remarks:#
+
+* For buildings, see <<sec_6.2>>; for landmarks, see <<sec_7.2>>.
+For common encoding combinations, see <<sec_7.1>>. For roofed structures
+such as boathouses erected or extending over navigable water to provide
+protection for a vessel or its cargo, see <<sec_8.7>>.
+* Groups of silos or tanks (tank farm) in close proximity must be
+encoded, where required, using the feature *Production/Storage Area*
+(see <<sec_7.6>>). Individual, visually conspicuous silos, or tanks
+within a tank farm, may be encoded as *Silo/Tank* within the
+*Production/Storage Area*. Multiple silos contained within a single
+structure may be indicated using the complex attribute
+*multiplicity of features*.
+* For tanks or silos located in or over navigable water, the Boolean
+attribute *in the water* must be set to _True_ to indicate that the
+feature is to be included in the ECDIS Base Display. Where such structures
+are located in the water it is not required to encode any supporting
+structures (for example piles).
+
+[underline]#Distinction:# Building; Landmark; Production/Storage Area.
+
+[[sec_7.4]]
+=== Wind turbine
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *WIND TURBINE*. A tower and associated
+equipment that generates electrical power from wind. They can be sited
+offshore and may be either fixed or floating. (IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Wind Turbine* *_(LNDMRK)_*
+10+| *[underline]#Primitives:#* *Point*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | EN | 0,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | EN | 0,1 footnoteblock:[seven_four]
+
+3+| condition 2+| (CONDTN) 3+| 1: under construction +
+4: wingless +
+5: planned construction | EN | 0,1
+
+3+| elevation 2+| (ELEVAT) 3+| | RE | 0,1
+
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[seven_four]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[seven_four]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[seven_four]
+
+3+| height 2+| (HEIGHT)
+3+| | RE | 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| multiplicity of features 2+| 3+| | C | 0,1
+
+3+| multiplicity known 2+| 3+| | (S) BO
+| 1,1
+
+3+| number of features 2+| 3+| | (S) IN
+| 0,1
+
+3+| nature of construction 2+| (NATCON) 3+|
+2: concreted +
+6: wooden +
+7: metal +
+8: glass reinforced plastic +
+11: latticed | EN | 0,*
+3+| radar conspicuous 2+| (CONRAD)
+3+| | BO | 0,1
+
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+4: not in use +
+5: periodic/intermittent +
+7: temporary +
+8: private +
+12: illuminated +
+13: historic +
+14: public +
+28: buoyed | EN | 0,*
+3+| vertical clearance fixed 2+| 3+| | C | 0,1
+
+3+| vertical clearance value 2+| (VERCLR) 3+| | (S) RE | 1,1
+
+3+| vertical uncertainty 2+| _(VERACC)_ 3+| | (S) RE | 0,1
+
+3+| uncertainty fixed 2+| 3+| | (S) RE
+| 1,1
+
+3+| uncertainty variable factor 2+| 3+| | (S) RE
+| 0,1
+
+3+| vertical datum 2+| (VERDAT) 3+|
+3: mean sea level +
+13: low water +
+16: mean high water +
+17: mean high water springs +
+18: high water +
+19: approximate mean sea level +
+20: high water springs +
+21: mean higher high water +
+24: local datum +
+25: international great lakes datum  1985 +
+26: mean water level +
+28: higher high water large tide +
+29: nearly highest high water +
+30: highest astronomical tide +
+44: baltic sea chart datum 2000 | EN | 0,1
+3+| vertical length 2+| (VERLEN)
+3+| | RE | 0,1
+
+3+| visual prominence 2+| (CONVIS) 3+|
+1: visually conspicuous +
+2: not visually conspicuous +
+3: prominent | EN | 0,1
+3+| water level effect 2+| (WATLEV) 3+|
+2: always dry +
+7: floating | EN | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE
+| 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[seven_four]
+
+3+| headline 2+| 3+| | (S) TE
+| 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[seven_four]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
+3+| in the water 2+| 3+| | BO | 0,1
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light Air Obstruction*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[seven_four]]
+[NOTE]
+--
+The attribute *colour pattern* is mandatory for bridges that have
+more than one value populated for the attribute *colour*.
+
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the sub-attributes
+*date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# L 2, 10-15, 17
+
+[[sec_7.4.1]]
+==== Wind turbines (see S-4 -- B-374.6; B-445.8-9)
+
+Wind turbinesare generally tall, multi-bladed structures, usually
+with two or three blades, which may pose as obstacles to navigation
+if located offshore but are often visible over long distances and
+therefore useful as visual references. Their purpose is to generate
+electricity for large communities, or to feed a national grid. They
+are often in groups (known as wind farms). Floating wind turbines
+are held in position by ground tackle and consequently may be subject
+to significant lateral and some vertical movement.
+
+If it is required to encode a wind turbine, it must be done using
+the feature *Wind Turbine*.
+
+[underline]#Remarks:#
+
+* The attribute *elevation* is only applicable for wind turbines on
+land.
+* To aid identification of wind turbines on land by the Mariner it
+may be useful to add the height of the top of the structure above
+ground level (*vertical length*) or above the general height datum
+(*height*).
+* For offshore wind turbines, the Boolean attribute *in the water*
+must be set to _True_ to indicate that the feature is to be included
+in the ECDIS Base Display. Where such structures are located in the
+water it is not required to encode any supporting structures
+(for example piles).
+* For offshore wind turbines (attribute *in the water* = _True_),
+the attribute *height* is only relevant for fixed turbines, and is
+referred to the vertical datum (see <<sec_2.5.7>>).
+* For offshore wind turbines, the attribute *vertical length* is only
+relevant for floating wind turbines, and is referred to the sea level.
+* A ruined wind turbine should be encoded in the same way as the feature
+in good condition, but with attribute stem:[bb "condition" = 4] (wingless).
+* If it is required to encode sites of dismantled offshore wind turbines,
+this must be done using *Foul Ground* features (see <<sec_13.7>>),
+unless the source indicates that any remaining structure protrudes
+far enough above the seabed so as to be an obstruction to surface
+navigation, in which case this must be encoded using an *Obstruction*
+feature (see <<sec_13.6>>).
+* If it is required to encode an offshore wind farm, it must be done
+using the feature *Offshore Production Area* (see <<sec_14.6>>).
+An onshore wind farm must be encoded, where required, using the feature
+*Production/Storage Area* (see <<sec_7.6>>).
+* Wind turbines may carry lights (see <<sec_19>>) or fog signals
+(see <<sec_20.19>>). Where fitted, lights should be encoded as described
+in <<sec_19>>, with the *Wind Turbine* being used as the structure
+feature for the light equipment feature(s).
+* Value _13_ (low water) for attribute *vertical datum* is only applicable
+to enclosed (inland) waterways; and must not be used to indicate the
+reference datum for vertical clearances in tidal waters.
+
+* If available and considered important for route planning and/or
+monitoring, the vertical uncertainty associated with encoded vertical
+clearance values should also be encoded.
+
+* For encoding offshore safety zones around offshore wind turbines,
+see <<sec_14.1.3>>.
+
+[underline]#Distinction:# Building; Daymark; Landmark; Offshore Platform;Offshore Production Area; Pylon/Bridge Support; Silo/Tank; Special Purpose/General Beacon.
+
+[[sec_7.5]]
+=== Fortified structure
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *FORTIFIED STRUCTURE*.
+
+A structure that is specifically designed or reinforced to provide
+for defence from armed attack. (Adapted from Defence Geospatial Information
+Working Group; Feature Data Dictionary Register, 2010).
+10+| *[underline]#S-101 Geo Feature:#* *Fortified Structure (FORSTC)*
+10+| *[underline]#Primitives:#* *Point, Curve, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| category of fortified structure 2+| (CATFOR) 3+|
+1: castle +
+2: fort +
+3: battery +
+4: blockhouse +
+5: fortified tower +
+6: redoubt +
+8: fortified submarine shelter +
+9: rampart | EN | 0,1
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+2: ruined | EN | 0,1
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[seven_five]
+
+3+| height 2+| (HEIGHT)
+3+| | RE | 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| nature of construction 2+| (NATCON) 3+|
+1: masonry +
+2: concreted +
+3: loose boulders +
+6: wooden +
+7: metal | EN | 0,*
+3+| radar conspicuous 2+| (CONRAD)
+3+| | BO | 0,1
+
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+3+| status 2+| (STATUS) 3+|
+4: not in use +
+7: temporary +
+8: private +
+12: illuminated +
+13: historic +
+14: public +
+28: buoyed | EN | 0,*
+3+| vertical length 2+| (VERLEN)
+3+| | RE | 0,1
+
+3+| visual prominence 2+| (CONVIS) 3+|
+1: visually conspicuous +
+2: not visually conspicuous +
+3: prominent | EN | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE
+| 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[seven_five]
+
+3+| headline 2+| 3+| | (S) TE
+| 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[seven_five]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
+3+| in the water 2+| 3+| | BO | 0,1
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Bollard*, *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
+| The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[seven_five]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# E 34.1-3
+
+[[sec_7.5.1]]
+==== Fortified structures (see S-4 -- B-379)
+
+Some coastlines have prominent defensive structures, often disused,
+decayed, or used for non-defence purposes. Such structures range from
+major castles and forts to minor lookout posts and may be the main
+distinctive features of headlands or stretches of coastline. National
+regulations permitting, any such features as are likely to be visible
+from seaward and should be encoded on the largest optimum display
+scale ENC data.
+
+If it is required to encode a fortified structure, it must be done
+using the feature *Fortified Structure*.
+
+[underline]#Remarks:#
+
+* If it is required to encode a Martello tower, it must be done using
+*Fortified Structure* with attribute
+stem:[bb "category of fort" = 5] (fortified tower).
+* Where fitted, lights should be encoded as described in <<sec_19>>,
+with the *Fortified Structure* being used as the structure feature
+for the relevant light equipment feature(s) (see <<sec_18.1>>).
+* For fortified structures located in navigable water, the Boolean
+attribute *in the water* must be set to _True_ to indicate that the
+feature is to be included in the ECDIS Base Display. Where such structures
+are located in the water it is not required to encode any supporting
+structures (for example piles).
+
+[underline]#Distinction:# Building; Fence/Wall; Landmark.
+
+[[sec_7.6]]
+=== Production/storage area
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *PRODUCTION/STORAGE AREA*. An area
+on land for the exploitation or storage of natural resources.
+(S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.124, November 2000).
+10+| *[underline]#S-101 Geo Feature:#* *Production/Storage Area (PRDARE)*
+10+| *[underline]#Primitives:#* *Point, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| category of production area 2+| (CATPRA) 3+|
+1: quarry +
+2: mine +
+3: stockpile +
+4: power station area +
+5: refinery area +
+6: timber yard +
+7: factory area +
+8: tank farm +
+9: wind farm +
+10: slag heap/spoil heap +
+11: production plant +
+12: solar farm | EN | 1,1
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+2: ruined +
+3: under reclamation +
+5: planned construction | EN | 0,1
+3+| elevation 2+| (ELEVAT)
+3+| | RE | 0,1
+
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[seven_six]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[seven_six]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[seven_six]
+
+3+| height 2+| (HEIGHT)
+3+| | RE | 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| product 2+| (PRODCT) 3+|
+1: oil +
+2: gas +
+3: water +
+4: stone +
+5: coal +
+6: ore +
+7: chemicals +
+8: drinking water +
+9: milk +
+10: bauxite +
+11: coke +
+12: iron ingots +
+13: salt +
+14: sand +
+15: timber +
+16: sawdust/wood chips +
+17: scrap metal +
+18: liquefied natural gas +
+19: liquefied petroleum gas +
+20: wine +
+21: cement +
+22: grain +
+23: electricity +
+25: clay | EN | 0,*
+3+| radar conspicuous 2+| (CONRAD)
+3+| | BO | 0,1
+
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+3+| status 2+| (STATUS) 3+|
+4: not in use +
+12: illuminated | EN | 0,*
+3+| vertical length 2+| (VERLEN)
+3+| | RE | 0,1
+
+3+| visual prominence 2+| (CONVIS) 3+|
+1: visually conspicuous +
+2: not visually conspicuous +
+3: prominent | EN | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[seven_six]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[seven_six]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[seven_six]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the sub-attributes
+*date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# E 26.2, 35.1-2, 36; F 52
+
+[[sec_7.6.1]]
+==== Production and storage areas (see S-4 -- B-328.2; B-367; B-374.6)
+
+Production or storage areas located in close proximity to the coast
+are often prominent landmarks used by Mariners to assist in position-fixing.
+Features such as quarry faces, stockpiles, power stations, refineries,
+timber stacks in timber yards, factories, groups of tanks, groups
+of wind turbines, and slag heaps should be shown on the largest optimum
+display scale ENC data.
+
+If it is required to encode production or storage area, it must be
+done using the feature *Production/Storage Area*.
+
+[underline]#Remarks:#
+
+* If there are individual buildings or equipment features contained
+within this area, they should be encoded as separate features such
+as *Building*, *Crane*, *Landmark* or *Silo/Tank* within the
+*Production/Storage Area* feature of type surface if the optimum display
+scale of the ENC data permits.
+
+* If visible from seaward, a quarry face should be encoded as for
+a cliff (see <<sec_5.1>>), with attribute
+stem:[bb "category of slope" = 6] (cliff).
+
+[underline]#Distinction:# Free Port Area; Offshore Production Area.

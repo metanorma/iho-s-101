@@ -1,0 +1,559 @@
+
+[[sec_12]]
+== Geo Features -- Nature of the Seabed
+
+[[sec_12.1]]
+=== Seabed area
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *SEABED AREA*. A region of the bottom
+including the material of which it is composed and its physical characteristics.
+Also called nature of bottom, character (or characteristics) of the
+bottom, or quality of the bottom.(Adapted from IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:# Seabed Area (SBDARE)*
+10+| *[underline]#Primitives:# Point, Curve, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C       | 0,*
+3+| language     2+| 3+| ISO 639-2/T       | (S) TE  | 1,1
+3+| name         2+| _(OBJNAM) (NOBJNM)_ 3+|         | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN | 0,1 footnoteblock:[twelve_one]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| surface characteristics 2+| 3+| | C | 1,* (ordered)
+
+3+| nature of surface 2+| (NATSUR) 3+|
+1: mud  +
+2: clay +
+3: silt +
+4: sand +
+5: stone +
+6: gravel +
+7: pebbles +
+8: cobbles +
+9: rock +
+11: lava +
+14: coral +
+17: shells +
+18: boulder | (S) EN | 0,1 footnoteblock:[twelve_one]
+
+3+| nature of surface -- qualifying terms 2+| (NATQUA) 3+|
+1: fine +
+2: medium +
+3: coarse +
+4: broken +
+5: sticky +
+6: soft +
+7: stiff +
+8: volcanic +
+9: calcareous +
+10: hard | (S) EN | 0,3 footnoteblock:[twelve_one]
+
+3+| underlying layer 2+| 3+| | (S) IN | 0,1
+
+3+| water level effect 2+| (WATLEV) 3+|
+3: always under water/ submerged +
+4: covers and uncovers +
+5: awash | EN | 0,1
+
+3+| scale minimum  2+| (SCAMIN)            3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information    2+|                     3+| See <<sec_2.4.6>> | C | 0,*
+3+| file locator   2+|                     3+| | (S) TE | 0,1
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twelve_one]
+3+| headline       2+|                     3+| | (S) TE | 0,1
+3+| language       2+|                     3+| ISO 639-2/T | (S) TE | 1,1
+3+| text           2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twelve_one]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twelve_one]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *surface characteristics*, at least one of the
+sub-attributes *nature of surface* or *nature of surface --
+qualifying terms* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# J 1-12, 30-39
+
+[[sec_12.1.1]]
+==== Description of the seabed (see S-4 -- B-425 to B-427)
+
+The nature (quality) of the seabed (bottom) must be shown in
+sufficient detail, where known and on the appropriate optimum display
+scale ENC data, for such purposes as:
+
+* to give some guidance on holding characteristics when anchoring;
+* to help in assessing the stability of shoals and to distinguish
+rocks from unconsolidated material, when navigating in shoal areas;
+* to show where vessels may safely take the ground at low water in
+tidal areas; or
+* to give an indication of the nature of the seabed in deeper waters
+for fishermen and submariners.
+If it is required to encode an area of the sea where the nature of
+the seabed is homogeneous, it must be done using the feature *Seabed
+Area*.
+
+[underline]#Remarks:#
+
+* Generally, it is not possible to define a seabed area by its real
+extent, due to seabed samples usually being obtained at discrete
+locations. For that reason, the characteristics of the seabed area
+may be represented at one single position.
+* Where the seabed comprises a mixture of material, *surface
+characteristics* must be populated as multiple iterations, with the
+main constituent given first.
+* Where the seabed comprises layered material that is of relevance to
+navigation or anchoring, *surface characteristics* must be populated
+as multiple iterations, with the surface constituent given first,
+with a value for the attribute *underlying layer* of _0_. Successive
+layers below the surface must have *underlying layer* set to _1_,
+_2_, … .
+
+[[fig_12-1]]
+.Seabed areas
+image::figure-12-1.png[Shape28,612,436]
+
+* In the following clauses, the paragraph prefixes refer to the
+examples shown in <<fig_12-1>>.
++
+--
+. Mixed natures: The dominant nature of the seabed (*nature of
+surface*) should be populated first, along with its associated
+qualifying term (*nature of surface -- qualifying terms*), if
+required, using the complex attribute *surface characteristics*.
+Other natures should then be populated, in order of dominance, using
+further ordered instances of *surface characteristics*,
+
+. Underlying material: Should be encoded in the same way as mixed
+natures, and populating the sub-attribute *underlying layer* with the
+appropriate level of the layer below the surface layer. The surface
+layer must be encoded first, followed by the underlying layers.
+
+. Coral reef, which is always covered, represented as a surface (INT1
+-- K16): An *Obstruction* feature of type surface must be encoded
+with attributes stem:[bb "category of obstruction" = 6] (foul area),
+stem:[bb "nature of surface" = 14] (coral) and stem:[bb "water level
+effect" = 3] (always underwater/submerged). This feature must be
+covered by a *Depth Area* or *Unsurveyed Area* feature as
+appropriate. In this area, some point dangers may be shown. An
+*Underwater/Awash Rock* feature should be encoded for each individual
+point danger, with stem:[bb "nature of surface" = 14] (coral).
+
+. Hard bottom: The attribute *nature of surface -- qualifying terms*
+= _10_ (hard) should be encoded, with the associated *nature of
+surface* populated with an empty (null) value.(e) On the source, in
+the intertidal area or along the drying line, the nature of surface
+is sometimes shown by an open line rather than a closed area. In such
+cases, a *Seabed Area* feature of type curve should be encoded, with
+attribute stem:[bb "water level effect" = 4] (covers and uncovers).
+
+. If it is required to encode a rock pinnacle which is dangerous to
+navigation, it must be done using the feature *Underwater/Awash
+Rock*, while a rocky nature of seabed should be encoded using a
+*Seabed Area* feature.
+
+. Where a *Seabed Area* feature of type surface is located in an
+intertidal area, it should be encoded with stem:[bb "water level
+effect" = 4] (covers and uncovers), in order for the intertidal rock
+or coral symbol to be displayed in ECDIS.
+--
+
+* The nature of the seabed should be shown in depths of 2000m and
+less. The nature of the seabed may be shown in greater depths if
+thought to be useful.
+
+<<table_12-1>> below contains the most common encoding combinations
+of *nature of surface* and *nature of surface -- qualifying terms*;
+other coding combinations are possible.
+
+[[table_12-1]]
+.Seabed area -- Common encoding combinations
+[cols="^.^,^.^,^.^,^.^,^.^,^.^,^.^,^.^,^.^,^.^,^.^"]
+|===
+h| - Qualifying Terms .2+h| _1_ +
+fine .2+h| _2_ +
+medium .2+h| _3_ +
+coarse .2+h| _4_ +
+broken .2+h| _5_ +
+sticky .2+h| _6_ +
+soft .2+h| _7_ +
+stiff .2+h| _8_ +
+volcanic .2+h| _9_ +
+calcareous .2+h| _10_ +
+hard
+| *Nature of Surface*
+
+| _1_ +
+Mud     |       |     |     |     | *x* | *x* | *x* | *x* | *x* |
+| _2_ +
+Clay    |       |     |     |     | *x* | *x* | *x* |     |     |
+| _3_ +
+Silt    |       |     |     |     | *x* | *x* | *x* |     |     |
+| _4_ +
+Sand    | *x*   | *x* | *x* |     |     | *x* |     | *x* | *x* |
+| _5_ +
+Stone   |       |     |     |     |     |     |     | *x* | *x* |
+| _6_ +
+Gravel  |       |     |     |     |     |     |     | *x* | *x* |
+| _7_ +
+Pebbles |       |     |     |     |     |     |     | *x* | *x* |
+| _8_ +
+Cobbles |       |     |     |     |     |     |     | *x* | *x* |
+| _9_ +
+Rock    |       |     |     |     |     |     |     | *x* | *x* |
+| _11_ +
+Lava    |       |     |     |     |     |     |     | *x* |     |
+| _14_ +
+Coral   |       |     |     | *x* |     | *x* |     |     |     |
+| _17_ +
+Shells  |       |     |     | *x* |     |     |     |     | *x* |
+| _18_ +
+Boulder |       |     |     |     |     |     |     | *x* | *x* |
+|===
+
+[underline]#Distinction:# Sandwave; Sea Area/Named Water Area;
+Seagrass; Weed/Kelp.
+
+[[sec_12.2]]
+=== Weed/kelp
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *WEED/KELP*. Any macroscopic marine
+alga. (Adapted from IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Weed/Kelp (WEDKLP)*
+10+| *[underline]#Primitives:#* *Point, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| category of weed/kelp 2+| (CATWED) 3+|
+1: kelp +
+2: seaweed +
+4: sargasso | EN | 0,1
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twelve_two]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+3+| file locator 2+| 3+| | (S) TE | 0,1
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twelve_two]
+3+| headline 2+| 3+| | (S) TE | 0,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twelve_two]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twelve_two]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# J 13.1, 13.2
+
+[[sec_12.2.1]]
+==== Weed - Kelp (see S-4 -- B-428.2)
+
+If it is required to encode marine weed or kelp, it must be done
+using the feature *Weed/Kelp*.
+
+[underline]#Remarks:#
+
+* For the Mariner, the presence of kelp is also generally an
+indication of the presence of submerged rocks.
+
+[underline]#Distinction:# Seabed Area; Seagrass; Vegetation.
+
+[[sec_12.3]]
+=== Seagrass
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *SEAGRASS*. Any of various submerged
+monocotyledonous plants (such as eelgrass, tape grass, and turtle
+grass) of tropical to temperate usually shallow coastal waters that
+have narrow grass-like leaves and often form dense underwater meadows.
+(Merriam-Webster on-line dictionary).
+10+| *[underline]#S-101 Geo Feature:# Seagrass _(WEDKLP)_*
+10+| *[underline]#Primitives:# Point, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twelve_three]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE
+| 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twelve_three]
+
+3+| headline 2+| 3+| | (S) TE
+| 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twelve_three]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twelve_three]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# J 13.1
+
+[[sec_12.3.1]]
+==== Seagrass (see S-4 -- B-425.6)
+
+If it is required to encode seagrass, it must be done using the
+feature *Seagrass*.
+
+[underline]#Remarks:#
+
+* Many seagrass beds are subject to strict protection measures. Such
+measures must be encoded, where required, using the features
+*Restricted Area* (see <<sec_17.8>>).
+* If considered necessary, the type of seagrass may be encoded using
+the complex attribute *information* (see <<sec_2.4.6>>).
+
+[underline]#Distinction:# Seabed Area; Vegetation; Weed/Kelp.
+
+[[sec_12.4]]
+=== Sandwave
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *SANDWAVE*. Large mobile wave-like
+sediment feature in shallow water and composed of sand. The wavelength
+may reach 100 metres, the amplitude may be up to 20 metres.
+(IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Sandwave (SNDWAV)*
+10+| *[underline]#Primitives:#* *Point, Curve, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| vertical length 2+| (VERLEN)
+3+| | RE | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE
+| 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnote:twelve_four[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
+
+3+| headline 2+| 3+| | (S) TE
+| 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnote:twelve_four[]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[underline]#INT 1 Reference:# J 14
+
+[[sec_12.4.1]]
+==== Sandwaves (see S-4 -- B-428.1)
+
+Sandwave areas may be dangerous to Mariners, as the depth may be less
+than charted, because surveys are not necessarily conducted at the
+ideal time for sandwave building. Some research has shown that
+sandwave mobility is most evident in the vertical plane and high
+spots may occur on crest lines in response to calm weather, and
+possibly during particular times within the tidal cycle. It is
+therefore important to warn the Mariner of the presence of sandwaves,
+and provide them with as much information as is available and can
+be included in the ENC.
+
+If it is required to encode sandwaves, this must be done using the
+feature *Sandwave*.
+
+[underline]#Remarks:#
+
+* The shifting nature of the seabed resulting from sandwave activity
+should be indicated on the underlying *Quality of Bathymetric Data*
+(see <<sec_3.8>>), using the attribute *category of temporal
+variation*.
+* The attribute *vertical length* is used to populate the amplitude
+of the sandwave above the seafloor, where known.
+* Care must be taken not to over-generalize depth depiction in
+sandwave areas, as the typically convoluted contour pattern, and
+significant depth changes between soundings selected from crests and
+troughs, help to draw attention to these features. However, this will
+not usually be sufficient warning, as the variance between crest and
+trough may fall between standard contours, or the optimum display
+scale for the ENC data may be insufficient to show the sandwaves
+individually, or anything but the shoalest soundings. Attention
+should therefore be drawn to the area by encoding a *Sandwave*
+feature. If considered necessary, the nature of any navigational
+hazard presented by the sandwaves may be incorporated using the
+complex attribute *information* (see <<sec_2.4.6>>).
+* Where frequently repeated surveys show variations in least depth,
+the shoalest soundings obtained over a period of years should be
+encoded. This blending of details from surveys of differing dates
+must be done with care; in particular, long-term deepening must not
+be overlooked.
+
+[underline]#Distinction:# Seabed Area.
+
+[[sec_12.5]]
+=== Spring
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *SPRING*. A natural issue of water
+or other substances from the earth. One on the bottom of the sea is
+called a submarine spring. (IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Spring (SPRING)*
+10+| *[underline]#Primitives:#* *Point*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twelve_five]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE
+| 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twelve_five]
+
+3+| headline 2+| 3+| | (S) TE
+| 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twelve_five]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twelve_five]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# J 15
+
+[[sec_12.5.1]]
+==== Springs in the seabed (see S-4 -- B-428.3)
+
+Springs in the seabedmay cause false echo-soundings. If it is
+required to encode a spring in the seabed, it must be done using the
+feature *Spring*.
+
+[underline]#Remarks:#
+
+* No remarks.
+
+[underline]#Distinction:#

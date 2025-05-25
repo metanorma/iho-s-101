@@ -1,0 +1,1144 @@
+
+[[sec_22]]
+== Geo Features -- Services
+
+[[sec_22.1]]
+=== Pilot boarding place
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *PILOT BOARDING PLACE.* A location
+offshore where a pilot may board a vessel in preparation to piloting
+it through local waters. (Defence Geospatial Information Working Group;
+Feature Data Dictionary Register, 2010).
+10+| *[underline]#S-101 Geo Feature:#* *Pilot Boarding Place (PILBOP)*
+10+| *[underline]#Primitives:#* *Point, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| category of pilot boarding place 2+| (CATPIL) 3+|
+1: boarding by pilot-cruising vessel +
+2: boarding by helicopter +
+3: pilot comes out from shore | EN | 0,1
+3+| category of preference 2+| 3+|
+1: primary +
+2: alternate | EN
+| 0,1
+
+3+| communication channel 2+| (COMCHA) 3+| | TE | 0,*
+
+3+| destination 2+| 3+| | TE | 0,*
+
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twentytwo_one]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twentytwo_one]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twentytwo_one]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| pilot movement 2+| 3+|
+1: embarkation +
+2: disembarkation +
+3: pilot change | EN
+| 0,*
+
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+5: periodic/intermittent +
+6: reserved +
+9: mandatory +
+16: watched +
+17: unwatched +
+28: buoyed | EN | 0,*
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twentytwo_one]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twentytwo_one]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Component 3+| *Pilotage District Association* (see <<sec_25.11>>) 3+| *Pilotage District* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twentytwo_one]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# T 1.1-4
+
+[[sec_22.1.1]]
+==== Pilot boarding places (see S-4 -- B-491.1-2)
+
+For a pilot boarding place, the pilot vessel may either cruise in the
+area or come out on request. Off some large ports pilots on outgoing
+ships may be disembarked at a different location. Pilots may board
+from a helicopter; it is then less important for a ship to reach the
+exact position of the boarding place but an approximate position
+should still be encoded. Some pilot stations are used solely for
+long-distance (deep-sea) pilots. Pilots may be in constant
+attendance, in regular attendance at certain limited times, or
+available by previous arrangement only. The primary purpose of
+encoded pilotage information is to show the position of the facility.
+Because of the many variations in the service provided, the main
+source of information on pilotage must be in an associated
+publication or product.
+
+If it is required to encode a pilot boarding place, it must be done
+using the feature *Pilot Boarding Place*.
+
+[underline]#Remarks:#
+
+* If it is required to encode the ship to shore or shore to ship
+contact information, this should be done using the attribute
+*communication channel*. Alternately, if the same VHF-channel(s)
+apply to multiple features in the dataset, this should be indicated
+through an associated instance of the information type *Contact
+Details*, attribute *communication channel* (see <<sec_24.1>>).
+* If it is required to encode the area in which pilotage regulations
+apply, it should be done using the feature *Pilotage District* (see
+<<sec_16.26>>). The relationship between the pilotage district and
+any associated pilot boarding places should be encoded using the
+feature association *Pilotage District Association* (see
+<<sec_25.11>>).
+
+[[sec_22.1.2]]
+==== Pilot stations ashore (see S-4 -- B-491.4)
+
+If it is required to encode a pilot station ashore, it must be done
+using a *Building* or *Landmark* feature, with attribute stem:[bb
+"function" = 11] (pilot office) or _12_ (pilot lookout).
+
+[underline]#Distinction:# Pilotage District.
+
+[[sec_22.2]]
+=== Vessel traffic service
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *VESSEL TRAFFIC SERVICE*.
+The area of any service implemented by a relevant authority primarily
+designed to improve safety and efficiency of traffic flow and the
+protection of the environment. It may range from simple information
+messages, to extensive organisation of the traffic involving national
+or regional schemes. (IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Vessel Traffic Service Area* *_(ADMARE)_*
+10+| *[underline]#Primitives:#* *Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twentytwo_two]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twentytwo_two]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twentytwo_two]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twentytwo_two]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:#
+
+[[sec_22.2.1]]
+==== Vessel traffic service area
+
+If it is required to encode an area within which a competent
+authority provides services to vessels as part of a Vessel Traffic
+Service (VTS), it must be done using the feature *Vessel Traffic
+Service Area*. The area should be captured based on the limits of the
+VTS or VTS sector.
+
+[underline]#Remarks:#
+
+* Separate *Vessel Traffic Service Area* features should be captured
+for individual VTS sectors where appropriate.
+
+[underline]#Distinction:# Administration Area; Custom Zone.
+
+[[sec_22.3]]
+=== Coast Guard station
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *COAST GUARD STATION*.
+A station at which a visual/radio/radar marine watch is kept either
+continuously or at certain times only.(IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Coast Guard Station (CGUSTA)*
+10+| *[underline]#Primitives:#* *Point, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| communication channel 2+| (COMCHA) 3+| | TE | 0,*
+
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twentytwo_three]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twentytwo_three]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twentytwo_three]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| is MRCC 2+| 3+| | BO | 0,1
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+4: not in use +
+5: periodic/intermittent +
+16: watched +
+17: unwatched | EN | 0,*
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twentytwo_three]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twentytwo_three]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twentytwo_three]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# T 10, 11
+
+[[sec_22.3.1]]
+==== Coast Guard stations (see S-4 -- B-492)
+
+The organisation of coast-watching and rescue services differs from
+country to country. For charting purposes it is assumed that two
+distinct functions can be recognised, even though they may be parts
+of the same organisation co-ordinating and effecting life saving and
+performing other services. Coast Guard stations are stations at which
+a watch is kept either continuously, or at certain times only. They
+are sited so as to have a commanding view, are often associated with
+signal stations, and are visually prominent. They are also referred
+to as watch-keeping stations.
+
+Coast Guard stationsare located along the coasts of most maritime
+nations. Their primary purpose in former days was to enforce customs
+regulations, observe the movements of ships and to watch for signs of
+distress at sea. These functions are largely superseded by modern
+telecommunications and Search & Rescue (SAR) arrangements,
+coordinated by regional Maritime Rescue and Coordination Centres
+(MRCC).
+
+If it is required to encode a Coast Guard station, it must be done
+using the feature *Coast Guard Station*.
+
+[underline]#Remarks:#
+
+* Many modern Coast Guard services no longer maintain visual watch
+from fixed stations. However, because stations were usually situated
+so as to have a commanding view and may therefore be visually
+prominent and make good fixing marks, the buildings may still be
+encoded as *Building* or *Landmark*.
+* The *Coast Guard Station* must only be used to describe the
+function of the Coast Guard station, independent of the building or
+structure itself. If it is required to encode the building or
+structure in which the Coast Guard station operates, it must be done
+using an appropriate feature (for example *Building*,*Landmark*).
+* Maritime Rescue and Coordination Centres (MRCC) are part of a
+constantly manned communications watch system. If it is required to
+encode a MRCC, it should be done using *Coast Guard Station*, with
+the Boolean attribute *is MRCC* = _True_. The name of the station may
+be populated using the complex attribute *feature name*
+(sub-attribute *name*), for example _MRCC Swansea_.
+* Each VHF-channel should be indicated, using the attribute
+*communication channel* (see <<sec_27.77>>). Alternately, if the same
+VHF-channel(s) apply to multiple features in the dataset, this should
+be indicated through an associated instance of the information type
+*Contact Details*, attribute *communication channel* (see
+<<sec_24.1>>).
+
+[underline]#Distinction:# Building; Rescue Station.
+
+[[sec_22.4]]
+=== Warning signal station
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *WARNING SIGNAL STATION*.
+A warning signal station is a place on shore from which warning signals
+are made to ships at sea. (Adapted from IHO Dictionary -- S-32 and
+Defence Geospatial Information Working Group; Feature Data Dictionary
+Register, 2012).
+10+| *[underline]#S-101 Geo Feature:#* *Signal Station Warning (SISTAW)*
+10+| *[underline]#Primitives:#* *Point, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| category of signal station, warning 2+| (CATSIW) 3+|
+1: danger +
+2: maritime obstruction +
+3: cable +
+4: military practice +
+5: distress +
+6: weather +
+7: storm +
+8: ice warning +
+9: time +
+10: tide +
+11: tidal stream +
+12: tide gauge +
+13: tide scale +
+14: diving +
+15: water level gauge | EN | 1,*
+3+| communication channel 2+| (COMCHA) 3+| | TE | 0,*
+
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twentytwo_four]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twentytwo_four]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twentytwo_four]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+4: not in use +
+5: periodic/intermittent +
+7: temporary +
+8: private +
+12: illuminated +
+14: public +
+15: synchronized +
+16: watched +
+17: unwatched | EN | 0,*
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twentytwo_four]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twentytwo_four]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Equipment 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Cardinal Beacon*, *Cardinal Buoy*, *Bridge*, *Building*, *Crane*, *Conveyor*, *Daymark*, *Dolphin*, *Emergency Wreck Marking Buoy*, *Fishing Facility*, *Floating Dock*, *Fortified Structure*, *Hulk*, *Installation Buoy*, *Isolated Danger Beacon*, *Isolated Danger Buoy*, *Landmark*, *Lateral Beacon*, *Lateral Buoy*, *Light Float*, *Light Vessel*, *Mooring Buoy*, *Offshore Platform*, *Pile*, *Pipeline Overhead*, *Pontoon*, *Pylon/Bridge Support*, *Safe Water Beacon*, *Safe Water Buoy*, *Shoreline Construction*, *Silo/Tank*, *Span Fixed*, *Span Opening*, *Special Purpose/General Beacon*, *Special Purpose/General Buoy*, *Structure Over Navigable Water*, *Wind Turbine*, *Wreck* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twentytwo_four]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# T 20, 26, 28-36
+
+[[sec_22.4.1]]
+==== Warning signal stations (see S-4 -- B-494; B-496-7)
+
+Signal stationscommunicating visually have declined in importance.
+They are encoded on the largest optimum display scale ENC data not
+only for their main role of signalling information and instructions
+but also as a form of landmark. The signals generally exhibit lights
+by day and night but may display shapes or flags by day.
+
+If it is required to encode a warning signal station, it must be done
+using the feature *Signal Station Warning*.
+
+[underline]#Remarks:#
+
+* The *Signal Station Warning* must only be used to describe the
+function of the signal station, independent of the building or
+structure itself. If it is required to encode the building or
+structure housing the service, it must be done using an appropriate
+feature (for example *Building*,*Landmark*).
+* Each VHF-channel should be indicated, using the attribute
+*communication channel* (see <<sec_27.77>>). Alternately, if the same
+VHF-channel(s) apply to multiple features in the dataset, this should
+be indicated through an associated instance of the information type
+*Contact Details*, attribute *communication channel* (see
+<<sec_24.1>>).
+
+[underline]#Distinction:# Signal Station Traffic.
+
+[[sec_22.5]]
+=== Traffic signal station
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *TRAFFIC SIGNAL STATION*.
+A traffic signal station is a place on shore from which signals are
+made to regulate the movement of traffic. (Adapted from IHO Dictionary
+-- S-32 and S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.155,
+November 2000).
+10+| *[underline]#S-101 Geo Feature:#* *Signal Station Traffic (SISTAT)*
+10+| *[underline]#Primitives:#* *Point, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| category of signal station, traffic 2+| (CATSIT) 3+|
+1: port control +
+2: port entry and departure +
+3: International Port Traffic +
+4: berthing signal station +
+5: dock +
+6: lock +
+7: flood barrage station +
+8: bridge passage +
+9: dredging +
+10: traffic control light | EN | 1,*
+3+| communication channel 2+| (COMCHA) 3+| | TE | 0,*
+
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twentytwo_five]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twentytwo_five]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twentytwo_five]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+4: not in use +
+5: periodic/intermittent +
+7: temporary +
+8: private +
+12: illuminated +
+14: public +
+15: synchronized +
+16: watched +
+17: unwatched | EN | 0,*
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twentytwo_five]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twentytwo_five]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Equipment 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Cardinal Beacon*, *Cardinal Buoy*, *Bridge*, *Building*, *Crane*, *Conveyor*, *Daymark*, *Dolphin*, *Emergency Wreck Marking Buoy*, *Fishing Facility*, *Floating Dock*, *Fortified Structure*, *Hulk*, *Installation Buoy*, *Isolated Danger Beacon*, *Isolated Danger Buoy*, *Landmark*, *Lateral Beacon*, *Lateral Buoy*, *Light Float*, *Light Vessel*, *Mooring Buoy*, *Offshore Platform*, *Pile*, *Pipeline Overhead*, *Pontoon*, *Pylon/Bridge Support*, *Safe Water Beacon*, *Safe Water Buoy*, *Shoreline Construction*, *Silo/Tank*, *Span Fixed*, *Span Opening*, *Special Purpose/General Beacon*, *Special Purpose/General Buoy*, *Structure Over Navigable Water*, *Wind Turbine*, *Wreck* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twentytwo_five]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# T 21-25.2
+
+[[sec_22.5.1]]
+==== Traffic signal stations (see S-4 -- B-494-5)
+
+Signal stationscommunicating visually have declined in importance.
+They are encoded on the largest optimum display scale ENC data not
+only for their main role of signalling information and instructions
+but also as a form of landmark. The signals generally exhibit lights
+by day and night but may display shapes or flags by day.
+
+The nature of traffic signals varies from country to country and even
+from port to port. For charting purposes traffic signals can be
+considered to include, for instance:
+
+* Port entry and departure signals;
+* Lock, docking and berthing signals;
+* Bridge signals;
+* International traffic signals.
+If it is required to encode a traffic signal station, it must be done
+using the feature *Signal Station Traffic*.
+
+[underline]#Remarks:#
+
+* If it is required to encode a bridge light marking the centre of a
+navigable span, it must be done using a light feature (see
+<<sec_19>>).
+* The *Signal Station Traffic* must only be used to describe the
+function of the signal station, independent of the building or
+structure itself. If it is required to encode the building or
+structure housing the service, it must be done using an appropriate
+feature (for example *Building*, *Landmark*).
+* Each VHF-channel should be indicated, using the attribute
+*communication channel* (see <<sec_27.77>>). Alternately, if the same
+VHF-channel(s) apply to multiple features in the dataset, this should
+be indicated through an associated instance of the information type
+*Contact Details*, attribute *communication channel* (see
+<<sec_24.1>>).
+
+[underline]#Distinction:# Signal Station Warning.
+
+[[sec_22.6]]
+=== Rescue station
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *RESCUE STATION*. A place where
+equipment for saving life at [[sea]] is maintained.
+(IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Rescue Station (RSCSTA)*
+10+| *[underline]#Primitives:#* *Point, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| category of rescue station 2+| (CATRSC) 3+|
+1: rescue station with lifeboat +
+2: rescue station with rocket +
+4: refuge for shipwrecked mariners +
+5: refuge for intertidal area walkers +
+6: lifeboat lying at a mooring +
+7: aid radio station +
+8: first aid equipment | EN | 0,*
+3+| communication channel 2+| (COMCHA) 3+| | TE | 0,*
+
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twentytwo_six]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twentytwo_six]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twentytwo_six]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+4: not in use +
+5: periodic/intermittent +
+7: temporary +
+8: private +
+14: public +
+16: watched +
+17: unwatched | EN | 0,*
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twentytwo_six]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twentytwo_six]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twentytwo_six]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# T 12-14
+
+[[sec_22.6.1]]
+==== Rescue station (see S-4 -- B-490 and B-493)
+
+The organisation of coast-watching and rescue services differs from
+country to country. For charting purposes it is assumed that these
+two distinct functions can be recognised individually, even though
+they may be parts of the same organisation co-ordinating and
+effecting life saving and performing other services.
+
+Rescue stations are the places at which life saving equipment is
+held, especially lifeboats (usually in relatively sheltered
+positions, near sea level). Rescue stations are not necessarily
+visually prominent. The range of equipment used in rescue is wide,
+for example search and rescue helicopters; fast, long-distance
+lifeboats; inflatable inshore lifeboats.
+
+If it is required to encode a rescue station, it must be done using
+the feature *Rescue Station*.
+
+[underline]#Remarks:#
+
+* The *Rescue Station* must only be used to describe the function of
+the rescue station, independent of the building or structure itself.
+If it is required to encode the building or structure housing the
+service, it must be done using an appropriate feature (for example
+*Building*, *Landmark*).
+* If it is required to encode a refuge beacon, it must be done using
+a *Special Purpose/General Beacon* feature, with attribute stem:[bb
+"category of special purpose mark" = 44] (refuge beacon), not by
+using *Rescue Station*.
+* Each VHF-channel should be indicated, using the attribute
+*communication channel* (see <<sec_27.77>>). Alternately, if the same
+VHF-channel(s) apply to multiple features in the dataset, this should
+be indicated through an associated instance of the information type
+*Contact Details*, attribute *communication channel* (see
+<<sec_24.1>>).
+
+[underline]#Distinction:# Building; Coast Guard Station; Special
+Purpose/General Beacon.
+
+[[sec_22.7]]
+=== Harbour facility
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *HARBOUR FACILITY*. A Harbour installation
+with a service or commercial operation of public interest. (S-57 Edition
+3.1, Appendix A -- Chapter 1,Page 1.81, November 2000).
+10+| *[underline]#S-101 Geo Feature:#* *Harbour Facility (HRBFAC)*
+10+| *[underline]#Primitives:#* *Point, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| category of harbour facility 2+| (CATHAF) 3+|
+1: RoRo-terminal +
+3: ferry terminal +
+4: fishing harbour +
+5: yacht harbour/marina +
+6: naval base +
+7: tanker terminal +
+8: passenger terminal +
+9: shipyard +
+10: container terminal +
+11: bulk terminal +
+12: ship lift +
+13: straddle carrier +
+14: service harbour +
+15: pilotage service | EN | 1,*
+3+| communication channel 2+| (COMCHA) 3+| | TE | 0,*
+
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+2: ruined +
+3: under reclamation +
+5: planned construction | EN | 0,1
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twentytwo_seven]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twentytwo_seven]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twentytwo_seven]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| nature of construction 2+| (NATCON) 3+|
+1: masonry +
+2: concreted +
+3: loose boulders +
+6: wooden +
+7: metal | EN | 0,*
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| product 2+| (PRODCT) 3+|
+1: oil +
+2: gas +
+3: water +
+4: stone +
+5: coal +
+6: ore +
+7: chemicals +
+8: drinking water +
+9: milk +
+10: bauxite +
+11: coke +
+12: iron ingots +
+13: salt +
+14: sand +
+15: timber +
+16: sawdust/wood chips +
+17: scrap metal +
+18: liquefied natural gas +
+19: liquefied petroleum gas +
+20: wine +
+21: cement +
+22: grain +
+25: clay | EN | 0,1
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+3+| restriction 2+| (RESTRN) 3+|
+1: anchoring prohibited +
+2: anchoring restricted +
+3: fishing prohibited +
+4: fishing restricted +
+5: trawling prohibited +
+6: trawling restricted +
+8: entry restricted +
+9: dredging prohibited +
+10: dredging restricted +
+11: diving prohibited +
+12: diving restricted +
+13: no wake +
+15: construction prohibited +
+16: discharging prohibited +
+17: discharging restricted +
+18: industrial or mineral exploration/development prohibited +
+19: industrial or mineral exploration/development restricted +
+20: drilling prohibited +
+21: drilling restricted +
+23: cargo transhipment (lightening) prohibited +
+24: dragging prohibited +
+27: speed restricted | EN | 0,*
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+4: not in use +
+5: periodic/intermittent +
+6: reserved +
+7: temporary +
+8: private +
+9: mandatory +
+12: illuminated +
+13: historic +
+14: public +
+16: watched +
+17: unwatched | EN | 0,*
+3+| vessel speed limit 2+| 3+| | C | 0,*
+
+3+| speed limit 2+| 3+| | (S) RE | 1,1
+
+3+| speed units 2+| 3+|
+2: kilometres per hour +
+3: miles per hour +
+4: knots | (S) EN
+| 1,1
+
+3+| vessel class 2+| 3+| | (S) TE | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twentytwo_seven]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twentytwo_seven]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twentytwo_seven]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# F 10, 11.1, 50
+
+[[sec_22.7.1]]
+==== Harbour facilities (see S-4 -- B-320 and B-321.5)
+
+If it is required to encode a harbour facility, it must be done using
+the feature *Harbour Facility*.
+
+[underline]#Remarks:#
+
+* Fishing harbours or portsare equipped to provide for the particular
+needs of fishing boats. Boat harbours and marinasare areas of
+sheltered water, generally within harbours or ports, set aside for
+the use of small craft, usually with moorings, buoys, and, in the
+case of marinas, berthing facilities.
+* Depending on the navigational purpose, harbour facilities are
+defined by: an area including docks, basins, infrastructure such as
+buildings, and dockside equipment; or a point.
+* If it is required to encode a terminal with facilities to
+load/unload or store shipping containers, this should be done using
+*Harbour Facility* with attribute stem:[bb "category of harbour
+facility" = 10] (container terminal).
+* If it is required to encode a covered structure into which ships
+can go, this must be done using the feature *Structure Over Navigable
+Water* (see <<sec_8.7>>). These structures may be part of the larger
+harbour facility, which should be encoded as *Harbour Facility*.
+* Each VHF-channel should be indicated using the attribute
+*communication channel* (see <<sec_27.77>>). Alternately, if the same
+VHF-channel(s) apply to multiple features in the dataset, this should
+be indicated through an associated instance of the information type
+*Contact Details*, attribute *communication channel* (see
+<<sec_24.1>>).
+* For additional guidance regarding the encoding of vessel speed
+limits, see <<sec_17.4>>.
+
+[underline]#Distinction:# Small Craft Facility; Structure Over
+Navigable Water.
+
+[[sec_22.8]]
+=== Small craft facility
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *SMALL CRAFT FACILITY*.
+A place at which a service generally of interest to small craft or
+pleasure boats is available. (S-57 Edition 3.1, Appendix A --
+Chapter 1,Page 1.162, November 2000).
+10+| *[underline]#S-101 Geo Feature:#* *Small Craft Facility (SMCFAC)*
+10+| *[underline]#Primitives:#* *Point, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| category of small craft facility 2+| (CATSCF) 3+|
+1: visitors berth +
+2: nautical club +
+3: boat hoist +
+4: sailmaker +
+5: boatyard +
+6: public inn +
+7: restaurant +
+8: chandler +
+9: provisions +
+10: doctor +
+11: pharmacy +
+12: water tap +
+13: fuel station +
+14: electricity outlet +
+15: bottle gas +
+16: showers +
+17: launderette +
+18: public toilets +
+19: post box +
+20: public telephone +
+21: refuse bin +
+22: car park +
+23: parking for boats and trailers +
+24: caravan site +
+25: camping site +
+26: sewage pump-out station +
+27: emergency telephone +
+28: landing/launching place for boats +
+30: scrubbing berth +
+31: picnic area +
+32: mechanics workshop +
+33: guard and/or security service | EN | 1,*
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twentytwo_eight]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+3: recommended +
+4: not in use +
+5: periodic/intermittent +
+6: reserved +
+7: temporary +
+8: private +
+9: mandatory +
+12: illuminated +
+14: public +
+16: watched +
+17: unwatched | EN | 0,*
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twentytwo_eight]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twentytwo_eight]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twentytwo_eight]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# E 37.1-2; F 11.3, 19.2; Q 45
+
+[[sec_22.8.1]]
+==== Small craft facilities (see S-4 -- B-320.1-2)
+
+If it is required to encode a small craft facility, it must be done
+using the feature *Small Craft Facility*.
+
+[underline]#Remarks:#
+
+* The *Small Craft Facility* must only be used to encode the
+function. In addition, if it is required to encode a physical feature
+(for example building), it must be done using an appropriate feature
+(for example *Building*).
+* Due to possible ECDIS display issues *Small Craft Facility*
+features of type surface should only be encoded on *Land Area*,
+*Shoreline Construction*, *Hulk* or *Pontoon* features of type
+surface.
+
+[underline]#Distinction:# Building; Harbour Facility; Shoreline
+Construction; Structure Over Navigable Water.

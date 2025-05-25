@@ -1,0 +1,3092 @@
+
+[[sec_16]]
+== Geo Features -- Areas, limits
+
+[[sec_16.1]]
+=== International boundaries and national limits (see S-4 -- B-440)
+
+The United Nations Convention on the Law of the Sea (UNCLOS), 1982
+came into force on 16 November 1994. UNCLOS contains navigational
+provisions as well as provisions for determining the limits of
+various maritime zones. These provisions are binding to all states
+that have ratified the Convention. For technical aspects of UNCLOS,
+see IHO publication C-51.
+
+IHO Member States should show, on selected series of their ENCs,
+their own baseline and maritime limits in accordance with UNCLOS.
+
+The Mariner may be interested in the exact location of international
+maritime boundaries for two principal reasons:
+
+* When crossing a boundary they could be subject to different laws
+and regulations which may affect their navigation; for example
+buoyage systems, pilotage regulations, fishing rights, reporting
+procedures, pollution regulations.
+
+* Where a boundary passes through groups of offshore islands they may
+wish to know upon which side of the boundary a particular island
+falls.
+
+[[sec_16.2]]
+=== Maritime jurisdiction areas
+
+[[fig_16-1]]
+.Maritime jurisdiction areas
+image::figure-16-1.png["",568,404]
+
+[[fig_16-2]]
+.Maritime jurisdiction areas in constrained waters
+image::figure-16-2.png["",569,329]
+
+The clauses in <<sec_16>> below provide guidance for the encoding of
+maritime jurisdiction areas. Occasionally, these "areas" may actually
+be defined as linear due to international treaties; or the areas may
+not be fully defined and it may therefore be necessary to encode the
+boundary as a linear feature (see example at <<fig_16-3>> below).
+<<sec_2.3>> defining features permitted for use in ENC and their
+geometric primitives allows relevant feature classes relating to
+maritime jurisdiction areas to be encoded as type curve; however this
+must only be done in circumstances where it is not possible to encode
+the feature using geometric primitive surface.
+
+[[fig_16-3]]
+.Maritime jurisdiction -- areas cannot be defined
+image::figure-16-3.png[]
+
+In <<fig_16-3>>, Administration Areas A and B cannot be encoded using
+geometric primitive surface as the seaward edge of the areas is not
+defined. In this case, the section of the international boundary
+extending seaward from the low water line should be encoded as an
+*Administration Area* feature of type curve (see <<sec_16.8>>).
+
+[[sec_16.2.1]]
+==== Maritime jurisdiction areas in dispute
+
+In accordance with Article 55 of the United Nations Convention on the
+Law of the Sea (UNCLOS -- 10 December 1982), a Coastal State's
+Territorial Sea Area and Exclusive Economic Zone must not overlap.
+Occasionally, small areas at the boundary of two or more Coastal
+States may be in dispute regarding the establishment of maritime
+jurisdiction, which may result in a small section of Territorial Sea
+overlapping an EEZ in the disputed area.
+
+Where issues of maritime jurisdiction between two or more Coastal
+States are in dispute, the proposed Territorial Sea (*Territorial Sea
+Area*) of one Coastal State may overlap the proposed EEZ (*Exclusive
+Economic Zone*) of another Coastal State. In this case, the disputed
+area should be encoded with separate *Territorial Sea Area* and
+*Exclusive Economic Zone* features, with Boolean attribute *in
+dispute* set to _True_ and the mandatory attribute *nationality*
+populated with the country codes (conforming to ISO 3166) of the
+disputing states (see <<sec_27.135>>).
+
+[[sec_16.3]]
+=== Anchorage area
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *ANCHORAGE AREA*. An area in which
+vessels or seaplanes anchor or may anchor. (Adapted from
+IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Anchorage Area (ACHARE)*
+10+| *[underline]#Primitives:#* *Point, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| category of anchorage 2+| (CATACH) 3+|
+1: unrestricted anchorage +
+2: deep water anchorage +
+3: tanker anchorage +
+5: quarantine anchorage +
+6: seaplane anchorage +
+7: small craft anchorage +
+9: anchorage for periods up to 24 Hours +
+10: anchorage for a limited period of time +
+14: waiting anchorage +
+15: reported anchorage | EN | 0,*
+3+| category of cargo 2+| 3+|
+1: bulk +
+2: container +
+3: general +
+4: liquid +
+5: passenger +
+6: livestock +
+7: dangerous or hazardous +
+8: heavy lift +
+9: ballast +
+10: dry bulk cargo +
+11: liquid bulk cargo +
+12: reefer container cargo +
+13: Ro-Ro cargo +
+14: project cargo +
+15: break bulk cargo | EN | 0,*
+
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[sixteen_three]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD
+| 0,1 footnoteblock:[sixteen_three]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD
+| 0,1 footnoteblock:[sixteen_three]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD
+| 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD
+| 1,1
+
+3+| restriction 2+| (RESTRN) 3+|
+2: anchoring restricted +
+3: fishing prohibited +
+4: fishing restricted +
+5: trawling prohibited +
+6: trawling restricted +
+8: entry restricted +
+9: dredging prohibited +
+10: dredging restricted +
+11: diving prohibited +
+12: diving restricted +
+13: no wake +
+15: construction prohibited +
+16: discharging prohibited +
+17: discharging restricted +
+18: industrial or mineral exploration/development prohibited +
+19: industrial or mineral exploration/development restricted +
+20: drilling prohibited +
+21: drilling restricted +
+23: cargo transhipment (lightening) prohibited +
+24: dragging prohibited +
+27: speed restricted +
+39: swimming prohibited | EN | 0,* 3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+3: recommended +
+5: periodic/intermittent +
+6: reserved +
+7: temporary +
+8: private +
+9: mandatory +
+14: public | EN | 0,* 3+| vessel speed limit 2+| 3+| | C | 0,*
+
+3+| speed limit 2+| 3+| | (S) RE
+| 1,1
+
+3+| speed units 2+| 3+|
+2: kilometres per hour +
+3: miles per hour +
+4: knots | (S) EN
+| 1,1
+
+3+| vessel class 2+| 3+| | (S) TE
+| 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE
+| 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE
+| 0,1 footnoteblock:[sixteen_three]
+
+3+| headline 2+| 3+| | (S) TE
+| 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE
+| 0,1 footnoteblock:[sixteen_three]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[sixteen_three]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# N 10, 12.1-9, 14; Q 44
+
+[[sec_16.3.1]]
+==== Anchorages (see S-4 -- B-431.1; B-431.3 and B-431.7)
+
+Where the limits of anchorages are defined by a regulatory authority
+(for example harbour authority) they must be shown on the largest
+optimum display scale ENC data. They may also be shown on other
+optimum display scale ENC datasets where useful, for example, for
+planning purposes.
+
+If it is required to encode an anchorage area, including anchorages
+for seaplanes, it must be done using the feature *Anchorage Area*.
+
+[underline]#Remarks:#
+
+* The complex attribute *feature name*, sub-attribute *name* is used
+to encode the name and/or number of the *Anchorage Area*.
+* The complex attribute *information* (see <<sec_2.4.6>>) may be used
+to provide additional information about the category of anchorage,
+where required.
+* Individual recommended anchorages without defined limits should be
+encoded as *Anchorage Area* features of type point, with attributes
+stem:[bb "category of anchorage" = 1] (unrestricted anchorage) and
+stem:[bb "status" = 3] (recommended).
+* If it is required to encode an anchorage at a location that has not
+been defined by a regulatory authority but has been reported to be
+suitable and safe for anchoring, this must be done using *Anchorage
+Area* of type point, with attribute stem:[bb "category of anchorage"
+= 15] (reported anchorage).
+
+NOTE: the encoding of *Anchorage Area* with attribute stem:[bb
+"category of anchorage" = 15] (reported anchorage) of type surface is
+prohibited.
+
+* If it is required to encode an anchorage which may be used for a
+period of not more than 24 hours, it must be done using stem:[bb
+"category of anchorage" = 9] (anchorage for periods up to 24 hours).
+* If it is required to encode an anchorage with a specific, limited
+time period, it must be done using stem:[bb "category of anchorage" =
+10] (anchorage for limited period of time). The specific limit of
+time should be encoded using the complex attribute *information* (see
+<<sec_2.4.6>>), sub-attribute *text* (for example_Anchorage limited
+to 12 hours_).
+* Areas with numerous small craft moorings may be encoded using the
+feature *Mooring Area* (see <<sec_16.4>>). For the encoding of
+mooring buoys, see <<sec_20.8>>.
+* For additional guidance regarding the encoding of vessel speed
+limits, see <<sec_17.4>>.
+* Areas where anchoring is prohibited must be encoded, where
+required, as *Restricted Area* (see <<sec_17.8>>) with attribute
+stem:[bb "restriction" = 1] (anchoring prohibited).
+
+[underline]#Distinction:# Anchor Berth; Mooring Area.
+
+[[sec_16.4]]
+=== Mooring area
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *MOORING AREA*. An area in which vessels may be secured to mooring buoys (adapted from IHO dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Mooring Area (ACHARE)*
+10+| *[underline]#Primitives:#* *Point, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| category of mooring area 2+| _(CATACH)_ 3+|
+1: small craft mooring area +
+2: mooring area for visitors +
+3: mooring area for tankers | EN | 0,*
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE
+| 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[sixteen_four]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD
+| 0,1 footnoteblock:[sixteen_four]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD
+| 0,1 footnoteblock:[sixteen_four]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| maximum permitted draught 2+| _(INFORM) (NINFOM)_ 3+| | RE | 0,1
+
+3+| maximum permitted vessel length 2+| _(INFORM) (NINFOM)_ 3+| | RE | 0,1
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD
+| 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD
+| 1,1
+
+3+| restriction 2+| (RESTRN) 3+|
+1: anchoring prohibited +
+2: anchoring restricted +
+3: fishing prohibited +
+4: fishing restricted +
+5: trawling prohibited +
+6: trawling restricted +
+8: entry restricted +
+9: dredging prohibited +
+10: dredging restricted +
+11: diving prohibited +
+12: diving restricted +
+13: no wake +
+15: construction prohibited +
+16: discharging prohibited +
+17: discharging restricted +
+18: industrial or mineral exploration/development prohibited +
+19: industrial or mineral exploration/development restricted +
+20: drilling prohibited +
+21: drilling restricted +
+23: cargo transhipment (lightening) prohibited +
+24: dragging prohibited +
+25: stopping prohibited +
+27: speed restricted +
+39: swimming prohibited +
+42: power-driven vessels prohibited | EN | 0,* 3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+3: recommended +
+5: periodic/intermittent +
+6: reserved +
+7: temporary +
+8: private +
+9: mandatory +
+14: public | EN | 0,* 3+| vessel speed limit 2+| 3+| | C | 0,*
+
+3+| speed limit 2+| 3+| | (S) RE
+| 1,1
+
+3+| speed units 2+| 3+|
+2: kilometres per hour +
+3: miles per hour +
+4: knots | EN
+| 1,1
+
+3+| vessel class 2+| 3+| | (S) TE
+| 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1 3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE
+| 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE
+| 0,1 footnoteblock:[sixteen_four]
+
+3+| headline 2+| 3+| | (S) TE
+| 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE
+| 0,1 footnoteblock:[sixteen_four]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[sixteen_four]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# Q 44
+
+[[sec_16.4.1]]
+==== Mooring area (see S-4 -- B-431.7)
+
+Where the limits of a mooring area are defined by a regulatory
+authority (for example harbour authority) they must be shown on the
+largest optimum display scale ENC data. They may also be shown on
+other optimum display scale ENC datasets (at smaller scales, if
+required, using the point primitive) where useful; for example, for
+planning purposes.
+
+If it is required to encode a mooring area, it must be done using the
+feature *Mooring Area*.
+
+[underline]#Remarks:#
+
+* The complex attribute *feature name*, sub-attribute *name* is used
+to encode the name and/or number of the *Mooring Area*.
+* The complex attribute *information* (see <<sec_2.4.6>>) may be used
+to provide additional information about the category of anchorage,
+where required.
+* For the encoding of mooring buoys, see <<sec_20.8>>. For encoding
+installation buoys used for loading or unloading tankers, see
+<<sec_20.7>>.
+
+[underline]#Distinction:# Anchorage Area; Anchor Berth; Mooring Buoy;
+Mooring Trot.
+
+[[sec_16.5]]
+=== Anchor berth
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *ANCHOR BERTH*. A designated area of water where a vessel, seaplane, etc., may anchor. (IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Anchor Berth (ACHBRT)*
+10+| *[underline]#Primitives:#* *Point, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| category of anchorage 2+| (CATACH) 3+|
+1: unrestricted anchorage +
+2: deep water anchorage +
+3: tanker anchorage +
+5: quarantine anchorage +
+6: seaplane anchorage +
+7: small craft anchorage +
+9: anchorage for periods up to 24 Hours +
+10: anchorage for a limited period of time +
+14: waiting anchorage | EN | 0,* 3+| category of cargo 2+| 3+|
+1: bulk +
+2: container +
+3: general +
+4: liquid +
+5: passenger +
+6: livestock +
+7: dangerous or hazardous +
+8: heavy lift +
+9: ballast +
+10: dry bulk cargo +
+11: liquid bulk cargo +
+12: reefer container cargo +
+13: Ro-Ro cargo +
+14: project cargo +
+15: break bulk cargo | EN
+| 0,*
+
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE
+| 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[sixteen_five]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD
+| 0,1 footnoteblock:[sixteen_five]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD
+| 0,1 footnoteblock:[sixteen_five]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD
+| 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD
+| 1,1
+
+3+| radius 2+| (RADIUS) 3+| Metres | RE | 0,1 3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+3: recommended +
+4: not in use +
+5: periodic/intermittent +
+6: reserved +
+7: temporary +
+8: private +
+9: mandatory +
+14: public | EN | 0,* 3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE
+| 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE
+| 0,1 footnoteblock:[sixteen_five]
+
+3+| headline 2+| 3+| | (S) TE
+| 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE
+| 0,1 footnoteblock:[sixteen_five]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[sixteen_five]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# N 11.1, 11.2
+
+[[sec_16.5.1]]
+==== Anchor berths (see S-4 -- B-431.2)
+
+Where the positions or limits of anchorages, including anchor berths,
+are defined by a regulatory authority (for example harbour authority)
+they must be shown on the largest optimum display scale ENC data.
+They may also be shown on other optimum display scale data where
+useful, for example, for planning purposes.
+
+If it is required to encode an anchor berth, it must be done using
+the feature *Anchor Berth*.
+
+[underline]#Remarks:#
+
+* The complex attribute *feature name*, sub-attribute *name* is used
+to encode the name and/or number of the *Anchor Berth*. If a group of
+anchor berths is known by a single common name, the name should be
+encode using a *Sea Area/Named Water Area* feature (see <<sec_9.1>>)
+covering the area of the anchor berths.
+* The complex attribute *information* (see <<sec_2.4.6>>) may be used
+to provide additional information about the category of anchorage,
+where required.
+* If an anchor berth is defined by a centre point and a swinging
+circle, it should be of type point, with the radius of the swinging
+circle encoded using the attribute *radius*.
+
+[underline]#Distinction:# Anchorage Area; Berth; Mooring Area.
+
+[[sec_16.6]]
+=== Seaplane landing area
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *SEAPLANE LANDING AREA*.
+A designated portion of water for the landing and take-off of seaplanes.
+(S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.152, November 2000).
+10+| *[underline]#S-101 Geo Feature:#* *Seaplane Landing Area (SPLARE)*
+10+| *[underline]#Primitives:#* *Point, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE
+| 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[sixteen_six]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD
+| 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD
+| 1,1
+
+3+| restriction 2+| (RESTRN) 3+|
+1: anchoring prohibited +
+2: anchoring restricted +
+3: fishing prohibited +
+4: fishing restricted +
+5: trawling prohibited +
+6: trawling restricted +
+7: entry prohibited +
+8: entry restricted +
+9: dredging prohibited +
+10: dredging restricted +
+11: diving prohibited +
+12: diving restricted +
+13: no wake +
+15: construction prohibited +
+16: discharging prohibited +
+17: discharging restricted +
+18: industrial or mineral exploration/development prohibited +
+19: industrial or mineral exploration/development restricted +
+20: drilling prohibited +
+21: drilling restricted +
+22: removal of historical artefacts prohibited +
+23: cargo transhipment (lightening) prohibited +
+24: dragging prohibited +
+25: stopping prohibited +
+27: speed restricted +
+39: swimming prohibited | EN | 0,* 3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+3: recommended +
+4: not in use +
+5: periodic/intermittent +
+6: reserved +
+7: temporary +
+8: private +
+9: mandatory +
+14: public | EN | 0,* 3+| vessel speed limit 2+| 3+| | C | 0,*
+
+3+| speed limit 2+| 3+| | (S) RE
+| 1,1
+
+3+| speed units 2+| 3+|
+2: kilometres per hour +
+3: miles per hour +
+4: knots | (S) EN
+| 1,1
+
+3+| vessel class 2+| 3+| | (S) TE
+| 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_six]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_six]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[sixteen_six]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# N 13
+
+[[sec_16.6.1]]
+==== Seaplane landing areas (see S-4 -- B-449.6)
+
+If it is required to encode a seaplane landing area, it must be done
+using the feature *Seaplane Landing Area*.
+
+[underline]#Remarks:#
+
+* For additional guidance regarding the encoding of vessel speed
+limits, see <<sec_17.4>>.
+* If it is required to encode an area where seaplanes draw water for
+fire fighting activities, this must be done using *Seaplane Landing
+Area*.
+* If it is required to encode an anchorage for seaplanes, it must be
+done using an *Anchorage Area* feature (see <<sec_16.3>>), with
+attribute stem:[bb "category of anchorage" = 6] (seaplane anchorage).
+
+[underline]#Distinction:# Airport/Airfield; Helipad; Runway.
+
+[[sec_16.7]]
+=== Dumping ground
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *DUMPING GROUND*. A sea area where
+dredged material or other potentially more harmful material, for example
+explosives, chemical waste, is deliberately deposited. (S-57 Edition
+3.1, Appendix A -- Chapter 1, Page 1.59, November 2000).
+10+| *[underline]#S-101 Geo Feature:#* *Dumping Ground (DMPGRD)*
+10+| *[underline]#Primitives:#* *Point, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| category of dumping ground 2+| (CATDPG) 3+|
+2: chemical waste dumping ground +
+3: nuclear waste dumping ground +
+4: explosives dumping ground +
+5: spoil ground +
+6: vessel dumping ground | EN | 0,*
+3+| date disused 2+| 3+| | TD | 0,1
+
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[sixteen_seven]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| restriction 2+| (RESTRN) 3+|
+1: anchoring prohibited +
+2: anchoring restricted +
+3: fishing prohibited +
+4: fishing restricted +
+5: trawling prohibited +
+6: trawling restricted +
+7: entry prohibited +
+8: entry restricted +
+9: dredging prohibited +
+10: dredging restricted +
+11: diving prohibited +
+12: diving restricted +
+13: no wake +
+17: discharging restricted +
+18: industrial or mineral exploration/development prohibited +
+19: industrial or mineral exploration/development restricted +
+20: drilling prohibited +
+21: drilling restricted +
+22: removal of historical artefacts prohibited +
+23: cargo transhipment (lightening) prohibited +
+24: dragging prohibited +
+25: stopping prohibited +
+27: speed restricted | EN | 0,*
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+4: not in use +
+6: reserved +
+7: temporary | EN | 0,*
+3+| vessel speed limit 2+| 3+| | C | 0,*
+
+3+| speed limit 2+| 3+| | (S) RE | 1,1
+
+3+| speed units 2+| 3+|
+2: kilometres per hour +
+3: miles per hour +
+4: knots | (S) EN
+| 1,1
+
+3+| vessel class 2+| 3+| | (S) TE | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_seven]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_seven]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[sixteen_seven]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# N 23, 24, 62.1, 62.2
+
+[[sec_16.7.1]]
+==== Dumping grounds (see S-4 -- B-442; B-446 and B-446.1)
+
+Materials deliberately dumped at sea in specified areas (other than
+those associated with reclamation works) may be classified, according
+to their significance to the Mariner, as follows:
+
+** Materials which are generally dispersed before reaching the
+seabed, for example sewage sludge, are of little navigational
+significance and no charting action is usually required.
+** Spoil from dredging operations or other works which might reduce
+charted depths significantly in the designated spoil ground.
+** Harmful materials, including explosives and chemicals, which are
+likely to remain concentrated on the seabed.
+Dumping of harmful materials is unlikely to affect depths
+substantially and such dumping grounds are encoded primarily as a
+warning against anchoring, trawling or other submarine operations.
+
+If it is required to encode a dumping ground, it must be done using
+the feature *Dumping Ground*.
+
+[underline]#Remarks:#
+
+* A *Dumping Ground* feature of type surface must be covered by
+features from Skin of the Earth as appropriate (*Depth Area* or
+*Unsurveyed Area*).
+* Disused dumping grounds for harmful materialsare considered
+dangerous for an indefinite period and must therefore be encoded on
+the largest optimum display scale ENC datasets, with attribute
+stem:[bb "status" = 4] (not in use). The date when the area ceased to
+be used may be populated using the attribute *date disused*, if known.
+* For additional guidance regarding the encoding of vessel speed
+limits, see <<sec_17.4>>.
+
+[[sec_16.7.2]]
+==== Spoil grounds, dredging areas (see S-4 -- B-446)
+
+Spoil grounds are areas set aside, clear of shipping channels and in
+deep water where possible, for the disposal of material (spoil)
+generally obtained by dredging. Their significance to the Mariner is
+that very large quantities of material may be dumped, decreasing the
+depth of water available. Where possible, charts should be updated in
+a timely manner so as to include the latest survey information
+covering the spoil ground.
+
+Extraction (or dredging) areas are those areas where a concentration
+of dredging vessels may be encountered, taking up sand or shingle to
+be brought ashore (for example for construction purposes). Their
+significance is primarily as a collision hazard, although they also
+indicate the likelihood of finding a greater depth of water than
+charted. Channels dredged to provide an adequate depth of water for
+navigation are "dredged areas", not to be confused with "dredging
+areas".
+
+If it is required to encode a spoil ground, it must be done using a
+*Dumping Ground* feature, with attribute stem:[bb "category of
+dumping ground" = 5] (spoil ground).
+
+If it is required to encode a dredging area, it must be done using a
+*Restricted Area* feature (see <<sec_17.8>>), with attribute stem:[bb
+"category of restricted area" = 21] (dredging area). An area in which
+seabed material (for example sand, shingle) is being extracted for
+purposes such as construction must be encoded, where required, using
+the feature *Offshore Production Area* (see <<sec_14.6>>), with
+attribute stem:[bb "category of production area" = 13] (seabed
+material extraction area).
+
+[underline]#Remarks:#
+
+* Within a spoil ground; if the depths within the area are liable to
+be very much less than charted after the discharge of spoil and
+post-dumping surveys are not available, they may be treated as
+unsurveyed areas (see <<sec_11.10>>), in which case soundings and
+depth contours may be omitted from the area. Alternatively, an
+indication of the discrepancy between charted depth information and
+the actual depths within the spoil ground may be provided by
+downgrading the information included in the underlying *Quality of
+Bathymetric Data* feature (see <<sec_3.8>>).
+
+[underline]#Distinction:# Dredged Area.
+
+[[sec_16.8]]
+=== Military practice area
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *MILITARY PRACTICE AREA*. An area within which naval, military or aerial exercises are carried out. (Adapted from IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Military Practice Area (MIPARE)*
+10+| *[underline]#Primitives:#* *Point, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| category of military practice area 2+| (CATMPA) 3+|
+2: torpedo exercise area +
+3: submarine exercise area +
+4: firing danger area +
+5: mine-laying practice area +
+6: small arms firing range | EN | 0,*
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN | 0,1 footnoteblock:[sixteen_eight]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[sixteen_eight]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[sixteen_eight]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| nationality 2+| (NATION) 3+| | TE | 0,1
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| restriction 2+| (RESTRN) 3+|
+1: anchoring prohibited +
+2: anchoring restricted +
+3: fishing prohibited +
+4: fishing restricted +
+5: trawling prohibited +
+6: trawling restricted +
+7: entry prohibited +
+8: entry restricted +
+9: dredging prohibited +
+10: dredging restricted +
+11: diving prohibited +
+12: diving restricted +
+13: no wake +
+15: construction prohibited +
+16: discharging prohibited +
+17: discharging restricted +
+18: industrial or mineral exploration/development prohibited +
+19: industrial or mineral exploration/development restricted +
+20: drilling prohibited +
+21: drilling restricted +
+22: removal of historical artefacts prohibited +
+23: cargo transhipment (lightening) prohibited +
+24: dragging prohibited +
+25: stopping prohibited +
+26: landing prohibited +
+27: speed restricted +
+39: swimming prohibited | EN | 0,*
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+5: periodic/intermittent +
+6: reserved +
+7: temporary +
+16: watched +
+17: unwatched | EN | 0,*
+
+3+| vessel speed limit 2+| 3+| | C | 0,*
+
+3+| speed limit 2+| 3+| | (S) RE | 1,1
+
+3+| speed units 2+| 3+|
+2: kilometres per hour +
+3: miles per hour +
+4: knots | (S) EN
+| 1,1
+
+3+| vessel class 2+| 3+| | (S) TE | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_eight]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_eight]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[sixteen_eight]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# N 30-33
+
+[[sec_16.8.1]]
+==== Military practice areas (see S-4 -- B-441.1-6)
+
+Military practice (or exercise) areas at sea are of various types and
+may be classified as follows with regard to their significance for
+the Mariner:
+
+* Firing danger areas, sometimes called firing practice areas; that
+is, permanent or temporary ranges, including bombing, torpedo and
+missile ranges.
+* Mine-laying practice (and counter-measures) areas.
+* Submarine exercise areas.
+* Other exercise areas.
+Some degree of restrictionon navigation and other rights may be
+implied by the encoding of military practice areas. There may be
+varying interpretations of the validity of the restrictions and
+possible infringement of the rights of innocent passage through
+territorial waters and elsewhere. Where it is thought desirable to
+depict such areas, even though clear range procedure may be observed,
+or the areas appear to be a derogation of the freedom of the seas,
+Mariners should be informed (not necessarily on ENCs) that
+publication of the details of a law or regulation is solely for the
+safety and convenience of shipping and implies no recognition of the
+international validity of the law or regulation. By this means
+infringements are not condoned but the Mariner receives a warning
+which may be necessary for their safety.
+
+If it is required to encode a military practice area, it must be done
+using the feature *Military Practice Area*.
+
+[underline]#Remarks:#
+
+* For additional guidance regarding the encoding of vessel speed
+limits, see <<sec_17.4>>.
+* Submarine exercise areas should generally not be encoded where
+submarines exercise over wide areas which it would not be practicable
+to depict, and over which cautions (to keep a good look out for them)
+are unlikely to be effective. They may, however, be encoded where
+they occur in or near major shipping lanes or port approaches.
+* Firing danger areas at seaare frequently marked by IALA special
+buoys sometimes laid around the perimeter of the area and/or by
+specially erected lights, beacons and targets. If required, all such
+features which could assist the navigator in identifying their
+position, or could be a hazard, must be encoded in the normal way,
+* The existence of mine laying (and counter-measures/clearance)
+practice areas implies the possibility of unexploded mines or depth
+charges on the seafloor, and also the presence of harmless practice
+mines.
+
+[underline]#Distinction:# Caution Area; Restricted Area; Submarine
+Transit Lane.
+
+[[sec_16.9]]
+=== Administration area
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *ADMINISTRATION AREA*.
+A defined area within which a jurisdiction applies. It may or may
+not be named.
+10+| *[underline]#S-101 Geo Feature:#* *Administration Area (ADMARE)*
+10+| *[underline]#Primitives:#* *Curve, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| in dispute 2+| 3+| | BO | 0,1
+
+3+| jurisdiction 2+| (JRSDTN) 3+|
+1: international +
+2: national +
+3: national sub-division | EN | 1,1
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[sixteen_nine]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| nationality 2+| (NATION) 3+| | TE | 0,*
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_nine]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_nine]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[sixteen_nine]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# N 40, 41
+
+[[sec_16.9.1]]
+==== International and national territories (see S-4 -- B-440.1 and B-440.3)
+
+International maritime boundariesare those which have been
+established by agreement between adjacent or opposite States.
+Boundaries are sometimes negotiated on the basis of the equidistance
+or "median" line principle. For various reasons, however, agreed
+boundaries even when negotiated on this principle are seldom true
+median lines. Navigationally, international boundaries may vary in
+their significance over different parts of their lengths. Inshore,
+they may represent the delimitation of Territorial Seas of two states
+or "internal waters", (for example within bay closing lines or
+straight baseline systems). Offshore, they may represent Exclusive
+Economic Zone and/or Continental Shelf boundaries.
+
+If it is required to encode a named international or national
+territory, it must be done using the feature *Administration Area*.
+
+[underline]#Remarks:#
+
+* International land boundaries should be encoded, at least in the
+vicinity of coasts.
+* *Administration Area* must only be encoded using the geometric
+primitive curve where the real-world instance is actually linear, and
+it is therefore not possible to encode the feature using the
+geometric primitive surface. See <<sec_16.2>>.
+
+[underline]#Distinction:# Contiguous Zone; Continental Shelf Area;
+Exclusive Economic Zone; Fishery Zone; Land Region; Territorial Sea
+Area; Vessel Traffic Service Area.
+
+[[sec_16.10]]
+=== Cargo transhipment area
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *CARGO TRANSHIPMENT AREA*.
+An area designated for transfer of cargo from one vessel to anothersometimes
+in order to reduce a vessel's draught. (IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Cargo Transhipment Area (CTSARE)*
+10+| *[underline]#Primitives:#* *Point, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[sixteen_ten]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[sixteen_ten]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[sixteen_ten]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| restriction 2+| (RESTRN) 3+|
+2: anchoring restricted +
+3: fishing prohibited +
+4: fishing restricted +
+5: trawling prohibited +
+6: trawling restricted +
+8: entry restricted +
+9: dredging prohibited +
+10: dredging restricted +
+11: diving prohibited +
+12: diving restricted +
+13: no wake +
+15: construction prohibited +
+16: discharging prohibited +
+17: discharging restricted +
+18: industrial or mineral exploration/development prohibited +
+19: industrial or mineral exploration/development restricted +
+20: drilling prohibited +
+21: drilling restricted +
+22: removal of historical artefacts prohibited +
+24: dragging prohibited +
+27: speed restricted +
+39: swimming prohibited | EN | 0,*
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+3: recommended +
+5: periodic/intermittent +
+6: reserved +
+7: temporary +
+9: mandatory | EN | 0,*
+3+| vessel speed limit 2+| 3+| | C | 0,*
+
+3+| speed limit 2+| 3+| | (S) RE | 1,1
+
+3+| speed units 2+| 3+|
+2: kilometres per hour +
+3: miles per hour +
+4: knots | (S) EN
+| 1,1
+
+3+| vessel class 2+| 3+| | (S) TE | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_ten]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_ten]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[sixteen_ten]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# N 64
+
+[[sec_16.10.1]]
+==== Cargo transhipment areas (see S-4 -- B-449.4)
+
+Areas generally outside port limits may be specifically designated as
+suitable for the transhipment of oil or other materials from large
+ships to smaller vessels. The areas selected are relatively sheltered
+locations and lie off main shipping routes. As the purpose of
+transhipment is usually to reduce the draught of the larger vessel to
+allow it to proceed to port, the operation is often known as
+"lightening" and the areas may be known as "lightening areas" or
+"cargo transfer areas".
+
+If it is required to encode a cargo transhipment area, it must be
+done using the feature *Cargo Transhipment Area*.
+
+[underline]#Remarks:#
+
+* For additional guidance regarding the encoding of vessel speed
+limits, see <<sec_17.4>>.
+* The encoding of cargo transhipment areas should be adequate to warn
+other vessels of the likelihood of encountering ships restricted in
+their ability to manoeuvre. Regulations governing the use of such
+areas should be encoded using the attribute *restriction* or the
+complex attribute *information* (see <<sec_2.4.6>>).
+
+[underline]#Distinction:# Dock Area; Harbour Area (Administrative);
+Harbour Facility.
+
+[[sec_16.11]]
+=== Caution area
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *CAUTION AREA*. Generally, an area
+where the mariner has to be made aware of circumstances influencing
+the safety of navigation. (S-57 Edition 3.1, Appendix A --
+Chapter 1, Page 1.33, November 2000).
+10+| *[underline]#S-101 Geo Feature:#* *Caution Area (CTNARE)*
+10+| *[underline]#Primitives:#* *Point, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+3: under reclamation +
+5: planned construction | EN | 0,1
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[sixteen_eleven]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[sixteen_eleven]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+3+| status 2+| (STATUS) 3+|
+5: periodic/intermittent +
+7: temporary | EN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,* footnoteblock:[sixteen_eleven]
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_eleven]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_eleven]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1 footnoteblock:[sixteen_eleven]
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Collection 3+| *Caution Area Association* (see <<sec_25.5>>) 3+| *Archipelagic Sea Lane*, *Traffic Separation Scheme* 2+| Aggregation | 0,1
+| The Auxiliary Feature 3+| *Fairway Auxiliary* (see <<sec_25.8>>) 3+| *Fairway* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[sixteen_eleven]]
+[NOTE]
+--
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+At least one of the attributes *information* or *pictorial
+representation* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:#
+
+[[sec_16.11.1]]
+==== Caution areas (see S-4 -- B-242)
+
+If it is required to identify an area in which the Mariner must be
+aware of circumstances influencing the safety of navigation (for
+example an area of continually changing depths), and which cannot be
+encoded using other feature types, it must be done using the feature
+*Caution Area*. This feature may be required to identify a danger, a
+risk, a rule or advice that is not directly related to a particular
+feature.
+
+[underline]#Remarks:#
+
+* If the information applies to a specific area the *Caution Area*
+feature should cover only that area.
+* If the information to be encoded is spatially linear, this should
+be encoded using a "very narrow" *Caution Area* feature of type
+surface (approximately 0·3mm wide at the optimum display scale of the
+ENC data).
+* Information which may be of use to the Mariner, but is not
+significant to safe navigation and cannot be encoded using other
+feature types, should be encoded using an *Information Area* feature
+(see <<sec_16.12>>). This encoding is intended to reduce the number
+of alarms or indications generated in the ECDIS due to the overuse of
+*Caution Area* features.
+* Notes should be kept to a minimum and be as concise as is
+compatible with accuracy and intelligibility. Hydrographic
+terminology (jargon) should be avoided, giving preference to easily
+understood words, for example "depths" rather than "bathymetry".
+* In order to ensure correct ECDIS display, *Caution Area* features
+of type surface should not share the geometry of features such as
+*Depth Contour* and other features with higher ECDIS display
+priorities (that is, higher than display priority 3), as the *Caution
+Area* will appear to be "open ended", which may confuse the Mariner.
+Where this occurs, the edge of the *Caution Area* should be extended
+outward to clear the "shared" edge, sufficient to avoid "duplicate
+geometry" validation errors (that is, at least 0.3mm at the optimum
+display scale for the ENC data).
+
+[underline]#Distinction:# Collision Regulations Limit; Information
+Area; Obstruction; Underwater/Awash Rock; Unsurveyed Area; Wreck.
+
+[[sec_16.12]]
+=== Information area
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *INFORMATION AREA*. An area for
+which general information regarding navigation, but not directly related
+to safety of navigation, is available.
+10+| *[underline]#S-101 Geo Feature:# Information Area _(M_NPUB)_*
+10+| *[underline]#Primitives:#* *Point, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[sixteen_twelve]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[sixteen_twelve]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[sixteen_twelve]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,* footnoteblock:[sixteen_twelve]
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_twelve]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_twelve]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1 footnoteblock:[sixteen_twelve]
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[sixteen_twelve]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+At least one of the attributes *information* or *pictorial
+representation* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:#
+
+[[sec_16.12.1]]
+==== Information areas (see S-4 -- B-242)
+
+If it is required to encode information which may be of use to the
+Mariner, but is not significant to safety of navigation and cannot be
+encoded using existing features, it must be done using the feature
+*Information Area*.
+
+[underline]#Remarks:#
+
+* The feature *Information Area* encodes information which the
+Producing Authority determines is relevant to the Mariner, but does
+not warrant the triggering of ECDIS alarms through the encoding of
+*Caution Area* features.
+* If the information applies to a specific area the *Information
+Area* feature should cover only that area.
+
+[underline]#Distinction:# Caution Area; Collision Regulations Limit;
+Obstruction; Underwater/Awash Rock; Unsurveyed Area; Wreck.
+
+[[sec_16.13]]
+=== Contiguous Zone
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *CONTIGUOUS ZONE*. A zone contiguous
+to a coastal State's Territorial Sea, which may not extend beyond
+24 nautical miles from the baselines from which the breadth of the
+Territorial Sea is measured. The coastal State may exercise certain
+control in this zone subject to the provisions of International Law.
+(IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Contiguous Zone (CONZNE)*
+10+| *[underline]#Primitives:#* *Curve, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[sixteen_thirteen]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[sixteen_thirteen]
+
+3+| in dispute 2+| 3+| | BO | 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| nationality 2+| (NATION) 3+| | TE | 1,*
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_thirteen]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_thirteen]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[sixteen_thirteen]]
+[NOTE]
+--
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# N 44
+
+[[sec_16.13.1]]
+==== Contiguous Zones (see S-4 -- B-440.6)
+
+The Contiguous Zoneis a zone adjacent to the Territorial Sea where
+the coastal state may exercise the control necessary to prevent or
+punish infringement of its customs, fiscal, immigration or sanitary
+laws and regulations within its territory or Territorial Sea. Under
+UNCLOS, the outer limits of this zone may not extend beyond 24
+nautical miles measured from the Territorial Sea Baselines.
+
+If it is required to encode the Contiguous Zone, it must be done
+using the feature *Contiguous Zone*.
+
+[underline]#Remarks:#
+
+* *Contiguous Zone* must only be encoded using the geometric
+primitive curve where the real-world instance is actually linear, and
+it is therefore not possible to encode the feature using the
+geometric primitive surface. See <<sec_16.2>>.
+* For guidance regarding the encoding of areas in which the maritime
+jurisdiction between two or more Coastal States are in dispute, see
+<<sec_16.2.1>>.
+
+[underline]#Distinction:# Administration Area; Continental Shelf
+Area; Exclusive Economic Zone; Fishery Zone; Territorial Sea Area.
+
+[[sec_16.14]]
+=== Continental Shelf area
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *CONTINENTAL SHELF AREA*. The Continental
+Shelf of a coastal State comprises the seabed and subsoil of the submarine
+areas that extend beyond its Territorial Sea throughout the natural
+prolongation of its land territory to the outer edge of the continental
+margin, or to a distance of 200 nautical miles from the baselines
+from which the breadth of the Territorial Sea is measured where the
+outer edge of the continental margin does not extend up to that distance.
+(IHO Publication C-51).
+10+| *[underline]#S-101 Geo Feature:#* *Continental Shelf Area (COSARE)*
+10+| *[underline]#Primitives:#* *Curve, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[sixteen_fourteen]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| nationality 2+| (NATION) 3+| | TE | 1,*
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_fourteen]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_fourteen]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[sixteen_fourteen]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# N 46
+
+[[sec_16.14.1]]
+==== Continental Shelf (see S-4 -- B-440.8)
+
+The delineation of the Continental Shelf beyond 200 nautical miles
+from the Territorial Sea baselines is complex. Details are given in
+UNCLOS (see IHO Publication C-51). The coastal State exercises
+sovereign rights over the Continental Shelf for the purpose of
+exploring it and exploiting its natural resources. Complex procedures
+exist within UNCLOS for the establishment of the limits of the
+Continental Shelf. Where these procedures have been followed the area
+should be encoded on suitable optimum display scale ENC data.
+
+If it is required to encode the Continental Shelf, it must be done
+using the feature *Continental Shelf Area*.
+
+[underline]#Remarks:#
+
+* *Continental Shelf Area* must only be encoded using the geometric
+primitive curve where the real-world instance is actually linear, and
+it is therefore not possible to encode the feature using the
+geometric primitive surface. See <<sec_16.2>>.
+
+[underline]#Distinction:# Administration Area; Contiguous Zone;
+Exclusive Economic Zone; Fishery Zone; Territorial Sea Area.
+
+[[sec_16.15]]
+=== Custom zone
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *CUSTOM ZONE*. The area within which
+national custom regulations are in force. (S-57 Edition 3.1,
+Appendix A -- Chapter 1, Page 1.46, November 2000).
+10+| *[underline]#S-101 Geo Feature:#* *Custom Zone (CUSZNE)*
+10+| *[underline]#Primitives:#* *Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| nationality 2+| (NATION) 3+| | TE | 1,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnote:sixteen_fifteen[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnote:sixteen_fifteen[]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[underline]#INT 1 Reference:# N 48
+
+[[sec_16.15.1]]
+==== Custom Zones (see S-4 -- B-440.2)
+
+If it is required to encode a custom zone, it must be done using the
+feature *Custom Zone*. Custom zones,where details are provided by a
+regulatory authority, should be encoded on the largest optimum
+display scale ENC data covering the area.
+
+[underline]#Remarks:#
+
+* No remarks.
+
+[underline]#Distinction:# Checkpoint; Free Port Area.
+
+[[sec_16.16]]
+=== Exclusive Economic Zone
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *EXCLUSIVE ECONOMIC ZONE*. An area,
+not exceeding 200 nautical miles from the baselines from which the
+breadth of the Territorial Sea is measured, subject to a specific
+legal regime established in the United Nations Convention on the Law
+of the Sea under which the coastal state has certain rights and jurisdiction.
+(IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Exclusive Economic Zone (EXEZNE)*
+10+| *[underline]#Primitives:#* *Curve, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| in dispute 2+| 3+| | BO | 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| nationality 2+| (NATION) 3+| | TE | 1,*
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1
+footnote:sixteen_sixteen[For each instance of *information*, at least
+one of the sub-attributes *file reference* or *text* must be populated.]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnote:sixteen_sixteen[]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[underline]#INT 1 Reference:# N 47
+
+[[sec_16.16.1]]
+==== Exclusive Economic Zones (see S-4 -- B-440.9)
+
+In the Exclusive Economic Zone, the coastal State has sovereign
+rights for the purpose of exploring and exploiting, conserving and
+managing the natural resources, whether living or non-living, of the
+waters superjacent to the seabed and of the seabed and its subsoil,
+and with regard to other activities for the economic exploitation and
+exploration of the Zone, such as the production of energy from the
+water, currents and winds.
+
+If it is required to encode an Exclusive Economic Zone (EEZ), it must
+be done using the feature *Exclusive Economic Zone*.
+
+[underline]#Remarks:#
+
+* *Exclusive Economic Zone* must only be encoded using the geometric
+primitive curve where the real-world instance is actually linear, and
+it is therefore not possible to encode the feature using the
+geometric primitive surface. See <<sec_16.2>>.
+* For guidance regarding the encoding of areas in which the maritime
+jurisdiction between two or more Coastal States are in dispute, see
+<<sec_16.2.1>>.
+
+[underline]#Distinction:# Administration Area; Contiguous Zone;
+Continental Shelf Area; Fishery Zone; Territorial Sea Area.
+
+[[sec_16.17]]
+=== Fishery zone
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *FISHERY ZONE*. The offshore zone
+in which exclusive fishing rights and management are held by the coastal
+nation. (IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Fishery Zone (FSHZNE)*
+10+| *[underline]#Primitives:#* *Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[sixteen_seventeen]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| nationality 2+| (NATION) 3+| | TE | 1,1
+
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+5: periodic/intermittent +
+6: reserved +
+7: temporary | EN | 0,*
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_seventeen]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_seventeen]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[sixteen_seventeen]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# N 45
+
+[[sec_16.17.1]]
+==== Fishery zones (see S-4 -- B-440.7)
+
+A fishery zoneis an area inside and beyond the Territorial Sea where
+a coastal State proclaims that it alone may regulate fishing. Where
+States have permitted others to fish in parts of the area, it may be
+desirable to encode the area of both the full area and the area of
+special concessionary rights. In some instances, claims are described
+as "conservation zones"; for practical purposes these may be classed
+with fishery zones since their intended function is to institute
+fishery conservation measures. Most of the fishery zone claims are
+limited by fixed distance (200 nautical miles in some cases) from the
+Territorial Sea baselines.
+
+If it is required to encode a fishery zone, it must be done using the
+feature *Fishery Zone*.
+
+[underline]#Remarks:#
+
+* Fishery zones commonly coincide with other national jurisdiction
+areas such as Continental Shelf and Exclusive Economic Zone. Where
+this occurs, Producing Authorities may choose to omit the *Fishery
+Zone* from the area covered by these other national jurisdiction
+areas, as the fact that fishing regulations apply in these areas is
+implicit.
+* An indication of the fishery zone limit (for example 6 mile, 12
+mile) may be encoded using the complex attribute *feature name*.
+
+[underline]#Distinction:# Administration Area; Contiguous Zone;
+Continental Shelf Area; Exclusive Economic Zone; Fishing Ground;
+Restricted Area; Territorial Sea Area.
+
+[[sec_16.18]]
+=== Fishing ground
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *FISHING GROUND*. A water area in which fishing is frequently carried on. (IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Fishing Ground (FSHGRD)*
+10+| *[underline]#Primitives:#* *Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[sixteen_eighteen]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| restriction 2+| (RESTRN) 3+|
+1: anchoring prohibited +
+2: anchoring restricted +
+4: fishing restricted +
+5: trawling prohibited +
+6: trawling restricted +
+8: entry restricted +
+9: dredging prohibited +
+10: dredging restricted +
+11: diving prohibited +
+12: diving restricted +
+15: construction prohibited +
+16: discharging prohibited +
+17: discharging restricted +
+18: industrial or mineral exploration/development prohibited +
+19: industrial or mineral exploration/development restricted +
+20: drilling prohibited +
+21: drilling restricted +
+22: removal of historical artefacts prohibited +
+23: cargo transhipment (lightening) prohibited +
+24: dragging prohibited +
+25: stopping prohibited +
+26: landing prohibited +
+27: speed restricted +
+39: swimming prohibited | EN | 0,*
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+5: periodic/intermittent +
+6: reserved +
+7: temporary +
+8: private +
+14: public +
+16: watched +
+17: unwatched +
+28: buoyed | EN | 0,*
+3+| vessel speed limit 2+| 3+| | C | 0,*
+
+3+| speed limit 2+| 3+| | (S) RE | 1,1
+
+3+| speed units 2+| 3+|
+2: kilometres per hour +
+3: miles per hour +
+4: knots | (S) EN
+| 1,1
+
+3+| vessel class 2+| 3+| | (S) TE | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_eighteen]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_eighteen]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[sixteen_eighteen]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:#
+
+[[sec_16.18.1]]
+==== Fishing grounds
+
+If it is required to encode a fishing ground, it must be done using
+the feature *Fishing Ground*.
+
+[underline]#Remarks:#
+
+* For additional guidance regarding the encoding of vessel speed
+limits, see <<sec_17.4>>.
+
+[underline]#Distinction:# Fishery Zone; Marine Farm/Culture.
+
+[[sec_16.19]]
+=== Free port area
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *FREE PORT AREA*. A port where certain
+import and export duties are waived (unless goods pass into the country)
+to facilitate reshipment to other countries. (IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Free Port Area (FRPARE)*
+10+| *[underline]#Primitives:#* *Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[sixteen_nineteen]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+6: reserved +
+8: private +
+14: public | EN | 0,*
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_nineteen]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_nineteen]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[sixteen_nineteen]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:#
+
+[[sec_16.19.1]]
+==== Free port areas
+
+If it is required to encode a free port area, it must be done using
+the feature *Free Port Area*.
+
+[underline]#Remarks:#
+
+* No remarks.
+
+[underline]#Distinction:# Custom Zone; Production/Storage Area.
+
+[[sec_16.20]]
+=== Harbour area (administrative)
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *HARBOUR AREA*. The area over which
+a harbour authority has jurisdiction. (S-57 Edition 3.1,
+Appendix A -- Chapter 1, Page 1.80, November 2000).
+10+| *[underline]#S-101 Geo Feature:# Harbour Area (Administrative) (HRBARE)*
+10+| *[underline]#Primitives:# Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[sixteen_twenty]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+4: not in use +
+6: reserved +
+8: private +
+14: public | EN | 0,*
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_twenty]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_twenty]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[sixteen_twenty]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# N 49
+
+[[sec_16.20.1]]
+==== Administrative harbour areas (see S-4 -- B-430.1)
+
+Administrative harbour areasmust be shown on at least the largest
+optimum display scale ENC datasets, where possible, to assist
+Mariners in complying with harbour regulations.
+
+If it is required to encode an administrative harbour area, it must
+be done using the feature *Harbour Area (Administrative)*.
+
+[underline]#Remarks:#
+
+* If it is required to encode a named harbour area over which there
+is no jurisdictional authority, it must be done using the feature
+*Sea Area/Named Water Area* (see <<sec_9.1>>).
+* A masked line may be used to suppress the symbolisation of the
+boundary, where such symbolisation is considered inappropriate.
+
+[underline]#Distinction:# Dock Area; Sea Area/Named Water Area.
+
+[[sec_16.21]]
+=== Log pond
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *LOG POND*. A maritime area enclosed
+with connected floating timbers used as a staging area for sawn logs.
+(S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.102, November 2000).
+10+| *[underline]#S-101 Geo Feature:#* *Log Pond (LOGPON)*
+10+| *[underline]#Primitives:#* *Point, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[sixteen_twentyone]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+5: periodic/intermittent +
+6: reserved +
+7: temporary +
+8: private | EN | 0,*
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_twentyone]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_twentyone]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[sixteen_twentyone]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# N 61
+
+[[sec_16.21.1]]
+==== Log ponds (see S-4 -- B-449.2)
+
+If it is required to encode a log pond (also known as booming
+ground), it must be done using the feature *Log Pond*.
+
+[underline]#Remarks:#
+
+* Seasonal log ponds should be encoded using the complex attribute
+*periodic date range*.
+* It is not required to separately encode any posts, piles or other
+log pond barrier supports.
+
+[underline]#Distinction:#
+
+[[sec_16.22]]
+=== Oil barrier
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *OIL BARRIER*. A floating barrier
+to stop and contain the spread of oil on a water body surface.
+(Defence Geospatial Information Working Group; Feature Data Dictionary
+Register, 2010).
+10+| *[underline]#S-101 Geo Feature:#* *Oil Barrier (OILBAR)*
+10+| *[underline]#Primitives:#* *Curve*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| category of oil barrier 2+| (CATOLB) 3+|
+1: oil retention (high pressure pipe) +
+2: floating oil barrier | EN | 0,1
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+2: ruined +
+5: planned construction | EN | 0,1
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1 footnoteblock:[sixteen_twentytwo]
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[sixteen_twentytwo]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+4: not in use +
+5: periodic/intermittent +
+7: temporary +
+8: private | EN | 0,*
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_twentytwo]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_twentytwo]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[sixteen_twentytwo]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# F 29
+
+[[sec_16.22.1]]
+==== Oil barriers (see S-4 -- B-449.2)
+
+If it is required to encode an oil barrier, it must be done using
+the feature *Oil Barrier*.
+
+[underline]#Remarks:#
+
+* No remarks.
+
+[underline]#Distinction:#
+
+[[sec_16.23]]
+=== Straight Territorial Sea Baseline
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *STRAIGHT TERRITORIAL SEA BASELINE*.
+Straight baselines are a system of straight lines joining specified
+or discrete points on the low-water line, usually known as straight
+baseline turning points. Straight baselines are used in delimitation.
+(IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Straight Territorial Sea Baseline (STSLNE)*
+10+| *[underline]#Primitives:#* *Curve*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| nationality 2+| (NATION) 3+| | TE | 1,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnote:sixteen_twentythree[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnote:sixteen_twentythree[]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[underline]#INT 1 Reference:# N 42
+
+[[sec_16.23.1]]
+==== Straight Territorial Sea Baselines (see S-4 -- B-440.4)
+
+A Territorial Sea is delimited by:
+
+* Territorial Sea Baselines (drying lines);
+* Straight Territorial Sea Baselines;
+* International maritime boundaries (see <<sec_16.1>>); and
+* Seaward limits of Territorial Seas (see <<sec_16.2>>).
+The term "Baseline" refers to the line from which the breadth of the
+Territorial Sea, the outer limits of the Contiguous Zone, the
+Exclusive Economic Zone and, in some cases, the Continental Shelf are
+measured. It is also the dividing line between internal watersand
+territorial seas. Internal waters comprise all areas of the sea on
+the landward side of the Territorial Sea Baselines, as well as inland
+waters including rivers, lakes, etc.
+
+The normal baselineis the low water line (which is not defined any
+more precisely by UNCLOS) of the mainland, islands, or low tide
+elevations, as depicted on large scale charts officially recognised
+by the coastal State; they therefore do not require depiction in
+ENCs. Features which are naturally-formed and dry at low water (for
+example rocks, reefs, sand banks) may be considered low-tide
+elevations and included in the baseline (details are given in UNCLOS
+- see IHO publication C-51).
+
+A straight baselinemay be used:
+
+* as a closing line across the mouth or estuary of a river;
+* as a closing line across the mouth of a juridical bay or a
+historical bay;
+* as part of a system of Straight Territorial Sea Baselines, for
+example to connect seaward points on a deeply indented coastline, a
+coastline that is fringed with islands, around unstable coastlines; or
+* as an archipelagic baseline.
+If it is required to encode a Straight Territorial Sea Baseline, it
+must be done using the feature *Straight Territorial Sea Baseline*.
+
+[underline]#Remarks:#
+
+* No remarks.
+
+[underline]#Distinction:#
+
+[[sec_16.24]]
+=== Territorial Sea area
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *TERRITORIAL SEA AREA*. A belt of
+water of a defined breadth but not exceeding 12 nautical miles measured
+seaward from the Territorial Sea Baseline. (IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Territorial Sea Area (TESARE)*
+10+| *[underline]#Primitives:#* *Curve, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| in dispute 2+| 3+| | BO | 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| nationality 2+| (NATION) 3+| | TE | 1,*
+
+3+| restriction 2+| (RESTRN) 3+|
+2: anchoring restricted +
+4: fishing restricted +
+6: trawling restricted +
+8: entry restricted +
+9: dredging prohibited +
+10: dredging restricted +
+12: diving restricted +
+17: discharging restricted +
+18: industrial or mineral exploration/development prohibited +
+19: industrial or mineral exploration/development restricted +
+20: drilling prohibited +
+21: drilling restricted +
+22: removal of historical artefacts prohibited +
+23: cargo transhipment (lightening) prohibited +
+24: dragging prohibited +
+27: speed restricted | EN | 0,*
+3+| vessel speed limit 2+| 3+| | C | 0,*
+
+3+| speed limit 2+| 3+| | (S) RE | 1,1
+
+3+| speed units 2+| 3+|
+2: kilometres per hour +
+3: miles per hour +
+4: knots | (S) EN
+| 1,1
+
+3+| vessel class 2+| 3+| | (S) TE | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnote:sixteen_twentyfour[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnote:sixteen_twentyfour[]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[underline]#INT 1 Reference:# N 43
+
+[[sec_16.24.1]]
+==== Territorial Seas (see S-4 -- B-440.5)
+
+A Territorial Sea is delimited by:
+
+* Territorial Sea Baselines (drying lines);
+* Straight Territorial Sea Baselines (see <<sec_16.1>>);
+* International maritime boundaries (see <<sec_16.2>>); and
+* Seaward limits of Territorial Seas.
+Within the Territorial Sea, a coastal State exercises sovereignty
+subject to rules of international law, including the right of
+innocent passage for foreign ships.
+
+If it is required to encode a Territorial Sea area, it must be done
+using the feature *Territorial Sea Area*.
+
+[underline]#Remarks:#
+
+* For additional guidance regarding the encoding of vessel speed
+limits, see <<sec_17.4>>.
+* *Territorial Sea Area* must only be encoded using the geometric
+primitive curve where the real-world instance is actually linear, and
+it is therefore not possible to encode the feature using the
+geometric primitive surface. See <<sec_16.2>>.
+* For guidance regarding the encoding of areas in which the maritime
+jurisdiction between two or more Coastal States are in dispute, see
+<<sec_16.2.1>>.
+
+[underline]#Distinction:# Administration Area; Contiguous Zone;
+Continental Shelf Area; Exclusive Economic Zone; Fishery Zone;
+Restricted Area.
+
+[[sec_16.25]]
+=== Submarine transit lane
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *SUBMARINE TRANSIT LANE*. A lane
+where submarines may navigate under water or at the surface.
+(IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Submarine Transit Lane (SUBTLN)*
+10+| *[underline]#Primitives:#* *Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[sixteen_twentyfive]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| nationality 2+| (NATION) 3+| | TE | 0,1
+
+3+| restriction 2+| (RESTRN) 3+|
+1: anchoring prohibited +
+2: anchoring restricted +
+3: fishing prohibited +
+4: fishing restricted +
+5: trawling prohibited +
+6: trawling restricted +
+7: entry prohibited +
+8: entry restricted +
+9: dredging prohibited +
+10: dredging restricted +
+11: diving prohibited +
+12: diving restricted +
+13: no wake +
+16: discharging prohibited +
+17: discharging restricted +
+18: industrial or mineral exploration/development prohibited +
+19: industrial or mineral exploration/development restricted +
+20: drilling prohibited +
+21: drilling restricted +
+22: removal of historical artefacts prohibited +
+23: cargo transhipment (lightening) prohibited +
+24: dragging prohibited +
+25: stopping prohibited +
+27: speed restricted | EN | 0,*
+3+| vessel speed limit 2+| 3+| | C | 0,*
+
+3+| speed limit 2+| 3+| | (S) RE | 1,1
+
+3+| speed units 2+| 3+|
+2: kilometres per hour +
+3: miles per hour +
+4: knots | (S) EN
+| 1,1
+
+3+| vessel class 2+| 3+| | (S) TE | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_twentyfive]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_twentyfive]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[sixteen_twentyfive]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# N 33
+
+[[sec_16.25.1]]
+==== Submarine transit lanes (see S-4 -- B-441.5)
+
+Submarine transit lanes should not generally be encoded because
+submarines exercise over wide areas which it would not be practicable
+to depict, and over which cautions (to keep a good look out for them)
+are unlikely to be effective. They may, however, be encoded where
+they occur in or near major shipping lanes or port approaches.
+
+If it is required to encode a submarine transit lane, it must be done
+using the feature *Submarine Transit Lane*.
+
+[underline]#Remarks:#
+
+* For additional guidance regarding the encoding of vessel speed
+limits, see <<sec_17.4>>.
+
+[underline]#Distinction:# Military Practice Area.
+
+[[sec_16.26]]
+=== Pilotage district
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *PILOTAGE DISTRICT*. An area within
+which a pilotage direction exists. Such directions are regulated by
+a competent harbour authority which dictates circumstances under which
+they apply. (UK Pilotage Act 1987).
+10+| *[underline]#S-101 Geo Feature:#* *Pilotage District*
+10+| *[underline]#Primitives:#* *Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| communication channel 2+| (COMCHA) 3+| | TE | 0,*
+
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(PILDST) (NPLDST)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[sixteen_twentysix]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_twentysix]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_twentysix]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Collection 3+| *Pilotage District Association* (see <<sec_25.11>>) 3+| *Pilot Boarding Place* 2+| Aggregation | 0,1
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[sixteen_twentysix]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:#
+
+[[sec_16.26.1]]
+==== Pilotage districts (see S-4 -- B-491)
+
+If it is required to encode the area within which regulations
+regarding pilotage apply it should be done using the feature
+*Pilotage District*.
+
+[underline]#Remarks:#
+
+* The relevant regulations, where required, must be encoded using the
+complex attribute *information* (see <<sec_2.4.6>>).
+* Where the limit of pilotage regulations are coincident with harbour
+or port limits it is not required to encode a *Pilotage District*
+feature.
+* Each VHF-channel should be indicated, using the attribute
+*communication channel* (see <<sec_27.77>>). Alternately, if the same
+VHF-channel(s) apply to multiple features in the dataset, this should
+be indicated through an associated instance of the information type
+*Contact Details*, attribute *communication channel* (see
+<<sec_24.1>>).
+* The relationship between the pilotage district and any associated
+pilot boarding places should be encoded using the feature association
+*Pilotage District Association* (see <<sec_25.11>>).
+
+[underline]#Distinction:# Pilot Boarding Place.
+
+[[sec_16.27]]
+=== Collision regulations limit
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *COLLISION REGULATIONS LIMIT*. Convention
+on the International Regulations for Preventing Collisions at Sea,
+1972 (COLREGs). The demarcation line between inland navigation rules
+and international navigation rules.
+10+| *[underline]#S-101 Geo Feature:#* *Collision Regulations Limit*
+10+| *[underline]#Primitives:#* *Curve*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[sixteen_twentyseven]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[sixteen_twentyseven]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[sixteen_twentyseven]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| regulation citation 2+| 3+| | TE | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_twentyseven]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_twentyseven]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[sixteen_twentyseven]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:#
+
+[[sec_16.27.1]]
+==== Collision regulations limit
+
+If it is required to encode a collision regulations (COLREGs)
+demarcation line, it must be done using the feature *Collision
+Regulations Limit*.
+
+[underline]#Remarks:#
+
+* If it is required to encode the national regulation citation it
+must be done using the attribute *regulation citation*. The
+regulation citation is generally the national legal citation for the
+implementation of an international regulation (for example _33 CFR
+26_), as distinct from the title for the regulation, which should be
+populated in the complex attribute *feature name*, sub-attribute
+*name* (for example _International Regulations for the Prevention of
+Collisions at Sea_ -- _Vessel Bridge-to-Bridge Radiotelephone
+Regulations_.
+
+[underline]#Distinction:# Administration Area.
+
+[[sec_16.28]]
+=== Marine pollution regulations area
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *MARINE POLLUTION REGULATIONS AREA*.
+The International Convention for the Prevention of Pollution from
+Ships (MARPOL) is the main international convention covering prevention
+of pollution of the marine environment by ships from operational or
+accidental causes. (International Maritime Organization).
+10+| *[underline]#S-101 Geo Feature:# Marine Pollution Regulations Area*
+10+| *[underline]#Primitives:# Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[sixteen_twentyeight]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| regulation citation 2+| 3+| | TE | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,* footnoteblock:[sixteen_twentyeight]
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_twentyeight]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[sixteen_twentyeight]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[sixteen_twentyeight]]
+[NOTE]
+--
+Mandatory if not associated to an instance of the information type
+*Nautical Information*.
+
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:#
+
+[[sec_16.28.1]]
+==== Marine pollution regulations area
+
+If it is required to encode an area subject to marine pollution
+regulations as defined in IMO MARPOL, IMO conventions and various
+national regulations, it must be done using the feature *Marine
+Pollution Regulations Area*.
+
+[underline]#Remarks:#
+
+* The regulation title should be encoded using the complex attribute
+*feature name*, sub-attribute *name*, for example _IMO MARPOL Annex
+IV -- Regulations for the Prevention of Pollution by Sewerage from
+Ships_.
+* If it is required to encode the national regulation citation it
+must be done using the attribute *regulation citation*. The
+regulation citation is generally the national legal citation for the
+implementation of an international regulation (for example _33 CFR
+33_).
+* A short summary of the regulation and a reference to the
+publication containing the regulation must be included using the
+complex attribute *information* (see <<sec_2.4.6>>).
+
+[underline]#Distinction:# Administration Area.

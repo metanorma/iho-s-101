@@ -1,0 +1,580 @@
+
+[[sec_31]]
+== Updating (see S-4 -- B-600)
+
+[underline]#Remarks:#
+
+* An ENC Update will be rejected by the ECDIS if it is located
+outside the area of data coverage for the dataset (that is, area
+covered by the Meta feature *Data Coverage* with attribute
+stem:[bb "category of coverage" = 1] (coverage available)) or if it changes
+the extent of this area. Where the area of data coverage for a base
+ENC dataset is to be changed, this must be done by issuing a New
+Edition of the dataset.
+* It has been reported that some ECDIS experience problems in loading
+large Update datasets. Therefore, as a guide, ENC Updates should not
+exceed 50 Kilobytes in size.
+* It has been reported that grouping new or modified soundings into
+existing sounding groups (see <<sec_11.3>>) in an ENC Update
+negatively impacts the discovery of the changes to the bathymetry by
+Mariners. Therefore, encoders are advised that soundings added or
+modified as part of an ENC Update should be encoded as individual
+sounding objects or, if in close proximity, may be included as a
+single grouped sounding object. When a New Edition of the ENC is
+produced, soundings may be re-grouped in accordance with the Data
+Producer's standard practices.
+* When updating the geometry of curve features, compilers must note
+S-101 clause X.
+
+X regarding the requirement for the vector records making up the
+curve feature to be referenced sequentially. Additionally, for curve
+features comprising multiple edges, the end node of a vector record
+must be the same as the start node of the following vector record. It
+has been reported that some ECDIS reject ENC Updates where the
+geometry does not conform to these requirements.
+
+[[sec_31.1]]
+=== Issuing Updates in advance
+
+Under certain conditions, it may be necessary for a Data Producer to
+issue Update information in advance. For example, a change in a
+traffic routeing system must be made public before the new situation
+is implemented. Within an Update dataset there is no means of
+indicating the date at which an Update must be applied. Therefore,
+when an Update dataset is received by an end-user, it must be applied
+immediately. To avoid situations where Update information would cause
+target data to reflect a situation that does not yet exist, the
+following encoding rules must be followed:
+
+. [[item_31.1_a]]If the advance Update information contained in the Update message
+involves the addition of features to the existing data (for example a
+new lighthouse), the *date start* sub-attribute for the complex
+attribute *fixed date range* on the new features must contain the
+date at which the Update becomes active.
+
+. If the advance Update information contained in the Update message
+involves the modification of existing features (for example a change
+in a traffic routeing system), it must be treated as a deletion of
+the existing features and replacement with new features.
+See <<item_31.1_a>> above and <<item_31.1_c>> below.
+
+. [[item_31.1_c]]If the advance Update information contained in the Update message
+involves the deletion of existing features (for example the removal
+of a buoy), the Update message must set the *end date* sub-attribute
+for the complex attribute *fixed date range* of all features to be
+deleted to the date at which the Update becomes active. *NB*. This
+Update message does not actually delete the features from the
+dataset, it simply indicates that on the date held in the *date end*
+sub-attribute for the complex attribute *fixed date range* they
+become obsolete. A further Update to actually delete the obsolete
+features from the dataset should be sent at the time that the change
+in the real world occurs.
+
+d) To highlight to the Mariner that the advance Update information
+contained in an Update message will take place in the future, it is
+recommended that a *Caution Area* feature (see <<sec_16.10>>) be
+created covering the location at which the future changes will take
+place. A warning note specifying, in plain language, the nature of
+the future change should be encoded, using the complex attribute
+*information* (see <<sec_2.4.6>>). The sub-attribute *date end* for
+the complex attribute *fixed date range* on the *Caution Area* must
+be set to the date at which the change described in the Update
+becomes active.
+
+Changes to the *date start* and *date end* for *fixed date range*
+cannot be applied to spatial types. Therefore, a change to the
+geometry of a real world feature (for example the relocation of a
+buoy) to be applied in the future can only be achieved by updating
+all of the geo and spatial types involved.
+
+As a consequence of issuing advance information Updates, more than
+one instance of a particular real world feature could exist in the
+dataset.
+
+Further information regarding issuing Update information in advance
+as an equivalent to the paper chart Preliminary Notices to Mariners
+process can be found at <<sec_31.2.3>>.
+
+[[sec_31.1.1]]
+==== Advance notification of changes to traffic separation schemes
+
+It is important that Mariners be provided with advance notification
+of changes to traffic separation schemes (TSS), which may include
+modification to an existing TSS, addition of a new TSS or removal of
+a TSS. In order to provide a consistent approach to Mariners
+regarding advance notification of changes to a traffic separation
+scheme, the following procedure should be adopted:
+
+. At least one month before the changes to the TSS come into force,
+issue an updated dataset (as an Update or a New Edition) which:
++
+--
+* Adds new or amended TSS component features. These features must
+have *date start* for *fixed* *date range* populated with the date
+that the changes to the TSS come into force.
+* Adds *date end* for *fixed date range* (populated with the date of
+the day before the changes to the TSS come into force) to any
+component features of the existing TSS that are to be changed or
+deleted.
+* Creates a *Caution Area* surface feature (see <<sec_16.10>>)
+covering the geographic extent of both the current and the future
+TSS. The complex attribute *information* (see <<sec_2.4.6>>) must be
+used to explain the change to the TSS, for example_"The traffic
+separation scheme off Cape Bon is to be modified at 0000 UTC on 1
+July 2009. This ENC includes all the information before and after the
+change, indicated by the sub-attributes_ *_date end_* _(before the
+change) and_ *_date start_* _(after the change) for the complex
+attribute_ *_fixed date range_* _on the components of the scheme"_.
+The sub-attribute *date end* on *fixed date range* for the *Caution
+Area* should be populated with the date at which the change comes
+into force or, if encoders wish to provide extended information to
+the Mariner that a change has been made, with a date up to a month
+after the change comes into force. If the current and the future TSS
+are not in the same geographic area, it may be required to encode two
+distinct *Caution Area* surface features. A picture file may be
+referenced by the *Caution Area* using the attribute *pictorial
+representation* if it is considered useful, for example the
+equivalent paper chart representation of the amended or new TSS.
+--
+
+. As soon as possible after the modified/new/deleted TSS comes into
+force, issue an updated dataset (as an Update or New Edition) which:
++
+--
+* Deletes the changed or redundant component features of the former
+TSS.
+* Removes the attribute *fixed date range* from the component
+features of the new TSS.
+--
+
+. The *Caution Area* must also be removed by Update, either as part
+of the Update to remove the redundant component features of the
+former TSS, or as a separate Update at a later date, corresponding to
+the date populated in the sub-attribute *date end* for the complex
+attribute *fixed date range* for the *Caution Area*.
++
+--
+Encoders who are members of RENCs should also provide advance
+notification of changes to TSS to their RENC in accordance with RENC
+procedures, in order for the RENC to provide additional notification
+to Mariners of impending TSS changes.
+--
+
+[[sec_31.2]]
+=== Guidelines for encoding Temporary and Preliminary ENC Updates
+
+[[sec_31.2.1]]
+==== Introduction
+
+The following provides high level guidance for the promulgation of
+the equivalent of paper chart Temporary (T) and Preliminary (P)
+Notices to Mariners (NMs) via ENC Updates. This guidance allows for
+some latitude in its application and is dependent on the assessment
+of each particular case, and as such relies ultimately on the
+judgement of each ENC Producing Authority.
+
+[[sec_31.2.2]]
+==== Temporary (T) Notices to Mariners (see S-4 -- B-633)
+
+. Temporary Notices to Mariners, (T)NMs, for paper charts are defined
+in S-4, Section B-600. A (T)NM promulgates navigationally significant
+information that will remain valid only for a limited period of time.
+
+For the paper chart, the convention is for the Mariner to insert the
+Update on the chart in pencil, and erase it when the (T)NM is
+cancelled.
+
+S-101 provides mechanisms which allow ENCs to be automatically
+updated. This allows the affected ENC(s) to be continually updated in
+a timely manner for the duration of the NM without additional
+workload for the Mariner.
+
+Producing Authorities must promulgate temporary information which is
+safety-related or which otherwise needs to be advised to the Mariner
+urgently by ENC Update to provide the ECDIS user with an updated
+System Database. This service corresponds to the service that (T)NMs
+offer to the paper chart user.
+
+. Update encoding for an ENC and (T)NM for the paper chart are two
+completely different communication processes for promulgating
+information to the Mariner. Since these processes are different (but
+not supposed to be independent), and the products to which they apply
+are also different, it is recommended that ENC Updates be derived
+from the source information rather than the paper chart (T)NM. Often
+the (T)NM for paper chart does not provide enough detail to apply the
+relevant ENC Update.
+. If possible the information should be encoded with the relevant
+features. However, HOs should consider the following:
+
+* An ENC Update must not be initiated if the information will no
+longer be valid by the time it is received by the Mariner; this will
+depend upon the timescales relating to the Producer Nation's ENC
+Updating regime. Shorter time periods may be covered by Radio
+Navigational Warnings (RNW). If known, the ENC Update should include
+an indication of how long the temporary change will remain in force.
+
+* If it is unlikely that the HO will be notified when a temporary
+change will revert to its original charted state, the HO should
+consider an alternative method such as a general note or by issuing
+an ENC Update explaining, for example, that the aids to navigation
+within an area are reported to be unreliable.
+
+It is important that HOs should consider constraints of time when
+identifying the encoding method. Time consuming and unnecessarily
+complex methods of encoding should be avoided.
+
+.. The overuse of *Caution Area* features (especially *Caution Area*
+of type surface -- see <<sec_16.10>>) for temporary information should
+be avoided. The *Caution Area* feature is used when it is relevant
+for the situation and/or when a particular change needs a special
+warning. *Caution Area* may be used when the relevant features cannot
+be encoded, for example information cannot be displayed clearly or
+cannot be easily promulgated due to time constraints.
+.. To correctly encode an ENC Update the source information is essential
+in determining which elements of the Update are reliable, which are
+permanent and which are temporary. The attribute *status* with value
+_7_ (temporary) should only be used in an Update when it is certain
+that the status of a feature is confirmed as temporary.
+.. Use of complex attribute *fixed date range*:
+
+The earliest date on which a feature will be present (*date start*)
+and the latest date on which a feature will be present (*date end*)
+must only be encoded when known. Where such dates have been encoded
+for any feature that is the structure component of a
+*Structure/Equipment* feature association, all other component
+features within the relationship must not extend beyond the temporal
+attribute values encoded for the structure feature.
+
+The ENC Update should be issued as close as possible to the earliest
+date of the change (*date start*), unless it is appropriate to
+provide the information well in advance. A feature no longer present
+should be removed from the display by issuing a further Update as
+soon as possible after the return to the original charted state
+(*date end*). The timing of the issue of these Updates will depend
+upon the Producing Authorities ENC Updating regime and its
+corresponding timescales.
+
+When an ENC Update promulgates information well in advance and uses
+*fixed date range*, a *Caution Area* feature may be used in order
+to
+inform Mariners that temporal information exists at some future point
+in time.
+
+.. The complex attribute *information* (see <<sec_2.4.6>>), sub-attribute
+*text* should be used as required to provide supplementary or contextual
+information when encoding temporary (or preliminary) information.
+When the text is too long to be encoded using *information* (*text*)
+(see <<sec_27.177>>), the complex attribute *information*, sub-attribute
+*file reference* should be used to encode a reference to an ENC support
+file. Encoders using *information* to provide positional information
+must express the coordinate values in WGS 84 and in accordance with
+S-4 -- B-131. If it is deemed necessary a picture file (referenced
+using attribute *pictorial representation*) may be included.
+.. ENC Updates issued for temporary information should be carefully
+managed and reviewed regularly to consider whether further action
+is necessary. New information may have been received that necessitates
+the issuing of a new Update to modify or cancel the previous one.
+Producing Authorities should make it easy to recover the original
+charted state before the temporary changes came into effect.
+.. Further verification is recommended to make sure that the encoded
+ENC Update is consistent with the corresponding paper chart Notice
+to Mariners.
+.. Guidelines for typical cases:
+
+[type=a]
+. Individual new physical features (for example wreck, buoy) with no
+associated explicit or implicit area associated (for example
+restricted area):
+
+* Encode the relevant S-101 feature.
+* In this instance a *Caution Area* feature would not normally be
+used.
+
+.. Individual new physical feature(s) with an associated explicit area around it:
+
+*** Encode the relevant S-101 surface feature (for example
+*Restricted Area*). The relevant feature is encoded for the new
+physical feature. However, when the area is an "entry prohibited
+area" or a *Caution Area* feature the new physical feature(s) may be
+omitted to simplify encoding unless it is navigationally significant.
+.. Individual new physical feature with a notification of caution,
+for example "Mariners are advised to navigate with caution…":
+
+* Encode the relevant S-101 feature. Additional clarification and
+advice may, if required, be provided using the complex attribute
+*information* (see <<sec_2.4.6>>). Exceptionally, a *Caution Area*
+feature may be encoded to highlight the caution if considered
+necessary.
+
+. Obstructions (including wrecks) reported to exist within an area:
+
+** Encode an *Obstruction* or *Wreck* feature of type surface (see
+<<sec_13.6;and!sec_13.5>>).
+. New simple surface feature (military practice area, dredged area):
+
+* Encode the relevant S-101 surface feature.
+* Supplementary information is provided using the complex attribute
+*information* (see <<sec_2.4.6>>).
+* Normally, a *Caution Area* feature is not added.
+
+.. Complex information within an area (for example works in progress
+where the changes are numerous or involve complex changes to the topology):
+
+*** Encode the surface feature. It should be encoded with the
+relevant S-101 feature or, if more suitable or by default, a *Caution
+Area* feature (see <<sec_16.10>>). Supplementary or contextual
+information is provided using the complex attribute *information*
+(see <<sec_2.4.6>>). When the available information is sufficiently
+detailed, navigationally significant features (for example
+navigational aids, obstructions) should be encoded or modified within
+the area. When the available information does not permit this, a
+*Caution Area* feature defining the area is preferred.
+
+.. Changes to an existing feature (for example navigational aid):
+
+* In these instances it is usually only necessary to change the
+attributes values. A *Caution Area* feature (see <<sec_16.10>>) may
+be used to warn the Mariner if it is considered necessary.
+
+.. Buoy temporarily moved:
+
+*** When a buoy is temporarily moved then it, and any associated
+features, are "moved" to the new position and the attribute stem:[bb
+"status" = 7] (temporary) is populated. Alternative encodings are
+possible, for example, if the move is for a fixed period of time. In
+these cases the feature, and any associated components, can be
+created in the temporary position with sub-attribute *date end* for
+the complex attribute *fixed date range* populated with the date
+corresponding to the end of the fixed period of time. The currently
+charted feature, and any associated components, should have *date
+start* for the complex attribute *fixed date range* also populated
+with the date corresponding to the end of the fixed period of time. A
+*Caution Area* feature may, if considered necessary, be added.
+
+.. Light temporarily extinguished:
+
+* The attribute *status* for the *Light* feature is populated with
+the values _11_ (extinguished) and _7_ (temporary).
+
+.. Change to a maintained depth in a dredged area:
+
+*** When information is received from an official or recognised
+survey authority relating to a dredged area where the dredged depth
+has changed, the attribute value of *depth range minimum value* for
+the *Dredged Area* feature should be changed to the value provided by
+the survey.
+*** Where a *Sounding* feature is encoded in a dredged area to
+indicate shoaler depths, the attribute value stem:[bb "exposition of
+sounding" = 2] (shoaler than the depth of the surrounding depth area)
+should not be populated (see <<sec_11.3.1;and!sec_11.4.1>>). Where
+required, the shoal depths should be encoded using *Sounding*, with
+the appropriate underlying depth information (*Depth Contour* and
+*Depth Area*) to support the depths. Alternatively, the attribute
+*depth range maximum value* for the *Dredged Area* may be set to the
+designed dredged depth for the dredged area and the attribute *depth
+range minimum value* set to the value of the shoalest depth, or a
+*Caution Area* feature may be encoded covering the shoaler depth area
+with the depth information provided using the complex attribute
+*information* (see <<sec_2.4.6>>). Where the shoal depths are close
+to the edge of the dredged area, the dredged area limit may be
+adjusted to exclude the shoal depths from the area. See also S-4 --
+B-414.5.
+
+[[sec_31.2.3]]
+==== Preliminary (P) Notices to Mariners (see S-4 -- B-634)
+
+. Preliminary Notices to Mariners, (P)NMs, for paper chart are
+defined in S-4, Section B-600. A (P)NM promulgates navigationally
+significant information early to the Mariner, for example when a
+paper chart new edition cannot be issued in due time.
++
+--
+For the paper chart, the convention is for the Mariner to insert the
+Update on the chart in pencil, and erase it when the (P)NM is
+cancelled.
+
+S-101 provides mechanisms which allow ENCs to be automatically
+updated (Update application profile). This allows the affected ENC(s)
+to be continually updated in a timely manner for the duration of the
+NM without additional workload for the Mariner.
+
+Producing Authorities must promulgate preliminary information which
+is safety-related or which otherwise needs to be advised to the
+Mariner urgently by ENC Update to provide the ECDIS user with an
+updated System Database. This method of delivery corresponds to the
+service that (P)NMs offer to the paper chart user.
+--
+
+. Update encoding for ENC and (P)NM for paper chart are two
+completely different communication processes for promulgating
+information to the Mariner.
++
+--
+For example, there are instances when the paper chart needs updating
+using a NM block (also known as a chartlet or patch) or by issuing a
+New Edition due to the complexity or volume of changes. This could
+clutter the paper chart unacceptably if amended by hand and/or
+overburden the chart corrector. The lead time for a NM block
+correction or a New Edition can be lengthy, sometimes several months.
+In these cases a (P)NM may be issued as an interim measure. The ENC
+Updating mechanisms are more flexible and may allow for ENC Updates
+to be issued in quicker time. However, experience has shown that
+large Updates may result in processing issues in the ECDIS, in
+particular inordinately long loading times. Therefore producing an
+ENC New Edition may be the better option in some cases.
+
+There may be other instances, when new information is received, where
+it is not possible to fully update both the ENC and paper chart
+promptly. For example, not all the information required to produce a
+chart-updating NM is received by the HO in the first notification
+(for instance notification of works in progress or projected), or
+extensive new information requires significant compilation work. In
+these cases it is still necessary to provide notification of
+navigationally significant changes to the Mariner in a timely manner.
+
+Since the paper chart and ENC processes are different (but not
+supposed to be independent), and also the products to which they
+apply are different, it is recommended that ENC Updates be derived
+from the source information rather than from the paper chart (P)NM.
+It is often the case that the paper chart (P)NM does not provide
+enough detail to encode the ENC Update exactly as it should be.
+--
+
+. Simple or more complex encoding methods are possible but it is
+important for Producing Authorities to consider carefully which
+encoding method is appropriate when creating an ENC Update with due
+consideration for time.
+. Often, information received is too complex, extensive and/or
+imprecise to be encoded with the relevant S-101 features. In these
+instances the use of a *Caution Area* feature (see <<sec_16.10>>) is
+preferred to give a précis of the overall changes together with
+detailed navigationally significant information. For complex or
+extensive changes the *Caution Area* should have the complex
+attribute *information*,sub-attribute *file reference* referencing a
+file containing precise details of the preliminary information. See
+also <<sec_31.2.2>> paragraph 7 above. If the information is less
+precise then *information* should be used to inform Mariners of this
+fact.
++
+--
+It is noted that the Mariner, if it is considered necessary, has the
+facility in the ECDIS to add "Mariner Objects" and annotate them.
+These can be saved in the System Database based on information
+provided in textual form using the *information* complex attribute.
+It is envisaged that these features would be created at the "Route
+Planning" stage and act as a prompt during the "Route Monitoring"
+phase.
+
+When information is issued as advance notification for an ENC it is
+necessary to provide as soon as possible to the Mariner the final and
+full charted information encoded with the relevant S-101 features. An
+ENC Update or a New Edition of the ENC dataset should therefore be
+issued at a later date when the Producing Authority can carry out
+full encoding of the changes. The period of time will depend on the
+following:
+
+* the time needed by the HO to undertake the full encoding with
+relevant features;
+* the time needed to obtain confirmation of details; and
+* the date at which the real world situation is stabilized and any
+forecast changes have been completed.
+--
+
+. Source Information received may contain some navigationally
+significant elements that are simple to encode with the relevant
+features in a timely manner. In such cases these elements may be
+encoded with the relevant features provided that they reflect the
+"real world" situation after the ENC Update is made available to the
+user. However, if the changes are subject to continual change these
+features should be amended as a consequence and will represent
+additional work for the HO. In such cases, the ENC Update should also
+warn the Mariner that the situation is subject to change. For
+temporary information, see <<sec_31.2.2>>.
+. Use of complex attribute *fixed date range*: See <<sec_31.2.2>>
+paragraph 6. For new or amended routeing measures, see <<sec_31.1.1>>.
+
+. Use the complex attribute *information*: See <<sec_31.2.2>>
+paragraph 7.
+
+. Diagrams are sometimes very useful to the Mariner, for example, for
+indicating changes to complex routeing measures or the introduction
+of new ones. A picture file may be referenced using the attribute
+*pictorial representation* in such cases.
+
+. ENC Updates issued for preliminary information should be managed
+and reviewed regularly. For example further source information may
+have been acquired requiring a further ENC Update. This may add,
+modify or cancel information previously promulgated.
+
+. Further verification is recommended to make sure that the encoded
+ENC Update is consistent with the corresponding paper notice.
+
+. Guidelines for typical cases:
+
+.. Traffic separation schemes:
++
+--
+* See <<sec_31.1.1>>. For the use of the complex attribute *fixed*
+*date range*, see also <<sec_31.2.2>> paragraph 6.
+--
+
+.. Complex information within an area of change
+(for example works in progress):
++
+--
+* A *Caution Area* feature (see <<sec_16.10>>) should be created to
+cover the area. Information is provided using the complex attribute
+*information* (see <<sec_2.4.6>>), sub-attribute *text*, for example
+_under construction_, or sub-attribute *file reference* to encode a
+reference to an ENC support file when it is necessary to give more
+detailed information. If sufficiently detailed information is
+available, then navigationally significant information such as
+navigational aids, fairways, regulated areas, etc. can be encoded or
+modified within the *Caution Area* if time permits. A reference to a
+picture file may also be included, if required, using the attribute
+*pictorial representation* on the *Caution Area*.
+* Alternatively, and if considered appropriate a *Restricted Area*
+feature (see <<sec_17.8>>), with attribute stem:[bb "restriction" =
+7] (entry prohibited) may be encoded instead of the *Caution Area*
+feature.
+--
+
+.. Simple information which does not need an additional notification
+of caution:
++
+--
+* The relevant feature(s) and the appropriate attributes should be
+encoded with any additional contextual information provided using the
+complex attribute *information* (see <<sec_2.4.6>>). In this case it
+is not necessary to use a *Caution Area* feature. This could apply,
+for example, to submarine cables or pipelines being laid (*Cable
+Submarine* or *Pipeline Submarine/On Land* features), or an area
+under reclamation (*Land Area* feature with attribute stem:[bb
+"condition" = 3] (under reclamation)). If required the encoding
+should reflect that positions are approximate using the spatial
+attribute *quality of horizontal measurement*= _4_ (approximate) on
+the spatial type(s).
+--
+
+.. Depths less than those charted within a defined area:
++
+--
+* If the depth values and their positions are known, *Sounding*
+features (see <<sec_11.3>>) may be created or modified. Any affected
+depth contours and depth areas should also be amended as necessary.
+The source of the information should be encoded using the complex
+attribute *information* (see <<sec_2.4.6>>). However, Producing
+Authorities should carefully consider the time needed to update ENC
+depth information and the complexity of changes to the topology that
+may be required.
+
+* The encoding of amended *Sounding*, *Depth Area* and associated
+features could be inappropriate for promulgating this navigationally
+significant information within acceptable time scales. In this case a
+*Caution Area* (see <<sec_16.10>>) is the preferred option. In such
+cases, only the most significant amendments to depth information
+should be provided using the complex attribute *information*. This
+method should also be used if the depth values and/or the exact
+positions are unknown, or if the Producing Authority only has
+information relating to a limited number of depth values.
+--

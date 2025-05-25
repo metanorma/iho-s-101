@@ -1,0 +1,1243 @@
+
+[[sec_11]]
+== Geo Features -- Depths
+
+[[sec_11.1]]
+=== Generalisation of depth portrayal
+
+When a survey or chart is reduced in scale the generalization that
+is required has several effects:
+
+a. Deeper soundings tend to be eliminated while the shoaler ones are
+retained for safety. Sufficient numbers of deeper soundings should be
+retained to show the full range of depth. This is to assist the
+navigator who uses their echo sounder to help verify their position,
+or the Mariner choosing an anchorage of suitable depth.
+
+b. Generalization proceeds by the inclusion of shoals lying to
+seaward of the principal contour, and by the smoothing of severely
+indented contours, with the effect of pushing the contours seaward.
+However, as a shoal which rises steeply from deep water is much more
+of a hazard than one which rises gradually, the encoder must ensure
+that the contours are not pushed seaward unduly. If the encoder gives
+the impression that a Mariner will get warning of too close an
+approach to the danger, by relying on their echo sounder to show
+gradually shoaling depth - when the danger is, in fact "steep-to" -
+they may seriously mislead and endanger the ENC user.
+
+c. With the "expansion" of shoals, described above, it may become
+increasingly difficult to find space on an ENC dataset to show the
+line of deepest soundings through a channel, or even to show a
+channel at all. Yet even at small optimum display scales it is
+important to show the usable channels and indicate their least depth.
+The encoder may have to make greater use of depth contours than
+soundings in depicting narrow channels.
+
+d. Even such dangers as drying rocks and islets require
+generalization in coastal areas. This is in recognition of the
+principle that, whereas they are particularly dangerous in isolation
+and must then be shown as precisely as possible, where they occur in
+groups a representative depiction is permissible, showing the
+outermost features as individually as space permits.
+
+[[sec_11.2]]
+=== Representation of depth: General
+
+Some of the principles of depth depiction are summarized below:
+
+. The least depth over shoals and banks, and over sills (bars) in
+navigable channels, must be shown. Particular attention should also
+be paid to full and accurate representation of all other "critical"
+areas, for example on and adjacent to leading lines, controlling
+depths in fairways and along recommended tracks, in anchorages,
+alongside jetties, quays and berths and in the entrances to harbours
+and basins. Maximum as well as minimum depth should be shown where
+possible, for example to show the line of deepest water in narrow
+channels. However, deeper soundings on the sloping side of a bank
+near to the crest line should not be selected if they could give the
+impression that there is a deeper passage across the crest between
+shoaler soundings.
+
+. Soundings and contours must be used to complement each other in
+giving a reasonable representation of the seabed, including all
+significant breaks of slope.
+
+. The density of soundings should be determined by the type of
+seabed. Flat or evenly sloping areas, and banks of unconsolidated
+sediment, should have a minimum of soundings, fairly evenly spaced,
+but gradually becoming more widely spaced as the depth increases.
+Irregular seabed topography should be represented by a denser, and
+probably irregular, pattern of soundings. A steep gradient should be
+represented by close contours, undistorted by soundings.
+
+. In changeable areas, where surveys of different dates adjoin and do
+not match exactly, gaps in the contours may be left to indicate the
+discontinuity of depth to the navigator.
+
+. Where practicable, soundings on smaller optimum display scale ENCs
+should be selected from those shown on the larger optimum display
+scale ENCs.
+
+. In areas navigable only at high water, drying heights must be
+selected according to the same principles as soundings.
+
+. Where surveys are inadequate, it may be advisable to omit some of
+the standard contour lines.
+
+[[sec_11.3]]
+=== Sounding
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *SOUNDING*. Measured or charted
+depth of water (may be a drying height), or the measurement of such
+a depth, which has been reduced to a vertical datum. (Adapted from
+IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Sounding (SOUNDG)*
+10+| *[underline]#Primitives:#* *Pointset*
+
+3+| _Real World_ 4+| _Paper Chart Symbol_ 3+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[eleven_three]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| quality of vertical measurement 2+| (QUASOU) 3+|
+1: depth known +
+3: doubtful sounding +
+4: unreliable sounding +
+8: value reported (not surveyed) +
+9: value reported (not confirmed) | EN | 0,*
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+3+| status 2+| (STATUS) 3+| 18: existence doubtful | EN | 0,1
+3+| technique of vertical measurement 2+| (TECSOU) 3+|
+1: found by echo sounder +
+2: found by side scan sonar +
+3: found by multi beam +
+4: found by diver +
+5: found by lead line +
+8: swept by vertical acoustic system +
+9: found by electromagnetic sensor +
+10: photogrammetry +
+11: satellite imagery +
+12: found by levelling +
+13: swept by side scan sonar +
+15: found by LIDAR +
+16: synthetic aperture radar +
+17: hyperspectral imagery +
+18: mechanically swept | EN | 0,*
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE
+| 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[eleven_three]
+
+3+| headline 2+| 3+| | (S) TE
+| 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[eleven_three]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[eleven_three]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# I 10, 14, 15
+
+[[sec_11.3.1]]
+==== Soundings (see S-4 -- B-412 and B-413.1)
+
+A sounding associated with a rock or coral pinnacle which is an
+obstruction to navigation must be encoded using the feature
+*Underwater/Awash Rock* (INT1 -- K14, see <<sec_13.4>>) with
+attribute *value of sounding* populated with the value of the
+sounding.
+
+The geometry of soundings and no bottom found depths (see
+<<sec_11.8>>) is held in a 3-dimensional array (latitude, longitude,
+depth). In the interests of efficiency, multiple soundings should be
+encoded in one spatial type (known as "grouping" of soundings),
+provided that all the spatial and geo feature attributes are common
+to the group and all soundings in the group are related to the same
+sounding datum (see <<sec_3.9>>).
+
+As the sounding multiplication factor (CMFZ) for ENC is 10, soundings
+may be encoded to one decimal place of a metre. Drying soundings must
+be indicated by a negative value.
+
+For soundings surrounded by a danger line, see
+<<sec_13.1;and!sec_13.2>>.
+
+Population of the attributes *quality of vertical measurement*,
+*reported date* and the spatial attribute *quality of horizontal
+measurement* are described in the Table below:
+
+[[table_11-1]]
+.Soundings -- Attribute encoding
+[cols="192,102,64,158,158,386"]
+|===
+h| Sounding h| S-4 h| INT 1 h| quality of horizontal measurement h| quality of vertical measurement h| Remarks
+
+| In true position | B-412.1 | I10 | | _1_ or _<undefined>_ |
+
+| Out of position on paper chart | B-412.2 | I11I12 | | _1_ or _<undefined>_
+| Spatial type must be encoded at the true position. There is no "sounding, out of position" in an ENC.
+
+| Lower reliability | B-412.4 | I14 | _4_ | _4_ |
+
+| Drying | B-413 | I15 | | _1_ or _<undefined>_ | Negative value
+
+| Doubtful | B-424.4 | I2 | | _3_
+| Existence doubtful should be encoded using stem:[bb "status" = 18]
+
+| Reported but not confirmed | | I3I4 | _4_ | _9_
+| If available, the year of report must be encoded using the attribute
+*reported date*
+
+|===
+
+[underline]#Remarks:#
+
+* Encoders are advised to use caution when considering encoding
+soundings that are shoaler than the range of depth of the surrounding
+depth area, as *Sounding* features will not be displayed when
+utilising some ECDIS display settings. Where it is considered that a
+sounding that is shoaler than the range of depth of the surrounding
+depth area may be a hazard to navigation, encoders should preferably
+conduct further investigation of source material in order to encode
+additional depth contour and depth area information more relevant to
+the sounding. Alternatively, encoders may consider using an alternate
+feature (for example *Obstruction*) to encode the depth.
+* The attribute *technique of vertical measurement* must only be
+populated for *Sounding* features if it is different from the value
+of *technique of vertical measurement* encoded on an overlapping
+*Quality of Survey* feature (see <<sec_3.11>>); and the information
+is considered to be important to navigation.
+* Where *Sounding* features are covered by the Meta feature *Quality
+of Survey*, the attribute *quality of vertical measurement* must not
+be populated unless different from the value of *quality of vertical
+measurement* populated for the *Quality of Survey*.
+* An instance of the information type *Spatial Quality* (see
+<<sec_25.4>>) may be associated to the sounding geometry, using the
+association *Spatial Association*, to indicate, where required, that
+the horizontal position and/or the vertical uncertainty for the
+sounding(s) is of different (higher or lower) accuracy than indicated
+by the underlying *Quality of Bathymetric Data* Meta feature (see
+<<sec_3.8>>). See also <<sec_3.8.1.3>>(Sounding uncertainty).
+* Where a named isolated shoal is indicated in the dataset by a
+single encoded sounding, the name of the shoal must be encoded, where
+required, using the complex attribute *feature name* on the
+*Sounding* feature. Where the named isolated shoal is indicated by
+two or more soundings (and possibly other submerged features), the
+name of the shoal must be encoded, where required, using a *Sea
+Area/Named Water Area* feature (see <<sec_2.5.8;and!sec_9.1>>).
+* Encoders must exercise caution when using the option to group
+soundings; particularly where they are included in an ENC Update as
+this may impact negatively on ECDIS performance regarding Mariner
+interrogation of Updates. When grouping soundings in an ENC dataset,
+creation of excessively large sounding groups should be avoided so as
+to reduce the impact when a sounding is to be removed by ENC Update;
+and new soundings to be added by ENC Update should not be added to
+already existing sounding groups.
+* For depths indicated as no bottom found, see <<sec_11.8>>.
+
+[underline]#Distinction:# Depth Area; Depth -- No Bottom Found;
+Obstruction; Underwater/Awash Rock; Wreck.
+
+[[sec_11.4]]
+=== Dredged area
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *DREDGED AREA*. An area of the bottom
+of a body of water which has been deepened by dredging. (IHO Dictionary
+-- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Dredged Area (DRGARE)*
+10+| *[underline]#Primitives:#* *Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| depth range maximum value 2+| (DRVAL2) 3+| stem:["DRVAL2" >= "DRVAL1"] | RE | 0,1 3+| depth range minimum value 2+| (DRVAL1) 3+| stem:["DRVAL1" <= "DRVAL2"] | RE | 1,1 3+| dredged date 2+| _(SORDAT)_
+3+| | TD | 0,1
+
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[eleven_four]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| maximum permitted draught 2+| 3+| | RE | 0,1
+
+3+| quality of vertical measurement 2+| (QUASOU) 3+|
+10: maintained depth +
+11: not regularly maintained | EN | 0,1
+3+| restriction 2+| (RESTRN) 3+|
+1: anchoring prohibited +
+2: anchoring restricted +
+3: fishing prohibited +
+4: fishing restricted +
+5: trawling prohibited +
+6: trawling restricted +
+8: entry restricted +
+11: diving prohibited +
+12: diving restricted +
+13: no wake +
+16: discharging prohibited +
+17: discharging restricted +
+18: industrial or mineral exploration/development prohibited +
+19: industrial or mineral exploration/development restricted +
+20: drilling prohibited +
+21: drilling restricted +
+23: cargo transhipment (lightening) prohibited +
+25: stopping prohibited +
+27: speed restricted +
+39: swimming prohibited | EN | 0,*
+3+| technique of vertical measurement 2+| (TECSOU) 3+|
+1: found by echo sounder +
+2: found by side scan sonar +
+3: found by multi beam +
+8: swept by vertical acoustic system +
+9: found by electromagnetic sensor +
+13: swept by side scan sonar +
+15: found by LIDAR +
+16: synthetic aperture radar +
+17: hyperspectral imagery +
+18: mechanically swept | EN | 0,*
+3+| vertical uncertainty 2+| _(SOUACC)_
+3+| | C | 0,1
+
+3+| uncertainty fixed 2+| 3+| | (S) RE
+| 1,1
+
+3+| uncertainty variable factor 2+| 3+| | (S) RE
+| 0,1
+
+3+| vessel speed limit 2+| 3+| | C | 0,*
+
+3+| speed limit 2+| 3+| | (S) RE
+| 1,1
+
+3+| speed units 2+| 3+|
+2: kilometres per hour +
+3: miles per hour +
+4: knots | (S) EN
+| 1,1
+
+3+| vessel class 2+| 3+| | (S) TE
+| 0,1
+
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE
+| 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[eleven_four]
+
+3+| headline 2+| 3+| | (S) TE
+| 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[eleven_four]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Auxiliary Feature 3+| *Fairway Auxiliary* (see <<sec_25.8>>) 3+| *Fairway* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[eleven_four]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# I 20-23
+
+[[sec_11.4.1]]
+==== Dredged areas (see S-4 -- B-414)
+
+If it is required to encode dredged areas, this must be done using
+the feature *Dredged Area*.
+
+[underline]#Remarks:#
+
+* The attribute *depth range minimum value* must be used to encode
+the dredged depth for the dredged area. Where required, the attribute
+*depth range maximum depth* must be used to encode the deeper depth
+where a range of depths for the dredged area is indicated on the
+source.
+* The boundary of a dredged area should not have coincident curve geo
+features encoded, unless part of the boundary corresponds to the
+shoreline (see <<sec_5.3.1>>).
+* Dredged areas are often subject to siltation, resulting in shoaler
+depths being identified in the dredged area than the designed dredged
+depth. Where required, the shoal depths should be encoded using
+*Sounding*, with the appropriate underlying depth information (*Depth
+Area* and, if required, *Depth Contour*) to support the depths.
+Alternatively, the attribute *depth range maximum value* for the
+*Dredged Area* may be set to the designed dredged depth for the
+dredged area, and the attribute *depth range minimum value* set to
+the value of the shoalest depth, or a *Caution Area* feature may be
+encoded covering the shoaler depth area with the depth information
+provided using the complex attribute *information* (see
+<<sec_2.4.6>>). Where the shoal depths are close to the edge of the
+dredged area, the dredged area limit may be adjusted to exclude the
+shoal depths from the surface. See also S-4 -- B-414.5.
+* The attribute *source date* may be used to encode the year of the
+latest control survey for dredged areas where the dredged depth is
+not maintained. For dredged areas where the dredged depth is
+maintained, it is not required to indicate the year of dredging.
+* Where the complex attribute *vertical uncertainty* is populated for
+a *Dredged Area* feature, it must not be equivalent to or degrade the
+uncertainty indicated by the complex attribute *vertical uncertainty*
+for the underlying *Quality of Bathymetric Data* Meta feature (see
+<<sec_3.8;and!sec_24.5>>).
+* For additional guidance regarding the encoding of vessel speed
+limits, see <<sec_17.4>>.
+* *Dredged Area* features are part of the Skin of the Earth.
+
+[underline]#Distinction:# Depth Area; Dumping Ground; Swept Area.
+
+[[sec_11.5]]
+=== Swept area
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *SWEPT AREA*. An area that has been determined to be clear of navigational dangers to a specified depth. (IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Swept Area (SWPARE)*
+10+| *[underline]#Primitives:#* *Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| depth range minimum value 2+| (DRVAL1)
+3+| | RE | 1,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| swept date 2+| _(SORDAT)_
+3+| | TD | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE
+| 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnote:eleven_five[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
+
+3+| headline 2+| 3+| | (S) TE
+| 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnote:eleven_five[]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Auxiliary Feature 3+| *Fairway Auxiliary* (see <<sec_25.8>>) 3+| *Fairway* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[underline]#INT 1 Reference:# I 24
+
+[[sec_11.5.1]]
+==== Swept areas (see S-4 -- B-415)
+
+If it is required to encode a swept area, it must be done using the
+feature *Swept Area*.
+
+Spot soundings and depth contours shown in these areas must be
+encoded using *Sounding* and *Depth Contour* features. A Meta feature
+*Quality of Bathymetric Data* must be encoded to provide quality
+information for the *Swept Area* (see <<sec_3.8>>). The *depth range
+maximum* value for the *Quality of Bathymetric Data* feature must be
+equal to the swept depth (*depth range minimum*) value for the *Swept
+Area*. The complex attribute *vertical uncertainty* (*uncertainty
+fixed*) may be used on the *Quality of Bathymetric Data* or on the
+associated *Spatial Quality* feature (see <<sec_24.5>>) to specify
+the uncertainty of the swept depth value, or otherwise must be
+populated as _0_; *horizontal position uncertainty* (*uncertainty
+fixed*) on the *Quality of Bathymetric Data* or on the associated
+*Spatial Quality* must be populated as _0_. Where required, a
+separate *Quality of Bathymetric Data* feature must be encoded to
+provide depth or positional accuracy information for any underlying
+bathymetry within the swept area.
+
+[[fig_11-1]]
+.Swept areas -- Quality of bathymetric data
+image::figure-11-1.png["",657,402]
+
+Even if the area contains no spot soundings or depth contours, a
+*Swept Area* feature must overlap *Depth Area* or *Dredged Area*
+features. If there is insufficient depth information to allow the
+attributes *depth range minimum value* and *depth range maximum
+value* to be encoded on a *Depth Area* or *Dredged Area* feature,
+*depth range minimum value* should be set to the swept depth and
+*depth range maximum value* should be set to an empty (null) value.
+
+[underline]#Remarks:#
+
+* The attribute *depth range minimum value* must be used to encode
+the swept depth for the swept area.
+* Where required, the date of sweeping must be populated using the
+attribute *swept date*.
+* *Swept Area* features must not overlap.
+
+[underline]#Distinction:# Depth Area; Dredged Area; Unsurveyed Area.
+
+[[sec_11.6]]
+=== Depth contour
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *DEPTH CONTOUR*. A line connecting points
+of equal water depth which is sometimes significantly displaced outside
+of soundings, symbols, and other chart detail for clarity as well as
+generalization. Depth contours therefore often represent an approximate
+location of the line of equal depth as related to the surveyed line delineated
+on the source. (IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Depth Contour (DEPCNT)*
+10+| *[underline]#Primitives:#* *Curve*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| value of depth contour 2+| (VALDCO)
+3+| | RE | 1,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE
+| 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnote:eleven_six[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
+
+3+| headline 2+| 3+| | (S) TE
+| 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnote:eleven_six[]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[underline]#INT 1 Reference:# I 15, 30, 31
+
+[[sec_11.6.1]]
+==== Depth contours (see S-4 -- B-404.2; B-410; B-411 to B-411.5; B-413 and B-413.1)
+
+The standard series of depth contour lines to be encoded for ENC is:
+drying line (0 contour -- where tides are appreciable), 2, 5, 10, 15,
+20, 30, 50, 100, 200, 300, 400, 500, 1000, 2000 metres, etc. The 2, 5
+and/or 15 metre contours may be omitted where they serve no useful
+purpose, and on smaller optimum display scale ENC data all depth
+contours to 30 metres (1:1500000 and 1:3000000 optimum display
+scales) or 200 metres (1:10000000 optimum display scale) should be
+omitted. It is not necessary for the complete sequence of contours to
+be shown, for example on steep slopes and around isolated pinnacles.
+
+Supplementary contours, for example at 3, 8, 25, 40, 75 metres and
+multiples of 10 or 100 metres may be shown, if the available data
+permit, to delineate particular bathymetric features where soundings
+would otherwise be the only depth information over a large area, or
+for the benefit of particular categories of shipping. The 2500 metre
+contour may be required for measuring Continental Shelf limits (see
+UNCLOS Article 76).
+
+On the larger optimum display scale ENC datasets, for example
+datasets intended for harbour navigation or berthing; or in areas
+where vessel under keel clearance is critical, a smaller contour
+interval may be used (for example 1 metre, or 0.1 metre if it is
+desired to provide the same depth accuracy as for soundings) in the
+depth range suitable for the deepest draught vessels that may
+navigate in the area. Such encoding is intended to best utilize the
+safety depth indication functionality of the ECDIS.
+
+The boundary of a drying rocky area (see INT1 - J20) or coral reef
+(see INT1 - J22) may be coincident with the zero metre contour (see
+'_fg_' in the Figure). If it is required to encode this boundary, it
+must be done using the feature *Depth Contour* with the attribute
+stem:[bb "value of depth contour" = 0].
+
+On the source, the presentation of contours in areas of steep slope
+is sometimes generalised so that closely spaced contours are removed
+to leave a single contour (see '_ab_' in Figure). In such cases, this
+contour must be encoded using the shallowest depth of the slope.
+
+Wherever possible, contours must be closed, or connected to the
+border of the dataset, a coastline feature or another contour, in
+order to define closed areas.
+
+Spatial quality associated with contours may be encoded using the
+*Spatial Quality* information type, attribute *quality of horizontal
+measurement* (see <<sec_28.14>>). This should only be encoded if the
+spatial quality of the contour(s) is different to that indicated for
+the overall quality of the bathymetric data in the area as described
+for the underlying *Quality of Bathymetric Data* Meta feature (see
+<<sec_3.8>>). However, in order to provide an additional indication
+to the mariner of areas of lower reliability bathymetric data,
+contours in depths of 30 metres or less may have the attribute
+*quality of horizontal measurement* on the associated *Spatial
+Quality* information type populated with value _4_ (approximate).
+
+[[fig_11-2]]
+.Depth contours
+image::figure-11-1.png[286,459]
+
+[underline]#Remarks:#
+
+* Encoded drying contours must be indicated by negative values for
+the attribute *value of depth contour*.
+
+[underline]#Distinction:# Coastline; Depth Area; Sounding.
+
+[[sec_11.7]]
+=== Depth area
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *DEPTH AREA*. A water area whose
+depth is within a defined range of values. (S-57 Edition 3.1, Appendix
+A -- Chapter 1, Page 1.51, November 2000).
+10+| *[underline]#S-101 Geo Feature:#* *Depth Area (DEPARE)*
+10+| *[underline]#Primitives:#* *Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| depth range maximum value 2+| (DRVAL2) 3+| DRVAL2 > DRVAL1 | RE | 1,1
+3+| depth range minimum value 2+| (DRVAL1) 3+| DRVAL1 < DRVAL2 | RE | 1,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE
+| 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1
+footnote:eleven_seven[For each instance of *information*, at least
+one of the sub-attributes *file reference* or *text* must be populated.]
+
+3+| headline 2+| 3+| | (S) TE
+| 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnote:eleven_seven[]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[underline]#INT 1 Reference:#
+
+[[sec_11.7.1]]
+==== Depth areas (see S-4 -- B-410)
+
+The sea area, the intertidal area and the navigable parts of rivers,
+lakes and canals must be divided into depth areas, each of them
+having a range of depth.
+
+As many depth areas as possible must be created using encoded depth
+contours.
+
+[underline]#Remarks:#
+
+* The value of *depth range maximum value* for the deepest *Depth
+Area* on the ENC dataset should be encoded with the next deepest
+depth contour from the standard range of depth contours appropriate
+to the optimum display scale of the ENC data (see <<sec_11.6.1>>),
+noting that the depth ranges used for adjoining ENC datasets of the
+same or similar optimum display scale must also be considered.
+* *Depth Area* features are part of the Skin of the Earth.
+
+[[sec_11.7.2]]
+==== Geometry of depth areas
+
+Where surfaces are not closed on the source, it may be necessary to
+close these surfaces using edges without associated curve features.
+This is mandatory at the boundary of a dataset (see <<fig_11-3>>
+below).
+
+In <<fig_11-3>> below, the annotation "**min**" equates to the
+attribute *depth range minimum value* and the annotation "**max**"
+equates to the attribute *depth range maximum value*.
+
+[[fig_11-3]]
+.Geometry of depth areas
+image::figure-11-3.png[545,204]
+
+[underline]#Remarks:#
+
+* For short isolated sections of *Depth Contour* features such as
+(_fi_), it is up to the producing authority whether to encode the
+small areas (_efije_ and _fghif_) as separate *Depth Area* features,
+or to encode only the curve (_fi_) as a floating *Depth Contour*
+feature within a single *Depth Area* (_abcda_) having attributes
+stem:[bb "depth range minimum value" = 5] and stem:[bb "depth range
+maximum value" = 20].
+
+NOTE: In <<fig_11-3>>, if the optional *Depth Area* features are
+encoded, the depth area (_abcda_) will be split into two separate
+*Depth Area* features (_abgea_) and (_jhcdj_), both having stem:[bb
+"depth range minimum value" = 5] and stem:[bb "depth range maximum
+value" = 20].
+
+[[sec_11.7.3]]
+==== Use of attributes depth range minimum value and depth range maximum value for depth areas in general
+
+For each depth area, *depth range minimum value* and *depth range
+maximum value* should be encoded with the values corresponding to the
+shallowest and deepest depths in that area. These values, except for
+the shallowest and deepest areas, should be chosen from the values of
+the depth contours encoded in the dataset, however the values for
+isolated shallow or deep areas may be taken from the shallowest or
+deepest measured depth (see items 2 and 3 in <<fig_11-4>> below).
+
+A drying area, within which a drying height is indicated without a
+true position, should be encoded using a *Depth Area* feature, with
+*depth range minimum value* set to the value of the drying height and
+*depth range maximum value* set to a dataset contour value (usually
+zero). Alternatively, *depth range minimum value* for the *Depth
+Area* may be set to --H (see NOTE (a) associated with <<fig_11-4>>
+below for definition of H), with the drying height encoded using the
+complex attribute *information* (see <<sec_2.4.6>>), sub-attribute
+*text*(for example_Dries 1.4_).
+
+If a depth area is adjacent to a non-navigable waterway, a closing
+curve (that is, no curve geo feature) should be encoded at the
+boundary between navigable and non-navigable waters. See
+<<sec_11.7.4>>.
+
+In <<fig_11-4>> below, the annotation "**min**" equates to the
+attribute *depth range minimum value* and the annotation "**max**"
+equates to the attribute *depth range maximum value*.
+
+[[fig_11-4]]
+.Depth areas
+image::figure-11-4.png[454,442]
+
+**NOTE (a)**: H = Height of the coastline datum above sounding datum,
+or a rounded value (for example (1) the value of the highest drying
+contour indicated on the source document; or (2) zero, if the
+coastline datum is the same as the sounding datum).
+
+In the following clauses, the paragraph numbers refer to the item
+numbers in <<fig_11-4>>. These clauses do not cover all encoding
+scenarios.
+
+. If the depth area is bounded by two or more depth contours:
++
+--
+* *depth range minimum value* should take the value of the dataset
+depth contour immediately shallower than the value of *depth range
+maximum value*.
+* *depth range maximum value* should take the value of the deepest
+depth contour bounding the area.
+--
+
+. If the depth area is only bounded by one depth contour andthe
+deepest depth is shown by a depth contour, and the shallowest depth
+is shown by a sounding (an isolated shoal area):
++
+--
+* *depth range minimum value* should take the value of the dataset
+depth contour immediately shallower than the value of the sounding or
+‑H. However if the shallowest sounding within the area is considered
+to be the least depth of the shoal, *depth range minimum value* may
+be populated with the value of this sounding.
+* *depth range maximum value* should take the value of the depth
+contour.
+
+NOTE: In the case where the shallowest depth in the area is equal to
+the bounding depth contour, both *depth range minimum value* and
+*depth range maximum value* may be populated with the value of the
+depth contour.
+--
+
+. If the depth area is only bounded by one depth contour andthe
+deepest depth is shown by a sounding and the shallowest depth is
+shown by a depth contour (an isolated deep area):
++
+--
+* *depth range minimum value* should take the value of the depth
+contour.
+* *depth range maximum value* should take the value of the dataset
+depth contour immediately deeper than or equal to the value of the
+sounding. However if the deepest sounding within the area is
+considered to be the deepest depth of the deep, *depth range maximum
+value* may be populated with the value of this sounding.
+--
+
+. If the shallowest depth is defined by the coastline:
++
+--
+* *depth range minimum value* should take the value of -H.
+* *depth range maximum value* should take the value of the shallowest
+dataset depth contour bounding the area.
+--
+
+. If the depth area is bounded by only one depth contour, contains no
+soundings, and is a shoal:
++
+--
+* *depth range minimum value* should take the value of the dataset
+depth contour immediately shallower than the value of the depth
+contour, or -H.
+* *depth range maximum value* should take the value of the depth
+contour.
+--
+
+. If the depth area is bounded by only one depth contour, contains no
+soundings, and is a deep:
++
+--
+* *depth range minimum value* should take the value of the depth
+contour.
+* *depth range maximum value* should take the value of the standard
+depth contour immediately deeper than the value of the depth contour.
+--
+
+. If the depth area is bounded by an incomplete depth contour on one
+side (such as in incompletely surveyed area), and a complete depth
+contour on the other:
++
+--
+* These areas are optional. See <<sec_11.7.2>> above and associated
+<<fig_11-3>>.
+--
+
+. If the depth area is bounded by complete depth contours, but
+contains an incomplete (floating) depth contour:
++
+--
+* *depth range minimum value* should take the value of the shallowest
+depth contour.
+* *depth range maximum value* should take the value of the deepest
+depth contour.
+
+NOTE: Where the optional depth areas in paragraph 7 above are
+encoded, this will result in two discrete *Depth Area* features, one
+on each side of the encoded optional depth areas. See <<sec_11.7.2>>
+above and associated <<fig_11-3>>.
+--
+
+[[sec_11.7.4]]
+==== Rivers, canals, lakes, basins, locks
+
+Where these areas are navigable at the optimum display scale for the
+ENC data, they must be encoded using the Skin of the Earth features
+*Depth Area*, *Dredged Area* or *Unsurveyed Area*, and coastline-type
+features *Coastline* or *Shoreline Construction*. If it is required
+to encode the nature and name of the area, it must be done using the
+feature *Sea Area/Named Water Area*.
+
+Where these areas are required and are not navigable at the optimum
+display scale for the ENC data, they must be encoded using the
+features *River*, *Canal* or *Lake*. These features must be covered
+by *Land Area* features.
+
+[[sec_11.7.5]]
+==== Areas of continual change (see S-4 -- B-416)
+
+If it is required to encode an area of continually changing
+bathymetry, it must be done by populating the attribute stem:[bb
+"category of temporal variation" = 2] (likely to change and
+significant shoaling expected) or _3_ (likely to change but
+significant shoaling not expected) for the underlying *Quality of
+Bathymetric Data* feature (see <<sec_3.8>>).
+
+Such areas must always overlap *Depth Area* features.
+
+An area on the source with the indication "Less water" should be
+encoded using the feature *Caution Area* (see <<sec_16.10>>). Caution
+notes in such areas must be encoded using the complex attribute
+*information* (see <<sec_2.4.6>>).
+
+If it is required to encode sandwaves, this must be done using the
+feature *Sandwave* (see <<sec_12.4>>).
+
+[underline]#Distinction:# Depth Contour; Dredged Area; Obstruction;
+Sea Area/Named Water Area; Sounding; Unsurveyed Area; Wreck.
+
+[[sec_11.8]]
+=== Depth -- no bottom found
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *DEPTH -- NO BOTTOM FOUND*.
+Upon investigation the bottom was not found at this depth.
+(Adapted from IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:# Depth -- No Bottom Found _(SOUNDG)_*
+10+| *[underline]#Primitives:# Pointset*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| technique of vertical measurement 2+| (TECSOU) 3+|
+1: found by echo sounder +
+2: found by side scan sonar +
+3: found by multi beam +
+5: found by lead line +
+8: swept by vertical acoustic system +
+9: found by electromagnetic sensor +
+13: swept by side scan sonar +
+15: found by LIDAR +
+16: synthetic aperture radar +
+17: hyperspectral imagery +
+18: mechanically swept | EN | 0,*
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE
+| 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnote:eleven_eight[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
+
+3+| headline 2+| 3+| | (S) TE
+| 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnote:eleven_eight[]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[underline]#INT 1 Reference:# I 13
+
+[[sec_11.8.1]]
+==== No bottom found depths (see S-4 -- B-412.3)
+
+If it is required to encode a depth at a point at which it is
+indicated as having no bottom found at the value shown, it must be
+done using the feature *Depth -- No Bottom Found*.
+
+The geometry of soundings (see <<sec_11.3.1>>) and no bottom found
+depths is held in a 3-dimensional array (latitude, longitude, depth).
+In the interests of efficiency, multiple no bottom found depths
+should be encoded in one spatial type, provided that all the spatial
+and geo feature attributes are common to the group and all no bottom
+found depths in the group are related to the same sounding datum (see
+<<sec_3.9>>).
+
+Even though the sounding multiplication factor (CMFZ) for ENC is
+{10}, no bottom found depths must be encoded to a whole metre value.
+
+[underline]#Remarks:#
+
+* For encoding areas that have been systematically surveyed and for
+which the depth has not been found (for example, for LIDAR surveys),
+see <<sec_11.5.1>>.
+
+[underline]#Distinction:# Depth Area; Sounding; Swept Area.
+
+[[sec_11.9]]
+=== Areas with inadequate depth information
+
+[[sec_11.9.1]]
+==== Inadequately surveyed areas (see S-4 -- B-417)
+
+Inadequately surveyed areasmay be defined as those areas where
+bathymetry is based on older lead line surveys or other surveys which
+are either open in nature (for example reconnaissance surveys), or
+are not hydrographic surveys (for example seismic surveys). These
+types of surveys are inadequate for identifying all shoals that may
+exist between lines of soundings, or may not be "shoal-biased" in
+their selection of recorded depths.
+
+An inadequately surveyed area should be encoded using either an
+*Unsurveyed Area* feature, within which soundings and contours may be
+encoded (but not depth areas), or using *Depth Area* features. The
+attributes *depth range minimum value* and *depth range maximum
+value* for such depth areas should have explicit values.
+
+The area must also be covered by *Quality of Bathymetric Data*
+features (see <<sec_3.8>>), having appropriate attribute values,
+usually stem:[bb "category of temporal variation" = 6] (unassessed),
+*features detected* (*significant features detected*) = _False_, and
+*full seafloor coverage achieved* = _False_. Further information may
+be given using the Meta feature *Quality of Survey* (see
+<<sec_3.11>>), where appropriate.
+
+A cautionary note should also be encoded using a *Caution Area*
+feature of type surface (see <<sec_16.11>>), complex attribute
+*information* (see <<sec_2.4.6>>).
+
+[[sec_11.9.2]]
+==== Bathymetry in areas of minimal depiction of detail on paper charts
+
+Where areas of little or no depth information exist within a
+specified ENC usage, they should be encoded using one of the
+following options:
+
+[[sec_11.9.2.1]]
+===== Areas of omitted bathymetry
+
+Encoders are advised that when encoding areas of bathymetry from
+paper charts containing minimal depth detail at scales that
+correspond to the optimum display scale for the data, to consult
+larger scale paper charts or optimum display scale ENC datasets and
+generalise the bathymetry from this data. This is done to ensure that
+sufficient information is encoded so as not to conflict with larger
+optimum display scale coverage. The following is the recommended
+minimum encoding requirement in such cases:
+
+Where larger optimum display scale ENC coverage is available, the
+larger scale datasets should be examined to determine the shallowest
+*Depth Area* feature, other than the intertidal area, within the
+whole of the area. Intertidal areas should then be generalised from
+the larger optimum display scale coverage, and one *Depth Area*
+feature may then be created, with attributes *depth range minimum
+value* and *depth range maximum value* encoded from the values
+obtained from the larger scale, corresponding to the remaining area
+of bathymetry.
+
+Where larger optimum display scale coverage does not exist, a single
+*Depth Area* feature may be created to cover the area of omitted
+bathymetry. The *depth range minimum value* of the *Depth Area*
+feature should be set to the shallowest value appropriate to the
+colour tint that is applied to it (for example if blue tint is used
+for 5-20m areas, the *depth range minimum value* for the area of
+omitted bathymetry should be set to _5_). The *depth range maximum
+value* should be set to the shallowest value of the surrounding Skin
+of the Earth polygons.
+
+In either case, the areas should be covered by a *Caution Area*
+feature, the boundary of which follows exactly the surrounding Skin
+of the Earth features (see <<sec_2.5.3.2>>).
+
+Encoders should consider the effect of over-generalising areas of
+omitted bathymetry on the ECDIS display as the Mariner "zooms out"
+through the ENC display scales.
+
+[[sec_11.9.2.2]]
+===== Areas of very simplified bathymetry
+
+In these areas, information relating to bathymetry (for example depth
+contours, dangers, rocky areas, isolated rocks, nature of the seabed,
+dredged areas, unsurveyed areas) should be individually encoded as
+normal.
+
+A *Caution Area* feature (see <<sec_16.11>>) should be created
+covering the *Depth Area* features within the area of simplified
+bathymetry, with a cautionary note encoded using the complex
+attribute *information* (see <<sec_2.4.6>>).
+
+[[sec_11.9.3]]
+==== Depth discontinuities between surveys (see S-4 -- B-416.1)
+
+Depth discontinuities between adjoining or overlapping source
+bathymetric surveys may be caused by:
+
+* Surveys in areas of continually changing depth (see <<sec_11.7.5>>)
+conducted with a significant time gap between the surveys; or
+* Adjoining areas having significant differences in the quality of
+bathymetric data (see <<sec_3.8>>).
+
+It may not be possible to safely resolve significant depth
+discontinuity by interpolating approximate depth contours, which may
+compromise the ability for the compiler to adequately encode
+complete, non-overlapping Skin of the Earth coverage of the area of
+the ENC cell covered by data. Where it is required to indicate these
+significant depth discontinuities, it should be done by encoding a
+"very narrow" *Unsurveyed Area* feature.
+
+The "very narrow area" should be at least 0.3mm in width at optimum
+display scale for the ENC data.
+
+[underline]#Remarks:#
+
+* An indication of the purpose of the *Unsurveyed Area* may be done
+by population of the complex attribute *information* (see
+<<sec_2.4.6>>), sub-attribute *text*, for example _Discontinuity
+between surveys_.
+* In order to provide an indication to the Mariner of the more
+reliable encoded bathymetry in an area of continually changing depth,
+the defining attributes should be downgraded for the *Quality of
+Bathymetric Data* feature (see <<sec_3.8>>) corresponding to the less
+reliable (or older) data.
+
+[[sec_11.9.4]]
+==== Satellite imagery as source information
+
+In some areas source information may be limited to shallow water
+depth information derived from satellite imagery. Where defined
+depths can be interpolated from satellite imagery (for example the
+drying line, 5 metre or 10 metre depth contours), and little or no
+reliable source survey information exists in the area, consideration
+should be given to showing this information in ENCs.
+
+If it is required to encode shoal areas which have been derived from
+satellite imagery, *Depth Area* and *Depth Contour* features of an
+appropriate depth range should be used. This should only be done in
+areas which have not been systematically surveyed. Areas of depth
+information derived from satellite imagery must be covered by
+*Quality of Bathymetric Data* Meta features (see <<sec_3.8>>).
+Recommended attribute values for the *Quality of Bathymetric Data*
+include stem:[bb "category of temporal variation" = 6] (unassessed);
+*features detected* (*significant features detected*) = _False_; and
+*full seafloor coverage achieved* = _False_. Optionally, the area may
+also be covered by a *Quality of Survey* feature (see <<sec_3.11>>),
+having attribute stem:[bb "technique of vertical measurement" = 11]
+(satellite imagery).
+
+In some cases satellite imagery provides evidence that existing
+charted information derived from source survey data has changed over
+time. If required, the attribute *category of temporal variation* on
+the underlying *Quality of Bathymetric Data* Meta feature should be
+amended to _2_ (likely to change and significant shoaling expected)
+or _3_ (likely to change but significant shoaling not expected).
+Alternatively, if the quality of the charted bathymetry is considered
+by the Producing Authority to be poor, consideration may be given to
+replacing the existing charted detail using the satellite derived
+data, as described above, however with stem:[bb "category of temporal
+variation" = 2] (likely to change and significant shoaling expected)
+or _3_ (likely to change but significant shoaling not expected).
+
+[[sec_11.10]]
+=== Unsurveyed area
+
+[cols="11", options="unnumbered"]
+|===
+11+| [underline]#IHO Definition:# *UNSURVEYED AREA*. An area where
+hydrographic survey data is non-existent.(IHO Dictionary -- S-32).
+11+| *[underline]#S-101 Geo Feature:#* *Unsurveyed Area (UNSARE)*
+11+| *[underline]#Primitives:#* *Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 5+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value 2+h| Type h| Multiplicity
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) 2+| URN | 0,1
+
+3+| information 2+| 3+| See <<sec_2.4.6>> 2+| C | 0,*
+
+3+| file locator 2+| 3+| 2+| (S) TE
+| 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| 2+| (S) TE | 0,1 footnote:eleven_ten[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
+
+3+| headline 2+| 3+| 2+| (S) TE
+| 0,1
+
+3+| language 2+| 3+| ISO 639-2/T 2+| (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| 2+| (S) TE | 0,1 footnote:eleven_ten[]
+
+11+| *Feature Associations*
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type 2+h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association 2+| 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association 2+| 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association 2+| 0,*
+
+|===
+
+[underline]#INT 1 Reference:# I 25
+
+[[sec_11.10.1]]
+==== Unsurveyed areas (see S-4 -- B-418)
+
+Unsurveyed areasmay be defined as those within which there is no
+available data derived from a systematic hydrographic survey. This
+may include areas which only have lines of passage soundings and/or
+other miscellaneous data such as isolated ship's reports.
+
+Areas with little or no bathymetric survey information must be
+encoded using the feature *Unsurveyed Area*.
+
+The area must also be covered, where required, by *Quality of
+Bathymetric Data* features (see <<sec_3.8>>), with attributes
+stem:[bb "category of temporal variation" = 6] (unassessed), stem:[bb
+"data assessment" = 1] (assessed), *features detected* (*least depth
+of detected features measured* and *significant features detected*) =
+_False_ and *full seafloor coverage achieved* = _False_; and (if
+encoded on *Quality of Bathymetric Data*)*horizontal position
+uncertainty* (*uncertainty fixed*) = [empty (null] and *vertical
+uncertainty* (*uncertainty fixed*) = [empty (null)]. If encoded on an
+instance of the information type *Spatial Quality* (see <<sec_24.5>>)
+associated to the *Quality of Bathymetric Data*, the horizontal
+position and vertical accuracies must be encoded as attributes
+*horizontal position uncertainty* (*uncertainty fixed*) = [empty
+(null] and *vertical uncertainty* (*uncertainty fixed*) = [empty
+(null)].
+
+[underline]#Remarks:#
+
+* *Unsurveyed Area* features are part of the Skin of the Earth.
+* *Unsurveyed Area* features containing no depth data or bathymetry
+are not required to be covered by *Quality of Bathymetric Data*
+features (see <<sec_3.8>>).
+
+[underline]#Distinction:# 

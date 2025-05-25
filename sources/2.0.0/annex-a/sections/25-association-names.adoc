@@ -1,0 +1,992 @@
+
+[[sec_25]]
+== Association Names
+
+The following diagrams are examples to demonstrate the structure of
+the feature/feature and feature/information association tables
+included in the following clauses, as they may be correspondingly
+represented in UML. The examples are taken from the UML Relationship
+Diagram for the feature *Two Way Route Part*. The complete
+relationship diagram is shown in <<fig_25-1>> below.
+
+[[fig_25-1]]
+.Two-Way Route Part UML relationship diagram
+image::figure-25-1.png["",602,324]
+
+[NOTE,keep-separate=true]
+====
+The association *Spatial Association* (see <<sec_25.15>>) is not
+included in <<fig_25-1>> above, as this association identifies the
+relationship between an information type (*Spatial Quality*) and the
+spatial type to which a feature is bound (that is, the geometry to
+which the feature is bound, rather than the feature itself).
+====
+
+The tables included in this Section are structured such that each row
+of the table shows all components of the relationship as they would
+be included at the association end for the entries included in the
+"Associated With" column. For example, for the *Two Way Route* end of
+the *Two-Way Route Aggregation* association (indicated by the red
+outline included in <<fig_25-1>> above), the "Role Type" is
+_Aggregation_; the "Role" is _The Collection_; and the "Multiplicity"
+is _0,1_ (see <<sec_25.19>>):
+
+[cols="68,90,383,69", options="unnumbered"]
+|===
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Aggregation | The Collection | *Two-Way Route* | 0,1
+
+|===
+
+Within the tables, features are grouped in separate table entries
+where the features included at either end of the relationship may
+differ for the association. For example <<table_25-2>>
+footnote:[<<table_25-2>> is derived from <<sec_25.1>>.] below shows
+that, for the feature/information association *Additional
+Information*, the feature *Anchor Berth* may be associated with any
+of the information types *Contact Details*, *Non-Standard Working
+Day*, *Service Hours* or *Nautical Information*; while the feature
+*Two Way Route Part* may only be associated with the information type
+*Nautical Information* (as shown in <<fig_25-1>> above and
+<<fig_25-5>>).
+
+[[table_25-2]]
+.Example of different allowable Additional Information associations
+[cols="70,88,385,67"]
+|===
+4+a| [underline]#IHO Definition:# *ADDITIONAL INFORMATION*.
+A feature association for the binding between at least one instance
+of a geo feature and an instance of an information type.
+
+[underline]#Remarks:#
+
+* The features comprising an *Additional Information* association
+must, if required, include at least one of any of the geo features
+included in the following lists associated to one or more of the
+corresponding information types included in the "The Information"
+role.
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+.2+| Association | The Information | *Contact Details*,
+*Non-Standard Working Day*, *Service Hours*, *Nautical Information* | 0,1 |
+
+| *Airport/Airfield*, *Anchor Berth*, *Anchorage Area*, *…* | 0,*
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+.2+| Association | The Information | *Contact Details*, *Nautical Information* | 0,1
+| | *Administration Area*, **…**, *Wind Turbine* | 0,*
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+.2+| Association | The Information | *Nautical Information* | 0,1
+| | …, *Two-Way Route*, *Two-Way Route Part*, *Underwater/Awash Rock*, *…* | 0,*
+|===
+
+<<fig_25-3>> below shows the representation of the feature/feature
+association *Two Way Route Aggregation* for the *Two-Way Route Part*
+feature (see <<sec_25.19>>).
+
+[[fig_25-3]]
+.Two-Way Route Aggregation
+image::figure-25-3.png[548,270]
+
+[cols="77,90,366,76", options="unnumbered"]
+|===
+4+a| [underline]#IHO Definition:# *TWO-WAY-ROUTE AGGREGATION*.
+A feature association for the binding between a two-way route and
+its component features.
+
+[underline]#Remarks:#
+
+* A *Two-Way Route Aggregation* must, if required, include at least
+one *Two-Way Route Part* feature associated to a *Two-Way Route*
+feature.
+* The *Two-Way Route* may additionally be associated to the aids to
+navigation marking the components of the Route using the association
+*Aids to Navigation Association* (see <<sec_25.2>>).
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Aggregation | The Collection | *Two-Way Route*      | 0,1
+| Association | The Component  | *Two-Way Route Part* | 1,*
+
+|===
+
+In <<fig_25-3>> above, the table should be interpreted as follows:
+
+* A *Two-Way Route* instance, if it exists, _aggregates_ (or is the
+container for)_the collection_ of one or more *Two-Way Route Part*
+features.
+* A *Two-Way Route Part* instance is _the component_ (or is a
+containee) of a *Two-Way Route* feature, if the *Two-Way Route
+Aggregation* association is created.
+* The _1,++*++_ multiplicity at the *Two-Way Route Part* end of the
+relationship indicates that, where a *Two-Way Route Aggregation*
+exists, there must be to at least one *Two-Way Route Part* feature
+included in the *Two-Way Route Aggregation*.
+
+NOTE: This does not mean that all encoded instances of *Two-Way Route
+Part* must be included in a *Two-Way Route Aggregation* (see next
+bullet).
+
+* The _0,1_ multiplicity at the *Two-Way Route* end of the
+relationship indicates that there is no requirement to bind each
+*Two-Way Route Part* feature to an instance of *Two-Way Route* using
+a *Two-Way Route Aggregation* (due to the lower multiplicity being
+zero). However, where the relationship exists, there must be exactly
+one *Two-Way Route* feature included in the association.
+
+<<fig_25-4>> below shows the representation of the feature/feature
+association *Traffic Separation Scheme Aggregation* for the *Two-Way
+Route Part* feature (see <<sec_25.19>>).
+
+[[fig_25-4]]
+.Traffic Separation Scheme Aggregation
+image::figure-25-4.png["",658,86]
+
+[cols="64,94,385,67", options="unnumbered"]
+|===
+4+a| [underline]#IHO Definition:# *TRAFFIC SPARATION SCHEME AGGREGATION*.
+A feature association for the binding between a Traffic Separation
+Scheme or a Traffic Separation Scheme System and its component features.
+
+[underline]#Remarks:#
+
+* A *Traffic Separation Scheme Aggregation* must, if required,
+include at least one of any of the features shown in the "The
+Component" role below in upright text associated to a *Traffic
+Separation Scheme* feature.
+* The *Traffic Separation Scheme* may additionally be associated to
+the aids to navigation marking the components of the Scheme using the
+association *Aids to Navigation Association* (see <<sec_25.2>>).
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Aggregation | The Collection | *Traffic Separation Scheme* | 0,1
+| Association | The Component | *Deep Water Route*,
+*Deep Water Route Centreline*, *Deep Water Route Part*,
+*Inshore Traffic Zone*, *Landmark*, *Light Float*, *Light Vessel*,
+*Pile*, *Precautionary Area*, *_Restricted Area_*,
+*Separation Zone or Line*, *Traffic Separation Scheme*,
+*Traffic Separation Scheme Boundary*, *Traffic Separation Scheme Crossing*,
+*Traffic Separation Scheme Lane Part*,
+*Traffic Separation Scheme Roundabout*, *Two-Way Route*,
+*Two-Way Route Part* | 0,*
+
+|===
+
+The components of the feature/feature association *Traffic Separation
+Scheme Aggregation* should be interpreted as for the corresponding
+components of the feature/feature association *Two-Way Route
+Aggregation* described for <<fig_25-3>>, except for the multiplicity
+at the *Two-Way Route Part* end of the association (indicated with
+the arrow in <<fig_25-4>>). The multiplicity as indicated in the UML
+as "0..++*++ {1..++*++ [C]}" in this case is an example of
+"collective multiplicity" notation. Collective multiplicities are
+described in the following clauses in the Remarks section of the
+tables.
+
+* A collective multiplicity can only exist when there is more than
+one feature type that may be used in a given role. A collective
+multiplicity indicates the multiplicity of the collection.
+* The "0..*" component of the multiplicity shown in the UML in this
+example is the "individual multiplicity". An individual multiplicity
+indicates the multiplicity for each component of the collection, and
+in this example indicates that that none of the listed features are
+required to be included.
+* The collective component of the multiplicity ({1..++*++ [C]} in the
+UML) indicates that where the association *Traffic Separation Scheme
+Aggregation* exists, there must be at least one of any of the
+features (collectively) that may be included as "containees". The
+allowable list of features is included in the following table
+entries, noting in this example that at least one instance of
+*Two-Way Route Part* is allowable, if required, for the *Traffic
+Separation Scheme Aggregation* (as highlighted in <<fig_25-4>>).
+* The individual component of the multiplicity (0,*) indicates there
+is no requirement for a *Two-Way Route Part* feature (or any other
+feature in the list) to be included in a *Traffic Separation Scheme
+Aggregation* (due to the lower multiplicity being zero). However
+where the relationship exists, there may be an unlimited number of
+*Two-Way Route Part* features or any other feature included in the
+list (due to the upper multiplicity being "*").
+* Upright style (non-italicized) features in the tables are members
+of the collective multiplicity, italicized features are not. The
+individual multiplicity applies to all listed features; the
+collective multiplicity only applies to the upright features, which
+may or may not comprise the entire list.
+
+The Tables in this Section show only the individual multiplicity in
+the "Multiplicity" column. The indication of collective multiplicity
+is included in the Remarks (in <<fig_25-4>> above, the Remark "A
+*Traffic Separation Scheme Aggregation* must, if required, include at
+least one of any of the features shown in the "The Component" role
+below in upright text associated to a *Traffic Separation Scheme*
+feature" indicates the collective multiplicity).
+
+<<fig_25-5>> below shows the representation of the
+feature/information association *Additional Information* for the
+*Two-Way Route Part* feature (table derived from <<sec_25.1>>).
+
+[[fig_25-5]]
+.Additional Information
+image::figure-25-5.png["",188,319]
+
+[cols="68,90,383,69", options="unnumbered"]
+|===
+4+a| [underline]#IHO Definition:# *ADDITIONAL INFORMATION*.
+A feature association for the binding between at least one instance
+of a geo feature and an instance of an information type.
+
+[underline]#Remarks:#
+
+* The features comprising an *Additional Information* association
+must, if required, include at least one of any of the geo features
+included in the following list associated to one or more of the
+corresponding information types included in the "The Information"
+role.
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+.2+| Association | The Information | *Nautical Information* | 0,1
+| | …, *Two-Way Route*, *Two-Way Route Part*, *Underwater/Awash Rock*,
+*Unsurveyed Area*, *Vegetation*, *Virtual AIS Aid to Navigation*,
+*Water Turbulence*, *Waterfall*, *Weed/Kelp*, *Wreck*
+| 0,*
+
+|===
+
+The only additional characteristic to note in <<fig_25-5>>, which is
+characteristic of all feature/information associations, is that
+unlike feature/feature associations, feature/information associations
+have only one role (at the information feature end of the
+relationship).
+
+Within the feature tables included in <<sec_3;to!sec_24>> of this
+document, a description of the associations as relevant to each
+individual feature has also been included. <<table_25-6>> below shows
+an example as included for the feature *Lateral Buoy* (see
+<<sec_20.1>>); and guidance as to how to interpret these tables.
+
+[[table_25-6]]
+.Example of associations applicable to individual features -- Lateral Buoy
+[cols="87,175,184,72,77"]
+|===
+5+h| Feature Associations
+h| S-101 Role footnoteblock:[footnote_25_6_4]
+h| Association Type footnoteblock:[footnote_25_6_1]
+h| Associated to footnoteblock:[footnote_25_6_2]
+h| Type footnoteblock:[footnote_25_6_3]
+h| Multiplicity footnoteblock:[footnote_25_6_5]
+| The Structure | *Structure/Equipment* (see <<sec_25.16>>) | *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* | Composition | 0,1
+| The Component | *Aids to Navigation Association* (see <<sec_25.2>>) | *Archipelagic Sea Lane*, *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* | Association | 0,*
+| The Auxiliary Feature | *Fairway Auxiliary* (see <<sec_25.8>>) | *Fairway* | Association | 0,*
+| The Updated Object | *Updated Information* (see <<sec_25.21>>) | *Update Information* | Association | 0,*
+| The Position Provider | *Text Association* (see <<sec_25.17>>). | *Text Placement* | Composition | 0,1
+| - | *Additional Information* (see <<sec_25.1>>) | *Contact Details*, *Nautical Information* | Association | 0,*
+| - | *Spatial Association* (see <<sec_25.15>>) | *Spatial Quality* | Association | 0,*
+
+|===
+
+NOTE: Each row included in <<table_25-6>> above describes a S-101
+association instance that may be created and include one or more
+instances of the feature type *Lateral Buoy* as a member; and is
+structured such that all components of the association are grouped as
+they would appear at the end of the association containing
+*Lateral Buoy* (see <<fig_25-1>> and associated guidance).
+
+[[footnote_25_6_1]]
+[NOTE]
+--
+The name of the association as specified in the following clauses.
+--
+
+[[footnote_25_6_2]]
+[NOTE]
+--
+The list of features that *Lateral Buoy* may be associated to for
+the association (in UML terms, the list of features at the "other
+end" of the association).
+--
+
+[[footnote_25_6_3]]
+[NOTE]
+--
+The type of association as defined for the *Lateral Buoy* end of
+the association -- "Association", "Aggregation" or "Composition" as
+described in S-100 Part 1, clause 1-4.9; and included in the tables
+in this Section in the "Role Type" column.
+
+NOTE: The association type for a feature/information association will
+always be "Association".
+--
+
+[[footnote_25_6_4]]
+[NOTE]
+--
+The role name as defined for the *Lateral Buoy* end of the
+association and as described in <<sec_26>>; and included in the
+tables in this Section in the "Role" column.
+
+NOTE: a dash "-" in this column indicates the one-way nature of a
+feature/information association -- the role name is included at the
+information end of the association only.
+--
+
+[[footnote_25_6_5]]
+[NOTE]
+--
+The multiplicity as defined for the *Lateral Buoy* end of the
+association and included in the tables in this Section in the
+"Multiplicity" column. For *Lateral Buoy*, these multiplicities are
+interpreted as follows:
+
+* 0,1 for the *Structure/Equipment* association means that a
+*Lateral Buoy* can exist in isolation (lower multiplicity 0) but, if the
+association exists, exactly one instance of *Lateral Buoy* must be
+included in the "The Structure" role of type Composition. The same
+principle applies for the *Text Association* association.
+* 0,* means that a *Lateral Buoy* can exist in isolation (lower
+multiplicity 0) but, if the association exists, one or more instances
+of *Lateral Buoy* may (but are not required) to be included in the
+association. In general this is an indication of "collective
+multiplicity" (see <<fig_15-4>> above and associated guidance).
+--
+
+[[sec_25.1]]
+=== Additional information
+
+[cols="69,88,385,67", options="unnumbered"]
+|===
+4+a| [underline]#IHO Definition:# *ADDITIONAL INFORMATION*.
+A feature association for the binding between at least one instance
+of a geo feature and an instance of an information type.
+
+[underline]#Remarks:#
+
+* The features comprising an *Additional Information* association
+must, if required, include at least one of any of the geo features
+included in the following lists associated to one or more of the
+corresponding information types included in the "The Information"
+role.
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+.2+| Association
+| The Information | *Contact Details*, *Non-Standard Working Day*, *Service Hours*,
+*Nautical Information* | 0,1
+
+| | *Airport/Airfield*, *Anchor Berth*, *Anchorage Area*, *Berth*, *Bridge*,
+*Building*, *Checkpoint*, *Coast Guard Station*, *Conveyor*, *Crane*,
+*Dock Area*, *Dry Dock*, *Floating Dock*, *Gate*, *Helipad*, *Landmark*,
+*Lock Basin*, *Mooring Area*, *Production/Storage Area*,
+*Radio Calling-In Point*, *Runway*, *Seaplane Landing Area*,
+*Span Fixed*, *Span Opening* | 0,*
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+.2+| Association | The Information | *Contact Details*, *Nautical Information* | 0,1
+| | *Administration Area*, *Cable Area*, *Cable Overhead*, *Cable Submarine*,
+*Cardinal Beacon*, *Cardinal Buoy*, *Daymark*, *Dolphin*,
+*Emergency Wreck Marking Buoy*, *Fishing Facility*, *Fog Signal*,
+*Harbour Area (Administrative)*, *Harbour Facility*,
+*Installation Buoy*, *Isolated Danger Beacon*, *Isolated Danger Buoy*,
+*Land Region*, *Lateral Beacon*, *Lateral Buoy*, *Light All Around*,
+*Light Float*, *Light Sectored*, *Light Vessel*, *Marine Farm/Culture*,
+*Mooring Buoy*, *Mooring Trot*, *Offshore Platform*,
+*Offshore Production Area*, *Pilot Boarding Place*, *Pilotage District*,
+*Pipeline Overhead*, *Pipeline Submarine/On Land*, *Radar Range*,
+*Radar Station*, *Radio Station*, *Railway*, *Rescue Station*,
+*Safe Water Beacon*, *Safe Water Buoy*, *Signal Station Traffic*,
+*Signal Station Warning*, *Silo/Tank*, *Small Craft Facility*,
+*Special Purpose/General Beacon*, *Special Purpose/General Buoy*,
+*Submarine Pipeline Area*, *Tunnel*, *Vessel Traffic Service Area*,
+*Wind Turbine* | 0,*
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+.2+| Association | The Information | *Nautical Information* | 0,1
+| | *Archipelagic Sea Lane*, *Archipelagic Sea Lane Area*,
+*Archipelagic Sea Lane Axis*, *Bollard*, *Built-Up Area*, *Canal*,
+*Cargo Transhipment Area*, *Causeway*, *Caution Area*, *Coastline*,
+*Collision Regulations Limit*, *Contiguous Zone*,
+*Continental Shelf Area*, *Current -- Non-Gravitational*,
+*Custom Zone*, *Dam*, *Deep Water Route*, *Deep Water Route Centreline*,
+*Deep Water Route Part*, *Depth Area*, *Depth Contour*,
+*Depth -- No Bottom Found*, *Discoloured Water*, *Distance Mark*,
+*Dredged Area*, *Dumping Ground*, *Dyke*, *Exclusive Economic Zone*,
+*Fairway*, *Fairway System*, *Fence/Wall*, *Ferry Route*,
+*Fishery Zone*, *Fishing Ground*, *Fortified Structure*, *Foul Ground*,
+*Free Port Area*, *Gridiron*, *Hulk*, *Ice Area*, *Information Area*,
+*Inshore Traffic Zone*, *Island Group*, *Lake*, *Land Area*,
+*Land Elevation*, *Light Air Obstruction*, *Light Fog Detector*,
+*Local Magnetic Anomaly*, *Log Pond*, *Magnetic Variation*,
+*Marine Pollution Regulations Area*, *Military Practice Area*,
+*Navigation Line*, *Obstruction*, *Oil Barrier*,
+*Physical AIS Aid to Navigation*, *Pile*, *Pontoon*,
+*Precautionary Area*, *Pylon/Bridge Support*, *Radar Line*,
+*Radar Reflector*, *Radar Transponder Beacon*, *Range System*, *Rapids*,
+*Recommended Route Centreline*, *Recommended Track*,
+*Recommended Traffic Lane Part*, *Restricted Area*, *Retroreflector*,
+*River*, *Road*, *Sandwave*, *Sea Area/Named Water Area*,
+*Seabed Area*, *Seagrass*, *Shoreline Construction*, *Slope Topline*,
+*Sloping Ground*, *Sounding*, *Spring*,
+*Straight Territorial Sea Baseline*, *Structure Over Navigable Water*,
+*Submarine Transit Lane*, *Swept Area*, *Territorial Sea Area*,
+*Tidal Stream Panel Data*, *Tidal Stream -- Flood/Ebb*, *Tideway*,
+*Separation Zone or Line*, *Traffic Separation Scheme*,
+*Traffic Separation Scheme Boundary*, *Traffic Separation Scheme Crossing*,
+*Traffic Separation Scheme Lane Part*,
+*Traffic Separation Scheme Roundabout*, *Two-Way Route*,
+*Two-Way Route Part*, *Underwater/Awash Rock*, *Unsurveyed Area*,
+*Vegetation*, *Virtual AIS Aid to Navigation*, *Water Turbulence*,
+*Waterfall*, *Weed/Kelp*, *Wreck*
+| 0,*
+
+|===
+
+[[sec_25.2]]
+=== Aids to navigation association
+
+[cols="68,90,385,66", options="unnumbered"]
+|===
+4+a| [underline]#IHO Definition:# *AIDS TO NAVIGATION ASSOCIATION*.
+A feature association for the binding between navigational aids and
+the traffic systems (such as routeing measures) that they define.
+
+[underline]#Remarks:#
+
+* The features comprising an *Aids to Navigation Association* must,
+if required, include at least one of any of the features included in
+the "The Component" role associated to one of the corresponding
+features in the "The Collection" role.
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Aggregation | The Collection | *Archipelagic Sea Lane*, *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* | 0,1
+| Association | The Component | *Cardinal Beacon*, *Cardinal Buoy*, *Daymark*, *Emergency Wreck Marking Buoy*, *Isolated Danger Beacon*, *Isolated Danger Buoy*, *Lateral Beacon*, *Lateral Buoy*, *Light Float*, *Light Vessel*, *Pile*, *Safe Water Beacon*, *Safe Water Buoy*, *Special Purpose/General Beacon*, *Special Purpose/General Buoy* | 0,*
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Aggregation | The Collection | *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* | 0,1
+| Association | The Component | *Building*, *Crane*, *Dolphin*, *Fishing Facility*, *Fortified Structure*, *Landmark*, *Mooring Buoy*, *Offshore Platform*, *Silo/Tank*, *Wind Turbine* | 0,*
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Aggregation | The Collection | *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* | 0,1
+| Association | The Component | *Bridge*, *Conveyor*, *Floating Dock*, *Hulk*, *Pipeline Overhead*, *Pontoon*, *Pylon/Bridge Support*, *Shoreline Construction*, *Span Fixed*, *Span Opening*, *Structure Over Navigable Water* | 0,*
+
+|===
+
+[[sec_25.3]]
+=== ASL aggregation
+
+[cols="68,90,383,69", options="unnumbered"]
+|===
+4+a| [underline]#IHO Definition:# *ASL AGGREGATION*. A feature association
+for the binding between an Archipelagic Sea Lane and its component
+features.
+
+[underline]#Remarks:#
+
+* A *ASL Aggregation* must, if required, include at least one of any
+of the features shown in the "The Component" role below associated to
+an *Archipelagic Sea Lane* feature.
+* The *Archipelagic Sea Lane* may additionally be associated to the
+aids to navigation marking the components of the ASL using the
+association *Aids to Navigation Association* (see <<sec_25.2>>).
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Aggregation | The Collection | *Archipelagic Sea Lane* | 0,1
+| Association | The Component | *Archipelagic Sea Lane Area*, *Archipelagic Sea Lane Axis* | 0,*
+
+|===
+
+[[sec_25.4]]
+=== Bridge aggregation
+
+[cols="69,88,385,67", options="unnumbered"]
+|===
+4+a| [underline]#IHO Definition:# *BRIDGE AGGREGATION*. A feature
+association for the binding between a bridge and its component features.
+
+[underline]#Remarks:#
+
+* The features comprising a *Bridge Aggregation* must, if required,
+include at least one *Span Fixed* or *Span Opening* feature
+associated to a *Bridge* feature.
+* A bridge over non-navigable water at the optimum display scale of
+the ENC data, which does not require its individual components to be
+encoded, must be encoded, where required, as a *Bridge* feature of
+type curve or surface (see <<sec_6.6>>).
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Aggregation | The Collection | *Bridge* | 0,1
+| Association | The Component | *Span Fixed*, *Span Opening*, *Pontoon*, *Pylon/Bridge Support* | 0,*
+
+|===
+
+[[sec_25.5]]
+=== Caution area association
+
+[cols="69,88,385,67", options="unnumbered"]
+|===
+4+a| [underline]#IHO Definition:# *CAUTION AREA ASSOCIATION*. A feature
+association for the binding between a caution area and the traffic
+systems (such as routeing measures) to which the cautionary information
+applies.
+
+[underline]#Remarks:#
+
+* A *Caution Area Association* must, if required, include at least
+one *Archipelagic Sea Lane* or *Traffic Separation Scheme* feature
+associated to a *Caution Area* feature.
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Aggregation | The Collection | *Caution Area* | 0,1
+| Association | The Component | *Archipelagic Sea Lane*, *Traffic Separation Scheme* | 0,*
+
+|===
+
+[[sec_25.6]]
+=== Deep Water route aggregation
+
+[cols="69,88,385,67", options="unnumbered"]
+|===
+4+a| [underline]#IHO Definition:# *DEEP WATER ROUTE AGGREGATION*.
+A feature association for the binding between a Deep Water route and
+its component features.
+
+[underline]#Remarks:#
+
+* A *Deep Water Route Aggregation* must, if required, include at
+least one *Deep Water Route Centreline* or *Deep Water Route Part*
+feature associated to a *Deep Water Route* feature.
+* The *Deep Water Route* may additionally be associated to the aids
+to navigation marking the components of the Route using the
+association *Aids to Navigation Association* (see <<sec_25.2>>).
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Aggregation | The Collection | *Deep Water Route* | 0,1
+| Association | The Component | *Deep Water Route Centreline*, *Deep Water Route Part* | 0,*
+
+|===
+
+[[sec_25.7]]
+=== Fairway aggregation
+
+[cols="a,a,a,a", options="unnumbered"]
+|===
+4+a| [underline]#IHO Definition:# *FAIRWAY AGGREGATION*. A feature
+association for the binding between related fairways comprising a
+fairway system.
+
+[underline]#Remarks:#
+
+* A *Fairway Aggregation* must, if required, include at least two
+*Fairway* features associated to a *Fairway System* feature. Note,
+however, that within a single dataset the *Fairway Aggregation* may
+contain only a single *Fairway* feature due to splitting the fairway
+system at the ENC cell limits.
+
+* The *Fairway System* may additionally be associated to the aids to
+navigation marking the components of the fairway using the
+association *Aids to Navigation Association* (see <<sec_25.2>>).
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Aggregation | The Collection | *Fairway System* | 0,1
+| Association | The Component | *Fairway*       | 0,*
+
+|===
+
+[[sec_25.8]]
+=== Fairway auxiliary
+
+[cols="68,71,402,68", options="unnumbered"]
+|===
+4+a| [underline]#IHO Definition:# *FAIRWAY AUXILIARY*. A feature association
+for the binding between a fairway and related features auxiliary to
+the fairway.
+
+[underline]#Remarks:#
+
+* The features comprising a *Fairway Auxiliary* association must
+include, if required, at least one of any of the features included in
+the "The Auxiliary Feature" role associated to one *Fairway* feature.
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Aggregation | The Primary Feature | *Fairway* | 0,1
+| Association | The Auxiliary Feature | *Cardinal Beacon*, *Cardinal Buoy*, *Caution Area*, *Daymark*, *Dredged Area*, *Isolated Danger Beacon*, *Isolated Danger Buoy*, *Lateral Beacon*, *Lateral Buoy*, *Light Float*, *Light Vessel*, *Landmark*, *Pile*, *Range System*, *Recommended Route Centreline*, *Recommended Track*, *Restricted Area*, *Safe Water Beacon*, *Safe Water Buoy*, *Special Purpose/General Beacon*, *Special Purpose/General Buoy*, *Swept Area* | 0,*
+
+|===
+
+[[sec_25.9]]
+=== Island aggregation
+
+[cols="a,a,a,a", options="unnumbered"]
+|===
+4+a| [underline]#IHO Definition:# *ISLAND AGGREGATION*. A feature
+association for the binding between a named group of islands.
+
+[underline]#Remarks:#
+
+* An *Island Aggregation* must, if required, include at least one
+*Land Area* or *Island Group* feature associated to an *Island Group*
+feature.
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Aggregation | The Collection | *Island Group*               | 0,1
+| Association | The Component | *Land Area*, *Island Group* | 0,*
+
+|===
+
+[[sec_25.10]]
+=== Mooring trot aggregation
+
+[cols="64,94,385,67", options="unnumbered"]
+|===
+4+a| [underline]#IHO Definition:# *MOORING TROT AGGREGATION*. A feature
+association for the binding between a mooring trot and its component
+parts.
+
+[underline]#Remarks:#
+
+* Typically, a mooring trot will consist of:
+
+** At least one *Berth* feature;
+** At least 2 *Cable Submarine* features;
+** At least 2 *Mooring Buoy* features; and
+** At least 2 *Obstruction* features.
+A *Mooring Trot Aggregation* must, if required, include at least one
+of any of the features shown in the "The Component" role below
+associated to a *Mooring Trot* feature.
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Aggregation | The Collection | *Mooring Trot* | 0,1
+| Association | The Component | *Berth*, *Cable Submarine*, *Mooring Buoy*, *Obstruction* | 0,*
+
+|===
+
+[[sec_25.11]]
+=== Pilotage district association
+
+[cols="64,94,385,67", options="unnumbered"]
+|===
+4+a| [underline]#IHO Definition:# *PILOTAGE DISTRICT ASSOCIATION*.
+A feature association for the binding between a pilotage district
+and its component pilot boarding places.
+
+[underline]#Remarks:#
+
+* A *Pilotage District Association* must, if required, include at
+least one *Pilot Boarding Place* feature associated to a *Pilotage
+District* feature.
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Aggregation | The Collection | *Pilotage District* | 0,1
+| Association | The Component | *Pilot Boarding Place* | 0,*
+
+|===
+
+[[sec_25.12]]
+=== Quality of bathymetric data composition
+
+[cols="69,69,404,67", options="unnumbered"]
+|===
+4+a| [underline]#IHO Definition:# *QUALITY OF BATHYMETRIC DATA COMPOSITION*.
+The mandatory association between the quality-related characteristics
+of bathymetric data and the horizontal position and vertical uncertainties
+of the data.
+
+[underline]#Remarks:#
+
+* A *Quality of Bathymetric Data Composition* must, if required,
+include at least one *Quality of Bathymetric Data* feature associated
+to a *Spatial Quality* feature..
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+.2+| Association | The Quality Information | *Spatial Quality* | 0,1
+| | *Quality of Bathymetric Data* | 0,*
+
+|===
+
+[[sec_25.13]]
+=== Range system aggregation
+
+[cols="69,88,385,67", options="unnumbered"]
+|===
+4+a| [underline]#IHO Definition:# *RANGE SYSTEM AGGREGATION*. A feature
+association for the binding between navigational tracks and the navigational
+aids that define the tracks.
+
+[underline]#Remarks:#
+
+* All features comprising a *Range System Aggregation* should have
+the same value populated for the attribute *scale minimum* (see
+<<sec_2.5.9>>).
+* A *Range System Aggregation* must, if required, include at least
+one of any of the features shown in the "The Component" role below in
+upright text associated to a *Range System* feature.
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Aggregation | The Collection | *Range System* | 0,1
+| Association | The Component | *_Cardinal Beacon_*, *_Building_*, *_Daymark_*, *_Dolphin_*, *_Fortified Structure_*, *_Isolated Danger Beacon_*, *_Landmark_*, *_Lateral Beacon_*, *_Light All Around_*, *_Light Sectored_*, *Navigation Line*, *_Pile_*, *_Radar Transponder Beacon_*, *Range System*, *Recommended Route Centreline*, *Recommended Track*, *_Safe Water Beacon_*, *_Silo/Tank_*, *_Special Purpose/General Beacon_* | 0,*
+
+|===
+
+[[sec_25.14]]
+=== Roofed Structure Aggregation
+
+[cols="68,81,392,69", options="unnumbered"]
+|===
+4+a| [underline]#IHO Definition:# *ROOFED STRUCTURE AGGREGATION*.
+A feature association for the binding between a roofed structure over
+navigable water and its supporting features.
+
+[underline]#Remarks:#
+
+* A *Roofed Structure Aggregation* must, if required, include at
+least one *Pylon/Bridge Support* feature associated to a *Structure
+Over Navigable Water* feature.
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Aggregation | The Roofed Structure | *Structure Over Navigable Water* | 0,1
+| Association | The Support | *Pylon/Bridge Support* | 0,*
+
+|===
+
+[[sec_25.15]]
+=== Spatial association
+
+[cols="68,71,402,69", options="unnumbered"]
+|===
+4+a| [underline]#IHO Definition:# *SPATIAL ASSOCIATION*. An association
+for the binding between a spatial type and its spatial quality information.
+
+[underline]#Remarks:#
+
+* A *Spatial Association* must, if required, include at least one
+spatial type instance associated to a *Spatial Quality* information
+feature. Note that where multiple features are associated with a
+spatial type instance, the spatial quality applies to all these
+features.
+* For geometric primitive surface, the *Spatial Quality* must, if
+required, be associated to the relevant curves comprising the spatial
+edges (boundaries) of the surface.
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+.2+| Association | The Quality Information | *Spatial Quality* | 0,1
+| | Spatial types (see <<sec_2.4.7>>) | 0,*
+
+|===
+
+[[sec_25.16]]
+=== Structure/equipment
+
+[cols="68,81,393,68", options="unnumbered"]
+|===
+4+a| [underline]#IHO Definition:# *STRUCTURE/EQUIPMENT*. A feature
+association for the binding between a navigation aid equipment feature
+and the structure that supports it.
+
+[underline]#Remarks:#
+
+* The features comprising an *Structure/Equipment* association must,
+if required, include at least one of any of the features included in
+the "The Equipment" role associated to exactly one of the
+corresponding features in the "The Structure" role.
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Composition
+| The Structure
+| *Bridge*, *Building*, *Crane*, *Cardinal Beacon*, *Cardinal Buoy*,
+*Conveyor*, *Dolphin*, *Emergency Wreck Marking Buoy*, *Fishing Facility*,
+*Floating Dock*, *Fortified Structure*, *Hulk*, *Installation Buoy*,
+*Isolated Danger Beacon*, *Isolated Danger Buoy*, *Landmark*, *Lateral
+Beacon*, *Lateral Buoy*, *Light Float*, *Light Vessel*, *Mooring Buoy*,
+*Offshore Platform*, *Pile*, *Pipeline Overhead*, *Pontoon*, *Pylon/Bridge
+Support*, *Safe Water Beacon*, *Safe Water Buoy*, *Shoreline Construction*,
+*Silo/Tank*, *Span Fixed*, *Span Opening*, *Special Purpose/General
+Beacon*, *Special Purpose/General Buoy*, *Structure Over Navigable
+Water*, *Wind Turbine*, *Wreck*
+| 0,1
+
+| Association | The Equipment | *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* | 0,*
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Composition
+| The Structure
+| *Bridge*, *Building*, *Crane*, *Cardinal Beacon*, *Conveyor*, *Dolphin*,
+*Fishing Facility*, *Fortified Structure*, *Isolated Danger Beacon*,
+*Landmark*, *Lateral Beacon*, *Offshore Platform*, *Pile*, *Pipeline
+Overhead*, *Pylon/Bridge Support*, *Safe Water Beacon*, *Shoreline
+Construction*, *Silo/Tank*, *Span Fixed*, *Span Opening*, *Special
+Purpose/General Beacon*, *Structure Over Navigable Water*, *Wind Turbine*,
+*Wreck*
+| 0,1
+
+| Association | The Equipment | *Light Sectored* | 0,*
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Composition
+| The Structure
+| *Dolphin*, *Fortified Structure*, *Hulk*, *Landmark*, *Offshore Platform*, *Pile*, *Pylon/Bridge Support*, *Shoreline Construction*
+| 0,1
+
+| Association | The Equipment | *Bollard* | 0,*
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Composition
+| The Structure
+| *Bridge*, *Building*, *Crane*, *Conveyor*, *Landmark*, *Offshore Platform*, *Pylon/Bridge Support*, *Span Fixed*, *Span Opening*, *Wind Turbine*
+| 0,1
+
+| Association | The Equipment | *Light Air Obstruction* | 0,*
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Composition
+| The Structure
+| *Light All Around*, *Light Sectored* footnote:[See <<sec_18.2;and!sec_19.1.8>>.]
+
+| 0,1
+
+| Association | The Equipment | *Fog Signal*, *Light Air Obstruction*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Radar Transponder Beacon*, *Retroreflector* | 0,*
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Composition | The Structure | *Daymark* | 0,1
+| Association | The Equipment | *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* | 0,*
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Composition | The Structure | *Cable Overhead*, *Pipeline Overhead* footnote:[See <<sec_6.9;and!sec_6.10;and!sec_20.17>>]
+
+| 0,1
+| Association | The Equipment | *Radar Reflector* | 0,*
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Composition | The Structure | *Building*, *Landmark*, *Offshore Platform* | 0,1
+| Association | The Equipment | *Helipad* | 0,*
+
+|===
+
+[[sec_25.17]]
+=== Text association
+
+[cols="69,98,376,66", options="unnumbered"]
+|===
+4+a| [underline]#IHO Definition:# *TEXT ASSOCIATION*. A feature association
+for the binding between a geo feature and the cartographically positioned
+location for text.
+
+[underline]#Remarks:#
+
+* The features comprising a *Text Association* must, if required,
+include exactly one of any of the features included in the "The
+Position Provider" role associated to up to two *Text Placement*
+features, which cannot exist outside *Text Association*.
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Composition | The Position Provider | *Administration Area*, *Airport/Airfield*, *Anchor Berth*, *Anchorage Area*, *Archipelagic Sea Lane*, *Archipelagic Sea Lane Area*, *Archipelagic Sea Lane Axis*, *Berth*, *Bollard*, *Bridge*, *Building*, *Built-Up Area*, *Cable Area*, *Cable Overhead*, *Cable Submarine*, *Canal*, *Cardinal Beacon*, *Cardinal Buoy*, *Cargo Transhipment Area*, *Causeway*, **Chart 1 Feature**, *Checkpoint*, *Coast Guard Station*, *Coastline*, *Collision Regulations Limit*, *Continental Shelf Area*, *Conveyor*, *Crane*, *Current -- Non-Gravitational*, *Dam*, *Daymark*, *Deep Water Route*, *Deep Water Route Centreline*, *Deep Water Route Part*, *Distance Mark*, *Dock Area*, *Dolphin*, *Dredged Area*, *Dry Dock*, *Dumping Ground*, *Dyke*, *Emergency Wreck Marking Buoy*, *Fairway*, *Fairway System*, *Fence/Wall*, *Ferry Route*, *Fishery Zone*, *Fishing Facility*, *Fishing Ground*, *Floating Dock*, *Fog Signal*, *Fortified Structure*, *Foul Ground*, *Free Port Area*, *Gate*, *Gridiron*, **Harbour Area (Administrative)**, *Harbour Facility*, *Helipad*, *Hulk*, *Ice Area*, *Information Area*, *Installation Buoy*, *Island Group*, *Isolated Danger Beacon*, *Isolated Danger Buoy*, *Lake*, *Land Area*, *Land Elevation*, *Land Region*, *Landmark*, *Lateral Beacon*, *Lateral Buoy*, *Light Air Obstruction*, *Light All Around*, *Light Float*, *Light Fog Detector*, *Light Sectored*, *Light Vessel*, *Local Magnetic Anomaly*, *Lock Basin*, *Log Pond*, *Marine Farm/Culture*, *Marine Pollution Regulations Area*, *Military Practice Area*, *Mooring Area*, *Mooring Buoy*, *Mooring Trot*, *Obstruction*, *Offshore Platform*, *Offshore Production Area*, *Oil Barrier*, *Physical AIS Aid to Navigation*, *Pile*, *Pilot Boarding Place*, *Pilotage District*, *Pipeline Overhead*, *Pipeline Submarine/On Land*, *Pontoon*, *Precautionary Area*, *Production/Storage Area*, *Pylon/Bridge Support*, *Radar Line*, *Radar Range*, *Radar Station*, *Radar Transponder Beacon*, *Radio Calling-In Point*, *Radio Station*, *Railway*, *Range System*, *Rapids*, *Recommended Route Centreline*, *Recommended Track*, *Rescue Station*, *Restricted Area*, *River*, *Road*, *Runway*, *Safe Water Beacon*, *Safe Water Buoy*, *Sea Area/Named Water Area*, *Seabed Area*, *Seagrass*, *Seaplane Landing Area*, *Shoreline Construction*, *Signal Station Traffic*, *Signal Station Warning*, *Silo/Tank*, *Slope Topline*, *Sloping Ground*, *Small Craft Facility*, *Sounding*, *Span Fixed*, *Span Opening*, *Special Purpose/General Beacon*, *Special Purpose/General Buoy*, *Spring*, *Structure Over Navigable Water*, *Submarine Pipeline Area*, *Submarine Transit Lane*, *Swept Area*, *Tidal Stream Panel Data*, *Tidal Stream -- Flood/Ebb*, *Tideway*, *Traffic Separation Scheme*, *Tunnel*, *Two-Way Route*, *Underwater/Awash Rock*, *Vegetation*, *Vessel Traffic Service Area*, *Virtual AIS Aid to Navigation*, *Water Turbulence*, *Waterfall*, *Weed/Kelp*, *Wind Turbine*, *Wreck* | 0,1
+| Association | The Cartographic Text | *Text Placement* | 0,2
+
+|===
+
+[[sec_25.18]]
+=== Traffic Separation Scheme aggregation
+
+[cols="68,90,383,69", options="unnumbered"]
+|===
+4+a| [underline]#IHO Definition:# *TRAFFIC SEPARATION SCHEME AGGREGATION*.
+A feature association for the binding between a Traffic Separation
+Scheme or a Traffic Separation Scheme System and its component features.
+
+[underline]#Remarks:#
+
+* A *Traffic Separation Scheme Aggregation* must, if required,
+include one of any of the features shown in the "The Component" role
+below in upright text associated to a *Traffic Separation Scheme*
+feature.
+* The *Traffic Separation Scheme* may additionally be associated to
+the aids to navigation marking the components of the Scheme using the
+association *Aids to Navigation Association* (see <<sec_25.2>>).
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Aggregation | The Collection | *Traffic Separation Scheme* | 0,1
+| Association | The Component | *Deep Water Route*, *Deep Water Route Centreline*, *Deep Water Route Part*, *Inshore Traffic Zone*, *Precautionary Area*, *_Restricted Area_*, *Separation Zone or Line*, *Traffic Separation Scheme*, *Traffic Separation Scheme Boundary*, *Traffic Separation Scheme Crossing*, *Traffic Separation Scheme Lane Part*, *Traffic Separation Scheme Roundabout*, *Two-Way Route*, *Two-Way Route Part* | 0,*
+
+|===
+
+[[sec_25.19]]
+=== Two-way route aggregation
+
+[cols="68,90,383,69", options="unnumbered"]
+|===
+4+a| [underline]#IHO Definition:# *TWO-WAY ROUTE AGGREGATION*. A feature
+association for the binding between a two-way route and its component
+features.
+
+[underline]#Remarks:#
+
+* A *Two-Way Route Aggregation* must, if required, include at least
+one *Two-Way Route Part* feature associated to a *Two-Way Route*
+feature.
+* The *Two-Way Route* may additionally be associated to the aids to
+navigation marking the components of the Route using the association
+*Aids to Navigation Association* (see <<sec_25.2>>).
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Aggregation | The Collection | *Two-Way Route* | 0,1
+| Association | The Component | *Two-Way Route Part* | 0,*
+
+|===
+
+[[sec_25.20]]
+=== Update aggregation
+
+[cols="68,90,383,69", options="unnumbered"]
+|===
+4+a| [underline]#IHO Definition:# *UPDATE AGGREGATION*. A feature
+association for the binding between an Update Information feature
+and its component Update Information features.
+
+[underline]#Remarks:#
+
+* An *Update Aggregation* must, if required, include at least two
+*Update Information* features associated to an *Update Information*
+feature having attribute stem:[bb "update type" = 3] (modify). See
+<<sec_3.12>>.
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Aggregation | The Collection | *Update Information* | 0,1
+| Association | The Component | *Update Information* | 0,*
+
+|===
+
+[[sec_25.21]]
+=== Updated information
+
+[cols="67,72,402,68", options="unnumbered"]
+|===
+4+a| [underline]#IHO Definition:# *UPDATED INFORMATION*. A feature
+association for the binding between an update information metadata
+feature and updated feature(s) that it identifies.
+
+[underline]#Remarks:#
+
+* An *Updated Information* association must, if required, include at
+least one of any of the features shown in the "The Updated Object"
+role below associated to an *Update Information* feature.
+
+h| Role Type h| Role h| Associated With h| Multiplicity
+| Association | The Update | *Update Information* | 0,1
+| Association | The Updated Object | *Administration Area*, *Airport/Airfield*,
+*Anchor Berth*, *Anchorage Area*, *Archipelagic Sea Lane*, *Archipelagic
+Sea Lane Area*, *Archipelagic Sea Lane Axis*, *Berth*, *Bollard*,
+*Bridge*, *Building*, *Built-Up Area*, *Cable Area*, *Cable Overhead*,
+*Cable Submarine*, *Canal*, *Cardinal Beacon*, *Cardinal Buoy*, *Cargo
+Transhipment Area*, *Causeway*, *Caution Area*, *Checkpoint*, *Coast
+Guard Station*, *Coastline*, *Collision Regulations Limit*, *Contiguous
+Zone*, *Continental Shelf Area*, *Conveyor*, *Crane*, *Current --
+Non-Gravitational*, *Custom Zone*, *Dam*, *Daymark*, *Deep Water Route*,
+*Deep Water Route Centreline*, *Deep Water Route Part*, *Depth Area*,
+*Depth Contour*, *Depth -- No Bottom Found*, *Discoloured Water*,
+*Distance Mark*, *Dock Area*, *Dolphin*, *Dredged Area*, *Dry Dock*,
+*Dumping Ground*, *Dyke*, *Emergency Wreck Marking Buoy*, *Exclusive
+Economic Zone*, *Fairway*, *Fairway System*, *Fence/Wall*, *Ferry
+Route*, *Fishery Zone*, *Fishing Facility*, *Fishing Ground*, *Floating
+Dock*, *Fog Signal*, *Fortified Structure*, *Foul Ground*, *Free Port
+Area*, *Gate*, *Gridiron*, **Harbour Area (Administrative)**, *Harbour
+Facility*, *Helipad*, *Hulk*, *Ice Area*, *Information Area*, *Inshore
+Traffic Zone*, *Installation Buoy*, *Island Group*, *Isolated Danger
+Beacon*, *Isolated Danger Buoy*, *Lake*, *Land Area*, *Land Elevation*,
+*Land Region*, *Landmark*, *Lateral Beacon*, *Lateral Buoy*, *Light
+Air Obstruction*, *Light All Around*, *Light Float*, *Light Fog Detector*,
+*Light Sectored*, *Light Vessel*, *Local Direction of Buoyage*, *Local
+Magnetic Anomaly*, *Lock Basin*, *Log Pond*, *Magnetic Variation*,
+*Marine Farm/Culture*, *Marine Pollution Regulations Area*, *Military
+Practice Area*, *Mooring Area*, *Mooring Buoy*, *Mooring Trot*, *Navigation
+Line*, *Navigational System of Marks*, *Obstruction*, *Offshore Platform*,
+*Offshore Production Area*, *Oil Barrier*, *Physical AIS Aid to Navigation*,
+*Pile*, *Pilot Boarding Place*, *Pilotage District*, *Pipeline Overhead*,
+*Pipeline Submarine/On Land*, *Pontoon*, *Precautionary Area*, *Production/Storage Area*, *Pylon/Bridge Support*, *Quality of Bathymetric Data*, *Quality of Non-Bathymetric Data*, *Quality of Survey*, *Radar Line*, *Radar Range*, *Radar Reflector*, *Radar Station*, *Radar Transponder Beacon*, *Radio Calling-In Point*, *Radio Station*, *Railway*, *Range System*, *Rapids*, *Recommended Route Centreline*, *Recommended Track*, *Recommended Traffic Lane Part*, *Rescue Station*, *Restricted Area*, *Retroreflector*, *River*, *Road*, *Runway*, *Safe Water Beacon*, *Safe Water Buoy*, *Sandwave*, *Sea Area/Named Water Area*, *Seabed Area*, *Seagrass*, *Seaplane Landing Area*, *Separation Zone or Line*, *Shoreline Construction*, *Signal Station Traffic*, *Signal Station Warning*, *Silo/Tank*, *Small Craft Facility*, *Slope Topline*, *Sloping Ground*, *Sounding*, *Sounding Datum*, *Span Fixed*, *Span Opening*, *Special Purpose/General Beacon*, *Special Purpose/General Buoy*, *Spring*, *Straight Territorial Sea Baseline*, *Structure Over Navigable Water*, *Submarine Pipeline Area*, *Submarine Transit Lane*, *Swept Area*, *Territorial Sea Area*, *Tidal Stream Panel Data*, *Tidal Stream -- Flood/Ebb*, *Tideway*, *Traffic Separation Scheme*, *Traffic Separation Scheme Boundary*, *Traffic Separation Scheme Crossing*, *Traffic Separation Scheme Lane Part*, *Traffic Separation Scheme Roundabout*, *Tunnel*, *Two-Way Route*, *Two-Way Route Part*, *Underwater/Awash Rock*, *Unsurveyed Area*, *Update Information*, *Vegetation*, *Vertical Datum of Data*, *Vessel Traffic Service Area*, *Virtual AIS Aid to Navigation*, *Water Turbulence*, *Waterfall*, *Weed/Kelp*, *Wind Turbine*, *Wreck* | 0,*
+
+|===

@@ -1,0 +1,1203 @@
+
+[[sec_14]]
+== Geo Features -- Offshore Installations
+
+[[sec_14.1]]
+=== Offshore platform
+
+[cols="10",options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *OFFSHORE PLATFORM*.
+A permanent offshore structure, either fixed or floating.
+(Adapted from IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Offshore Platform (OFSPLF)*
+10+| *[underline]#Primitives:#* *Point, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| category of offshore platform 2+| (CATOFP) 3+|
+1: oil rig +
+2: production platform +
+3: observation/research platform +
+4: articulated loading platform +
+5: single anchor leg mooring +
+6: mooring tower +
+7: artificial island +
+8: floating production, storage and off-loading vessel +
+9: accommodation platform +
+10: navigation, communication and control buoy +
+11: floating oil tank | EN | 0,1
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | EN | 0,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | EN | 0,1 footnoteblock:[fourteen_one]
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+2: ruined +
+5: planned construction | EN | 0,1
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[fourteen_one]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[fourteen_one]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[fourteen_one]
+
+3+| flare stack 2+| *_(LNDMRK)_* 3+| | BO | 0,1
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| product 2+| (PRODCT) 3+|
+1: oil +
+2: gas +
+3: water +
+18: liquefied natural gas +
+19: liquefied petroleum gas +
+23: electricity | EN | 0,*
+3+| radar conspicuous 2+| (CONRAD)
+3+| | BO | 0,1
+
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+4: not in use +
+7: temporary +
+8: private +
+12: illuminated +
+28: buoyed | EN | 0,*
+3+| vertical length 2+| (VERLEN)
+3+| | RE | 0,1
+
+3+| visual prominence 2+| (CONVIS) 3+|
+1: visually conspicuous +
+2: not visually conspicuous +
+3: prominent | EN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE
+| 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fourteen_one]
+
+3+| headline 2+| 3+| | (S) TE
+| 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[fourteen_one]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Bollard*, *Daymark*, *Distance Mark*, *Fog Signal*, *Helipad*, *Light Air Obstruction*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[fourteen_one]]
+[NOTE]
+--
+The attribute *colour pattern* is mandatory for offshore platforms
+that have more than one value populated for the attribute *colour*.
+
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# L 2, 10-15, 17
+
+[[sec_14.1.1]]
+==== Offshore platforms (see S-4 -- B-445.2; B-445.4 and B-445.5)
+
+Several different types of platforms are in use. They are normally
+piled steel or concrete structures, the latter held in position on
+the seafloor by gravity. Tension Leg Platforms(TLP) consist of
+semi-submersible platforms secured to flooded caissons on the
+seafloor vertically below them by wires kept in tension by the
+buoyancy of the platform.
+
+Platforms may serve a number of purposes. They may carry any of the
+following equipment: drilling and production equipment; oil and gas
+separation and treatment plants; pump-line stations; and electricity
+generators. They may be fitted with cranes, a helicopter landing
+deck, and accommodation for up to 350 people. Platforms may stand
+singly or in groups connected by pipelines. Some stand close together
+in a complex, with bridges and underwater cables connecting them.
+Unwanted gas or oil is sometimes burnt from a flaring boom extending
+from the platform or from a nearby flare stack.
+
+If it is required to encode a permanent offshore platform, it must be
+done using the feature *Offshore Platform*.
+
+[underline]#Remarks:#
+
+* The attribute *height* is only relevant for fixed platforms, and is
+referred to the vertical datum (see <<sec_2.5.7>>).
+* The attribute *vertical length* is only relevant for floating
+platforms, and is referred to the sea level.
+* If it is required to encode sites of dismantled platforms, this
+must be done using *Foul Ground* features (see <<sec_13.7>>), unless
+the source indicates that any remaining structure protrudes far
+enough above the seabed so as to be an obstruction to surface
+navigation, in which case this must be encoded using an *Obstruction*
+feature (see <<sec_13.6>>).
+* Platforms may carry lights (see <<sec_19>>), fog signals (see
+<<sec_20.19>>), helicopter landing pads (see <<sec_6.5>>) and flare
+stacks. Where fitted, lights should be encoded as described in
+<<sec_19>>, with the *Offshore Platform* being used as the structure
+feature for the light equipment feature(s).
+
+[[sec_14.1.2]]
+==== Wellheads (see S-4 -- B-445.1)
+
+In the course of developing an oil or gas field, numerous wells may
+be drilled. Some, which will not be required again, may be sealed at
+or below the seafloor and abandoned; such wells must not be encoded,
+as they have no relevance to navigation.
+
+A submerged wellheadis a submarine structure projecting some distance
+above the seafloor and capping a temporarily abandoned (or
+"suspended") oil or gas well. Their associated pipes and other
+equipment usually project some 2 - 6 metres, but in some cases as
+much as 15 metres, above the seafloor. Some may be covered by steel
+cages to avoid snagging trawling gear. In certain instances, a
+wellhead may project above the sea surface. Wellheads must be encoded
+on at least the largest optimum display scale ENC data, together with
+associated buoys, as a hazard to fishing and, dependent on depth, as
+a hazard to deep-draught vessels and towed structures.
+
+If it is required to encode wellheads, this must be done using
+*Obstruction* features of type point (see <<sec_13.6>>), with
+attributes:
+
+*category of obstruction*:: _2_ - wellhead
+*height status*:: _4_ - not in use (disused)
+
+*value of sounding*
+
+*vertical length*:: vertical length of the wellhead above the seabed
+*water level effect*::
++
+--
+_2_ - always dry (for wellheads that protrude at high water)
+
+_3_ - always under water/submerged
+--
+
+[[sec_14.1.3]]
+==== Offshore safety zones (see S-4 -- B-445.6)
+
+Under UNCLOS, a coastal State may establish safety zones around
+artificial islands, installations and structures in their EEZ and on
+their continental shelf. These installations include drilling rigs,
+production platforms, wellheads, moorings and other associated
+structures. Safety zones normally extend 500 metres from the
+outermost points of the installations. Within these zones,
+appropriate measures can be taken to ensure the safety of navigation
+and of the installations.
+
+If it is required to encode an offshore safety zone, it must be done
+using a *Restricted Area* feature (see <<sec_17.8>>), with attribute
+stem:[bb "category of restricted area" = 1] (offshore safety zone).
+
+[[sec_14.1.4]]
+==== Offshore flare stacks (see S-4 -- B-445.2)
+
+As with refineries on land, offshore terminals may burn off gas from
+production platforms or from "flare stacks" set up as separate
+structures at a short distance from the production platforms.
+
+If it is required to indicate the presence of a flare stack on an
+offshore platform, it must be done through population of the Boolean
+attribute *flare stack* = _True_.
+
+[underline]#Remarks:#
+
+* Flare stacks on land must be encoded, if required, using a
+*Landmark* feature (see <<sec_7.2>>).
+
+[underline]#Distinction:# Hulk; Landmark; Installation Buoy; Offshore
+Production Area; Wind Turbine.
+
+[[sec_14.2]]
+=== Submarine cable
+
+[cols="10",options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *SUBMARINE CABLE*.
+An assembly of wires or fibres, or a wire rope or chain,
+which has been laid underwater or buried beneath the seafloor.
+(IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Cable Submarine (CBLSUB)*
+10+| *[underline]#Primitives:#* *Curve*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| buried depth 2+| (BURDEP)
+3+| | RE | 0,1
+
+3+| category of cable 2+| (CATCBL) 3+|
+1: power line +
+6: mooring cable +
+7: ferry +
+9: junction cable +
+10: telecommunications cable | EN | 0,1
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+5: planned construction | EN | 0,1
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[fourteen_two]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[fourteen_two]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[fourteen_two]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+4: not in use +
+13: historic +
+18: existence doubtful | EN | 0,*
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fourteen_two]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[fourteen_two]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Component 3+| *Mooring Trot Aggregation* (see <<sec_25.10>>) 3+| *Mooring Trot* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[fourteen_two]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# L 30.1, 31.1, 32; Q 42
+
+[[sec_14.2.1]]
+==== Submarine cables (see S-4 -- B-443; B-443.1-2 and B-443.7-8)
+
+Submarine cables are used to carry power or telecommunications. All
+power cables and most telecommunication cables carry dangerous
+voltages. Submarine cables are potential hazards to both vessels and
+life, particularly to fishing vessels engaged in trawling the seabed.
+Where possible, submarine cables are now buried beneath the seafloor
+in water depths of less than 1000 metres; however there remains a
+large percentage unburied. Submarine cables are vulnerable to damage
+from anchoring, trawling or other seabed operations; even small craft
+anchors can penetrate a soft seabed sufficiently to foul a cable.
+Damage to telecommunication cables can lead to extensive disruption
+of national and international communications, whilst damage to power
+cables can disrupt electricity supply.
+
+Submarine cables, including disused cables, should be encoded to
+indicate their presence to vessels engaged in anchoring, trawling or
+seabed activities in order to:
+
+* Warn Mariners of the potential hazard to their vessel, including
+electric shock to any vessel fouling or breaking the cable, possible
+capsize of a small vessel if its fishing gear or anchor is trapped
+under the cable, or loss of gear (trawls or anchor cables).
+* Prevent damage to the cable and avoid disrupting the service the
+cable may be providing.
+Active cables should be encoded to a depth of 2000 metres (which is
+the deepest depth of water to which vessels may be endangered by
+fouling the cable).
+
+If it is required to encode a submarine cable, it must be done using
+the feature *Cable Submarine*.
+
+[underline]#Remarks:#
+
+* If the buried depth varies along the cable, the cable must be
+encoded as several features.
+* Telecommunications cables such as telephone and optic fibre cable
+must be populated, where required, by populating attribute stem:[bb
+"category of cable" = 10] (telecommunications cable).
+* Where a cable is disused, it should be encoded with the attribute
+stem:[bb "status" = 4] (not in use), and the attribute *category of
+cable* should not be encoded. Few disused cables are recovered and so
+to encode them all would lead to clutter in the data. Also, accurate
+records of their positions are likely to be incomplete (some cables
+having been cut or dragged out of position), so there is a case for
+encoding them very selectively. Where disused cables traverse
+possible anchorages or where there is known seabed activity, for
+example trawling grounds, they should be encoded on the largest
+optimum display scale ENC data covering the area, provided they do
+not obscure more important information.
+* In certain circumstances, high voltage power cables may cause a
+deviation in a ship's magnetic compass; in these cases, where reports
+have been received, they should be treated as local magnetic
+anomalies (see <<sec_4.2>>).
+* If it is required to provide the contact details of cable
+owners/operators (in cases of damage to a cable or for reparation for
+loss of an anchor in order to avoid such damage), this must be done
+using an associated instance of the information type *Contact
+Details* (see <<sec_24.1>>).
+* Cables, buried so deep that they are not vulnerable to damage from
+anchoring, should not be encoded (so that Mariners are not
+unnecessarily inhibited from anchoring or fishing). In marginal cases
+they may be encoded as *Cable Submarine* with the nominal depth to
+which they are buried encoded using the attribute *buried depth*.
+* For encoding cables for mooring trots, see <<sec_8.23>>.
+
+[underline]#Distinction:# Cable Overhead; Cable Area.
+
+[[sec_14.3]]
+=== Submarine cable area
+
+[cols="10",options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *SUBMARINE CABLE AREA*.
+An area which contains one or more submarine cables.
+(S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.70,
+November 2000, as amended).
+10+| *[underline]#S-101 Geo Feature:#* *Cable Area (CBLARE)*
+10+| *[underline]#Primitives:#* *Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| category of cable 2+| (CATCBL) 3+|
+1: power line +
+7: ferry +
+10: telecommunications cable | EN | 0,*
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[fourteen_three]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[fourteen_three]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[fourteen_three]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| restriction 2+| (RESTRN) 3+|
+1: anchoring prohibited +
+2: anchoring restricted +
+3: fishing prohibited +
+4: fishing restricted +
+5: trawling prohibited +
+6: trawling restricted +
+7: entry prohibited +
+8: entry restricted +
+9: dredging prohibited +
+11: diving prohibited +
+12: diving restricted +
+13: no wake +
+14: area to be avoided +
+16: discharging prohibited +
+17: discharging restricted +
+18: industrial or mineral exploration/development prohibited +
+20: drilling prohibited +
+23: cargo transhipment (lightening) prohibited +
+24: dragging prohibited +
+25: stopping prohibited +
+27: speed restricted +
+39: swimming prohibited | EN | 0,*
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+7: temporary +
+13: historic | EN | 0,*
+3+| vessel speed limit 2+| 3+| | C | 0,*
+
+3+| speed limit 2+| 3+| | (S) RE | 1,1
+
+3+| speed units 2+| 3+|
+2: kilometres per hour +
+3: miles per hour +
+4: knots | (S) EN
+| 1,1
+
+3+| vessel class 2+| 3+| | (S) TE | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fourteen_three]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[fourteen_three]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[fourteen_three]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# L 30.2, 31.2
+
+[[sec_14.3.1]]
+==== Submarine cable areas (see S-4 -- B-439.3 and B-443.3)
+
+Cable areasshould be encoded where:
+
+* cables (including disused cables) are so numerous in an area that
+it would be impossible to encode them individually without impairing
+the legibility of the ENC; or
+* a regulatory authority designates an area for the protection of a
+cable, or cables.
+If it is required to encode a submarine cable area, it must be done
+using the feature *Cable Area*.
+
+[underline]#Remarks:#
+
+* Where populated, the attribute *status* must only be used to encode
+the status of the area and not the status of the cables in the area.
+* For additional guidance regarding the encoding of vessel speed
+limits, see <<sec_17.4>>.
+* The outer limits of a cable area must enclose the area in which
+anchoring and certain forms of fishing are prohibited or inadvisable;
+that is, the limits must lie a safe distance beyond the actual lines
+of the outermost cables.
+* If it is required to provide the contact details of cable
+owners/operators (in cases of damage to a cable or for reparation for
+loss of an anchor in order to avoid such damage), this must be done
+using an associated instance of the information type *Contact
+Details* (see <<sec_24.1>>).
+
+[underline]#Distinction:# Cable Overhead; Cable Submarine.
+
+[[sec_14.4]]
+=== Pipeline
+
+[cols="10",options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *PIPELINE*. A connected set of pipes for conveying liquids, slurries, or gases. (Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2012).
+10+| *[underline]#S-101 Geo Feature:#* *Pipeline Submarine/On Land (PIPSOL)*
+10+| *[underline]#Primitives:#* *Curve*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| buried depth 2+| (BURDEP) 3+| | RE | 0,1
+
+3+| category of pipeline/pipe 2+| (CATPIP) 3+|
+2: outfall pipe +
+3: intake pipe +
+4: sewer +
+5: bubbler system +
+6: supply pipe +
+7: bubble curtain | EN | 0,*
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+5: planned construction | EN | 0,1
+
+3+| depth range minimum value 2+| (DRVAL1) 3+| stem:["DRVAL1" <= "DRVAL2"] | RE | 0,1
+
+3+| depth range maximum value 2+| (DRVAL2) 3+| stem:["DRVAL2" >= "DRVAL1"] | RE | 0,1
+
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[fourteen_four]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[fourteen_four]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[fourteen_four]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| multiplicity of features 2+| 3+| | C | 0,1
+
+3+| multiplicity known 2+| 3+| | (S) BO
+| 1,1
+
+3+| number of features 2+| 3+| | (S) IN
+| 0,1
+
+3+| product 2+| (PRODCT) 3+|
+1: oil +
+2: gas +
+3: water +
+7: chemicals +
+8: drinking water +
+9: milk +
+18: liquefied natural gas +
+19: liquefied petroleum gas | EN | 0,*
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+3+| restriction 2+| (RESTRN) 3+|
+1: anchoring prohibited +
+3: fishing prohibited +
+4: fishing restricted +
+5: trawling prohibited +
+8: entry restricted +
+9: dredging prohibited +
+11: diving prohibited +
+12: diving restricted +
+13: no wake +
+14: area to be avoided +
+16: discharging prohibited +
+17: discharging restricted +
+18: industrial or mineral exploration/development prohibited +
+20: drilling prohibited +
+23: cargo transhipment (lightening) prohibited +
+24: dragging prohibited +
+25: stopping prohibited +
+26: landing prohibited +
+39: swimming prohibited | EN | 0,*
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+4: not in use +
+7: temporary +
+12: illuminated | EN | 0,*
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE
+| 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fourteen_four]
+
+3+| headline 2+| 3+| | (S) TE
+| 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[fourteen_four]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[fourteen_four]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# D 29; L 40.1, 41.1, 42, 44
+
+[[sec_14.4.1]]
+==== Pipelines, submarine or on land (see S-4 -- B-377; B-444; B-444.1-2; B-444.4-5 and B-444.7)
+
+Submarine pipelines can be divided into two main categories:
+
+* Oil, chemical, gas and water supply pipelines are an important
+feature of many areas. The pipes are generally encased in concrete
+for protection and to give them negative buoyancy, which can
+significantly increase their external diameter. Pipelines are
+generally laid directly on the seabed, with sections over local dips
+or hollows being supported physically from beneath. In some cases
+(for example in shallow water or near the shore), where the external
+diameter of the pipeline would represent a significant reduction in
+the water depth above it, the pipelines may be laid in trenches and
+possibly buried.
+In all cases it must be assumed that the pipes are vulnerable to
+damage from anchoring or trawling, although in a few cases concrete
+domes are used to protect particularly vulnerable junctions. Gas
+pipes present a severe hazard to ships damaging them (by fire,
+explosion, or possibly loss of buoyancy). Oil and chemical pipes are
+a danger to the environment if fractured. Damage to water pipes
+supplying residential areas, mainly islands, results in disruption or
+contamination of the water supply. In the above cases, submarine
+pipelines must be encoded on all appropriate optimum display scale
+ENC datasets.
+
+* Outfalls and intakes such as sewers, and cooling water intakes, are
+mainly a feature of inshore waters. For small craft, in particular,
+such pipes are a potential danger to navigation. The pipes are also
+vulnerable to damage. They should be encoded on at least the largest
+optimum display scale ENC datasets.
+If it is required to encode a submarine or land pipeline, it must be
+done using the feature *Pipeline Submarine/On Land*.
+
+[underline]#Remarks:#
+
+* A pipeline that extends vertically from the seabed must be encoded,
+if required, as an *Obstruction* feature (see <<sec_13.6>>). A
+vertical pipeline on land must be encoded, if required, as a
+*Landmark* feature (see <<sec_7.2>>).
+* If the buried depth varies along a submerged pipeline, the pipeline
+must be encoded as several features.
+* The attributes *depth range minimum value* and *depth range maximum
+value* are used to encode the shallowest and deepest depth over the
+pipeline.
+* Where a bubble curtain pipeline is intended for the retention of
+oil, this must be encoded as an *Oil Barrier* feature (see
+<<sec_16.21>>), with attribute stem:[bb "category of oil barrier" =
+1] (oil retention -- high pressure pipe).
+* Where a pipeline is disused, it should be encoded with the
+attribute stem:[bb "status" = 4] (not in use), and the attributes
+*category of pipeline/pipe* and *product* should not be encoded.
+* The term "sub-surface pipeline" is used to describe a pipeline that
+is "floating" in the water column (see S-4 -- B-444.9). If it is
+required to encode a sub-surface pipeline, this should be done using
+a *Pipeline Submarine/On Land* feature, with the attribute *depth
+range minimum value* populated with the minimum design depth over the
+pipeline. The attribute *depth range maximum value* may be populated
+with the maximum design depth over the pipeline. A picture file may
+be referenced using the attribute *pictorial representation* (see
+<<sec_2.4.12.2>>) if it is considered useful, for example a schematic
+diagram showing the clearances along the pipeline.
+* If it is required to provide the contact details of submerged
+pipeline owners/operators (in cases of damage to a pipeline or for
+reparation for loss of an anchor in order to avoid such damage), this
+must be done using an associated instance of the information type
+*Contact Details* (see <<sec_24.1>>).
+* Submarine pipes, buried so deep that they are not vulnerable to
+damage from anchoring, should not be encoded (so that Mariners are
+not unnecessarily inhibited from anchoring or fishing). In marginal
+cases they may be encoded as *Pipeline Submarine/On Land* with the
+nominal depth to which they are buried encoded using the attribute
+*buried depth*.
+* Buried pipelines on land should not be encoded.
+
+[[sec_14.4.2]]
+==== Diffusers, cribs
+
+If it is required to encode diffusers and cribs, this must be done
+using *Obstruction* features (see <<sec_13.6>>), with attribute
+stem:[bb "category of obstruction" = 3] (diffuser) or _4_ (crib).
+
+[underline]#Distinction:# Pipeline Overhead, Submarine Pipeline Area.
+
+[[sec_14.5]]
+=== Submarine pipeline area
+
+[cols="10",options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *SUBMARINE PIPELINE AREA*.
+An area containing one or more submarine pipelines.
+(Adapted from S-57 Edition 3.1, Appendix A -- Chapter 1,
+Page 1.118, November 2000).
+10+| *[underline]#S-101 Geo Feature:#* *Submarine Pipeline Area (PIPARE)*
+10+| *[underline]#Primitives:#* *Point, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| category of pipeline/pipe 2+| (CATPIP) 3+|
+2: outfall pipe +
+3: intake pipe +
+4: sewer +
+5: bubbler system +
+6: supply pipe | EN | 0,*
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[fourteen_five]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[fourteen_five]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[fourteen_five]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| product 2+| (PRODCT) 3+|
+1: oil +
+2: gas +
+3: water +
+7: chemicals +
+8: drinking water +
+18: liquefied natural gas +
+19: liquefied petroleum gas | EN | 0,*
+3+| restriction 2+| (RESTRN) 3+|
+1: anchoring prohibited +
+2: anchoring restricted +
+3: fishing prohibited +
+4: fishing restricted +
+5: trawling prohibited +
+6: trawling restricted +
+7: entry prohibited +
+8: entry restricted +
+9: dredging prohibited +
+10: dredging restricted +
+11: diving prohibited +
+12: diving restricted +
+13: no wake +
+14: area to be avoided +
+15: construction prohibited +
+16: discharging prohibited +
+17: discharging restricted +
+18: industrial or mineral exploration/development prohibited +
+19: industrial or mineral exploration/development restricted +
+20: drilling prohibited +
+21: drilling restricted +
+22: removal of historical artefacts prohibited +
+23: cargo transhipment (lightening) prohibited +
+24: dragging prohibited +
+25: stopping prohibited +
+26: landing prohibited +
+27: speed restricted +
+39: swimming prohibited | EN | 0,*
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+4: not in use +
+7: temporary | EN | 0,*
+3+| vessel speed limit 2+| 3+| | C | 0,*
+
+3+| speed limit 2+| 3+| | (S) RE
+| 1,1
+
+3+| speed units 2+| 3+|
+2: kilometres per hour +
+3: miles per hour +
+4: knots | (S) EN
+| 1,1
+
+3+| vessel class 2+| 3+| | (S) TE
+| 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE
+| 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fourteen_five]
+
+3+| headline 2+| 3+| | (S) TE
+| 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[fourteen_five]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[fourteen_five]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# L 40.2, 41.2
+
+[[sec_14.5.1]]
+==== Submarine pipeline areas (see S-4 -- B-439.3 and B-444.3)
+
+Submarine pipeline areasshould be encoded where:
+
+* pipelines (including disused pipelines) are so numerous in an area
+that it would be impossible to encode them individually without
+impairing the legibility of the ENC; or
+* a regulatory authority designates an area for the protection of a
+pipeline, or pipelines.
+If it is required to encode a submarine pipeline area, it must be
+done using the feature *Submarine Pipeline Area*.
+
+[underline]#Remarks:#
+
+* Where populated, the attribute *status* must only be used to encode
+the status of the area and not the status of the pipelines in the
+area.
+* The outer limits of a pipeline area must correspond to the area in
+which anchoring, trawling and dredging are prohibited or inadvisable;
+that is, the limits must lie at a safe distance beyond the actual
+lines of the outermost pipes.
+* Where a pipeline area is disused, the *Submarine Pipeline Area*
+should be encoded with the attribute stem:[bb "status" = 4] (not in
+use), and the attributes *category of pipeline/pipe* and *product*
+should not be encoded.
+* For additional guidance regarding the encoding of vessel speed
+limits, see <<sec_17.4>>.
+* If it is required to provide the contact details of submerged
+pipeline owners/operators (in cases of damage to a pipeline or for
+reparation for loss of an anchor in order to avoid such damage), this
+must be done using an associated instance of the information type
+*Contact Details* (see <<sec_24.1>>).
+
+[underline]#Distinction:# Pipeline Overhead; Pipeline Submarine/On
+Land.
+
+[[sec_14.6]]
+=== Offshore production area
+
+[cols="10",options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *OFFSHORE PRODUCTION AREA*.
+An area at sea within which there are production facilities.
+(S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.113, November 2000).
+10+| *[underline]#S-101 Geo Feature:#* *Offshore Production Area (OSPARE)*
+10+| *[underline]#Primitives:#* *Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| category of offshore production area 2+| _(CATPRA)_ 3+|
+1: wind farm +
+2: wave farm +
+3: current farm +
+4: tank farm +
+5: seabed material extraction area +
+6: solar farm | EN | 0,1
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+2: ruined +
+4: wingless +
+5: planned construction | EN | 0,1
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[fourteen_six]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[fourteen_six]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[fourteen_six]
+
+3+| height 2+| (HEIGHT)
+3+| | RE | 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| product 2+| (PRODCT) 3+|
+1: oil +
+2: gas +
+4: stone +
+6: ore +
+10: bauxite +
+14: sand +
+23: electricity | EN | 0,*
+3+| radar conspicuous 2+| (CONRAD)
+3+| | BO | 0,1
+
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+3+| restriction 2+| (RESTRN) 3+|
+1: anchoring prohibited +
+2: anchoring restricted +
+3: fishing prohibited +
+4: fishing restricted +
+5: trawling prohibited +
+6: trawling restricted +
+7: entry prohibited +
+8: entry restricted +
+9: dredging prohibited +
+10: dredging restricted +
+11: diving prohibited +
+12: diving restricted +
+13: no wake +
+14: area to be avoided +
+15: construction prohibited +
+16: discharging prohibited +
+17: discharging restricted +
+18: industrial or mineral exploration/development prohibited +
+19: industrial or mineral exploration/development restricted +
+20: drilling prohibited +
+21: drilling restricted +
+22: removal of historical artefacts prohibited +
+23: cargo transhipment (lightening) prohibited +
+24: dragging prohibited +
+25: stopping prohibited +
+26: landing prohibited +
+27: speed restricted +
+39: swimming prohibited | EN | 0,*
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+4: not in use +
+7: temporary +
+8: private +
+12: illuminated +
+28: buoyed | EN | 0,*
+3+| vertical length 2+| (VERLEN)
+3+| | RE | 0,1
+
+3+| vessel speed limit 2+| 3+| | C | 0,*
+
+3+| speed limit 2+| 3+| | (S) RE
+| 1,1
+
+3+| speed units 2+| 3+|
+2: kilometres per hour +
+3: miles per hour +
+4: knots | (S) EN
+| 1,1
+
+3+| vessel class 2+| 3+| | (S) TE
+| 0,1
+
+3+| visual prominence 2+| (CONVIS) 3+|
+1: visually conspicuous +
+2: not visually conspicuous +
+3: prominent | EN | 0,1
+3+| water level effect 2+| (WATLEV) 3+|
+2: always dry +
+3: always under water/ submerged +
+4: covers and uncovers +
+7: floating | EN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE
+| 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[fourteen_six]
+
+3+| headline 2+| 3+| | (S) TE
+| 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[fourteen_six]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[fourteen_six]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# L 4, 5.2
+
+[[sec_14.6.1]]
+==== Offshore production areas (see S-4 -- B-445.3; B-445.7; B-445.9; B-445.11 and B-445.12)
+
+Oil and gasfields are exploited in many parts of the world. Although
+the basic methods for extracting oil and gas are well established,
+details of the systems and structures may vary with the
+characteristics of the different fields and are continually being
+developed. In a typical field, oil or gas is obtained from wells
+drilled from fixed production platforms, usually standing on the
+seabed. From each production platform, the oil or gas is carried in
+pipes to a facilities platform where primary processing, compression
+and pumping are carried out. The oil or gas is then transported
+through pipelines to a nearby storage tank, tanker loading buoy or
+floating terminal, or direct to a tank farm on shore. One facilities
+platform may collect the oil or gas from several production
+platforms, and may supply a number of tanker loading buoys or storage
+units. Such facilities platforms are sometimes termed Field Terminal
+Platforms. Converted tankers or purpose-built vessels are often
+permanently moored and used as facilities platforms, floating
+terminals, and for storage. Other offshore energy production
+facilities include wind turbines and underwater current turbines.
+Other methods of harnessing tidal wave and solar energy are also in
+use.
+
+If it is required to encode an offshore production area, it must be
+done using the feature *Offshore Production Area*.
+
+[underline]#Remarks:#
+
+* For additional guidance regarding the encoding of vessel speed
+limits, see <<sec_17.4>>.
+* General information about a wind farm such as blade diameter and
+blade vertical clearance should be encoded, if required, using the
+complex attribute *information* (see <<sec_2.4.6>>). If it is
+required to encode individual offshore wind turbines, it should be
+done using a *Wind Turbine* feature (see <<sec_7.4>>).
+* If it is required to encode individual wave energy devices or
+underwater turbines within a wave or current farm (or turbine field),
+it should be done using an *Obstruction* feature (see <<sec_13.6>>)
+or, if there are associated surface structures, using appropriate
+features, for example *Offshore Platform* or *Special Purpose/General
+Beacon* (see <<sec_14.1;and!sec_20.12>>). The extent and nature of
+any restricted area related to the feature should be encoded using a
+*Restricted Area* feature(see <<sec_17.8>>).
+* If it is required to encode an offshore development area, it should
+be done using an *Offshore Production Area* feature, with attributes
+*category of offshore production area* and *product* populated with
+the appropriate value; and stem:[bb "condition" = 1] (under
+construction). A note describing the activities taking place within
+the area may be included using the complex attribute *information*
+(see <<sec_2.4.6>>). At the conclusion of the development of the
+area, the attribute *condition* and any associated note can then be
+removed from the feature.
+
+[[sec_14.6.2]]
+==== Offshore tanker loading systems (see S-4 -- B-445.4)
+
+Although the oil and gas from some fields are sent ashore by
+submarine pipeline, a variety of mooring systems have been developed
+for use in deep water and in the vicinity of certain ports, to allow
+the loading of large vessels and the permanent mooring of floating
+storage vessels or units. These offshore systems include large
+mooring buoys, designed for mooring vessels up to 500,000 tonnes, and
+platforms on structures fixed at their lower ends to the seafloor.
+They allow a vessel to moor forward or aft to them, and to swing to
+the wind or stream. Those which are fixed are termed Single Point
+Moorings(SPM). Those which are a form of mooring buoy are termed
+Single Buoy Moorings(SBM). Like production platforms, SPM and SBM
+normally have lights and fog signals.
+
+If it is required to encode an offshore tanker loading system, it
+must be done using the feature *Installation Buoy* (see <<sec_20.7>>).
+
+If it is required to encode an articulated tower, it must be done
+using an *Offshore Platform* feature (see <<sec_14.1>>), with
+attribute:
+
+*category of offshore platform*::
+_4_::: articulated loading platform
+_5_::: single anchor leg mooring
+_8_::: floating production, storage and off-loading vessel
+_10_::: navigation, communication and control buoy (which may include
+storage facilities)
+
+[underline]#Distinction:# Exclusive Economic Zone; Offshore Platform;
+Wind Turbine.

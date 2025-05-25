@@ -1,0 +1,291 @@
+
+[[sec_18]]
+== Geo Features -- Aids to Navigation -- Overview
+
+In the context of this Product Specification, the following generic
+term definitions apply:
+
+*Beacon:* A fixed artificial navigation mark that can be recognised
+by its shape, colour, pattern, topmark or light character, or a
+combination of these. It may carry various additional aids to
+navigation. This term is not commonly used when the navigation mark
+can be classified as a lighthouse. (IHO Dictionary - S-32).
+
+*Buoy:* A floating object moored to the bottom in a particular
+(charted) place, as an aid to navigation or for other specific
+purposes. Navigational buoys may be classified according to: (a)
+their shape, appearance, or construction, such as barrel, can, cask,
+conical, cylindrical, dan, keg, nun, pillar, spar, spherical, or
+topmark buoy; (b) their colour, such as black, chequered, green, red
+buoy; (c) their location, such as bifurcation, fairway, junction,
+mid-channel, middle-ground, or turning buoy; (d) the various kinds of
+hazards or dangers to navigation which they mark, such as bar,
+isolated danger, fish trap, obstruction, spoil ground, telegraph or
+wreck buoy; (e) their particular purpose or use, such as anchor,
+anchorage, compass adjustment, dredging, farewell (or landfall),
+marker, quarantine, station (or watch), or warping buoy. (IHO
+Dictionary - S-32).
+
+[[sec_18.1]]
+=== Geo features forming parts of navigational aids
+
+Aids to navigation are composed of fixed or floating structure
+features established specifically as an aid to navigation, which may
+carry equipment features.
+
+When identifying relationships (associations) between aids to
+navigation and associated geo features within this document, three
+"base classes" are used to define the aids to navigation geo features
+included in the relevant association. These "base classes" are:
+
+* Structure Features: Includes *Cardinal Beacon*, *Cardinal Buoy*,
+*Daymark*, *Emergency Wreck Marking Buoy*, *Installation Buoy*,
+*Isolated Danger Beacon*, *Isolated Danger Buoy*, *Lateral Beacon*,
+*Lateral Buoy*, *Light Float*, *Light Vessel*, *Landmark*, *Pile*,
+*Safe Water Beacon*, *Safe Water Buoy*, *Special Purpose/General
+Beacon*, *Special Purpose/General Buoy*.
+* Equipment Features: Includes *Daymark*, *Fog Signal*, *Helipad*
+(exceptionally, see 2^nd^ Remarks bullet below), *Light Air
+Obstruction*, *Light All Around*, *Light Fog Detector*, *Light
+Sectored*, *Physical AIS Aid to Navigation*, *Radar Reflector*,
+*Radar Transponder Beacon*, *Retroreflector*, *Signal Station
+Traffic*, *Signal Station Warning*.
+* Navigational Aid Features: Includes *Cardinal Beacon*, *Cardinal
+Buoy*, *Daymark*, *Emergency Wreck Marking Buoy*, *Installation
+Buoy*, *Isolated Danger Beacon*, *Isolated Danger Buoy*, *Lateral
+Beacon*, *Lateral Buoy*, *Light Float*, *Light Vessel*, *Pile*, *Safe
+Water Beacon*, *Safe Water Buoy*, *Special Purpose/General Beacon*,
+*Special Purpose/General Buoy*.
+
+The encoding of relationships between structure and equipment
+features is described in <<sec_18.2>>.
+
+[underline]#Remarks:# Exceptionally,
+
+* Structures that have not been established specifically as an aid to
+navigation may also carry aids to navigation as equipment features.
+These include *Bridge*, *Building*, *Cable Overhead*, *Conveyor*,
+*Crane*, *Dolphin*, *Floating Dock*, *Fortified Structure*, *Fishing
+Facility*, *Hulk*, *Landmark*, *Offshore Platform*, *Pipeline
+Overhead*, *Pontoon*, *Pylon/Bridge Support*, *Obstruction*,
+*Shoreline Construction*, *Silo/Tank*, *Span Fixed*, *Span Opening*,
+*Wind Turbine*, *Wreck*. If it is required to encode such supporting
+structures at the same location as an equipment feature, it must be
+encoded as a separate feature, and share the same spatial type as
+(for point structures), or cover the location of (for structures of
+type curve or area) the equipment feature.
+* Substantive structures, which may carry helipads, erected in the
+water and intended to perform the function of light support must be
+encoded, where required, using the feature *Landmark* (see
+<<sec_7.2;and!sec_25.16>>). Exceptionally, *Helipad* features may
+also, if required, be associated to *Building*, *Landmark* or
+*Offshore Platform* features that do not additionally perform the
+function of a support for an aid to navigation, using the feature
+association *Structure/Equipment* (see <<sec_18.2>>).
+* Topmarks are encoded as part of the navigational aid structure,
+using the complex attribute *topmark* (see <<sec_29.34>>).
+* Radar reflectors must not be encoded as separate features when
+attached to navigational aids. If it is required to encode their
+existence, it must be done by populating the Boolean attribute *radar
+conspicuous* = _True_. Radar reflectors may only be encoded where
+their position is known and they are included as equipment features
+on an overhead cable structure feature (see
+<<sec_6.10.1;and!sec_20.18.1;and!sec_25.15>>).
+* Rescue stations and coast guard stations are not related to
+navigation, and they must not, therefore, be part of the equipment
+features of navigational aids. If it is required to encode a rescue
+or coast guard station at the same location as a navigational mark,
+it must be encoded as a separate feature, and share the same spatial
+type as the navigational aid.
+
+[[sec_18.2]]
+=== Relationships
+
+A *Structure/Equipment* feature association (see <<sec_25.16>>) must
+be created in order to relate the different features comprising a
+navigational aid. Where a *Structure/Equipment* feature association
+is created, there must be only one structure feature related to one
+or more equipment features. An equipment feature must not be related
+to more than one structure feature.
+
+[[fig_18-1]]
+.Navigational aids -- Structure/equipment association
+image::figure-18-1.png[]
+
+Note that *Daymark* may be a structure feature or an equipment
+feature (refer to the lists of structure and equipment features at
+<<sec_18.1>>); where a navigational aid contains a *Daymark* and
+there is no other base structure (which can serve as the structure
+feature) indicated on the source, the *Daymark* feature should be
+encoded as the structure feature. A single *Daymark* feature instance
+must not be both a structure and an equipment feature.
+
+When the nature of the base structure on land is unknown or there is
+no structure feature, one of the equipment features may be chosen as
+the structure feature, giving priority to a *Light All Around* or
+*Light Sectored* feature, if one exists (however, see also
+<<sec_19.1.8>>). Where this occurs, the light feature must be encoded
+as the structure feature in the *Structure/Equipment* relationship.
+Alternatively, a *Pile* feature of type point or a *Special
+Purpose/General Beacon* feature may be encoded as the structure
+feature at the same position as the equipment features. When a light
+is located in the water with no indication on the source of the
+structure feature, regardless of the height of the light, a *Pile*
+feature of type surface or a *Special Purpose/General Beacon* feature
+should be encoded as the structure feature. This will ensure that a
+symbol will be shown on ECDIS systems when the light features are not
+displayed during daytime navigation.
+
+[[fig_18-2]]
+.Navigational aids -- Structure/equipment feature associations:
+Real-world examples
+image::figure-18-2.png["",561,240]
+
+In the above real-world examples, the structure and equipment
+features that make up the navigational aids are point spatial types,
+and they mustshare the same geographic point spatial type.
+
+If it is required to encode the name of the navigational aid, it must
+be done using the complex attribute *feature name* (see
+<<sec_2.5.8>>) on the structure feature. The name must not be
+repeated for the equipment features. If the name is painted on the
+structure, it must be encoded with the same spelling in the complex
+attribute *feature name*. If the name is not based on the Latin
+alphabet, it must be encoded using *feature name* (*name*), with an
+appropriate value populated for the sub-attribute *language*, and
+transliterated for encoding on an iteration of *feature name*
+(*name*) with an appropriate value populated for the mandatory
+attribute *language* (normally English (_eng_)).
+
+All point features comprising a navigational aid must share the same
+geographic point spatial instance.
+
+[underline]#Remarks:#
+
+* For guidance related to the population of the temporal attributes
+*date end* and *date start* for equipment features in a
+*Structure/Equipment* association relationship, see <<sec_2.4.9>>.
+
+[[sec_18.3]]
+=== Buoyage systems and direction of buoyage (see S-4 -- B-461)
+
+Systems of buoyage are described as lateral, cardinal, or a
+combination of lateral and cardinal. Lateral systems depend on a
+direction of buoyage being defined. The cardinal system depends
+solely on the main points of the compass. Special purpose buoys often
+mark the limits or centre of an area (for example an exercise area, a
+dumping ground) and do not necessarily have lateral or cardinal
+system characteristics.
+
+The IALA Maritime Buoyage System details, including the extent of
+Regions A and B, are given in other publications (for example UK's
+booklet NP 735 "IALA Maritime Buoyage System"). Although it is called
+a buoyage system, it applies to all fixed and floating marks except
+lighthouses, some sector lights, leading lights and marks, major
+floating lights and lights on offshore structures. Six types of marks
+are provided by the system: Lateral, Cardinal, Isolated danger, Safe
+water, Special and Emergency Wreck Marking marks, which may be used
+in any combination.
+
+[[sec_18.3.1]]
+==== Buoyage systems and direction of buoyage (see S-4 -- B-461)
+
+The buoyage system of the area covered by the dataset and, where
+necessary, the direction of buoyage, must be encoded using the Meta
+features *Navigational System of Marks* and *Local Direction of
+Buoyage*:
+
+All parts of the dataset containing data must be covered by
+*Navigational System of Marks* features (see <<sec_3.6>>), with the
+mandatory attribute *marks navigational -- system of* indicating the
+buoyage system in operation. *Navigational System of Marks* features
+must not overlap.
+
+Within a dataset, there may be some areas where the direction of
+buoyage is defined by local rules and must, therefore, be specified.
+These areas should be encoded as separate *Local Direction of
+Buoyage* features (see <<sec_3.7>>), with the mandatory attribute
+*orientation value* indicating the direction of buoyage. *Local
+Direction of Buoyage* features must not overlap, but in areas where
+local buoyage directions apply, *Local Direction of Buoyage* features
+must overlap *Navigational System of Marks* features (see
+<<fig_18-3>> below).
+
+[[fig_18-3]]
+.Buoyage system and direction
+image::figure-18-3.png[492,210]
+
+Individual buoys and beacons may not be part of the general buoyage
+system. This should be encoded using the attribute *marks
+navigational -- system of* on these buoy and beacon features.
+
+[[sec_18.3.1.1]]
+===== Encoding IALA marks within IALA A or B
+
+In the following Tables the symbol '/' indicates that this attribute
+is not relevant for that particular feature class. The Tables contain
+the most common examples of encoding; other encoding combinations are
+possible. For encoding of buoys, substitute *Buoy* for *Beacon* in
+the Feature column. <<table_18-3>> for topmarks refers to the
+sub-attribute values for the complex attribute *topmark*.
+
+[[table_18-1]]
+.IALA cardinal and lateral marks -- Attribute encoding
+[cols="129,38,58,62,48,38,75"]
+|===
+h| Real World Feature h| INT 1 h| Feature h| category of cardinal mark h| colour h| colour pattern h| marks navigational -- system of
+
+| North cardinal beacon | Q 130.3 | *Cardinal Beacon* | _1_ | _2,6_   | _1_ | _1_ and _2_ (IALA A and B)
+| East cardinal beacon  | Q 130.3 | *Cardinal Beacon* | _2_ | _2,6,2_ | _1_ | _1_ and _2_ (IALA A and B)
+| South cardinal beacon | Q 130.3 | *Cardinal Beacon* | _3_ | _6,2_   | _1_ | _1_ and _2_ (IALA A and B)
+| West cardinal beacon  | Q 130.3 | *Cardinal Beacon* | _4_ | _6,2,6_ | _1_ | _1_ and _2_ (IALA A and B)
+
+h| Real World Feature h| INT 1 h| Feature h| category of lateral mark h| colour h| colour pattern h| marks navigational -- system of
+
+| Port lateral beacon                           | Q 130.1 | *Lateral Beacon* | _1_ | _3_     | _/_ | _1_ (IALA A)
+| Starboard lateral beacon                      | Q 130.1 | *Lateral Beacon* | _2_ | _4_     | _/_ | _1_ (IALA A)
+| Preferred channel to starboard lateral beacon | Q 130.1 | *Lateral Beacon* | _3_ | _3,4,3_ | _1_ | _1_ (IALA A)
+| Preferred channel to port lateral beacon      | Q130.1  | *Lateral Beacon* | _4_ | _4,3,4_ | _1_ | _1_ (IALA A)
+| Port lateral beacon                           | Q130.1  | *Lateral Beacon* | _1_ | _4_     | _/_ | _2_ (IALA B)
+| Starboard lateral beacon                      | Q130.1  | *Lateral Beacon* | _2_ | _3_     | _/_ | _2_ (IALA B)
+| Preferred channel to starboard lateral beacon | Q130.1  | *Lateral Beacon* | _3_ | _4,3,4_ | _1_ | _2_ (IALA B)
+| Preferred channel to port lateral beacon      | Q130.1  | *Lateral Beacon* | _4_ | _3,4,3_ | _1_ | _2_ (IALA B)
+|===
+
+[[table_18-2]]
+.IALA emergency wreck marking, isolated danger, safe water and
+special purpose/general marks -- Attribute encoding
+[cols="20,9,34,8,9,20"]
+|===
+h| Real World Feature hh| INT 1 hh| Feature h| colour h| colour pattern h| marks navigational -- system of
+
+| Emergency wreck marking buoy |        | *Emergency Wreck Marking Buoy*   | _5,6_ or _6,5_ | _2_ | _1_ and _2_ (IALA A and B)
+| Isolated danger beacon       | Q130.4 | *Isolated Danger Beacon*         | _2,3,2_        | _1_ | _1_ and _2_ (IALA A and B)
+| Safe water beacon            | Q130.5 | *Safe Water Beacon*              | _3,1 or 1,3_   | _2_ | _1_ and _2_ (IALA A and B)
+| Special purpose beacon       | Q130.6 | *Special Purpose/General Beacon* | _6_            | _/_ | _1_ and _2_ (IALA A and B)
+|===
+
+[[table_18-3]]
+.IALA topmarks -- Attribute encoding
+[cols="25,9,15,13,9,9,19"]
+|===
+h| Real World Feature h| INT 1 h| Feature h| topmark/daymark shape h| colour h| colour pattern h| marks navigational -- system of
+
+| North cardinal topmark          | Q130.3 | *Cardinal Beacon*                | _13_ | _2_ | _/_ | _1_ and _2_ (IALA A and B)
+| East cardinal topmark           | Q130.3 | *Cardinal Beacon*                | _11_ | _2_ | _/_ | _1_ and _2_ (IALA A and B)
+| South cardinal topmark          | Q130.3 | *Cardinal Beacon*                | _14_ | _2_ | _/_ | _1_ and _2_ (IALA A and B)
+| West cardinal topmark           | Q130.3 | *Cardinal Beacon*                | _10_ | _2_ | _/_ | _1_ and _2_ (IALA A and B)
+| Isolated danger topmark         | Q130.4 | *Isolated Danger Beacon*         | _4_  | _2_ | _/_ | _1_ and _2_ (IALA A and B)
+| Port lateral topmark            | Q130.1 | *Lateral Beacon*                 | _5_  | _3_ | _/_ | _1_ (IALA A)
+| Starboard lateral topmark       | Q130.1 | *Lateral Beacon*                 | _1_  | _4_ | _/_ | _1_ (IALA A)
+| Port lateral topmark            | Q130.1 | *Lateral Beacon*                 | _5_  | _4_ | _/_ | _2_ (IALA B)
+| Starboard lateral topmark       | Q130.1 | *Lateral Beacon*                 | _1_  | _3_ | _/_ | _2_ (IALA B)
+| Safe water topmark              | Q130.1 | *Safe Water Beacon*              | _3_  | _3_ | _/_ | _1_ and _2_ (IALA A and B)
+| Special purpose topmark         | Q130.1 | *Special Purpose/General Beacon* | _7_  | _6_ | _/_ | _1_ and _2_ (IALA A and B)
+| Emergency wreck marking topmark |        | *Emergency Wreck Marking Buoy*   | _8_  | _6_ | _/_ | _1_ or _2_ (IALA A or B)
+|===
+
+++*++ If it is required to encode an aid to navigation that may be
+considered to be a topmark but has multiple colours that are
+considered important for navigation, this should be done using the
+feature *Daymark* (see <<sec_20.14>>).
