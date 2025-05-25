@@ -7,7 +7,11 @@
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *MAGNETIC VARIATION*. The angle between the magnetic and geographic meridians at any place, expressed in degrees east or west to indicate the direction of magnetic north from true north. Also called magnetic declination. (IHO Dictionary -- S-32).
+10+| [underline]#IHO Definition:# *MAGNETIC VARIATION*. The angle
+between the magnetic and geographic meridians at any place, expressed
+in degrees east or west to indicate the direction of magnetic north
+from true north. Also called magnetic declination. (IHO Dictionary
+-- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Magnetic Variation (MAGVAR)*
 10+| *[underline]#Primitives:#* *Point, Curve, Surface*
 
@@ -45,14 +49,41 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[sec_4.1.1]]
 ==== Magnetic variation (see S-4 -- B-261; B-270 to B-273)
 
-Of the various magnetic data, magnetic variation is the most important element for the Mariner. Until a world magnetic model is universally available for inclusion in ECDIS, if it is required to encode magnetic variation, it must be done using the feature *Magnetic Variation*. As a minimum, updates to the magnetic variation should be supplied to coincide with changes of epoch (that is, every five years).
+Of the various magnetic data, magnetic variation is the most important
+element for the Mariner. Until a world magnetic model is universally
+available for inclusion in ECDIS, if it is required to encode magnetic
+variation, it must be done using the feature *Magnetic Variation*.
+As a minimum, updates to the magnetic variation should be supplied
+to coincide with changes of epoch (that is, every five years).
 
 [underline]#Remarks:#
 
-* There remains a requirement to include magnetic variation information in ENCs whilst SOLAS regulations include the requirement for a magnetic compass and deviation card. User feedback indicates that it can be difficult to access magnetic variation information in ECDIS where it has been encoded using the point or curve primitive. In order to make magnetic variation information easily accessible to ECDIS users, it is recommended to encode this information as *Magnetic Variation* features of type surface. Encoding this information using the surface primitive ensures that the user can interrogate the ENC data using the ECDIS Pick Report function at any chart location to identify the value of magnetic variation at that location.
-* The mandatory attribute *reference year for magnetic variation* must be used to populate the year value only (see <<sec_2.4.8>> for format of date type attributes).
-* Magnetic models are typically updated every five years (for example 2005, 2010… termed epochs). Magnetic variation can be calculated from computer models, or derived from charts produced by certain Hydrographic Offices or mapping authorities, which show the spatial distribution of magnetic variation values worldwide for the current epoch, by means of lines of equal magnetic variation (termed isogonals). The rate-of-change curves, which are over-printed on such charts, enable values for any point to be extrapolated for any time within the current epoch.
-* Magnetic variation information in high latitudes (polar regions) is highly variable and unreliable, and as such is not normally used for navigation. It is therefore not considered to be a requirement to include magnetic variation information in ENCs covering polar waters.
+* There remains a requirement to include magnetic variation information
+in ENCs whilst SOLAS regulations include the requirement for a magnetic
+compass and deviation card. User feedback indicates that it can be
+difficult to access magnetic variation information in ECDIS where
+it has been encoded using the point or curve primitive. In order to
+make magnetic variation information easily accessible to ECDIS users,
+it is recommended to encode this information as *Magnetic Variation*
+features of type surface. Encoding this information using the surface
+primitive ensures that the user can interrogate the ENC data using
+the ECDIS Pick Report function at any chart location to identify the
+value of magnetic variation at that location.
+* The mandatory attribute *reference year for magnetic variation*
+must be used to populate the year value only (see <<sec_2.4.8>> for
+format of date type attributes).
+* Magnetic models are typically updated every five years (for example
+2005, 2010… termed epochs). Magnetic variation can be calculated from
+computer models, or derived from charts produced by certain Hydrographic
+Offices or mapping authorities, which show the spatial distribution
+of magnetic variation values worldwide for the current epoch, by means
+of lines of equal magnetic variation (termed isogonals). The rate-of-change
+curves, which are over-printed on such charts, enable values for any
+point to be extrapolated for any time within the current epoch.
+* Magnetic variation information in high latitudes (polar regions)
+is highly variable and unreliable, and as such is not normally used
+for navigation. It is therefore not considered to be a requirement
+to include magnetic variation information in ENCs covering polar waters.
 
 [underline]#Distinction:# Local Magnetic Anomaly.
 
@@ -61,7 +92,10 @@ Of the various magnetic data, magnetic variation is the most important element f
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *LOCAL MAGNETIC ANOMALY*. An anomaly of the magnetic field of the Earth, extending over a relatively small area, due to local magnetic influences. Also called local attraction or magnetic anomaly. (IHO Dictionary -- S-32).
+10+| [underline]#IHO Definition:# *LOCAL MAGNETIC ANOMALY*. An anomaly
+of the magnetic field of the Earth, extending over a relatively small
+area, due to local magnetic influences. Also called local attraction
+or magnetic anomaly. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Local Magnetic Anomaly (LOCMAG)*
 10+| *[underline]#Primitives:#* *Point, Curve, Surface*
 
@@ -119,11 +153,16 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[four_two]]
 [NOTE]
 --
-The sub-attribute *name usage* may be mandatory for certain encoding combinations for instances of complex attribute *feature name*. See <<sec_2.5.8>>.
+The sub-attribute *name usage* may be mandatory for certain encoding
+combinations for instances of complex attribute *feature name*. See
+<<sec_2.5.8>>.
 
-Where there are two instances of the complex attribute *value of local magnetic anomaly*, the sub-attribute *reference direction* is mandatory for each instance.
+Where there are two instances of the complex attribute
+*value of local magnetic anomaly*, the sub-attribute *reference direction*
+is mandatory for each instance.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# B 82.1-2
@@ -131,17 +170,46 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_4.2.1]]
 ==== Local magnetic anomaly (see S-4 -- B-274)
 
-Local magnetic anomalies are local effects superimposed on the Earth's normal magnetic field which cause anomalous variation values. Permanent anomalies are caused by concentrations of ferromagnetic material in the Earth's crust or, to a more limited extent, by wrecks or man-made structures on the sea bed. They should not be charted unless they exceed 3° from the norm for the area (see <<sec_4.1>>), because diurnal and seasonal fluctuations in the Earth's magnetic field can change the stated variation by up to 1° and, in some parts of the world, the data on which isogonals are based may not ensure the accuracy of charted values to better than ±2°.
+Local magnetic anomalies are local effects superimposed on the Earth's
+normal magnetic field which cause anomalous variation values. Permanent
+anomalies are caused by concentrations of ferromagnetic material in
+the Earth's crust or, to a more limited extent, by wrecks or man-made
+structures on the sea bed. They should not be charted unless they
+exceed 3° from the norm for the area (see <<sec_4.1>>), because diurnal
+and seasonal fluctuations in the Earth's magnetic field can change
+the stated variation by up to 1° and, in some parts of the world,
+the data on which isogonals are based may not ensure the accuracy
+of charted values to better than ±2°.
 
-If it is required to encode an abnormality in magnetic variation for a localised area, it must be done using the feature *Local Magnetic Anomaly*.
+If it is required to encode an abnormality in magnetic variation for
+a localised area, it must be done using the feature
+*Local Magnetic Anomaly*.
 
-If the area cannot be defined, the feature should be represented as a point.
+If the area cannot be defined, the feature should be represented as
+a point.
 
 [underline]#Remarks:#
 
-* If it is required to indicate a local magnetic anomaly that is the same magnitude for both east and west, a single instance of the mandatory complex attribute *value of local magnetic anomaly* must be encoded, with the value of the anomaly populated in the mandatory sub-attribute *magnetic anomaly value* in decimal degrees. The sub-attribute *reference direction* must not be encoded in this case.
-* If it is required to indicate a local magnetic anomaly that is in a single direction, a single instance of *value of local magnetic anomaly* must be encoded, with the value of the anomaly populated in *magnetic anomaly value* and the direction encoded using the sub-attribute *reference direction*.
-* If it is required to indicate a local magnetic anomaly that is of a different magnitude for east and west, two instances of *value of local magnetic anomaly* must be encoded, with the values of the anomaly and the direction populated for each instance in *magnetic anomaly value* and *reference direction* respectively.
-* If the value of the local magnetic anomaly is unknown, a single instance of *value of local magnetic anomaly* must be encoded, with *magnetic anomaly value* populated with an empty (null) value and the complex attribute *information* containing textual information relevant to the local magnetic variation.
+* If it is required to indicate a local magnetic anomaly that is the
+same magnitude for both east and west, a single instance of the mandatory
+complex attribute *value of local magnetic anomaly* must be encoded,
+with the value of the anomaly populated in the mandatory sub-attribute
+*magnetic anomaly value* in decimal degrees. The sub-attribute
+*reference direction* must not be encoded in this case.
+* If it is required to indicate a local magnetic anomaly that is in
+a single direction, a single instance of
+*value of local magnetic anomaly* must be encoded, with the value
+of the anomaly populated in *magnetic anomaly value* and the direction
+encoded using the sub-attribute *reference direction*.
+* If it is required to indicate a local magnetic anomaly that is of
+a different magnitude for east and west, two instances of
+*value of local magnetic anomaly* must be encoded, with the values
+of the anomaly and the direction populated for each instance in
+*magnetic anomaly value* and *reference direction* respectively.
+* If the value of the local magnetic anomaly is unknown, a single
+instance of *value of local magnetic anomaly* must be encoded, with
+*magnetic anomaly value* populated with an empty (null) value and
+the complex attribute *information* containing textual information
+relevant to the local magnetic variation.
 
 [underline]#Distinction:# Magnetic Variation.

@@ -5,18 +5,35 @@
 [[sec_1.1]]
 === Preface
 
-The "Data Classification and Encoding Guide" has been developed to provide consistent, standardized instructions for encoding S-100 compliant ENC data. This document has been laid out, as far as possible, along the lines of the IHO publication S-4, Part B "Chart Specifications of the IHO -- Medium and Large-Scale National and International (INT) Charts".
+The "Data Classification and Encoding Guide" has been developed to
+provide consistent, standardized instructions for encoding S-100 compliant
+ENC data. This document has been laid out, as far as possible, along
+the lines of the IHO publication S-4, Part B "Chart Specifications
+of the IHO -- Medium and Large-Scale National and International (INT)
+Charts".
 
-The purpose of the Data Classification and Encoding Guide is to facilitate S-101 encoding to meet IHO standards for the proper display of ENC in an ECDIS. The document describes how to encode information that the cartographer considers relevant to an ENC. The content of an ENC is at the discretion of the producing authority provided that the conventions described within this document are followed. A "producing authority" is a Hydrographic Office (HO) or an organization authorized by a government, HO or other relevant government institution to produce ENCs.
+The purpose of the Data Classification and Encoding Guide is to facilitate
+S-101 encoding to meet IHO standards for the proper display of ENC
+in an ECDIS. The document describes how to encode information that
+the cartographer considers relevant to an ENC. The content of an ENC
+is at the discretion of the producing authority provided that the
+conventions described within this document are followed. A "producing
+authority" is a Hydrographic Office (HO) or an organization authorized
+by a government, HO or other relevant government institution to produce
+ENCs.
 
-The entire S-100 Standard, including the S-101 ENC Product Specification, is available at the following web site,https://iho.int/.
+The entire S-100 Standard, including the S-101 ENC Product Specification,
+is available at the following web site,https://iho.int/.
 
 [[sec_1.2]]
 === S-101 Annex A; Data Classification and Encoding Guide - Metadata
 
-NOTE: This information uniquely identifies this Annex to the Product Specification and provides information about its creation and maintenance.
+NOTE: This information uniquely identifies this Annex to the Product
+Specification and provides information about its creation and maintenance.
 
-Title:: The International Hydrographic Organization Electronic Navigational Chart Product Specification, Annex A -- Data Classification and Encoding Guide
+Title:: The International Hydrographic Organization Electronic Navigational
+Chart Product Specification, Annex A -- Data Classification and Encoding
+Guide
 
 Version:: 2.0.0
 
@@ -41,7 +58,10 @@ URL:: https://iho.int/
 
 Identifier:: S-101 Annex A
 
-Maintenance:: Changes to S-101 Annex A; Data Classification and Encoding Guide are coordinated by the S-101 Project Team (S-101PT), a Project Team under the IHO S-100 Working Group (S-100WG), and must be made available via the IHO web site.
+Maintenance:: Changes to S-101 Annex A; Data Classification and Encoding
+Guide are coordinated by the S-101 Project Team (S-101PT), a Project
+Team under the IHO S-100 Working Group (S-100WG), and must be made
+available via the IHO web site.
 
 [[sec_1.3]]
 === Terms, definitions and abbreviations
@@ -95,7 +115,8 @@ Within this document:
 ____
 "Must" indicates a mandatory requirement;
 
-"Should" indicates an optional requirement, that is the recommended process to be followed, but is not mandatory;
+"Should" indicates an optional requirement, that is the recommended
+process to be followed, but is not mandatory;
 
 "May" means "allowed to" or "could possibly", and is not mandatory.
 ____
@@ -103,4 +124,5 @@ ____
 [[sec_1.5]]
 === Maintenance
 
-Changes to the Data Classification and Encoding Guide must occur in accordance with the S-101 ENC Product Specification clause 1.6.
+Changes to the Data Classification and Encoding Guide must occur in
+accordance with the S-101 ENC Product Specification clause 1.6.

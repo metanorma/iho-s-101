@@ -1,41 +1,94 @@
 [[sec_8]]
-== Geo Features – Ports
+== Geo Features -- Ports
 
 [[sec_8.1]]
-=== Works in progress and projected (see S-4 – B-329)
+=== Works in progress and projected (see S-4 -- B-329)
 
-An ENC can seldom show the exact state of work under construction because it may not be known by the encoder and, even if known, may be expected to change between ENC updates (see <<sec_31>>). Where it is possible to provide the Mariner with an indication of the status of work under construction, under reclamation or planned, it must be done using the appropriate feature (for example *Shoreline Construction*, *Causeway*, *Dock Area*, *Dry Dock*, *Pipeline Submarine/On Land*), with the attribute *condition* populated as _1_ (under construction), _3_ (under reclamation) or _5_ (planned construction). Where the encoder wishes to provide such information to the Mariner and the details of the works are not known (nature and extent of the works), this should be done using the feature *Caution Area* (see <<sec_16.10>>), with known details of the works encoded using the complex attribute *information* (see <<sec_2.4.6>>).
+An ENC can seldom show the exact state of work under construction
+because it may not be known by the encoder and, even if known, may
+be expected to change between ENC updates (see <<sec_31>>). Where
+it is possible to provide the Mariner with an indication of the status
+of work under construction, under reclamation or planned, it must
+be done using the appropriate feature (for example *Shoreline Construction*,
+*Causeway*, *Dock Area*, *Dry Dock*, *Pipeline Submarine/On Land*),
+with the attribute *condition* populated as _1_ (under construction),
+_3_ (under reclamation) or _5_ (planned construction). Where the encoder
+wishes to provide such information to the Mariner and the details
+of the works are not known (nature and extent of the works), this
+should be done using the feature *Caution Area* (see <<sec_16.10>>),
+with known details of the works encoded using the complex attribute
+*information* (see <<sec_2.4.6>>).
 
-If it is required to provide the Mariner with an indication of the date to which information regarding the works is current, it must be done using the attribute *reported date* (see <<sec_27.154>>).
+If it is required to provide the Mariner with an indication of the
+date to which information regarding the works is current, it must
+be done using the attribute *reported date* (see <<sec_27.154>>).
 
-The coastline existing before the beginning of the works should remain encoded as a *Coastline* or *Shoreline Construction* feature until the completion of the works.
+The coastline existing before the beginning of the works should remain
+encoded as a *Coastline* or *Shoreline Construction* feature until
+the completion of the works.
 
-As the works progress and further information is supplied to the Producing Authority, ENC datasets should be updated appropriately through the issue of updates to the dataset or publication of New Editions of the dataset (see <<sec_31.2.3>>).
+As the works progress and further information is supplied to the Producing
+Authority, ENC datasets should be updated appropriately through the
+issue of updates to the dataset or publication of New Editions of
+the dataset (see <<sec_31.2.3>>).
 
-On completion of the works, full encoding of the new feature(s) in accordance with the relevant clauses in this document must be achieved, and incorporated in the relevant ENC dataset through the issue of an update to the dataset or publication of a New Edition of the dataset (see <<sec_31>>).
+On completion of the works, full encoding of the new feature(s) in
+accordance with the relevant clauses in this document must be achieved,
+and incorporated in the relevant ENC dataset through the issue of
+an update to the dataset or publication of a New Edition of the dataset
+(see <<sec_31>>).
 
 [[sec_8.1.1]]
-==== Works on land (see S-4 – B-329.1)
+==== Works on land (see S-4 -- B-329.1)
 
-Features likely to be prominent from seaward should be encoded as described above, where possible. New docks, locks, canals, etc, being excavated should be encoded similarly. The works must be covered by the feature *Land Area* (see <<sec_5.4>>) until completion of the works.
+Features likely to be prominent from seaward should be encoded as
+described above, where possible. New docks, locks, canals, etc, being
+excavated should be encoded similarly. The works must be covered by
+the feature *Land Area* (see <<sec_5.4>>) until completion of the
+works.
 
 [[sec_8.1.2]]
-==== Works at sea (see S-4 – B-329.2-5)
+==== Works at sea (see S-4 -- B-329.2-5)
 
-Works at sea which will extend the coastline seaward, where the line of the future coastline (including piers, etc) is known, must be encoded, where required, as described in <<sec_8.1>> above, using the appropriate features. The existing coastline should remain until the works are completed and the new coastline has been established. The area of reclamation or construction must also be covered by the appropriate feature(s) from the Skin of the Earth. This may be *Depth Area* at commencement of the works, or if the works are planned and have not yet commenced; *Unsurveyed Area* while reclamation/construction is in progress but the area is still covered by water; or *Land Area* where the area of the works has been reclaimed (that is, is always dry).
+Works at sea which will extend the coastline seaward, where the line
+of the future coastline (including piers, etc) is known, must be encoded,
+where required, as described in <<sec_8.1>> above, using the appropriate
+features. The existing coastline should remain until the works are
+completed and the new coastline has been established. The area of
+reclamation or construction must also be covered by the appropriate
+feature(s) from the Skin of the Earth. This may be *Depth Area* at
+commencement of the works, or if the works are planned and have not
+yet commenced; *Unsurveyed Area* while reclamation/construction is
+in progress but the area is still covered by water; or *Land Area*
+where the area of the works has been reclaimed (that is, is always
+dry).
 
-Works at sea which will be wholly or partly submergedwhen completed, such as training walls or pipelines must be encoded, if required, using the appropriate feature relevant to the completed feature, in accordance with <<sec_8.1>> above. The appropriately attributed depth information, if known, or *Unsurveyed Area*, must cover the works as appropriate.
+Works at sea which will be wholly or partly submerged when completed,
+such as training walls or pipelines must be encoded, if required,
+using the appropriate feature relevant to the completed feature, in
+accordance with <<sec_8.1>> above. The appropriately attributed depth
+information, if known, or *Unsurveyed Area*, must cover the works
+as appropriate.
 
-Where the extent or nature of the works is unknown, they must be encoded, where required, using the feature *Caution Area* as described in <<sec_8.1>> above.
+Where the extent or nature of the works is unknown, they must be encoded,
+where required, using the feature *Caution Area* as described in <<sec_8.1>>
+above.
 
-Because lights and buoys marking the limits of works at sea may be moved without notice, they should be encoded only where it is considered safe to do so. Alternatively, this information may be included by encoding the complex attribute *information*, sub-attribute *text*, for instance, _Outer end marked by red lights_.
+Because lights and buoys marking the limits of works at sea may be
+moved without notice, they should be encoded only where it is considered
+safe to do so. Alternatively, this information may be included by
+encoding the complex attribute *information*, sub-attribute *text*,
+for instance, _Outer end marked by red lights_.
 
 [[sec_8.2]]
 === Checkpoint
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *CHECKPOINT*. An official location at which to register, declare and/or inspect goods and/or people. (Adapted from Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2010).
+10+| [underline]#IHO Definition:# *CHECKPOINT*. An official location
+at which to register, declare and/or inspect goods and/or people.
+(Adapted from Defence Geospatial Information Working Group; Feature
+Data Dictionary Register, 2010).
 10+| *[underline]#S-101 Geo Feature:#* *Checkpoint (CHKPNT)*
 10+| *Primitives:* *Point, Surface*
 2+a| _Real World_
@@ -44,7 +97,7 @@ Because lights and buoys marking the limits of works at sea may be moved without
 
 4+a| _ECDIS Symbol_
 
-3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| category of checkpoint 2+| (CATCHP) 3+| 1: custom | EN | 0,1
 3+| feature name
 2+a|
@@ -119,7 +172,7 @@ Because lights and buoys marking the limits of works at sea may be moved without
 | 0,1 footnoteblock:[eight_two]
 
 10+h| Feature Associations
-h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
@@ -130,9 +183,12 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicit
 [[eight_two]]
 [NOTE]
 --
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:#
@@ -140,11 +196,15 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_8.2.1]]
 ==== Checkpoints
 
-If it is required to encode an official place to register, declare and/or check goods and people, it must be done using the feature *Checkpoint*.
+If it is required to encode an official place to register, declare
+and/or check goods and people, it must be done using the feature *Checkpoint*.
 
 [underline]#Remarks:#
 
-* The *Checkpoint* must only be used to encode the function. In addition, if it is required to encode a physical feature (for example building, fence, gate), it must be done using an appropriate feature (for example *Building*, *Landmark*).
+* The *Checkpoint* must only be used to encode the function. In addition,
+if it is required to encode a physical feature (for example building,
+fence, gate), it must be done using an appropriate feature (for example
+*Building*, *Landmark*).
 
 [underline]#Distinction:# Custom Zone.
 
@@ -153,7 +213,11 @@ If it is required to encode an official place to register, declare and/or check 
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *HULK*. The hull of a wrecked or condemned ship, from which the fittings and superstructure have usually been removed, which is moored in a permanent position or grounded. It may be abandoned or put to some other use. (Adapted from IHO Dictionary – S-32).
+10+| [underline]#IHO Definition:# *HULK*. The hull of a wrecked or
+condemned ship, from which the fittings and superstructure have usually
+been removed, which is moored in a permanent position or grounded.
+It may be abandoned or put to some other use. (Adapted from IHO Dictionary
+-- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Hulk (HULKES)*
 10+| *Primitives:* *Point, Surface*
 2+a| _Real World_
@@ -162,7 +226,7 @@ If it is required to encode an official place to register, declare and/or check 
 
 4+a| _ECDIS Symbol_
 
-3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| category of hulk 2+| (CATHLK) 3+|
 1: floating restaurant +
 2: historic ship +
@@ -328,7 +392,7 @@ If it is required to encode an official place to register, declare and/or check 
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+h| Feature Associations
-h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Bollard*, *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
 | The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
@@ -341,36 +405,60 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicit
 [[eight_three]]
 [NOTE]
 --
-The attribute *colour pattern* is mandatory for hulks that have more than one value populated for the attribute *colour*.
+The attribute *colour pattern* is mandatory for hulks that have more
+than one value populated for the attribute *colour*.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes
+*date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# F 34
 
 [[sec_8.3.1]]
-==== Hulks (see S-4 – B-330)
+==== Hulks (see S-4 -- B-330)
 
-If it is required to encode a permanently moored ship, it must be done using the feature *Hulk*.
+If it is required to encode a permanently moored ship, it must be
+done using the feature *Hulk*.
 
 [underline]#Remarks:#
 
-* A *Hulk* feature of type surface must not be bound by curve features *Coastline* or *Shoreline Construction*, unless the edge associated with the curve feature is also the boundary of a *Land Area* feature of type surface.
-* If it is required to encode a floating production, storage and off-loading vessel, it must be done using the feature *Offshore Platform* (see <<sec_14.1>>), with attribute stem:[bb "category of offshore platform" = 8] (floating production, storage and off-loading vessel).
-* If it is required to encode a hulk serving the purpose of a floating breakwater, it must be done using a *Hulk* feature, with attribute stem:[bb "category of hulk" = 5] (floating breakwater). If it is required to encode a floating breakwater of any other construction, it must be done using the feature *Shoreline Construction* (see <<sec_8.6>>), with attributes stem:[bb "category of shoreline construction" = 1] (breakwater) and stem:[bb "water level effect" = 7] (floating).
+* A *Hulk* feature of type surface must not be bound by curve features
+*Coastline* or *Shoreline Construction*, unless the edge associated
+with the curve feature is also the boundary of a *Land Area* feature
+of type surface.
+* If it is required to encode a floating production, storage and off-loading
+vessel, it must be done using the feature *Offshore Platform* (see
+<<sec_14.1>>), with attribute
+stem:[bb "category of offshore platform" = 8] (floating production,
+storage and off-loading vessel).
+* If it is required to encode a hulk serving the purpose of a floating
+breakwater, it must be done using a *Hulk* feature, with attribute
+stem:[bb "category of hulk" = 5] (floating breakwater). If it is required
+to encode a floating breakwater of any other construction, it must
+be done using the feature *Shoreline Construction* (see <<sec_8.6>>),
+with attributes stem:[bb "category of shoreline construction" = 1]
+(breakwater) and stem:[bb "water level effect" = 7] (floating).
 
-[underline]#Distinction:# Offshore Platform; Shoreline Construction; Wreck.
+[underline]#Distinction:# Offshore Platform; Shoreline Construction;
+Wreck.
 
 [[sec_8.4]]
 === Pile
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *PILE*. A long heavy timber or section of steel, wood, concrete, etc., forced into the earth or seafloor to serve as a support, as for a pier, or to resist lateral pressure; or as a free standing pole within a marine environment. (IHO Dictionary – S-32).
+10+| [underline]#IHO Definition:# *PILE*. A long heavy timber or section
+of steel, wood, concrete, etc., forced into the earth or seafloor
+to serve as a support, as for a pier, or to resist lateral pressure;
+or as a free standing pole within a marine environment. (IHO Dictionary
+-- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Pile (PILPNT)*
 10+| *Primitives:* *Point, Curve, Surface*
 2+a| _Real World_
@@ -379,7 +467,7 @@ If it is required to encode a permanently moored ship, it must be done using the
 
 4+a| _ECDIS Symbol_
 
-3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| category of pile 2+| (CATPLE) 3+|
 1: stake +
 3: post +
@@ -536,7 +624,7 @@ If it is required to encode a permanently moored ship, it must be done using the
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+h| Feature Associations
-h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Bollard*, *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
 | The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Archipelagic Sea Lane*, *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
@@ -551,37 +639,60 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicit
 [[eight_four]]
 [NOTE]
 --
-The attribute *colour pattern* is mandatory for piles that have more than one value populated for the attribute *colour*.
+The attribute *colour pattern* is mandatory for piles that have more
+than one value populated for the attribute *colour*.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes
+*date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# F 22
 
 [[sec_8.4.1]]
-==== Piles (see S-4 – B-327.3)
+==== Piles (see S-4 -- B-327.3)
 
-If it is required to encode a pile or post that is not used as a dolphin or an aid to navigation, it must be done using the feature *Pile*.
+If it is required to encode a pile or post that is not used as a dolphin
+or an aid to navigation, it must be done using the feature *Pile*.
 
 [underline]#Remarks:#
 
-* Stumps of piles or posts that are dangerous to navigation must be encoded, where required, using *Obstruction* features (see <<sec_13.6>>), with attribute stem:[bb "category of obstruction" = 1] (snag/stump), and must not be encoded using *Pile*.
-* *Pile* of type curve must only be used for *Pile* having stem:[bb "category of pile" = 5] (piling), which is sometimes termed "row of piles" or "sheet piling". Point primitive may be used to encode piling for smaller optimum display scale ENC data.
-* *Pile* of type surface must only be used for *Pile* having stem:[bb "category of pile" = 6] (area of piles). Point primitive may be used to encode an area of piles for smaller optimum display scale ENC data.
-* Stakes and posts that are identified on the source to serve the purpose of aids to navigation must be encoded, where required, using the appropriate beacon feature (for example *Special Purpose/General Beacon*), with attribute stem:[bb "beacon shape" = 1] (stake, pole, perch, post).
+* Stumps of piles or posts that are dangerous to navigation must be
+encoded, where required, using *Obstruction* features (see <<sec_13.6>>),
+with attribute stem:[bb "category of obstruction" = 1] (snag/stump),
+and must not be encoded using *Pile*.
+* *Pile* of type curve must only be used for *Pile* having
+stem:[bb "category of pile" = 5] (piling), which is sometimes termed
+"row of piles" or "sheet piling". Point primitive may be used to encode
+piling for smaller optimum display scale ENC data.
+* *Pile* of type surface must only be used for *Pile* having
+stem:[bb "category of pile" = 6] (area of piles). Point primitive
+may be used to encode an area of piles for smaller optimum display
+scale ENC data.
+* Stakes and posts that are identified on the source to serve the
+purpose of aids to navigation must be encoded, where required, using
+the appropriate beacon feature (for example
+*Special Purpose/General Beacon*), with attribute
+stem:[bb "beacon shape" = 1] (stake, pole, perch, post).
 
-[underline]#Distinction:# Cardinal Beacon; Dolphin; Isolated Danger Beacon; Lateral Beacon; Obstruction; Safe Water Beacon; Special Purpose/General Beacon.
+[underline]#Distinction:# Cardinal Beacon; Dolphin; Isolated Danger
+Beacon; Lateral Beacon; Obstruction; Safe Water Beacon; Special Purpose/General
+Beacon.
 
 [[sec_8.5]]
 === Dyke
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *DYKE*. A dyke (or dike) is an artificial embankment to contain or hold back water. (Adapted from IHO Dictionary – S-32).
+10+| [underline]#IHO Definition:# *DYKE*. A dyke (or dike) is an artificial
+embankment to contain or hold back water. (Adapted from IHO Dictionary
+-- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Dyke (DYKCON)*
 10+| *Primitives:* *Curve, Surface*
 2+a| _Real World_
@@ -590,7 +701,7 @@ If it is required to encode a pile or post that is not used as a dolphin or an a
 
 4+a| _ECDIS Symbol_
 
-3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
@@ -710,7 +821,7 @@ If it is required to encode a pile or post that is not used as a dolphin or an a
 | 0,1 footnoteblock:[eight_five]
 
 10+h| Feature Associations
-h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
@@ -721,27 +832,39 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicit
 [[eight_five]]
 [NOTE]
 --
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes
+*date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# F 1
 
 [[sec_8.5.1]]
-==== Dykes (see S-4 – B-313.1)
+==== Dykes (see S-4 -- B-313.1)
 
-Dykes and seawalls are primarily designed to prevent inundation, and generally have regular outlines.
+Dykes and seawalls are primarily designed to prevent inundation, and
+generally have regular outlines.
 
-If it is required to encode a dyke, it must be done using the feature *Dyke*.
+If it is required to encode a dyke, it must be done using the feature
+*Dyke*.
 
 [underline]#Remarks:#
 
-* If it is required to encode a dyke whose seaward edge is coincident with the coastline, it must be done using *Dyke*, and with a *Shoreline Construction* feature of type curve along its seaward edge, with no value populated for attribute *category of shoreline construction*.
-* When a *Dyke* feature is of type surface, it must be covered by a *Land Area* feature.
-* At large optimum display scales, the dyke crown (the topline of the dyke) may be encoded as a *Slope Topline* feature (see <<sec_5.15>>), with attribute stem:[bb "category of slope" = 2] (embankment).
+* If it is required to encode a dyke whose seaward edge is coincident
+with the coastline, it must be done using *Dyke*, and with a
+*Shoreline Construction* feature of type curve along its seaward edge,
+with no value populated for attribute *category of shoreline construction*.
+* When a *Dyke* feature is of type surface, it must be covered by
+a *Land Area* feature.
+* At large optimum display scales, the dyke crown (the topline of
+the dyke) may be encoded as a *Slope Topline* feature (see <<sec_5.15>>),
+with attribute stem:[bb "category of slope" = 2] (embankment).
 
 [underline]#Distinction:# Dam; Sloping Ground; Slope Topline.
 
@@ -750,7 +873,11 @@ If it is required to encode a dyke, it must be done using the feature *Dyke*.
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *SHORELINE CONSTRUCTION*. A fixed artificial structure in the water and/or adjoining the land. It may also refer to features such as training walls, which are not necessarily connected to, nor form part of the shoreline. (S-57 Edition 3.1, Appendix A – Chapter 1, Page 1.154, November 2000, as amended).
+10+| [underline]#IHO Definition:# *SHORELINE CONSTRUCTION*. A fixed
+artificial structure in the water and/or adjoining the land. It may
+also refer to features such as training walls, which are not necessarily
+connected to, nor form part of the shoreline. (S-57 Edition 3.1, Appendix
+A -- Chapter 1, Page 1.154, November 2000, as amended).
 10+| *[underline]#S-101 Geo Feature:#* *Shoreline Construction (SLCONS)*
 10+| *Primitives:* *Point, Curve, Surface*
 2+a| _Real World_
@@ -759,7 +886,7 @@ If it is required to encode a dyke, it must be done using the feature *Dyke*.
 
 4+a| _ECDIS Symbol_
 
-3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| category of shoreline construction 2+| (CATSLC) 3+|
 1: breakwater +
 2: groyne +
@@ -975,7 +1102,7 @@ If it is required to encode a dyke, it must be done using the feature *Dyke*.
 | 0,1 footnoteblock:[eight_six]
 
 10+h| Feature Associations
-h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
 | The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
@@ -988,13 +1115,18 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicit
 [[eight_six]]
 [NOTE]
 --
-The attribute *colour pattern* is mandatory for shoreline constructions that have more than one value populated for the attribute *colour*.
+The attribute *colour pattern* is mandatory for shoreline constructions
+that have more than one value populated for the attribute *colour*.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes
+*date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# F 2.1, 2.2, 4.1-6.3, 12-15, 23, 30-33.2
@@ -1002,14 +1134,39 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_8.6.1]]
 ==== Coastline
 
-Natural sections of coastlines, lakeshores and riverbanks should be encoded as *Coastline* (see <<sec_5.3>>), whereas artificial sections of coastlines, lakeshores, riverbanks, canal banks and basin borders should be encoded as *Shoreline Construction*. The exception to this general rule is when a lake, river, canal, dock or basin is not navigable at the optimum display scale for the ENC data, in which case the boundaries must not be encoded as *Coastline* or *Shoreline Construction*.
+Natural sections of coastlines, lakeshores and riverbanks should be
+encoded as *Coastline* (see <<sec_5.3>>), whereas artificial sections
+of coastlines, lakeshores, riverbanks, canal banks and basin borders
+should be encoded as *Shoreline Construction*. The exception to this
+general rule is when a lake, river, canal, dock or basin is not navigable
+at the optimum display scale for the ENC data, in which case the boundaries
+must not be encoded as *Coastline* or *Shoreline Construction*.
 
 These features form the border of the *Land Area* feature.
 
 [[sec_8.6.2]]
-==== Artificial coastline (see S-4 – B-313; B-320-322; B-324 and B-329)
+==== Artificial coastline (see S-4 -- B-313; B-320-322; B-324 and B-329)
 
-If it is required to encode artificial sections of coastlines; or lakeshores, riverbanks, canal banks and basin borders that are navigable at the optimum display scale for the ENC data, this must be done using the feature *Shoreline Construction*. The largest optimum display scale ENC data should make clear whether any shoreline construction along the coastline is intended for ships to berth alongside or not. In most instances, the associated detail (name or berth number, depths alongside, dolphins, cargo sheds, cranes or railway lines), in addition to the usually distinctive outline of such features as piers and jetties, will be sufficient to show that ships may come alongside. For shoreline constructions not intended to berth alongside (such as breakwaters and seawalls), an indication that ships do not go alongside may be given by encoding the sloping sides (for example the intertidal portion of the structure). If there is a possibility of misinterpretation by the Mariner, the danger may be indicated by encoding an *Obstruction* surface feature (see <<sec_13.6>>) with the seaward edge running parallel to the shoreline construction. <<fig_8-1>> below represents a shoreline construction such as a mole, including a berthing facility (INT1 - F12), with a relatively flat top (_abcdlmna_), and sloping sides partly above high water (_nmldefgn_) and partly intertidal (_dopqrhgfed_).
+If it is required to encode artificial sections of coastlines; or
+lakeshores, riverbanks, canal banks and basin borders that are navigable
+at the optimum display scale for the ENC data, this must be done using
+the feature *Shoreline Construction*. The largest optimum display
+scale ENC data should make clear whether any shoreline construction
+along the coastline is intended for ships to berth alongside or not.
+In most instances, the associated detail (name or berth number, depths
+alongside, dolphins, cargo sheds, cranes or railway lines), in addition
+to the usually distinctive outline of such features as piers and jetties,
+will be sufficient to show that ships may come alongside. For shoreline
+constructions not intended to berth alongside (such as breakwaters
+and seawalls), an indication that ships do not go alongside may be
+given by encoding the sloping sides (for example the intertidal portion
+of the structure). If there is a possibility of misinterpretation
+by the Mariner, the danger may be indicated by encoding an *Obstruction*
+surface feature (see <<sec_13.6>>) with the seaward edge running parallel
+to the shoreline construction. <<fig_8-1>> below represents a shoreline
+construction such as a mole, including a berthing facility (INT1 -
+F12), with a relatively flat top (_abcdlmna_), and sloping sides partly
+above high water (_nmldefgn_) and partly intertidal (_dopqrhgfed_).
 
 [[fig_8-1]]
 .Shoreline constructions
@@ -1018,20 +1175,49 @@ image::figure-8-1.png[631,332]
 
 [underline]#Remarks:#
 
-* Each of the three surface parts of the example shoreline construction above may be encoded as separate *Shoreline Construction* features of type surface; the masked curve (_ang_) must be encoded; and, if part of the *Shoreline Construction* boundary has a different characteristic (for example (_bc_) attribute *category of shoreline construction* = _6_ or _15_), it should be encoded as a separate *Shoreline Construction* feature of type curve. Alternatively, all the boundaries of the components of the shoreline construction may be encoded as *Shoreline Construction* features of type curve.
-* In this example,the shoreline construction surface above the high water line must also be covered by a *Land Area* feature of type surface, and the intertidal shoreline construction surface must also be covered by a *Depth Area* feature of type surface with attribute *depth range minimum value* = -H (see <<sec_11.7.3>>).
-* *Shoreline Construction* features must be broken into their constituent parts where possible, and categorised using attributes such as *category of shoreline construction* and *water level effect* as indicated on the source.
-* If the presence of a feature is only indicated on the source by a textual reference, without a clear symbol (for example 'pier', 'groyne', 'post'), it should be encoded using a *Caution Area* feature (see <<sec_16.10>>) or an *Information Area* feature (see <<sec_16.11>>), with the textual reference encoded using the complex attribute *information* (see <<sec_2.4.6>>). *Caution Area* should be used if the information is considered essential for safe navigation.
-* Intertidal or submerged artificial rock walls, such as training walls that are not attached to the shoreline, must be encoded, if required, as *Shoreline Construction* using the appropriate value for *category of shoreline construction*, and stem:[bb "water level effect" = 3] (always under water/submerged) or stem:[bb "water level effect" = 4] (covers and uncovers).
+* Each of the three surface parts of the example shoreline construction
+above may be encoded as separate *Shoreline Construction* features
+of type surface; the masked curve (_ang_) must be encoded; and, if
+part of the *Shoreline Construction* boundary has a different characteristic
+(for example (_bc_) attribute *category of shoreline construction* =
+_6_ or _15_), it should be encoded as a separate *Shoreline Construction*
+feature of type curve. Alternatively, all the boundaries of the components
+of the shoreline construction may be encoded as *Shoreline Construction*
+features of type curve.
+* In this example,the shoreline construction surface above the high
+water line must also be covered by a *Land Area* feature of type surface,
+and the intertidal shoreline construction surface must also be covered
+by a *Depth Area* feature of type surface with attribute
+*depth range minimum value* = -H (see <<sec_11.7.3>>).
+* *Shoreline Construction* features must be broken into their constituent
+parts where possible, and categorised using attributes such as
+*category of shoreline construction* and *water level effect* as indicated
+on the source.
+* If the presence of a feature is only indicated on the source by
+a textual reference, without a clear symbol (for example 'pier', 'groyne',
+'post'), it should be encoded using a *Caution Area* feature (see
+<<sec_16.10>>) or an *Information Area* feature (see <<sec_16.11>>),
+with the textual reference encoded using the complex attribute *information*
+(see <<sec_2.4.6>>). *Caution Area* should be used if the information
+is considered essential for safe navigation.
+* Intertidal or submerged artificial rock walls, such as training
+walls that are not attached to the shoreline, must be encoded, if
+required, as *Shoreline Construction* using the appropriate value
+for *category of shoreline construction*, and
+stem:[bb "water level effect" = 3] (always under water/submerged)
+or stem:[bb "water level effect" = 4] (covers and uncovers).
 
-[underline]#Distinction:# Causeway; Coastline; Dry Dock; Floating Dock; Gridiron; Land Area; Pontoon; Structure Over Navigable Water.
+[underline]#Distinction:# Causeway; Coastline; Dry Dock; Floating
+Dock; Gridiron; Land Area; Pontoon; Structure Over Navigable Water.
 
 [[sec_8.7]]
 === Structure over navigable water
 
 [cols="11", options="unnumbered"]
 |===
-11+| [underline]#IHO Definition:# *STRUCTURE OVER NAVIGABLE WATER*. A roofed structure erected, or partly erected, over a body of water, to provide protection for a vessel or its cargo.
+11+| [underline]#IHO Definition:# *STRUCTURE OVER NAVIGABLE WATER*.
+A roofed structure erected, or partly erected, over a body of water,
+to provide protection for a vessel or its cargo.
 11+| *[underline]#S-101 Geo Feature:#* *Structure Over Navigable Water*
 11+| *Primitives:* *Surface*
 2+a| _Real World_
@@ -1040,7 +1226,7 @@ image::figure-8-1.png[631,332]
 
 5+a| _ECDIS Symbol_
 
-3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* 2+| *Type* | *Multiplicity*
+3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* 2+h| Type h| Multiplicity
 3+| category of structure
 2+a|
 
@@ -1340,7 +1526,7 @@ image::figure-8-1.png[631,332]
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> 2+| TE | 0,1
 11+| *Feature Associations*
-h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* 2+| *Multiplicity*
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type 2+h| Multiplicity
 | The Roofed Structure 3+| *Roofed Structure Aggregation* (see <<sec_25.14>>) 3+| *Pylon/Bridge Support* 2+| Aggregation 2+| 0,1
 | The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition 2+| 0,1
 | The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association 2+| 0,*
@@ -1354,44 +1540,88 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* 2+| *Multiplic
 [[eight_seven]]
 [NOTE]
 --
-The sub-attribute *colour pattern* is mandatory for structures over navigable water that have more than one value populated for the sub-attribute *colour*.
+The sub-attribute *colour pattern* is mandatory for structures over
+navigable water that have more than one value populated for the sub-attribute
+*colour*.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes
+*date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
 
 --
 
 [underline]#INT 1 Reference:# D 20-24
 
 [[sec_8.7.1]]
-==== Structures over navigable water (see S4 – B-321.9 and B-370.9)
+==== Structures over navigable water (see S4 -- B-321.9 and B-370.9)
 
-If it is required to encode a roofed structure that is over or partially extends over navigable water to provide protection for a vessel or its cargo, it must be done using the feature *Structure Over Navigable Water*.
+If it is required to encode a roofed structure that is over or partially
+extends over navigable water to provide protection for a vessel or
+its cargo, it must be done using the feature
+*Structure Over Navigable Water*.
 
-The value of the vertical clearance between (high) water level and any fixed overhead obstruction must always be given, where known, on the largest optimum display scale ENC data intended for navigation under the structure, and for detailed passage planning. The datum above which clearances are given must be a high water level, preferably Highest Astronomical Tide (HAT), where the tide is appreciable. For structures over navigable water, the value for the vertical clearance must be encoded using the complex attribute *vertical clearance fixed*, and sub-attributes populated relevant to the feature, rounded down to the nearest whole metre (unless under 10m, when metres and decimetres may be quoted). In areas where the tidal range is not appreciable the datum above which clearances are given should be Mean Sea Level (MSL).
+The value of the vertical clearance between (high) water level and
+any fixed overhead obstruction must always be given, where known,
+on the largest optimum display scale ENC data intended for navigation
+under the structure, and for detailed passage planning. The datum
+above which clearances are given must be a high water level, preferably
+Highest Astronomical Tide (HAT), where the tide is appreciable. For
+structures over navigable water, the value for the vertical clearance
+must be encoded using the complex attribute *vertical clearance fixed*,
+and sub-attributes populated relevant to the feature, rounded down
+to the nearest whole metre (unless under 10m, when metres and decimetres
+may be quoted). In areas where the tidal range is not appreciable
+the datum above which clearances are given should be Mean Sea Level
+(MSL).
 
 [underline]#Remarks:#
 
-* If it is required to encode the minimum depth for a covered berth or the maximum permitted vessel draught allowed at the berth, this must be done by populating the attributes *minimum berth depth* and *maximum permitted draught*, respectively, for the associated *Berths* feature (see <<sec_8.14>>).
-* Navigable water under the covering structure must be encoded using the features *Depth Area*, *Dredged Area* or *Unsurveyed Area* (and appropriate *Depth Contour* and *Sounding* features) if the waterway is navigable at the optimum display scale for the ENC data, or using the features *Land Area* if the waterway is not navigable at the optimum display scale for the ENC data.
-* The attribute *height* is used, where required, to encode the height of the highest point on the covering structure (see <<sec_2.5.7>>).
-* The complex attribute *feature name* must only be encoded, if required, where the name of the structure is different to the name of the associated berth.
-* Value _13_ (low water) for attribute *vertical datum* is only applicable to enclosed (inland) waterways; and must not be used to indicate the reference datum for vertical clearances in tidal waters.
-* In navigable water, roof supporting pylons/stanchions must be encoded, where possible, using a *Pylon/Bridge Support* feature (see <<sec_6.12>>), with the mandatory attribute *category of pylon* populated as empty (null). The *Pylon/Bridge Support* features must be associated to the *Structure Over Navigable Water* using the association *Roofed Structure Aggregation* (see <<sec_25.14>>).
-* If possible, it is strongly recommended that an image or graphic of the structure is included, using the attribute *pictorial representation*.
-* If available and considered important for route planning and/or monitoring, the vertical uncertainty associated with encoded vertical clearance values should also be encoded.
+* If it is required to encode the minimum depth for a covered berth
+or the maximum permitted vessel draught allowed at the berth, this
+must be done by populating the attributes *minimum berth depth* and
+*maximum permitted draught*, respectively, for the associated *Berths*
+feature (see <<sec_8.14>>).
+* Navigable water under the covering structure must be encoded using
+the features *Depth Area*, *Dredged Area* or *Unsurveyed Area* (and
+appropriate *Depth Contour* and *Sounding* features) if the waterway
+is navigable at the optimum display scale for the ENC data, or using
+the features *Land Area* if the waterway is not navigable at the optimum
+display scale for the ENC data.
+* The attribute *height* is used, where required, to encode the height
+of the highest point on the covering structure (see <<sec_2.5.7>>).
+* The complex attribute *feature name* must only be encoded, if required,
+where the name of the structure is different to the name of the associated
+berth.
+* Value _13_ (low water) for attribute *vertical datum* is only applicable
+to enclosed (inland) waterways; and must not be used to indicate the
+reference datum for vertical clearances in tidal waters.
+* In navigable water, roof supporting pylons/stanchions must be encoded,
+where possible, using a *Pylon/Bridge Support* feature (see <<sec_6.12>>),
+with the mandatory attribute *category of pylon* populated as empty
+(null). The *Pylon/Bridge Support* features must be associated to
+the *Structure Over Navigable Water* using the association
+*Roofed Structure Aggregation* (see <<sec_25.14>>).
+* If possible, it is strongly recommended that an image or graphic
+of the structure is included, using the attribute *pictorial representation*.
+* If available and considered important for route planning and/or
+monitoring, the vertical uncertainty associated with encoded vertical
+clearance values should also be encoded.
 
-[underline]#Distinction:# Berth; Building; Harbour Facility; Landmark; Shoreline Construction; Small Craft Facility.
+[underline]#Distinction:# Berth; Building; Harbour Facility; Landmark;
+Shoreline Construction; Small Craft Facility.
 
 [[sec_8.8]]
 === Causeway
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *CAUSEWAY*. A raised way across low or wet ground or water. (IHO Dictionary – S-32).
+10+| [underline]#IHO Definition:# *CAUSEWAY*. A raised way across low or wet ground or water. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Causeway (CAUSWY)*
 10+| *Primitives:* *Curve, Surface*
 2+a| _Real World_
@@ -1400,7 +1630,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 
 4+a| _ECDIS Symbol_
 
-3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
@@ -1499,7 +1729,7 @@ The value of the vertical clearance between (high) water level and any fixed ove
 | 0,1 footnoteblock:[eight_eight]
 
 10+h| Feature Associations
-h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
@@ -1510,20 +1740,25 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicit
 [[eight_eight]]
 [NOTE]
 --
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
 
 --
 
 [underline]#INT 1 Reference:# F 3
 
 [[sec_8.8.1]]
-==== Causeways (see S-4 – B-313.3)
+==== Causeways (see S-4 -- B-313.3)
 
-A causewayis a raised roadway of solid structure built primarily to provide a route across wet ground or an intertidal area.
+A causewayis a raised roadway of solid structure built primarily to
+provide a route across wet ground or an intertidal area.
 
-If it is required to encode a causeway, it must be done using the feature *Causeway*.
+If it is required to encode a causeway, it must be done using the
+feature *Causeway*.
 
 [underline]#Remarks:#
 
@@ -1536,7 +1771,9 @@ If it is required to encode a causeway, it must be done using the feature *Cause
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *CANAL*. An artificial waterway with no flow, or a controlled flow, used for navigation, or for draining or irrigating land (ditch). (IHO Dictionary – S-32).
+10+| [underline]#IHO Definition:# *CANAL*. An artificial waterway
+with no flow, or a controlled flow, used for navigation, or for draining
+or irrigating land (ditch). (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Canal (CANALS)*
 10+| *Primitives:* *Curve, Surface*
 2+a| _Real World_
@@ -1545,7 +1782,7 @@ If it is required to encode a causeway, it must be done using the feature *Cause
 
 4+a| _ECDIS Symbol_
 
-3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| category of canal 2+| (CATCAN) 3+|
 1: transportation +
 2: drainage +
@@ -1677,7 +1914,7 @@ If it is required to encode a causeway, it must be done using the feature *Cause
 | 0,1 footnoteblock:[eight_nine]
 
 10+h| Feature Associations
-h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
@@ -1688,26 +1925,46 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicit
 [[eight_nine]]
 [NOTE]
 --
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes
+*date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
 
 --
 
 [underline]#INT 1 Reference:# F 40
 
 [[sec_8.9.1]]
-==== Canals (see S-4 – B-361)
+==== Canals (see S-4 -- B-361)
 
-If it is required to encode a non-navigable canal, it must be done using the feature *Canal*.
+If it is required to encode a non-navigable canal, it must be done
+using the feature *Canal*.
 
 [underline]#Remarks:#
 
-* If the canal is navigable at the optimum display scale for the ENC data, it must be encoded using the features *Depth Area* or *Dredged Area* (see <<sec_11.7;and!sec_11.4>>), and the canal banks must be encoded using the features *Coastline* or *Shoreline Construction*. The canal must not be encoded as a *Canal* feature. If it is required to encode the name of the canal, it must be done using a *Sea Area/Named Water Area* feature, with attribute stem:[bb "category of sea area" = 51] (canal).
-* Where the canal is navigable at the optimum display scale for the ENC data, special consideration should be given to encoding features specific to the canal such as minimum depths within the navigable area; overhead clearances; distances along the canal; and locks and lock gates (and any associated traffic signals).
-* If it is required to encode a canal that is not navigable at the optimum display scale for the ENC data, it must be done using *Canal*, covered by a *Land Area* feature. The name of the canal should be encoded using the complex attribute *feature name* on the *Canal* feature.
+* If the canal is navigable at the optimum display scale for the ENC
+data, it must be encoded using the features *Depth Area* or
+*Dredged Area* (see <<sec_11.7;and!sec_11.4>>), and the canal banks
+must be encoded using the features *Coastline* or *Shoreline Construction*.
+The canal must not be encoded as a *Canal* feature. If it is required
+to encode the name of the canal, it must be done using a
+*Sea Area/Named Water Area* feature, with attribute
+stem:[bb "category of sea area" = 51] (canal).
+* Where the canal is navigable at the optimum display scale for the
+ENC data, special consideration should be given to encoding features
+specific to the canal such as minimum depths within the navigable
+area; overhead clearances; distances along the canal; and locks and
+lock gates (and any associated traffic signals).
+* If it is required to encode a canal that is not navigable at the
+optimum display scale for the ENC data, it must be done using *Canal*,
+covered by a *Land Area* feature. The name of the canal should be
+encoded using the complex attribute *feature name* on the *Canal*
+feature.
 
 [underline]#Distinction:# River; Lake; Tideway.
 
@@ -1716,7 +1973,11 @@ If it is required to encode a non-navigable canal, it must be done using the fea
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *DISTANCE MARK*. A distance mark indicates the distance measured from an origin and consists of either a solid visible structure or a distinct location without special installation. Usually found on canals. (S-57 Edition 3.1, Appendix A – Chapter 1, Page 1.55, November 2000).
+10+| [underline]#IHO Definition:# *DISTANCE MARK*. A distance mark
+indicates the distance measured from an origin and consists of either
+a solid visible structure or a distinct location without special installation.
+Usually found on canals. (S-57 Edition 3.1, Appendix A -- Chapter 1,
+Page 1.55, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Distance Mark (DISMAR)*
 10+| *Primitives:* *Point*
 2+a| _Real World_
@@ -1725,7 +1986,8 @@ If it is required to encode a non-navigable canal, it must be done using the fea
 
 4+a| _ECDIS Symbol_
 
-3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+
 3+| distance mark visible
 2+| (_CATDIS_)
 3+a|
@@ -1850,7 +2112,7 @@ If it is required to encode a non-navigable canal, it must be done using the fea
 | 0,1 footnoteblock:[eight_ten]
 
 10+h| Feature Associations
-h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Equipment 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Cardinal Beacon*, *Cardinal Buoy*, *Bridge*, *Building*, *Crane*, *Conveyor*, *Daymark*, *Dolphin*, *Emergency Wreck Marking Buoy*, *Fishing Facility*, *Floating Dock*, *Fortified Structure*, *Hulk*, *Installation Buoy*, *Isolated Danger Beacon*, *Isolated Danger Buoy*, *Landmark*, *Lateral Beacon*, *Lateral Buoy*, *Light Float*, *Light Vessel*, *Mooring Buoy*, *Offshore Platform*, *Pile*, *Pipeline Overhead*, *Pontoon*, *Pylon/Bridge Support*, *Safe Water Beacon*, *Safe Water Buoy*, *Shoreline Construction*, *Silo/Tank*, *Span Fixed*, *Span Opening*, *Special Purpose/General Beacon*, *Special Purpose/General Buoy*, *Structure Over Navigable Water*, *Wind Turbine*, *Wreck* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
@@ -1862,28 +2124,40 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicit
 [[eight_ten]]
 [NOTE]
 --
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes
+*date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
 
 --
 
 [underline]#INT 1 Reference:# B 25.1-2
 
 [[sec_8.10.1]]
-==== Distance marks (see S-4 – B-307 and B-361.3)
+==== Distance marks (see S-4 -- B-307 and B-361.3)
 
-Marks which indicate distances along a channel in nautical miles, kilometres or some other unit of measure are considered to be useful on the largest optimum display scale ENC data.
+Marks which indicate distances along a channel in nautical miles,
+kilometres or some other unit of measure are considered to be useful
+on the largest optimum display scale ENC data.
 
-If it is required to encode a distance mark, it must be done using the feature *Distance Mark*.
+If it is required to encode a distance mark, it must be done using
+the feature *Distance Mark*.
 
 [underline]#Remarks:#
 
-* The origin from which the distance has been measured is indicated using the sub-attribute *reference location*.
-* Where an encoded distance mark has the mandatory Boolean type attribute *distance mark visible* populated as _True_, the *Distance Mark* may also be associated to the structure supporting the mark using a *Structure/Equipment* feature association (see <<sec_25.16>>).
-* For encoding a measured distance between two transits of marks established on the shore, see <<sec_15.4.2>>.
+* The origin from which the distance has been measured is indicated
+using the sub-attribute *reference location*.
+* Where an encoded distance mark has the mandatory Boolean type attribute
+*distance mark visible* populated as _True_, the *Distance Mark* may
+also be associated to the structure supporting the mark using a
+*Structure/Equipment* feature association (see <<sec_25.16>>).
+* For encoding a measured distance between two transits of marks established
+on the shore, see <<sec_15.4.2>>.
 
 [underline]#Distinction:# Special Purpose/General Beacon.
 
@@ -1892,7 +2166,10 @@ If it is required to encode a distance mark, it must be done using the feature *
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *GATE*. A structure that may be swung, drawn, or lowered to block an entrance or passageway on a watercourse. (Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2012).
+10+| [underline]#IHO Definition:# *GATE*. A structure that may be
+swung, drawn, or lowered to block an entrance or passageway on a watercourse.
+(Defence Geospatial Information Working Group; Feature Data Dictionary
+Register, 2012).
 10+| *[underline]#S-101 Geo Feature:#* *Gate (GATCON)*
 10+| *Primitives:* *Point, Curve, Surface*
 2+a| _Real World_
@@ -1901,7 +2178,7 @@ If it is required to encode a distance mark, it must be done using the feature *
 
 4+a| _ECDIS Symbol_
 
-3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| category of gate 2+| (CATGAT) 3+|
 2: flood barrage gate +
 3: caisson +
@@ -2098,7 +2375,7 @@ If it is required to encode a distance mark, it must be done using the feature *
 | 0,1 footnoteblock:[eight_eleven]
 
 10+h| Feature Associations
-h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
@@ -2109,28 +2386,42 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicit
 [[eight_eleven]]
 [NOTE]
 --
-For encoded gates that are navigable at the optimum display scale of the ENC data, the attribute *horizontal clearance open* is mandatory.
+For encoded gates that are navigable at the optimum display scale
+of the ENC data, the attribute *horizontal clearance open* is mandatory.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 
-The sub-attribute *vertical clearance value* for the complex attribute *vertical clearance open* is mandatory if the sub-attribute *vertical clearance unlimited* is set to _False_.
+The sub-attribute *vertical clearance value* for the complex attribute
+*vertical clearance open* is mandatory if the sub-attribute
+*vertical clearance unlimited* is set to _False_.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# F 27, 41.1-2, 42-43
 
 [[sec_8.11.1]]
-==== Gates (see S-4 – B-326.5-7)
+==== Gates (see S-4 -- B-326.5-7)
 
-If it is required to encode a gate that controls the flow of water, it must be done using the feature *Gate*. Gates should always be encoded in the closed (to the sea) position.
+If it is required to encode a gate that controls the flow of water,
+it must be done using the feature *Gate*. Gates should always be encoded
+in the closed (to the sea) position.
 
 [underline]#Remarks:#
 
-* *Gate* of type surface must also be covered by a *Depth Area*, *Dredged Area*, *Unsurveyed Area* or *Land Area* feature.
-* The attribute *depth range minimum value* is used to encode the minimum depth over the sill, where known.
-* Value _13_ (low water) for attribute *vertical datum* is only applicable to enclosed (inland) waterways; and must not be used to indicate the reference datum for vertical clearances in tidal waters.
-* Where the vertical clearance of the gate in the open position is unlimited, the Boolean sub-attribute *vertical clearance unlimited* must be set to _True_.
+* *Gate* of type surface must also be covered by a *Depth Area*,
+*Dredged Area*, *Unsurveyed Area* or *Land Area* feature.
+* The attribute *depth range minimum value* is used to encode the
+minimum depth over the sill, where known.
+* Value _13_ (low water) for attribute *vertical datum* is only applicable
+to enclosed (inland) waterways; and must not be used to indicate the
+reference datum for vertical clearances in tidal waters.
+* Where the vertical clearance of the gate in the open position is
+unlimited, the Boolean sub-attribute *vertical clearance unlimited*
+must be set to _True_.
 
 [underline]#Distinction:# Dry Dock; Floating Dock.
 
@@ -2139,7 +2430,10 @@ If it is required to encode a gate that controls the flow of water, it must be d
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *DAM*. A barrier to check or confine anything in motion; particularly one constructed to hold back water and raise its level to form a reservoir, or to prevent flooding. (IHO Dictionary – S-32).
+10+| [underline]#IHO Definition:# *DAM*. A barrier to check or confine
+anything in motion; particularly one constructed to hold back water
+and raise its level to form a reservoir, or to prevent flooding.
+(IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Dam (DAMCON)*
 10+| *Primitives:* *Curve, Surface*
 2+a| _Real World_
@@ -2148,7 +2442,7 @@ If it is required to encode a gate that controls the flow of water, it must be d
 
 4+a| _ECDIS Symbol_
 
-3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| category of dam 2+| (CATDAM) 3+|
 1: weir +
 2: dam +
@@ -2311,7 +2605,7 @@ If it is required to encode a gate that controls the flow of water, it must be d
 | 0,1 footnoteblock:[eight_twelve]
 
 10+h| Feature Associations
-h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
@@ -2322,36 +2616,59 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicit
 [[eight_twelve]]
 [NOTE]
 --
-The attribute *colour pattern* is mandatory for dams that have more than one value populated for the attribute *colour*.
+The attribute *colour pattern* is mandatory for dams that have more
+than one value populated for the attribute *colour*.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes
+*date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
 
 --
 
 [underline]#INT 1 Reference:# F 43, 44
 
 [[sec_8.12.1]]
-==== Dams (see S-4 –B-364.2)
+==== Dams (see S-4 --B-364.2)
 
-If it is required to encode a dam, weir or flood barrage, it must be done using the feature **Dam**; or as a *Landmark* feature (see <<sec_7.2>>) if the dam has geometry of type point.
+If it is required to encode a dam, weir or flood barrage, it must
+be done using the feature **Dam**; or as a *Landmark* feature (see
+<<sec_7.2>>) if the dam has geometry of type point.
 
 [underline]#Remarks:#
 
 * *Dam* features must be covered by a *Land Area* feature.
-* The geometry of the dam includes any gates. Gates should be encoded as separate *Gate* features.
-* If it is required to encode a dam whose seaward edge is coincident with the coastline, it must be done using *Dam*, with a *Shoreline Construction* feature of type curve along its seaward edge, with no value populated for the attribute *category of shoreline construction*.
-* If it is required to encode a submerged weir, it should be done using a *Dam* feature, with attribute stem:[bb "water level effect" = 3] (always under water/submerged).
+* The geometry of the dam includes any gates. Gates should be encoded
+as separate *Gate* features.
+* If it is required to encode a dam whose seaward edge is coincident
+with the coastline, it must be done using *Dam*, with a
+*Shoreline Construction* feature of type curve along its seaward edge,
+with no value populated for the attribute *category of shoreline construction*.
+* If it is required to encode a submerged weir, it should be done
+using a *Dam* feature, with attribute
+stem:[bb "water level effect" = 3] (always under water/submerged).
 
 [[sec_8.12.2]]
-==== Flood barrages (see S-4 –B-326.7)
+==== Flood barrages (see S-4 --B-326.7)
 
-If it is required to encode the fixed part of a flood barrage, and the flood barrage is inside an area which is navigable at the optimum display scale for the data, it must be done using a *Dam* feature, with attribute stem:[bb "category of dam" = 3] (flood barrage), and must be covered by a *Land Area* feature. If it is required to encode the opening part of the flood barrage, it must be done using a *Gate* feature, with attribute stem:[bb "category of gate" = 2] (flood barrage gate), and must be covered by a *Depth Area* feature.
+If it is required to encode the fixed part of a flood barrage, and
+the flood barrage is inside an area which is navigable at the optimum
+display scale for the data, it must be done using a *Dam* feature,
+with attribute stem:[bb "category of dam" = 3] (flood barrage), and
+must be covered by a *Land Area* feature. If it is required to encode
+the opening part of the flood barrage, it must be done using a *Gate*
+feature, with attribute stem:[bb "category of gate" = 2] (flood barrage
+gate), and must be covered by a *Depth Area* feature.
 
-When an encoded flood barrage is inside an area that is not navigable at the optimum display scale for the ENC data, the gates need not be encoded. In this case, the *Dam* feature must go all the way across the river or lake.
+When an encoded flood barrage is inside an area that is not navigable
+at the optimum display scale for the ENC data, the gates need not
+be encoded. In this case, the *Dam* feature must go all the way across
+the river or lake.
 
 [underline]#Remarks:#
 
@@ -2364,7 +2681,11 @@ When an encoded flood barrage is inside an area that is not navigable at the opt
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *CRANE*. A machine for lifting, shifting and lowering objects or materials by means of a swinging boom or with a lifting apparatus supported on an overhead track. (Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2010).
+10+| [underline]#IHO Definition:# *CRANE*. A machine for lifting,
+shifting and lowering objects or materials by means of a swinging
+boom or with a lifting apparatus supported on an overhead track. (Defence
+Geospatial Information Working Group; Feature Data Dictionary Register,
+2010).
 10+| *[underline]#S-101 Geo Feature:#* *Crane (CRANES)*
 10+| *Primitives:* *Point, Surface*
 2+a| _Real World_
@@ -2373,7 +2694,7 @@ When an encoded flood barrage is inside an area that is not navigable at the opt
 
 4+a| _ECDIS Symbol_
 
-3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| category of crane 2+| (CATCRN) 3+|
 2: container crane/gantry +
 3: sheerlegs +
@@ -2588,7 +2909,7 @@ When an encoded flood barrage is inside an area that is not navigable at the opt
 | 0,1
 
 10+h| Feature Associations
-h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light Air Obstruction*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
 | The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
@@ -2601,31 +2922,51 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicit
 [[eight_thirteen]]
 [NOTE]
 --
-The attribute *colour pattern* is mandatory for cranes that have more than one value populated for the attribute *colour*.
+The attribute *colour pattern* is mandatory for cranes that have more
+than one value populated for the attribute *colour*.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
 
 --
 
 [underline]#INT 1 Reference:# F 53.1-3
 
 [[sec_8.13.1]]
-==== Cranes (see S-4 – B-328.3)
+==== Cranes (see S-4 -- B-328.3)
 
-If it is required to encode a crane, it must be done using the feature *Crane***.**
+If it is required to encode a crane, it must be done using the feature
+*Crane*.
 
 [underline]#Remarks:#
 
-* The purpose of charting these features is primarily to assist the Mariner in identifying particular berths, etc.
-* The complex attribute *orientation* is used, where required, to encode the angular distance from true north to the axis of the crane's jib (generally perpendicular to the wharf).
-* The position of a sheerleg or a travelling crane is defined as its resting position. If it is required to encode the track, it must be done using the feature *Railway* (see <<sec_6.14>>).
-* Where fitted, lights should be encoded as described in <<sec_19>>, with the *Crane* being used as the structure feature for the relevant light equipment feature(s) (see <<sec_18.2>>).
-* For cranes located in navigable water, the Boolean attribute *in the water* must be set to _True_ to indicate that the feature is to be included in the ECDIS Base Display. Where such structures are located in the water it is not required to encode any supporting structures (for example piles, stilts).
-* Value _13_ (low water) for attribute *vertical datum* is only applicable to enclosed (inland) waterways; and must not be used to indicate the reference datum for vertical clearances in tidal waters.
+* The purpose of charting these features is primarily to assist the
+Mariner in identifying particular berths, etc.
+* The complex attribute *orientation* is used, where required, to
+encode the angular distance from true north to the axis of the crane's
+jib (generally perpendicular to the wharf).
+* The position of a sheerleg or a travelling crane is defined as its
+resting position. If it is required to encode the track, it must be
+done using the feature *Railway* (see <<sec_6.14>>).
+* Where fitted, lights should be encoded as described in <<sec_19>>,
+with the *Crane* being used as the structure feature for the relevant
+light equipment feature(s) (see <<sec_18.2>>).
+* For cranes located in navigable water, the Boolean attribute
+*in the water* must be set to _True_ to indicate that the feature
+is to be included in the ECDIS Base Display. Where such structures
+are located in the water it is not required to encode any supporting
+structures (for example piles, stilts).
+* Value _13_ (low water) for attribute *vertical datum* is only applicable
+to enclosed (inland) waterways; and must not be used to indicate the
+reference datum for vertical clearances in tidal waters.
 
-* If available and considered important for route planning and/or monitoring, the vertical uncertainty associated with encoded vertical clearance values should also be encoded.
+* If available and considered important for route planning and/or
+monitoring, the vertical uncertainty associated with encoded vertical
+clearance values should also be encoded.
 
 [underline]#Distinction:# Conveyor.
 
@@ -2634,7 +2975,9 @@ If it is required to encode a crane, it must be done using the feature *Crane***
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *BERTH*. A place, generally named or numbered, where a vessel may moor or anchor. (IHO Dictionary – S-32).
+10+| [underline]#IHO Definition:# *BERTH*. A place, generally named
+or numbered, where a vessel may moor or anchor.
+(IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Berth (BERTHS)*
 10+| *Primitives:* *Point, Curve, Surface*
 2+a| _Real World_
@@ -2643,11 +2986,8 @@ If it is required to encode a crane, it must be done using the feature *Crane***
 
 4+a| _ECDIS Symbol_
 
-3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
-3+| category of cargo
-2+a|
-
-3+|
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| category of cargo 2+a| 3+|
 1: bulk +
 2: container +
 3: general +
@@ -2825,7 +3165,7 @@ If it is required to encode a crane, it must be done using the feature *Crane***
 | 0,1 footnoteblock:[eight_fourteen]
 
 10+h| Feature Associations
-h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Component 3+| *Mooring Trot Aggregation* (see <<sec_25.10>>) 3+| *Mooring Trot* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
@@ -2837,40 +3177,64 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicit
 [[eight_fourteen]]
 [NOTE]
 --
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes
+*date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
 
 --
 
 [underline]#INT 1 Reference:# F 12, 19
 
 [[sec_8.14.1]]
-==== Berths (see S-4 – B-321; B-321.6-8)
+==== Berths (see S-4 -- B-321; B-321.6-8)
 
-Numbered, named or lettered berth information must be encoded on at least the largest optimum display scale ENC data, in order to assist the Mariner in berthing activities within ports and harbours.
+Numbered, named or lettered berth information must be encoded on at
+least the largest optimum display scale ENC data, in order to assist
+the Mariner in berthing activities within ports and harbours.
 
-If it is required to encode a berth, it must be done using the feature *Berth*.
+If it is required to encode a berth, it must be done using the feature
+*Berth*.
 
 [underline]#Remarks:#
 
-* The berth encodes the named place where a vessel can be moored adjacent to a shoreline construction. The shoreline construction itself should be encoded using the feature *Shoreline Construction* (see <<sec_8.6>>).
-* The attributes *horizontal clearance length* and *horizontal clearance width* are used to encode the regulatory length and width of the navigable part of the berth as declared by a competent authority, where known.
-* The mandatory complex attribute *feature name* is used to encode the name or number of the berth. The attributes *minimum berth depth* and *maximum permitted draught* are used to encode the shoalest physical depth and maximum draught permitted at the berth respectively, where known.
-* Terminal facilities (for example container, tanker, ferry) must be encoded, where required, using the feature *Harbour Facility* (see <<sec_22.7>>).
-* Landing places for boats should be encoded as small craft facilities (see <<sec_22.8>>).
+* The berth encodes the named place where a vessel can be moored adjacent
+to a shoreline construction. The shoreline construction itself should
+be encoded using the feature *Shoreline Construction* (see <<sec_8.6>>).
+* The attributes *horizontal clearance length* and
+*horizontal clearance width* are used to encode the regulatory length
+and width of the navigable part of the berth as declared by a competent
+authority, where known.
+* The mandatory complex attribute *feature name* is used to encode
+the name or number of the berth. The attributes *minimum berth depth*
+and *maximum permitted draught* are used to encode the shoalest physical
+depth and maximum draught permitted at the berth respectively, where
+known.
+* Terminal facilities (for example container, tanker, ferry) must
+be encoded, where required, using the feature *Harbour Facility*
+(see <<sec_22.7>>).
+* Landing places for boats should be encoded as small craft facilities
+(see <<sec_22.8>>).
 * For encoding anchor berths, see <<sec_16.5>>.
 
-[underline]#Distinction:# Anchor Berth; Bollard; Dock Area; Dolphin; Mooring Area; Mooring Buoy; Shoreline Construction; Structure Over Navigable Water.
+[underline]#Distinction:# Anchor Berth; Bollard; Dock Area; Dolphin;
+Mooring Area; Mooring Buoy; Shoreline Construction; Structure Over
+Navigable Water.
 
 [[sec_8.15]]
 === Dolphin
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *DOLPHIN*. A post or group of posts, used for mooring or warping a vessel, or as an aid to navigation. The dolphin may be in the water, on a wharf or on the beach. (Adapted from IHO Dictionary – S-32).
+10+| [underline]#IHO Definition:# *DOLPHIN*. A post or group of posts,
+used for mooring or warping a vessel, or as an aid to navigation.
+The dolphin may be in the water, on a wharf or on the beach.
+(Adapted from IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Dolphin* *_(MORFAC)_*
 10+| *Primitives:* *Point, Surface*
 2+a| _Real World_
@@ -2879,7 +3243,7 @@ If it is required to encode a berth, it must be done using the feature *Berth*.
 
 4+a| _ECDIS Symbol_
 
-3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| category of dolphin 2+| _(CATMOR)_ 3+|
 1: mooring dolphin +
 2: deviation dolphin +
@@ -3066,7 +3430,7 @@ If it is required to encode a berth, it must be done using the feature *Berth*.
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+h| Feature Associations
-h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Bollard*, *Daymark*, *Distance Mark*, *Fog Signal*, *Light Air Obstruction*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
 | The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
@@ -3080,36 +3444,48 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicit
 [[eight_fifteen]]
 [NOTE]
 --
-The attribute *colour pattern* is mandatory for dolphins that have more than one value populated for the attribute *colour*.
+The attribute *colour pattern* is mandatory for dolphins that have
+more than one value populated for the attribute *colour*.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes
+*date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
 
 --
 
 [underline]#INT 1 Reference:# F 20,21
 
 [[sec_8.15.1]]
-==== Dolphins (see S-4 – B-327.1-2)
+==== Dolphins (see S-4 -- B-327.1-2)
 
-If it is required to encode a dolphin, it must be done using the feature *Dolphin*.
+If it is required to encode a dolphin, it must be done using the feature
+*Dolphin*.
 
 [underline]#Remarks:#
 
-* If it is required to encode a dolphin beacon, this must be done using a beacon feature (see <<sec_20.9;to!sec_20.13>>), or a *Pile* feature (see <<sec_8.4>>).
-* Dolphins that are disused and/or have fallen into disrepair must be encoded, where required, using *Obstruction* or *Pile* features.
+* If it is required to encode a dolphin beacon, this must be done
+using a beacon feature (see <<sec_20.9;to!sec_20.13>>), or a *Pile*
+feature (see <<sec_8.4>>).
+* Dolphins that are disused and/or have fallen into disrepair must
+be encoded, where required, using *Obstruction* or *Pile* features.
 
-[underline]#Distinction:# Pile; Shoreline Construction; Special Purpose/General beacon; Special Purpose/General Buoy.
+[underline]#Distinction:# Pile; Shoreline Construction; Special Purpose/General
+beacon; Special Purpose/General Buoy.
 
 [[sec_8.16]]
 === Bollard
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *BOLLARD*. Small shaped post, mounted on a wharf or dolphin used to secure ship's lines. (IHO Dictionary – S-32).
+10+| [underline]#IHO Definition:# *BOLLARD*. Small shaped post, mounted
+on a wharf or dolphin used to secure ship's lines.
+(IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Bollard* *_(MORFAC)_*
 10+| *Primitives:* *Point*
 2+a| _Real World_
@@ -3118,7 +3494,7 @@ If it is required to encode a dolphin, it must be done using the feature *Dolphi
 
 4+a| _ECDIS Symbol_
 
-3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
@@ -3240,7 +3616,7 @@ If it is required to encode a dolphin, it must be done using the feature *Dolphi
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+h| Feature Associations
-h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Equipment 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Dolphin*, *Fortified Structure*, *Hulk*, *Landmark*, *Offshore Platform*, *Pile*, *Pylon/Bridge Support*, *Shoreline Construction* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,1
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
@@ -3252,25 +3628,32 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicit
 [[eight_sixteen]]
 [NOTE]
 --
-Complex attribute *feature name*,sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*,sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes
+*date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
 
 --
 
 [underline]#INT 1 Reference:#
 
 [[sec_8.16.1]]
-==== Bollards (see S-4 – B-327.4)
+==== Bollards (see S-4 -- B-327.4)
 
-If it is required to encode a bollard, it must be done using the feature *Bollard*.
+If it is required to encode a bollard, it must be done using the feature
+*Bollard*.
 
 [underline]#Remarks:#
 
-* The identifier of designator for a bollard must be encoded, where required, using the complex attribute *feature name*.
-* Bollards should be associated to the feature on which they are mounted using the association *Structure/Equipment* (see <<sec_25.16>>).
+* The identifier of designator for a bollard must be encoded, where
+required, using the complex attribute *feature name*.
+* Bollards should be associated to the feature on which they are mounted
+using the association *Structure/Equipment* (see <<sec_25.16>>).
 
 [underline]#Distinction:# Pile; Shoreline Construction.
 
@@ -3279,7 +3662,10 @@ If it is required to encode a bollard, it must be done using the feature *Bollar
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *DRY DOCK*. An artificial basin fitted with a gate or caisson, into which vessels can be floated and the water pumped out to expose the vessel's bottom. Also called graving dock. (IHO Dictionary – S-32).
+10+| [underline]#IHO Definition:# *DRY DOCK*. An artificial basin
+fitted with a gate or caisson, into which vessels can be floated and
+the water pumped out to expose the vessel's bottom. Also called graving
+dock. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Dry Dock (DRYDOC)*
 10+| *Primitives:* *Surface*
 2+a| _Real World_
@@ -3288,7 +3674,7 @@ If it is required to encode a bollard, it must be done using the feature *Bollar
 
 4+a| _ECDIS Symbol_
 
-3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
@@ -3467,7 +3853,7 @@ If it is required to encode a bollard, it must be done using the feature *Bollar
 | 0,1 footnoteblock:[eight_seventeen]
 
 10+h| Feature Associations
-h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
@@ -3478,37 +3864,61 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicit
 [[eight_seventeen]]
 [NOTE]
 --
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes
+*date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
 
 --
 
 [underline]#INT 1 Reference:# F 25
 
 [[sec_8.17.1]]
-==== Dry docks (see S-4 – B-326.1)
+==== Dry docks (see S-4 -- B-326.1)
 
-A dry dock (or graving dock)is an artificial basin into which a ship can be floated for cleaning and repairs. The entrance can be closed by gate or caisson and the water pumped out to expose the vessel's bottom.
+A dry dock (or graving dock)is an artificial basin into which a ship
+can be floated for cleaning and repairs. The entrance can be closed
+by gate or caisson and the water pumped out to expose the vessel's
+bottom.
 
-If it is required to encode a dry dock, it must be done using the feature *Dry Dock*.
+If it is required to encode a dry dock, it must be done using the
+feature *Dry Dock*.
 
 [underline]#Remarks:#
 
-* A dry dock must also be covered by a *Land Area* feature. The boundary of a dry dock must not be encoded as a separate feature (*Coastline* or *Shoreline Construction*), except for the gate feature (*Gate*), which may be encoded.
-* The attributes *horizontal clearance length* and *horizontal clearance width* are used to encode the regulatory length and width of the navigable part of the dry dock when the gate is open as declared by a competent authority, where known. If required, the minimum physical length and width of the dry dock itself must be populated using the attributes *horizontal length* and *horizontal width*.
-* The attributes *depth range minimum value* and *maximum permitted draught* are used to encode the shoalest physical depth in the dock when the gate is open and maximum draught permitted in the dock respectively, where known.
+* A dry dock must also be covered by a *Land Area* feature. The boundary
+of a dry dock must not be encoded as a separate feature (*Coastline*
+or *Shoreline Construction*), except for the gate feature (*Gate*),
+which may be encoded.
+* The attributes *horizontal clearance length* and
+*horizontal clearance width* are used to encode the regulatory length
+and width of the navigable part of the dry dock when the gate is open
+as declared by a competent authority, where known. If required, the
+minimum physical length and width of the dry dock itself must be populated
+using the attributes *horizontal length* and *horizontal width*.
+* The attributes *depth range minimum value* and
+*maximum permitted draught* are used to encode the shoalest physical
+depth in the dock when the gate is open and maximum draught permitted
+in the dock respectively, where known.
 
-[underline]#Distinction:# Dock Area; Floating Dock; Gate; Shoreline Construction.
+[underline]#Distinction:# Dock Area; Floating Dock; Gate; Shoreline
+Construction.
 
 [[sec_8.18]]
 === Floating dock
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *FLOATING DOCK*. A form of dry dock consisting of a floating structure of one or more sections which can be partly submerged by controlled flooding to receive a vessel, then raised by pumping out the water so that the vessel's bottom can be exposed. (IHO Dictionary – S-32).
+10+| [underline]#IHO Definition:# *FLOATING DOCK*. A form of dry dock
+consisting of a floating structure of one or more sections which can
+be partly submerged by controlled flooding to receive a vessel, then
+raised by pumping out the water so that the vessel's bottom can be
+exposed. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Floating Dock (FLODOC)*
 10+| *Primitives:* *Curve, Surface*
 2+a| _Real World_
@@ -3517,7 +3927,7 @@ If it is required to encode a dry dock, it must be done using the feature *Dry D
 
 4+a| _ECDIS Symbol_
 
-3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| colour 2+| (COLOUR) 3+|
 1: white +
 2: black +
@@ -3707,7 +4117,7 @@ If it is required to encode a dry dock, it must be done using the feature *Dry D
 
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 10+h| Feature Associations
-h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
 | The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
@@ -3720,28 +4130,45 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicit
 [[eight_eighteen]]
 [NOTE]
 --
-The attribute *colour pattern* is mandatory for floating docks that have more than one value populated for the attribute *colour*.
+The attribute *colour pattern* is mandatory for floating docks that
+have more than one value populated for the attribute *colour*.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes
+*date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
 
 --
 
 [underline]#INT 1 Reference:# F 26
 
 [[sec_8.18.1]]
-==== Floating docks (see S-4 – B-326.2)
+==== Floating docks (see S-4 -- B-326.2)
 
-If it is required to encode a floating dock, it must be done using the feature *Floating Dock*.
+If it is required to encode a floating dock, it must be done using
+the feature *Floating Dock*.
 
 [underline]#Remarks:#
 
-* A *Floating Dock* feature must also be covered by *Depth Area*, *Dredged Area* or *Unsurveyed Area* features. The boundary of a *Floating Dock* feature of type surface must not be encoded as a separate feature (*Coastline* or *Shoreline Construction*).
-* The attributes *horizontal clearance length* and *horizontal clearance width* are used to encode the regulatory length and width of the navigable part of the floating dock as declared by a competent authority, where known. If required, the minimum physical length and width of the dry dock itself must be populated using the attributes *horizontal length* and *horizontal width*.
-* The attribute *depth range minimum value* is used to encode the shoalest depth of the dock when flooded, and the attribute *maximum permitted draught* is used to encode the maximum draught permitted in the dock, where known.
+* A *Floating Dock* feature must also be covered by *Depth Area*,
+*Dredged Area* or *Unsurveyed Area* features. The boundary of a
+*Floating Dock* feature of type surface must not be encoded as a separate
+feature (*Coastline* or *Shoreline Construction*).
+* The attributes *horizontal clearance length* and
+*horizontal clearance width* are used to encode the regulatory length
+and width of the navigable part of the floating dock as declared by
+a competent authority, where known. If required, the minimum physical
+length and width of the dry dock itself must be populated using the
+attributes *horizontal length* and *horizontal width*.
+* The attribute *depth range minimum value* is used to encode the
+shoalest depth of the dock when flooded, and the attribute
+*maximum permitted draught* is used to encode the maximum draught
+permitted in the dock, where known.
 
 [underline]#Distinction:# Dock Area; Dry Dock.
 
@@ -3750,7 +4177,9 @@ If it is required to encode a floating dock, it must be done using the feature *
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *PONTOON*. A floating structure, usually rectangular in shape which serves as landing, pier head, bridge support, etc. (Adapted from IHO Dictionary – S-32).
+10+| [underline]#IHO Definition:# *PONTOON*. A floating structure,
+usually rectangular in shape which serves as landing, pier head, bridge
+support, etc. (Adapted from IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Pontoon (PONTON)*
 10+| *Primitives:* *Curve, Surface*
 2+a| _Real World_
@@ -3759,7 +4188,7 @@ If it is required to encode a floating dock, it must be done using the feature *
 
 4+a| _ECDIS Symbol_
 
-3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| condition 2+| (CONDTN) 3+|
 1: under construction +
 2: ruined +
@@ -3900,7 +4329,7 @@ If it is required to encode a floating dock, it must be done using the feature *
 3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
 
 10+h| Feature Associations
-h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Bollard*, *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
 | The Component 3+| *Bridge Aggregation* (see <<sec_25.4>>) 3+| *Bridge* 2+| Association | 0,*
 | The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
@@ -3914,33 +4343,46 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicit
 [[eight_nineteen]]
 [NOTE]
 --
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes
+*date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
 
 --
 
 [underline]#INT 1 Reference:# F 16
 
 [[sec_8.19.1]]
-==== Pontoons (see S-4 – B-324.3)
+==== Pontoons (see S-4 -- B-324.3)
 
-If it is required to encode a pontoon, it must be done using the feature *Pontoon*.
+If it is required to encode a pontoon, it must be done using the feature
+*Pontoon*.
 
 [underline]#Remarks:#
 
-* A *Pontoon* feature must also be covered by *Depth Area*, *Dredged Area* or *Unsurveyed Area* features. A *Pontoon* feature of type surface must not be bound by curve features *Coastline* or *Shoreline Construction*, unless the edge associated with the curve feature is also the boundary of a *Land Area* feature of type surface.
+* A *Pontoon* feature must also be covered by *Depth Area*,
+*Dredged Area* or *Unsurveyed Area* features. A *Pontoon* feature
+of type surface must not be bound by curve features *Coastline* or
+*Shoreline Construction*, unless the edge associated with the curve
+feature is also the boundary of a *Land Area* feature of type surface.
 
-[underline]#Distinction:# Bridge; Dolphin; Mooring Buoy; Shoreline Construction.
+[underline]#Distinction:# Bridge; Dolphin; Mooring Buoy; Shoreline
+Construction.
 
 [[sec_8.20]]
 === Dock area
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *DOCK AREA*. An artificially enclosed area within which ships may moor and which may have gates to regulate water level. (S-57 Edition 3.1, Appendix A – Chapter 1, Page 1.56, November 2000).
+10+| [underline]#IHO Definition:# *DOCK AREA*. An artificially enclosed
+area within which ships may moor and which may have gates to regulate
+water level. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.56,
+November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Dock Area (DOCARE)*
 10+| *Primitives:* *Surface*
 2+a| _Real World_
@@ -3949,7 +4391,7 @@ If it is required to encode a pontoon, it must be done using the feature *Pontoo
 
 4+a| _ECDIS Symbol_
 
-3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| category of dock 2+| (CATDOC) 3+| 1: tidal +
 2: wet dock | EN | 0,1
 3+| condition 2+| (CONDTN) 3+|
@@ -4111,7 +4553,7 @@ If it is required to encode a pontoon, it must be done using the feature *Pontoo
 | 0,1 footnoteblock:[eight_twenty]
 
 10+h| Feature Associations
-h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
@@ -4122,38 +4564,74 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicit
 [[eight_twenty]]
 [NOTE]
 --
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes
+*date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
 
 --
 
 [underline]#INT 1 Reference:# F 27, 28
 
 [[sec_8.20.1]]
-==== Tidal and non-tidal basins (see S-4 – B-326.3-4)
+==== Tidal and non-tidal basins (see S-4 -- B-326.3-4)
 
-If it is required to encode a non-navigable dock area, it must be done using the feature *Dock Area*.
+If it is required to encode a non-navigable dock area, it must be
+done using the feature *Dock Area*.
 
 [underline]#Remarks:#
 
-* If the dock is navigable at the optimum display scale of the ENC data, it must be encoded using the features *Depth Area*, *Dredged Area* or *Unsurveyed Area* (see <<sec_11.7.4>>), and the geo features making up the dock limits must be encoded using appropriate features such as *Coastline*, *Shoreline Construction* or *Gate*. The dock must not be encoded as *Dock Area*. If it is required to encode the name of the dock, it must be done using the feature *Sea Area/Named Water Area*.
-* If it is required to encode a dock which is not navigable at the optimum display scale of the ENC data, it must be done using the feature *Dock Area*, covered by a *Land Area* or *Unsurveyed Area* feature. The name of the dock should be encoded using the complex attribute *feature name* on the *Dock Area*. The boundary of a dock must not be encoded as a separate feature (for example *Coastline, Shoreline Construction*), except for the gate feature (*Gate*) for a wet dock, which may be encoded.
-* The complex attribute *horizontal clearance fixed* is used to encode the size of the entrance to the dock area, where required.
-* The attributes *horizontal clearance length* and *horizontal clearance width* are used to encode the regulatory length and width of the navigable part of the dock area as declared by a competent authority, where known.
-* In a non-tidal basin (wet dock), depths may refer to a sounding datum different from that in open waters. If this area is navigable at the optimum display scale of the ENC data, the value of this datum must be encoded using the Meta feature *Sounding Datum*, with attribute stem:[bb "vertical datum" = 24] (local datum), co-incident with the area covered by the dock.
-* In reality, smaller named, non-navigable dock areas (at the optimum display scale of the ENC data) may be included in major navigable dock areas, with different names or characteristics. To encode this fact, sea areas (*Sea Area/Named Water Area*) may overlap a *Dock Area*.
+* If the dock is navigable at the optimum display scale of the ENC
+data, it must be encoded using the features *Depth Area*,
+*Dredged Area* or *Unsurveyed Area* (see <<sec_11.7.4>>), and the
+geo features making up the dock limits must be encoded using appropriate
+features such as *Coastline*, *Shoreline Construction* or *Gate*.
+The dock must not be encoded as *Dock Area*. If it is required to
+encode the name of the dock, it must be done using the feature
+*Sea Area/Named Water Area*.
+* If it is required to encode a dock which is not navigable at the
+optimum display scale of the ENC data, it must be done using the feature
+*Dock Area*, covered by a *Land Area* or *Unsurveyed Area* feature.
+The name of the dock should be encoded using the complex attribute
+*feature name* on the *Dock Area*. The boundary of a dock must not
+be encoded as a separate feature (for example
+*Coastline, Shoreline Construction*), except for the gate feature
+(*Gate*) for a wet dock, which may be encoded.
+* The complex attribute *horizontal clearance fixed* is used to encode
+the size of the entrance to the dock area, where required.
+* The attributes *horizontal clearance length* and
+*horizontal clearance width* are used to encode the regulatory length
+and width of the navigable part of the dock area as declared by a
+competent authority, where known.
+* In a non-tidal basin (wet dock), depths may refer to a sounding
+datum different from that in open waters. If this area is navigable
+at the optimum display scale of the ENC data, the value of this datum
+must be encoded using the Meta feature *Sounding Datum*, with attribute
+stem:[bb "vertical datum" = 24] (local datum), co-incident with the
+area covered by the dock.
+* In reality, smaller named, non-navigable dock areas (at the optimum
+display scale of the ENC data) may be included in major navigable
+dock areas, with different names or characteristics. To encode this
+fact, sea areas (*Sea Area/Named Water Area*) may overlap a
+*Dock Area*.
 
-[underline]#Distinction:# Berth; Cargo Transhipment Area; Dry Dock; Floating Dock; Gate; Harbour Area (Administrative); Harbour Facility.
+[underline]#Distinction:# Berth; Cargo Transhipment Area; Dry Dock;
+Floating Dock; Gate; Harbour Area (Administrative); Harbour Facility.
 
 [[sec_8.21]]
 === Gridiron
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *GRIDIRON*. A structure in the intertidal zone serving as a support for vessels at low stages of the tide to permit work on the exposed portion of the vessel's hull. (IHO Dictionary – S-32).
+10+| [underline]#IHO Definition:# *GRIDIRON*. A structure in the intertidal
+zone serving as a support for vessels at low stages of the tide to
+permit work on the exposed portion of the vessel's hull.
+(IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Gridiron (GRIDRN)*
 10+| *Primitives:* *Surface*
 2+a| _Real World_
@@ -4162,7 +4640,7 @@ If it is required to encode a non-navigable dock area, it must be done using the
 
 4+a| _ECDIS Symbol_
 
-3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| feature name
 2+a|
 
@@ -4273,7 +4751,7 @@ If it is required to encode a non-navigable dock area, it must be done using the
 | 0,1 footnoteblock:[eight_twenty-one]
 
 10+h| Feature Associations
-h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
@@ -4284,9 +4762,12 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicit
 [[eight_twenty-one]]
 [NOTE]
 --
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
 
 --
 
@@ -4295,11 +4776,14 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_8.21.1]]
 ==== Gridirons (see S-4- B-326.8)
 
-If it is required to encode a gridiron, it must be done using the feature *Gridiron*.
+If it is required to encode a gridiron, it must be done using the
+feature *Gridiron*.
 
 [underline]#Remarks:#
 
-* Due to gridirons normally being located in intertidal areas, it is only required to encode *Gridiron* on the largest optimum display scale ENC data.
+* Due to gridirons normally being located in intertidal areas, it
+is only required to encode *Gridiron* on the largest optimum display
+scale ENC data.
 
 [underline]#Distinction:# Dry Dock; Floating Dock.
 
@@ -4308,7 +4792,9 @@ If it is required to encode a gridiron, it must be done using the feature *Gridi
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *LOCK BASIN*. A wet dock in a waterway, permitting a ship to pass from one level to another. (IHO Dictionary – S-32).
+10+| [underline]#IHO Definition:# *LOCK BASIN*. A wet dock in a waterway,
+permitting a ship to pass from one level to another.
+(IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Lock Basin (LOKBSN)*
 10+| *Primitives:* *Surface*
 2+a| _Real World_
@@ -4317,7 +4803,7 @@ If it is required to encode a gridiron, it must be done using the feature *Gridi
 
 4+a| _ECDIS Symbol_
 
-3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| feature name
 2+a|
 
@@ -4465,7 +4951,7 @@ If it is required to encode a gridiron, it must be done using the feature *Gridi
 | 0,1 footnoteblock:[eight_twenty-two]
 
 10+h| Feature Associations
-h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Non-Standard Working Day*, *Service Hours*, *Nautical Information* 2+| Association | 0,*
@@ -4476,26 +4962,47 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicit
 [[eight_twenty-two]]
 [NOTE]
 --
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.^---^For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes
+*date end* or *date start* must be populated.^---^For each instance
+of *information*, at least one of the sub-attributes *file reference*
+or *text* must be populated.
 
 --
 
 [underline]#INT 1 Reference:# F 41.1
 
 [[sec_8.22.1]]
-==== Locks (see S-4 – B-326.6)
+==== Locks (see S-4 -- B-326.6)
 
-A lockis an enclosure at the entrance to a canal or non-tidal basin. Its ends are closed by lock gates.
+A lockis an enclosure at the entrance to a canal or non-tidal basin.
+Its ends are closed by lock gates.
 
-If it is required to encode a non-navigable lock basin, it must be done using the feature *Lock Basin*.
+If it is required to encode a non-navigable lock basin, it must be
+done using the feature *Lock Basin*.
 
 [underline]#Remarks:#
 
-* If the lock is navigable at the optimum display scale of the ENC data, it must be encoded using the features *Depth Area* or *Dredged Area*(see <<sec_11.7.4>>), and the geo features making up the limits of the lock must be encoded using appropriate features such as *Coastline*, *Shoreline Construction* or *Gate*. The lock must not be encoded as *Lock Basin*. If it is required to encode the name of the lock, it must be done using the feature *Sea Area/Named Water Area*.
-* It if is required to encode a lock that is not navigable at the optimum display scale of the ENC data, it must be done using *Lock Basin*, covered by a *Land Area* or *Unsurveyed Area* feature. The name of the lock should be encoded using the complex attribute *feature name* on the *Lock Basin* feature.
-* The gates should be encoded as a *Gate* feature (see <<sec_8.11>>) with attribute stem:[bb "category of gate" = 4] (lock gate) or _3_ (caisson). For smaller optimum display scale ENC data, a lock may be encoded using *Gate* only, without using *Lock Basin*.
+* If the lock is navigable at the optimum display scale of the ENC
+data, it must be encoded using the features *Depth Area* or
+*Dredged Area*(see <<sec_11.7.4>>), and the geo features making up
+the limits of the lock must be encoded using appropriate features
+such as *Coastline*, *Shoreline Construction* or *Gate*. The lock
+must not be encoded as *Lock Basin*. If it is required to encode the
+name of the lock, it must be done using the feature
+*Sea Area/Named Water Area*.
+* It if is required to encode a lock that is not navigable at the
+optimum display scale of the ENC data, it must be done using
+*Lock Basin*, covered by a *Land Area* or *Unsurveyed Area* feature.
+The name of the lock should be encoded using the complex attribute
+*feature name* on the *Lock Basin* feature.
+* The gates should be encoded as a *Gate* feature (see <<sec_8.11>>)
+with attribute stem:[bb "category of gate" = 4] (lock gate) or _3_
+(caisson). For smaller optimum display scale ENC data, a lock may
+be encoded using *Gate* only, without using *Lock Basin*.
 
 [underline]#Distinction:# Canal; Gate.
 
@@ -4504,9 +5011,11 @@ If it is required to encode a non-navigable lock basin, it must be done using th
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *MOORING TROT*. A mooring is a place where a vessel may be secured. (IHI Dictionary – S-32).
+10+| [underline]#IHO Definition:# *MOORING TROT*. A mooring is a place
+where a vessel may be secured. (IHI Dictionary -- S-32).
 
-A mooring trot is a mooring that is composed of ground tackle, mooring cables, buoys and mooring berths on junction cables.
+A mooring trot is a mooring that is composed of ground tackle, mooring
+cables, buoys and mooring berths on junction cables.
 10+| *[underline]#S-101 Geo Feature:#* *Mooring Trot* *_(C_AGGR)_*
 10+| *Primitives:* *Surface, None*
 2+a| _Real World_
@@ -4515,7 +5024,7 @@ A mooring trot is a mooring that is composed of ground tackle, mooring cables, b
 
 4+a| _ECDIS Symbol_
 
-3+| *S-101 Attribute* 2+| *S-57 Acronym* 3+| *Allowable Encoding Value* | *Type* | *Multiplicity*
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
 3+| feature name
 2+a|
 
@@ -4605,7 +5114,7 @@ A mooring trot is a mooring that is composed of ground tackle, mooring cables, b
 | 0,1 footnoteblock:[eight_twenty-three]
 
 10+h| Feature Associations
-h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Collection 3+| *Mooring Trot Aggregation* (see <<sec_25.10>>) 3+| *Berth*, *Cable Submarine*, *Mooring Buoy*, *Obstruction* 2+| Aggregation | 0,1
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
@@ -4617,41 +5126,61 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicit
 [[eight_twenty-three]]
 [NOTE]
 --
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes
+*date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
 
 --
 
 [underline]#INT 1 Reference:# Q 42
 
 [[sec_8.23.1]]
-==== Mooring trots (see S-4 – B-431.6)
+==== Mooring trots (see S-4 -- B-431.6)
 
 [[fig_8-2]]
 .Mooring trot
 image::figure-8-2.png[360,216]
 
-A complete mooring trot is composed of ground tackle, mooring cables, buoys and mooring berths on junction cables. The following remarks refer to the annotations in <<fig_8-2>> above:
+A complete mooring trot is composed of ground tackle, mooring cables,
+buoys and mooring berths on junction cables. The following remarks
+refer to the annotations in <<fig_8-2>> above:
 
-. Ground tackle should be encoded using *Obstruction* features (see <<sec_13.6>>), with attribute stem:[bb "category of obstruction" = 9] (ground tackle).
+. Ground tackle should be encoded using *Obstruction* features
+(see <<sec_13.6>>), with attribute
+stem:[bb "category of obstruction" = 9] (ground tackle).
 
-. Mooring cables should be encoded using *Cable Submarine* features (see <<sec_14.2>>), with attribute stem:[bb "category of cable" = 6] (mooring cable).
+. Mooring cables should be encoded using *Cable Submarine* features
+(see <<sec_14.2>>), with attribute
+stem:[bb "category of cable" = 6] (mooring cable).
 
 . Buoys should be encoded using *Mooring Buoy* features.
 
 . Mooring berths should be encoded using *Berth* features.
 
-. Junction cables should be encoded using *Cable Submarine* features, with attribute stem:[bb "category of cable" = 9] (junction cable).
+. Junction cables should be encoded using *Cable Submarine* features,
+with attribute stem:[bb "category of cable" = 9] (junction cable).
 
-All these features should be aggregated in a *Mooring Trot* feature, using the association *Mooring Trot Aggregation* (see <<sec_25.10>>), with the name of the mooring trot being populated using the complex attribute *feature name* for the *Mooring Trot*.
+All these features should be aggregated in a *Mooring Trot* feature,
+using the association *Mooring Trot Aggregation* (see <<sec_25.10>>),
+with the name of the mooring trot being populated using the complex
+attribute *feature name* for the *Mooring Trot*.
 
 [underline]#Remarks:#
 
-* If it is required to encode the name of a mooring trot, the *Mooring Trot* should be encoded using geometry of type surface. The extent of the surface should cover the extent of all the components of the mooring trot.
-* If it is required to encode the extent of an unnamed mooring trot, this may be done using a *Mooring Trot* feature having no geometry.
-* Names or numbers of individual moorings within the mooring trot must be encoded using the attribute *feature name* on the relevant *Berth* feature.
+* If it is required to encode the name of a mooring trot, the
+*Mooring Trot* should be encoded using geometry of type surface.
+The extent of the surface should cover the extent of all the components
+of the mooring trot.
+* If it is required to encode the extent of an unnamed mooring trot,
+this may be done using a *Mooring Trot* feature having no geometry.
+* Names or numbers of individual moorings within the mooring trot
+must be encoded using the attribute *feature name* on the relevant
+*Berth* feature.
 
 [underline]#Distinction:# Berth; Mooring Buoy; Mooring Area.

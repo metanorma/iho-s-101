@@ -5,7 +5,11 @@
 [[sec_7.1]]
 === Buildings, landmarks, tanks, silos: Common encoding combinations
 
-In the following Table, the symbol '/' indicates that this attribute does not exist for that particular feature class. A blank indicates that the encoder may choose a relevant value for the attribute. The Table contains the most common examples of coding; other coding combinations are possible.
+In the following Table, the symbol '/' indicates that this attribute
+does not exist for that particular feature class. A blank indicates
+that the encoder may choose a relevant value for the attribute. The
+Table contains the most common examples of coding; other coding combinations
+are possible.
 
 [[table_7-1]]
 .Buildings, landmarks, tanks and silos -- Encoding
@@ -475,7 +479,13 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 
 [underline]#Remarks:#
 
-* If it is required to encode an offshore landmark (as defined by the attribute *category of landmark*), the ECDIS system attribute *in the water* (see <<sec_30.2>>) must be populated to ensure the feature is always displayed on the ECDIS. Where fitted, lights should be encoded as described in <<sec_19>>, with the *Building*, *Wind Turbine*, *Landmark* or *Silo/Tank* being used as the structure feature for the relevant light equipment feature(s) (see <<sec_18.1>>).
+* If it is required to encode an offshore landmark (as defined by
+the attribute *category of landmark*), the ECDIS system attribute
+*in the water* (see <<sec_30.2>>) must be populated to ensure the
+feature is always displayed on the ECDIS. Where fitted, lights should
+be encoded as described in <<sec_19>>, with the *Building*,
+*Wind Turbine*, *Landmark* or *Silo/Tank* being used as the structure
+feature for the relevant light equipment feature(s) (see <<sec_18.1>>).
 * For encoding wind turbines, see <<sec_7.4>>.
 
 [[sec_7.2]]
@@ -483,7 +493,9 @@ In the following Table, the symbol '/' indicates that this attribute does not ex
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *LANDMARK*. Any prominent object at a fixed location on land which can be used in determining a location or a direction. (IHO Dictionary -- S-32).
+10+| [underline]#IHO Definition:# *LANDMARK*. Any prominent object
+at a fixed location on land which can be used in determining a location
+or a direction. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Landmark (LNDMRK)*
 10+| *[underline]#Primitives:#* *Point, Curve, Surface*
 
@@ -697,11 +709,15 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[seven_two]]
 [NOTE]
 --
-The attribute *colour pattern* is mandatory for landmarks that have more than one value populated for the attribute *colour*.
+The attribute *colour pattern* is mandatory for landmarks that have
+more than one value populated for the attribute *colour*.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# D 8; E 10.2-10.4, 22-31; L 11; Q 100
@@ -709,25 +725,65 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_7.2.1]]
 ==== Buildings, landmarks, tanks, silos (see S-4 -- B-373; B-373.6; B-374.3-5; B-374.7; B-375.1-2; B-456.2; B-487.3)
 
-Depending on height and the topographic relief, structures considered to be landmarks should be encoded up to several miles inland.
+Depending on height and the topographic relief, structures considered
+to be landmarks should be encoded up to several miles inland.
 
-Waterfront, landmark and some public buildings should be encoded precisely and individually on the larger optimum display scale ENC data. When representing buildings generally, including urban and other built-up areas, the aim of the compiler must be to create the correct impression of the extent of the built-up area and the density of the buildings.
+Waterfront, landmark and some public buildings should be encoded precisely
+and individually on the larger optimum display scale ENC data. When
+representing buildings generally, including urban and other built-up
+areas, the aim of the compiler must be to create the correct impression
+of the extent of the built-up area and the density of the buildings.
 
-If it is required to encode a landmark (other than a tank, silo or roofed structure erected or extending over navigable water), it must be done using the feature *Landmark*.
+If it is required to encode a landmark (other than a tank, silo or
+roofed structure erected or extending over navigable water), it must
+be done using the feature *Landmark*.
 
 [underline]#Remarks:#
 
-* For buildings, see <<sec_6.2>>; for silos, tanks and water towers, see <<sec_7.3>>. For common encoding combinations, see <<sec_7.1>>. For wind turbines, see <<sec_7.4>>. For roofed structures such as boathouses erected or extending over navigable water to provide protection for a vessel or its cargo, see <<sec_8.7>>. For flare stacks on offshore platforms, see <<sec_14.1.1>>.
-* The feature association *Structure/Equipment* (see <<sec_25.16>>) must only be used with *Landmark* features if the main purpose of the structure is to act as an aid to navigation (for example a lighthouse).
-* A water tower must be encoded, where required, using the feature *Silo/Tank* (see <<sec_7.3>>).
-* A ruined landmark should be encoded in the same way as the feature in good condition, but with attribute stem:[bb "condition" = 2] (ruined).
-* Radio and television masts and towers are likely to be visible over long distances and should be encoded as landmarks, even when well inland. They will usually carry air obstruction lights.
-* To aid identification of landmarks by the Mariner it may be useful to add the height of the top of the structure above ground level (*vertical length*) or above the general height datum (*height*).
-* Buildings constructed as places of worship often form significant landmarks; their size and structure incorporating towers, spires, cupolas, etc often render them conspicuous. These buildings when known to be prominent or conspicuous should be encoded up to several miles inland (see <<fig_7-1>> below, examples (a) and (b)).
-* The attribute *category of special purpose mark* should only be used if the *Landmark* is used as the front or rear lead for a transit, clearing line or measured distance, or for a leading line. Values for *category of special purpose mark* such as _16_ (leading mark), _17_ (measured distance mark) or _41_ (clearing mark) in particular should be used for these purposes.
-* Values *category of landmark* = _26_ (bridge) and _27_ (dam) must only be used if the feature is encoded using point geometry; and must not be encoded over navigable water. Bridges and dams encoded using curve or surface geometry must be encoded using features *Bridge* (see <<sec_6.6>>) and *Dam* (see <<sec_8.12>>) respectively.
-* For landmarks located in navigable water, the Boolean attribute *in the water* must be set to _True_ to indicate that the feature is to be included in the ECDIS Base Display. Where such structures are located in the water it is not required to encode any supporting structures (for example piles).
-* When a building is shown as a surface, indicating its true shape, and it is required to encode a prominent feature such as a tower or spire that is part of the structure, two features must be created (see <<fig_7-1>> (b) below):
+* For buildings, see <<sec_6.2>>; for silos, tanks and water towers,
+see <<sec_7.3>>. For common encoding combinations, see <<sec_7.1>>.
+For wind turbines, see <<sec_7.4>>. For roofed structures such as
+boathouses erected or extending over navigable water to provide protection
+for a vessel or its cargo, see <<sec_8.7>>. For flare stacks on offshore
+platforms, see <<sec_14.1.1>>.
+* The feature association *Structure/Equipment* (see <<sec_25.16>>)
+must only be used with *Landmark* features if the main purpose of
+the structure is to act as an aid to navigation (for example a lighthouse).
+* A water tower must be encoded, where required, using the feature
+*Silo/Tank* (see <<sec_7.3>>).
+* A ruined landmark should be encoded in the same way as the feature
+in good condition, but with attribute stem:[bb "condition" = 2] (ruined).
+* Radio and television masts and towers are likely to be visible over
+long distances and should be encoded as landmarks, even when well
+inland. They will usually carry air obstruction lights.
+* To aid identification of landmarks by the Mariner it may be useful
+to add the height of the top of the structure above ground level
+(*vertical length*) or above the general height datum (*height*).
+* Buildings constructed as places of worship often form significant
+landmarks; their size and structure incorporating towers, spires,
+cupolas, etc often render them conspicuous. These buildings when known
+to be prominent or conspicuous should be encoded up to several miles
+inland (see <<fig_7-1>> below, examples (a) and (b)).
+* The attribute *category of special purpose mark* should only be
+used if the *Landmark* is used as the front or rear lead for a transit,
+clearing line or measured distance, or for a leading line. Values
+for *category of special purpose mark* such as _16_ (leading mark),
+_17_ (measured distance mark) or _41_ (clearing mark) in particular
+should be used for these purposes.
+* Values *category of landmark* = _26_ (bridge) and _27_ (dam) must
+only be used if the feature is encoded using point geometry; and must
+not be encoded over navigable water. Bridges and dams encoded using
+curve or surface geometry must be encoded using features *Bridge*
+(see <<sec_6.6>>) and *Dam* (see <<sec_8.12>>) respectively.
+* For landmarks located in navigable water, the Boolean attribute
+*in the water* must be set to _True_ to indicate that the feature
+is to be included in the ECDIS Base Display. Where such structures
+are located in the water it is not required to encode any supporting
+structures (for example piles).
+* When a building is shown as a surface, indicating its true shape,
+and it is required to encode a prominent feature such as a tower or
+spire that is part of the structure, two features must be created
+(see <<fig_7-1>> (b) below):
 - a *Building* feature of type surface for the main building,
 
 [[fig_7-1]]
@@ -736,16 +792,24 @@ image::figure-7-1.png[Shape21,624,183]
 
 - a *Landmark* feature of type point for the prominent feature.
 
-* Not all landmarks are visually conspicuous. If a feature is visually conspicuous (that is, it is distinctly and noticeably visible from seaward), the attribute *visual prominence* must be encoded (see S-4 -- B-340).
+* Not all landmarks are visually conspicuous. If a feature is visually
+conspicuous (that is, it is distinctly and noticeably visible from
+seaward), the attribute *visual prominence* must be encoded (see S-4
+-- B-340).
 
-[underline]#Distinction:# Building; Daymark; Pylon/Bridge Support; Silo/Tank; Special Purpose/General Beacon; Structure Over Navigable Water; Wind Turbine.
+[underline]#Distinction:# Building; Daymark; Pylon/Bridge Support;
+Silo/Tank; Special Purpose/General Beacon; Structure Over Navigable
+Water; Wind Turbine.
 
 [[sec_7.3]]
 === Silo/tank
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *SILO/TANK*. A large storage structure used for storing loose materials, liquids and/or gases. (Adapted from Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2012).
+10+| [underline]#IHO Definition:# *SILO/TANK*. A large storage structure
+used for storing loose materials, liquids and/or gases. (Adapted from
+Defence Geospatial Information Working Group; Feature Data Dictionary
+Register, 2012).
 10+| *[underline]#S-101 Geo Feature:#* *Silo/Tank (SILTNK)*
 10+| *[underline]#Primitives:#* *Point, Surface*
 
@@ -898,11 +962,15 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[seven_three]]
 [NOTE]
 --
-The attribute *colour pattern* is mandatory for silos or tanks that have more than one value populated for the attribute *colour*.
+The attribute *colour pattern* is mandatory for silos or tanks that
+have more than one value populated for the attribute *colour*.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# E 2, 32-33
@@ -910,15 +978,34 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_7.3.1]]
 ==== Tanks, silos (see S-4 -- B-340.2 and B-376)
 
-Isolated tanks or gasholders may be good landmarks and should be represented true to scale (that is, as surface) where possible, to enable them to be used as fixing marks. Groups of tanks, as at a refinery, may be useful for general identification of position but cannot usually be used for precise position-fixing because of uncertainty of the location of individual tanks.
+Isolated tanks or gasholders may be good landmarks and should be represented
+true to scale (that is, as surface) where possible, to enable them
+to be used as fixing marks. Groups of tanks, as at a refinery, may
+be useful for general identification of position but cannot usually
+be used for precise position-fixing because of uncertainty of the
+location of individual tanks.
 
-If it is required to encode a tank or silo, it must be done using the feature *Silo/Tank*.
+If it is required to encode a tank or silo, it must be done using
+the feature *Silo/Tank*.
 
 [underline]#Remarks:#
 
-* For buildings, see <<sec_6.2>>; for landmarks, see <<sec_7.2>>. For common encoding combinations, see <<sec_7.1>>. For roofed structures such as boathouses erected or extending over navigable water to provide protection for a vessel or its cargo, see <<sec_8.7>>.
-* Groups of silos or tanks (tank farm) in close proximity must be encoded, where required, using the feature *Production/Storage Area* (see <<sec_7.6>>). Individual, visually conspicuous silos, or tanks within a tank farm, may be encoded as *Silo/Tank* within the *Production/Storage Area*. Multiple silos contained within a single structure may be indicated using the complex attribute *multiplicity of features*.
-* For tanks or silos located in or over navigable water, the Boolean attribute *in the water* must be set to _True_ to indicate that the feature is to be included in the ECDIS Base Display. Where such structures are located in the water it is not required to encode any supporting structures (for example piles).
+* For buildings, see <<sec_6.2>>; for landmarks, see <<sec_7.2>>.
+For common encoding combinations, see <<sec_7.1>>. For roofed structures
+such as boathouses erected or extending over navigable water to provide
+protection for a vessel or its cargo, see <<sec_8.7>>.
+* Groups of silos or tanks (tank farm) in close proximity must be
+encoded, where required, using the feature *Production/Storage Area*
+(see <<sec_7.6>>). Individual, visually conspicuous silos, or tanks
+within a tank farm, may be encoded as *Silo/Tank* within the
+*Production/Storage Area*. Multiple silos contained within a single
+structure may be indicated using the complex attribute
+*multiplicity of features*.
+* For tanks or silos located in or over navigable water, the Boolean
+attribute *in the water* must be set to _True_ to indicate that the
+feature is to be included in the ECDIS Base Display. Where such structures
+are located in the water it is not required to encode any supporting
+structures (for example piles).
 
 [underline]#Distinction:# Building; Landmark; Production/Storage Area.
 
@@ -927,7 +1014,9 @@ If it is required to encode a tank or silo, it must be done using the feature *S
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *WIND TURBINE*. A tower and associated equipment that generates electrical power from wind. They can be sited offshore and may be either fixed or floating. (IHO Dictionary -- S-32).
+10+| [underline]#IHO Definition:# *WIND TURBINE*. A tower and associated
+equipment that generates electrical power from wind. They can be sited
+offshore and may be either fixed or floating. (IHO Dictionary -- S-32).
 10+| *[underline]#S-101 Geo Feature:#* *Wind Turbine* *_(LNDMRK)_*
 10+| *[underline]#Primitives:#* *Point*
 
@@ -1098,13 +1187,18 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[seven_four]]
 [NOTE]
 --
-The attribute *colour pattern* is mandatory for bridges that have more than one value populated for the attribute *colour*.
+The attribute *colour pattern* is mandatory for bridges that have
+more than one value populated for the attribute *colour*.
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes
+*date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# L 2, 10-15, 17
@@ -1112,26 +1206,62 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_7.4.1]]
 ==== Wind turbines (see S-4 -- B-374.6; B-445.8-9)
 
-Wind turbinesare generally tall, multi-bladed structures, usually with two or three blades, which may pose as obstacles to navigation if located offshore but are often visible over long distances and therefore useful as visual references. Their purpose is to generate electricity for large communities, or to feed a national grid. They are often in groups (known as wind farms). Floating wind turbinesare held in position by ground tackle and consequently may be subject to significant lateral and some vertical movement.
+Wind turbinesare generally tall, multi-bladed structures, usually
+with two or three blades, which may pose as obstacles to navigation
+if located offshore but are often visible over long distances and
+therefore useful as visual references. Their purpose is to generate
+electricity for large communities, or to feed a national grid. They
+are often in groups (known as wind farms). Floating wind turbines
+are held in position by ground tackle and consequently may be subject
+to significant lateral and some vertical movement.
 
-If it is required to encode a wind turbine, it must be done using the feature *Wind Turbine*.
+If it is required to encode a wind turbine, it must be done using
+the feature *Wind Turbine*.
 
 [underline]#Remarks:#
 
-* The attribute *elevation* is only applicable for wind turbines on land.
-* To aid identification of wind turbines on land by the Mariner it may be useful to add the height of the top of the structure above ground level (*vertical length*) or above the general height datum (*height*).
-* For offshore wind turbines, the Boolean attribute *in the water* must be set to _True_ to indicate that the feature is to be included in the ECDIS Base Display. Where such structures are located in the water it is not required to encode any supporting structures (for example piles).
-* For offshore wind turbines (attribute *in the water* = _True_), the attribute *height* is only relevant for fixed turbines, and is referred to the vertical datum (see <<sec_2.5.7>>).
-* For offshore wind turbines, the attribute *vertical length* is only relevant for floating wind turbines, and is referred to the sea level.
-* A ruined wind turbine should be encoded in the same way as the feature in good condition, but with attribute stem:[bb "condition" = 4] (wingless).
-* If it is required to encode sites of dismantled offshore wind turbines, this must be done using *Foul Ground* features (see <<sec_13.7>>), unless the source indicates that any remaining structure protrudes far enough above the seabed so as to be an obstruction to surface navigation, in which case this must be encoded using an *Obstruction* feature (see <<sec_13.6>>).
-* If it is required to encode an offshore wind farm, it must be done using the feature *Offshore Production Area* (see <<sec_14.6>>). An onshore wind farm must be encoded, where required, using the feature *Production/Storage Area* (see <<sec_7.6>>).
-* Wind turbines may carry lights (see <<sec_19>>) or fog signals (see <<sec_20.19>>). Where fitted, lights should be encoded as described in <<sec_19>>, with the *Wind Turbine* being used as the structure feature for the light equipment feature(s).
-* Value _13_ (low water) for attribute *vertical datum* is only applicable to enclosed (inland) waterways; and must not be used to indicate the reference datum for vertical clearances in tidal waters.
+* The attribute *elevation* is only applicable for wind turbines on
+land.
+* To aid identification of wind turbines on land by the Mariner it
+may be useful to add the height of the top of the structure above
+ground level (*vertical length*) or above the general height datum
+(*height*).
+* For offshore wind turbines, the Boolean attribute *in the water*
+must be set to _True_ to indicate that the feature is to be included
+in the ECDIS Base Display. Where such structures are located in the
+water it is not required to encode any supporting structures
+(for example piles).
+* For offshore wind turbines (attribute *in the water* = _True_),
+the attribute *height* is only relevant for fixed turbines, and is
+referred to the vertical datum (see <<sec_2.5.7>>).
+* For offshore wind turbines, the attribute *vertical length* is only
+relevant for floating wind turbines, and is referred to the sea level.
+* A ruined wind turbine should be encoded in the same way as the feature
+in good condition, but with attribute stem:[bb "condition" = 4] (wingless).
+* If it is required to encode sites of dismantled offshore wind turbines,
+this must be done using *Foul Ground* features (see <<sec_13.7>>),
+unless the source indicates that any remaining structure protrudes
+far enough above the seabed so as to be an obstruction to surface
+navigation, in which case this must be encoded using an *Obstruction*
+feature (see <<sec_13.6>>).
+* If it is required to encode an offshore wind farm, it must be done
+using the feature *Offshore Production Area* (see <<sec_14.6>>).
+An onshore wind farm must be encoded, where required, using the feature
+*Production/Storage Area* (see <<sec_7.6>>).
+* Wind turbines may carry lights (see <<sec_19>>) or fog signals
+(see <<sec_20.19>>). Where fitted, lights should be encoded as described
+in <<sec_19>>, with the *Wind Turbine* being used as the structure
+feature for the light equipment feature(s).
+* Value _13_ (low water) for attribute *vertical datum* is only applicable
+to enclosed (inland) waterways; and must not be used to indicate the
+reference datum for vertical clearances in tidal waters.
 
-* If available and considered important for route planning and/or monitoring, the vertical uncertainty associated with encoded vertical clearance values should also be encoded.
+* If available and considered important for route planning and/or
+monitoring, the vertical uncertainty associated with encoded vertical
+clearance values should also be encoded.
 
-* For encoding offshore safety zones around offshore wind turbines, see <<sec_14.1.3>>.
+* For encoding offshore safety zones around offshore wind turbines,
+see <<sec_14.1.3>>.
 
 [underline]#Distinction:# Building; Daymark; Landmark; Offshore Platform;Offshore Production Area; Pylon/Bridge Support; Silo/Tank; Special Purpose/General Beacon.
 
@@ -1142,7 +1272,9 @@ If it is required to encode a wind turbine, it must be done using the feature *W
 |===
 10+| [underline]#IHO Definition:# *FORTIFIED STRUCTURE*.
 
-A structure that is specifically designed or reinforced to provide for defence from armed attack. (Adapted from Defence Geospatial Information Working Group; Feature Data Dictionary Register, 2010).
+A structure that is specifically designed or reinforced to provide
+for defence from armed attack. (Adapted from Defence Geospatial Information
+Working Group; Feature Data Dictionary Register, 2010).
 10+| *[underline]#S-101 Geo Feature:#* *Fortified Structure (FORSTC)*
 10+| *[underline]#Primitives:#* *Point, Curve, Surface*
 
@@ -1244,9 +1376,12 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[seven_five]]
 [NOTE]
 --
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# E 34.1-3
@@ -1254,15 +1389,30 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_7.5.1]]
 ==== Fortified structures (see S-4 -- B-379)
 
-Some coastlines have prominent defensive structures, often disused, decayed, or used for non-defence purposes. Such structures range from major castles and forts to minor lookout posts and may be the main distinctive features of headlands or stretches of coastline. National regulations permitting, any such features as are likely to be visible from seaward and should be encoded on the largest optimum display scale ENC data.
+Some coastlines have prominent defensive structures, often disused,
+decayed, or used for non-defence purposes. Such structures range from
+major castles and forts to minor lookout posts and may be the main
+distinctive features of headlands or stretches of coastline. National
+regulations permitting, any such features as are likely to be visible
+from seaward and should be encoded on the largest optimum display
+scale ENC data.
 
-If it is required to encode a fortified structure, it must be done using the feature *Fortified Structure*.
+If it is required to encode a fortified structure, it must be done
+using the feature *Fortified Structure*.
 
 [underline]#Remarks:#
 
-* If it is required to encode a Martello tower, it must be done using *Fortified Structure* with attribute stem:[bb "category of fort" = 5] (fortified tower).
-* Where fitted, lights should be encoded as described in <<sec_19>>, with the *Fortified Structure* being used as the structure feature for the relevant light equipment feature(s) (see <<sec_18.1>>).
-* For fortified structures located in navigable water, the Boolean attribute *in the water* must be set to _True_ to indicate that the feature is to be included in the ECDIS Base Display. Where such structures are located in the water it is not required to encode any supporting structures (for example piles).
+* If it is required to encode a Martello tower, it must be done using
+*Fortified Structure* with attribute
+stem:[bb "category of fort" = 5] (fortified tower).
+* Where fitted, lights should be encoded as described in <<sec_19>>,
+with the *Fortified Structure* being used as the structure feature
+for the relevant light equipment feature(s) (see <<sec_18.1>>).
+* For fortified structures located in navigable water, the Boolean
+attribute *in the water* must be set to _True_ to indicate that the
+feature is to be included in the ECDIS Base Display. Where such structures
+are located in the water it is not required to encode any supporting
+structures (for example piles).
 
 [underline]#Distinction:# Building; Fence/Wall; Landmark.
 
@@ -1271,7 +1421,9 @@ If it is required to encode a fortified structure, it must be done using the fea
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *PRODUCTION/STORAGE AREA*. An area on land for the exploitation or storage of natural resources. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.124, November 2000).
+10+| [underline]#IHO Definition:# *PRODUCTION/STORAGE AREA*. An area
+on land for the exploitation or storage of natural resources.
+(S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.124, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Production/Storage Area (PRDARE)*
 10+| *[underline]#Primitives:#* *Point, Surface*
 
@@ -1393,11 +1545,15 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 [[seven_six]]
 [NOTE]
 --
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *fixed date range*, at least one of the sub-attributes *date end* or *date start* must be populated.
+For each instance of *fixed date range*, at least one of the sub-attributes
+*date end* or *date start* must be populated.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
 --
 
 [underline]#INT 1 Reference:# E 26.2, 35.1-2, 36; F 52
@@ -1405,14 +1561,26 @@ For each instance of *information*, at least one of the sub-attributes *file ref
 [[sec_7.6.1]]
 ==== Production and storage areas (see S-4 -- B-328.2; B-367; B-374.6)
 
-Production or storage areas located in close proximity to the coast are often prominent landmarks used by Mariners to assist in position-fixing. Features such as quarry faces, stockpiles, power stations, refineries, timber stacks in timber yards, factories, groups of tanks, groups of wind turbines, and slag heaps should be shown on the largest optimum display scale ENC data.
+Production or storage areas located in close proximity to the coast
+are often prominent landmarks used by Mariners to assist in position-fixing.
+Features such as quarry faces, stockpiles, power stations, refineries,
+timber stacks in timber yards, factories, groups of tanks, groups
+of wind turbines, and slag heaps should be shown on the largest optimum
+display scale ENC data.
 
-If it is required to encode production or storage area, it must be done using the feature *Production/Storage Area*.
+If it is required to encode production or storage area, it must be
+done using the feature *Production/Storage Area*.
 
 [underline]#Remarks:#
 
-* If there are individual buildings or equipment features contained within this area, they should be encoded as separate features such as *Building*, *Crane*, *Landmark* or *Silo/Tank* within the *Production/Storage Area* feature of type surface if the optimum display scale of the ENC data permits.
+* If there are individual buildings or equipment features contained
+within this area, they should be encoded as separate features such
+as *Building*, *Crane*, *Landmark* or *Silo/Tank* within the
+*Production/Storage Area* feature of type surface if the optimum display
+scale of the ENC data permits.
 
-* If visible from seaward, a quarry face should be encoded as for a cliff (see <<sec_5.1>>), with attribute stem:[bb "category of slope" = 6] (cliff).
+* If visible from seaward, a quarry face should be encoded as for
+a cliff (see <<sec_5.1>>), with attribute
+stem:[bb "category of slope" = 6] (cliff).
 
 [underline]#Distinction:# Free Port Area; Offshore Production Area.

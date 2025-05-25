@@ -1,13 +1,16 @@
 
 [[sec_9]]
-== Geo Features – Topographic Terms
+== Geo Features -- Topographic Terms
 
 [[sec_9.1]]
 === Sea area/named water area
 
 [cols="10", options="unnumbered"]
 |===
-10+| [underline]#IHO Definition:# *SEA AREA/NAMED WATER AREA*. A geographically defined part of the sea or other navigable waters. It may be specified within its limits by its proper name. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.151, November 2000).
+10+| [underline]#IHO Definition:# *SEA AREA/NAMED WATER AREA*. A geographically
+defined part of the sea or other navigable waters. It may be specified
+within its limits by its proper name. (S-57 Edition 3.1, Appendix
+A -- Chapter 1, Page 1.151, November 2000).
 10+| *[underline]#S-101 Geo Feature:#* *Sea Area/Named Water Area (SEAARE)*
 10+| *[underline]#Primitives:#* *Point, Surface*
 2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
@@ -70,7 +73,8 @@
 54: reach +
 55: intertidal cay +
 56: submarine volcano | EN | 0,1
-footnote:ninedotone[At least one of the attributes *category of sea area* or *feature name* must be populated.]
+footnote:ninedotone[At least one of the attributes
+*category of sea area* or *feature name* must be populated.]
 
 3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,* footnote:ninedotone[]
 
@@ -98,30 +102,46 @@ footnote:ninedotone[At least one of the attributes *category of sea area* or *fe
 3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnote:ninedotone[]
 
 10+h| Feature Associations
-h| S-101 Role 3+h| Association Type 3+h| Associated to 2+| *Type* | *Multiplicity*
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 | The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
 | The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
 | - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
 | - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
 |===
 
-Complex attribute *feature name*, sub-attribute *name usage* is mandatory if the name is intended to be displayed when display of names is enabled by the Mariner. See <<sec_2.5.8>>.
+Complex attribute *feature name*, sub-attribute *name usage* is mandatory
+if the name is intended to be displayed when display of names is enabled
+by the Mariner. See <<sec_2.5.8>>.
 
-For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
 
 [underline]#INT 1 Reference:#
 
 [[sec_9.1.1]]
-==== Sea areas (see S-4 – B-550)
+==== Sea areas (see S-4 -- B-550)
 
-Undersea features and sea areas in general, including intertidal areas, may be identified by their names and may be delimited by the spatial types used by other geo features (for example depth contours, coastlines). If it is required to encode these areas, this must be done using the feature *Sea Area/Named Water Area*.
+Undersea features and sea areas in general, including intertidal areas,
+may be identified by their names and may be delimited by the spatial
+types used by other geo features (for example depth contours, coastlines).
+If it is required to encode these areas, this must be done using the
+feature *Sea Area/Named Water Area*.
 
 [underline]#Remarks:#
 
-* This feature has a use similar to that of the feature *Land Region* (see <<sec_5.11>>), but for the sea.
-* A *Sea Area/Named Water Area* feature of type surface should be bounded, if possible, by existing curves used by other features (for example *Depth Contour*, *Coastline*). If necessary, however, this surface may be bounded by other curves created to close the surface, or to describe a new surface.
+* This feature has a use similar to that of the feature *Land Region*
+(see <<sec_5.11>>), but for the sea.
+* A *Sea Area/Named Water Area* feature of type surface should be
+bounded, if possible, by existing curves used by other features
+(for example *Depth Contour*, *Coastline*). If necessary, however,
+this surface may be bounded by other curves created to close the surface,
+or to describe a new surface.
 * *Sea Area/Named Water Area* features of type surface may overlap.
-* Inactive submarine volcanos must be encoded, if required, as *Sea Area* with stem:[bb "category of sea area" = 56] (submarine volcano). Active submarine volcanos must be encoded, if required, using an *Obstruction* feature (see <<sec_13.6>>).
+* Inactive submarine volcanos must be encoded, if required, as
+*Sea Area* with stem:[bb "category of sea area" = 56] (submarine volcano).
+Active submarine volcanos must be encoded, if required, using an *Obstruction*
+feature (see <<sec_13.6>>).
 * For additional guidance on encoding geographic names, see <<sec_2.5.8>>.
 
-[underline]#Distinction:# Administration Area; Depth Area; Seabed Area.
+[underline]#Distinction:# Administration Area; Depth Area; Seabed
+Area.
