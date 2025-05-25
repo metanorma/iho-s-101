@@ -1,0 +1,82 @@
+= Annex A - Data Classification and Encoding Guide
+:series: S
+:docnumber: 101
+:doctype: standard
+:edition: 2.0.0
+:language: en
+:published-date: 2024-12-01
+:copyright-year: 2024
+:status: in-force
+:committee: ircc
+:workgroup: ibsc
+:mn-document-class: iho
+:mn-output-extensions: xml,html,doc,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:imagesdir: images
+
+include::sections/00-prefatory-content.adoc[]
+
+include::sections/01-overview.adoc[]
+
+include::sections/02-general.adoc[]
+
+include::sections/03-metadata-features.adoc[]
+
+include::sections/04-magnetic-data.adoc[]
+
+include::sections/05-natural-features.adoc[]
+
+include::sections/06-cultural-features.adoc[]
+
+include::sections/07-landmarks.adoc[]
+
+include::sections/08-geo-features.adoc[]
+
+include::sections/09-topographic-terms.adoc[]
+
+include::sections/10-tides-currents.adoc[]
+
+include::sections/11-depths.adoc[]
+
+include::sections/12-nature-of-the-seabed.adoc[]
+
+include::sections/13-rocks-wrecks.adoc[]
+
+include::sections/14-offshore-installations.adoc[]
+
+include::sections/15-tracks-and-routes.adoc[]
+
+include::sections/16-areas-limits.adoc[]
+
+include::sections/17-restricted-areas.adoc[]
+
+include::sections/18-aids-to-navigation.adoc[]
+
+include::sections/19-lights.adoc[]
+
+include::sections/20-buoys-beacons.adoc[]
+
+include::sections/21-radar-radio.adoc[]
+
+include::sections/22-services.adoc[]
+
+include::sections/23-cartographic-features.adoc[]
+
+include::sections/24-information-types.adoc[]
+
+include::sections/25-association-names.adoc[]
+
+include::sections/26-association-roles.adoc[]
+
+include::sections/27-geo-feature.adoc[]
+
+include::sections/28-meta-feature.adoc[]
+
+include::sections/29-complex-attributes.adoc[]
+
+include::sections/30-edis-system.adoc[]
+
+include::sections/31-updating.adoc[]
+
+include::sections/32-ecdis-chart-1.adoc[]
