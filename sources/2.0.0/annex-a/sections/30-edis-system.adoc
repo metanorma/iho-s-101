@@ -1,0 +1,268 @@
+
+[[sec_30]]
+== ECDIS System (Portrayal) Attributes
+
+[[sec_30.1]]
+=== default clearance depth
+
+[cols="a", options="unnumbered"]
+|===
+| [underline]#IHO Definition:# *DEFAULT CLEARANCE DEPTH*. The depth
+value determined for an underwater hazard of unknown depth, based on
+the depth of the surrounding area.
+
+[underline]#Attribute Type:# Real
+
+[underline]#Unit:# Defined as an attribute in the ENC Dataset
+Discovery Metadata: metre (m)
+
+[underline]#Precision:# 0∙1m
+
+[underline]#Minimum range:# -30
+
+[underline]#Maximum range:# 12500
+
+[underline]#Range closure:#::
+Open interval::: (stem:["minimum" < bb "default clearance depth" < "maximum"])
+
+[underline]#Examples:#::
+*12.5*::: for a default clearance depth of 12.5 metres
+*-2.4*::: for a drying default clearance height of 2∙4 metres
+
+[underline]#Remarks:#
+
+* The attribute *default* *clearance depth* must be populated with a
+value, which must not be an empty (null) value, only if the attribute
+*value of sounding* for the feature instance is populated with an
+empty (null) value and the attribute *height*, if an allowable
+attribute for the feature, is not populated.
+* The value for *default clearance depth* is determined from the
+attribute *depth range minimum value* for the surrounding encoded
+*Depth Area*(s) or *Dredged Area* (see <<sec_11.4;and!sec_11.7>>) in
+accordance with the Tables below. For an area feature covered by more
+than one depth area, the *default clearance depth* is determined
+based on the *depth range minimum value* of the shoalest of the depth
+areas covering the feature.
+* The auto-populated value for *default clearance depth* may be
+amended by the Data Producer if the resulting isolated danger
+indication in the ECDIS is not considered appropriate (if, for
+example, it is known that vessels having a draught deeper than 20.1
+metres are able to navigate safely in the area; or if the Data
+Producer wishes to indicate that only vessels to a specified draught
+that is less than 20 metres may navigate safely in the area).
+* A drying height is indicated by a negative value.
+The following Tables provide an indication for the values (if
+relevant) to be populated for the attribute *default clearance
+depth*. The Tables have been partitioned such that the top section
+has the precondition that the target feature (*Obstruction*,
+*Underwater/Awash Rock* or *Wreck*) is completely covered by *Depth
+Area* and/or *Dredged Area* feature(s) having a known value for the
+attribute *depth range minimum value*; and the bottom section has the
+precondition that the target feature is of unknown depth (attribute
+*value of sounding* = Unknown) and is completely or partially covered
+by an *Unsurveyed Area* feature, or a *Depth Area* and/or *Dredged
+Area* feature having an unknown value for the attribute *depth range
+minimum value*. In the Tables:
+
+* The symbol "/" indicates that this attribute is not relevant for
+the feature instance and therefore is not present. Where "/" appears
+in the *default clearance depth* column, the attribute must not be
+populated.
+* A blank indicates that the attribute may have any allowable value,
+including an unknown (empty (null)) value. For non-mandatory
+attributes, a blank also indicates that the attribute may not be
+present.
+* Where attribute values are quoted:
+
+** Enumerate values separated by commas indicate that any one of the
+listed values may be populated;
+**"Known" means that the attribute is mandatory and has been
+populated with a value;
+**"Unknown" means that the attribute is mandatory and is therefore
+present, but has not been populated with a value;
+**"Empty (null)" means that the attribute is not mandatory, but is
+present and has no value. For the purposes of these Tables, "Empty
+(null)" also equates to the non-mandatory attribute not being present
+for the feature instance.
+**"Least Depth" in the *default clearance depth* column is related to
+the underlying Skin of the Earth depth feature(s) where the value for
+attribute *depth range minimum value* for the covering *Depth Area*
+and/or *Dredged Area* feature(s) is known, and is determined as
+follows:
+
+*** For features of geometric primitive point covered by a *Depth
+Area* or *Dredged Area* feature; or for features of geometric
+primitive curve or surface covered by a single *Depth Area* or
+*Dredged Area* feature, the value of the attribute *depth range
+minimum value* for the *Depth Area* or *Dredged Area*.
+*** For features of geometric primitive curve or surface covered by
+multiple *Depth Area* and/or *Dredged Area* features, the shoalest
+value of the attribute *depth range minimum value* for the *Depth
+Area*/*Dredged Area* features.
+
+|===
+
+[[table_30.1]]
+.Values for default clearance depth -- Obstruction features
+[cols="68,80,51,62,80,96"]
+|===
+h| category of obstruction h| exposition of sounding h| height h| value of sounding h| water level effect h| default clearance depth
+5+h| For features where all covering depth range minimum values are known |
+
+|             | /                 | Known   | /       | _1,2_            | */*
+|             | /                 | Unknown | /       | _1,2,7_          | */*
+|             |                   | /       | Known   | _3,4,5,_ Unknown | */*
+|             | _1,3_             | /       | Unknown | _3_              | *Least Depth*
+| _6_         | _2,_ Empty (null) | /       | Unknown |                  | *_0.1_*
+|             | _2,_ Empty (null) | /       | Unknown | _3_              | *_0.1_*
+| stem:[!= 6] | _2,_ Empty (null) | /       | Unknown | _5_              | *_0_*
+| stem:[!= 6] | _2,_ Empty (null) | /       | Unknown | _4,_ Unknown     | *_-15_*
+
+6+h| For features of unknown depth, covered or partially covered by
+Unsurveyed Area; or Depth/Dredged Area where depth range minimum
+value is unknown
+
+| _6_           | | / | Unknown |              | *_0.1_*
+|               | | / | Unknown | _3_          | *_0.1_*
+| stem:[!= 6]   | | / | Unknown | _5_          | *_0_*
+| stem:[!= 6]   | | / | Unknown | _4,_ Unknown | *_-15_*
+|===
+
+[[table_30.2]]
+.Values for default clearance depth -- Underwater/Awash Rock features
+[cols="79,62,79,96"]
+|===
+h| exposition of sounding h| value of sounding h| water level effect h| default clearance depth
+4+h| For features where all covering depth range minimum values are known
+
+|                   | Known     |              | /
+| _1,3_             | Unknown   | _3_          | *Least Depth*
+| _2,_ Empty (null) | Unknown   | _3_          | *_0.1_*
+| _2,_ Empty (null) | Unknown   | _5_          | *_0_*
+| _2,_ Empty (null) | Unknown   | _4,_ Unknown | *_-15_*
+
+4+h| For features of unknown depth, covered by Unsurveyed Area; or
+Depth/Dredged Area where depth range minimum value is unknown
+
+| | Unknown | _3_           | *_0.1_*
+| | Unknown | _5_           | *_0_*
+| | Unknown | _4,_ Unknown  | *_-15_*
+| | Unknown | _3_           | *_0.1_*
+|===
+
+[[table_30.3]]
+.Values for default clearance depth -- Wreck features
+[cols="68,80,51,62,80,96"]
+|===
+h| category of wreck h| exposition of sounding h| height h| value of sounding h| water level effect h| default clearance depth
+6+h| For features where all covering depth range minimum values are known
+
+| _4,5_ | /     | Known | /       | _1,2,_ Unknown     | /
+| /     |       | /     | Known   | _3,4,5,_ Unknown   | /
+| /     | _1,3_ | /     | Unknown | _3_                | *Least Depth*
+|       | _1,3_ | /     | /       | _3_                | *Least Depth*
+| _1_   |       | /     | /       | _1,2,4,5,_ Unknown | *_20.1_* or *{Least Depth -- 66}* (whichever value is larger)
+| _1_ | _2,_ Empty (null) | /     | /       |              | *_20.1_* or *{Least Depth -- 66}* (whichever value is larger)
+| /   | _2,_ Empty (null) | /     | Unknown | _3,5_        | *_0_*
+| /   | _2,_ Empty (null) | /     | Unknown | _4,_ Unknown | *_-15_*
+| _2,3,4,5,_ Unknown |                   | /     | /       | _1,2,4,5_ Unknown  | *_-15_*
+| _2,3,4,5,_ Unknown | _2,_ Empty (null) | /     | /       |                    | *_-15_*
+
+6+h| For features of unknown depth, covered or partially covered by
+Unsurveyed Area; or Depth/Dredged Area where depth range minimum
+value is unknown
+
+| _1_                | | / | /       | _3,_ Unknown | *_20.1_*
+| /                  | | / | Unknown | _3,5_        | *_0_*
+| /                  | | / | Unknown | _4,_ Unknown | *_-15_*
+| Unknown            | | / | /       | _3,5_        | *_0_*
+| _2,3,4,5_          | | / | /       | _3,5_        | *_-15_*
+| _2,3,4,5,_ Unknown | | / | /       | _4,_ Unknown | *_-15_*
+|===
+
+[[sec_30.2]]
+=== in the water
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *IN THE WATER*. An indication if the
+feature is located in or over navigable water.
+
+[underline]#Attribute Type:# Boolean
+
+[underline]#Indication:# A True value is an indication that the
+feature is located in or over navigable water.
+
+[underline]#Remarks:#
+
+* A True value is an indication that the feature is to be included in
+the ECDIS Base Display viewing group.
+
+|===
+
+[[sec_30.3]]
+=== sector arc extension
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *SECTOR ARC EXTENSION*. An indication
+that the default radius of a sector arc is to be extended by 5mm.
+
+[underline]#Attribute Type:# BooleanIndication:A True value indicates
+that a sector arc radius is to be extended 5 millimetres beyond the
+default. Required where there is more than one light sector covering
+the same or similar angle.
+
+[underline]#Remarks:#
+
+* The requirement for a sector arc to be extended is calculated by
+ENC production software systems.
+
+|===
+
+[[sec_30.4]]
+=== surrounding depth
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *SURROUNDING DEPTH*. The depth value
+determined for seabed around an underwater hazard, based on the depth
+of the surrounding area.
+
+[underline]#Attribute Type:# Real
+
+[underline]#Unit:# Defined as an attribute in the ENC Dataset
+Discovery Metadata: metre (m)
+
+[underline]#Precision:# 0∙1m
+
+[underline]#Minimum range:# -30
+
+[underline]#Maximum range:# 12500
+
+[underline]#Range closure:# Open interval
+(stem:["minimum" < bb "surrounding depth" < "maximum"])
+
+[underline]#Example:# *20* for a surrounding depth of 20 metres
+
+[underline]#Remarks:#
+
+* The value for *surrounding depth* is determined from the attribute
+*depth range minimum value* for the surrounding encoded *Depth
+Area*(s) or *Dredged Area* (see <<sec_11.4;and!sec_11.7>>). For an
+area feature covered by more than one depth area, the *surrounding
+depth* is determined as the *depth range minimum value* of the deeper
+of the depth areas covering the feature.
+* *surrounding depth* must be populated with a value, which must not
+be an empty (null) value.
+* For features that fall entirely within an *Unsurveyed Area*
+feature, *surrounding depth* must be populated with value _0_. If an
+area feature falls partly within *Unsurveyed Area* and partly within
+*Depth Area* or *Dredged Area* features, *surrounding depth* must be
+populated in accordance with the first bullet above.
+* *surrounding depth* is used by the production software to determine
+the depth value to be used by the ECDIS at which a feature is to be
+considered to be in "safe" or "unsafe" water based on the Mariner's
+selected safety depth.
+
+|===

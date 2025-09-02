@@ -1,0 +1,4307 @@
+
+[[sec_20]]
+== Geo Features -- Buoys, Beacons
+
+[[sec_20.1]]
+=== Lateral buoy
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *LATERAL BUOY*. A lateral buoy is
+used to indicate the port or starboard hand side of the route to be
+followed. They are generally used for well-defined channels and are
+used in conjunction with a conventional direction of buoyage.
+(UKHO NP 735, 5^th^ Edition).
+10+| *[underline]#S-101 Geo Feature:#* *Lateral Buoy (BOYLAT)*
+10+| *[underline]#Primitives:#* *Point*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| buoy shape 2+| (BOYSHP) 3+|
+1: conical +
+2: can +
+3: spherical +
+4: pillar +
+5: spar +
+6: barrel +
+7: superbuoy +
+8: ice buoy | EN | 1,1
+3+| category of lateral mark 2+| (CATLAM) 3+|
+1: port-hand lateral mark +
+2: starboard-hand lateral mark +
+3: preferred channel to starboard lateral mark +
+4: preferred channel to port lateral mark | EN | 1,1
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | EN | 1,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | EN | 0,1 footnoteblock:[twenty_one]
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twenty_one]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twenty_one]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_one]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| marks navigational -- system of 2+| (MARSYS) 3+|
+1: IALA A +
+2: IALA B +
+9: no system +
+11: main European inland waterway marking system | EN | 0,1
+3+| nature of construction 2+| (NATCON) 3+|
+6: wooden +
+7: metal +
+8: glass reinforced plastic +
+11: latticed | EN | 0,*
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
+
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+5: periodic/intermittent +
+7: temporary +
+8: private +
+18: existence doubtful | EN | 0,*
+3+| topmark 2+| (*_TOPMAR_*) 3+| | C | 0,1
+
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | (S) EN | 0,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_one]
+3+| topmark/daymark shape 2+| (TOPSHP) 3+|
+1: cone (point up) +
+2: cone (point down) +
+3: sphere +
+4: 2 spheres +
+5: cylinder +
+6: board +
+7: x-shaped +
+8: upright cross +
+9: cube (point up) +
+10: 2 cones (point to point) +
+11: 2 cones (base to base) +
+12: rhombus +
+13: 2 cones (points upward) +
+14: 2 cones (points downward) +
+15: besom (point up) +
+16: besom (point down) +
+17: flag +
+18: sphere over a rhombus +
+19: square +
+20: rectangle (horizontal) +
+21: rectangle (vertical) +
+22: trapezium (up) +
+23: trapezium (down) +
+24: triangle (point up) +
+25: triangle (point down) +
+26: circle +
+27: two upright crosses (one over the other) +
+28: T-shape +
+29: triangle pointing up over a circle +
+30: upright cross over a circle +
+31: rhombus over a circle +
+32: circle over a triangle pointing up +
+33: other shape (see *shape information*) | (S) EN | 1,1
+3+| shape information 2+| 3+| | (S) C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 0,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 1,1
+
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_one]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_one]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Archipelagic Sea Lane*, *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
+| The Auxiliary Feature 3+| *Fairway Auxiliary* (see <<sec_25.8>>) 3+| *Fairway* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twenty_one]]
+[NOTE]
+--
+The attribute/sub-attribute *colour pattern* is mandatory for
+buoys/topmarks that have more than one value populated for the
+attribute/sub-attribute *colour*.
+
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# Q 130.1
+
+[[sec_20.1.1]]
+==== Lateral buoys (see S-4 -- B-461.3 and B-467)
+
+Lateral buoysare generally used for well-defined channels, in
+conjunction with a direction of buoyage. They indicate the port and
+starboard sides of the route to be followed.
+
+To conform to the IALA Maritime Buoyage System (see
+<<sec_18.3.1.1>>), port handbuoys are usually can shaped, but may be
+another shape (except conical or spherical). Other shaped buoys have
+a can topmark. The colour of port hand buoys, topmarks and lights (if
+fitted) will be red in IALA region A and green in IALA region B.
+
+To conform to the IALA Maritime Buoyage System, starboard hand buoys
+are usually conical shaped, but may be another shape (except can or
+spherical). Other shaped buoys have a conical topmark. The colour of
+starboard hand buoys, topmarks and lights (if fitted) will be green
+in IALA region A and red in IALA region B.
+
+A preferred channel markis a modified lateral mark, with horizontal
+colour bands. The shape and predominant colour indicates which side
+is the preferred channel, the other colour indicates the secondary
+channel. If fitted, the light is Fl(2+1), the colour indicating the
+preferred channel.
+
+If it is required to encode a buoy having the function of a lateral
+mark, it must be done using the feature *Lateral Buoy*.
+
+[[fig_20-1]]
+.IALA lateral buoys -- Characteristics
+image::figure-20-1.png["",475,406]
+
+[underline]#Remarks:#
+
+* If it is required to encode a buoy or topmark that has more than
+one colour, the attributes *colour* and *colour pattern* must be
+encoded, according to the rules laid out in <<sec_2.4.10>>.
+* If it is required to encode the total vertical length, including
+the topmark and any equipment features (for example light), of the
+buoy above the water level, it must be done using the attribute
+*vertical length*.
+
+[underline]#Distinction:# Cardinal Buoy; Emergency Wreck Marking
+Buoy; Installation Buoy; Isolated Danger Buoy; Mooring Buoy; Safe
+Water Buoy; Special Purpose/General Buoy.
+
+[[sec_20.2]]
+=== Cardinal buoy
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *CARDINAL BUOY*. A cardinal buoy
+is used in conjunction with the compass to indicate where the mariner
+may find the best navigable water. It is placed in one of the four
+quadrants (North, East, South and West), bounded by inter-cardinal
+bearings from the point marked. (UKHO NP 735, 5^th^ Edition).
+10+| *[underline]#S-101 Geo Feature:#* *Cardinal Buoy (BOYCAR)*
+10+| *[underline]#Primitives:#* *Point*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| buoy shape 2+| (BOYSHP) 3+|
+1: conical +
+2: can +
+3: spherical +
+4: pillar +
+5: spar +
+6: barrel +
+7: superbuoy +
+8: ice buoy | EN | 1,1
+3+| category of cardinal mark 2+| (CATCAM) 3+|
+1: north cardinal mark +
+2: east cardinal mark +
+3: south cardinal mark +
+4: west cardinal mark | EN | 1,1
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | EN | 1,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | EN | 0,1 footnoteblock:[twenty_two]
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twenty_two]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twenty_two]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_two]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| marks navigational -- system of 2+| (MARSYS) 3+|
+1: IALA A +
+2: IALA B +
+9: no system +
+11: main European inland waterway marking system | EN | 0,1
+3+| nature of construction 2+| (NATCON) 3+|
+6: wooden +
+7: metal +
+8: glass reinforced plastic +
+11: latticed | EN | 0,*
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
+
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+5: periodic/intermittent +
+7: temporary +
+8: private +
+18: existence doubtful | EN | 0,*
+3+| topmark 2+| (*_TOPMAR_*) 3+| | C | 0,1
+
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | (S) EN | 0,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_two]
+3+| topmark/daymark shape 2+| (TOPSHP) 3+|
+1: cone (point up) +
+2: cone (point down) +
+3: sphere +
+4: 2 spheres +
+5: cylinder +
+6: board +
+7: x-shaped +
+8: upright cross +
+9: cube (point up) +
+10: 2 cones (point to point) +
+11: 2 cones (base to base) +
+12: rhombus +
+13: 2 cones (points upward) +
+14: 2 cones (points downward) +
+15: besom (point up) +
+16: besom (point down) +
+17: flag +
+18: sphere over a rhombus +
+19: square +
+20: rectangle (horizontal) +
+21: rectangle (vertical) +
+22: trapezium (up) +
+23: trapezium (down) +
+24: triangle (point up) +
+25: triangle (point down) +
+26: circle +
+27: two upright crosses (one over the other) +
+28: T-shape +
+29: triangle pointing up over a circle +
+30: upright cross over a circle +
+31: rhombus over a circle +
+32: circle over a triangle pointing up +
+33: other shape (see *shape information*) | (S) EN | 1,1
+3+| shape information 2+| 3+| | (S) C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 0,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 1,1
+
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_two]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_two]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Archipelagic Sea Lane*, *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
+| The Auxiliary Feature 3+| *Fairway Auxiliary* (see <<sec_25.8>>) 3+| *Fairway* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twenty_two]]
+[NOTE]
+--
+The attribute/sub-attribute *colour pattern* is mandatory for
+buoys/topmarks that have more than one value populated for the
+attribute/sub-attribute *colour*.
+
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# Q 130.3
+
+[[sec_20.2.1]]
+==== Cardinal buoys (see S-4 -- B-461.3 and B-467)
+
+Cardinal marksare used in conjunction with the compass to indicate
+where a Mariner may find best navigable water, taking their name from
+the quadrant in which they are placed in relation to the point
+marked. The Mariner should pass N of a North mark, E of an East mark,
+etc. The shape of cardinal buoys is not significant (although they
+are usually pillar or spar). To conform to the IALA Maritime Buoyage
+System (see <<sec_18.3.1.1>>), the body has black and yellow bands,
+configured with black reflecting the points of the topmark cones (for
+example black above yellow for north). Black double-cone topmarks are
+an important feature of cardinal marks and are carried wherever
+practicable. The points are up for a north mark, down for a south
+mark, apart for an east mark and together for a west mark. Lights (if
+fitted) are white Q or VQ, uninterrupted for the north, 3 flashes for
+east, 6 flashes + LFl for south and 9 flashes for west (resembling an
+analogue clock).
+
+If it is required to encode a buoy having the function of a cardinal
+mark, it must be done using the feature *Cardinal Buoy*.
+
+[[fig_20-2]]
+.IALA cardinal buoys -- Characteristics
+image::figure-20-2.png["",517,636]
+
+[underline]#Remarks:#
+
+* If it is required to encode a buoy or topmark that has more than
+one colour, the attributes *colour* and *colour pattern* must be
+encoded, according to the rules laid out in <<sec_2.4.10>>.
+* If it is required to encode the total vertical length, including
+the topmark and any equipment features (for example light), of the
+buoy above the water level, it must be done using the attribute
+*vertical length*.
+
+[underline]#Distinction:# Emergency Wreck Marking Buoy; Installation
+Buoy; Isolated Danger Buoy; Lateral Buoy; Mooring Buoy; Safe Water
+Buoy; Special Purpose/General Buoy.
+
+[[sec_20.3]]
+=== Isolated danger buoy
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *ISOLATED DANGER BUOY*. An isolated
+danger buoy is a buoy moored on or above an isolated danger of limited
+extent, which has navigable water all around it.
+(UKHO NP 735, 5^th^ Edition).
+10+| *[underline]#S-101 Geo Feature:#* *Isolated Danger Buoy (BOYISD)*
+10+| *[underline]#Primitives:#* *Point*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| buoy shape 2+| (BOYSHP) 3+|
+1: conical +
+2: can +
+3: spherical +
+4: pillar +
+5: spar +
+6: barrel +
+7: superbuoy +
+8: ice buoy | EN | 1,1
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | EN | 1,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | EN | 0,1 footnoteblock:[twenty_three]
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twenty_three]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twenty_three]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_three]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| marks navigational -- system of 2+| (MARSYS) 3+|
+1: IALA A +
+2: IALA B +
+9: no system +
+11: main European inland waterway marking system | EN | 0,1
+3+| nature of construction 2+| (NATCON) 3+|
+6: wooden +
+7: metal +
+8: glass reinforced plastic +
+11: latticed | EN | 0,*
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
+
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+5: periodic/intermittent +
+7: temporary +
+8: private +
+18: existence doubtful | EN | 0,*
+3+| topmark 2+| (*_TOPMAR_*) 3+| | C | 0,1
+
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | (S) EN | 0,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_three]
+3+| topmark/daymark shape 2+| (TOPSHP) 3+|
+1: cone (point up) +
+2: cone (point down) +
+3: sphere +
+4: 2 spheres +
+5: cylinder +
+6: board +
+7: x-shaped +
+8: upright cross +
+9: cube (point up) +
+10: 2 cones (point to point) +
+11: 2 cones (base to base) +
+12: rhombus +
+13: 2 cones (points upward) +
+14: 2 cones (points downward) +
+15: besom (point up) +
+16: besom (point down) +
+17: flag +
+18: sphere over a rhombus +
+19: square +
+20: rectangle (horizontal) +
+21: rectangle (vertical) +
+22: trapezium (up) +
+23: trapezium (down) +
+24: triangle (point up) +
+25: triangle (point down) +
+26: circle +
+27: two upright crosses (one over the other) +
+28: T-shape +
+29: triangle pointing up over a circle +
+30: upright cross over a circle +
+31: rhombus over a circle +
+32: circle over a triangle pointing up +
+33: other shape (see *shape information*) | (S) EN | 1,1
+3+| shape information 2+| 3+| | (S) C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 0,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 1,1
+
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_three]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_three]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Archipelagic Sea Lane*, *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
+| The Auxiliary Feature 3+| *Fairway Auxiliary* (see <<sec_25.8>>) 3+| *Fairway* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twenty_three]]
+[NOTE]
+--
+The attribute/sub-attribute *colour pattern* is mandatory for
+buoys/topmarks that have more than one value populated for the
+attribute/sub-attribute *colour*.
+
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# Q 130.4
+
+[[sec_20.3.1]]
+==== Isolated danger buoys (see S-4 -- B-461.3 and B-467)
+
+Isolated danger buoysare moored above isolated dangers of limited
+extent with navigable water all around them. The shape of isolated
+danger buoys is not significant (although they are usually pillar or
+spar shaped). To conform to the IALA Maritime Buoyage System (see
+<<sec_18.3.1.1>>), the body is black, with one or more red bands.
+Black double-sphere topmarks are an important feature of isolated
+danger buoys and carried wherever practicable. The light (if fitted)
+is white Fl(2).
+
+If it is required to encode a buoy having the function of an isolated
+danger mark, it must be done using the feature *Isolated Danger Buoy*.
+
+[[fig_20-3]]
+.IALA isolated danger buoys -- Characteristics
+image::figure-20-3.png["",549,263]
+
+[underline]#Remarks:#
+
+* If it is required to encode a buoy or topmark that has more than
+one colour, the attributes *colour* and *colour pattern* must be
+encoded, according to the rules laid out in <<sec_2.4.10>>.
+* If it is required to encode the total vertical length, including
+the topmark and any equipment features (for example light), of the
+buoy above the water level, it must be done using the attribute
+*vertical length*.
+
+[underline]#Distinction:# Cardinal Buoy; Emergency Wreck Marking
+Buoy; Installation Buoy; Lateral Buoy; Mooring Buoy; Safe Water Buoy;
+Special Purpose/General Buoy.
+
+[[sec_20.4]]
+=== Safe water buoy
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *SAFE WATER BUOY*. A safe water
+buoy is used to indicate that there is navigable water around the
+mark. (UKHO NP 735, 5^th^ Edition).
+10+| *[underline]#S-101 Geo Feature:#* *Safe Water Buoy (BOYSAW)*
+10+| *[underline]#Primitives:#* *Point*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| buoy shape 2+| (BOYSHP) 3+|
+1: conical +
+2: can +
+3: spherical +
+4: pillar +
+5: spar +
+6: barrel +
+7: superbuoy +
+8: ice buoy | EN | 1,1
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | EN | 1,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | EN | 0,1 footnoteblock:[twenty_four]
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twenty_four]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twenty_four]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_four]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| marks navigational -- system of 2+| (MARSYS) 3+|
+1: IALA A +
+2: IALA B +
+9: no system +
+11: main European inland waterway marking system | EN | 0,1
+3+| nature of construction 2+| (NATCON) 3+|
+6: wooden +
+7: metal +
+8: glass reinforced plastic +
+11: latticed | EN | 0,*
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
+
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+5: periodic/intermittent +
+7: temporary +
+8: private +
+18: existence doubtful | EN | 0,*
+3+| topmark 2+| (*_TOPMAR_*) 3+| | C | 0,1
+
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | (S) EN | 0,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_four]
+3+| topmark/daymark shape 2+| (TOPSHP) 3+|
+1: cone (point up) +
+2: cone (point down) +
+3: sphere +
+4: 2 spheres +
+5: cylinder +
+6: board +
+7: x-shaped +
+8: upright cross +
+9: cube (point up) +
+10: 2 cones (point to point) +
+11: 2 cones (base to base) +
+12: rhombus +
+13: 2 cones (points upward) +
+14: 2 cones (points downward) +
+15: besom (point up) +
+16: besom (point down) +
+17: flag +
+18: sphere over a rhombus +
+19: square +
+20: rectangle (horizontal) +
+21: rectangle (vertical) +
+22: trapezium (up) +
+23: trapezium (down) +
+24: triangle (point up) +
+25: triangle (point down) +
+26: circle +
+27: two upright crosses (one over the other) +
+28: T-shape +
+29: triangle pointing up over a circle +
+30: upright cross over a circle +
+31: rhombus over a circle +
+32: circle over a triangle pointing up +
+33: other shape (see *shape information*) | (S) EN | 1,1
+3+| shape information 2+| 3+| | (S) C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 0,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 1,1
+
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_four]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_four]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Archipelagic Sea Lane*, *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
+| The Auxiliary Feature 3+| *Fairway Auxiliary* (see <<sec_25.8>>) 3+| *Fairway* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twenty_four]]
+[NOTE]
+--
+The attribute/sub-attribute *colour pattern* is mandatory for
+buoys/topmarks that have more than one value populated for the
+attribute/sub-attribute *colour*.
+
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# Q 130.5
+
+[[sec_20.4.1]]
+==== Safe water buoys (see S-4 -- B-461.3 and B-467)
+
+Safe water marksare used to indicate there is safe water all around
+the mark. It may be used as a centre-line, mid-channel or landfall
+buoy, or to mark the best point of passage under a bridge.
+
+To conform to the IALA Maritime Buoyage System (see
+<<sec_18.3.1.1>>), the shape of a safe water buoy is spherical,
+pillar or spar. The body of the mark has red and white vertical
+stripes. If the shape of the buoy is not spherical a red spherical
+topmark is carried wherever practicable. The light (if fitted) is
+white Oc, Iso, LFl or Mo(A) with a period of 10s.
+
+If it is required to encode a buoy having the function of a safe
+water mark, it must be done using the feature *Safe Water Buoy*.
+
+[[fig_20-4]]
+.IALA safe water buoys -- Characteristics
+image::figure-20-4.png["",664,217]
+
+[underline]#Remarks:#
+
+* If it is required to encode a buoy or topmark that has more than
+one colour, the attributes *colour* and *colour pattern* must be
+encoded, according to the rules laid out in <<sec_2.4.10>>.
+* If it is required to encode the total vertical length, including
+the topmark and any equipment features (for example light), of the
+buoy above the water level, it must be done using the attribute
+*vertical length*.
+
+[underline]#Distinction:# Cardinal Buoy; Emergency Wreck Marking
+Buoy; Installation Buoy; Isolated Danger Buoy; Lateral Buoy; Mooring
+Buoy; Special Purpose/General Buoy.
+
+[[sec_20.5]]
+=== Special purpose/general buoy
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *SPECIAL PURPOSE/GENERAL BUOY*.
+A special purpose buoy is primarily used to indicate an area or feature,
+the nature of which is apparent from reference to a chart, Sailing
+Directions or Notices to Mariners. (UKHO NP 735, 5^th^ Edition).
+10+| *[underline]#S-101 Geo Feature:#* *Special Purpose/General Buoy (BOYSPP)*
+10+| *[underline]#Primitives:#* *Point*
+
+3+| _Real World_ 4+| _Paper Chart Symbol_ 3+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+
+3+| buoy shape 2+| (BOYSHP) 3+|
+1: conical +
+2: can +
+3: spherical +
+4: pillar +
+5: spar +
+6: barrel +
+7: superbuoy +
+8: ice buoy | EN | 1,1
+
+3+| category of special purpose mark 2+| (CATSPM) 3+|
+1: firing danger area mark +
+2: target mark +
+3: marker ship mark +
+4: degaussing range mark +
+5: barge mark +
+6: cable mark +
+7: spoil ground mark +
+8: outfall mark +
+9: ODAS +
+10: recording mark +
+11: seaplane anchorage mark +
+12: recreation zone mark +
+14: mooring mark +
+15: LANBY +
+17: measured distance mark +
+18: notice mark +
+19: TSS mark (Traffic Separation Scheme) +
+20: anchoring prohibited mark +
+21: berthing prohibited mark +
+22: overtaking prohibited mark +
+23: two-way traffic prohibited mark +
+24: reduced wake mark +
+25: speed limit mark +
+26: stop mark +
+27: general warning mark +
+28: sound ship's siren mark +
+29: restricted vertical clearance mark +
+30: maximum vessel's draught mark +
+31: restricted horizontal clearance mark +
+32: strong current warning mark +
+33: berthing permitted mark +
+34: overhead power cable mark +
+35: channel edge gradient mark +
+36: telephone mark +
+37: ferry crossing mark +
+39: pipeline mark +
+40: anchorage mark +
+42: control mark +
+43: diving mark +
+45: foul ground mark +
+46: yachting mark +
+47: heliport mark +
+48: GNSS mark +
+49: seaplane landing mark +
+50: entry prohibited mark +
+51: work in progress mark +
+52: mark with unknown purpose +
+53: wellhead mark +
+54: channel separation mark +
+55: marine farm mark +
+56: artificial reef mark +
+57: ice mark +
+58: nature reserve mark +
+59: fish aggregating device +
+60: wreck mark +
+61: customs mark +
+62: causeway mark +
+63: wave recorder | EN | 1,*
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | EN | 1,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | EN | 0,1 footnoteblock:[twenty_five]
+
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN | 0,1 footnoteblock:[twenty_five]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twenty_five]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_five]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| marks navigational -- system of 2+| (MARSYS) 3+|
+1: IALA A +
+2: IALA B +
+9: no system +
+11: main European inland waterway marking system | EN | 0,1
+3+| nature of construction 2+| (NATCON) 3+|
+6: wooden +
+7: metal +
+8: glass reinforced plastic +
+11: latticed | EN | 0,*
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
+
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+5: periodic/intermittent +
+7: temporary +
+8: private +
+18: existence doubtful | EN | 0,*
+3+| topmark 2+| (*_TOPMAR_*) 3+| | C | 0,1
+
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | (S) EN | 0,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_five]
+3+| topmark/daymark shape 2+| (TOPSHP) 3+|
+1: cone (point up) +
+2: cone (point down) +
+3: sphere +
+4: 2 spheres +
+5: cylinder +
+6: board +
+7: x-shaped +
+8: upright cross +
+9: cube (point up) +
+10: 2 cones (point to point) +
+11: 2 cones (base to base) +
+12: rhombus +
+13: 2 cones (points upward) +
+14: 2 cones (points downward) +
+15: besom (point up) +
+16: besom (point down) +
+17: flag +
+18: sphere over a rhombus +
+19: square +
+20: rectangle (horizontal) +
+21: rectangle (vertical) +
+22: trapezium (up) +
+23: trapezium (down) +
+24: triangle (point up) +
+25: triangle (point down) +
+26: circle +
+27: two upright crosses (one over the other) +
+28: T-shape +
+29: triangle pointing up over a circle +
+30: upright cross over a circle +
+31: rhombus over a circle +
+32: circle over a triangle pointing up +
+33: other shape (see *shape information*) | (S) EN | 1,1
+3+| shape information 2+| 3+| | (S) C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 0,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 1,1
+
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_five]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_five]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
+9+h| Feature Associations |
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Archipelagic Sea Lane*, *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
+| The Auxiliary Feature 3+| *Fairway Auxiliary* (see <<sec_25.8>>) 3+| *Fairway* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twenty_five]]
+[NOTE]
+--
+The attribute/sub-attribute *colour pattern* is mandatory for
+buoys/topmarks that have more than one value populated for the
+attribute/sub-attribute *colour*.
+
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# Q 50-62, 130.6
+
+[[sec_20.5.1]]
+==== Special purpose/general buoys (see S-4 -- B-461.3 and B-467)
+
+Special marksare used to indicate to the Mariner a special area or
+feature, the nature of which is usually apparent from the ENC, paper
+chart or associated publication. Special marks may also be used to
+mark a channel within a channel (for example a Deep Water route),
+using yellow buoys of the appropriate lateral shape, or yellow
+spherical buoys to mark the centreline. A special buoy may be any
+shape but must not conflict with lateral or safe water marks (for
+example an outfall buoy on the port-side of a channel could be can
+but should not be conical). To conform to the IALA Maritime Buoyage
+System (see <<sec_18.3.1.1>>), the body of the buoy is yellow. The
+topmark (if fitted) is a yellow diagonal 'X' (St Andrew's cross).
+Lights (if fitted) are yellow and of any rhythm except those used for
+cardinal, isolated danger and safe water marks.
+
+If it is required to encode a buoy having the function of a special
+purpose mark, or a buoy whose appearance or purpose is inadequately
+known, it must be done using the feature *Special Purpose/General
+Buoy*.
+
+In the following Table, a blank indicates that the encoder may choose
+a relevant value for the attribute. The Table contains the most
+common examples of coding; other coding combinations are possible for
+*Special Purpose/General Buoy* features.
+
+[[table_20-1]]
+.IALA special purpose buoys -- Common types
+[cols="732,128,508,124,276,404", options="unnumbered"]
+|===
+h| Feature | INT1 h| Feature h| buoy shape h| category of special purpose mark h| Other attributes
+
+| Firing danger area buoy          | Q50 | *Special Purpose/General Buoy* | | _1_ |
+| Target                           | Q51 | *Special Purpose/General Buoy* | | _2_ |
+| Marker ship                      | Q52 | *Special Purpose/General Buoy* | | _3_ |
+| Barge                            | Q53 | *Special Purpose/General Buoy* | | _5_ |
+| Degaussing range buoy            | Q54 | *Special Purpose/General Buoy* | | _4_ |
+| Buoy marking cable               | Q55 | *Special Purpose/General Buoy* | | _6_ |
+| Spoil ground buoy                | Q56 | *Special Purpose/General Buoy* | | _7_ |
+| Buoy marking outfall             | Q57 | *Special Purpose/General Buoy* | | _8_ |
+| Buoy marking pipeline            | | *Special Purpose/General Buoy* | | _39_ |
+| Superbuoy                        | Q26 | ++***++*Buoy* | _7_ | |
+| Large automatic navigational buoy |  P6 | *Special Purpose/General Buoy* | _7_ | _15_ |
+
+| Ocean data acquisition system (ODAS) buoy |  Q58 | *Special Purpose/General Buoy* | | _9_ | Subsurface ODAS encoded as *Obstruction* (see <<sec_13.6>>)
+
+| Seaplane anchorage buoy               | Q60 | *Special Purpose/General Buoy* | | _11_ |
+| Buoy marking traffic separation scheme | Q61 | *Special Purpose/General Buoy* | | _19_ |
+| Buoy marking recreation zone          | Q62 | *Special Purpose/General Buoy* | | _12_ |
+| Floating waste bin                    | | *Special Purpose/General Buoy* | | _Empty (null) value_ | *information* = _waste bin_ (for example)
+| Fish Aggregating Device (FAD)            | | *Special Purpose/General Buoy* | *_/_* | _59_ | Fish havens are encoded as *Obstruction* (see <<sec_13.6>>)
+| Buoy marking wave recorder (or current meter) | Q59 | *Special Purpose/General Buoy* | | _63_ |
+|===
+
+[underline]#Remarks:#
+
+* If it is required to encode a buoy or topmark that has more than
+one colour, the attributes *colour* and *colour pattern* must be
+encoded, according to the rules laid out in <<sec_2.4.10>>.
+* If it is required to encode the total vertical length, including
+the topmark and any equipment features (for example light), of the
+buoy above the water level, it must be done using the attribute
+*vertical length*.
+* If a special purpose buoy does not conform to the system of
+navigational marks defined by *Navigational System of Marks* (see
+<<sec_3.6>>), the attribute *marks navigational -- system of* on the
+*Special Purpose/General Buoy* should be populated as _9_ (no system).
+* Fish havens (sometimes referred to as subsurface Fish Aggregating
+Devices (FAD)) and subsurface Ocean Data Acquisition System (ODAS)
+equipment must be encoded, where required, using an *Obstruction*
+feature (see <<sec_13.6>>).
+* A buoy deployed as an emergency measure to mark a newly identified
+danger, such as a wreck, must be encoded using the feature *Emergency
+Wreck Marking Buoy* (see <<sec_20.6>>). A special purpose buoy
+intended to permanently mark a wreck as a danger must be encoded,
+where required, as a *Special Purpose/General Buoy* feature, with
+attribute stem:[bb "category of special purpose mark" = 60] (wreck
+mark).
+
+[underline]#Distinction:# Cardinal Buoy; Emergency Wreck Marking
+Buoy; Installation Buoy; Isolated Danger Buoy; Lateral Buoy; Mooring
+Buoy; Safe Water Buoy.
+
+[[sec_20.6]]
+=== Emergency wreck marking buoy
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *EMERGENCY WRECK MARKING BUOY*.
+An emergency wreck marking buoy is a buoy moored on or above a new
+wreck, designed to provide a prominent (both visual and radio) and
+easily identifiable temporary first response. (Adapted from UKHO NP
+735, 6^th^ Edition).
+10+| *[underline]#S-101 Geo Feature:#* *Emergency Wreck Marking Buoy*
+10+| *[underline]#Primitives:#* *Point*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| buoy shape 2+| (BOYSHP) 3+|
+1: conical +
+2: can +
+3: spherical +
+4: pillar +
+5: spar +
+6: barrel | EN | 1,1
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | EN | 1,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | EN | 0,1 footnoteblock:[twenty_six]
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twenty_six]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twenty_six]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_six]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| marks navigational -- system of 2+| (MARSYS) 3+|
+1: IALA A +
+2: IALA B +
+9: no system +
+11: main European inland waterway marking system | EN | 0,1
+3+| nature of construction 2+| (NATCON) 3+|
+6: wooden +
+7: metal +
+8: glass reinforced plastic +
+11: latticed | EN | 0,*
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
+
+3+| topmark 2+| (*_TOPMAR_*) 3+| | C | 0,1
+
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | (S) EN | 0,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_six]
+3+| topmark/daymark shape 2+| (TOPSHP) 3+|
+1: cone (point up) +
+2: cone (point down) +
+3: sphere +
+4: 2 spheres +
+5: cylinder +
+6: board +
+7: x-shaped +
+8: upright cross +
+9: cube (point up) +
+10: 2 cones (point to point) +
+11: 2 cones (base to base) +
+12: rhombus +
+13: 2 cones (points upward) +
+14: 2 cones (points downward) +
+15: besom (point up) +
+16: besom (point down) +
+17: flag +
+18: sphere over a rhombus +
+19: square +
+20: rectangle (horizontal) +
+21: rectangle (vertical) +
+22: trapezium (up) +
+23: trapezium (down) +
+24: triangle (point up) +
+25: triangle (point down) +
+26: circle +
+27: two upright crosses (one over the other) +
+28: T-shape +
+29: triangle pointing up over a circle +
+30: upright cross over a circle +
+31: rhombus over a circle +
+32: circle over a triangle pointing up +
+33: other shape (see *shape information*) | (S) EN | 1,1
+3+| shape information 2+| 3+| | (S) C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 0,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 1,1
+
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_six]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_six]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twenty_six]]
+[NOTE]
+--
+The attribute/sub-attribute *colour pattern* is mandatory for
+buoys/topmarks that have more than one value populated for the
+attribute/sub-attribute *colour*.
+
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# Q 130.7
+
+[[sec_20.6.1]]
+==== Emergency wreck marking buoys (see S-4 -- B-461.3 and B-467)
+
+Emergency wreck marking buoysare used to mark new wrecks until a
+permanent form of marking has been established and the wreck itself
+has been promulgated by Notice to Mariners, or removed.
+
+To conform to the IALA Maritime Buoyage System (see
+<<sec_18.3.1.1>>), the shape of an emergency wreck marking buoy is
+pillar or spar. The body of the mark has blue and yellow vertical
+stripes. The topmark (if fitted) is a standing/upright yellow '+'
+(St. George's cross). Lights (if fitted) are Al.
+
+Oc.
+
+BuY.3s.
+
+If it is required to encode a buoy having the function of an
+emergency wreck mark, it must be done using the feature *Emergency
+Wreck Marking Buoy*.
+
+[underline]#Remarks:#
+
+* If it is required to encode a buoy or topmark that has more than
+one colour, the attributes *colour* and *colour pattern* must be
+encoded, according to the rules laid out in <<sec_2.4.10>>.
+* If it is required to encode the total vertical length, including
+the topmark and any equipment features (for example light), of the
+buoy above the water level, it must be done using the attribute
+*vertical length*.
+* An IALA compliant emergency wreck marking buoy topmark should be
+populated using the complex attribute *topmark*, with sub-attributes
+stem:[bb "topmark shape" = 8] (upright cross) and
+stem:[bb "colour" = 6] (yellow).
+* An IALA compliant emergency wreck marking buoy should also have the
+following associated equipment features:
+
+** A *Light All Around* feature (see <<sec_19.2>>), with attributes
+stem:[bb "colour" = 5,6] (blue, yellow),
+stem:[bb "light characteristic" = 17]
+(occulting alternating), *signal group* = _(1)_
+and stem:[bb "signal period" = 3]. The complex attribute *signal
+sequence*, sub-attributes *signal duration* and *signal status*,
+should be populated equivalent to __(___00.50)+01.00+(00.50)+01.00_
+(bracketed values corresponding to periods of eclipse and
+non-bracketed values corresponding to periods of light);and the
+attribute *value of nominal range* should be populated as _4_.
+** A *Radar Transponder Beacon* feature (see <<sec_21.5>>), with
+attributes stem:[bb "category of radar transponder beacon" = 2]
+(racon, radar transponder beacon) and *signal group* = _(D)_.
+
+[underline]#Distinction:# Cardinal Buoy; Installation Buoy; Lateral
+Buoy; Mooring Buoy; Safe Water Buoy; Special Purpose/General Buoy.
+
+[[sec_20.7]]
+=== Installation buoy
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *INSTALLATION BUOY*. An installation
+buoy is a buoy used for loading tankers with gas or oil.
+(S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.20, November 2000).
+10+| *[underline]#S-101 Geo Feature:#* *Installation Buoy (BOYINB)*
+10+| *[underline]#Primitives:#* *Point*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| buoy shape 2+| (BOYSHP) 3+|
+1: conical +
+2: can +
+3: spherical +
+4: pillar +
+5: spar +
+6: barrel +
+7: superbuoy +
+8: ice buoy | EN | 1,1
+3+| category of installation buoy 2+| (CATINB) 3+|
+1: catenary anchor leg mooring +
+2: single buoy mooring | EN | 0,1
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | EN | 1,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | EN | 0,1 footnoteblock:[twenty_seven]
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twenty_seven]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twenty_seven]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_seven]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| nature of construction 2+| (NATCON) 3+|
+7: metal +
+11: latticed | EN | 0,*
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| product 2+| (PRODCT) 3+|
+1: oil +
+2: gas +
+18: liquefied natural gas +
+19: liquefied petroleum gas | EN | 0,*
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
+
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+4: not in use +
+5: periodic/intermittent +
+7: temporary +
+8: private +
+18: existence doubtful | EN | 0,*
+3+| visual prominence 2+| (CONVIS) 3+|
+1: visually conspicuous +
+2: not visually conspicuous +
+3: prominent | EN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_seven]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_seven]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twenty_seven]]
+[NOTE]
+--
+The attribute *colour pattern* is mandatory for buoys that have more
+than one value populated for the attribute *colour*.
+
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# L 16
+
+[[sec_20.7.1]]
+==== Installation buoys (see S-4 -- B-445.4)
+
+Although the oil and gas from some fields are sent ashore by
+submarine pipeline, a variety of mooring systems have been developed
+for use in deep water and in the vicinity of certain ports, to allow
+the loading of large vessels and the permanent mooring of floating
+storage vessels or units. These offshore systems include large
+mooring buoys, designed for mooring vessels up to 500,000 tonnes, and
+platforms on structures fixed at their lower ends to the seafloor.
+They allow a vessel to moor forward or aft to them, and to swing to
+the wind or stream, and are termed installation buoys.
+
+If it is required to encode an installation buoy, it must be done
+using the feature *Installation Buoy*.
+
+[underline]#Remarks:#
+
+* If it is required to encode a buoy that has more than one colour,
+the attributes *colour* and *colour pattern* must be encoded,
+according to the rules laid out in <<sec_2.4.10>>.
+
+[underline]#Distinction:# Mooring Buoy; Offshore Platform; Special
+Purpose/General Buoy.
+
+[[sec_20.8]]
+=== Mooring buoy
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *MOORING BUOY*. A buoy secured to
+the bottom by permanent moorings with means for mooring a vessel by
+use of its anchor chain or mooring lines. (IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Mooring Buoy* *_(MORFAC)_*
+10+| *[underline]#Primitives:#* *Point*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| buoy shape 2+| (BOYSHP) 3+|
+1: conical +
+2: can +
+3: spherical +
+4: pillar +
+5: spar +
+6: barrel +
+7: superbuoy +
+8: ice buoy | EN | 1,1
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | EN | 0,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | EN | 0,1 footnoteblock:[twenty_eight]
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twenty_eight]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twenty_eight]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_eight]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| maximum permitted draught 2+| _(INFORM) (NINFOM)_ 3+| | RE | 0,1
+
+3+| maximum permitted vessel length 2+| _(INFORM) (NINFOM)_ 3+| | RE | 0,1
+
+3+| nature of construction 2+| (NATCON) 3+|
+7: metal +
+8: glass reinforced plastic +
+11: latticed | EN | 0,*
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+4: not in use +
+5: periodic/intermittent +
+7: temporary +
+8: private +
+18: existence doubtful | EN | 0,*
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
+
+3+| visitors mooring 2+| _(SMCFAC)_ 3+| | BO | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_eight]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_eight]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Mooring Trot Aggregation* (see <<sec_25.10>>) 3+| *Mooring Trot* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twenty_eight]]
+[NOTE]
+--
+The attribute *colour pattern* is mandatory for buoys that have more
+than one value populated for the attribute *colour*.
+
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# Q 40-45
+
+[[sec_20.8.1]]
+==== Mooring buoys (see S-4 -- B-431.5)
+
+Mooring buoys must be shown on charts of appropriate scale to
+indicate buoys and moored vessels as possible hazards to navigation
+as well as, on the largest scales, to facilitate mooring operations.
+
+If it is required to encode a mooring buoy, it must be done using the
+feature *Mooring Buoy*.
+
+[underline]#Remarks:#
+
+* If it is required to encode a buoy that has more than one colour,
+the attributes *colour* and *colour pattern* must be encoded,
+according to the rules laid out in <<sec_2.4.10>>.
+* If it is required to encode the total vertical length, including
+any equipment features (for example light), of the buoy above the
+water level, it must be done using the attribute *vertical length*.
+* If it is required to encode a visitors mooring, it must be done by
+populating the attribute *visitors mooring* as _True_.
+
+[underline]#Distinction:# Mooring Area; Mooring Trot; Small Craft
+Facility; Special Purpose/General Buoy.
+
+[[sec_20.9]]
+=== Lateral beacon
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *LATERAL BEACON*. A lateral beacon
+is used to indicate the port or starboard hand side of the route to
+be followed. They are generally used for well defined channels and
+are used in conjunction with a conventional direction of buoyage.
+(UKHO NP 735, 5^th^ Edition).
+10+| *[underline]#S-101 Geo Feature:#* *Lateral Beacon (BCNLAT)*
+10+| *[underline]#Primitives:#* *Point*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| beacon shape 2+| (BCNSHP) 3+|
+1: stake, pole, perch, post +
+2: withy +
+3: beacon tower +
+4: lattice beacon +
+5: pile beacon +
+6: cairn +
+7: buoyant beacon | EN | 1,1
+3+| category of lateral mark 2+| (CATLAM) 3+|
+1: port-hand lateral mark +
+2: starboard-hand lateral mark +
+3: preferred channel to starboard lateral mark +
+4: preferred channel to port lateral mark | EN | 1,1
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | EN | 1,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | EN | 0,1 footnoteblock:[twenty_nine]
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+2: ruined +
+5: planned construction | EN | 0,1
+3+| elevation 2+| (ELEVAT) 3+| | RE | 0,1
+
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twenty_nine]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twenty_nine]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_nine]
+
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| marks navigational -- system of 2+| (MARSYS) 3+|
+1: IALA A +
+2: IALA B +
+9: no system +
+11: main European inland waterway marking system | EN | 0,1
+3+| nature of construction 2+| (NATCON) 3+|
+1: masonry +
+2: concreted +
+6: wooden +
+7: metal +
+8: glass reinforced plastic | EN | 0,*
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
+
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+4: not in use +
+5: periodic/intermittent +
+7: temporary +
+8: private +
+12: illuminated +
+18: existence doubtful | EN | 0,*
+3+| topmark 2+| (*_TOPMAR_*) 3+| | C | 0,1
+
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | (S) EN | 0,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_nine]
+3+| topmark/daymark shape 2+| (TOPSHP) 3+|
+1: cone (point up) +
+2: cone (point down) +
+3: sphere +
+4: 2 spheres +
+5: cylinder +
+6: board +
+7: x-shaped +
+8: upright cross +
+9: cube (point up) +
+10: 2 cones (point to point) +
+11: 2 cones (base to base) +
+12: rhombus +
+13: 2 cones (points upward) +
+14: 2 cones (points downward) +
+15: besom (point up) +
+16: besom (point down) +
+17: flag +
+18: sphere over a rhombus +
+19: square +
+20: rectangle (horizontal) +
+21: rectangle (vertical) +
+22: trapezium (up) +
+23: trapezium (down) +
+24: triangle (point up) +
+25: triangle (point down) +
+26: circle +
+27: two upright crosses (one over the other) +
+28: T-shape +
+29: triangle pointing up over a circle +
+30: upright cross over a circle +
+31: rhombus over a circle +
+32: circle over a triangle pointing up +
+33: other shape (see *shape information*) | (S) EN | 1,1
+3+| shape information 2+| 3+| | (S) C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 0,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 1,1
+
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
+
+3+| visual prominence 2+| (CONVIS) 3+|
+1: visually conspicuous +
+2: not visually conspicuous +
+3: prominent | EN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_nine]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_nine]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Archipelagic Sea Lane*, *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
+| The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
+| The Auxiliary Feature 3+| *Fairway Auxiliary* (see <<sec_25.8>>) 3+| *Fairway* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twenty_nine]]
+[NOTE]
+--
+The attribute/sub-attribute *colour pattern* is mandatory for
+beacons/topmarks that have more than one value populated for the
+attribute/sub-attribute *colour*.
+
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# Q 91-92, 130.1
+
+[[sec_20.9.1]]
+==== Lateral Beacons (see S-4 -- B-461.3 and B-467)
+
+Lateral beaconsare generally used for well defined channels, in
+conjunction with a direction of buoyage. They indicate the port and
+starboard sides of the route to be followed.
+
+To conform to the IALA Maritime Buoyage System (see
+<<sec_18.3.1.1>>), port handbeacons have a can shaped topmark. The
+colour of port hand beacons, topmarks and lights (if fitted) will be
+red in IALA region A and green in IALA region B.
+
+To conform to the IALA Maritime Buoyage System, starboard hand
+beacons have a conical shaped topmark. The colour of starboard hand
+beacons, topmarks and lights (if fitted) will be green in IALA region
+A and red in IALA region B.
+
+A preferred channel beaconis a modified lateral beacon, with
+horizontal colour bands. The predominant colour indicates which side
+is the preferred channel, the other colour indicates the secondary
+channel. If fitted, the light is Fl(2+1), the colour indicating the
+preferred channel.
+
+If it is required to encode a beacon having the function of a lateral
+mark, it must be done using the feature *Lateral Beacon*.
+
+[[fig_20-5]]
+.IALA lateral beacons -- Characteristics
+image::figure-20-1.png["",544,466]
+
+[underline]#Remarks:#
+
+* If it is required to encode a beacon or topmark that has more than
+one colour, the attributes *colour* and *colour pattern* must be
+encoded, according to the rules laid out in <<sec_2.4.10>>.
+* For guidance on the encoding of the attributes *elevation*,
+*height* and *vertical length* see <<sec_2.5.7>>. *elevation* applies
+only to beacons on land. Values populated for *height* and *vertical
+length* must include the topmark and any equipment features.
+* If it is required to encode a cairn that bears the colour(s)
+specified by a navigational system of marks, it must be done using a
+beacon feature.
+
+[underline]#Distinction:# Cardinal Beacon; Daymark; Isolated Danger
+Beacon; Safe Water Beacon; Special Purpose/General Beacon.
+
+[[sec_20.10]]
+=== Cardinal beacon
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *CARDINAL BEACON*. A cardinal beacon
+is used in conjunction with the compass to indicate where the mariner
+may find the best navigable water. It is placed in one of the four
+quadrants (North, East, South and West), bounded by inter-cardinal
+bearings from the point marked. (UKHO NP 735, 5^th^ Edition).
+10+| *[underline]#S-101 Geo Feature:#* *Cardinal Beacon (BCNCAR)*
+10+| *[underline]#Primitives:#* *Point*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| beacon shape 2+| (BCNSHP) 3+|
+1: stake, pole, perch, post +
+2: withy +
+3: beacon tower +
+4: lattice beacon +
+5: pile beacon +
+6: cairn +
+7: buoyant beacon | EN | 1,1
+3+| category of cardinal mark 2+| (CATCAM) 3+|
+1: north cardinal mark +
+2: east cardinal mark +
+3: south cardinal mark +
+4: west cardinal mark | EN | 1,1
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | EN | 1,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | EN | 0,1 footnoteblock:[twenty_ten]
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+2: ruined +
+5: planned construction | EN | 0,1
+3+| elevation 2+| (ELEVAT) 3+| | RE | 0,1
+
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twenty_ten]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twenty_ten]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_ten]
+
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| marks navigational -- system of 2+| (MARSYS) 3+|
+1: IALA A +
+2: IALA B +
+9: no system +
+11: main European inland waterway marking system | EN | 0,1
+3+| nature of construction 2+| (NATCON) 3+|
+1: masonry +
+2: concreted +
+6: wooden +
+7: metal +
+8: glass reinforced plastic | EN | 0,*
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
+
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+4: not in use +
+5: periodic/intermittent +
+7: temporary +
+8: private +
+12: illuminated +
+18: existence doubtful | EN | 0,*
+3+| topmark 2+| (*_TOPMAR_*) 3+| | C | 0,1
+
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | (S) EN | 0,1 * (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_ten]
+3+| topmark/daymark shape 2+| (TOPSHP) 3+|
+1: cone (point up) +
+2: cone (point down) +
+3: sphere +
+4: 2 spheres +
+5: cylinder +
+6: board +
+7: x-shaped +
+8: upright cross +
+9: cube (point up) +
+10: 2 cones (point to point) +
+11: 2 cones (base to base) +
+12: rhombus +
+13: 2 cones (points upward) +
+14: 2 cones (points downward) +
+15: besom (point up) +
+16: besom (point down) +
+17: flag +
+18: sphere over a rhombus +
+19: square +
+20: rectangle (horizontal) +
+21: rectangle (vertical) +
+22: trapezium (up) +
+23: trapezium (down) +
+24: triangle (point up) +
+25: triangle (point down) +
+26: circle +
+27: two upright crosses (one over the other) +
+28: T-shape +
+29: triangle pointing up over a circle +
+30: upright cross over a circle +
+31: rhombus over a circle +
+32: circle over a triangle pointing up +
+33: other shape (see *shape information*) | (S) EN | 1,1
+3+| shape information 2+| 3+| | (S) C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 0,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 1,1
+
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
+
+3+| visual prominence 2+| (CONVIS) 3+|
+1: visually conspicuous +
+2: not visually conspicuous +
+3: prominent | EN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_ten]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_ten]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Archipelagic Sea Lane*, *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
+| Component of 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
+| The Auxiliary Feature 3+| *Fairway Auxiliary* (see <<sec_25.8>>) 3+| *Fairway* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twenty_ten]]
+[NOTE]
+--
+The attribute/sub-attribute *colour pattern* is mandatory for
+beacons/topmarks that have more than one value populated for the
+attribute/sub-attribute *colour*.
+
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# Q 130.3
+
+[[sec_20.10.1]]
+==== Cardinal beacons (see S-4 -- B-461.3 and B-467)
+
+Cardinal marksare used in conjunction with the compass to indicate
+where a Mariner may find best navigable water, taking their name from
+the quadrant in which they are placed in relation to the point
+marked. The Mariner should pass N of a North mark, E of an East mark,
+etc. To conform to the IALA Maritime Buoyage System (see
+<<sec_18.3.1.1>>), the body of the beacon has black and yellow bands,
+configured with black reflecting the points of the topmark cones (for
+example black above yellow for north). Black double-cone topmarks are
+an important feature of cardinal marks and are carried wherever
+practicable. The points are up for a north mark, down for a south
+mark, apart for an east mark and together for a west mark. Lights (if
+fitted) are white Q or VQ, uninterrupted for the north, 3 flashes for
+east, 6 flashes + LFl for south and 9 flashes for west (resembling an
+analogue clock).
+
+If it is required to encode a beacon having the function of a
+cardinal mark, it must be done using the feature *Cardinal Beacon*.
+
+[[fig_20-6]]
+.IALA cardinal beacons -- Characteristics
+image::figure-20-2.png["",508,624]
+
+[underline]#Remarks:#
+
+* If it is required to encode a beacon or topmark that has more than
+one colour, the attributes *colour* and *colour pattern* must be
+encoded, according to the rules laid out in <<sec_2.4.10>>.
+* For guidance on the encoding of the attributes *elevation*,
+*height* and *vertical length* see <<sec_2.5.7>>. *elevation* applies
+only to beacons on land. Values populated for *height* and *vertical
+length* must include the topmark and any equipment features.
+* If it is required to encode a cairn that bears the colour(s)
+specified by a navigational system of marks, it must be done using a
+beacon feature.
+
+[underline]#Distinction:# Daymark; Isolated Danger Beacon; Lateral
+Beacon; Safe Water Beacon; Special Purpose/General Beacon.
+
+[[sec_20.11]]
+=== Isolated danger beacon
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *ISOLATED DANGER BEACON*. An isolated
+danger beacon is a beacon erected on an isolated danger of limited
+extent, which has navigable water all around it.
+(UKHO NP735, 5^th^ Edition).
+10+| *[underline]#S-101 Geo Feature:#* *Isolated Danger Beacon (BCNISD)*
+10+| *[underline]#Primitives:#* *Point*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value
+h| Type h| Multiplicity
+3+| beacon shape 2+| (BCNSHP) 3+|
+1: stake, pole, perch, post +
+2: withy +
+3: beacon tower +
+4: lattice beacon +
+5: pile beacon +
+6: cairn +
+7: buoyant beacon | EN | 1,1
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | EN | 1,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | EN | 0,1 footnoteblock:[twenty_eleven]
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+2: ruined +
+5: planned construction | EN | 0,1
+3+| elevation 2+| (ELEVAT) 3+| | RE | 0,1
+
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twenty_eleven]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twenty_eleven]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_eleven]
+
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) |
+URN | 0,1
+
+3+| marks navigational -- system of 2+| (MARSYS) 3+|
+1: IALA A +
+2: IALA B +
+9: no system +
+11: main European inland waterway marking system | EN | 0,1
+3+| nature of construction 2+| (NATCON) 3+|
+1: masonry +
+2: concreted +
+6: wooden +
+7: metal +
+8: glass reinforced plastic | EN | 0,*
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
+
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+4: not in use +
+5: periodic/intermittent +
+7: temporary +
+8: private +
+12: illuminated +
+18: existence doubtful | EN | 0,*
+3+| topmark 2+| (*_TOPMAR_*) 3+| | C | 0,1
+
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | (S) EN | 0,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_eleven]
+3+| topmark/daymark shape 2+| (TOPSHP) 3+|
+1: cone (point up) +
+2: cone (point down) +
+3: sphere +
+4: 2 spheres +
+5: cylinder +
+6: board +
+7: x-shaped +
+8: upright cross +
+9: cube (point up) +
+10: 2 cones (point to point) +
+11: 2 cones (base to base) +
+12: rhombus +
+13: 2 cones (points upward) +
+14: 2 cones (points downward) +
+15: besom (point up) +
+16: besom (point down) +
+17: flag +
+18: sphere over a rhombus +
+19: square +
+20: rectangle (horizontal) +
+21: rectangle (vertical) +
+22: trapezium (up) +
+23: trapezium (down) +
+24: triangle (point up) +
+25: triangle (point down) +
+26: circle +
+27: two upright crosses (one over the other) +
+28: T-shape +
+29: triangle pointing up over a circle +
+30: upright cross over a circle +
+31: rhombus over a circle +
+32: circle over a triangle pointing up +
+33: other shape (see *shape information*) | (S) EN | 1,1
+3+| shape information 2+| 3+| | (S) C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 0,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 1,1
+
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
+
+3+| visual prominence 2+| (CONVIS) 3+|
+1: visually conspicuous +
+2: not visually conspicuous +
+3: prominent | EN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_eleven]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_eleven]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Archipelagic Sea Lane*, *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
+| The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
+| The Auxiliary Feature 3+| *Fairway Auxiliary* (see <<sec_25.8>>) 3+| *Fairway* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twenty_eleven]]
+[NOTE]
+--
+The attribute/sub-attribute *colour pattern* is mandatory for
+beacons/topmarks that have more than one value populated for the
+attribute/sub-attribute *colour*.
+
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# IQ 130.4
+
+[[sec_20.11.1]]
+==== Isolated danger beacons (see S-4 -- B-461.3 and B-467)
+
+Isolated danger beacons are placed on isolated dangers of limited
+extent with navigable water all around them.
+
+To conform to the IALA Maritime Buoyage System (see
+<<sec_18.3.1.1>>), the body of an isolated danger beacon is black,
+with one or more red bands. Black double-sphere topmarks are an
+important feature of isolated danger beacons and carried wherever
+practicable. The light (if fitted) is white Fl(2).
+
+If it is required to encode a beacon having the function of an
+isolated danger mark, it must be done using the feature *Isolated
+Danger Beacon*.
+
+[[fig_20-7]]
+.IALA isolated danger beacons -- Characteristics
+image::figure-20-3.png["",549,263]
+
+[underline]#Remarks:#
+
+* If it is required to encode a beacon or topmark that has more than
+one colour, the attributes *colour* and *colour pattern* must be
+encoded, according to the rules laid out in <<sec_2.4.10>>.
+* For guidance on the encoding of the attributes *elevation*,
+*height* and *vertical length* see <<sec_2.5.7>>. *elevation* applies
+only to beacons on land. Values populated for *height* and *vertical
+length* must include the topmark and any equipment features.
+* If it is required to encode a cairn that bears the colour(s)
+specified by a navigational system of marks, it must be done using a
+beacon feature.
+
+[underline]#Distinction:# Cardinal Beacon; Daymark; Lateral Beacon;
+Safe Water Beacon; Special Purpose/General Beacon;.
+
+[[sec_20.12]]
+=== Safe water beacon
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *SAFE WATER BEACON*.
+A safe water beacon is used to indicate that there is navigable water
+around the mark. (UKHO NP735, 5^th^ Edition).
+10+| *[underline]#S-101 Geo Feature:#* *Safe Water Beacon (BCNSAW)*
+10+| *[underline]#Primitives:#* *Point*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| beacon shape 2+| (BCNSHP) 3+|
+1: stake, pole, perch, post +
+2: withy +
+3: beacon tower +
+4: lattice beacon +
+5: pile beacon +
+6: cairn +
+7: buoyant beacon | EN | 1,1
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | EN | 1,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | EN | 0,1 footnoteblock:[twenty_twelve]
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+2: ruined +
+5: planned construction | EN | 0,1
+3+| elevation 2+| (ELEVAT) 3+| | RE | 0,1
+
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twenty_twelve]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twenty_twelve]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_twelve]
+
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| marks navigational -- system of 2+| (MARSYS) 3+|
+1: IALA A +
+2: IALA B +
+9: no system +
+11: main European inland waterway marking system | EN | 0,1
+3+| nature of construction 2+| (NATCON) 3+|
+1: masonry +
+2: concreted +
+6: wooden +
+7: metal +
+8: glass reinforced plastic | EN | 0,*
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
+
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+4: not in use +
+5: periodic/intermittent +
+7: temporary +
+8: private +
+12: illuminated +
+18: existence doubtful | EN | 0,*
+3+| topmark 2+| (*_TOPMAR_*) 3+| | C | 0,1
+
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | (S) EN | 0,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_twelve]
+3+| topmark/daymark shape 2+| (TOPSHP) 3+|
+1: cone (point up) +
+2: cone (point down) +
+3: sphere +
+4: 2 spheres +
+5: cylinder +
+6: board +
+7: x-shaped +
+8: upright cross +
+9: cube (point up) +
+10: 2 cones (point to point) +
+11: 2 cones (base to base) +
+12: rhombus +
+13: 2 cones (points upward) +
+14: 2 cones (points downward) +
+15: besom (point up) +
+16: besom (point down) +
+17: flag +
+18: sphere over a rhombus +
+19: square +
+20: rectangle (horizontal) +
+21: rectangle (vertical) +
+22: trapezium (up) +
+23: trapezium (down) +
+24: triangle (point up) +
+25: triangle (point down) +
+26: circle +
+27: two upright crosses (one over the other) +
+28: T-shape +
+29: triangle pointing up over a circle +
+30: upright cross over a circle +
+31: rhombus over a circle +
+32: circle over a triangle pointing up +
+33: other shape (see *shape information*) | (S) EN | 1,1
+3+| shape information 2+| 3+| | (S) C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 0,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 1,1
+
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
+
+3+| visual prominence 2+| (CONVIS) 3+|
+1: visually conspicuous +
+2: not visually conspicuous +
+3: prominent | EN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_twelve]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_twelve]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Archipelagic Sea Lane*, *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
+| The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
+| The Auxiliary Feature 3+| *Fairway Auxiliary* (see <<sec_25.8>>) 3+| *Fairway* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twenty_twelve]]
+[NOTE]
+--
+The attribute/sub-attribute *colour pattern* is mandatory for
+beacons/topmarks that have more than one value populated for the
+attribute/sub-attribute *colour*.
+
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# Q 130.5
+
+[[sec_20.12.1]]
+==== Safe water beacons (see S-4 -- B-461.3 and B-467)
+
+Safe water marksare used to indicate there is safe water all around
+the mark. It may be used as a centre-line, mid-channel or landfall
+beacon, or to mark the best point of passage under a bridge.
+
+To conform to the IALA Maritime Buoyage System (see
+<<sec_18.3.1.1>>), the body of the mark has red and white vertical
+stripes. A red spherical topmark is an important feature and carried
+wherever practicable. The light (if fitted) is white Oc, Iso, LFl or
+Mo(A) with a period of 10s.
+
+If it is required to encode a beacon having the function of a safe
+water mark, it must be done using the feature *Safe Water Beacon*.
+
+[[fig_20-8]]
+.IALA safe water beacons -- Characteristics
+image::figure-20-4.png["",568,184]
+
+[underline]#Remarks:#
+
+* If it is required to encode a beacon or topmark that has more than
+one colour, the attributes *colour* and *colour pattern* must be
+encoded, according to the rules laid out in <<sec_2.4.10>>.
+* For guidance on the encoding of the attributes *elevation*,
+*height* and *vertical length* see <<sec_2.5.7>>. *elevation* applies
+only to beacons on land. Values populated for *height* and *vertical
+length* must include the topmark and any equipment features.
+* If it is required to encode a cairn that bears the colour(s)
+specified by a navigational system of marks, it must be done using a
+beacon feature.
+
+[underline]#Distinction:# Cardinal Beacon; Daymark; Isolated Danger
+Beacon; Lateral Beacon; Special Purpose/General Beacon.
+
+[[sec_20.13]]
+=== Special purpose/general beacon
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *SPECIAL PURPOSE/GENERAL BEACON*.
+A special purpose beacon is primarily used to indicate an area or
+feature, the nature of which is apparent from reference to a chart,
+Sailing Directions or Notices to Mariners. (UKHO NP 735, 5^th^ Edition).
+10+| *[underline]#S-101 Geo Feature:#* *Special Purpose/General Beacon (BCNSPP)*
+10+| *[underline]#Primitives:#* *Point*
+3+| _Real World_ 4+| _Paper Chart Symbol_ 3+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| beacon shape 2+| (BCNSHP) 3+|
+1: stake, pole, perch, post +
+2: withy +
+3: beacon tower +
+4: lattice beacon +
+5: pile beacon +
+6: cairn +
+7: buoyant beacon | EN | 1,1
+3+| category of special purpose mark 2+| (CATSPM) 3+|
+1: firing danger area mark +
+2: target mark +
+3: marker ship mark +
+4: degaussing range mark +
+5: barge mark +
+6: cable mark +
+7: spoil ground mark +
+8: outfall mark +
+10: recording mark +
+11: seaplane anchorage mark +
+12: recreation zone mark +
+14: mooring mark +
+16: leading mark +
+17: measured distance mark +
+18: notice mark +
+19: TSS mark (Traffic Separation Scheme) +
+20: anchoring prohibited mark +
+21: berthing prohibited mark +
+22: overtaking prohibited mark +
+23: two-way traffic prohibited mark +
+24: reduced wake mark +
+25: speed limit mark +
+26: stop mark +
+27: general warning mark +
+28: sound ship's siren mark +
+29: restricted vertical clearance mark +
+30: maximum vessel's draught mark +
+31: restricted horizontal clearance mark +
+32: strong current warning mark +
+33: berthing permitted mark +
+34: overhead power cable mark +
+35: channel edge gradient mark +
+36: telephone mark +
+37: ferry crossing mark +
+39: pipeline mark +
+40: anchorage mark +
+41: clearing mark +
+42: control mark +
+43: diving mark +
+44: refuge beacon +
+45: foul ground mark +
+46: yachting mark +
+47: heliport mark +
+48: GNSS mark +
+49: seaplane landing mark +
+50: entry prohibited mark +
+51: work in progress mark +
+52: mark with unknown purpose +
+53: wellhead mark +
+54: channel separation mark +
+55: marine farm mark +
+56: artificial reef mark +
+57: ice mark +
+58: nature reserve mark +
+60: wreck mark +
+61: customs mark +
+62: causeway mark +
+63: wave recorder | EN | 1,*
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | EN | 1,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | EN | 0,1 footnoteblock:[twenty_thirteen]
+3+| condition 2+| (CONDTN) 3+|
+1: under construction +
+2: ruined +
+5: planned construction | EN | 0,1
+3+| elevation 2+| (ELEVAT) 3+| | RE | 0,1
+
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twenty_thirteen]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twenty_thirteen]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_thirteen]
+
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| marks navigational -- system of 2+| (MARSYS) 3+|
+1: IALA A +
+2: IALA B +
+9: no system +
+11: main European inland waterway marking system | EN | 0,1
+3+| nature of construction 2+| (NATCON) 3+|
+1: masonry +
+2: concreted +
+6: wooden +
+7: metal +
+8: glass reinforced plastic | EN | 0,*
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
+
+3+| reported date 2+| _(SORDAT)_ 3+| See <<sec_2.4.8>> | TD | 0,1
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+4: not in use +
+5: periodic/intermittent +
+7: temporary +
+8: private +
+12: illuminated +
+18: existence doubtful | EN | 0,*
+3+| topmark 2+| (*_TOPMAR_*) 3+| | C | 0,1
+
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | (S) EN | 0,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_thirteen]
+3+| topmark/daymark shape 2+| (TOPSHP) 3+|
+1: cone (point up) +
+2: cone (point down) +
+3: sphere +
+4: 2 spheres +
+5: cylinder +
+6: board +
+7: x-shaped +
+8: upright cross +
+9: cube (point up) +
+10: 2 cones (point to point) +
+11: 2 cones (base to base) +
+12: rhombus +
+13: 2 cones (points upward) +
+14: 2 cones (points downward) +
+15: besom (point up) +
+16: besom (point down) +
+17: flag +
+18: sphere over a rhombus +
+19: square +
+20: rectangle (horizontal) +
+21: rectangle (vertical) +
+22: trapezium (up) +
+23: trapezium (down) +
+24: triangle (point up) +
+25: triangle (point down) +
+26: circle +
+27: two upright crosses (one over the other) +
+28: T-shape +
+29: triangle pointing up over a circle +
+30: upright cross over a circle +
+31: rhombus over a circle +
+32: circle over a triangle pointing up +
+33: other shape (see *shape information*) | (S) EN | 1,1
+3+| shape information 2+| 3+| | (S) C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 0,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 1,1
+
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
+
+3+| visual prominence 2+| (CONVIS) 3+|
+1: visually conspicuous +
+2: not visually conspicuous +
+3: prominent | EN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_thirteen]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_thirteen]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
+9+h| Feature Associations |
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Archipelagic Sea Lane*, *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
+| The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
+| The Auxiliary Feature 3+| *Fairway Auxiliary* (see <<sec_25.8>>) 3+| *Fairway* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twenty_thirteen]]
+[NOTE]
+--
+The attribute/sub-attribute *colour pattern* is mandatory for
+beacons/topmarks that have more than one value populated for the
+attribute/sub-attribute *colour*.
+
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# Q 130.6
+
+[[sec_20.13.1]]
+==== Special purpose/general beacons (see S-4 -- B-461.3 and B-467)
+
+Special beaconsare used to indicate to the Mariner a special area or
+feature, the nature of which is usually apparent from the chart or
+associated publication. To conform to the IALA Maritime Buoyage
+System (see <<sec_18.3.1.1>>), the body of the beacon is yellow. The
+topmark (if fitted) is a yellow diagonal 'X' (St Andrew's cross).
+Lights (if fitted) are yellow and of any rhythm except those used for
+cardinal, isolated danger and safe water marks.
+
+If it is required to encode a beacon having the function of a special
+purpose mark, or a beacon whose appearance or purpose is inadequately
+known, it must be done using the feature *Special Purpose/General
+Beacon*.
+
+In the following Table, a blank indicates that the encoder may choose
+a relevant value for the attribute. The Table contains the most
+common examples of coding; other coding combinations are possible.
+
+[[table_20-2]]
+.IALA special purpose beacons -- Common types
+[cols="<,^,^,^,^"]
+|===
+h| Feature h| INT1 h| Feature h| beacon shape h| category of special purpose mark
+
+| Minor not permanent mark        | Q90 | *Beacon ++***++*                 | _1_ |
+| Cairn                           | Q100 | *Beacon ++***++*                 | _6_ |
+| Beacon tower                    | Q110 | *Beacon ++***++*                 | _3_ |
+| Lattice beacon                  | Q111 | *Beacon ++***++*                 | _4_ |
+| Leading beacon                  | Q120 | *Special Purpose/General Beacon* |    | _16_
+| Beacon marking a clearing line  | Q121 | *Special Purpose/General Beacon* |    | _41_
+| Beacon marking measured distance | Q122 | *Special Purpose/General Beacon* |    | _17_
+| Cable landing beacon            | Q123 | *Special Purpose/General Beacon* |    | _6_
+| Outfall landing beacon          | Q123 | *Special Purpose/General Beacon* |    | _8_
+| Pipeline landing beacon         | Q123 | *Special Purpose/General Beacon* |    | _39_
+| Refuge beacon                   | Q124 | *Special Purpose/General Beacon* |    | _44_
+| Firing practice area beacon     | Q125 | *Special Purpose/General Beacon* |    | _1_
+| Notice board                    | Q126 | *Special Purpose/General Beacon* |    | _18_
+| Buoyant beacon                  | P5  | *Special Purpose/General Beacon* | _7_ |
+|===
+
+[underline]#Remarks:#
+
+* Non-beacon structures (for example chimneys, masts, towers) that
+are also used to serve the purpose of a special purpose beacon must
+be encoded, where required, using the feature *Landmark* (see
+<<sec_7.2>>).
+* If it is required to encode a beacon or topmark that has more than
+one colour, the attributes *colour* and *colour pattern* must be
+encoded, according to the rules laid out in <<sec_2.4.10>>.
+* For guidance on the encoding of the attributes *elevation*,
+*height* and *vertical length* see <<sec_2.5.7>>. *elevation* applies
+only to beacons on land. Values populated for *height* and *vertical
+length* must include the topmark and any equipment features.
+* If a special purpose beacon does not conform to the system of
+navigational marks defined by *Navigational System of Marks* (see
+<<sec_3.6>>), the attribute *marks navigational -- system of* on the
+*Special Purpose/General Beacon* should be populated as _9_ (no
+system).
+* If it is required to encode a cairn that bears the colour(s)
+specified by a navigational system of marks, it must be done using a
+beacon feature.
+
+[[sec_20.13.2]]
+==== Signs and notice boards
+
+If it is required to encode a fixed or floating sign or notice board,
+it must be done using a *Special Purpose/General Beacon* feature or
+*Special Purpose/General Buoy* feature (see <<sec_20.5>>), with
+attribute stem:[bb "category of special purpose mark" = 18] (notice
+mark), or using the feature *Daymark* (see <<sec_20.14>>).
+
+[underline]#Remarks:#
+
+* If it is required to encode a sign or notice board that has more
+than one colour, the attributes *colour* and *colour pattern* must be
+used, according to the rules laid out in <<sec_2.4.10>>.
+* If it is required to encode any text shown on a notice board or
+sign, it must be done using the complex attribute *information* (see
+<<sec_2.4.6>>).
+* If it is required to encode the shape and colour of a notice board,
+it must be done by encoding the board as a *Daymark* feature.
+
+[underline]#Distinction:# Cardinal Beacon; Daymark; Isolated Danger
+Beacon; Landmark; Lateral Beacon; Safe Water Beacon.
+
+[[sec_20.14]]
+=== Daymark
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *DAYMARK*. The identifying characteristics
+of an aid to navigation which serve to facilitate its recognition
+against a daylight viewing background. On those structures that do
+not by themselves present an adequate viewing area to be seen at the
+required distance, the aid is made more visible by affixing a daymark
+to the structure. A daymark so affixed has a distinctive colour and
+shape depending on the purpose of the aid. (IHO Dictionary -- S-32,
+Edition 5).
+10+| *[underline]#S-101 Geo Feature:#* *Daymark (DAYMAR)*
+10+| *[underline]#Primitives:#* *Point*
+
+3+| _Real World_ 4+| _Paper Chart Symbol_ 3+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+
+3+| category of special purpose mark 2+| (CATSPM) 3+|
+1: firing danger area mark +
+2: target mark +
+3: marker ship mark +
+4: degaussing range mark +
+5: barge mark +
+6: cable mark +
+7: spoil ground mark +
+8: outfall mark +
+10: recording mark +
+11: seaplane anchorage mark +
+12: recreation zone mark +
+14: mooring mark +
+15: LANBY +
+16: leading mark +
+17: measured distance mark +
+18: notice mark +
+19: TSS mark (Traffic Separation Scheme) +
+20: anchoring prohibited mark +
+21: berthing prohibited mark +
+22: overtaking prohibited mark +
+23: two-way traffic prohibited mark +
+24: reduced wake mark +
+25: speed limit mark +
+26: stop mark +
+27: general warning mark +
+28: sound ship's siren mark +
+29: restricted vertical clearance mark +
+30: maximum vessel's draught mark +
+31: restricted horizontal clearance mark +
+32: strong current warning mark +
+33: berthing permitted mark +
+34: overhead power cable mark +
+35: channel edge gradient mark +
+36: telephone mark +
+37: ferry crossing mark +
+39: pipeline mark +
+40: anchorage mark +
+41: clearing mark +
+42: control mark +
+43: diving mark +
+44: refuge beacon +
+45: foul ground mark +
+46: yachting mark +
+47: heliport mark +
+48: GNSS mark +
+49: seaplane landing mark +
+50: entry prohibited mark +
+51: work in progress mark +
+52: mark with unknown purpose +
+53: wellhead mark +
+54: channel separation mark +
+55: marine farm mark +
+56: artificial reef mark +
+57: ice mark +
+58: nature reserve mark +
+60: wreck mark +
+61: customs mark +
+62: causeway mark +
+63: wave recorder | EN | 0,*
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | EN | 1,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | EN | 0,1 footnoteblock:[twenty_fourteen]
+3+| elevation 2+| (ELEVAT) 3+| | RE | 0,1
+
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twenty_fourteen]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twenty_fourteen]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_fourteen]
+
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| nature of construction 2+| (NATCON) 3+|
+1: masonry +
+2: concreted +
+4: hard surfaced +
+6: wooden +
+7: metal +
+8: glass reinforced plastic +
+11: latticed | EN | 0,*
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
+
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+4: not in use +
+5: periodic/intermittent +
+7: temporary +
+8: private +
+12: illuminated | EN | 0,*
+
+3+| topmark/daymark shape 2+| (TOPSHP) 3+|
+1: cone (point up) +
+2: cone (point down) +
+3: sphere +
+4: 2 spheres +
+5: cylinder +
+6: board +
+7: x-shaped +
+8: upright cross +
+9: cube (point up) +
+10: 2 cones (point to point) +
+11: 2 cones (base to base) +
+12: rhombus +
+13: 2 cones (points upward) +
+14: 2 cones (points downward) +
+15: besom (point up) +
+16: besom (point down) +
+17: flag +
+18: sphere over a rhombus +
+19: square +
+20: rectangle (horizontal) +
+21: rectangle (vertical) +
+22: trapezium (up) +
+23: trapezium (down) +
+24: triangle (point up) +
+25: triangle (point down) +
+26: circle +
+27: two upright crosses (one over the other) +
+28: T-shape +
+29: triangle pointing up over a circle +
+30: upright cross over a circle +
+31: rhombus over a circle +
+32: circle over a triangle pointing up +
+33: other shape (see *shape information*) | EN | 1,1
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
+
+3+| shape information 2+| 3+| | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 0,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 1,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_fourteen]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_fourteen]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
+
+10+h| Feature Associations
+
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Light Sectored*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Equipment 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Cardinal Beacon*, *Cardinal Buoy*, *Bridge*, *Building*, *Crane*, *Conveyor*, *Dolphin*, *Emergency Wreck Marking Buoy*, *Fishing Facility*, *Floating Dock*, *Fortified Structure*, *Hulk*, *Installation Buoy*, *Isolated Danger Beacon*, *Isolated Danger Buoy*, *Landmark*, *Lateral Beacon*, *Lateral Buoy*, *Light Float*, *Light Vessel*, *Mooring Buoy*, *Offshore Platform*, *Pile*, *Pipeline Overhead*, *Pontoon*, *Pylon/Bridge Support*, *Safe Water Beacon*, *Safe Water Buoy*, *Shoreline Construction*, *Silo/Tank*, *Span Fixed*, *Span Opening*, *Special Purpose/General Beacon*, *Special Purpose/General Buoy*, *Structure Over Navigable Water*, *Wind Turbine*, *Wreck* 2+| Association | 0,*
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Archipelagic Sea Lane*, *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
+| The Component 3+| *Range System Aggregation* (see <<sec_25.13>>) 3+| *Range System* 2+| Association | 0,*
+| The Auxiliary Feature 3+| *Fairway Auxiliary* (see <<sec_25.8>>) 3+| *Fairway* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Updated Object 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twenty_fourteen]]
+[NOTE]
+--
+The attribute *colour pattern* is mandatory for daymarks that have
+more than one value populated for the attribute *colour*.
+
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# Q 101
+
+[[sec_20.14.1]]
+==== Daymarks (see S-4 -- B-455.9)
+
+If it is required to encode a daymark, it must be done using the
+feature *Daymark*.
+
+The term "daymark"may also simply refer to any unlit aid to
+navigation, particularly for leading marks. In North America, the
+term "daybeacon"is used for an unlit beacon.
+
+In the following Table, a blank indicates that the encoder may choose
+a relevant value for the attribute. The Table contains the most
+common examples of coding; other coding combinations are possible.
+
+[[table_20-3]]
+.Daymarks -- Examples
+[cols="<,^,^,^,^"]
+|===
+h| Feature h| INT1 h| Feature h| category of special purpose mark h| Other attributes
+
+| Coloured or white mark                       | Q101  | *Daymark* |     | stem:[bb "nature of construction" = 9]
+| Coloured topmark with function of beacon     | Q102.1 | *Daymark* |     | stem:[bb "nature of construction" = 9]
+| Painted board with function of leading beacon | Q102.2 | *Daymark* | _16_ | stem:[bb "topmark shape" = 6]
+|===
+
+[underline]#Remarks:#
+
+* For guidance on the encoding of the attributes *elevation*,
+*height* and *vertical length* see <<sec_2.5.7>>. *elevation* applies
+only to daymarks on land. Values populated for *height* and *vertical
+length* must include any equipment features.
+* If it is required to encode a cairn that bears the colour(s)
+specified by a navigational system of marks, it must be done using a
+beacon feature.
+* If it is required to encode an aid to navigation that may be
+considered to be a topmark but has multiple colours that are
+considered important for navigation, this should be done using
+*Daymark*.
+* If it is required to encode a daymark that has more than one
+colour, the attributes *colour* and *colour pattern* must be encoded,
+according to the rules laid out in <<sec_2.4.10>>. If the colour
+pattern for the daymark is complex, it is strongly recommended that
+an image of the daymark is included, using the attribute *pictorial
+representation*.
+
+[underline]#Distinction:# Cardinal Beacon; Isolated Danger Beacon;
+Lateral Beacon; Safe Water Beacon; Special Purpose/General Beacon;
+Topmark.
+
+[[sec_20.15]]
+=== Light float
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *LIGHT FLOAT*. A boat-like structure
+used instead of a light buoy in waters where strong streams or currents
+are experienced, or when a greater elevation than that of a light
+buoy is necessary. (IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Light Float (LITFLT)*
+10+| *[underline]#Primitives:#* *Point*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | EN | 1,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | EN | 0,1 footnoteblock:[twenty_fifteen]
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twenty_fifteen]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twenty_fifteen]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_fifteen]
+
+3+| horizontal length 2+| (HORLEN) 3+| | RE | 0,1
+
+3+| horizontal width 2+| (HORWID) 3+| | RE | 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| nature of construction 2+| (NATCON) 3+|
+6: wooden +
+7: metal +
+11: latticed | EN | 0,*
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
+
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+4: not in use +
+5: periodic/intermittent +
+7: temporary +
+8: private +
+14: public +
+16: watched +
+17: unwatched | EN | 0,*
+3+| topmark 2+| (*_TOPMAR_*) 3+| | C | 0,1
+
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | (S) EN | 0,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | (S) EN | 0,1 footnoteblock:[twenty_fifteen]
+3+| topmark/daymark shape 2+| (TOPSHP) 3+|
+1: cone (point up) +
+2: cone (point down) +
+3: sphere +
+4: 2 spheres +
+5: cylinder +
+6: board +
+7: x-shaped +
+8: upright cross +
+9: cube (point up) +
+10: 2 cones (point to point) +
+11: 2 cones (base to base) +
+12: rhombus +
+13: 2 cones (points upward) +
+14: 2 cones (points downward) +
+15: besom (point up) +
+16: besom (point down) +
+17: flag +
+18: sphere over a rhombus +
+19: square +
+20: rectangle (horizontal) +
+21: rectangle (vertical) +
+22: trapezium (up) +
+23: trapezium (down) +
+24: triangle (point up) +
+25: triangle (point down) +
+26: circle +
+27: two upright crosses (one over the other) +
+28: T-shape +
+29: triangle pointing up over a circle +
+30: upright cross over a circle +
+31: rhombus over a circle +
+32: circle over a triangle pointing up +
+33: other shape (see *shape information*) | (S) EN | 1,1
+3+| shape information 2+| 3+| | (S) C | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 0,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 1,1
+
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
+
+3+| visual prominence 2+| (CONVIS) 3+|
+1: visually conspicuous +
+2: not visually conspicuous +
+3: prominent | EN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_fifteen]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_fifteen]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Association | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Archipelagic Sea Lane*, *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
+| The Auxiliary Feature 3+| *Fairway Auxiliary* (see <<sec_25.8>>) 3+| *Fairway* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twenty_fifteen]]
+[NOTE]
+--
+The attribute/sub-attribute *colour pattern* is mandatory for light
+floats/topmarks that have more than one value populated for the
+attribute/sub-attribute *colour*.
+
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# Q 30
+
+[[sec_20.15.1]]
+==== Lights floats (see S-4 -- B-462.8)
+
+If it is required to encode a light float, it must be done using the
+feature *Light Float*.
+
+[underline]#Remarks:#
+
+* If it is required to encode a light float or topmark that has more
+than one colour, the attributes *colour* and *colour pattern* must be
+encoded, according to the rules laid out in <<sec_2.4.10>>.
+* The light on a light float is a separate feature, handled as with
+buoys, beacons, etc.
+
+[underline]#Distinction:# Cardinal Buoy; Emergency Wreck Marking
+Buoy; Installation Buoy; Isolated Danger Buoy; Lateral Buoy; Light
+Vessel; Safe Water Buoy; Special Purpose/General Buoy.
+
+[[sec_20.16]]
+=== Light vessel
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *LIGHT VESSEL*. A distinctively
+marked vessel anchored or moored at a charted point, to serve as an
+aid to navigation. By night, it displays a characteristic light(s)
+and is usually equipped with other devices, such as fog signal, submarine
+sound signal, and radio-beacon, to assist navigation. (IHO Dictionary
+-- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Light Vessel (LITVES)*
+10+| *[underline]#Primitives:#* *Point*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+2: black +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | EN | 1,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | EN | 0,1 footnoteblock:[twenty_sixteen]
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twenty_sixteen]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twenty_sixteen]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_sixteen]
+
+3+| horizontal length 2+| (HORLEN) 3+| | RE | 0,1
+
+3+| horizontal width 2+| (HORWID) 3+| | RE | 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| nature of construction 2+| (NATCON) 3+|
+6: wooden +
+7: metal | EN | 0,*
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| radar conspicuous 2+| (CONRAD) 3+| | BO | 0,1
+
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+4: not in use +
+5: periodic/intermittent +
+7: temporary +
+8: private +
+14: public +
+16: watched +
+17: unwatched | EN | 0,*
+3+| vertical length 2+| (VERLEN) 3+| | RE | 0,1
+
+3+| visual prominence 2+| (CONVIS) 3+|
+1: visually conspicuous +
+2: not visually conspicuous +
+3: prominent | EN | 0,1
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_sixteen]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_sixteen]
+
+3+| pictorial representation 2+| (PICREP) 3+| See <<sec_2.4.12.2>> | TE | 0,1
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Structure 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Daymark*, *Distance Mark*, *Fog Signal*, *Light All Around*, *Light Fog Detector*, *Physical AIS Aid to Navigation*, *Radar Transponder Beacon*, *Retroreflector*, *Signal Station Traffic*, *Signal Station Warning* 2+| Composition | 0,1
+| The Component 3+| *Aids to Navigation Association* (see <<sec_25.2>>) 3+| *Archipelagic Sea Lane*, *Deep Water Route*, *Fairway System*, *Traffic Separation Scheme*, *Two-Way Route* 2+| Association | 0,*
+| The Auxiliary Feature 3+| *Fairway Auxiliary* (see <<sec_25.8>>) 3+| *Fairway* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twenty_sixteen]]
+[NOTE]
+--
+The attribute *colour pattern* is mandatory for light vessels that
+have more than one value populated for the attribute *colour*.
+
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# P 6
+
+[[sec_20.16.1]]
+==== Lights vessels (see S-4 -- B-474.1-3)
+
+Major floating lightsare generally classed as those with a nominal
+range in excess of 10 nautical miles. Special circumstances, for
+example an isolated location, may mean that a floating light of lower
+range is given this status. The structure on which the light is fixed
+will be a light vessel, a major light float or a LANBY (Large
+Automatic Navigational Buoy, which is a type of superbuoy).
+
+If it is required to encode a light vessel, it must be done using the
+feature *Light Vessel*.
+
+[underline]#Remarks:#
+
+* If it is required to encode a light vessel that has more than one
+colour, the attributes *colour* and *colour pattern* must be encoded,
+according to the rules laid out in <<sec_2.4.10>>.
+* The light on a light vessel is a separate feature, handled as with
+buoys, beacons, etc.
+
+[underline]#Distinction:# Cardinal Beacon; Cardinal Buoy; Emergency
+Wreck Marking Buoy; Installation Buoy; Isolated Danger Beacon;
+Isolated Danger Buoy; Lateral Buoy; Lateral Beacon; Light Float; Safe
+Water Beacon; Safe Water Buoy; Special Purpose/General Beacon;
+Special Purpose/General Buoy.
+
+[[sec_20.17]]
+=== Retroreflector
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *RETROREFLECTOR*. A means of distinguishing
+unlighted marks at night. Retroreflective material is secured to the
+mark in a particular pattern to reflect back light. (UKHO NP 735,
+5^th^ Edition).
+10+| *[underline]#S-101 Geo Feature:#* *Retroreflector (RETRFL)*
+10+| *[underline]#Primitives:#* *Point*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| colour 2+| (COLOUR) 3+|
+1: white +
+3: red +
+4: green +
+5: blue +
+6: yellow +
+7: grey +
+8: brown +
+9: amber +
+10: violet +
+11: orange +
+12: magenta +
+13: pink | EN | 0,* (ordered)
+3+| colour pattern 2+| (COLPAT) 3+|
+1: horizontal stripes +
+2: vertical stripes +
+3: diagonal stripes +
+4: squared +
+5: stripes (direction unknown) +
+6: border stripe | EN | 0,1 footnoteblock:[twenty_seventeen]
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twenty_seventeen]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_seventeen]
+
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+4: not in use +
+8: private | EN | 0,*
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_seventeen]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_seventeen]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Equipment 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Cardinal Beacon*, *Cardinal Buoy*, *Bridge*, *Building*, *Crane*, *Conveyor*, *Daymark*, *Dolphin*, *Emergency Wreck Marking Buoy*, *Fishing Facility*, *Floating Dock*, *Fortified Structure*, *Hulk*, *Installation Buoy*, *Isolated Danger Beacon*, *Isolated Danger Buoy*, *Landmark*, *Lateral Beacon*, *Lateral Buoy*, *Light Float*, *Light Vessel*, *Mooring Buoy*, *Offshore Platform*, *Pile*, *Pipeline Overhead*, *Pontoon*, *Pylon/Bridge Support*, *Safe Water Beacon*, *Safe Water Buoy*, *Shoreline Construction*, *Silo/Tank*, *Span Fixed*, *Span Opening*, *Special Purpose/General Beacon*, *Special Purpose/General Buoy*, *Structure Over Navigable Water*, *Wind Turbine*, *Wreck* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,1
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twenty_seventeen]]
+[NOTE]
+--
+The attribute *colour pattern* is mandatory for retroreflectors that
+have more than one value populated for the attribute *colour*.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# Q 6
+
+[[sec_20.17.1]]
+==== Retroreflectors (see S-4 -- B-460.7)
+
+Retroreflective material may be secured to unlit marks to aid their
+identification at night. The material is coloured according to one of
+two recognized IALA codes ("Standard" and "Comprehensive"). In any
+specified area only one of the codes will be used and this may be
+given in nautical publications.
+
+If it is required to encode a retroreflector, it must be done using
+the feature *Retroreflector*.
+
+[underline]#Remarks:#
+
+* The complex attribute *information* (see <<sec_2.4.6>>) may be used
+to describe letters, patterns or numerals shown on the retroreflector.
+* The body carrying the retroreflector is a separate feature.
+
+[underline]#Distinction:# Cardinal Beacon; Cardinal Buoy; Emergency
+Wreck Marking Buoy; Installation Buoy; Isolated Danger Beacon;
+Isolated Danger Buoy; Lateral Beacon; Lateral Buoy; Radar Reflector;
+Safe Water Beacon; Safe Water Buoy; Special Purpose/General Beacon;
+Special Purpose/General Buoy.
+
+[[sec_20.18]]
+=== Radar reflector
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *RADAR REFLECTOR*. A device capable
+of, or intended for, reflecting radar signals. (IHO Dictionary --
+S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Radar Reflector (RADRFL)*
+10+| *[underline]#Primitives:#* *Point*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twenty_eighteen]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_eighteen]
+
+3+| height 2+| (HEIGHT) 3+| | RE | 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+4: not in use +
+8: private | EN | 0,*
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_eighteen]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_eighteen]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Equipment 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Cable Overhead*, *Pipeline Overhead* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twenty_eighteen]]
+[NOTE]
+--
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# S 4
+
+[[sec_20.18.1]]
+==== Radar reflectors (see S-4 -- B-455.8 and B-465)
+
+If it is required to encode radar reflectors on curve features (for
+instance overhead cables, overhead pipelines, conveyors), this must
+be done using the feature *Radar Reflector*.
+
+[underline]#Remarks:#
+
+* A radar reflector is usually a tetrahedron or pentagonal corner
+reflector to facilitate reflection towards the sender. (International
+Maritime Dictionary, 2^nd^ Edition).
+* If it is required to encode a feature which has no radar reflector,
+but is radar conspicuous, it must be indicated using the mandatory
+attribute *radar conspicuous* = _True_ on the feature.
+* Where the location of a radar reflector(s) is known on an overhead
+cable or pipeline, a *Radar Reflector*(s) should be encoded, and
+associated to the *Cable Overhead* or *Pipeline Overhead* using a
+*Structure/Equipment* feature association (see
+<<sec_6.10;and!sec_6.11;and!sec_25.16>>).
+* If it is required to encode a surface or point feature which is
+radar conspicuous because it is fitted with a radar reflector, it
+must be indicated using *radar conspicuous* = _True_ on the feature.
+A *Radar Reflector* feature must not be encoded in this case.
+
+[underline]#Distinction:# Retroreflector.
+
+[[sec_20.19]]
+=== Fog signal
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *FOG SIGNAL*. A warning signal transmitted
+by a vessel, or aid to navigation, during periods of low visibility.
+Also, the device producing such a signal. (IHO Dictionary -- S-32).
+10+| *[underline]#S-101 Geo Feature:#* *Fog Signal (FOGSIG)*
+10+| *[underline]#Primitives:#* *Point*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| category of fog signal 2+| (CATFOG) 3+|
+1: explosive +
+2: diaphone +
+3: siren +
+4: nautophone +
+5: reed +
+6: tyfon +
+7: bell +
+8: whistle +
+9: gong +
+10: horn | EN | 1,1
+3+| feature name 2+| 3+| See <<sec_2.5.8>> | C | 0,*
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| name 2+| _(OBJNAM) (NOBJNM)_ 3+| | (S) TE | 1,1
+
+3+| name usage 2+| 3+|
+1: default name display +
+2: alternate name display | (S) EN
+| 0,1 footnoteblock:[twenty_nineteen]
+
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[twenty_nineteen]
+
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[twenty_nineteen]
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| periodic date range 2+| 3+| See <<sec_2.4.8>> | C | 0,*
+
+3+| date end 2+| _(PEREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(PERSTA)_ 3+| | (S) TD | 1,1
+
+3+| signal frequency 2+| (SIGFRQ) 3+| | IN | 0,1
+
+3+| signal generation 2+| (SIGGEN) 3+|
+1: automatically +
+2: by wave action +
+3: by hand +
+4: by wind +
+5: radio activated +
+6: call activated | EN | 0,1
+3+| signal group 2+| (SIGGRP) 3+| | TE | 0,1
+
+3+| signal period 2+| (SIGPER) 3+| | RE | 0,1
+
+3+| signal sequence 2+| _(SIGSEQ)_ 3+| | C | 0,* (ordered)
+
+3+| signal duration 2+| 3+| | (S) RE | 1,1
+
+3+| signal status 2+| 3+|
+1: lit/sound +
+2: eclipsed/silent | (S) EN | 1,1
+
+3+| status 2+| (STATUS) 3+|
+1: permanent +
+2: occasional +
+4: not in use +
+5: periodic/intermittent +
+7: temporary +
+8: private +
+15: synchronized | EN | 0,*
+3+| value of maximum range 2+| (VALMXR) 3+| | RE | 0,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_nineteen]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[twenty_nineteen]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Equipment 3+| *Structure/Equipment* (see <<sec_25.16>>) 3+| *Cardinal Beacon*, *Cardinal Buoy*, *Bridge*, *Building*, *Crane*, *Conveyor*, *Daymark*, *Dolphin*, *Emergency Wreck Marking Buoy*, *Fishing Facility*, *Floating Dock*, *Fortified Structure*, *Hulk*, *Installation Buoy*, *Isolated Danger Beacon*, *Isolated Danger Buoy*, *Landmark*, *Lateral Beacon*, *Lateral Buoy*, *Light Float*, *Light Vessel*, *Mooring Buoy*, *Offshore Platform*, *Pile*, *Pipeline Overhead*, *Pontoon*, *Pylon/Bridge Support*, *Safe Water Beacon*, *Safe Water Buoy*, *Shoreline Construction*, *Silo/Tank*, *Span Fixed*, *Span Opening*, *Special Purpose/General Beacon*, *Special Purpose/General Buoy*, *Structure Over Navigable Water*, *Wind Turbine*, *Wreck* 2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| The Position Provider 3+| *Text Association* (see <<sec_25.17>>). 3+| *Text Placement* 2+| Composition | 0,1
+| - 3+| *Additional Information* (see <<sec_25.1>>) 3+| *Contact Details*, *Nautical Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[[twenty_nineteen]]
+[NOTE]
+--
+Complex attribute *feature name*, sub-attribute *name usage* is
+mandatory if the name is intended to be displayed when display of
+names is enabled by the Mariner. See <<sec_2.5.8>>.
+
+For each instance of *fixed date range*, at least one of the
+sub-attributes *date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the
+sub-attributes *file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:# R 1, 10-16, 20-22
+
+[[sec_20.19.1]]
+==== Fog signals (see S-4 -- B-451-454)
+
+The term "fog signal" refers to the sound emitted, not the apparatus.
+Fog signals are short range aids to navigation, principally used as
+hazard warnings. For various reasons they are unreliable as
+indicators of position. Their importance relative to other aids to
+navigation has declined but they are still considered useful for the
+safe navigation of vessels with very limited (or non-functioning)
+electronic equipment. A fog signal should be shown on ENCs at an
+optimum display scale on which vessels may navigate within range.
+
+The positionfrom which a fog signal is emitted is usually on a buoy,
+or close enough to a light to be treated as sounded from the same
+position as the light.
+
+If it is required to encode a fog signal, it must be done using the
+feature *Fog Signal*.
+
+[underline]#Remarks:#
+
+* The characteristic rhythm of fog signals (other than those actuated
+by waves, which are irregular) may be more important than their type
+when Mariners are attempting to identify them. The number of sound
+emissions (for example blasts, strokes) and the period must therefore
+be encoded, where known, using the attributes *signal group*, *signal
+period* and *signal sequence*.
+* Where required, the attribute *signal frequency* must be quoted in
+Hertz, for example a signal frequency of 950 MHz must be encoded as
+_950000000_.
+* If the fog signal is radio activated, the attribute *signal
+generation* must be populated with value _5_ (radio activated). To
+encode the contact information for activation of the signal, it must
+be done using the information type *Contact Details* (see
+<<sec_24.1>>). The *Contact Details* must be associated to the *Fog
+Signal* feature using the association *Additional Information*.
+* If the fog signal is activated by calling into a manned station,
+the attribute *signal generation* must be populated with value _6_
+(call activated). To encode the contact information for the manned
+station, it must be done using the information type *Contact
+Details*. The *Contact Details* must be associated to the *Fog
+Signal* feature using the association *Additional Information*.
+
+[underline]#Distinction:# Signal Station Warning.

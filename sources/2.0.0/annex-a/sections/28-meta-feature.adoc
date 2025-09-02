@@ -1,0 +1,1019 @@
+
+[[sec_28]]
+== Meta Feature and Spatial Attribute and Enumerate Descriptions
+
+[[sec_28.1]]
+=== category of temporal variation
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *CATEGORY OF TEMPORAL VARIATION*. An
+assessment of the likelihood of change over time.
+
+[underline]#Attribute Type:# Enumeration
+
+. *extreme event*
++
+--
+[underline]#IHO Definition:# Indication of the possible impact of
+a significant event (for example hurricane, earthquake, volcanic eruption,
+landslide, etc), which is considered likely to have changed the seafloor
+or landscape significantly.
+--
+
+. *likely to change and significant shoaling expected*
++
+--
+[underline]#IHO Definition:# Continuous or frequent change (for example
+river siltation, sand waves, seasonal storms, icebergs, etc) that
+is likely to result in new significant shoaling.
+--
+
+. *likely to change but significant shoaling not expected*
++
+--
+[underline]#IHO Definition:# Continuous or frequent change (for example
+sand wave shift, seasonal storms, icebergs, etc) that is not likely
+to result in new significant shoaling.
+--
+
+. *likely to change*
++
+--
+[underline]#IHO Definition:# Continuous or frequent change to non-bathymetric
+features (for example river siltation, glacier creep/recession, sand
+dunes, buoys, marine farms, etc).
+--
+
+. *unlikely to change*
++
+--
+[underline]#IHO Definition:# Significant change to the seafloor is
+not expected.
+--
+
+. *unassessed*
++
+--
+[underline]#IHO Definition:# Not having been assessed.
+--
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_28.2]]
+=== data assessment
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *DATA ASSESSMENT*. The categorization
+of the assessment level of bathymetric data for an area.
+
+[underline]#Attribute Type:# Enumeration
+
+. *assessed*
++
+--
+[underline]#IHO Definition:# The quality of the bathymetric data has
+been assessed.
+--
+
+. *assessed (Oceanic)*
++
+--
+[underline]#IHO Definition:# The quality of oceanic bathymetric data
+(depths deeper than 200 metres) has been assessed, however details
+are not required.
+--
+
+. *unassessed*
++
+--
+[underline]#IHO Definition:# Not having been assessed.
+--
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_28.3]]
+=== drawing index
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *DRAWING INDEX*. A numeric value used
+to indicate that datasets are intended to form a seamless presentation.
+
+[underline]#Attribute Type:# IntegerIndication:Datasets that share
+a common value are intended to form a seamless presentation.
+
+[underline]#Unit:# None
+
+[underline]#Minimum range:# 1
+
+[underline]#Range closure:# Left closed ray
+(stem:["minimum" <=  bb "drawing index"])
+
+[underline]#Example:# *1* for a dataset intended to be viewed seamlessly
+with other datasets having drawing index value set to 1.
+
+[underline]#Remarks:#
+
+* The attribute *drawing index* is required where the datasets intended
+to form a seamless presentation do not share a common minimum display
+scale. Also required if the dataset may need to form a seamless presentation
+with one or more S-57 datasets, in which case the value should correspond
+to the usage band of the adjoining or overlapping S-57 dataset(s).
+
+|===
+
+[[sec_28.4]]
+=== full seafloor coverage achieved
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *FULL SEAFLOOR COVERAGE ACHIEVED*.
+Expression stating if full seafloor coverage has been achieved in
+the area covered by hydrographic surveys.
+
+[underline]#Attribute Type:# Boolean
+
+[underline]#Indication:# A True value is an indication that full seafloor
+coverage for an area covered by hydrographic survey(s) has been achieved.
+
+[underline]#Remarks:#
+
+* *full seafloor coverage achieved* applies to both the spatial completeness
+of feature detection and to the spatial completeness of the measurement
+of the regular seafloor. The former is further specified by the complex
+attribute *features detected*, the latter by the attributes *depth
+range maximum value* and *depth range minimum value*.
+
+|===
+
+[[sec_28.5]]
+=== horizontal distance uncertainty (HORACC)
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *HORIZONTAL DISTANCE UNCERTAINTY*.
+The best estimate of the horizontal accuracy of horizontal clearances
+and distances. (S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.136,
+November 2000).
+
+[underline]#Attribute Type:# Real
+
+[underline]#Unit:# Defined as an attribute in the ENC Dataset Discovery
+Metadata: metre (m)
+
+[underline]#Precision:# 0∙1m
+
+[underline]#Minimum range:# 0
+
+[underline]#Range closure:# Left closed ray
+(stem:["minimum" <= bb "horizontal distance uncertainty"])
+
+[underline]#Example:# *0.5* for an error of 0∙5 metres.
+
+[underline]#Remarks:#
+
+* The expected input is the radius of the two-dimensional error.
+* The error is assumed to be positive and negative. The plus/minus
+character must not be encoded.
+
+|===
+
+[[sec_28.6]]
+=== least depth of detected features measured
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *LEAST DEPTH OF DETECTED FEATURES MEASURED*.
+Expression stating if the least depth of detected features in an area
+was measured.
+
+[underline]#Attribute Type:# Boolean
+
+[underline]#Indication:# A True value is an indication that the characteristics
+of a hydrographic survey are such that the least depth of significant
+seafloor features can be determined.
+
+[underline]#Remarks:#
+
+* A feature in this context is any object, whether manmade or not,
+projecting above the seafloor, which may be a danger for surface navigation
+(reference: IHO publication S-44).
+* *least depth of detected features measured* does not describe the
+least depth of features that were actually detected during a hydrographic
+survey, but the ability of the survey to detect the least depth of
+features with a maximum uncertainty as defined in IHO publication
+S-44.
+
+|===
+
+[[sec_28.7]]
+=== line spacing maximum
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *LINE SPACING MAXIMUM*. The maximum
+distance between hydrographic survey lines.
+
+[underline]#Attribute Type:# Integer
+
+[underline]#Unit:# metre
+
+[underline]#Minimum range:# 0
+
+[underline]#Range closure:# Left half-open ray
+(stem:["minimum" < bb "line spacing maximum"])
+
+[underline]#Example:# *250* for a maximum distance between sounding
+lines of 250 metres.
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_28.8]]
+=== line spacing minimum
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *LINE SPACING MINIMUM*. The minimum
+distance between hydrographic survey lines.
+
+[underline]#Attribute Type:# Integer
+
+[underline]#Unit:# metre
+
+[underline]#Minimum range:# 0
+
+[underline]#Range closure:# Left half-open ray
+(stem:["minimum" < bb "line spacing minimum"])
+
+[underline]#Example:# *50* for a minimum distance between sounding
+lines of 50 metres.
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_28.9]]
+=== maximum display scale (CSCALE)
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *MAXIMUM DISPLAY SCALE*. The value
+considered by the Data Producer to be the maximum (largest) scale
+at which the data is to be displayed before it can be considered to
+be "grossly overscaled".
+
+[underline]#Attribute Type:# Integer
+
+[underline]#Indication:# The modulus of the scale is indicated, that
+is 1:22 000 is encoded as 22000.
+
+[underline]#Unit:# none
+
+[underline]#Minimum range:# 1
+
+[underline]#Maximum range:# 10000000
+
+[underline]#Range closure:# Closed interval
+(stem:["minimum" <= bb "maximum display scale" <= "maximum"])
+
+[underline]#Example:# *12000* for a maximum display scale of scale
+of 1:12000
+
+[underline]#Remarks:#
+
+* *Maximum display scale* provides a reference for the user selected
+viewing scale in the ECDIS at which the overscale warning will be
+displayed if there is no larger optimum display scale ENC dataset
+available.
+* This attribute is only used in conjunction with the Meta feature
+*Data Coverage* which is used to define polygons of equal largest
+intended viewing scale. See <<sec_3.5.1>>, <<table_3-2>>, for the
+list of mandatory *maximum display scale* values.
+
+|===
+
+[[sec_28.10]]
+=== measurement distance maximum (SDISMX)
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *MEASUREMENT DISTANCE MAXIMUM*.
+The maximum spacing of the principal measurement lines of a hydrographic
+survey.
+
+[underline]#Attribute Type:# Integer
+
+[underline]#Unit:# metre
+
+[underline]#Precision:# 1m
+
+[underline]#Minimum range:# 0
+
+[underline]#Range closure:# Left half-open ray
+(stem:["minimum" < bb "measurement distance maximum"])
+
+[underline]#Example:# *30* for a maximum distance between sounding
+along a sounding line of 30 metres.
+
+[underline]#Remarks:#
+
+* Note that, in spite of the representation of a depth measurement
+with a single discrete point position, it actually represents an area
+with a certain footprint on the seafloor.
+
+|===
+
+[[sec_28.11]]
+=== measurement distance minimum (SDISMN)
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *MEASUREMENT DISTANCE MINIMUM*.
+The minimum spacing of the principal measurement lines of a hydrographic
+survey.
+
+[underline]#Attribute Type:# Integer
+
+[underline]#Unit:# metre
+
+[underline]#Precision:# 1m
+
+[underline]#Minimum range:# 0
+
+[underline]#Range closure:# Left half-open ray
+(stem:["minimum" < bb "measurement distance minimum"])
+
+[underline]#Example:# *5* for a minimum distance between sounding
+along a sounding line of 5 metres.
+
+[underline]#Remarks:#
+
+* Note that, in spite of the representation of a depth measurement
+with a single discrete point position, it actually represents an area
+with a certain footprint on the seafloor.
+
+|===
+
+[[sec_28.12]]
+=== minimum display scale
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *MINIMUM DISPLAY SCALE*.
+The smallest intended viewing scale for the data.
+
+[underline]#Attribute Type:# Integer
+
+[underline]#Indication:# The modulus of the scale is indicated,
+that is 1:700 000 is encoded as 700000. 
+
+[underline]#Unit:# none
+
+[underline]#Minimum range:# 2000
+
+[underline]#Maximum range:# 10000000
+
+[underline]#Range closure:# Closed interval
+(stem:["minimum" <= bb "minimum display scale" <= "maximum"])
+
+[underline]#Example:# *700000* for a minimum display scale of scale
+of 1:700000
+
+[underline]#Remarks:#
+
+* *Minimum display scale* is intended to be used in a series of ENC
+cells covering a geographic area to determine the dataset loading
+strategy as the user selected viewing scale becomes larger.
+* This attribute is only used in conjunction with the Meta feature
+*Data Coverage* which is used to define polygons of equal smallest
+intended viewing scale. *minimum display scale* should therefore not
+be confused with the attribute *scale minimum*. See <<sec_3.5.1>>,
+<<table_3-2>>, for the list of mandatory *minimum display scale* values.
+
+|===
+
+[[sec_28.13]]
+=== optimum display scale (_CSCALE_)
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *OPTIMUM DISPLAY SCALE*.
+The largest intended viewing scale for the data.
+
+[underline]#Attribute Type:# Integer
+
+[underline]#Indication:# The modulus of the scale is indicated,
+that is 1:22 000 is encoded as 22000.
+
+[underline]#Unit:# none
+
+[underline]#Minimum range:# 1000
+
+[underline]#Maximum range:# 10000000
+
+[underline]#Range closure:# Closed interval
+(stem:["minimum" <= bb "optimum display scale" <= "maximum"])
+
+[underline]#Example:# *12000* for an optimum display scale of scale
+of 1:12000
+
+[underline]#Remarks:#
+
+* *optimum display scale* provides a reference for the user selected
+viewing scale in the ECDIS at which the overscale indication will
+be displayed if there is no larger optimum display scale ENC dataset
+available, as well as the ECDIS viewing scale when the cell is loaded.
+* This attribute is only used in conjunction with the Meta feature
+*Data Coverage* which is used to define polygons of equal largest
+intended viewing scale. See <<sec_3.5.1>>, <<table_3-2>>, for the
+list of mandatory *optimum display scale* values.
+
+|===
+
+[[sec_28.14]]
+=== orientation uncertainty
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *ORIENTATION UNCERTAINTY*.
+The best estimate of the accuracy of a bearing.
+
+[underline]#Attribute Type:# Real
+
+[underline]#Unit:# Degree (°)
+
+[underline]#Precision:# 0∙001°
+
+[underline]#Minimum range:# 0
+
+[underline]#Maximum range:# 360
+
+[underline]#Range closure:# Right half-open interval
+(stem:["minimum" <= bb "orientation uncertainty" < "maximum"])
+
+[underline]#Example:# *0·005* for an error of 0·005 degrees
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_28.15]]
+=== quality of horizontal measurement (QUAPOS)
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *QUALITY OF HORIZONTAL MEASUREMENT*.
+The degree of reliability attributed to a position.
+
+[underline]#Attribute Type:# Enumeration
+
+. *approximate*
++
+--
+[underline]#IHO Definition:# A position that is considered to be less
+than third-order accuracy, but is generally considered to be within
+30.5 metres of its correct geographic location. Also may apply to
+a feature whose position does not remain fixed.
+(Adapted from IHO Dictionary -- S-32, and IHO Specifications,
+S-4 -- B-424.1).
+--
+
+[underline]#Remarks:#
+
+* ~No remarks.~
+
+|===
+
+[[sec_28.16]]
+=== quality of vertical measurement (QUASOU)
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *QUALITY OF VERTICAL MEASUREMENT*.
+The reliability of the value of a sounding.
+
+[underline]#Attribute Type:# Enumeration
+
+. *depth known*
++
+--
+[underline]#IHO Definition:# The depth from the chart datum to the
+seabed (or to the top of a drying feature) is known. (Adapted from
+Defence Geospatial Information Working Group; Feature Data Dictionary
+Register, 2010).
+--
+
+. *depth or least depth unknown*
++
+--
+[underline]#IHO Definition:# The depth from chart datum to the seabed,
+or the shoalest depth of the feature is unknown. (S-57 Edition 3.1,
+Appendix A -- Chapter 2, Page 2.169, November 2000, as amended).
+--
+
+. *doubtful sounding*
++
+--
+[underline]#IHO Definition:# A depth that may be less than indicated.
+(Adapted from IHO Dictionary -- S-32).
+--
+
+. *unreliable sounding*
++
+--
+[underline]#IHO Definition:# A depth that is considered to be an unreliable
+value. (S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.169, November 2000).
+--
+
+. *least depth known*
++
+--
+[underline]#IHO Definition:# The shoalest depth over a feature is
+of known value. (Adapted from IHO Dictionary -- S-32).
+--
+
+. *least depth unknown, safe clearance at value shown*
++
+--
+[underline]#IHO Definition:# The least depth over a feature is unknown,
+but there is considered to be safe clearance at this depth.
+(S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.169, November 2000).
+--
+
+. *value reported (not surveyed)*
++
+--
+[underline]#IHO Definition:# Depth value obtained from a report,
+but not fully surveyed. (S-57 Edition 3.1, Appendix A -- Chapter 2,
+Page 2.169, November 2000).
+--
+
+. *value reported (not confirmed)*
++
+--
+[underline]#IHO Definition:# Depth value obtained from a report, which
+it has not been possible to confirm. (S-57 Edition 3.1,
+Appendix A -- Chapter 2, Page 2.169, November 2000).
+--
+
+. *maintained depth*
++
+--
+[underline]#IHO Definition:# The depth at which a channel is kept
+by human influence, usually by dredging. (IHO Dictionary -- S-32).
+--
+
+. *not regularly maintained*
++
+--
+[underline]#IHO Definition:# Depths may be altered by human influence,
+but will not be routinely maintained. (S-57 Edition 3.1,
+Appendix A -- Chapter 2, Page 2.169, November 2000).
+--
+
+[underline]#Remarks:#
+
+* The attribute *quality of vertical measurement* indicates the reliability
+of the value of sounding.
+
+|===
+
+[[sec_28.17]]
+=== scale value maximum (SCVAL1)
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *SCALE VALUE MAXIMUM*. The largest
+scale for the range of survey scale. (Adapted from S-57 Edition 3.1,
+Appendix A -- Chapter 2, Page 2.182, November 2000).
+
+[underline]#Attribute Type:# Integer
+
+[underline]#Indication:# The modulus of the scale is indicated, that
+is 1:25 000 is encoded as 25000.
+
+[underline]#Unit:# none
+
+[underline]#Minimum range:# 0
+
+[underline]#Range closure:# Left half-open ray
+(stem:["minimum" < bb "scale value maximum"])
+
+[underline]#Example:# *25000* for a scale of 1:25000
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_28.18]]
+=== scale value minimum (SCVAL2)
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *SCALE VALUE MINIMUM*. The smallest
+scale for the range of survey scale. (Adapted from S-57 Edition 3.1,
+Appendix A -- Chapter 2, Page 2.183, November 2000).
+
+[underline]#Attribute Type:# Integer
+
+[underline]#Indication:# The modulus of the scale is indicated, that
+is 1:250 000 is encoded as 250000.
+
+[underline]#Unit:# none
+
+[underline]#Minimum range:# 0
+
+[underline]#Range closure:# Left half-open ray
+(stem:["minimum" < bb "scale value minimum"])
+
+[underline]#Example:# *250000* for a scale of 1:250000
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_28.19]]
+=== significant features detected
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *SIGNIFICANT FEATURES DETECTED*.
+A statement expressing if significant features have or have not been
+detected in the course of a survey.
+
+[underline]#Attribute Type:# Boolean
+
+[underline]#Indication:# A True value is an indication that the characteristics
+of a hydrographic survey are such that significant seafloor features
+could be detected.
+
+[underline]#Remarks:#
+
+* A feature in this context is any object, whether manmade or not,
+projecting above the seafloor, which may be a danger for surface navigation
+(reference: IHO publication S-44). *Significant features detected*
+does not describe if significant features were actually detected during
+a hydrographic survey, but whether the survey had the capacity to
+detect significant features.
+
+|===
+
+[[sec_28.20]]
+=== size of features detected
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *SIZE OF FEATURES DETECTED*.
+The size of detected bathymetric features in an area.
+
+[underline]#Attribute Type:# Real
+
+[underline]#Unit:# cubic metre
+
+[underline]#Precision:# 0·01 cubic metres
+
+[underline]#Minimum range:# 0
+
+[underline]#Range closure:# Left half-open ray
+(stem:["minimum" < bb "size of features detected"])
+
+[underline]#Example:# *32.5* for a survey capable of detecting significant
+seafloor features of a minimum size of 32.5 cubic metres.
+
+[underline]#Remarks:#
+
+* A feature in this context is any object, whether manmade or not,
+projecting above the seafloor, which may be a danger for surface navigation
+(reference: IHO publication S-44).
+* *Size of features detected* does not describe the actual size of
+features detected during a hydrographic survey, but the size of the
+smallest feature that the survey was capable of detecting with a high
+probability.
+
+|===
+
+[[sec_28.21]]
+=== source
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *SOURCE*. The publication, document,
+or reference work from which information comes or is acquired.
+
+[underline]#Attribute Type:# Text
+
+[underline]#Indication:# Source (c...): String of characters.
+
+[underline]#Example:# **Notice to Mariners 3245/24**
+
+[underline]#Remarks:#
+
+* The attribute *source* may be populated with the corresponding paper
+chart Notice to Mariners numbers, although other references are permitted.
+* The attribute *source* should contain no more than 150 characters.
+
+|===
+
+[[sec_28.22]]
+=== survey authority (SURATH)
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *SURVEY AUTHORITY*. The authority which
+was responsible for the survey. (S-57 Edition 3.1,
+Appendix A -- Chapter 2, Page 2.200, November 2000).
+
+[underline]#Attribute Type:# Text
+
+[underline]#Indication:# Survey authority (c...): String of characters.
+
+[underline]#Format:# c...
+
+[underline]#Example:# *Australian Hydrographic Office Port of Melbourne Authority*
+
+[underline]#Remarks:#
+
+* The attribute "survey authority" encodes the name of the source
+survey authority.
+* The attribute *survey authority* should contain no more than 100
+characters.
+
+|===
+
+[[sec_28.23]]
+=== survey type (SURTYP)
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *SURVEY TYPE*. Classification of the
+different survey types.
+
+[underline]#Attribute Type:# Enumeration
+
+. *reconnaissance/sketch survey*
++
+--
+[underline]#IHO Definition:# A survey made (due to lack of time or
+facilities) to a lower degree of accuracy and detail than the chosen
+scale would normally indicate. (IHO Dictionary -- S-32).
+--
+
+. *controlled survey*
++
+--
+[underline]#IHO Definition:# A thorough survey usually conducted with
+reference to guidelines. (S-57 Edition 3.1, Appendix A --
+Chapter 2, Page 2.203, November 2000).
+--
+
+. *examination survey*
++
+--
+[underline]#IHO Definition:# A survey principally aimed at the investigation
+of underwater obstructions and dangers. (S-57 Edition 3.1,
+Appendix A -- Chapter 2, Page 2.203, November 2000).
+--
+
+. *passage survey*
++
+--
+[underline]#IHO Definition:# A survey where soundings are acquired
+by vessels on passage. (S-57 Edition 3.1, Appendix A -- Chapter 2,
+Page 2.203, November 2000).
+--
+
+. *remotely sensed*
++
+--
+[underline]#IHO Definition:# A survey where features have been positioned
+and delimited using remote sensing techniques. (S-57 Edition 3.1,
+Appendix A -- Chapter 2, Page 2.203, November 2000).
+--
+
+. *full coverage*
++
+--
+[underline]#IHO Definition:# A survey achieving 100% coverage using
+systematic, controlled techniques providing full seafloor coverage
+or full coverage to a defined depth and an investigation of all contacts.
+--
+
+. *systematic survey*
++
+--
+[underline]#IHO Definition:# A controlled survey but full coverage
+may not have been achieved.
+--
+
+. *non-systematic survey*
++
+--
+[underline]#IHO Definition:# A survey of lower quality than a full
+coverage and systematic survey. Such surveys may be further categorized
+as reconnaissance, sketch, track, passage, remotely sensed and spot-sounding
+surveys.
+--
+
+. *inadequately surveyed*
++
+--
+[underline]#IHO Definition:# Not surveyed to modern standards; or
+due to its age, scale, or positional or vertical uncertainties is
+not suitable to the type of navigation expected in the area.
+(Adapted from IHO Data Quality Working Group (DQWG)).
+--
+
+. *spot-sounding survey*
++
+--
+[underline]#IHO Definition:# A survey that uses a regular
+(for example grid) or irregular pattern of soundings obtained one
+at a time, and normally with very wide spacing.
+--
+
+. *acoustically swept survey*
++
+--
+[underline]#IHO Definition:# A controlled, systematic survey to standard
+accuracy; using modern survey echo sounder with sonar sweep.
+--
+
+. *mechanically swept survey*
++
+--
+[underline]#IHO Definition:# Swept areas where the clearance depth
+is accurately known but the actual seabed depth is not accurately
+known.
+--
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_28.24]]
+=== update number
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *UPDATE NUMBER*. Update number of the
+ENC being referenced. (IHO WWNWS-SC)
+
+[underline]#Attribute Type:# Integer
+
+[underline]#Indication:# For an Update file, corresponds to the EEE
+of an ENC dataset file name 101CCCCØØØØØØØØØØ.EEE.
+
+[underline]#Minimum range:# 0
+
+[underline]#Range closure:# Left half-open ray
+(stem:["minimum" < bb "update number"])
+
+Example: *1* for Update number 1
+
+[underline]#Remarks:#
+
+* Leading zeros must not be encoded.
+
+|===
+
+[[sec_28.25]]
+=== update type
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *UPDATE TYPE*. An action performed
+when the contents of a dataset are changed.
+
+[underline]#Attribute Type:# Enumeration
+
+. *insert*
++
+--
+[underline]#IHO Definition:# To put or introduce into the body of
+something. (Merriam-Webster Dictionary).
+--
+
+. *delete*
++
+--
+[underline]#IHO Definition:# To eliminate especially by removing,
+cutting out or erasing. (Adapted from Merriam-Webster Dictionary).
+--
+
+. *modify*
++
+--
+[underline]#IHO Definition:# To make basic or fundamental changes
+to the characteristics of something, often to give a new orientation
+to or to serve a new end. (Merriam-Webster Dictionary).
+--
+
+. *move*
++
+--
+[underline]#IHO Definition:# To change the place or position of something.
+(Adapted from Merriam-Webster Dictionary).
+--
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===
+
+[[sec_28.26]]
+=== uncertainty fixed
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *UNCERTAINTY FIXED*. The best estimate
+of the fixed horizontal or vertical accuracy component for positions,
+depths, heights, vertical distances and vertical clearances.
+
+[underline]#Attribute Type:# Real
+
+[underline]#Unit:# Defined as an attribute in the ENC Dataset Discovery
+Metadata: metre (m).
+
+[underline]#Precision:# 0∙1m
+
+[underline]#Minimum range:# 0
+
+[underline]#Range closure:# Left half-open ray
+(stem:["minimum" < bb "uncertainty fixed"])
+
+[underline]#Example:# *1.2* for a fixed uncertainty of 1∙2 metres
+
+[underline]#Remarks:#
+
+* The maximum of the one-dimensional error (for vertical) or two-dimensional
+error (for horizontal). The error is assumed to be positive and negative.
+The plus/minus character must not be encoded.
+
+|===
+
+[[sec_28.27]]
+=== uncertainty variable factor
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *UNCERTAINTY VARIABLE FACTOR*.
+The factor to be applied to the variable component of an uncertainty
+equation so as to provide the best estimate of the variable horizontal
+or vertical accuracy component for positions, depths, heights, vertical
+distances and vertical clearances.
+
+[underline]#Attribute Type:# Real
+
+[underline]#Indication:# The fraction that equates to the factor
+(or percentage) contributing to the variable uncertainty component
+is indicated, that is a factor of 5% is encoded as 0.05.
+
+[underline]#Precision:# 0∙01
+
+[underline]#Minimum range:# 0
+
+[underline]#Maximum range:# 1
+
+[underline]#Range closure:# Open interval
+(stem:["minimum" < bb "uncertainty variable factor" < "maximum"])
+
+Example: The positional accuracy for the highest accuracy for hydrographic
+data in a *Spatial Quality* feature is quoted as
+"stem:[pm 5 " metres" + 10% " depth"]". The variable component in this example is
+depth, and the factor to be applied to the depth at a location in
+order to provide the variable uncertainty is *0.1*.
+
+In this example, at a depth of 25 metres, the variable uncertainty
+would be 2.5 metres, and the overall best estimate of the positional
+accuracy would be stem:[pm 7.5 " metres"].
+
+[underline]#Remarks:#
+
+* No remarks.
+
+|===

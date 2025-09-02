@@ -1,0 +1,146 @@
+
+[[sec_26]]
+== Association Roles
+
+[[sec_26.1]]
+=== The auxiliary feature
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *THE AUXILIARY FEATURE*. A pointer
+to incidental, secondary or supplementary features related to the
+referenced feature.
+
+|===
+
+[[sec_26.2]]
+=== The cartographic text
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *THE CARTOGRAPHIC TEXT*. A pointer
+to a specific cartographically positioned location for text.
+
+|===
+
+[[sec_26.3]]
+=== The collection
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *THE COLLECTION*. A pointer to the
+aggregate in a whole-part relationship.
+
+|===
+
+[[sec_26.4]]
+=== The component
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *THE COMPONENT*. A pointer to a part
+in a whole-part relationship.
+
+|===
+
+[[sec_26.5]]
+=== The equipment
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *THE EQUIPMENT*. A pointer to the feature(s)
+supported by a structure feature.
+
+|===
+
+[[sec_26.6]]
+=== The information
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *THE INFORMATION*. A pointer to an
+object that provides more information about the referencing feature
+or information type.
+
+|===
+
+[[sec_26.7]]
+=== The position provider
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *THE POSITION PROVIDER*. A pointer
+to a specific feature(s).
+
+|===
+
+[[sec_26.8]]
+=== The primary feature
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *THE PRIMARY FEATURE*. A pointer to
+a feature to which incidental, secondary or supplementary features
+are related.
+
+|===
+
+[[sec_26.9]]
+=== The quality information
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *THE QUALITY INFORMATION*. A pointer
+to an information type providing spatial quality information.
+
+|===
+
+[[sec_26.10]]
+=== The roofed structure
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *THE ROOFED STRUCTURE*. A pointer to
+a supported roofed structure.
+
+|===
+
+[[sec_26.11]]
+=== The structure
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *THE STRUCTURE*. A pointer to the feature
+that equipment feature(s) are supported by.
+
+|===
+
+[[sec_26.12]]
+=== The support
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *THE SUPPORT*. A pointer to the feature(s)
+that support a structure.
+
+|===
+
+[[sec_26.13]]
+=== The update
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *THE UPDATE*. A pointer to a feature
+that describes changes made to a dataset.
+
+|===
+
+[[sec_26.14]]
+=== The updated object
+
+[cols="a",options="noheader,unnumbered"]
+|===
+| [underline]#IHO Definition:# *THE UPDATED OBJECT*. A pointer to
+a feature that has been updated.
+
+|===

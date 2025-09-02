@@ -1,0 +1,1545 @@
+
+[[sec_3]]
+== Metadata Features
+
+The maximum use must be made of Meta features to reduce the attribution
+on individual features. In a Base dataset (see S-101 Annex B, clauseB5),
+some Meta features are mandatory.
+
+These mandatory Meta features are in the following list:
+
+*Data Coverage:* In order to assist in data discovery, the Meta feature
+*Data Coverage* must be used to provide coverage of the part of the
+dataset covered by Skin of the Earth features. See <<sec_3.5>>.
+
+*Navigational System of Marks:* The Meta feature
+*Navigational System of Marks* must provide an exhaustive non-overlapping
+coverage of the *Data Coverage* feature(s). See <<sec_3.6>>.
+
+*Quality of Bathymetric Data:* The Meta feature
+*Quality of Bathymetric Data* defines areas within which uniform assessment
+exists for the quality of bathymetric data, and is used to provide
+an assessment of the overall quality of bathymetric data to the Mariner.
+Areas of a dataset at optimum display scale 1:700000 and larger containing
+depth data or bathymetry must be covered by one or more
+*Quality of Bathymetric Data* features, which may overlap vertically
+(see <<sec_3.8.1>>). At optimum display scales smaller than 1:700000,
+*Quality of Bathymetric Data* features are optional.
+
+NOTE: Where a dataset does not contain any depth data or bathymetry,
+it is not required to encode *Quality of Bathymetric Data*.
+
+*Sounding Datum:* The Meta feature *Sounding Datum* must provide an
+exhaustive non-overlapping coverage of the
+*Quality of Bathymetric Data* feature(s). See <<sec_3.9>>.
+
+NOTE: Where a dataset does not contain any depth data or bathymetry,
+it is not required to encode *Sounding Datum*.
+
+*Vertical Datum of Data:* The Meta feature *Vertical Datum of Data*
+must provide an exhaustive non-overlapping coverage of the *Data Coverage*
+feature(s). See <<sec_3.10>>.
+
+[[sec_3.1]]
+=== Horizontal uncertainty
+
+The attributes *quality of horizontal measurement* and
+*horizontal position uncertainty* may be applied to any spatial type,
+in order to qualify the location of a feature.
+
+If it is required to encode the uncertainty of a horizontal clearance
+(complex attributes *horizontal clearance fixed* and
+*horizontal clearance open*), it must be done using the sub-attribute
+*horizontal distance uncertainty*.
+
+*horizontal distance uncertainty* applies only to
+*horizontal clearance fixed* and *horizontal clearance open*. There
+is no attribute to express the accuracy of the attributes
+*horizontal length* and *horizontal width*.
+
+*horizontal distance uncertainty* and *quality of horizontal measurement*
+must not be applied to the spatial type of any geo feature if they
+are identical to the *horizontal distance uncertainty* and
+*quality of horizontal measurement* values of the underlying Meta
+feature. *horizontal position uncertainty* must not be applied to
+the spatial type of any geo feature if it is identical to the
+*horizontal position uncertainty* value(s) of the underlying Meta
+feature, except for *Sounding* and *Underwater/Awash Rock* features;
+and *Foul Ground*, *Marine Farm/Culture*, *Obstruction* and *Wreck*
+features of type point (see <<sec_3.8.1.3;and!sec_11.3>> and
+<<sec_13.4;to!sec_13.7>> and <<sec_13.10>>).
+
+*quality of horizontal measurement* gives qualitative information,
+whereas *horizontal position uncertainty* gives quantitative information.
+
+[underline]#Remarks:#
+
+No remarks.
+
+[[sec_3.2]]
+=== Vertical uncertainty
+
+If it is required to encode the uncertainty of a vertical clearance
+(complex attributes *vertical clearance fixed*,
+*vertical clearance open*, *vertical clearance closed* and
+*vertical clearance safe*), it must be done using the complex sub-attribute
+*vertical uncertainty* (see <<sec_29.40>>).
+
+If several vertical clearances are given for one feature, the uncertainty
+given must be that of the least accurate.
+
+[underline]#Remarks:#
+
+No remarks.
+
+[[sec_3.3]]
+=== Hierarchy of metadata
+
+The following Table indicates individual feature attributes that supersede
+Meta feature attributes.
+
+[[table_3-1]]
+.Hierarchy of metadata
+[cols="179,201,200"]
+|===
+h| Meta feature class h| Meta feature attribute h| Geo feature attribute
+
+| *Navigational System of Marks*    | *marks navigational -- system of*      | *marks navigational -- system of*
+| *Quality of Bathymetric Data*     | *horizontal position uncertainty*++*++ | *horizontal position uncertainty*++**++
+| *Quality of Bathymetric Data*     | *vertical uncertainty*++*++            | *vertical uncertainty*
+| *Quality of Bathymetric Data*     | *vertical uncertainty*++*++            | *vertical uncertainty*++**++
+| *Quality of Non-Bathymetric Data* | *horizontal distance uncertainty*      | *horizontal clearance fixed*, *horizontal clearance open*
+| *Quality of Non-Bathymetric Data* | *horizontal position uncertainty*      | *horizontal position uncertainty*++**++
+| *Quality of Non-Bathymetric Data* | *orientation uncertainty*              | *orientation uncertainty*
+| *Quality of Non-Bathymetric Data* | *vertical uncertainty*                 | *vertical clearance closed*, *vertical clearance fixed*, *vertical clearance open*, *vertical uncertainty*++**++
+| *Quality of Survey*               | *quality of horizontal measurement*    | *quality of horizontal measurement*++**++
+| *Quality of Survey*               | *quality of vertical measurement*      | *quality of vertical measurement*
+| *Quality of Survey*               | *technique of vertical measurement*    | *technique of vertical measurement*
+| *Vertical Datum of Data*          | *vertical datum*                       | *vertical datum*
+|===
+
+++*++ The information type *Spatial Quality*, attributes
+*horizontal position uncertainty* and *vertical uncertainty*, may
+be associated to *Quality of Bathymetric Data* using the information
+to feature association *Quality of Bathymetric Data Composition*
+(see <<sec_25.12>>).
+
+++**++ As populated on an associated instance of the information type
+*Spatial Quality*, using the information to feature association
+*Spatial Association* (see <<sec_25.15>>).
+
+Features and attributes shown in grey text in <<table_3-1>> above
+do not play an active role in regard to ECDIS display and/or performance
+in terms of hierarchy of the encoding. However, where both the S-101
+Meta feature and the attribute for the Geo feature are encoded, end-user
+interpretation of the ECDIS Pick Report is that the value populated
+for the attribute on the Geo feature provides the relevant value.
+
+It is prohibited to use an attribute on an individual object, if this
+attribute has the same value as the general value defined by the Meta
+feature.
+
+[[sec_3.4]]
+=== Quality of non-bathymetric data
+
+[cols="10",options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *QUALITY OF NON-BATHYMETRIC DATA*.
+An area within which a uniform assessment of the quality of the non-bathymetric
+data exists. (Adapted from S-57 Edition 3.1, Appendix A -- Chapter
+1, Page 1.208, November 2000).
+10+| *S-101 Metadata Feature:* *Quality of Non-Bathymetric Data (M_ACCY)*
+10+| *[underline]#Primitives:#* *Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+
+3+| category of temporal variation 2+| 3+|
+1: extreme event +
+4: likely to change | EN | 0,1
+
+3+| horizontal distance uncertainty 2+| (HORACC) 3+| | RE | 0,1
+
+3+| horizontal position uncertainty 2+| _(POSACC)_ 3+| | C | 1,1
+
+3+| uncertainty fixed 2+| 3+| | (S) RE | 1,1
+
+3+| uncertainty variable factor 2+| 3+| | (S) RE | 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| orientation uncertainty 2+| 3+| | RE | 0,1
+
+3+| survey date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+
+3+| date end 2+| _(SUREND)_ 3+| | (S) TD | 1,1
+
+3+| date start 2+| _(SURSTA)_ 3+| | (S) TD | 0,1
+
+3+| vertical uncertainty 2+| _(VERACC)_ 3+| | C | 0,1
+
+3+| uncertainty fixed 2+| 3+| | (S) RE | 1,1 
+
+3+| uncertainty variable factor 2+| 3+| | (S) RE | 0,1
+
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnote:tablethreefour[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnote:tablethreefour[]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+|===
+
+[underline]#INT 1 Reference:# M 32.1-2
+
+[[sec_3.4.1]]
+==== Quality of non-bathymetric data (see S-4 -- B-487.2)
+
+The Meta feature *Quality of Non-Bathymetric Data* may be used to
+provide an indication of the overall uncertainty of position for all
+non-bathymetric features. It must not be used to provide the uncertainty
+of bathymetric information.*horizontal position uncertainty* on the
+*Quality of Non-Bathymetric Data* applies to non-bathymetric data
+situated within the area, while *quality of horizontal measurement*
+or *horizontal position uncertainty* on the associated spatial types
+qualifies the location of the *Quality of Non-Bathymetric Data* feature
+itself.
+
+Meta features *Quality of Non-bathymetric Data* and
+*Quality of Bathymetric Data* may overlap.
+
+[underline]#Remarks:#
+
+* No remarks.
+
+[underline]#Distinction:# Quality of Bathymetric Data; Quality of
+Survey.
+
+[[sec_3.5]]
+=== Data coverage
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *DATA COVERAGE*. A geographical
+area that describes the coverage and extent of spatial objects. (S-57
+Edition 3.1, Appendix A -- Chapter 1, Page 1.210, November 2000).
+10+| *S-101 Metadata Feature:* *Data Coverage (M_COVR) _(M_CSCL)_*
+10+| *[underline]#Primitives:#* *Surface*
+3+| _Real World_ 4+| _Paper Chart Symbol_ 3+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| drawing index 2+| 3+| | IN | 0,1
+
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| maximum display scale 2+| 3+| maximum display scale stem:[<=] optimum display scale < minimum display scale | IN | 1,1 3+| minimum display scale 2+| 3+| See <<table_3-2>> below minimum display scale > optimum display scale ≥ maximum display scale | IN
+| 1,1
+
+3+| optimum display scale 2+| _(CSCALE)_ 3+| See <<table_3-2>> below maximum display scale stem:[<=] optimum display scale < minimum display scale | IN | 1,1 3+| information 2+| 3+| See <<sec_2.4.6>> | C
+| 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnote:notethreefive[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnote:notethreefive[]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+|===
+
+[underline]#INT 1 Reference:#
+
+[[sec_3.5.1]]
+==== Coverage
+
+The Meta feature *Data Coverage* encodes the area covered by data
+within the dataset. This feature is also used to provide the ECDIS
+with the scale information necessary for the determination of dataset
+loading and rendering (display) in relation to the user selected viewing
+scale in the ECDIS. There must be a minimum of one *Data Coverage*
+feature in the dataset. *Data Coverage* features must cover the equivalent
+area to the extent of the spatial types in the dataset, and must not
+overlap (see <<sec_2.5.1>>).
+
+Where populated, all *Data Coverage* features in the dataset must
+have the same value for the attribute *drawing index*, as datasets
+that share a common drawing index are intended to form a seamless
+presentation, regardless of the populated value(s) for minimum display
+scale. *Data Coverage* features which share a common drawing index
+must not overlap.
+
+The mandatory attribute *optimum display scale* is used to indicate
+the intended viewing scale for the data. The value populated for
+*optimum display scale*, therefore, provides a reference for the user
+selected viewing scale in the ECDIS at which the overscale warning
+will be displayed as the Mariner continues to zoom in if there is
+no larger optimum display scale ENC dataset available.
+
+The mandatory attribute *minimum display scale* is used to indicate
+the smallest intended viewing scale for the data where a full portfolio
+of ENCs is available; and provides the reference scale that defines
+a "series" of ENCs covering a geographic area intended to be displayed
+seamlessly. Where an empty (null) value is populated for
+*minimum display scale*, the ECDIS will continue to display the data
+regardless of how small the user selected viewing scale becomes.
+The value populated for *minimum display scale*, therefore, is intended
+to be used in a series of ENC cells covering a geographic area to
+determine the dataset rendering (display) priority as the user selected
+viewing scale becomes larger.
+
+The mandatory attribute *maximum display scale* is used to indicate
+the scale at which the Data Producer considers that the "grossly overscaled"
+warning is to be triggered based on the user selected viewing scale.
+
+For ENC, in order to provide a consistent relationship between the
+encoded data and the way the data is displayed in ECDIS, the values
+for *maximum display scale*, *minimum display scale* and
+*optimum display scale* must be taken from the values listed in the
+following Table:
+
+[[table_3-2]]
+.Maximum, optimum and minimum display scale values
+[cols="980,938,931"]
+|===
+h| maximum display scale h| optimum display scale h| minimum display scale
+.15+^.^| Any value
+| 10,000,000    | empty (null)
+| 3,500,000     | 10,000,000
+| 1,500,000     | 3,500,000
+| 700,000       | 1,500,000
+| 350,000       | 700,000
+| 180,000       | 350,000
+| 90,000        | 180,000
+| 45,000        | 90,000
+| 22,000        | 45,000
+| 12,000        | 22,000
+| 8,000         | 12,000
+| 4,000         | 8,000
+| 3,000         | 4,000
+| 2,000         | 3,000
+| 1,000         | 2,000
+|===
+
+NOTE: The selection of values for *maximum display scale* and
+*minimum display scale* for any selected *optimum display scale* are
+at the discretion of the Data Producer. That is, any value listed
+for *maximum display scale* and *minimum display scale* above may
+be selected from any of the listed values, with the only restriction
+being that *maximum display scale* must be a smaller value than/equal
+to *optimum display scale* which must be a smaller value than
+*minimum display scale* (or any value if *minimum display scale* is
+populated with an empty (null) value).
+
+Typically, only a single *Data Coverage* feature should be used in
+a dataset. However, if the optimum display scale is different for
+discrete areas within a single ENC dataset, this must be indicated
+by encoding separate, non-overlapping *Data Coverage* features, each
+having a different value populated for *optimum display scale*. Producing
+Authorities are to note, however, that excessive use of multiple
+*Data Coverage* features having different values of
+*optimum display scale* within a single dataset should be avoided.
+Where different values of *optimum display scale* are used, this should
+be restricted only to data compiled in order to achieve the intended
+navigational usage for the entire dataset. Datasets must have the
+same value for *minimum display scale* for all *Data Coverage* features
+in the dataset. Datasets may have different values populated for
+*maximum display scale* for the *Data Coverage* features in the dataset;
+these values are typically populated as the value corresponding to
+2 x the scale (or half the denominator) value populated for
+*optimum display scale* (this will replicate the corresponding gross
+overscale indication as implemented in S-57/S-52), but are at the
+discretion of the Data Producer. For example, the value for
+*maximum display scale* may be set to the same value as
+*optimum display scale* to have the "grossly overscaled" warning appear
+at any larger user selected viewing scale than *optimum display scale*;
+or populated as the value corresponding to the *minimum display scale*
+value for the next largest scale dataset(s) in the ENC portfolio.
+
+Where a series of differing optimum display scale ENC datasets are
+compiled covering the same geographic area, the smallest scale value
+populated for *optimum display scale* for *Data Coverage* feature(s)
+in the dataset should correspond to the *minimum display scale*, where
+populated, for the next largest optimum display scale ENC dataset.
+The largest scale value populated for *optimum display scale* for
+*Data Coverage* feature(s) in the dataset must not be a larger scale
+value than the *optimum display scale* for the next largest optimum
+display scale ENC dataset, where such a dataset exists.
+
+[underline]#Remarks:#
+
+* This Meta feature is intended to support an indication of coverage;
+and facilitates the loading and rendering (display) of datasets in
+the end-user system.
+* Where more than one *Data Coverage* feature exists for a dataset,
+the dataset, when initially loaded, will be displayed in the ECDIS
+at a display scale corresponding to the largest scale value populated
+for *optimum display scale*.
+* Where a dataset consists of only one *Data Coverage* feature, the
+value for the optimum display scale populated in the dataset discovery
+metadata must be the same as the value populated for
+*optimum display scale* on the *Data Coverage*.
+* Except for the largest scale dataset coverage, datasets with multiple
+*Data Coverage* features must not have excessive differences in the
+values populated for *optimum display scale* between the *Data Coverage*
+features. Typically, this should be interpreted as there being no
+more than one scale step value as defined in <<table_3-2>> above between
+the *optimum display scale* values in a single dataset.
+
+[underline]#Distinction:# 
+
+[[sec_3.6]]
+=== Navigational system of marks
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *NAVIGATIONAL SYSTEM OF MARKS*.
+An area within which the navigational system of marks has been established
+in relation to a specific direction. (Adapted from S-57 Edition 3.1,
+Appendix A -- Chapter 1, Page 1.214, November 2000).
+10+| *S-101 Metadata Feature:* *Navigational System of Marks* *_(M_NSYS)_*
+10+| *[underline]#Primitives:#* *Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| marks navigational -- system of 2+| (MARSYS) 3+|
+1: IALA A +
+2: IALA B +
+9: no system +
+11: main European inland waterway marking system | EN | 1,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnote:tablethreesix[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnote:tablethreesix[]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[underline]#INT 1 Reference:# Q 130
+
+[[sec_3.6.1]]
+==== Buoyage systems (see S-4 -- B-461)
+
+The buoyage system of the dataset must be encoded using the Meta feature
+*Navigational System of Marks*:All parts of the dataset containing
+data must be covered by *Navigational System of Marks* features, with
+the attribute *marks navigational -- system of* indicating the buoyage
+system in operation. *Navigational System of Marks* features must
+not overlap.
+
+Individual buoys and beacons may not be part of the general buoyage
+system. This should be encoded using the attribute
+*marks navigational -- system of* on these buoy and beacon features.
+
+[underline]#Remarks:#
+
+* For guidance regarding the encoding of aids to navigation in the
+IALA maritime buoyage system, see <<sec_18.3.1.1>>.
+* If it is required to encode an area within which the navigational
+system of marks has been established in relation to a specific direction,
+it must be done using the feature *Local Direction of Buoyage*
+(see <<sec_3.7>>).
+
+[underline]#Distinction:# Local Direction of Buoyage.
+
+[[sec_3.7]]
+=== Local direction of buoyage
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *LOCAL DIRECTION OF BUOYAGE*.
+An area within which the navigational system of marks has been established
+in relation to a specific direction. (Adapted from S-57 Edition 3.1,
+Appendix A -- Chapter 1, Page 1.214, November 2000).
+10+| *S-101 Metadata Feature:* *Local Direction of Buoyage* *_(M_NSYS)_*
+10+| *[underline]#Primitives:#* *Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| marks navigational -- system of 2+| (MARSYS) 3+|
+1: IALA A +
+2: IALA B +
+9: no system +
+11: main European inland waterway marking system | EN | 1,1
+3+| orientation value 2+| _(ORIENT)_ 3+| | RE | 1,1
+
+3+| scale minimum 2+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1 3+| information 2+| 3+| See <<sec_2.4.6>> | C
+| 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnote:three_seven[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnote:three_seven[]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[underline]#INT 1 Reference:# Q 130.2
+
+[[sec_3.7.1]]
+==== Local direction of buoyage (see S-4 -- B-461.5)
+
+[[fig_3-1]]
+.Buoyage system and direction
+image::figure-3-1.png["",465,188]
+
+Within a dataset, there may be some areas where the direction of buoyage
+is defined by local rules and must, therefore, be specified. If required,
+these areas must be encoded as *Local Direction of Buoyage* features,
+with the mandatory attribute *orientation value* indicating the direction
+of buoyage. *Local Direction of Buoyage* features must not overlap,
+but in areas where local buoyage directions apply,
+*Local Direction of Buoyage* features must overlap
+*Navigational System of Marks* features (see <<sec_3.6>>) (see <<fig_3-1>>
+above).
+
+[underline]#Remarks:#
+
+* The mandatory attribute *marks navigational -- system of* is required
+for ECDIS portrayal, and must be populated with the same value as
+populated for the *marks navigational -- system of* on the underlying
+*Navigational System of Marks* feature.
+
+[underline]#Distinction:# Navigational System of Marks.
+
+[[sec_3.8]]
+=== Quality of bathymetric data
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *QUALITY OF BATHYMETRIC DATA*.
+An area within which a uniform assessment of the quality of the bathymetric
+data exists. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.216,
+November 2000).
+10+| *S-101 Metadata Feature:* *Quality of Bathymetric Data (M_QUAL)*
+10+| *[underline]#Primitives:#* *Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| category of temporal variation 2+| 3+|
+1: extreme event +
+2: likely to change and significant shoaling expected +
+3: likely to change but significant shoaling not expected +
+5: unlikely to change +
+6: unassessed | EN
+| 1,1
+
+3+| data assessment 2+| 3+|
+1: assessed +
+2: assessed (oceanic) +
+3: unassessed | EN
+| 1,1
+
+3+| depth range maximum value 2+| (DRVAL2) 3+| | RE | 0,1
+3+| depth range minimum value 2+| (DRVAL1) 3+| | RE | 0,1
+3+| features detected 2+| 3+| | C | 1,1
+3+| least depth of detected features measured 2+| 3+| | (S) BO | 1,1
+3+| significant features detected 2+| 3+| | (S) BO | 1,1
+3+| size of features detected 2+| 3+| | (S) RE | 0,1
+3+| full seafloor coverage achieved 2+| 3+| | BO | 1,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+3+| survey date range 2+| 3+| See <<sec_2.4.8>> | C | 0,1
+3+| date end 2+| _(SUREND)_ 3+| | (S) TD | 1,1
+3+| date start 2+| _(SURSTA)_ 3+| | (S) TD | 0,1
+3+| zone of confidence 2+| 3+| | C | 1,*
+
+3+| category of zone of confidence in data 2+| CATZOC 3+|
+1: zone of confidence A +
+12: zone of confidence A +
+23: zone of confidence B +
+4: zone of confidence C +
+5: zone of confidence D +
+6: zone of confidence U | EN | 1,1
+3+| fixed date range 2+| 3+| See <<sec_2.4.8>> | (S) C | 0,1 footnoteblock:[three_eight]
+
+3+| date end 2+| (DATEND) 3+| | (S) TD | 0,1 footnoteblock:[three_eight]
+3+| date start 2+| (DATSTA) 3+| | (S) TD | 0,1 footnoteblock:[three_eight]
+3+| horizontal position uncertainty 2+| _(HORACC)_ 3+| | (S) C | 0,1 footnoteblock:[three_eight]
+3+| uncertainty fixed 2+| 3+| | (S) RE | 1,1
+3+| uncertainty variable factor 2+| 3+| | (S) RE | 0,1
+3+| vertical uncertainty 2+| _(SOUACC)_ 3+| | (S) C | 0,1 footnoteblock:[three_eight]
+3+| uncertainty fixed 2+| 3+| | (S) RE | 1,1
+3+| uncertainty variable factor 2+| 3+| | (S) RE | 0,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+3+| file locator 2+| 3+| | (S) TE | 0,1
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[three_eight]
+3+| headline 2+| 3+| | (S) TE | 0,1
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[three_eight]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| -                  3+| *Quality of Bathymetric Data Composition* (see <<sec_25.12>>) 3+| *Spatial Quality*    2+| Association | 0,*
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>)                     3+| *Update Information* 2+| Association | 0,*
+| -                  3+| *Spatial Association* (see <<sec_25.15>>)                     3+| *Spatial Quality*    2+| Association | 0,*
+
+|===
+
+[[three_eight]]
+[NOTE]
+--
+The sub-complex attribute *fixed date range* is mandatory if more
+than one instance of the complex attribute *zone of confidence* is
+encoded.
+
+The sub-complex attributes *horizontal position uncertainty* and
+*vertical uncertainty* are mandatory if the
+*Quality of Bathymetric Data* instance is not associated to a
+*Spatial Quality* instance using the association
+*Quality of Bathymetric Data Composition*.
+
+For each instance of fixed date range, at least one of the sub-attributes
+*date end* or *date start* must be populated.
+
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:#
+
+[[sec_3.8.1]]
+==== Quality, reliability and uncertainty of bathymetric data (see S-4 -- B-297)
+
+Information about quality, reliability and uncertainty of bathymetric
+data is given using:
+
+* the Meta feature *Quality of Bathymetric Data* and, if required,
+an associated instance of the Information type *Spatial Quality* (see
+<<sec_24.5>>) for an overall assessment of the quality of bathymetric
+data;
+* the Meta feature *Quality of Survey* for additional information
+about individual surveys (see <<sec_3.11>>);
+* the attributes *quality of vertical measurement* and
+*technique of vertical measurement* on groups of soundings or individual
+features;
+* the attributes *horizontal* *position uncertainty*,
+*quality of horizontal measurement* and *vertical uncertainty* on
+the spatial types (see <<sec_2.4.7;and!sec_24.5>>).
+Bathymetric data quality comprises the following:
+
+** completeness of data (for example, seafloor coverage);
+** currency of data (for example, temporal degradation);
+** uncertainty of data;
+** source of data.
+
+For the Mariner, *Quality of Bathymetric Data* provides the most useful
+information. Therefore, the use of *Quality of Bathymetric Data* is
+mandatory for areas containing depth data or bathymetry on ENC datasets
+at optimum display scale 1:700000 and larger.
+
+In order to provide an indication of the horizontal position and vertical
+accuracies of the features to which it applies, instances of
+*Quality of Bathymetric Data* must have the sub-complex attributes
+*horizontal position uncertainty* and *vertical uncertainty* populated
+on *Quality of Bathymetric Data*, or alternately on an associated
+instance of the information type *Spatial Quality* (see <<sec_24.5>>),
+using the association *Quality of Bathymetric Data Composition* (see
+<<sec_25.12>>).
+
+More detailed information about a survey may be given using
+*Quality of Survey* (see <<sec_3.11>>). For example, in incompletely
+surveyed areas, lines of passage soundings may be indicated as such
+using a curve *Quality of Survey* feature. This information is more
+difficult for the Mariner to interpret, therefore the use of
+*Quality of Survey* is optional.
+
+For individual features (wrecks, obstructions etc), or individual/small
+groups of soundings, *quality of vertical measurement*,
+*technique of vertical measurement*, *horizontal position uncertainty*
+and *vertical uncertainty* may be used to provide additional information
+about quality and uncertainty.
+
+The Meta feature *Quality of Bathymetric Data* defines areas within
+which uniform assessment exists for the quality of bathymetric data,
+and must be used, where required, to provide an assessment of the
+overall quality of bathymetric data to the Mariner. Therefore, areas
+of a dataset containing depth data or bathymetry at optimum display
+scale 1:700000 and larger must be covered by one or more
+*Quality of Bathymetric Data*, which may overlap vertically in order
+to define the quality of bathymetric data at varying depths in the
+water column.
+
+[[fig_3-2]]
+.Adjoining and overlapping Quality of Bathymetric Data features
+image::figure-3-2.png["",657,402]
+
+<<fig_3-2>> above demonstrates the encoding for varying quality of
+bathymetric data in the water column, in this example a mechanically
+swept area to a depth of 5 metres that has also been previously surveyed
+using single beam echo sounder to the seabed. For the
+*Quality of Bathymetric Data* feature that defines the data quality
+for the swept area, it is important to note that the recommended attribution
+shown above is intended to provide the highest (best) quality indicator
+for vessels navigating at a safety depth of less than 5 metres in
+the area. For vessels navigating at a safety depth of greater than
+5 metres in the area, or at any depth outside the area, the lower
+quality indicator will be provided.
+
+NOTE: <<fig_3-2>> demonstrates the two options for the encoding of
+the horizontal position and vertical uncertainties available in S-101.
+For the area covered by the swept area, the varying horizontal position
+and vertical uncertainties in the water column are encoded using the
+sub-complex attributes *horizontal position uncertainty* and
+*vertical uncertainty* on the *Quality of Bathymetric Data* features.
+For the two areas covered only by the single beam echo sounder survey
+to the seabed, the horizontal position and vertical uncertainties
+are encoded using the sub-complex attributes
+*horizontal position uncertainty* and *vertical uncertainty* on an
+associated *Spatial Quality* feature (which may be a single
+*Spatial Quality* feature associated to both
+*Quality of Bathymetric Data* features). See the Remarks below and
+<<sec_24.5>>.
+
+[underline]#Remarks:#
+
+* The mandatory attribute *data assessment* provides an overall indicative
+level of assessment of bathymetric data from which further attribution
+is derived, and assists with portrayal of bathymetric data quality
+information in ECDIS:
+
+** Where the value for *data assessment* is set to _1_ (assessed),
+all additional attribution for the *Quality of Bathymetric Data* feature
+must be indicative of the quality of bathymetric data for the area.
+** Where the value for *data assessment* is set to _2_ (assessed (oceanic)),
+all additional attribution for the *Quality of Bathymetric Data* feature
+should be indicative of the quality of bathymetric data for the area
+for a Mariner's ECDIS pick report, however no portrayal of the quality
+information will display on the ECDIS. This value should only be used
+to cover open ocean (oceanic) depths in waters deeper than 200 metres.
+** [[OLE_LINK11]][[OLE_LINK10]]Where the value for *data assessment*
+is set to _3_ (unassessed), the mandatory attributes
+stem:[bb "category of temporal variation" = 6] (unassessed);
+*features detected* (*least depth of detected features measured* and
+*significant features detected*) = _False_;
+*full seafloor coverage achieved* = _False_; and
+stem:[bb "category of zone of confidence in data" = 6]
+(zone of confidence U); and *horizontal position uncertainty*
+(*uncertainty fixed*) and *vertical uncertainty* (*uncertainty fixed*)
+on *Quality of Bathymetric Data* or the associated
+*Spatial Quality* = empty (null) must be populated.
+* Wherever possible, meaningful and useful values for the attributes
+*category of temporal variation*, *full seafloor coverage achieved*,
+and the complex attribute *features detected* must be used for areas
+of bathymetry. For areas of unstable seafloors, the complex attribute
+*survey date range* (*date end*) should be used to indicate the date
+of the survey of the underlying bathymetric data.
+* As a result of some disasters, for example earthquakes, tsunamis,
+hurricanes, it is possible that large areas of seafloor have moved
+and/or become cluttered with dangerous obstructions. Emergency surveys
+may subsequently be conducted over essential shipping routes and inside
+harbours. Outside these surveys, all existing detail is now suspect,
+whatever the quality of the previous surveys. In such cases, the attribute
+*category of temporal variation* should be reclassified to value _1_
+(extreme event), the Boolean attribute *full seafloor coverage achieved*
+set to _False_; complex attribute *features detected*, Boolean sub-attributes
+*least depth of detected features measured* and
+*significant features detected* set to _False_; the *zone of confidence*
+sub-attribute *category of zone of confidence in data* reclassified
+to _5_ (zone of confidence D); and the sub-attributes
+*horizontal position accuracy* (*uncertainty fixed*) and
+*vertical uncertainty* (*uncertainty fixed*) on
+*Quality of Bathymetric Data* or the associated *Spatial Quality*
+populated with an empty (null) value in the affected areas outside
+the area covered by emergency surveys.
+* To express completeness of bathymetric data, the complex attribute
+*features detected* must be encoded. *features detected* indicates
+that a systematic method of exploring the seafloor, or the water column
+to the depth indicated by population of the attribute
+*depth range maximum value*, was undertaken to detect significant
+features. The sub-attributes *size of features detected* and
+*least depth of detected features measured* must not be encoded unless
+the sub-attribute *significant features detected* is set to _True_.
+* The mandatory complex attribute *zone of confidence* is used on
+a *Quality of Bathymetric Data* feature to provide an overall indication
+of the accuracy of the bathymetric data in the area; and may be used
+to specify the vertical and horizontal position uncertainty of the
+depths covered by the surface. Where *category of temporal variation*
+is set to values _2_ (likely to change and significant shoaling expected)
+or _3_ (likely to change but significant shoaling not expected), multiple
+instances of the complex attribute *zone of confidence* should be
+encoded to provide an indication of the degradation of the overall
+accuracy as well as the vertical and horizontal position uncertainty
+of the charted bathymetric information over time.
+
+** Wherever possible, meaningful and useful values of the mandatory
+sub-attribute *category of zone of confidence in data* should be used
+(that is, values other than
+stem:[bb "category of zone of confidence in data" = 6]
+(zone of confidence U)) for areas of bathymetry. These values must
+be determined from the *category of zone of confidence in data* definition
+table (see <<sec_27.74>>) in accordance with the values populated
+for the attribute *full seafloor coverage achieved*,the complex attribute
+*features detected* and the sub-complex attributes
+*horizontal position uncertainty* and *vertical uncertainty* on the
+*Quality of Bathymetric Data* or the associated *Spatial Quality*
+(see the following Remarks bullet).
+** The sub-complex attribute *fixed date range* is used to define
+the date range(s) where the quality is degraded over time. Where multiple
+date ranges are specified, the *date start* of an instance must be
+equal to the *date end* of the previous instance. Within the sequence,
+the *date start* of the first instance and the *date end* of the last
+instance should not be populated; the values populated for *fixed
+date range* must not result in the removal of the indication of bathymetric
+data quality for an area from the Mariner.
+* The sub-complex attributes *horizontal position uncertainty* and
+*vertical uncertainty* must be encoded using either *Quality of Bathymetric
+Data* or the Information feature *Spatial Quality* (see <<sec_24.5>>).
+The decision as to which option to use should be based on whether
+the horizontal position and vertical uncertainty values are specific
+to a single *Quality of Bathymetric Data* feature or relates to multiple
+*Quality of Bathymetric Data* features. In general, specific values
+are related to areas of changeable bathymetry over time or varying
+bathymetric data quality in the water column (as shown in <<fig_3-2>>
+above); and repeating values are specific to general quality uncertainty
+values in non-changeable areas. It is prohibited to use both options
+for a single *Quality of Bathymetric Data* instance.
+
+** *vertical uncertainty* on the *Quality of Bathymetric Data* or
+the associated *Spatial Quality* is used to specify the vertical uncertainty
+of the depths covered by the surface within a specified date range
+(where encoded); and should be adjusted to indicate the degradation
+of the vertical uncertainty over time where multiple instances of
+*zone of confidence* are encoded (see above bullet). When *depth range
+minimum value* is specified on *Quality of Bathymetric Data*, *vertical
+uncertainty* refers only to the uncertainty of the swept depth defined
+by *depth range minimum value*.
+** *horizontal position uncertainty* on the *Quality of Bathymetric
+Data* or the associated *Spatial Quality* is used to specify the positional
+uncertainty of the depths covered by the surface within a specified
+date range (where encoded); and should be adjusted to indicate the
+degradation of the horizontal position uncertainty over time where
+multiple instances of *zone of confidence* are encoded (see above).
+* *depth range minimum value* must only be used on a *Quality of Bathymetric
+Data* feature where a swept area occupies the entire *Quality of Bathymetric
+Data* surface, or *Quality of Bathymetric Data* features overlap.
+Where these features overlap such that varying bathymetric data qualities
+exist at different depths in the water column, the *depth range minimum
+value* for a *Quality of Bathymetric Data* must be set to a value
+0.1 metres deeper than the *depth range maximum value* for the *Quality
+of Bathymetric Data* feature defining the quality for the level above;
+and the topmost *Quality of Bathymetric Data* must have *depth range
+minimum value* set to an empty (null) value (see <<fig_3-2>> above).
+* *depth range maximum value* must only be used on a *Quality of Bathymetric
+Data* feature to specify the maximum depth to which all other attributes
+for the *Quality of Bathymetric Data* feature applies. When *depth
+range maximum value* is specified, values populated for all other
+attributes apply only to depths equal to or shoaler than *depth range
+maximum value*. No quality information is provided for depths deeper
+than *depth range maximum value*. Where *Quality of Bathymetric Data*
+features overlap such that varying bathymetric data qualities exist
+at different depths in the water column, the *depth range maximum
+value* for a *Quality of Bathymetric Data* must be set to a value
+0.1 metres shoaler than the *depth range minimum value* for the *Quality
+of Bathymetric Data* feature defining the quality for the level below;
+and the bottommost *Quality of Bathymetric Data* must have *depth
+range maximum value* set to an empty (null) value (see <<fig_3-2>>
+above).
+* *Quality of Bathymetric Data* must be encoded over *Unsurveyed Area*
+features that contain any depth data or bathymetry (depth contours,
+obstructions, soundings, underwater rocks, wrecks); and must have
+mandatory attributes stem:[bb "data assessment" = 1] (assessed)
+stem:[bb "category of temporal variation" = 6] (unassessed); *features detected*
+(*least depth of detected features measured* and *significant features
+detected*) = _False_; *full seafloor coverage achieved* = _False_;
+and *zone of confidence* (*category of zone of confidence in data*)
+= _5_ (zone of confidence D). The *vertical uncertainty* (*uncertainty
+fixed*) and *horizontal position uncertainty* (*uncertainty fixed*)
+for the *Quality of Bathymetric Data* or the associated *Spatial Quality*
+should be populated with an empty (null) value.
+* For *Unsurveyed Area* features that do not contain any depth data
+or bathymetry, it is not required to encode a
+*Quality of Bathymetric Data* feature that covers the area.
+
+* If the attribute *technique of vertical measurement* is required,
+it must be encoded on either the Meta feature *Quality of Survey*
+(see <<sec_3.11>>) or on individual geo features (for example *Sounding*).
+
+* When the *Quality of Bathymetric Data* surface contains data from
+only one survey, the date of survey should be specified using the
+complex attribute *survey date range*, sub-attribute *date end*. When
+the *Quality of Bathymetric Data* surface contains data from two or
+more surveys, the date of the most recent and the oldest survey should
+be specified using the complex attribute *survey date range*.
+* *Quality of Bathymetric Data* areas must not be encoded over land.
+* *Spatial Quality* (*horizontal position uncertainty*) associated
+to the *Quality of Bathymetric Data* using the association
+*Quality of Bathymetric Data Composition* (see <<sec_25.12>>), where
+encoded, applies to bathymetric data situated within the surface,
+while *Spatial Quality* (*quality of horizontal measurement*) or
+(*horizontal position uncertainty*) on the associated spatial types
+using the association *Spatial Association* (see <<sec_24.5>>) qualifies
+the location of the *Quality of Bathymetric Data* feature itself.
+* Meta features *Quality of Bathymetric Data* and
+*Quality of Non-Bathymetric Data* may overlap.
+* Additional quality information may be given using the Meta feature
+*Quality of Survey*.
+
+[[sec_3.8.1.1]]
+===== Temporal variation
+
+The indication of degrading quality of bathymetry over time should
+be encoded using multiple instances of the complex attribute
+*zone of confidence* where required (see 5^th^ to 8^th^ bullet points
+in <<sec_3.8.1>> above).
+
+The changeability of the bathymetry must be encoded using
+*category of temporal variation*. In order for a time reference to
+be given for the expression of temporal variation, the relevant dates
+of the bathymetric data should be encoded using the complex attribute
+*survey date range* if *category of temporal variation* is set to
+_1_ (extreme event), _2_ (likely to change and significant shoaling
+expected) or _3_ (likely to change but significant shoaling not expected).
+Consideration should be given, in particular, for the encoding of
+*survey data range* if multiple instances of *zone of confidence*
+are not encoded to provide an indication of the degradation of the
+overall accuracy of the charted bathymetric information over time,
+in order to provide the Mariner with a temporal frame of reference
+for decision making.
+
+[[sec_3.8.1.2]]
+===== Feature detection
+
+In the context of bathymetry, a feature is any object, whether manmade
+or not, projecting above the seafloor, which may be considered a danger
+to surface navigation. Refer to IHO Publication S-44.
+
+The ability to detect bathymetric features must be encoded using the
+complex attribute *features detected*. The sub-attribute
+*significant features detected* indicates whether the survey was capable
+of detecting features of a size indicated by the sub-attribute
+*size of features detected*. The sub-attribute
+*least depth of detected features measured* indicates whether the
+least depth of detected features was found. For instance, if a wreck
+was found, but it is not certain that the least depth of that wreck
+was measured, *least depth of detected features measured* must be
+set to _False_.
+
+[[sec_3.8.1.3]]
+===== Sounding uncertainty
+
+Sounding uncertainty is encoded using the complex attribute
+*zone of confidence*, sub-complex attribute *vertical uncertainty*
+on **Quality of Bathymetric Data**; or alternatively using an associated
+instance of the information type *Spatial Quality*, complex attribute
+*spatial accuracy* (see <<sec_24.5>>) and using the association
+*Quality of Bathymetric Data Composition* (see <<sec_25.12>>).
+If it is required to encode additional sounding uncertainty information,
+it must be done using the attributes *quality of vertical measurement*
+and *technique of vertical measurement* on groups of soundings or
+individual features; or by associating another instance of the information
+type *Spatial Quality* to the spatial type associated with the individual
+geo features.
+
+The vertical and horizontal position uncertainty values populated
+on the instance of *Quality of Bathymetric Data* or the associated
+*Spatial Quality* must reflect the most commonly associated values
+for the *Obstruction*, *Sounding*, *Underwater/Awash Rock* and *Wreck*
+features within the area.
+
+[underline]#Distinction:# Quality of Non-Bathymetric Data; Quality
+of Survey; Spatial Quality.
+
+[[sec_3.9]]
+=== Sounding datum
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *SOUNDING DATUM*. The horizontal
+plane or tidal datum to which soundings have been reduced. Also called
+datum for sounding reduction. (Adapted from IHO Dictionary -- S-32).
+10+| *S-101 Metadata Feature:* *Sounding Datum (M_SDAT)*
+10+| *[underline]#Primitives:#* *Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| vertical datum 2+| (VERDAT) 3+|
+1: mean low water springs +
+2: mean lower low water springs +
+3: mean sea level +
+4: lowest low water +
+5: mean low water +
+6: lowest low water springs +
+7: approximate mean low water springs +
+8: indian spring low water +
+9: low water springs +
+10: approximate lowest astronomical tide +
+11: nearly lowest low water +
+12: mean lower low water +
+13: low water +
+14: approximate mean low water +
+15: approximate mean lower low water +
+19: approximate mean sea level +
+22: equinoctial spring low water +
+23: lowest astronomical tide +
+24: local datum +
+25: international great lakes datum 1985 +
+26: mean water level +
+27: lower low water large tide +
+44: baltic sea chart datum 2000 | EN | 1,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnote:three_nine[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnote:three_nine[]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[underline]#INT 1 Reference:#
+
+[[sec_3.9.1]]
+==== Sounding datum
+
+For depth information that is encoded using the attributes
+*value of sounding*, *depth range minimum value*,
+*depth range maximum value* and *value of depth contour* the sounding
+datum is encoded using the Meta feature *Sounding Datum*, and must
+be constant over large areas.
+
+All parts of the dataset containing depth data or bathymetry must
+be covered by *Sounding Datum* features, with the attribute
+*vertical datum* indicating the sounding datum. *Sounding Datum* features
+must not overlap.
+
+For sounding features (*Sounding* and *Depth -- No Bottom Found*)
+both the position and depth information is encoded by means of coordinates,
+with the depth information stored in the Z-coordinate. The sounding
+datum is defined by the Coordinate Reference System (CRS) for the
+Z-Coordinate ("Coordinate in Z Axis" [ZCOO] subfield of the "3-D Integer
+Coordinate Tuple" [C3IT] field or the "3-D Integer Coordinate List"
+[C3IL] field).
+
+The definition of the CRS is stored in the "Dataset Coordinate Reference
+System" record and referred by the "Vertical CRS Id" [VCID] subfield
+of the "3-D Integer Coordinate Tuple" [C3IT] field or the "3-D Integer
+Coordinate List" [C3IL] field.
+
+The CRS for the Z-coordinate should also have the subfield "Axis Type"
+[AXTY] of the corresponding "Coordinate System Axes" [CSAX] field
+set to _12_ (Gravity Related Depth).
+
+Note, that because every ZCOO value is explicitly linked to sounding
+datum there is no default value.
+
+[underline]#Remarks:#
+
+* The default sounding datum of the dataset must be encoded using
+the Meta feature *Sounding Datum*, and must be equivalent to the definition
+of the CRS as stored in the "Dataset Coordinate Reference System"
+record for the dataset.
+* If an area of the dataset is referenced to a different sounding
+datum than the default, a separate *Sounding Datum* feature must be
+encoded. All parts of the dataset covered by
+*Quality of Bathymetric Data* features (see <<sec_3.8>>) must be covered
+by *Sounding Datum* features, with the attribute *vertical datum*
+indicating the sounding (depth) datum.
+* The vertical CRS encoded in the Coordinate Reference System record
+fields for soundings is not utilized by the ECDIS in conveying the
+sounding datum information for an ENC to the Mariner in ECDIS.
+This information is provided instead using *Sounding Datum*. See also
+S-101 Product Specification Main document, <<sec_5.3>>.
+* Sounding groups, depth contours and depth areas going across areas
+having different values of sounding datum must be split at the border
+of those areas. Other features that should be split include
+*Marine Farm/Culture*, *Obstruction* and *Wreck*, but only where the
+value of *value of sounding* is known; and *Berth*, *Cable Submarine*,
+*Deep Water Route Centreline*, *Deep Water Route Part*, *Dredged Area*,
+*Dry Dock*, *Fairway*, *Floating Dock*, *Gate*,
+*Pipeline Submarine/On Land*, *Recommended Route Centreline*,
+*Recommended Track*, *Swept Area*, *Two-Way Route Part* and
+*Quality of Bathymetric Data*, but only if the value of
+*depth range minimum value* and/or *depth range maximum value* is
+known.
+* Meta features *Sounding Datum* and *Vertical Datum of Data* may
+overlap.
+
+[underline]#Distinction:# Vertical Datum of Data.
+
+[[sec_3.10]]
+=== Vertical datum of data
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *VERTICAL DATUM OF DATA*. Any level
+surface (for example Mean Sea Level) taken as a surface of reference
+to which the elevations within a data set are reduced. Also called
+datum level, reference level, reference plane, levelling datum, datum
+for heights. (Adapted from IHO Dictionary -- S-32).
+10+| *S-101 Metadata Feature:* *Vertical Datum of Data (M_VDAT)*
+10+| *[underline]#Primitives:#* *Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+3+| vertical datum 2+| (VERDAT) 3+|
+3: mean sea level +
+13: low water +
+16: mean high water +
+17: mean high water springs +
+18: high water +
+19: approximate mean sea level +
+20: high water springs +
+21: mean higher high water +
+24: local datum +
+25: international great lakes datum  1985 +
+26: mean water level +
+28: higher high water large tide +
+29: nearly highest high water +
+30: highest astronomical tide +
+44: baltic sea chart datum 2000 | EN | 1,1
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnote:three_ten[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnote:three_ten[]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[underline]#INT 1 Reference:#
+
+[[sec_3.10.1]]
+==== Vertical datum
+
+Vertical (height) datum information is encoded using the Meta feature
+*Vertical Datum of Data*, or by populating the attribute
+*vertical datum* on individual geo features. The values encoded in
+the attributes *elevation*, *height*, *vertical clearance closed*,
+*vertical clearance fixed*, *vertical clearance open* and
+*vertical clearance safe* (positive values up) are referenced to the
+specified datum(s). *vertical datum* must not be encoded on any geo
+feature instance unless at least one of the above attributes is also
+encoded on that feature.
+
+The vertical datum of the dataset must be encoded using the Meta feature
+*Vertical Datum of Data*:
+
+All parts of the dataset containing data must be covered by
+*Vertical Datum of Data* features, with the attribute *vertical datum*
+indicating the vertical (height) datum. *Vertical Datum of Data* features
+must not overlap.
+
+Various height datums may be used within an ENC. For example, different
+datums may be used for the following:
+
+* altitude of spot heights, height contours, landmarks,
+* elevation of lights,
+* vertical clearance.
+
+Where different vertical datums are used for the various vertical
+measurements, the default value given in the metadata for the
+*Vertical Datum of Data* applies to the first group of the above list.
+The attribute *vertical datum* on an individual feature applies to
+the elevation of lights and vertical clearances and must only be populated
+if different from the value given by *Vertical Datum of Data*.
+
+[underline]#Remarks:#
+
+* Value _13_ (low water) for attribute *vertical datum* is only applicable
+to enclosed (inland) waterways; and must not be used for tidal waters.
+* Height contours, going across areas having different values of vertical
+datum, must be split at the border of these areas.
+* Meta features *Vertical Datum of Data* and *Sounding Datum* may
+overlap.
+
+[underline]#Distinction:# Sounding Datum.
+
+[[sec_3.11]]
+=== Quality of survey
+
+[cols="10", options="unnumbered"]
+|===
+10+| [underline]#IHO Definition:# *QUALITY OF SURVEY*. An area within
+which a uniform assessment of the reliability of source survey information
+exists. (S-57 Edition 3.1, Appendix A -- Chapter 1, Page 1.218, November
+2000).
+10+| *S-101 Metadata Feature:* *Quality of Survey (M_SREL)*
+10+| *[underline]#Primitives:#* *Curve, Surface*
+
+2+| _Real World_ 4+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 2+h| S-57 Acronym 3+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| depth range maximum value 2+| (DRVAL2) 3+| | RE | 0,1
+3+| depth range minimum value 2+| (DRVAL1) 3+| | RE | 0,1
+3+| features detected 2+| 3+| | C | 0,1
+3+| least depth of detected features measured 2+| 3+| | (S) BO | 1,1
+3+| significant features detected 2+| 3+| | (S) BO | 1,1
+3+| size of features detected 2+| 3+| | (S) RE | 0,1
+3+| full seafloor coverage achieved 2+| 3+| | BO | 0,1
+3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+3+| line spacing maximum 2+| 3+| | IN | 0,1
+3+| line spacing minimum 2+| 3+| | IN | 0,1
+3+| measurement distance maximum 2+| (SDISMX) 3+| | RE | 0,1
+3+| measurement distance minimum 2+| (SDISMN) 3+| | RE | 0,1
+
+3+| quality of horizontal measurement 2+| (QUAPOS) 3+|
+4: approximate | EN | 0,1
+3+| quality of vertical measurement 2+| (QUASOU) 3+|
+1: depth known +
+2: depth or least depth unknown +
+3: doubtful sounding +
+4: unreliable sounding +
+6: least depth known +
+7: least depth unknown, safe clearance at value shown +
+8: value reported (not surveyed) +
+9: value reported (not confirmed) +
+10: maintained depth +
+11: not regularly maintained | EN | 0,*
+
+3+| scale value maximum 2+| (SCVAL1) 3+| scale value maximum < scale value minimum | IN | 0,1
+3+| scale value minimum 2+| (SCVAL2) 3+| scale value minimum > scale value maximum | IN | 0,1
+3+| survey authority 2+| (SURATH) 3+| | TE | 1,1
+3+| survey date range 2+| 3+| See <<sec_2.4.8>> | C | 1,1
+3+| date end 2+| _(SUREND)_ 3+| | (S) TD | 1,1
+3+| date start 2+| _(SURSTA)_ 3+| | (S) TD | 0,1
+3+| survey type 2+| (SURTYP) 3+|
+1: reconnaissance/sketch survey +
+2: controlled survey +
+4: examination survey +
+5: passage survey +
+6: remotely sensed +
+7: full coverage +
+8: systematic survey +
+9: non-systematic survey +
+10: inadequately surveyed +
+11: spot-sounding survey +
+12: acoustically swept survey +
+13: mechanically swept survey | EN | 1,*
+3+| technique of vertical measurement 2+| (TECSOU) 3+|
+1: found by echo sounder +
+2: found by side scan sonar +
+3: found by multi beam +
+4: found by diver +
+5: found be lead line +
+8: swept by vertical acoustic system +
+9: found by electromagnetic sensor +
+10: photogrammetry +
+11: satellite imagery +
+12: found by levelling +
+13: swept by side scan sonar +
+15: found by LIDAR +
+16: synthetic aperture radar +
+17: hyperspectral imagery +
+18: mechanically swept | EN | 0,*
+
+3+| information 2+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 2+| 3+| | (S) TE | 0,1
+
+3+| file reference 2+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnote:three_eleven[For each instance of *information*, at least one of the sub-attributes *file reference* or *text* must be populated.]
+
+3+| headline 2+| 3+| | (S) TE | 0,1
+
+3+| language 2+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 2+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnote:three_eleven[]
+
+10+h| Feature Associations
+h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Updated Object 3+| *Updated Information* (see <<sec_25.21>>) 3+| *Update Information* 2+| Association | 0,*
+| - 3+| *Spatial Association* (see <<sec_25.15>>) 3+| *Spatial Quality* 2+| Association | 0,*
+
+|===
+
+[underline]#INT 1 Reference:#
+
+[[sec_3.11.1]]
+==== Survey reliability and source of bathymetric data
+
+The survey reliability and/or details of the source surveys used in
+compilation may be encoded using the Meta feature *Quality of Survey*.
+*Quality of Survey* can apply to bathymetry (for example, underwater
+rocks), non-bathymetry (for example, navigational aids) and a combination
+of these (for example, LIDAR survey).
+
+[underline]#Remarks:#
+
+* To express completeness of bathymetric data, the complex attribute
+*features detected* should be encoded. *features detected* indicates
+that a systematic method of exploring the seafloor was undertaken
+to detect significant features. The sub-attributes
+*size of features detected* and
+*least depth of detected features measured* must not be encoded unless
+the sub-attribute *significant features detected* is set to _True_.
+* If it is required to encode a vertical uncertainty value, it must
+be encoded using the complex attribute *vertical uncertainty* on an
+instance of the information type *Spatial Quality* (see <<sec_24.5>>),
+associated to the relevant feature(s) point, multipoint and curve
+geometry, or an instance of the Meta feature *Quality of Bathymetric
+Data* (see <<sec_3.8>>).
+* If the attribute *measurement distance maximum* is set to _0_ (zero)
+for the full area of the survey, the attribute *full seafloor coverage
+achieved* should be set to _yes_.
+* Where populated, the value for the attribute *measurement distance
+minimum* must not be larger than the value populated for *measurement
+distance maximum*.
+* *quality of horizontal measurement* on the *Quality of Survey* applies
+to bathymetric data situated within the area, while *quality of horizontal
+measurement* or *horizontal position uncertainty* on the associated
+spatial types qualifies the location of the *Quality of Survey* feature
+itself.
+* The attributes *depth range maximum value* and *depth range minimum
+value* may be used to define the quality of individual surveys at
+varying depths in the water column, similar to the method used for
+indicating the overall quality of bathymetry using *Quality of Bathymetric
+Data* (see <<sec_3.8>>).
+
+[[sec_3.11.2]]
+==== Quality of sounding
+
+If it is required to encode the quality of sounding, it must be done
+using the attribute *quality of vertical measurement* on either the
+*Quality of Survey* or on individual geo features (for example *Sounding*).
+
+The quality of sounding must not be encoded using *quality of vertical
+measurement* on the depth geo feature, unless it is different from
+the value of *quality of vertical measurement* encoded on *Quality
+of Survey* (see <<table_11-1>> at <<sec_11.3.1>> and <<table_13-1>>
+at <<sec_13.3>>).
+
+[[sec_3.11.3]]
+==== Technique of vertical measurement
+
+If it is required to encode the technique of sounding measurement,
+it must be done using the attribute *technique of vertical measurement*
+on either *Quality of Survey* or on individual geo features (for example
+*Sounding*).*technique of vertical measurement* must not be populated
+with multiple values to indicate the technique of sounding measurement
+for multiple surveys.*technique of vertical measurement* may be populated
+with multiple values only where the area is covered by a survey that
+has used multiple techniques, for example an area covered by a survey
+using a modern echosounder combined with a sonar or mechanical sweep
+system.
+
+The technique of sounding measurement must not be encoded using *technique
+of vertical measurement* on the depth geo feature, unless it is different
+from the value of *technique of vertical measurement* encoded on an
+overlapping **Quality of Survey**; and the information is considered
+to be important to navigation.
+
+[underline]#Remarks:#
+
+* No remarks.
+
+[underline]#Distinction:# Accuracy of Data; Quality of Bathymetric
+Data.
+
+[[sec_3.12]]
+=== Update information
+
+[cols="11", options="unnumbered"]
+|===
+11+| [underline]#IHO Definition:# *UPDATE INFORMATION*. The Update
+Information metadata feature is used to represent a change to the
+information shown.
+11+| *S-101 Metadata Feature:* *Update Information*
+11+| *[underline]#Primitives:# Point, Curve, Surface, None*
+
+2+| _Real World_ 5+| _Paper Chart Symbol_ 4+| _ECDIS Symbol_
+
+3+h| S-101 Attribute 3+| *S-57 Acronym* 3+h| Allowable Encoding Value h| Type h| Multiplicity
+
+3+| fixed date range 3+| 3+| See <<sec_2.4.8>> | C | 0,1 footnoteblock:[three_twelve]
+
+3+| date end 3+| (DATEND) 3+| | (S) TD | 0,1
+
+3+| date start 3+| (DATSTA) 3+| | (S) TD | 0,1
+
+4+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
+
+4+| update number 2+| 3+| | IN | 1,1
+
+4+| update type 2+| 3+|
+1: insert +
+2: delete +
+3: modify +
+4: move | EN | 1,1
+
+3+| scale minimum 3+| (SCAMIN) 3+| See <<sec_2.5.9>> | IN | 0,1 footnoteblock:[three_twelve] 3+| source 3+| 3+| | TE | 0,1
+
+3+| information 3+| 3+| See <<sec_2.4.6>> | C | 0,*
+
+3+| file locator 3+| 3+| | (S) TE | 0,1
+
+3+| file reference 3+| _(TXTDSC) (NTXTDS)_ 3+| | (S) TE | 0,1 footnoteblock:[three_twelve]
+
+3+| headline 3+| 3+| | (S) TE | 0,1
+
+3+| language 3+| 3+| ISO 639-2/T | (S) TE | 1,1
+
+3+| text 3+| _(INFORM) (NINFOM)_ 3+| | (S) TE | 0,1 footnoteblock:[three_twelve]
+
+11+| *Feature Associations*
+h| S-101 Role 4+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
+| The Update 4+| *Updated Information* (see <<sec_25.21>>) 3+| Most Meta features and all Geo features 2+| Association | 0,*
+| The Collection 4+| *Update Aggregation*(see <<sec_25.20>>) 3+| *Update Information* 2+| Aggregation | 0,1
+| The Component 4+| *Update Aggregation*(see <<sec_25.20>>) 3+| *Update Information* 2+| Association | 0,*
+
+|===
+
+[[three_twelve]]
+[NOTE]
+--
+For each instance of *fixed date range*, at least one of the sub-attributes
+*date end* or *date start* must be populated.
+
+*fixed date range* and/or *scale minimum* are mandatory if *fixed
+date range* and/or *scale minimum* are populated for the associated
+Geo feature, and must be identical to the values populated for the
+associated Geo feature.
+
+For each instance of *information*, at least one of the sub-attributes
+*file reference* or *text* must be populated.
+--
+
+[underline]#INT 1 Reference:#
+
+[[sec_3.12.1]]
+==== Update information
+
+In S-100 ECDIS, the existing methodology in S-57/S-52 ECDIS used to
+provide, on request, a visual indication to the Mariner of information
+that has changed in the System Database when an ENC Update is applied
+will be implemented for this Edition of S-101. The following guidance,
+therefore, does not indicate any mandatory requirement for Data Producers
+or ECDIS Manufacturers in regard to IMO requirements for ECDIS performance.
+
+The Meta feature *Update Information* may be used by the ECDIS to
+provide information to the Mariner of changes that have been applied
+in an ENC New Edition; or to provide additional information to the
+Mariner other than the visual indication when an ENC Update is applied.
+*Update Information* must be associated, where encoded, with features
+that have changed using the associations *Updated Information* (see
+<<sec_25.21>>) and *Update Aggregation* (see <<sec_25.20>>).
+
+[underline]#Remarks:#
+
+* The mandatory attribute *update number* must be used, if required,
+to indicate the Update number of the Update dataset that the changed
+information is included in, as indicated in the file extension of
+the Update dataset.
+* The mandatory attribute *update type* must be used, if required,
+to indicate the type of update applicable to the feature (insertion,
+deletion, modification, move). Where the *Update Information* is encoded
+to cover an area in which numerous changes have occurred (for example
+in a New Edition), *update type* should be populated with value _3_
+(modify).
+* The complex attribute *information* (see <<sec_2.4.6>>) should be
+used to provide a textual description of the changes to the associated
+feature(s) as included in the Update.
+* The process of moving a segment of a curve or edge of a surface
+feature via an ENC Update requires the two-step application of the
+deletion of the segment at the original position and the insertion
+of the new segment in the new position. Where required, in order to
+indicate the move of a segment by ENC Update, three *Update Information*
+features should be created and associated, if required, as follows:
+
+** An *Update Information* feature having
+stem:[bb "update type" = 2] (delete) using the geometry of the deleted
+segment at the original position;
+** An *Update Information* feature of type curve having
+stem:[bb "update type" = 1] (insert) associated to the inserted segment
+at the new position;
+** An *Update Information* feature having no geometry and
+stem:[bb "update type" = 4] (move) associated to the above "delete"
+and "insert" *Update Information* features using the association *Update
+Aggregation* (see <<sec_25.20>>).
+* The association *Update Aggregation* may also be used to group several
+related updates, for example changes to a routeing measure or aids
+to navigation range system. Where this is done, the *Update Information*
+forming the collection (container) end of the relationship should
+have no geometry and have stem:[bb "update type" = 3] (modify).
+* Where the changed information is related to an information type,
+the *Update Information* may be associated with the features to which
+the information type is associated.
+* The attribute *source* may be used to indicate the related paper
+chart Notice to Mariner's number.
+* At each New Edition of an ENC cell, *Update Information* features
+which are no longer relevant must be deleted; and for the next Update
+to an ENC cell *Update Information* features included in the previous
+Update dataset should be considered for deletion. Where a new Update
+impacts a feature that has previously been updated, any existing instance
+of *Update Information* associated to the feature must be deleted
+as part of the new Update; this must be done by deleting the existing
+*Update Information* from the dataset.
+* The creation of *Update Information* Meta feature instances on request
+and the corresponding *Updated Information* and *Update Aggregation*
+association instances may be substantively automated in ENC production
+systems and associated databases, with automated population of the
+mandatory attributes *update number* and *update type* based on the
+change made to the data; and the complex attribute *fixed date range*
+and attribute *scale minimum* based on the attribution of the associated
+geo feature. The optional creation of these features and any additional
+information populated for *Update Information* is at the discretion
+of the Data Producer.
+
+[underline]#Distinction:# Information Area; Caution Area.
