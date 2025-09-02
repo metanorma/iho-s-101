@@ -1,0 +1,760 @@
+
+[[sec_12]]
+== Metadata
+
+[[sec_12.1]]
+=== Introduction
+
+For information exchange, there are several categories of metadata
+required: metadata about the overall Exchange Catalogue; metadata
+about each of the datasets contained in the Catalogue; and metadata
+about the support files that make up the package.
+
+S-100 Part 17, Figures 17-1, 17-6 and 17-7 outline the overall concept
+of an S-100 Exchange Set for the interchange of geospatial data and
+its relevant metadata. Figure 17-1 depicts the realization of the
+ISO 19115-1 and 19115-3 classes which form the foundation of the Exchange
+Set. The overall structure of S-101 metadata for Exchange Sets is
+the same as S-100 metadata. Figure 17-6 depicts the structure of the
+Exchange Set Catalogue and the structure of the Exchange Set as included
+in S-100 part 17, Figure 17-1 is also described in <<sec_11.2>> above.
+More detailed information about the various classes is shown in
+Figure 17-7 and a textual description in the Tables is included at
+clauses <<sec_12.1.1;to!sec_12.1.4>> below.
+
+The discovery metadata classes have numerous attributes which expose
+important information about the ENCs, ENC support files and system
+support files to be examined without the need to process the data,
+for example decrypt, decompress, load etc.
+
+System support files, such as Feature and Portrayal Catalogues or
+codelist dictionary files, can be included in the Exchange Set in
+support of the end-user system. The attribute "resourcePurpose" of
+the ENC Support File Discovery Metadata provides a mechanism to "read"
+and apply these system support files more easily.
+
+The following clauses define the mandatory and optional metadata needed
+for S-101. In some cases the metadata may be repeated in a national
+language. If this is the case it is noted in the Remarks column.
+
+In the following clauses, wherever S-101 makes an optional S-100 metadata
+attribute mandatory (that is, restricts multiplicity from 0.. to 1..),
+the restricted multiplicity is shown in place of the multiplicity
+given in S-100 Part 17, and a comment noting the restricted multiplicity
+has been included in the Remarks column.
+
+[%landscape]
+<<<
+
+[[sec_12.1.1]]
+==== S100_ExchangeCatalogue
+
+The Exchange Catalogue inherits the Dataset Discovery Metadata, Support
+File Discovery Metadata and Catalogue Discovery Metadata from S-100
+Part 17 with additional S-101-specific restrictions.
+
+[cols="a,a,a,a,a", options="unnumbered"]
+|===
+h|Name h|Description h|Mult h|Type h|Remarks
+
+| S100_ExchangeCatalogue
+| An Exchange Catalogue contains the discovery metadata about the exchange datasets and support files
+| - | | -
+
+| identifier
+| Uniquely identifies this Exchange Catalogue
+| 1
+| S100_ExchangeCatalogueIdentifier
+| 0..1 multiplicity in S-100 restricted to 1 in S-101
+
+| contact
+| Details about the issuer of this Exchange Catalogue
+| 1
+| S100_CataloguePointOfContact
+| 0..1 multiplicity in S-100 restricted to 1 in S-101
+
+| productSpecification
+| Details about the Product Specifications used for the datasets contained in the Exchange Catalogue
+| 1,.*
+| S100_ProductSpecification
+| The Exchange Catalogue may contain datasets from Product Specifications other than S-101
+
+0..* multiplicity in S-100 restricted to 1..* in S-101
+
+| defaultLocale
+| Default language and character set used for all metadata records in this Exchange Catalogue
+| 1
+| PT_Locale
+| All datasets conforming to S-101 Product Specification must use English language as default locale
+
+0..1 multiplicity in S-100 restricted to 1 in S-101
+
+| otherLocale
+| Other languages and character sets used for the localized metadata records in this Exchange Catalogue
+| 0..*
+| PT_Locale
+| Required if any localized entries are present in the Exchange Catalogue
+
+| exchangeCatalogueDescription
+| Description of what the Exchange Catalogue contains
+| 0..1
+| CharacterString
+|
+
+| exchangeCatalogueComment
+| Any additional Information
+| 0..1
+| CharacterString
+|
+
+| certificates
+| Signed public key certificates referred to by digital signatures in the Exchange Set
+| 0..*
+| S100_SE_CertificateContainerType
+| Content defined in S-100 Part 15. All certificates used, except the SA root certificate (installed separately by the implementing system) shall be included
+
+| dataServerIdentifier
+| Identifies the data server for the permit
+| 0..1
+| CharacterString
+|
+
+| datasetDiscoveryMetadata
+| Exchange Catalogues may include or reference discovery metadata for the datasets in the Exchange Set
+| 0..*
+| Aggregation S100_DatasetDiscoveryMetadata
+|
+
+| catalogueDiscoveryMetadata
+| Metadata for Catalogue
+| 0..*
+| Aggregation S100_CatalogueDiscoveryMetadata
+| Metadata for the Feature, Portrayal, and Interoperability Catalogues, if any
+
+| supportFileDiscoveryMetadata
+| Exchange Catalogues may include or reference discovery metadata for the support files in the Exchange Set
+| 0..*
+| Aggregation S100_SupportFileDiscoveryMetadata
+|
+|===
+
+
+[[sec_12.1.1.1]]
+===== S100_ExchangeCatalogueIdentifier
+
+[cols="a,a,a,a,a,a",options="unnumbered"]
+|===
+h| Role Name h| Name h| Description h| Mult h| Type h| Remarks
+
+| Class | S100_ExchangeCatalogueIdentifier | An Exchange Catalogue contains the discovery metadata about the exchange datasets and support files | - | - | The concatenation of identifier and dateTime form the unique name
+| Attribute | identifier | Uniquely identifies this Exchange Catalogue | 1 | CharacterString | <S100XC:identifier>US_101_20200101_120101_01</S100XC:identifier>
+| Attribute | dateTime | Creation date and time of the Exchange Catalogue, including time zone | 1 | DateTime | Format: yyyy-mm-ddThh:mm:ssZ
+
+|===
+
+[[sec_12.1.1.2]]
+===== S100_CataloguePointOfContact
+
+[cols="a,a,a,a,a,a",options="unnumbered"]
+|===
+h| Role Name h| Name h| Description h| Mult h| Type h| Remarks
+
+| Class | S100_CataloguePointOfContact | Contact details of the issuer of this Exchange Catalogue | - | - | -
+| Attribute | organization | The organization distributing this Exchange Catalogue | 1 | CharacterString | This could be an individual producer, value added reseller, etc
+| Attribute
+| phone
+| The phone number of the organization
+| 0..1
+| CI_Telephone
+|
+
+| Attribute
+| address
+| The address of the organization
+| 0..1
+| CI_Address
+|
+
+|===
+
+[[sec_12.1.2]]
+==== S100_DatasetDiscoveryMetadata
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Name h| Description h| Mult h| Type h| Remarks
+
+| S100_DatasetDiscoveryMetadata | Metadata about the individual datasets in the Exchange Catalogue | - | - | -
+
+| fileName | Dataset file name | 1 | URI | See S-100 Part 1, clause 1-4.6
+| description | Short description giving the area or location covered by the dataset | 0..1 | CharacterString | For example, a harbour or port name, between two named locations etcSee also Note 1
+| datasetID | Dataset ID expressed as a Maritime Resource Name (MRN) | 0..1 | URN | The URN must be an MRN
+| compressionFlag | Indicates if the resource is compressed | 1 | Boolean | _True_ indicates a compressed dataset resource__False__ indicates an uncompressed dataset resource
+| dataProtection | Indicates if the data is encrypted | 1 | Boolean | _True_ indicates an encrypted dataset resource__False__ indicates an unencrypted dataset resource
+| protectionScheme
+| Specification of method used for data protection
+| 0..1
+| S100_ProtectionScheme |
+| digitalSignatureReference
+| Specifies the algorithm used to compute digitalSignatureValue
+| 1
+| S100_SE_DigitalSignatureReference (see S-100 Part 15) |
+| digitalSignatureValue | Value derived from the digital signature | 1..* | S100_SE_DigitalSignature (see S-100 Part 15) | The value resulting from application of digitalSignatureReference.Implemented as the digital signature format specified in S-100 Part 15
+| copyright | Indicates if the dataset is copyrighted | 1 | Boolean | _True_ indicates the resource is copyrighted__False__ indicates the resource is not copyrighted
+| classification
+| Indicates the security classification of the dataset
+| 1
+| Class +
+MD_SecurityConstraints>MD_ClassificationCode (codelist)
+
+|
+. unclassified
+. restricted
+. confidential
+. secret
+. top secret
+. sensitive but unclassified
+. for official use only
+. protected
+. limited distribution
+
+0..1 multiplicity in S-100 restricted to 1 in S-101
+
+| purpose | The purpose for which the dataset has been issued | 1 | S100_Purpose | 0..1 multiplicity in S-100 restricted to 1 in S-101
+| notForNavigation | Indicates the dataset is not intended to be used for navigation | 1 | Boolean | _True_ indicates the dataset is not intended to be used for navigation__False__ indicates the dataset is intended to be used for navigation
+| specificUsage
+| The use for which the dataset is intended
+| 0..1
+| MD_USAGE>specificUsage (character string) |
+| editionNumber | The Edition number of the dataset | 1 | Integer
+| When a dataset is initially created, the Edition number 1 is assigned to it.
+The Edition number is increased by 1 at each New Edition. Edition number remains
+the same for update and re-issue
+
+0..1 multiplicity in S-100 restricted to 1 in S-101
+
+| updateNumber | Update number assigned to the dataset and increased by one for each subsequent update | 1 | Integer | Update number 0 is assigned to a new dataset0..1 multiplicity in S-100 restricted to 1 in S-101
+| updateApplicationDate
+| This date is only used for the base cell files (that is new data set, re-issue and new edition), not update cell files. All updates dated on or before this date must have been applied by the producer
+| 0..1
+| Date  |
+| referenceID | Reference back to the datasetID | 0..1 | URN
+| Update metadata refers to the datasetID of the dataset metadata.
+This is used if and only if the dataset is an update
+
+The URN must be an MRN
+
+| issueDate
+| Date on which the data was made available by the Data Producer
+| 1
+| Date |
+| issueTime | Time of day at which the data was made available by the Data Producer | 0..1 | Time | The S-100 datatype Time
+| boundingBox | The extent of the dataset limits | 1 | EX_GeographicBoundingBox | 0..1 multiplicity in S-100 restricted to 1 in S-101
+| temporalExtent | Specification of the temporal extent of the dataset | 0..1 | S100_TemporalExtent
+| The temporal extent is encoded as the date/time of the earliest and latest
+data records (in coverage datasets) or date/time ranges (in vector datasets)
+
+If there is more than one feature in a dataset, the earliest and latest
+time values of records in all features are used, which means the earliest
+and latest values may be from different features
+
+If date/time information for a feature is not encoded in the dataset,
+it is treated for the purposes of this attribute as extending indefinitely
+in the appropriate direction on the time axis, limited by the issue
+date/time or the cancellation or supersession of the dataset
+
+This attribute is encoded if and only if at least one of the start
+and end of the temporal extent is known
+
+| productSpecification
+| The Product Specification used to create this dataset
+| 1
+| S100_ProductSpecification |
+| producingAgency
+| Agency responsible for producing the data
+| 1
+| CI_Responsibility>CI_Organisation
+| See S-100 Part 17, Table 17-3
+| producerCode | The official IHO S-100 Producer Code from the IHO GI Registry, Producer Code Register | 1 | CharacterString | 0..1 multiplicity in S-100 restricted to 1 in S-101
+| encodingFormat | The encoding format of the dataset | 1 | S100_EncodingFormat | For S-101 datasets must be ISO/IEC 8211
+| dataCoverage | Provides information about data coverages within the dataset | 1..* | S100_DataCoverage | 0..* multiplicity in S-100 restricted to 1..* in S-101
+| comment
+| Any additional information
+| 0..1
+| CharacterString |
+| defaultLocale | Default language and character set used in the dataset | 0..1 | PT_Locale | In absence of defaultLocale the language is English, UTF-8
+| otherLocale
+| Other languages and character sets used in the dataset
+| 0..*
+| PT_Locale |
+| metadataPointOfContact | Point of contact for metadata | 0..1 | CI_Responsibility>CI_Individual orCI_Responsibility>CI_Organisation | Only if metadataPointOfContact is different to producingAgency
+| metadataDateStamp | Date stamp for metadata | 0..1 | Date | Metadata creation date, which may or may not be the dataset creation date
+| replacedData | Indicates if a cancelled dataset is replaced by another data file(s) | 0..1 | Boolean | See <<note_2>>
+| dataReplacement | Dataset name | 0..* | CharacterString | A dataset may be replaced by 1 or more datasetsSee <<note_2>>
+| navigationPurpose | Classification of intended navigation purpose (for Catalogue indexing purposes) | 1 | S100_NavigationPurpose | 0..3 multiplicity in S-100 restricted to 1 in S-101
+| resourceMaintenance | Information about the frequency of resource updates, and the scope of those updates | 0..1 | MD_MaintenanceInformation | S-100 restricts the multiplicity to 0..1 and adds specific restrictions on the ISO 19115 structure and content. See clause MD_MaintenanceInformation later in this PartFormat: PnYnMnDTnHnMnS (XML built-in type for ISO 8601 _duration_). See S-100 Part 17, clause 17-4.9
+
+|===
+
+[[note_1]]
+NOTE: description: During the ENC Dual-Fuel transition period, it is recommended that the attribute description is used to identify equivalent S-57 ENCs in S-101. This information is to be semicolon separated to distinguish it from any other information, for example for 1 to 1 mapping <XC:description>;GB5DNABH;</XC:description> and for more than one equivalent S-57 ENC: <XC:description>;NL4NZ110;NL5WS130;</XC:description>. If the mapping is partial, a "p" should be included at the end of the S-57 dataset name, for example <XC:description>;GB5DNABHp;</XC:description>. There may be scenarios for non-ECDIS use only, where S-101 ENCs are produced without equivalent S-57 ENCs; this should be shown using an "n" as <XC:description>;n;</XC:description>
+
+[[note_2]]
+NOTE: replacedData and dataReplacement: The attribute replacedData is mandatory if the attribute purpose (see <<sec_12.1.2.3>>) is set to value _5_ (cancellation). The attribute dataReplacement is mandatory if replacedData = _True_.
+
+[[sec_12.1.2.1]]
+===== S100_NavigationPurpose
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Item h| Name h| Description h| Code h| Remarks
+
+| Enumeration | S100_NavigationPurpose | The purpose of the dataset | - |
+| Value | port | For port and near shore operations | 1 | -
+| Value | transit | For coast and planning purposes | 2 | -
+| Value | overview | For ocean crossing and planning purposes | 3 | -
+
+|===
+
+[[sec_12.1.2.2]]
+===== S100_DataCoverage
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Name h| Mult h| Value h| Type h| Remarks
+
+| S100_DataCoverage | - | - | - | -
+| boundingPolygon
+| 1
+|
+
+| EX_BoundingPolygon
+|
+
+| temporalExtent
+| 0..1
+|
+
+| S100_TemporalExtent
+| The remarks for _temporalExtent_ in the dataset discovery block (S100_DatasetDiscoveryMetadata) apply, except that their scope is the individual coverage and not the dataset as a whole
+
+| optimumDisplayScale
+| 1
+|
+
+| Integer
+| Must be one of the following values:
+
+1000 +
+2000 +
+3000 +
+4000 +
+8000 +
+12000 +
+22000 +
+45000 +
+90000 +
+180000 +
+350000 +
+700000 +
+1500000 +
+350000 +
+1000000
+
+0..1 multiplicity in S-100 restricted to 1 in S-101
+
+| maximumDisplayScale
+| 1
+|
+
+| Integer
+| Any value0..1 multiplicity in S-100 restricted to 1 in S-101
+
+| minimumDisplayScale
+| 1
+|
+
+| Integer
+| Must be one of the following values:
+
+2000 +
+3000 +
+4000 +
+8000 +
+12000 +
+22000 +
+45000 +
+90000 +
+180000 +
+350000 +
+700000 +
+1500000 +
+3500000 +
+10000000 +
+NULL
+
+0..1 multiplicity in S-100 restricted to 1 in S-101
+
+|===
+
+[[sec_12.1.2.3]]
+===== S100_Purpose
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Item h| Name h| Description h| Code h| Remarks
+
+| Enumeration | S100_Purpose | The purpose of the dataset | - |
+| Value | newDataset | Brand new dataset | 1 | No data has previously been produced for this area
+| Value | newEdition | New edition of the dataset or Catalogue | 2 | Includes new information which has not been previously distributed by updates
+| Value | update | Dataset update | 3 | Changing some information in an existing dataset
+| Value | reissue | Dataset that has been re-issued | 4 | Includes all the updates applied to the original dataset up to the date of the re-issue. A re-issue does not contain any new information additional to that previously issued by updates
+| Value | cancellation | Dataset or Catalogue that has been cancelled | 5 | Indicates the dataset or Catalogue should no longer be used and can be deleted
+
+|===
+
+[[sec_12.1.2.4]]
+===== S100_TemporalExtent
+
+[cols="6",options="unnumbered"]
+|===
+h| Role Name h| Name h| Description h| Mult h| Type h| Remarks
+
+| Class | S100_TemporalExtent | Temporal extent | -- |
+| At least one of the timeInstantBegin and timeInstantEnd
+attributes must be populated; if both are known, both must
+be populated. The absence of either begin or end indicates
+indefinite validity in the corresponding direction, limited
+by the issue date/time or the cancellation or supersession
+of the dataset
+
+| Attribute | timeInstantBegin | The instant at which the temporal extent begins
+| 0..1 | DateTime |
+
+| Attribute | timeInstantEnd | The instant at which the temporal extent ends
+| 0..1 | DateTime |
+
+|===
+
+[[sec_12.1.2.5]]
+===== S100_EncodingFormat
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Item h| Name h| Description h| Code h| Remarks
+
+| Enumeration | S100_EncodingFormat | The encoding format | - | Values listed in S-100 Part 17 but not mentioned in this table are not allowed
+| Value
+| ISO/IEC 8211
+| The ISO 8211 data format as defined in S-100 Part 10a
+| *1*
+|
+
+|===
+
+[[sec_12.1.2.6]]
+===== S100_ProductSpecification
+
+[cols="a,a,a,a,a,a",options="unnumbered"]
+|===
+h| Role Name h| Name h| Description h| Mult h| Type h| Remarks
+
+| Class | S100_ProductSpecification | The Product Specification contains the information needed to build the specified product | - | - | -
+
+| Attribute | name | The name of the Product Specification used to create the datasets | 1 | CharacterString
+| Electronic Navigational Chart
+
+0..1 multiplicity in S-100 restricted to 1 in S-101
+| Attribute | version | The version number of the Product Specification | 1 | CharacterString
+| 2.0.0
+
+0..1 multiplicity in S-100 restricted to 1 in S-101
+
+| Attribute | date | The version date of the Product Specification | 1 | Date | 0..1 multiplicity in S-100 restricted to 1 in S-101
+| Attribute | productIdentifier | Machine readable unique identifier of a product type | 1 | CharacterString(Restricted to Product ID values from the IHO Product Specification Register, in the IHO Geospatial Information (GI) Registry) | "S-101" (without quotes)
+| Attribute | number | The number (registry index) used to lookup the product in the Product Specification Register | 1 | Integer | From the Product Specification Register in the IHO Geospatial Information (GI) Registry
+| Attribute | compliancyCategory | The level of compliance of the Product Specification to S-100 | 1 | S100_CompliancyCategory | 0..1 multiplicity in S-100 restricted to 1 in S-101. Needed for S-98 interoperability
+
+|===
+
+[[sec_12.1.2.7]]
+===== S100_CompliancyCategory
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Item h| Name h| Description h| Code h| Remarks
+
+| Enumeration | S100_CompliancyCategory | | -
+| All S-101 products fully conforming to this Product Specification would be category3 or category4. (S-101 is expected to be category4, but the requirements for harmonized display are being determined, so category3 is provisionally retained to allow for potential divergences between S-101 and those requirements while both specifications are being finalised. In the absence of specific guidance to the contrary from the S-101 project team use category4)
+
+| Value | category3 | IHO S-100 compliant with standard encoding | 3 |
+| Value | category4 | IHO S-100 and IMO harmonized display compliant | 4 |
+|===
+
+[[sec_12.1.2.8]]
+===== S100_ProtectionScheme
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Item h| Name h| Description h| Code h| Remarks
+
+| Enumeration | S100_ProtectionScheme | Data protection schemes | - | -
+| Value | S100p15 | IHO S-100 Part 15 | 1 | See S-100 Part 15
+
+|===
+
+[[sec_12.1.3]]
+==== S100_SupportFileDiscoveryMetadata
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Name h| Description h| Mult h| Type h| Remarks
+
+| S100_SupportFileDiscoveryMetadata | Metadata about the individual support files in the Exchange Catalogue | - | - | -
+| fileName | Name of the support file | 1 | URI | See S-100 Part 1, clause 1-4.6
+| revisionStatus | The purpose for which the support file has been issued | 1 | S100_SupportFileRevisionStatus | For example new, replacement, etc
+| editionNumber | The Edition number of the support file | 1 | Integer | When a data set is initially created, the Edition number 1 is assigned to it. The Edition number is increased by 1 at each new Edition. Edition number remains the same for a re-issue
+| issueDate
+| Date on which the data was made available by the Data Producer
+| 0..1
+| Date
+|
+
+| supportFileSpecification | The specification used to create this file | 1 | S100_SupportFileSpecification | 0..1 multiplicity in S-100 restricted to 1 in S-101.
+| dataType | The format of the support file | 1 | S100_SupportFileFormat | Constrained to TXT and TIF - see clause 11.4.1
+| comment
+| Optional comment
+| 0..1
+| CharacterString
+| Any additional Information
+
+| compressionFlag | Indicates if the resource is compressed | 1 | Boolean | _True_ indicates a compressed resource__False__ indicates an uncompressed resource
+| digitalSignatureReference
+| Specifies the algorithm used to compute digitalSignatureValue
+| 1
+| S100_SE_DigitalSignatureReference (see Part 15)
+|
+
+| digitalSignatureValue | Value derived from the digital signature | 1..* | S100_SE_DigitalSignature (see Part 15)
+| The value resulting from application of digitalSignatureReference
+
+Implemented as the digital signature format specified in S-100 Part 15
+| defaultLocale | Default language and character set used in the support file | 0..1 | PT_Locale | A support file is expected to use only one as locale. Additional support files can be created for other locales
+| supportedResource | Identifier of the resource supported by this support file | 0..* | CharacterString | Conventions for identifiers are detailed in S-100 Part 15. S-100 allows file URI, digital signature or cryptographic hash checksums to be used
+| resourcePurpose | The purpose of the supporting resource | 0..1 | S100_ResourcePurpose | Identifies how the supporting resource is used
+
+|===
+
+NOTE: The optional S-100 field _otherDataTypeDescription_ is not allowed in S-101.
+
+[[sec_12.1.3.1]]
+===== S100_SupportFileFormat
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Item h| Name h| Description h| Code h| Remarks
+
+| Enumeration | S100_SupportFileFormat | The format used for the support file | - | Values listed in S-100 Part 17 but not mentioned in this table are not allowed
+| Value | TXT_UTF-8 | UTF-8 text excluding control codes | 1 | This is the only format allowed for a textual ENC Support file
+| Value | TIFF | Tagged Image File Format | 7 | This is the only format allowed for a textual ENC Support file
+
+|===
+
+[[sec_12.1.3.2]]
+===== S100_SupportFileRevisionStatus
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Item h| Name h| Description h| Code h| Remarks
+
+| Enumeration | S100_SupportFileRevisionStatus | The reason for inclusion of the support file in this exchange set | - | -
+| Value | new | A file which is new | 1 | Signifies a new file
+| Value | replacement | A file which replaces an existing file | 2 | Signifies a replacement for a file of the same name
+| Value | deletion | Deletes an existing file | 3 | Signifies deletion of a file of that name
+
+|===
+
+[[sec_12.1.3.3]]
+===== S100_SupportFileSpecification
+
+[cols="a,a,a,a,a,a",options="unnumbered"]
+|===
+h| Role Name h| Name h| Description h| Mult h| Type h| Remarks
+
+| Class | S100_SupportFileSpecification | The standard or specification to which a support file conforms | - | - | -
+| Attribute
+| name
+| The name of the specification used to create the support file
+| 1
+| CharacterString
+|
+
+| Attribute
+| version
+| The version number of the specification
+| 0..1
+| CharacterString
+|
+
+| Attribute
+| date
+| The version date of the specification
+| 0..1
+| Date
+|
+
+|===
+
+[[sec_12.1.3.4]]
+===== S100_ResourcePurpose
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Item h| Name h| Description h| Code h| Remarks
+
+| Enumeration | S100_ResourcePurpose | Defines the purpose of the supporting resource | - | -
+| Value | supportFile | A support file | 1 | An ENC support file
+| Value | ISO Metadata | Dataset metadata in ISO format | 2 | Not to be used for ENC distribution and use in navigational end-user systems. See <<sec_11.5>>
+| Value | Language Pack | A Language pack | 3 | A system support file
+| Value | GML Schema | GML Application Schema | 4 | Not used in the S-101 ENC Product Specification
+| Value | other | A type of resource not otherwise described | 100 | A system support file
+
+|===
+
+[[sec_12.1.4]]
+==== S100_CatalogueDiscoveryMetadata
+
+This is an optional element that allows for the delivery of S-101 Feature and Portrayal Catalogues within the Exchange Set.
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Name h| Description h| Mult h| Type h| Remarks
+
+| S100_CatalogueDiscoveryMetadata | Class for S-100 Catalogue metadata | - | - | -
+| fileName | The name for the Catalogue | 1 | URI | See S-100 Part 1, clause 1-4.6
+| purpose | The purpose for which the Catalogue has been issued | 0..1 | S100_Purpose
+|
+The values must be one of the following:
+
+[start=2]
+. new edition
+
+[start=5]
+. cancellation
+
+Default is new edition
+| editionNumber | The Edition number of the Catalogue | 1 | Integer | Initially set to 1 for a given productSpecification.numberIncreased by 1 for each subsequent New EditionUniquely identifies the version of the Catalogue
+| scope
+| Subject domain of the Catalogue
+| 1
+| S100_CatalogueScope
+|
+
+| versionNumber | The version identifier of the Catalogue | 1 | CharacterString | Human readable version identifier
+| issueDate
+| The issue date of the Catalogue
+| 1
+| Date
+|
+
+| productSpecification
+| The Product Specification used to create this file
+| 1
+| S100_ProductSpecification
+|
+
+| digitalSignatureReference | Specifies the algorithm used to compute digitalSignatureValue | 1 | S100_SE_DigitalSignatureReference (see Part 15) | Reference to the appropriate digital signature algorithm
+| digitalSignatureValue | Value derived from the digital signature | 1..* | S100_SE_DigitalSignature (see Part 15) | The value resulting from application of digitalSignatureReferenceImplemented as the digital signature format specified in Part 15
+| compressionFlag | Indicates if the resource is compressed | 1 | Boolean | _True_ indicates a compressed resource__False__ indicates an uncompressed resource
+| defaultLocale | Default language and character set used in the Catalogue | 1 | PT_Locale | 0..1 multiplicity in S-100 restricted to 1 in S-101
+| otherLocale
+| Other languages and character sets used in the Catalogue
+| 0..*
+| PT_Locale
+|
+
+|===
+
+[[sec_12.1.4.1]]
+===== S100_CatalogueScope
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Item h| Name h| Description h| Code h| Remarks
+
+| Enumeration | S100_CatalogueScope       | The scope of the Catalogue       | - | -
+| Value       | featureCatalogue          | S-100 Feature Catalogue          | 1 |
+| Value       | portrayalCatalogue        | S-100 Portrayal Catalogue        | 2 |
+| Value       | interoperabilityCatalogue | S-100 Interoperability Catalogue | 3 |
+
+|===
+
+[[sec_12.1.4.2]]
+===== MD_MaintenanceInformation
+
+[cols="a,a,a,a,a,a",options="unnumbered"]
+|===
+h| Role Name h| Name h| Description h| Mult h| Type h| Remarks
+
+| Class
+| MD_MaintenanceInformation
+| Information about the scope and frequency of updating
+| -
+| -
+| S-100 restricts the ISO 19115-class to:
+
+* prohibit maintenanceScope, maintenanceNote, and contact attributes;
+* define restrictions on maintenanceAndUpdateFrequency, maintenanceDate,
+and userDefinedMaintenanceFrequency attributes
+
+| Attribute | maintenanceAndUpdateFrequency | Frequency with which changes and additions are made to the resource after the initial resource is completed | 0..1 | MD_MaintenanceFrequencyCode (codelist) | Must be populated if userDefinedMaintenanceFrequency is not present, otherwise optional. See Table MD_MaintenanceFrequencyCode in this Part for values allowed in S-100 metadata
+| Attribute | maintenanceDate | Date information associated with maintenance of the resource | 0..1 | CI_Date | Exactly one of maintenanceDate and userDefinedMaintenanceFrequency must be populatedAllowed value for dateType: nextUpdate
+| Attribute | userDefinedMaintenanceFrequency | Maintenance period other than those defined | 0..1 | TM_PeriodDuration | Exactly one of maintenanceDate and userDefinedMaintenanceFrequency must be populatedOnly positive durations allowed
+
+|===
+
+[[sec_12.1.4.3]]
+===== MD_MaintenanceFrequencyCode
+
+S-100 uses a subset of the values allowed in ISO 19115-1.
+
+[cols="a,a,a,a,a",options="unnumbered"]
+|===
+h| Item h| Name h| Description h| Code h| Remarks
+
+| Enumeration | MD_MaintenanceFrequencyCode | Frequency with which modifications and deletions are made to the data after it is first produced | - | S-100 is restricted to only the following values from the ISO 19115-1 codelist. The conditions for the use of a particular value are described in its Remarks
+| Value | asNeeded | Resource is updated as deemed necessary | 1 | Use only for datasets which normally use a regular interval for update or supersession, but will have the next update issued at an interval different from the usualAllowed if and only if userDefinedMaintenanceFrequency is not populated
+| Value | irregular | Resource is updated in intervals that are uneven in duration | 2 | Use only for datasets which do not use a regular schedule for update or supersessionAllowed if and only if userDefinedMaintenanceFrequency is not populated
+
+|===
+
+[[sec_12.1.4.4]]
+===== PT_Locale
+
+[cols="a,a,a,a,a,a",options="unnumbered"]
+|===
+h| Role Name h| Name h| Description h| Mult h| Type h| Remarks
+
+| Class | PT_Locale | description of a locale | - | - | From ISO 19115-1
+| Value | language | designation of the locale language | 1 | LanguageCode | ISO 639-2 3-letter language codes.
+| Value | country | designation of the specific country of the locale language | 0..1 | CountryCode | ISO 3166-2 2-letter country codes
+| Value | characterEncoding | designation of the character set to be used to encode the textual value of the locale | 1 | MD_CharacterSetCode | UTF-8 is used in S-100
+
+|===
+
+The class PT_Locale is defined in ISO 19115-1. LanguageCode, CountryCode, and MD_CharacterSetCode are ISO codelists which are defined in a resource file in the S-100 Edition 5.0.0 Schemas distribution.
+
+[[sec_12.2]]
+=== Language
+
+The exchange language must be English. Other languages may be used
+as a supplementary option. National geographic names can be left in
+their original national language using the complex attribute
+*feature name*.
+
+Character strings must be encoded using the character set defined
+in ISO 10646-1, in Unicode Transformation Format-8 (UTF-8). A BOM
+(byte order mark) must not be used.
+
+[%portrait]
+<<<

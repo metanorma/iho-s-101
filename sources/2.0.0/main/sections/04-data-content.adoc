@@ -1,0 +1,525 @@
+
+[[sec_4]]
+== Data Content and Structure
+
+[[sec_4.1]]
+=== Introduction
+
+An S-101 ENC is a feature-based product. The content information is
+described in terms of a General Feature Model and a Feature Catalogue.
+
+[[sec_4.2]]
+=== Application Schema
+
+S-101 conforms to the General Feature Model (GFM) from S-100
+Part 3. The GFM is the conceptual model and the implementation is
+defined in the Feature Catalogue. The S-101 Application Schema is
+realised in the Feature Catalogue and the Product Specification only
+contains specific examples.
+
+[[sec_4.3]]
+=== Feature Catalogue
+
+[[sec_4.3.1]]
+==== Introduction
+
+The S-101 Feature Catalogue describes the feature types, information
+types, attributes, attribute values, associations and roles which
+may be used in an ENC.
+
+The S-101 Feature Catalogue is available in an XML document which
+conforms to the S-100 XML Feature Catalogue Schema and can be downloaded
+from the IHO website. S-101 <<annexA>> - Data Classification and Encoding
+Guide, constitutes a human readable interpretation of the Feature
+Catalogue.
+
+[[sec_4.3.2]]
+==== Feature types
+
+Details of feature types can be found in <<annexA>> -
+_Data Classification and Encoding Guide_, clause 2.1 and
+Sections 3-23.
+
+[[sec_4.3.2.1]]
+===== Geographic
+
+Geographic (geo) feature types form the principal content of the ENC
+and are fully defined by their associated attributes and information
+types.
+
+Details of geographic feature types can be found in <<annexA>> -
+_Data Classification and Encoding Guide_, clause 2.1 and
+Sections 4-22.
+
+[[sec_4.3.2.1.1]]
+====== Skin of the Earth
+
+Details of features comprising the Skin of the Earth can be found
+in <<annexA>> - _Data Classification and Encoding Guide_, clause 2.5.1.1.
+
+[[sec_4.3.2.2]]
+===== Metadata features
+
+Details of metadata feature types can be found in <<annexA>> -
+_Data Classification and Encoding Guide_, clause 2.1 and Section 3.
+
+[[sec_4.3.2.3]]
+===== Cartographic
+
+Details of cartographic feature types can be found in <<annexA>> -
+_Data Classification and Encoding Guide_, clause 2.1 and Section 23.
+
+[[sec_4.3.3]]
+==== Feature relationships
+
+A feature relationship links instances of one feature type with instances
+of the same or a different feature type. There are three types of
+defined feature relationships in S-101 as described in the following
+sub clauses.
+
+[[sec_4.3.3.1]]
+===== Feature association
+
+A feature association is used to describe a relationship between two
+feature types that involves connections between their instances.
+
+[example]
+A *Caution Area* feature provides additional caution information to
+the *Archipelagic Sea Lane* feature. An association named
+*Caution Area Association* is used to relate the two features; roles
+are used to convey the meaning of the relationship.
+
+[[fig_4-1]]
+.Feature association
+image::figure-4-1.jpeg[]
+
+[[sec_4.3.3.2]]
+===== Aggregation
+
+An aggregation is a relationship between two or more feature types
+where the aggregation is made up of component features.
+
+[example]
+An *Island Group* feature may be composed of multiple *Land Area*
+features to indicate the name of a group of islands.
+
+[[fig_4-2]]
+.Aggregation
+image::figure-4-2.jpeg[]
+
+[[sec_4.3.3.3]]
+===== Composition
+
+A composition is a strong aggregation. In a composition, if a container
+feature is deleted then all of its containee features are deleted
+as well.
+
+[example]
+If a feature type that is considered a structure feature, such as
+a beacon, is deleted, then all of its component feature types that
+make up the equipment composition, such as lights and fog signals
+must be deleted as they make up the *Structure/Equipment* Composition.
+
+[[fig_4-3]]
+.Composition
+image::figure-4-3.jpeg[]
+
+[[sec_4.3.4]]
+==== Information types
+
+Details of information types can be found in <<annexA>> -
+_Data Classification and Encoding Guide_, clauses 2.3, 2.4.7 and
+Section 24.
+
+[[sec_4.3.4.1]]
+===== Spatial quality
+
+Spatial quality attributes are carried in an information class called
+*Spatial Quality*. Details of spatial quality can be found in <<annexA>>
+- _Data Classification and Encoding Guide_, clauses 2.4.7 and 24.5.
+
+[[sec_4.3.5]]
+==== Information relationships
+
+An information relationship links instances of an information type
+with instances of a feature type, spatial object, or information type.
+Just as with feature relationships, the relationship may take the
+form of an association, aggregation, or composition.
+
+[[sec_4.3.5.1]]
+===== Information association
+
+An information association is used to describe a relationship between
+a feature type, spatial object, or information type on one side and
+an information type on the other side.
+
+[example]
+A *Nautical Information* information type provides additional information
+to any geo feature using an information association called
+*additional information*.
+
+[[fig_4-4]]
+.Information association
+image::figure-4-4.jpeg[]
+
+[[sec_4.3.5.2]]
+===== Spatial associations
+
+The information association "Spatial association" provides the binding
+between spatial objects and spatial quality. It is noted here because
+the S-100 Feature Catalogue model is incapable of describing this
+relationship.
+
+Any spatial type other than surface may be associated with spatial
+quality (no use case for associating surfaces with spatial quality
+attributes has been identified). Vertical uncertainty is prohibited
+for curves as this dimension is not supported by curves.
+
+[[sec_4.3.6]]
+==== Attributes
+
+S-101 defines attributes as either simple or complex.
+
+[[sec_4.3.6.1]]
+===== Simple attributes
+
+S-101 uses nine types of simple attributes; these types are listed
+in <<annexA>> - _Data Classification and Encoding Guide_, clause 2.4.2.
+Descriptions of the simple attributes included in S-101 can be found
+in <<annexA>>, Sections 27, 28 and 30.
+
+[[sec_4.3.6.2]]
+===== Complex attributes
+
+Complex attributes are aggregations of other attributes that are either
+simple or complex. The aggregation is defined by means of attribute
+bindings. Examples of modelling complex attributes can be found in
+S-100 Part 2a, Appendix 2a-A. Descriptions of the complex attributes
+included in S-101 can be found in <<annexA>> -
+_Data Classification and Encoding Guide_, Section 29.
+
+[[sec_4.3.6.3]]
+===== Attribute suppression
+
+The S-100 XML Feature Catalogue Schema allows for attributes to be
+suppressed in the end-user system Pick Report using the attribute
+_attributeVisibility_ for the class S100_FC_AttributeBinding
+(see S-100 Part 5, Appendix 5-A, Tables 5-A-16 and 5-A-21).
+These attributes are generally used to assist with optimum display
+of features in ECDIS systems; or to perform other administrative roles.
+For S-101, these attributes are identified in the Feature Catalogue
+by population of _attributeVisibility_ value "privateVisibility".
+
+The following is the list of S-101 attributes that will be suppressed
+in the ECDIS Pick Report:
+
+[cols="3",options="unnumbered",grid=none,frame=none]
+|===
+| *default clearance depth* | *display priority*            | *drawing index*
+| *drawing instruction*     | *file locator*                | *flare bearing*
+| *in the water*            | *interoperability identifier* | *major light*
+| *name usage*              | *sector arc extension*        | *sector line length*
+| *surrounding depth*       |                               |
+|===
+
+[[sec_4.4]]
+=== Feature Object Identifier
+
+Each real world feature within an ENC must have a unique universal
+Feature Object Identifier. This identifier is formed by the binary
+concatenation of the contents of the subfields of the "Feature Object
+Identifier" [FOID] field. Information types must not have a FOID.
+
+The FOID may be used to identify that the same feature has instances
+in separate datasets. For example, the same feature included in different
+optimum display scale datasets or a feature being split by the ENC
+dataset limits within the same optimum display scale.
+
+FOIDs must not be repeated in a dataset. Where a real-world feature
+has multiple parts within a single ENC dataset due to ENC dataset
+limit truncations, the feature will reference each spatial part of
+the feature within the dataset. This is accomplished in the
+ISO/IEC 8211 encoding by including a Spatial Association for each
+disjoint component. When a feature's geometry is split each component
+must be represented by a separate spatial feature that the feature
+refers to.
+
+Where a real-world feature is repeated in multiple datasets of different
+optimum display scale, the FOID should be repeated for each instance
+of the feature. Where this occurs, all instances of the geo feature
+must be identical, that is same feature class and attribute values.
+
+[[sec_4.5]]
+=== Dataset
+
+[[sec_4.5.1]]
+==== Introduction
+
+A dataset is a grouping of features, attributes, geometry and metadata
+which comprises a specific coverage.
+
+[[sec_4.5.2]]
+==== Dataset rules
+
+In order to facilitate the efficient processing of ENC data the geographic
+coverage of a given *optimum display scale* may be split into multiple
+datasets (see <<sec_4.5.4>>).
+
+The discovery metadata of a dataset must list all the *Data Coverage*
+features contained within that dataset and their assigned scale attributions.
+
+An ENC update dataset must not change the limit of a *Data Coverage*
+feature for the base ENC dataset. Where the limit of a *Data Coverage*
+feature for a base ENC dataset is to be changed, this must be done
+by issuing a New Edition of the dataset.
+
+A dataset must not cross the 180° meridian.
+
+[[sec_4.5.3]]
+==== Data Coverage rules
+
+* All base datasets (new dataset, new edition and re-issue) must contain
+at least one *Data Coverage* feature.
+* The data boundary of the base dataset is defined by the extent of
+the *Data Coverage* features and must be contained within the bounding
+box.
+* *Data Coverage* features from different datasets covering the same
+geographical area must have non-overlapping display scale ranges
+(see <<sec_4.6>>). The scale ranges should, as much as possible,
+be continuous.
+
+[ Exception: At areas of agreed national data limits, where, if it
+is difficult to achieve a perfect join, an overlapping buffer zone
+of up to 5 metres may be used. For this situation, there must be no
+gaps in data between the adjoining datasets.]
+
+Data Producers should develop consistent S-101 ENC schemes carefully
+and try to avoid complex situations, using a regional approach where
+possible.
+
+[[fig_4-5]]
+.Example of Datasets with single Data Coverage feature
+image::figure-4-5.png[]
+
+* When a dataset has multiple *Data Coverage* features:
+.. The **minimum display scale**s must all be the same
+.. The **drawing index**es*, where populated, must be the same.
+.. The **optimum display scale**s may be different; and
+.. The **maximum display scale**s may be different.
+
+* When a dataset has multiple *Data Coverage* features then the
+*optimum display scale* of the dataset must be equal to the largest
+*optimum display scale* of the *Data Coverage* features.
+
+\* The attribute *drawing index* is required where the datasets intended
+to form a seamless presentation in ECDIS do not share a common minimum
+display scale. The attribute *drawing index* is also required if the
+dataset may need to form a seamless presentation with one or more
+S-57 datasets, in which case the value should correspond to the usage
+band of the adjoining or overlapping S-57 dataset(s). See S-101 <<annexA>>
+- _Data Classification and Encoding Guide_, clauses 3.5 and 28.3.
+
+[[fig_4-6]]
+.Dataset with multiple Data Coverage features
+image::figure-4-6.png[]
+
+[[sec_4.5.4]]
+==== Dataset size
+
+===== Datasets must not exceed 10 MB.
+
+Update datasets should not normally be larger than 50 kb and must
+not be larger than 200 kb.
+
+[[sec_4.6]]
+=== Display scale range
+
+A scale range of a dataset is used to indicate a range of scales between
+which a producer considers the data is intended for use. (See <<sec_4.7>>
+for how datasets are to be loaded and unloaded within a navigation
+system.) The smallest scale is defined by the *minimum display scale*
+and the largest scale by the *optimum display scale*.
+The *maximum display scale* indicates the scale that the Data Producer
+considers that the "grossly overscaled" warning should be triggered.
+These scales must be set at one of the scales specified in <<sec_3>>
+(spatial resolutions).
+
+There must not be overlapping scale ranges (that is, overlaps between
+values of *optimum display scale* and *minimum display scale*) between
+datasets covering the same geographical area.
+
+When the mariner's selected viewing scale (MSVS) is smaller than the
+value indicated by *minimum display scale*, features within the
+*Data Coverage* feature are not displayed, except where the System
+Database does not contain a dataset covering the area at a smaller
+scale, in which case the dataset will be continuously displayed.
+
+When the MSVS is larger than the value indicated by
+*optimum display scale*, the overscale indication, in the form of
+an overscale factor covering the area that is overscale, must be shown.
+When at own ship's position a dataset with a larger
+*optimum display scale* than the MSVS is available, an indication
+is required and must be shown on the same screen as the chart display.
+
+When the MSVS is larger than the value indicated by
+*maximum display scale*, the overscale indication, in the form of
+an overscale factor and, additionally, a pattern covering the area
+that is overscale, must be shown to indicate that the data is
+"grossly overscaled".
+
+Within ENC schemes it is preferable that the scale ranges for different
+datasets covering the same geographical area to be continuous
+(see <<sec_4.5.3>>). However, where the scale ranges are non-continuous,
+the ECDIS will display the larger scale dataset until the MSVS is
+equal to or at smaller scale than the *optimum display scale* of the
+next smaller scale dataset.
+
+[[sec_4.7]]
+=== Dataset loading and display order
+
+New algorithms for dataset loading and unloading; and rendering (display)
+within a navigation system are prescribed in S-101 in order for the
+appropriate ENC to be viewed at the mariner's selected viewing scale.
+This will simplify the process for navigation systems, giving clear
+and concise rules on how and when data is loaded and unloaded; and
+the order at which datasets are to be displayed. The concept of navigation
+purpose is restricted for use in presenting ENCs in a visual catalogue
+and must not be used for determining which dataset should be displayed.
+
+Details of the dataset loading and data display algorithms are available
+in S-98 Annex C, Appendix C-5 - _Dataset Loading Algorithm
+(Dataset Selection) and Dataset Display Order (Dataset Rendering)_.
+
+NOTE: The algorithms only address loading and display related to visualization
+within the system graphics window. The application may need to load
+other datasets to satisfy requirements related to alerts processing,
+such as MSC.530(106) A11.2.
+
+NOTE: Light sectors. It should be possible, on request, for the mariner
+to be capable of identifying the colour of the sectors affecting the
+ship, even if the lights involved are off the display.
+
+[[sec_4.7.1]]
+==== Dataset loading algorithm (dataset selection)
+
+See S-98 Annex C, Appendix C-5 - _Dataset Loading Algorithm
+(Dataset Selection) and Dataset Display Order (Dataset Rendering)_
+(in development).
+
+[[sec_4.7.2]]
+==== Dataset display order (dataset rendering)
+
+See S-98 Annex C, Appendix C-5 - _Dataset Loading Algorithm
+(Dataset Selection) and Dataset Display Order (Dataset Rendering)_
+(in development).
+
+<<fig_4-7;to!fig_4-10>> below are intended to assist in understanding
+how the datasets should be displayed in the system graphics window:
+
+[[fig_4-7]]
+.Dataset loading - scenario 1
+image::figure-4-7.jpeg[]
+
+[[fig_4-8]]
+.Dataset loading - scenario 2
+image::figure-4-8.png[]
+
+[[fig_4-9]]
+.Dataset loading - scenario 3
+image::figure-4-9.jpeg[]
+
+[[fig_4-10]]
+.Dataset loading - scenario 4
+image::figure-4-10.jpeg[]
+
+[[sec_4.8]]
+=== Geometry
+
+[[sec_4.8.1]]
+==== S-100 level 3a geometry
+
+The underlying geometry of an ENC is constrained to level 3a which
+supports 0, 1 and 2 dimensional features (points, curves and surfaces)
+as defined by S-100 Part 7 - _Spatial Schema_.
+
+Level 3a is described by the following constraints:
+
+* Each curve must reference a start and end point
+(they may be the same).
+* Curves must not self intersect. See <<fig_4-11>>.
+* Areas are represented by a closed loop of curves beginning and ending
+at a common point.
+* In the case of areas with holes, all internal boundaries must be
+completely contained within the external boundary and the internal
+boundaries must not intersect each other or the external boundary.
+Internal boundaries may touch other internal boundaries or the external
+boundary tangentially (that is at one point) as shown in <<fig_4-12>>.
+* The outer boundary of a surface must be in a clockwise direction
+(surface to the right of the curve) and the curve orientation positive.
+The inner boundary of a surface must be in a counter-clockwise direction
+(surface to the right of the curve) and the curve orientation negative.
+See <<fig_4-13>>.
+
+S-101 further constrains Level 3a with the following:
+
+* Coincident linear geometry must be avoided when there is a dependency
+between features.
+* The interpolation of GM_CurveSegment must be loxodromic.
+* Linear geometry is defined by curves which are made of curve segments.
+Each curve segment contains the geographic coordinates as control
+points and defines an interpolation method between them. The distance
+between two consecutive control points must not be less than 0.3 mm
+at the optimum display scale of the data.
+* A feature may reference multiple geometries but must only reference
+geometries of a single geometric primitive (point, pointset,
+curve or surface).
+
+The following exception applies to S-101:
+
+* The use of coordinates is restricted to two dimensions, except in
+the case of features encoded using GM_Point (point) and GM_Multipoint
+(pointSet) which may have three dimensional coordinates.
+
+[[fig_4-11]]
+.Self intersect examples
+image::figure-4-11.png[]
+
+[[fig_4-12]]
+.Area Holes
+image::figure-4-12.png[]
+
+[[fig_4-13]]
+.Boundary direction
+image::figure-4-13.png[]
+
+[[sec_4.8.2]]
+==== Use of scale properties for feature to geometry relations
+
+The attributes _scaleMinimum_ and _scaleMaximum_ of class S100_GF_SpatialAttributeType are not used. Therefore, the encoding must always encode the values 'Not Applicable'.
+
+Scale dependent depiction for the end user system is controlled by
+the thematic attribute *scale minimum* for the feature type only.
+
+[[sec_4.8.3]]
+==== Masking
+
+In certain circumstances, the symbolisation of a curve may need to
+be suppressed. This is done using the Masked Spatial Type [MASK] field
+of the Feature Type record. The Mask Update Instruction [MUIN] must
+be set to {1} and Referenced Record Name [RRNM] and Referenced Record
+Identifier [RRID] fields must be populated with the values of the
+referenced spatial record. The Mask Indicator [MIND] subfield must
+be set to either {1} or {2} (see <<sec_B-5.1.33>>).
+
+<<fig_4-14>> is an example without masking and <<fig_4-15>> is an
+example of a masked edge between *River* and *Depth Area* features,
+where the seaward edge of the *River* should be masked. In this example
+MIND is set to {2} - suppress portrayal.
+
+[[fig_4-14]]
+.Example without masking
+image::figure-4-14.jpeg[]
+
+[[fig_4-15]]
+.Example with masking
+image::figure-4-15.jpeg[]

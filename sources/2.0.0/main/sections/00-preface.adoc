@@ -1,0 +1,94 @@
+
+[.preface]
+== Document History
+
+Changes to this Specification are coordinated by the S-101 Project
+Team (S-101PT), a Project Team under the IHO S-100 Working Group (S-100WG).
+New editions will be made available via the IHO web site. Maintenance
+of the Specification shall conform to IHO Resolution 2/2007 (as amended).
+
+[cols="4",options="unnumbered"]
+|===
+h| Version Number h| Date h| Approved By h| Purpose
+
+| Phase 1       | May 2009          | J. Powell     | Initial Draft.
+| Phase 1       | June 2010         | J. Powell     | Merged all the phases back into a single document.
+| Phase 1       | July 2010         | J. Powell     | Added comments from AHO.
+| Phase 1       | September 2010    | J. Powell     | Revised based on FG discussions.
+| Phase 1       | December 2010     | J. Powell     | Revised based on TSMAD 21.
+| Phase 1       | February 2011     | J.Powell      | Revised based on comments to phase 1 from 2J, FR, AU.
+| Phase 2       | April 2011        | J.Powell      | Revised based on comments from TSMAD22. Changed version to 0.1.0 to reflect movement t    o phase 2.
+| Phase 2       | November 2011     | J.Powell      | Revisions made based on comments from discussion papers circulated post TSMAD 22.
+| Phase 3       | February          | J.Powell      | Revisions made based on TSMAD23 decisions.
+| Phase 3       | May 2012          | J.Powell      | Added TSMAD24 Decisions into document.
+| Phase 4       | August 2012       | J.Powell      | Edited document to reflect TSMAD24 decisions.
+| Phase 4       | November 2012     | J.Powell      | Added comments from October 2012 round of TSMAD comments.
+| Initial Draft | March 2013        | J.Powell      | Added comments from January 2013 round of TSMAD comments.
+| Initial Draft | June 2013         | J.Powell      | Added decisions from TSMAD26.
+| Initial Draft | December 2013     | J.Powell      | Added in decisions from TSMAD27.
+| Draft 0.0.0   | April/May 2014    | S-100WG       | Included S-101 portrayal. Most of the portrayal is covered by the catalogue, so much of the old S-52 guidance goes into the implementation guidance annex.
+| Draft 0.0.1   | February 2015     | S-100WG       | Added adjudicated comments from TSMAD29.
+| Draft 0.0.2   | January 2016      | S-100WG       | Incorporated editorial issues that were noted in draft 0.0.1. Also includes a revised metadata section.
+| Draft 0.0.2   | July 2017         | S-100WG       | Incorporated the decisions from S101PT1 and updated some editorial issues. Numbering remained the same to be consistent with the DCEG numbering.
+| Draft 1.0.0   | October 2018      | S-100WG       | Editorial S-101PT review and clean-up in preparation for final approval to publish as Edition 1.0.0.
+| Draft 1.1.0   | December 2022     | S-100WG       | New version for implementation and testing, updated to align with S-100 Edition 5.0.0.
+| Draft 1.2.0   | March 2024        | S-100WG       | New version for implementation and testing, updated to align with S-100 Edition 5.1.0.
+| Draft 2.0.0   | December 2024     | IHO CL 02-2025 | Initial operational Edition of S-101, updated to align with S-100 Edition 5.2.0.
+
+|===
+
+[.preface]
+== Summary of Substantive Changes from Edition 2.0.0
+
+*Bold* references in the Clauses Effected column indicate the principle
+sections/clauses that are impacted by the described change.
+
+[cols="a,a",options="unnumbered"]
+|===
+h| Change Summary h| Clauses Affected
+
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+| |
+|===
+
+== Introduction
+
+S-101 is the Electronic Navigational Chart (ENC) Product Specification,
+produced by the International Hydrographic Organization. S-101 is
+designed to allow content, content definition (Feature Catalogues)
+and presentation (Portrayal Catalogues) to be updateable as
+"Plug and Play" system implementations.
+
+Based on the IHO Universal Hydrographic Data Model S-100, S-101 includes
+all the necessary components for both Hydrographic Offices to produce
+Electronic Navigational Charts (ENCs); and marine navigation systems
+(principally Electronic Chart Display and Information Systems (ECDIS))
+to be able to ingest and properly display them. This Product Specification
+is designed to be flexible with the introduction of machine-readable
+Feature and Portrayal Catalogues that will allow for managed change;
+and will enable the introduction of new navigationally significant
+features and their portrayal using a "just in time" methodology.

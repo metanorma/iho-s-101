@@ -1,0 +1,24 @@
+
+[[annexA]]
+[appendix]
+== Data Classification and Encoding Guide
+
+The "Data Classification and Encoding Guide" has been developed to
+provide consistent, standardized instructions for encoding S-100 compliant
+ENC data. This document has been laid out, as far as possible, along
+the lines of the IHO publication S-4, Part B "Chart Specifications
+of the IHO - Medium and Large-Scale National and International (INT)
+Charts".
+
+The purpose of the Data Classification and Encoding Guide is to facilitate
+S-101 encoding to meet IHO standards for the proper display of ENC
+in an S-100 based marine navigation system such as ECDIS. The document
+describes how to encode information that the cartographer considers
+relevant to an ENC. The content of an ENC is at the discretion of
+the Producing Authority provided that the conventions described within
+this document are followed. A "Producing Authority" is a Hydrographic
+Office (HO) or an organization authorized by a government, HO or other
+relevant government institution to produce ENCs.
+
+The S-101 Data Classification and Encoding Guide can be found in the
+Standards and Publications page of the IHO web site, http://www.iho.int/[http://www.iho.int].

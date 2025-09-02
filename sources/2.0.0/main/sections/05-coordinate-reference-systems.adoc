@@ -1,0 +1,145 @@
+
+[[sec_5]]
+== Coordinate Reference Systems (CRS)
+
+[[sec_5.1]]
+=== Introduction
+
+An ENC dataset must define at least one compound CRS, which must be
+composed of one geodetic CRS and one vertical CRS. All compound CRSs
+within the same dataset must use the same geodetic CRS.
+
+NOTE: The vertical CRS described in <<sec_5.3>> below does not apply
+to depths, heights, elevations and vertical clearances where the information
+is encoded as an attribute rather than the vertical component (Z-coordinate)
+of the CRS. This vertical datum information is included in the ENC
+dataset using the meta features *Sounding Datum* and
+*Vertical Datum of Data*. See S-101 <<annexA>> - _Data Classification
+and Encoding Guide_ clauses 3.9 and 3.10.
+
+[[sec_5.2]]
+=== Horizontal Coordinate Reference System
+
+For ENC the horizontal CRS must be EPSG:4326 (WGS84). The full reference
+to EPSG:4326 can be found at http://www.epsg-registry.org/[www.epsg-registry.org].
+
+*Horizontal Coordinate Reference System:*:: EPSG:4326 (WGS84)
+
+*Projection:*:: None
+
+*Temporal reference system:*:: Gregorian calendar
+
+*Coordinate Reference System registry:*::
+http://www.epsg-registry.org/[EPSG Geodetic Parameter Registry]
+
+*Date type (according to ISO 19115):*:: 002- publication
+
+*Responsible party:*:: International Organisation of Oil and
+Gas Producers (IOGP)
+
+*URL:*:: http://www.iogp.org/[http://www.iogp.org]
+
+[[sec_5.3]]
+=== Vertical CRS for Soundings
+
+For ENC the vertical CRS must be in metres and is only relevant to
+soundings (S-101 features *Sounding* and *Depth - No Bottom Found*,
+see S-101 <<annexA>> - _Data Classification and Encoding Guide_
+clause 3.9), where the depth information is stored in the Z-coordinate.
+Depths are represented by positive values, while negative values indicate
+intertidal (drying) soundings.
+
+Although all coordinates in a dataset must refer to the same geodetic
+CRS, different Vertical Datums can be used for the depth component
+of a coordinate tuple. Therefore the vertical CRS can be repeated.
+For each vertical CRS a unique identifier is defined. Those identifiers
+will be used to indicate which Vertical CRS is used.
+
+The encoding for the Coordinate Reference System record fields can
+be found at <<annexB>>, <<sec_B-5.1.9;to!sec_B-5.1.12>>; and is demonstrated
+with the following examples. The example at <<table_5-1>> specifies a
+compound CRS. The first component is a 2D Geographic CRS (WGS84).
+The second component is a Vertical CRS for depth using the Vertical
+Datum: Lowest Astronomical Tide.
+
+[[table_5-1]]
+.Compound CRS (WGS84 and Lowest Astronomical Tide)
+[cols="a,a,a,a"]
+|===
+h| Field h| Subfield h| Value h| Description
+
+| *CSID* |       |                                  | *Coordinate Reference System Record Identifier*
+|        | RCNM  | 15                               | Record Name (15 = Coordinate Reference System Identifier)
+|        | RCID  | 1                                | Record Identification Number
+|        | NCRC  | 2                                | Number of CRS Components
+| *CRSH* |       |                                  | *Coordinate Reference System Header*
+|        | CRIX  | 1                                | CRS Index
+|        | CRST  | 1                                | CRS Type (1 = 2D Geographic)
+|        | CSTY  | 1                                | Coordinate System Type (1 = Ellipsoidal CS)
+|        | CRNM  | WGS84                            | CRS Name
+|        | CRSI  | 4326                             | CRS Identifier
+|        | CRSS  | 2                                | CRS Source (2 = EPSG)
+|        | SCRI  |                                  | CRS Source Information (omitted)
+| *CRSH* |       |                                  | *Coordinate Reference System Header*
+|        | CRIX  | 2                                | CRS Index
+|        | CRST  | 5                                | CRS Type (5 = Vertical)
+|        | CSTY  | 3                                | Coordinate System Type (3 = Vertical)
+|        | CRNM  | Depth - lowest astronomical tide | CRS Name
+|        | CRSI  |                                  | CRS Identifier (omitted)
+|        | CRSS  | 255                              | CRS Source (255 = Not Applicable)
+|        | SCRI  |                                  | CRS Source Information (omitted)
+| *CSAX* |       |                                  | *Coordinate System Axes*
+|        | AXTY  | 12                               | Axis Type (12 = Gravity Related Depth)
+|        | AXUM  | 4                                | Axis Unit of Measure (4 = Metres)
+| *VDAT* |       |                                  | *Vertical Datum*
+|        | DTNM  | lowest astronomical tide         | Datum Name
+|        | DTID  | 23                               | Datum Identifier (23 = Lowest Astronomical Tide)
+|        | DTSR  | 2                                | Datum Source (2 = Feature Catalogue)
+|        | SCRI  |                                  | Datum Source Information (omitted)
+|===
+
+The example at <<table_5-2>> is similar to the above except that its
+second component is encoded with the Vertical Datum: Mean Sea Level.
+
+[[table_5-2]]
+.Compound CRS (WGS84 and Mean Sea Level)
+[cols="a,a,a,a"]
+|===
+h| Field h| Subfield h| Value h| Description
+
+| *CSID* |       |                        | *Coordinate Reference System Record Identifier*
+|        | RCNM  | 15                     | Record Name (15 = Coordinate Reference System Identifier)
+|        | RCID  | 1                      | Record Identification Number
+|        | NCRC  | 2                      | Number of CRS Components
+| *CRSH* |       |                        | *Coordinate Reference System Header*
+|        | CRIX  | 1                      | CRS Index
+|        | CRST  | 1                      | CRS Type (1 = 2D Geographic)
+|        | CSTY  | 1                      | Coordinate System Type (1 = Ellipsoidal CS)
+|        | CRNM  | WGS84                  | CRS Name
+|        | CRSI  | 4326                   | CRS Identifier
+|        | CRSS  | 2                      | CRS Source (2 = EPSG)
+|        | SCRI  |                        | CRS Source Information (omitted)
+| *CRSH* |       |                        | *Coordinate Reference System Header*
+|        | CRIX  | 2                      | CRS Index
+|        | CRST  | 5                      | CRS Type (5 = Vertical)
+|        | CSTY  | 3                      | Coordinate System Type (3 = Vertical)
+|        | CRNM  | Depth - mean sea level | CRS Name
+|        | CRSI  |                        | CRS Identifier (omitted)
+|        | CRSS  | 255                    | CRS Source (255 = Not Applicable)
+|        | SCRI  |                        | CRS Source Information (omitted)
+| *CSAX* |       |                        | *Coordinate System Axes*
+|        | AXTY  | 12                     | Axis Type (12 = Gravity Related Depth)
+|        | AXUM  | 4                      | Axis Unit of Measure (4 = Metres)
+| *VDAT* |       |                        | *Vertical Datum*
+|        | DTNM  | mean sea level         | Datum Name
+|        | DTID  | 3                      | Datum Identifier (3 = Mean Sea Level)
+|        | DTSR  | 2                      | Datum Source (2 = Feature Catalogue)
+|        | SCRI  |                        | Datum Source Information (omitted)
+|===
+
+NOTE: For S-101, the vertical CRS encoded in the Coordinate Reference
+System record fields for soundings is not utilized by the ECDIS in
+conveying the sounding datum information for an ENC to the Mariner
+in ECDIS. This information is provided instead using the S-101 meta
+feature *Sounding Datum* (see S-101 <<annexA>> -
+_Data Classification and Encoding Guide_, clause 3.9).

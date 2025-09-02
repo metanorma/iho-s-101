@@ -1,0 +1,79 @@
+
+[[sec_3]]
+== Dataset Identification
+
+A dataset that conforms to this Product Specification may be identified
+by its discovery metadata as defined in <<sec_12>>.
+
+*Title:*:: Electronic Navigational Chart
+
+*Alternate Title:*:: ENC
+
+*Abstract:*:: ENCs must be produced in accordance with the rules defined
+in the S-101 Product Specification. The S-101 Product Specification
+contains all the information necessary to enable Hydrographic Offices
+to produce a consistent ENC; and manufacturers to use that data within
+navigation systems.
+
+*Topic Category:*:: Transportation
+(ISO 19115-1 MD_TopicCategoryCode 018)
+
+*Geographic Description:*:: Areas specific to marine navigation
+
+*Spatial Resolution:*:: An ENC dataset and *Data Coverage* features
+must carry a value for optimum display scale. Each *Data Coverage*
+feature must also carry a value for maximum and minimum display scale.
+Values for optimum and minimum display scales must be taken from the
+following Table:
+
+[[table_3-1]]
+.ENC Minimum Display and Optimum Display Scales*
+[cols=1]
+|===
+h| Scale
+
+| NULL (only allowed on minimum display scale (data will continue
+to be displayed at all smaller scales))
+| stem:[1 : 10000000]
+| stem:[1 : 3500000]
+| stem:[1 : 1500000]
+| stem:[1 : 700000]
+| stem:[1 : 350000]
+| stem:[1 : 180000]
+| stem:[1 : 90000]
+| stem:[1 : 45000]
+| stem:[1 : 22000]
+| stem:[1 : 12000]
+| stem:[1 : 8000]
+| stem:[1 : 4000]
+| stem:[1 : 3000]
+| stem:[1 : 2000]
+| stem:[1 : 1000] (only allowed on optimum and maximum display scale)
+|===
+
+*Purpose:*:: Electronic Navigational Chart for use in Electronic Chart
+Display and Information Systems
+
+*Language:*:: English (Mandatory), other (Optional)
+
+*Classification:*::
++
+--
+Data may be classified as one of the following:
+
+. Unclassified;
+. Restricted;
+. Confidential;
+. Secret;
+. Top Secret;
+. Sensitive but Unclassified;
+. For Official Use Only;
+. Protected; or
+. Limited Distribution.
+--
+
+*Spatial Representation Type:*:: Vector
+
+*Point of Contact:*:: Producing Agency
+
+*Use Limitation:*:: Not to be used for navigation on land

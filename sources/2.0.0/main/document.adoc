@@ -1,0 +1,47 @@
+= IHO Electronic Navigational Chart (ENC) Product Specification
+:series: S
+:docnumber: 101
+:doctype: standard
+:edition: 2.0.0
+:language: en
+:published-date: 2024-12-01
+:copyright-year: 2024
+:status: in-force
+:committee: ircc
+:workgroup: ibsc
+:mn-document-class: iho
+:mn-output-extensions: xml,html,doc,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:imagesdir: images
+
+
+include::sections/00-preface.adoc[]
+
+include::sections/01-overview.adoc[]
+
+include::sections/02-specification-scope.adoc[]
+
+include::sections/03-dataset-identification.adoc[]
+
+include::sections/04-data-content.adoc[]
+
+include::sections/05-coordinate-reference-systems.adoc[]
+
+include::sections/06-data-quality.adoc[]
+
+include::sections/07-data-capture.adoc[]
+
+include::sections/08-maintenance.adoc[]
+
+include::sections/09-portrayal.adoc[]
+
+include::sections/10-data-product-format.adoc[]
+
+include::sections/11-data-product-delivery.adoc[]
+
+include::sections/12-metadata.adoc[]
+
+include::sections/aa-data-classification.adoc[]
+
+include::sections/ab-data-product-format.adoc[]
