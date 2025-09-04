@@ -320,7 +320,7 @@ Within this document, this example would be indicated as
 [[sec_2.4.2]]
 ==== Simple attribute types
 
-Each simple attribute in S-101 is assigned to one of 9types:
+Each simple attribute in S-101 is assigned to one of 9 types:
 
 EN:: Enumeration: A fixed list of valid identifiers of named literal
 values. Attributes of an enumeration type may only take values from
