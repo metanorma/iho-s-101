@@ -2,6 +2,7 @@
 :series: S
 :docnumber: 101
 :doctype: standard
+:title: IHO Electronic Navigational Chart (ENC) Product Specification
 :edition: 2.0.0
 :language: en
 :published-date: 2024-12-01

@@ -1,7 +1,10 @@
-= Annex A - Data Classification and Encoding Guide
+= IHO Electronic Navigational Chart (ENC) Product Specification
 :series: S
 :docnumber: 101
+:annex-id: A
 :doctype: standard
+:title: IHO Electronic Navigational Chart (ENC) Product Specification
+:title-annex: Data Classification and Encoding Guide
 :edition: 2.0.0
 :language: en
 :published-date: 2024-12-01
