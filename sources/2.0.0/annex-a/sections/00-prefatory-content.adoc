@@ -1,22 +1,161 @@
 
-[preface]
-== Document Control
+[.preface]
+== metanorma-extension
 
-[cols="61,156,71,71,90,127", options="unnumbered"]
-|===
-h| Version h| Version Type h| Date h| Approved By h| Signed Off By h| Role
+=== document history
 
-| 0.0.0 | Editing Committee Draft | Jan 2014 | TSMAD          | J. Wootton    | DCEG Coordinator
-| 0.0.1 | Baseline Version 1      | Apr 2014 | TSMAD          | J. Wootton    | DCEG Coordinator
-| 0.0.2 | Baseline Version        | Aug 2016 | S-101PT        | J. Wootton    | DCEG Coordinator
-| 0.0.2 | Baseline Version 2      | Mar 2017 | S-101PT        | J. Wootton    | DCEG Coordinator
-| 1.0.0 | Edition 1.0.0           | Dec 2018 | S-101PT        | A. Armstrong  | S-101PT Chair
-| 1.0.1 | Edition 1.0.1           | Mar 2021 | S-101PT        | T. Richardson | S-101PT Chair
-| 1.0.2 | Edition 1.0.2           | Mar 2022 | S-101PT        | T. Richardson | S-101PT Chair
-| 1.1.0 | Edition 1.1.0           | Mar 2023 | S-101PT        | T. Richardson | S-101PT Chair
-| 1.2.0 | Edition 1.2.0           | Mar 2024 | S-101PT        | T. Richardson | S-101PT Chair
-| 2.0.0 | Edition 2.0.0           | Dec 2024 | IHO CL 02-2025 | T. Richardson | S-101PT Chair
-|===
+[source,yaml]
+----
+- date:
+  - type: updated
+    value: 2014-01
+  edition: "0.0.0"
+  contributor:
+  - person:
+      name:
+        completename: J. Wootton
+        role: DCEG Coordinator
+  - organization:
+      name: International Hydrographic Organization
+      subdivision: Transfer Standard Maintenance and Application Development Working Group
+      abbreviation: TSMAD
+  amend:
+    - description: Editing Committee Draft
+- date:
+  - type: updated
+    value: 2014-04
+  edition: "0.0.1"
+  contributor:
+  - person:
+      name:
+        completename: J. Wootton
+        role: DCEG Coordinator
+  - organization:
+      name: International Hydrographic Organization
+      subdivision: Transfer Standard Maintenance and Application Development Working Group
+      abbreviation: TSMAD
+  amend:
+    - description: Baseline Version 1
+- date:
+  - type: updated
+    value: 2016-08
+  edition: "0.0.2"
+  contributor:
+  - person:
+      name:
+        completename: J. Wootton
+        role: DCEG Coordinator
+  - organization:
+      name: International Hydrographic Organization
+      subdivision: S-101 Project Team
+      abbreviation: S-101PT
+  amend:
+    - description: Baseline Version
+- date:
+  - type: updated
+    value: 2017-03
+  edition: "0.0.2"
+  contributor:
+  - person:
+      name:
+        completename: J. Wootton
+        role: DCEG Coordinator
+  - organization:
+      name: International Hydrographic Organization
+      subdivision: S-101 Project Team
+      abbreviation: S-101PT
+  amend:
+    - description: Baseline Version 2
+- date:
+  - type: updated
+    value: 2018-12
+  edition: "1.0.0"
+  contributor:
+  - person:
+      name:
+        completename: A. Armstrong
+        role: S-101PT Chair
+  - organization:
+      name: International Hydrographic Organization
+      subdivision: S-101 Project Team
+      abbreviation: S-101PT
+  amend:
+    - description: Edition 1.0.0
+- date:
+  - type: updated
+    value: 2021-03
+  edition: "1.0.1"
+  contributor:
+  - person:
+      name:
+        completename: T. Richardson
+        role: S-101PT Chair
+  - organization:
+      name: International Hydrographic Organization
+      subdivision: S-101 Project Team
+      abbreviation: S-101PT
+  amend:
+    - description: Edition 1.0.1
+- date:
+  - type: updated
+    value: 2022-03
+  edition: "1.0.2"
+  contributor:
+  - person:
+      name:
+        completename: T. Richardson
+        role: S-101PT Chair
+  - organization:
+      name: International Hydrographic Organization
+      subdivision: S-101 Project Team
+      abbreviation: S-101PT
+  amend:
+    - description: Edition 1.0.2
+- date:
+  - type: updated
+    value: 2023-03
+  edition: "1.1.0"
+  contributor:
+  - person:
+      name:
+        completename: T. Richardson
+        role: S-101PT Chair
+  - organization:
+      name: International Hydrographic Organization
+      subdivision: S-101 Project Team
+      abbreviation: S-101PT
+  amend:
+    - description: Edition 1.1.0
+- date:
+  - type: updated
+    value: 2024-03
+  edition: "1.2.0"
+  contributor:
+  - person:
+      name:
+        completename: T. Richardson
+        role: S-101PT Chair
+  - organization:
+      name: International Hydrographic Organization
+      subdivision: S-101 Project Team
+      abbreviation: S-101PT
+  amend:
+    - description: Edition 1.2.0
+- date:
+  - type: updated
+    value: 2024-12
+  edition: "2.0.0"
+  contributor:
+  - person:
+      name:
+        completename: T. Richardson
+        role: S-101PT Chair
+  - organization:
+      name: International Hydrographic Organization
+      subdivision: IHO CL 02-2025
+  amend:
+    - description: Edition 2.0.0
+----
 
 [preface]
 == Summary of Substantive Changes from Edition 2.0.0

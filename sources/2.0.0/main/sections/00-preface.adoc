@@ -1,41 +1,257 @@
 
 [.preface]
-== Document History
+== metanorma-extension
 
+[.boilerplate]
+--
 Changes to this Specification are coordinated by the S-101 Project
 Team (S-101PT), a Project Team under the IHO S-100 Working Group (S-100WG).
 New editions will be made available via the IHO web site. Maintenance
 of the Specification shall conform to IHO Resolution 2/2007 (as amended).
+--
 
-[cols="4",options="unnumbered"]
-|===
-h| Version Number h| Date h| Approved By h| Purpose
+=== document history
 
-| Phase 1       | May 2009          | J. Powell     | Initial Draft.
-| Phase 1       | June 2010         | J. Powell     | Merged all the phases back into a single document.
-| Phase 1       | July 2010         | J. Powell     | Added comments from AHO.
-| Phase 1       | September 2010    | J. Powell     | Revised based on FG discussions.
-| Phase 1       | December 2010     | J. Powell     | Revised based on TSMAD 21.
-| Phase 1       | February 2011     | J.Powell      | Revised based on comments to phase 1 from 2J, FR, AU.
-| Phase 2       | April 2011        | J.Powell      | Revised based on comments from TSMAD22. Changed version to 0.1.0 to reflect movement t    o phase 2.
-| Phase 2       | November 2011     | J.Powell      | Revisions made based on comments from discussion papers circulated post TSMAD 22.
-| Phase 3       | February          | J.Powell      | Revisions made based on TSMAD23 decisions.
-| Phase 3       | May 2012          | J.Powell      | Added TSMAD24 Decisions into document.
-| Phase 4       | August 2012       | J.Powell      | Edited document to reflect TSMAD24 decisions.
-| Phase 4       | November 2012     | J.Powell      | Added comments from October 2012 round of TSMAD comments.
-| Initial Draft | March 2013        | J.Powell      | Added comments from January 2013 round of TSMAD comments.
-| Initial Draft | June 2013         | J.Powell      | Added decisions from TSMAD26.
-| Initial Draft | December 2013     | J.Powell      | Added in decisions from TSMAD27.
-| Draft 0.0.0   | April/May 2014    | S-100WG       | Included S-101 portrayal. Most of the portrayal is covered by the catalogue, so much of the old S-52 guidance goes into the implementation guidance annex.
-| Draft 0.0.1   | February 2015     | S-100WG       | Added adjudicated comments from TSMAD29.
-| Draft 0.0.2   | January 2016      | S-100WG       | Incorporated editorial issues that were noted in draft 0.0.1. Also includes a revised metadata section.
-| Draft 0.0.2   | July 2017         | S-100WG       | Incorporated the decisions from S101PT1 and updated some editorial issues. Numbering remained the same to be consistent with the DCEG numbering.
-| Draft 1.0.0   | October 2018      | S-100WG       | Editorial S-101PT review and clean-up in preparation for final approval to publish as Edition 1.0.0.
-| Draft 1.1.0   | December 2022     | S-100WG       | New version for implementation and testing, updated to align with S-100 Edition 5.0.0.
-| Draft 1.2.0   | March 2024        | S-100WG       | New version for implementation and testing, updated to align with S-100 Edition 5.1.0.
-| Draft 2.0.0   | December 2024     | IHO CL 02-2025 | Initial operational Edition of S-101, updated to align with S-100 Edition 5.2.0.
-
-|===
+[source,yaml]
+----
+- date:
+  - type: updated
+    value: 2009-05
+  edition: "Phase 1"
+  contributor:
+  - person:
+      name:
+        completename: J. Powell
+  amend:
+    - description: Initial Draft.
+- date:
+  - type: updated
+    value: 2010-06
+  edition: "Phase 1"
+  contributor:
+  - person:
+      name:
+        completename: J. Powell
+  amend:
+    - description: Merged all the phases back into a single document.
+- date:
+  - type: updated
+    value: 2010-07
+  edition: "Phase 1"
+  contributor:
+  - person:
+      name:
+        completename: J. Powell
+  amend:
+    - description: Added comments from AHO.
+- date:
+  - type: updated
+    value: 2010-09
+  edition: "Phase 1"
+  contributor:
+  - person:
+      name:
+        completename: J. Powell
+  amend:
+    - description: Revised based on FG discussions.
+- date:
+  - type: updated
+    value: 2010-12
+  edition: "Phase 1"
+  contributor:
+  - person:
+      name:
+        completename: J. Powell
+  amend:
+    - description: Revised based on TSMAD 21.
+- date:
+  - type: updated
+    value: 2011-02
+  edition: "Phase 1"
+  contributor:
+  - person:
+      name:
+        completename: J. Powell
+  amend:
+    - description: Revised based on comments to phase 1 from 2J, FR, AU.
+- date:
+  - type: updated
+    value: 2011-04
+  edition: "Phase 2"
+  contributor:
+  - person:
+      name:
+        completename: J. Powell
+  amend:
+    - description: Revised based on comments from TSMAD22. Changed version to 0.1.0 to reflect movement to phase 2.
+- date:
+  - type: updated
+    value: 2011-11
+  edition: "Phase 2"
+  contributor:
+  - person:
+      name:
+        completename: J. Powell
+  amend:
+    - description: Revisions made based on comments from discussion papers circulated post TSMAD 22.
+- date:
+  - type: updated
+    value: 2012-02
+  edition: "Phase 3"
+  contributor:
+  - person:
+      name:
+        completename: J.Powell
+  amend:
+    - description: Revisions made based on TSMAD23 decisions.
+- date:
+  - type: updated
+    value: 2012-05
+  edition: "Phase 3"
+  contributor:
+  - person:
+      name:
+        completename: J.Powell
+  amend:
+    - description: Added TSMAD24 Decisions into document.
+- date:
+  - type: updated
+    value: 2012-08
+  edition: "Phase 4"
+  contributor:
+  - person:
+      name:
+        completename: J.Powell
+  amend:
+    - description: Edited document to reflect TSMAD24 decisions.
+- date:
+  - type: updated
+    value: 2012-11
+  edition: "Phase 4"
+  contributor:
+  - person:
+      name:
+        completename: J.Powell
+  amend:
+    - description: Added comments from October 2012 round of TSMAD comments.
+- date:
+  - type: updated
+    value: 2013-03
+  edition: "Initial Draft"
+  contributor:
+  - person:
+      name:
+        completename: J.Powell
+  amend:
+    - description: Added comments from January 2013 round of TSMAD comments.
+- date:
+  - type: updated
+    value: 2013-06
+  edition: "Initial Draft"
+  contributor:
+  - person:
+      name:
+        completename: J.Powell
+  amend:
+    - description: Added decisions from TSMAD26.
+- date:
+  - type: updated
+    value: 2013-12
+  edition: "Initial Draft"
+  contributor:
+  - person:
+      name:
+        completename: J.Powell
+  amend:
+    - description: Added in decisions from TSMAD27.
+- date:
+  - type: updated
+    value: 2014-05
+  edition: "Draft 0.0.0"
+  contributor:
+  - organization:
+      name: International Hydrographic Organization
+      subdivision: S-100 Working Group
+      abbreviation: S-100WG
+  amend:
+    - description: Included S-101 portrayal. Most of the portrayal is covered by the catalogue, so much of the old S-52 guidance goes into the implementation guidance annex.
+- date:
+  - type: updated
+    value: 2015-02
+  edition: "Draft 0.0.1"
+  contributor:
+  - organization:
+      name: International Hydrographic Organization
+      subdivision: S-100 Working Group
+      abbreviation: S-100WG
+  amend:
+    - description: Added adjudicated comments from TSMAD29.
+- date:
+  - type: updated
+    value: 2016-01
+  edition: "Draft 0.0.2"
+  contributor:
+  - organization:
+      name: International Hydrographic Organization
+      subdivision: S-100 Working Group
+      abbreviation: S-100WG
+  amend:
+    - description: Incorporated editorial issues that were noted in draft 0.0.1. Also includes a revised metadata section.
+- date:
+  - type: updated
+    value: 2017-07
+  edition: "Draft 0.0.2"
+  contributor:
+  - organization:
+      name: International Hydrographic Organization
+      subdivision: S-100 Working Group
+      abbreviation: S-100WG
+  amend:
+    - description: Incorporated the decisions from S101PT1 and updated some editorial issues. Numbering remained the same to be consistent with the DCEG numbering.
+- date:
+  - type: updated
+    value: 2018-10
+  edition: "Draft 1.0.0"
+  contributor:
+  - organization:
+      name: International Hydrographic Organization
+      subdivision: S-100 Working Group
+      abbreviation: S-100WG
+  amend:
+    - description: Editorial S-101PT review and clean-up in preparation for final approval to publish as Edition 1.0.0.
+- date:
+  - type: updated
+    value: 2022-12
+  edition: "Draft 1.1.0"
+  contributor:
+  - organization:
+      name: International Hydrographic Organization
+      subdivision: S-100 Working Group
+      abbreviation: S-100WG
+  amend:
+    - description: New version for implementation and testing, updated to align with S-100 Edition 5.0.0.
+- date:
+  - type: updated
+    value: 2024-03
+  edition: "Draft 1.2.0"
+  contributor:
+  - organization:
+      name: International Hydrographic Organization
+      subdivision: S-100 Working Group
+      abbreviation: S-100WG
+  amend:
+    - description: New version for implementation and testing, updated to align with S-100 Edition 5.1.0.
+- date:
+  - type: updated
+    value: 2024-12
+  edition: "Draft 2.0.0"
+  contributor:
+  - organization:
+      name: International Hydrographic Organization
+      subdivision: IHO CL 02-2025
+  amend:
+    - description: Initial operational Edition of S-101, updated to align with S-100 Edition 5.2.0.
+----
 
 [.preface]
 == Summary of Substantive Changes from Edition 2.0.0
