@@ -271,7 +271,7 @@ feature for the base ENC dataset. Where the limit of a *Data Coverage*
 feature for a base ENC dataset is to be changed, this must be done
 by issuing a New Edition of the dataset.
 
-A dataset must not cross the 180° meridian.
+A dataset must not cross the stem:[180 "unitsml(deg)"] meridian.
 
 [[sec_4.5.3]]
 ==== Data Coverage rules

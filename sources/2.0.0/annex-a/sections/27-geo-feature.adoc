@@ -377,7 +377,7 @@ Appendix A -- Chapter 2, Page 2.8, November 2000).
 [underline]#Unit:# Defined as an attribute in the ENC dataset
 metadata: metre (m)
 
-[underline]#Precision:# 0∙1m
+[underline]#Precision:# 0&#x2219;1m
 
 [underline]#Minimum range:# 0
 
@@ -386,7 +386,7 @@ metadata: metre (m)
 [underline]#Range closure:# Left half-open interval
 (stem:["minimum" < bb "buried depth" <= "maximum"])
 
-[underline]#Example:# *2.5* for a depth of 2∙5 metres
+[underline]#Example:# *2.5* for a depth of 2&#x2219;5 metres
 
 [underline]#Remarks:#
 
@@ -400,7 +400,7 @@ metadata: metre (m)
 [cols="a",options="noheader,unnumbered"]
 |===
 | [underline]#IHO Definition:# *CALL SIGN*. The designated call-sign
-of a station (radio station, radar station, pilot, …).(S-57 Edition
+of a station (radio station, radar station, pilot, ...).(S-57 Edition
 3.1, Appendix A -- Chapter 2, Page 2.9, November 2000 (as amended)).
 
 [underline]#Attribute Type:# Text
@@ -1816,7 +1816,7 @@ moving, and sometimes stacking, shipping containers and vessels.
 +
 --
 [underline]#IHO Definition:# A harbour within which the floating
-equipment (dredges, tugs …) of harbour services are stationed.
+equipment (dredges, tugs ...) of harbour services are stationed.
 --
 
 . *pilotage service*
@@ -6030,7 +6030,7 @@ serving as a berthing place for vessels. (Adapted from IHO Dictionary
 +
 --
 [underline]#IHO Definition:# A covered or partially covered terminal
-within which the floating equipment (dredges, tugs …) of harbour
+within which the floating equipment (dredges, tugs ...) of harbour
 services are berthed and serviced.
 --
 
@@ -7121,7 +7121,7 @@ Chapter 2, Page 2.125, November 2000).
 
 [underline]#Unit:# Metre (m)
 
-[underline]#Precision:# 0∙1m
+[underline]#Precision:# 0&#x2219;1m
 
 [underline]#Minimum range:# -30
 
@@ -7156,7 +7156,7 @@ Chapter 2, Page 2.124, November 2000).
 
 [underline]#Unit:# Metre (m)
 
-[underline]#Precision:# 0∙1m
+[underline]#Precision:# 0&#x2219;1m
 
 [underline]#Minimum range:# -30
 
@@ -7322,7 +7322,7 @@ level of a feature, measured from a specified vertical datum.
 [underline]#Unit:# Defined as an attribute in the ENC dataset
 metadata: metre (m).
 
-[underline]#Precision:# 0∙1m
+[underline]#Precision:# 0&#x2219;1m
 
 [underline]#Minimum range:# 0
 
@@ -7352,7 +7352,7 @@ The estimated range of a non-optical electromagnetic transmission.
 
 [underline]#Unit:# Nautical mile (M)
 
-[underline]#Precision:# 0∙1M
+[underline]#Precision:# 0&#x2219;1M
 
 [underline]#Minimum range:# 0
 
@@ -7529,7 +7529,7 @@ of the light flare to be included in the data for ECDIS display
 purposes where different from the defaults. The value encoded
 corresponds to a bearing away from the position of the light.
 
-[underline]#Unit:# Degree (°)
+[underline]#Unit:# Degree (stem:["unitsml(deg)"])
 
 [underline]#Minimum range:# 0
 
@@ -7548,16 +7548,16 @@ align light flares where it is required to display the flare at a
 different bearing from the default. For example, *flare bearing* may
 be populated to align the flare along a transit or leading line
 (noting that in such cases the bearing to be encoded will be the
-reciprocal (+/- 180 of the bearing encoded for the navigational
+reciprocal (+/- stem:[180 "unitsml(deg)"] of the bearing encoded for the navigational
 line); or to avoid other important encoded information.
-* The default bearing of a light flare (135°) is provided as a
+* The default bearing of a light flare (stem:[135 "unitsml(deg)"]) is provided as a
 function of the S-101 Portrayal Catalogue. Where two all-around
 lights are collocated, one of the light flares is displayed at a
-bearing of 45°, also as a function of the S-101 Portrayal Catalogue,
+bearing of stem:[45 "unitsml(deg)"], also as a function of the S-101 Portrayal Catalogue,
 as follows:
 
 ** If one of the lights is a white, yellow or orange light, it is
-displayed at a bearing of 45°.
+displayed at a bearing of stem:[45 "unitsml(deg)"].
 ** If none of the lights is a white, yellow or orange light there is
 no preference.
 
@@ -8065,7 +8065,7 @@ November 2000).
 [underline]#Unit:# Defined as an attribute in the ENC dataset
 metadata: metre (m)
 
-[underline]#Precision:# 0∙1m
+[underline]#Precision:# 0&#x2219;1m
 
 [underline]#Minimum range:# 0
 
@@ -8098,7 +8098,7 @@ Appendix A -- Chapter 2, Page 2.137, November 2000).
 [underline]#Unit:# Defined as an attribute in the ENC dataset
 metadata: metre (m)
 
-[underline]#Precision:# 0∙1m
+[underline]#Precision:# 0&#x2219;1m
 
 [underline]#Minimum range:# 0
 
@@ -8128,7 +8128,7 @@ feature, such as a bridge span, dock, gate, lock or tunnel.
 [underline]#Unit:# Defined as an attribute in the ENC dataset
 metadata: metre (m)
 
-[underline]#Precision:# 0∙1m
+[underline]#Precision:# 0&#x2219;1m
 
 [underline]#Minimum range:# 0
 
@@ -8159,7 +8159,7 @@ Appendix A -- Chapter 2, Page 2.137, November 2000).
 [underline]#Unit:# Defined as an attribute in the ENC dataset
 metadata: metre (m)
 
-[underline]#Precision:# 0∙1m
+[underline]#Precision:# 0&#x2219;1m
 
 [underline]#Minimum range:# 0
 
@@ -8189,7 +8189,7 @@ Working Group; Feature Data Dictionary Register, 2010).
 [underline]#Unit:# Defined as an attribute in the ENC dataset
 metadata: metre (m)
 
-[underline]#Precision:# 0∙1m
+[underline]#Precision:# 0&#x2219;1m
 
 [underline]#Minimum range:# 0
 
@@ -8218,7 +8218,7 @@ Group; Feature Data Dictionary Register, 2010).
 [underline]#Unit:# Defined as an attribute in the ENC dataset
 metadata: metre (m)
 
-[underline]#Precision:# 0∙1m
+[underline]#Precision:# 0&#x2219;1m
 
 [underline]#Minimum range:# 0
 
@@ -8248,7 +8248,7 @@ Page 2.140, November 2000).
 [underline]#Unit:# Defined as an attribute in the ENC dataset
 metadata: metre (m)
 
-[underline]#Precision:# 0∙1m
+[underline]#Precision:# 0&#x2219;1m
 
 [underline]#Minimum range:# 0
 
@@ -8257,7 +8257,7 @@ metadata: metre (m)
 [underline]#Range closure:# Left half-open interval
 (stem:["minimum" < bb "ice factor" <= "maximum"])
 
-[underline]#Example:# *2.5* for a reduction of 2∙5 metres in the
+[underline]#Example:# *2.5* for a reduction of 2&#x2219;5 metres in the
 vertical clearance.
 
 [underline]#Remarks:#
@@ -8435,7 +8435,7 @@ Appendix A -- Chapter 2, Page 2.145, November 2000).
 
 [underline]#Unit:# Tonne (t)
 
-[underline]#Precision:# 0∙1t
+[underline]#Precision:# 0&#x2219;1t
 
 [underline]#Minimum range:# 0
 
@@ -8919,7 +8919,7 @@ at a berth, or over a submerged feature.
 [underline]#Unit:# Defined as an attribute in the ENC dataset
 metadata: metre (m)
 
-[underline]#Precision:# 0∙1m
+[underline]#Precision:# 0&#x2219;1m
 
 [underline]#Minimum range:# 0
 
@@ -8928,7 +8928,7 @@ metadata: metre (m)
 [underline]#Range closure:# Left half-open interval
 (stem:["minimum" < bb "maximum permitted draught" <= "maximum"])
 
-[underline]#Example:# *14.5* for a maximum permitted draught of 14·5
+[underline]#Example:# *14.5* for a maximum permitted draught of 14&#x2219;5
 metres
 
 [underline]#Remarks:#
@@ -8951,7 +8951,7 @@ a berth, or at an anchorage or mooring.
 [underline]#Unit:# Defined as an attribute in the ENC dataset
 metadata: metre (m)
 
-[underline]#Precision:# 0∙1m
+[underline]#Precision:# 0&#x2219;1m
 
 [underline]#Minimum range:# 0
 
@@ -8959,7 +8959,7 @@ metadata: metre (m)
 (stem:["minimum" < bb "maximum permitted vessel length"])
 
 [underline]#Example:# *30.5* for a maximum permitted vessel
-length of 30·5 metres
+length of 30&#x2219;5 metres
 
 [underline]#Remarks:#
 
@@ -9009,7 +9009,7 @@ the berth. (IHO Nautical Information Provision Working Group, 2022).
 [underline]#Unit:# Defined as an attribute in the ENC dataset
 metadata: metre (m)
 
-[underline]#Precision:# 0∙1m
+[underline]#Precision:# 0&#x2219;1m
 
 [underline]#Minimum range:# 0
 
@@ -9043,7 +9043,7 @@ Telecommunications Union Radio Regulations).
 
 [underline]#Attribute Type:# Text
 
-[underline]#Indication:# MMSI code (c…): String of nine characters.
+[underline]#Indication:# MMSI code (c...): String of nine characters.
 
 [underline]#Example:# **366777490**
 
@@ -9106,7 +9106,7 @@ number of features is known.
 
 [underline]#Attribute Type:# Text
 
-[underline]#Indication:# Name of feature (c…): String of characters.
+[underline]#Indication:# Name of feature (c...): String of characters.
 
 [underline]#Format:# c...
 
@@ -9593,9 +9593,9 @@ Register, 2010).
 
 [underline]#Attribute Type:# Real
 
-[underline]#Unit:# Degree (°)
+[underline]#Unit:# Degree (stem:["unitsml(deg)"])
 
-[underline]#Precision:# 0∙01°
+[underline]#Precision:# stem:[0&#x2219;01"unitsml(deg)"]
 
 [underline]#Minimum range:# 0
 
@@ -9604,12 +9604,12 @@ Register, 2010).
 [underline]#Range closure:# Right half-open interval
 (stem:["minimum" <= bb "orientation value" < "maximum"])
 
-[underline]#Example:# *246.7* for an orientation value of 246∙7
+[underline]#Example:# *246.7* for an orientation value of 246&#x2219;7
 degrees
 
 [underline]#Remarks:#
 
-* An orientation quoted as 360° must be encoded as _0_.
+* An orientation quoted as stem:[360 "unitsml(deg)"] must be encoded as _0_.
 
 |===
 
@@ -9958,7 +9958,7 @@ November 2000).
 [underline]#Unit:# Defined as an attribute in the ENC dataset
 metadata: metre (m)
 
-[underline]#Precision:# 0∙1m
+[underline]#Precision:# 0&#x2219;1m
 
 [underline]#Minimum range:# 0
 
@@ -10504,9 +10504,9 @@ S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.184, November 2000).
 
 [underline]#Attribute Type:# Real
 
-[underline]#Unit:# Degree (°) 
+[underline]#Unit:# Degree (stem:["unitsml(deg)"]) 
 
-[underline]#Precision:# 0∙01°
+[underline]#Precision:# stem:[0&#x2219;01"unitsml(deg)"]
 
 [underline]#Minimum range:# 0
 
@@ -10524,7 +10524,7 @@ identical.
 * The orientation of the bearing is from seaward to the central
 feature. This conforms with the method used in "List of Lights"
 publications.
-* An orientation quoted as 360° must be encoded as _0_.
+* An orientation quoted as stem:[360 "unitsml(deg)"] must be encoded as _0_.
 * A generic term such as "to shore" cannot be used; a specific
 bearing must be encoded. Where a light sector limit is defined as "to
 the shore", it should be encoded using a value that ensures that,
@@ -10582,7 +10582,7 @@ sequence.
 
 [underline]#Unit:# Seconds (s)
 
-[underline]#Precision:# 0∙01s
+[underline]#Precision:# 0&#x2219;01s
 
 [underline]#Minimum range:# 0
 
@@ -10591,7 +10591,7 @@ sequence.
 [underline]#Range closure:# Left half-open interval
 (stem:["minimum" < bb "signal duration" <= "maximum"])
 
-[underline]#Example:# *2.5* for an duration of 2·5 seconds
+[underline]#Example:# *2.5* for an duration of 2&#x2219;5 seconds
 
 [underline]#Remarks:#
 
@@ -10755,7 +10755,7 @@ by an entire cycle of intervals of light and eclipse. (S-57 Edition
 
 [underline]#Unit:# Seconds (s)
 
-[underline]#Precision:# 0∙01s
+[underline]#Precision:# 0&#x2219;01s
 
 [underline]#Minimum range:# 0
 
@@ -10815,7 +10815,7 @@ rate of travel in an area.
 [underline]#Unit:# Defined by complex attribute *vessel speed limit*,
 sub-attribute *speed units* (see <<sec_27.168>>).
 
-[underline]#Precision:# 0∙1
+[underline]#Precision:# 0&#x2219;1
 
 [underline]#Minimum range:# 0
 
@@ -10852,7 +10852,7 @@ from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.121, November
 
 [underline]#Unit:# Knot (kt)
 
-[underline]#Precision:# 0∙1kt
+[underline]#Precision:# 0&#x2219;1kt
 
 [underline]#Minimum range:# 0
 
@@ -10861,7 +10861,7 @@ from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.121, November
 [underline]#Range closure:# Left half-open interval
 (stem:["minimum" < bb "speed maximum" <= "maximum"])
 
-[underline]#Example:# *2.1* for a maximum speed of 2·1 knots
+[underline]#Example:# *2.1* for a maximum speed of 2&#x2219;1 knots
 
 [underline]#Remarks:#
 
@@ -10888,7 +10888,7 @@ from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.121, November
 
 [underline]#Unit:# Knot (kt)
 
-[underline]#Precision:# 0∙1kt
+[underline]#Precision:# 0&#x2219;1kt
 
 [underline]#Minimum range:# 0
 
@@ -10897,7 +10897,7 @@ from S-57 Edition 3.1, Appendix A -- Chapter 2, Page 2.121, November
 [underline]#Range closure:# Left half-open interval
 (stem:["minimum" < bb "speed minimum" <= "maximum"])
 
-[underline]#Example:# *1.6* for a maximum speed of 1·6 knots
+[underline]#Example:# *1.6* for a maximum speed of 1&#x2219;6 knots
 
 [underline]#Remarks:#
 
@@ -11159,7 +11159,7 @@ sounding datum.
 [underline]#Unit:# Defined as an attribute in the ENC dataset
 metadata: metre (m)
 
-[underline]#Precision:# 0∙1m
+[underline]#Precision:# 0&#x2219;1m
 
 [underline]#Minimum range:# 0
 
@@ -11494,7 +11494,7 @@ is positioned from the feature in an end-user system.
 
 [underline]#Attribute Type:# Integer
 
-[underline]#Unit:# Degree (°)
+[underline]#Unit:# Degree (stem:["unitsml(deg)"])
 
 [underline]#Minimum range:# 0
 
@@ -11507,7 +11507,7 @@ is positioned from the feature in an end-user system.
 
 [underline]#Remarks:#
 
-* An orientation quoted as 360° must be encoded as _0_.
+* An orientation quoted as stem:[360 "unitsml(deg)"] must be encoded as _0_.
 * The attribute *text offset bearing* only defines the bearing to the
 anchor point of the text in the end-user system. It does not impact
 on the rotation of the text itself (that is, text is always displayed
@@ -11693,7 +11693,7 @@ relative to the reference tide.
 
 [underline]#Unit:# Hour 
 
-[underline]#Precision:# 0∙1 hour
+[underline]#Precision:# 0&#x2219;1 hour
 
 [underline]#Minimum range:# -6
 
@@ -11702,8 +11702,8 @@ relative to the reference tide.
 [underline]#Range closure:# Closed interval
 (stem:["minimum" <= bb "tide relative to tide" <= "maximum"])
 
-[underline]#Example:# *1.5* for 1·5 hours after the referenced
-tide**-1.5** for 1·5 hours before the referenced tide
+[underline]#Example:# *1.5* for 1&#x2219;5 hours after the referenced
+tide**-1.5** for 1&#x2219;5 hours before the referenced tide
 
 [underline]#Remarks:#
 
@@ -12124,7 +12124,7 @@ The annual change in magnetic variation values.
 [underline]#Range closure:# Closed interval
 (stem:["minimum" <= bb "value of annual change in magnetic variation" <= "maximum"])
 
-[underline]#Example:# *-7.1* for an annual change of 7·1' in a
+[underline]#Example:# *-7.1* for an annual change of 7&#x2219;1' in a
 westerly direction
 
 [underline]#Remarks:#
@@ -12148,7 +12148,7 @@ Chapter 2, Page 2.227, November 2000).
 
 [underline]#Unit:# metre (m)
 
-[underline]#Precision:# 0∙1m
+[underline]#Precision:# 0&#x2219;1m
 
 [underline]#Minimum range:# -30
 
@@ -12177,9 +12177,9 @@ north from true north. (IHO Dictionary -- S-32).
 
 [underline]#Attribute Type:# Real
 
-[underline]#Unit:# degree (°), negative west
+[underline]#Unit:# degree (stem:["unitsml(deg)"]), negative west
 
-[underline]#Precision:# 0.01°
+[underline]#Precision:# stem:[0.01 "unitsml(deg)"]
 
 [underline]#Minimum range:# -180
 
@@ -12189,8 +12189,8 @@ north from true north. (IHO Dictionary -- S-32).
 (stem:["minimum" < bb "value of magnetic variation" <= "maximum"])
 
 [underline]#Example:# *2.3* for a magnetic north oriented at 2.3
-degrees (2°18') east from the geographic (true) north-*1.5* for a
-magnetic north oriented at 2.3 degrees (1°30') west from the
+degrees (stem:[2"unitsml(deg)"18"unitsml(')"]) east from the geographic (true) north-*1.5* for a
+magnetic north oriented at 2.3 degrees (stem:[1"unitsml(deg)"30"unitsml(')"]) west from the
 geographic (true) north
 
 [underline]#Remarks:#
@@ -12215,7 +12215,7 @@ November 2000).
 
 [underline]#Unit:# Nautical mile (M) 
 
-[underline]#Precision:# 0∙1M
+[underline]#Precision:# 0&#x2219;1M
 
 [underline]#Minimum range:# 0
 
@@ -12245,7 +12245,7 @@ S-32).
 
 [underline]#Unit:# Nautical mile (M) 
 
-[underline]#Precision:# 0∙1M
+[underline]#Precision:# 0&#x2219;1M
 
 [underline]#Minimum range:# 0
 
@@ -12276,7 +12276,7 @@ The value of the measurement of a sounding relative to the chart datum.
 [underline]#Unit:# Defined as an attribute in the ENC dataset
 metadata: metre (m)
 
-[underline]#Precision:# 0∙1m
+[underline]#Precision:# 0&#x2219;1m
 
 [underline]#Minimum range:# -30
 
@@ -12286,8 +12286,8 @@ metadata: metre (m)
 (stem:["minimum" < bb "value of sounding" < "maximum"])
 
 [underline]#Examples:#::
-*18.2*::: for a sounding of 18∙2 metres
-*-2.4*::: for a drying height of 2∙4 metres
+*18.2*::: for a sounding of 18&#x2219;2 metres
+*-2.4*::: for a drying height of 2&#x2219;4 metres
 
 [underline]#Remarks:#
 
@@ -12329,14 +12329,14 @@ clearance measured from the horizontal plane towards the feature overhead.
 [underline]#Unit:# Defined as an attribute in the ENC Dataset
 Discovery Metadata: metre (m)
 
-[underline]#Precision:# 0∙1m
+[underline]#Precision:# 0&#x2219;1m
 
 [underline]#Minimum range:# 0
 
 [underline]#Range closure:# Left half-open ray
 (stem:["minimum" < bb "vertical clearance value"])
 
-[underline]#Example:# *7.6* for a vertical clearance of 7·6 metres
+[underline]#Example:# *7.6* for a vertical clearance of 7&#x2219;6 metres
 
 [underline]#Remarks:#
 
@@ -12634,7 +12634,7 @@ length of a feature. (S-57 Edition 3.1, Appendix A -- Chapter 2, Page
 [underline]#Unit:# Defined as an attribute in the ENC Dataset
 Discovery Metadata: metre (m)
 
-[underline]#Precision:# 0∙1m
+[underline]#Precision:# 0&#x2219;1m
 
 [underline]#Minimum range:# 0
 
@@ -12946,7 +12946,7 @@ English Dictionary).
 [underline]#Unit:# Defined by the sub-attribute *distance unit of
 measurement* (see <<sec_27.91>>).
 
-[underline]#Precision:# 0∙1
+[underline]#Precision:# 0&#x2219;1
 
 [underline]#Minimum range:# 0
 

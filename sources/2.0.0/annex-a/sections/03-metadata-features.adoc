@@ -243,7 +243,7 @@ Edition 3.1, Appendix A -- Chapter 1, Page 1.210, November 2000).
 
 3+| interoperability identifier 2+| 3+| MRN (see <<sec_27.114>>) | URN | 0,1
 
-3+| maximum display scale 2+| 3+| maximum display scale stem:[<=] optimum display scale < minimum display scale | IN | 1,1 3+| minimum display scale 2+| 3+| See <<table_3-2>> below minimum display scale > optimum display scale ≥ maximum display scale | IN
+3+| maximum display scale 2+| 3+| maximum display scale stem:[<=] optimum display scale < minimum display scale | IN | 1,1 3+| minimum display scale 2+| 3+| See <<table_3-2>> below minimum display scale > optimum display scale stem:[>=] maximum display scale | IN
 | 1,1
 
 3+| optimum display scale 2+| _(CSCALE)_ 3+| See <<table_3-2>> below maximum display scale stem:[<=] optimum display scale < minimum display scale | IN | 1,1 3+| information 2+| 3+| See <<sec_2.4.6>> | C

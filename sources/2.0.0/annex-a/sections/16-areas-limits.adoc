@@ -1472,7 +1472,7 @@ feature.
 feature should cover only that area.
 * If the information to be encoded is spatially linear, this should
 be encoded using a "very narrow" *Caution Area* feature of type
-surface (approximately 0·3mm wide at the optimum display scale of the
+surface (approximately stem:[0 &#x2219; 3"unitsml(mm)"] wide at the optimum display scale of the
 ENC data).
 * Information which may be of use to the Mariner, but is not
 significant to safe navigation and cannot be encoded using other

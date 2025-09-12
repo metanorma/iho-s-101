@@ -73,7 +73,7 @@ value of magnetic variation at that location.
 must be used to populate the year value only (see <<sec_2.4.8>> for
 format of date type attributes).
 * Magnetic models are typically updated every five years (for example
-2005, 2010… termed epochs). Magnetic variation can be calculated from
+2005, 2010... termed epochs). Magnetic variation can be calculated from
 computer models, or derived from charts produced by certain Hydrographic
 Offices or mapping authorities, which show the spatial distribution
 of magnetic variation values worldwide for the current epoch, by means
@@ -173,9 +173,9 @@ normal magnetic field which cause anomalous variation values. Permanent
 anomalies are caused by concentrations of ferromagnetic material in
 the Earth's crust or, to a more limited extent, by wrecks or man-made
 structures on the sea bed. They should not be charted unless they
-exceed 3° from the norm for the area (see <<sec_4.1>>), because diurnal
+exceed stem:[3 "unitsml(deg)"] from the norm for the area (see <<sec_4.1>>), because diurnal
 and seasonal fluctuations in the Earth's magnetic field can change
-the stated variation by up to 1° and, in some parts of the world,
+the stated variation by up to stem:[1 "unitsml(deg)"] and, in some parts of the world,
 the data on which isogonals are based may not ensure the accuracy
 of charted values to better than stem:[pm 2 "unitsml(deg)"].
 

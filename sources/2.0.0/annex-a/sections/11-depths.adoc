@@ -808,7 +808,7 @@ is shown by a sounding (an isolated shoal area):
 --
 * *depth range minimum value* should take the value of the dataset
 depth contour immediately shallower than the value of the sounding or
-‑H. However if the shallowest sounding within the area is considered
+-H. However if the shallowest sounding within the area is considered
 to be the least depth of the shoal, *depth range minimum value* may
 be populated with the value of this sounding.
 * *depth range maximum value* should take the value of the depth

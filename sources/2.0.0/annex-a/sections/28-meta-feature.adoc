@@ -171,14 +171,14 @@ November 2000).
 [underline]#Unit:# Defined as an attribute in the ENC Dataset Discovery
 Metadata: metre (m)
 
-[underline]#Precision:# 0∙1m
+[underline]#Precision:# 0&#x2219;1m
 
 [underline]#Minimum range:# 0
 
 [underline]#Range closure:# Left closed ray
 (stem:["minimum" <= bb "horizontal distance uncertainty"])
 
-[underline]#Example:# *0.5* for an error of 0∙5 metres.
+[underline]#Example:# *0.5* for an error of 0&#x2219;5 metres.
 
 [underline]#Remarks:#
 
@@ -456,9 +456,9 @@ The best estimate of the accuracy of a bearing.
 
 [underline]#Attribute Type:# Real
 
-[underline]#Unit:# Degree (°)
+[underline]#Unit:# Degree (stem:["unitsml(deg)"])
 
-[underline]#Precision:# 0∙001°
+[underline]#Precision:# stem:[0&#x2219;001"unitsml(deg)"]
 
 [underline]#Minimum range:# 0
 
@@ -467,7 +467,7 @@ The best estimate of the accuracy of a bearing.
 [underline]#Range closure:# Right half-open interval
 (stem:["minimum" <= bb "orientation uncertainty" < "maximum"])
 
-[underline]#Example:# *0·005* for an error of 0·005 degrees
+[underline]#Example:# *0&#x2219;005* for an error of 0&#x2219;005 degrees
 
 [underline]#Remarks:#
 
@@ -692,7 +692,7 @@ The size of detected bathymetric features in an area.
 
 [underline]#Unit:# cubic metre
 
-[underline]#Precision:# 0·01 cubic metres
+[underline]#Precision:# 0&#x2219;01 cubic metres
 
 [underline]#Minimum range:# 0
 
@@ -959,14 +959,14 @@ depths, heights, vertical distances and vertical clearances.
 [underline]#Unit:# Defined as an attribute in the ENC Dataset Discovery
 Metadata: metre (m).
 
-[underline]#Precision:# 0∙1m
+[underline]#Precision:# 0&#x2219;1m
 
 [underline]#Minimum range:# 0
 
 [underline]#Range closure:# Left half-open ray
 (stem:["minimum" < bb "uncertainty fixed"])
 
-[underline]#Example:# *1.2* for a fixed uncertainty of 1∙2 metres
+[underline]#Example:# *1.2* for a fixed uncertainty of 1&#x2219;2 metres
 
 [underline]#Remarks:#
 
@@ -993,7 +993,7 @@ distances and vertical clearances.
 (or percentage) contributing to the variable uncertainty component
 is indicated, that is a factor of 5% is encoded as 0.05.
 
-[underline]#Precision:# 0∙01
+[underline]#Precision:# 0&#x2219;01
 
 [underline]#Minimum range:# 0
 

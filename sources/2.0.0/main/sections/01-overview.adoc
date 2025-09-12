@@ -36,9 +36,7 @@ for developers.
 * [[[ISO_19103_2005,ISO/TS 19103:2005]]]
     span:date.published[2005]
 
-* [[[ISO_19103_2_2005,ISO 19103-2:2005]]]
-    _Geographic Information -- Conceptual Schema Language -- Part 2_,
-    span:date.published[2005]
+* [[[ISO_19103_2_2005,ISO/TS 19103]]]
 
 * [[[ISO_19105_2000, ISO 19105:2000]]]
 
@@ -62,7 +60,7 @@ for developers.
 
 * [[[ISO_19118_2005, ISO 19118:2005]]]
 
-* [[[ISO_19131_2008, ISO 19131:2008]]]
+* [[[ISO_19131_2008, ISO 19131]]]
 
 * [[[ISO_TS_19138_2006, ISO/TS 19138:2006]]]
 
@@ -624,13 +622,13 @@ must be captured. (<<annexA>>.)
 --
 *Description:* Areas specific to marine navigation.
 
-*East Bounding Longitude:* 180°
+*East Bounding Longitude:* stem:[180 "unitsml(deg)"]
 
-*West Bounding Longitude:* -180°
+*West Bounding Longitude:* stem:[-180 "unitsml(deg)"]
 
-*North Bounding Latitude:* 90°
+*North Bounding Latitude:* stem:[90 "unitsml(deg)"]
 
-*South Bounding Latitude:* -90°
+*South Bounding Latitude:* stem:[-90 "unitsml(deg)"]
 --
 
 *Purpose:*:: The purpose of an ENC dataset is to provide official
