@@ -351,7 +351,7 @@ real number is constrained to a precision of 0.01; etc)
 (<<IHO_S_100,part=2a,clause=2a-4.2.10>>). For the attribute descriptions included in
 <<sec_27;and!sec_28;and!sec_30>> of this document, the values quoted
 for precision are expressed in more "human-readable" terms as the
-exponent of the real type attribute (0.1, 0.01, 0.001, …).
+exponent of the real type attribute (0.1, 0.01, 0.001, ...).
 
 Examples: 23.501, -0.0001234, -23.0, 3.141296
 --
@@ -434,7 +434,7 @@ that follows the syntax and semantics for URNs specified in RFC 2141.
 +
 --
 For S-101, the attribute type URN is used mainly to define Maritime
-Resource Names (MRN), typically in the IHO namespace -- _urn:mrn:iho:…_.
+Resource Names (MRN), typically in the IHO namespace -- _urn:mrn:iho:..._.
 
 Example: urn:mrn:iho:s101:2:0:0:AnchorageArea
 --
@@ -618,9 +618,9 @@ _at least one of_:: for *Caution Area*, *Information Area*,
 *Nautical Information*, *Non-Standard Working Day*, *Spatial Quality*,
 *Chart 1 Feature*
 
-_if navigable at…._:: for *Gate*
+_if navigable at...._:: for *Gate*
 
-_except when….._:: for *Archipelagic Sea Lane Area*,
+_except when....._:: for *Archipelagic Sea Lane Area*,
 *Archipelagic Sea Lane Axis*, *Traffic Separation Scheme Lane Part*
 
 _(point features only)_:: for *Radio Calling-In Point*

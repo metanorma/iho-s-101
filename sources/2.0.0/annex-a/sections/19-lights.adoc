@@ -984,14 +984,14 @@ be followed. The narrow sector may be flanked by:
 * Sectors of different colour or character.
 
 Some direction lights are so precise that a complete colour change at
-a sector boundary occurs over an angle of less than 1 minute (0∙02°).
+a sector boundary occurs over an angle of less than 1 minute (stem:[0*02"unitsml(deg)"]).
 This corresponds to a lateral distance of just 1 metre at a viewing
-distance of 3.5 km. In addition the intensity may be maintained right
+distance of stem:[3.5 "unitsml(km)"]. In addition the intensity may be maintained right
 to the edge of the beam, and does not reduce the further the observer
 is away from the axis.
 A moiré effect mark (or variable arrow mark)is a short-range
-(normally up to 2 km) type of directional "light". Sodium lighting
-gives a yellow background to a screen (up to 3 m square) on which a
+(normally up to stem:[2 "unitsml(km)"]) type of directional "light". Sodium lighting
+gives a yellow background to a screen (up to stem:[3 "unitsml(m)"] square) on which a
 vertical black line will be seen by an observer on the centreline, or
 variable arrow marks when course alteration is needed. The system can
 be used by day and night. It can also be used as a stop line (seen

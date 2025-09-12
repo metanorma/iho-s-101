@@ -70,15 +70,15 @@ h| Role Type h| Role h| Associated With h| Multiplicity
 .2+| Association | The Information | *Contact Details*,
 *Non-Standard Working Day*, *Service Hours*, *Nautical Information* | 0,1 |
 
-| *Airport/Airfield*, *Anchor Berth*, *Anchorage Area*, *…* | 0,*
+| *Airport/Airfield*, *Anchor Berth*, *Anchorage Area*, *...* | 0,*
 
 h| Role Type h| Role h| Associated With h| Multiplicity
 .2+| Association | The Information | *Contact Details*, *Nautical Information* | 0,1
-| | *Administration Area*, **…**, *Wind Turbine* | 0,*
+| | *Administration Area*, **...**, *Wind Turbine* | 0,*
 
 h| Role Type h| Role h| Associated With h| Multiplicity
 .2+| Association | The Information | *Nautical Information* | 0,1
-| | …, *Two-Way Route*, *Two-Way Route Part*, *Underwater/Awash Rock*, *…* | 0,*
+| | ..., *Two-Way Route*, *Two-Way Route Part*, *Underwater/Awash Rock*, *...* | 0,*
 |===
 
 <<fig_25-3>> below shows the representation of the feature/feature
@@ -244,7 +244,7 @@ role.
 
 h| Role Type h| Role h| Associated With h| Multiplicity
 .2+| Association | The Information | *Nautical Information* | 0,1
-| | …, *Two-Way Route*, *Two-Way Route Part*, *Underwater/Awash Rock*,
+| | ..., *Two-Way Route*, *Two-Way Route Part*, *Underwater/Awash Rock*,
 *Unsurveyed Area*, *Vegetation*, *Virtual AIS Aid to Navigation*,
 *Water Turbulence*, *Waterfall*, *Weed/Kelp*, *Wreck*
 | 0,*

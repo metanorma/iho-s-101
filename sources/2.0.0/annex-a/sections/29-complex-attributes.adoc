@@ -135,7 +135,7 @@ variations of radio receiving and transmitting.
 horizontal clearance measured between two points for a fixed span.
 
 [underline]#Indication:# The complex attribute encodes the horizontal
-distance …….
+distance .......
 
 [underline]#Sub-attributes:#::
 *horizontal clearance value*::: see <<sec_27.107>>
@@ -156,7 +156,7 @@ distance …….
 horizontal clearance measured between two points for an opening span.
 
 [underline]#Indication:# The complex attribute encodes the horizontal
-distance …….
+distance .......
 
 [underline]#Sub-attributes:#::
 *horizontal clearance value*::: see <<sec_27.107>>

@@ -298,7 +298,7 @@ physical feature. However, when the area is an "entry prohibited
 area" or a *Caution Area* feature the new physical feature(s) may be
 omitted to simplify encoding unless it is navigationally significant.
 .. Individual new physical feature with a notification of caution,
-for example "Mariners are advised to navigate with caution…":
+for example "Mariners are advised to navigate with caution...":
 
 * Encode the relevant S-101 feature. Additional clarification and
 advice may, if required, be provided using the complex attribute

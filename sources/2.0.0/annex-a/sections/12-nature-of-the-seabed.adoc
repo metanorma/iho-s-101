@@ -131,7 +131,7 @@ navigation or anchoring, *surface characteristics* must be populated
 as multiple iterations, with the surface constituent given first,
 with a value for the attribute *underlying layer* of _0_. Successive
 layers below the surface must have *underlying layer* set to _1_,
-_2_, … .
+_2_, ... .
 
 [[fig_12-1]]
 .Seabed areas

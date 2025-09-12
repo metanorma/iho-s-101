@@ -490,7 +490,7 @@ value*); the other value can be deduced (that is, the value in
 *orientation value* + 180 degrees). The value of orientation encoded
 on *orientation value* should be the value of the bearing from
 seaward. If it is not possible to define a seaward direction, the
-value that is less than 180° should be used.
+value that is less than stem:[180 "unitsml(deg)"] should be used.
 * When the traffic flow along a recommended track is one way
 (attribute *traffic flow* = _1_, _2_ or _3_), the resultant direction
 of the line (accounting for the direction of digitising and any
@@ -1081,7 +1081,7 @@ other value can be deduced (that is, the value in *orientation value*
 + 180 degrees). The value of orientation encoded on *orientation
 value* should be the value of the bearing from seaward. If it is not
 possible to define a seaward direction, the value that is less than
-180° should be used.
+stem:[180 "unitsml(deg)"] should be used.
 * When the traffic flow is one way (attribute *traffic flow* = _1_,
 _2_ or _3_), the resultant direction of the line (accounting for the
 direction of digitising and any subsequent reversal of the line)
@@ -1599,7 +1599,7 @@ value*); the other value can be deduced (that is, the value in
 *orientation value* + 180 degrees). The value of orientation encoded
 on *orientation value* should be the value of the bearing from
 seaward. If it is not possible to define a seaward direction, the
-value that is less than 180° should be used.
+value that is less than stem:[180 "unitsml(deg)"] should be used.
 * When the traffic flow is one way (attribute *traffic flow* = _1_,
 _2_ or _3_), the resultant direction of the line (accounting for the
 direction of digitising and any subsequent reversal of the line)
@@ -3040,7 +3040,7 @@ Article 53 of the United Nations Convention on the Law of the Sea
 ships ... through ... its archipelagic waters and the adjacent
 Territorial Sea. ... All ships ... enjoy the right of archipelagic
 sea lanes passage in such sea lanes ... [which] include all normal
-passage routes used as routes for international navigation … through
+passage routes used as routes for international navigation ... through
 archipelagic waters". (Note: references to aircraft and air routes in
 UNCLOS have been omitted in these extracts from Article 53). (IHO S-4
 B-435.10, C-51 Appendix 2 Part II).
@@ -3189,7 +3189,7 @@ Article 53 of the United Nations Convention on the Law of the Sea
 ships ... through ... its archipelagic waters and the adjacent
 Territorial Sea. ... All ships ... enjoy the right of archipelagic
 sea lanes passage in such sea lanes ... [which] include all normal
-passage routes used as routes for international navigation … through
+passage routes used as routes for international navigation ... through
 archipelagic waters". (Note: references to aircraft and air routes in
 UNCLOS have been omitted in these extracts from Article 53). (IHO S-4
 B-435.10, C-51 Appendix 2 Part II).
@@ -3699,7 +3699,7 @@ using the feature *Radar Line*.
 * The value of orientation encoded on the mandatory attribute
 *orientation value* should be the value of the bearing from seaward.
 If it is not possible to define a seaward direction, the value that
-is less than 180° should be used.
+is less than stem:[180 "unitsml(deg)"] should be used.
 * If it is required to encode the area of a VTS containing radar
 lines, this should be done using the feature *Vessel Traffic Service
 Area* (see <<sec_22.2>>).
