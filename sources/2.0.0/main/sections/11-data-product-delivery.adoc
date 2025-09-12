@@ -9,8 +9,8 @@ This clause specifies the encoding and delivery mechanisms for
 an S-101 ENC. Data which conforms to this Product Specification must
 be delivered by means of an Exchange Set.
 
-The S-100 Exchange Set structure is described in S-100 Part 17,
-clause 17-4.1.
+The S-100 Exchange Set structure is described in
+<<IHO_S_100,part=17,clause=17-4.1>>.
 
 [[sec_11.2]]
 === Exchange Set
@@ -18,10 +18,10 @@ clause 17-4.1.
 S-101 datasets are grouped into Exchange Sets. Each Exchange Set consists
 of one or more ENC datasets with a single Exchange Catalogue XML file
 containing metadata. Optionally, an associated XML Metadata file
-(S100_ResourcePurpose (ISOMetadata) - see S-100 Part 17, clause 17-4.5)
+(S100_ResourcePurpose (ISOMetadata) - see <<IHO_S_100,part=17,clause=17-4.5>>)
 may be included (see <<sec_11.5>>). It may also include one or more
 support files. The S-101 Exchange Set structure is the same as that
-described in S-100 Part 17, clause 17-4.1.
+described in <<IHO_S_100,part=17,clause=17-4.1>>.
 
 *Units of Delivery:*:: Exchange Set
 
@@ -236,8 +236,7 @@ the file.
 Support files, with the exception of Catalogue files, must be stored
 in a separate folder within the Exchange Set named SUPPORT_FILES.
 The Catalogue files must be stored within the Exchange Set in a folder
-named "CATALOGUES". Refer to S-100 Part 17, clause 17-4.2 Figure 17-3
-- An S-100 Exchange Set folder structure.
+named "CATALOGUES". Refer to <<IHO_S_100,part=17,clause=17-4.2,figure=17-3>>.
 
 Re-use of an ENC support file name after a deletion is possible only
 if the ENC support file edition number is higher than the previous
@@ -315,8 +314,7 @@ updated accordingly - now referencing only "ENC 3".
 To simplify this process it consideration may be given to not populating
 the ENC Support File Discovery Metadata attribute "supportedResource"
 where the ENC support file is referenced in more than one ENC product
-(see S-100 Part 17, clause 17-4.3.1 - Supported resources / multiple
-references guide).
+(see <<IHO_S_100,part=17,clause=17-4.3.1>>).
 
 [[sec_11.5]]
 === Associated XML Metadata file
@@ -346,4 +344,4 @@ in <<sec_12>>.
 [[sec_11.7]]
 === Data integrity and encryption
 
-See S-100 Parts 15 and 17.
+See <<IHO_S_100,part=15>> and <<IHO_S_100,part=17>>.

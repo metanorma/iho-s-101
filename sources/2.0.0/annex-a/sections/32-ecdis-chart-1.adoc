@@ -63,7 +63,7 @@ in the ECDIS Chart 1 datasets, it must be done using the feature
 as within test datasets and the ECDIS Chart 1 datasets. It is prohibited
 to use *Chart 1 Feature* in navigational ENC datasets.
 * The attribute *drawing instruction* must be populated, if required,
-with one or more symbol instructions as defined in S-100 Part 9a.
+with one or more symbol instructions as defined in <<IHO_S_100,part=9a>>.
 * If it is required for textual information related to a
 *Chart 1 Feature* instance to be included in the ECDIS display, this
 must be done by populating the complex attribute *feature name*, sub-attribute
@@ -91,7 +91,7 @@ system.
 [underline]#Attribute Type:# Text
 
 [underline]#Indication:# The string encodes one or more drawing instructions
-as described in S-100 Part 9a and S-100 clause 13-6.1.
+as described in <<IHO_S_100,part=9a>> and <<IHO_S_100,clause=13-6.1>>.
 
 [underline]#Format:# (c...)
 

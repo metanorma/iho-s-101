@@ -72,6 +72,11 @@ for developers.
 
 * [[[FIPS_186, FIPS 186]]]
 
+* [[[AnnexA,dropid(repo:(current-metanorma-collection/IHO S-101 Annex A))]]],
+span:title[S-101 -- Annex A: Data Classification and Encoding Guide],
+span:edition[2.0.0],
+span:organization[International Hydrographic Organization]
+
 [[sec_1.3]]
 [heading="terms and definitions"]
 === Terms, definitions and abbreviations

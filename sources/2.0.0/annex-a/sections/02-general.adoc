@@ -4,8 +4,8 @@
 
 The S-101 Data Classification and Encoding Guide describes how data
 describing the real world should be captured using the types defined
-in the S-101 Feature Catalogue (see S-101 Product Specification Main
-document clause 4.3). It provides the encoding rules and guidance
+in the S-101 Feature Catalogue (see <<S101,clause=4.3>>).
+It provides the encoding rules and guidance
 required to create S-101 ENCs. This standard is specifically concerned
 with those entities in the real world that are of relevance to hydrography.
 This hydrographic regime is considered to be geo-spatial. As a result,
@@ -347,8 +347,8 @@ In S-100, "precision", as it applies to the IHO GI Registry and the
 S-101 Feature Catalogue, is defined as a non-negative integer expressing
 the constraint of the exponent of a real number (that is, "1" means
 the real number is constrained to a precision of 0.1; "2" means the
-real number is constrained to a precision of 0.01; etc) (S-100 Part
-2a, <<sec_2>>a-4.2.10). For the attribute descriptions included in
+real number is constrained to a precision of 0.01; etc)
+(<<IHO_S_100,part=2a,clause=2a-4.2.10>>). For the attribute descriptions included in
 <<sec_27;and!sec_28;and!sec_30>> of this document, the values quoted
 for precision are expressed in more "human-readable" terms as the
 exponent of the real type attribute (0.1, 0.01, 0.001, …).
@@ -380,7 +380,7 @@ Example: 19610922 (YYYYMMDD)
 
 TI:: Time: A time is given by an hour, minute and second in the 24-hour
 clock system. Character encoding of a time shall be a complete representation
-of the basic format as defined in ISO 8601. Complete representation
+of the basic format as defined in <<ISO_8601_2004>>. Complete representation
 means that hours, minutes and seconds shall be used. Basic format
 means that separating characters are omitted.
 +
@@ -470,7 +470,7 @@ Within this document, mandatory attributes (multiplicity 1,1; 1,n
 type. For easy reference, <<table_2-3>> summarises the mandatory attributes
 for each feature type (note that mandatory sub-attributes of complex
 attributes are not included in this Table -- see <<note_2_table_2-3>>
-below Table 2-3):
+below <<table_2-3>>):
 
 [[table_2-3]]
 .Mandatory attributes
@@ -698,8 +698,8 @@ have specific influence on portrayal:
 *drawing index* -- population of this attribute may assist with the
 identification of a set of S-101 datasets that are intended to form
 a seamless presentation, regardless of scale; and identify a hierarchy
-of such seamless presentations (see <<sec_3.5>> and S-101 Main document
-clauses 4.6 and 4.7).
+of such seamless presentations (see <<sec_3.5>> and
+<<S101,clause=4.6>> and <<S101,clause=4.7>>).
 
 *fixed date range*; *periodic date range* -- population of these complex
 attributes determines when the feature will be added (sub-attribute
@@ -879,7 +879,7 @@ Notes: YYYY = calendar year; MM = month; DD = day.
 The dashes (-) indicating that the year, month or day is not needed
 must be included.
 
-Encoded date ranges are inclusive, see S-100 Part 3, clause 3-8.3.
+Encoded date ranges are inclusive, see <<IHO_S_100,part=3,clause=3-8.3>>.
 For example:
 
 *fixed date range*/*date start* = _20220922_ Commences at 000000 hours
@@ -1104,9 +1104,9 @@ the use of these attributes.
 These attributes must not be used when it is possible to encode the
 information by means of any other attribute.
 
-Clause 11.2 of the S-101 Product Specification Main document specifies
+<<S101,clause=11.2>> specifies
 the content of an Exchange Set and the inclusion of support files.
-Clause 11.4 of the Product Specification Main document outlines specific
+<<S101,clause=11.4>> outlines specific
 rules and limitations for support files and their management; and
 additionally details ENC support file creation and application use
 cases.
@@ -1220,7 +1220,7 @@ Updates.
 which has not been previously distributed by Updates. Each New Edition
 of a dataset must have the same name as the dataset that it replaces.
 
-See also S-101 Main document, Section 4.5 in addition to the sub-clauses
+See also <<S101,clause=4.5>> in addition to the sub-clauses
 below for further information regarding ENC datasets.
 
 [[sec_2.5.1]]
@@ -1400,7 +1400,7 @@ ENCs.
 
 Each feature instance within an ENC must have a unique universal Feature
 Object Identifier [FOID]. Information regarding FOIDs can be found
-in clause 4.4 of the S-101 ENC Product Specification (main document).
+in <<S101,clause=4.4>>.
 
 [[sec_2.5.7]]
 ==== Heights and elevations
@@ -2030,8 +2030,8 @@ gradual reduction in the depths displayed as the user zooms out.
 ==== Masking
 
 To improve the look and feel of the display of ENCs in ECDIS for the
-Mariner certain edges of features should be masked (see S-101 Product
-Specification Main document clause 4.8.3). For example, the boundaries
+Mariner certain edges of features should be masked (see
+<<S101,clause=4.8.3>>). For example, the boundaries
 of anchorage area symbols overwrite coincident pontoon symbols:
 
 [[figure_2-3]]
@@ -2351,7 +2351,7 @@ the attribute name in the tables.
 
 * S-101 Attribute: Attributes shown in grey text are ECDIS "system"
 attributes which are populated by the ENC production system in order
-to assist with portrayal of ENC data in ECDIS (see Section30). These
+to assist with portrayal of ENC data in ECDIS (see <<sec_30>>). These
 attributes may be further edited by the compiler as required.
 
 * S-57 Acronym: S-57 attribute acronyms shown in italic style text
@@ -2361,7 +2361,7 @@ have been re-modelled in S-101 from S-57.
 the enumerate values listed are only those allowable for the particular
 binding of the attribute relevant to the feature. Allowable values
 may vary for the attribute depending on the feature to which the attribute
-is bound. Such bindings are defined in the S-101 Feature Catalogue.
+is bound. Such bindings are defined in <<S101>>.
 The full list of enumerate values that may be assigned to an attribute
 in S-101 can be found in <<sec_27;and!sec_28>> of this document.
 

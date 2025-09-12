@@ -10,17 +10,18 @@ required: metadata about the overall Exchange Catalogue; metadata
 about each of the datasets contained in the Catalogue; and metadata
 about the support files that make up the package.
 
-S-100 Part 17, Figures 17-1, 17-6 and 17-7 outline the overall concept
+<<IHO_S_100,part=17,figure=17-1>>, <<IHO_S_100,part=17,figure=17-6>>
+and <<IHO_S_100,part=17,figure=17-7>> outline the overall concept
 of an S-100 Exchange Set for the interchange of geospatial data and
-its relevant metadata. Figure 17-1 depicts the realization of the
-ISO 19115-1 and 19115-3 classes which form the foundation of the Exchange
+its relevant metadata. <<IHO_S_100,part=17,figure=17-1>> depicts the realization of the
+<<ISO_19115_1>> and <<ISO_TS_19115_3>> classes which form the foundation of the Exchange
 Set. The overall structure of S-101 metadata for Exchange Sets is
-the same as S-100 metadata. Figure 17-6 depicts the structure of the
+the same as S-100 metadata. <<IHO_S_100,part=17,figure=17-6>> depicts the structure of the
 Exchange Set Catalogue and the structure of the Exchange Set as included
-in S-100 part 17, Figure 17-1 is also described in <<sec_11.2>> above.
+in <<IHO_S_100,part=17,figure=17-1>> is also described in <<sec_11.2>> above.
 More detailed information about the various classes is shown in
-Figure 17-7 and a textual description in the Tables is included at
-clauses <<sec_12.1.1;to!sec_12.1.4>> below.
+<<IHO_S_100,part=17,figure=17-7>> and a textual description in the Tables is included at
+<<sec_12.1.1;to!sec_12.1.4>> below.
 
 The discovery metadata classes have numerous attributes which expose
 important information about the ENCs, ENC support files and system
@@ -40,7 +41,7 @@ language. If this is the case it is noted in the Remarks column.
 In the following clauses, wherever S-101 makes an optional S-100 metadata
 attribute mandatory (that is, restricts multiplicity from 0.. to 1..),
 the restricted multiplicity is shown in place of the multiplicity
-given in S-100 Part 17, and a comment noting the restricted multiplicity
+given in <<IHO_S_100,part=17>>, and a comment noting the restricted multiplicity
 has been included in the Remarks column.
 
 [%landscape]
@@ -50,8 +51,8 @@ has been included in the Remarks column.
 ==== S100_ExchangeCatalogue
 
 The Exchange Catalogue inherits the Dataset Discovery Metadata, Support
-File Discovery Metadata and Catalogue Discovery Metadata from S-100
-Part 17 with additional S-101-specific restrictions.
+File Discovery Metadata and Catalogue Discovery Metadata from
+<<IHO_S_100,part=17>> with additional S-101-specific restrictions.
 
 [cols="a,a,a,a,a", options="unnumbered"]
 |===
@@ -111,7 +112,7 @@ h|Name h|Description h|Mult h|Type h|Remarks
 | Signed public key certificates referred to by digital signatures in the Exchange Set
 | 0..*
 | S100_SE_CertificateContainerType
-| Content defined in S-100 Part 15. All certificates used, except the SA root certificate (installed separately by the implementing system) shall be included
+| Content defined in <<IHO_S_100,part=15>>. All certificates used, except the SA root certificate (installed separately by the implementing system) shall be included
 
 | dataServerIdentifier
 | Identifies the data server for the permit
@@ -186,11 +187,15 @@ h| Name h| Description h| Mult h| Type h| Remarks
 
 | S100_DatasetDiscoveryMetadata | Metadata about the individual datasets in the Exchange Catalogue | - | - | -
 
-| fileName | Dataset file name | 1 | URI | See S-100 Part 1, clause 1-4.6
+| fileName | Dataset file name | 1 | URI | See <<IHO_S_100,part=1,clause=1-4.6>>
 | description | Short description giving the area or location covered by the dataset | 0..1 | CharacterString | For example, a harbour or port name, between two named locations etcSee also Note 1
 | datasetID | Dataset ID expressed as a Maritime Resource Name (MRN) | 0..1 | URN | The URN must be an MRN
-| compressionFlag | Indicates if the resource is compressed | 1 | Boolean | _True_ indicates a compressed dataset resource__False__ indicates an uncompressed dataset resource
-| dataProtection | Indicates if the data is encrypted | 1 | Boolean | _True_ indicates an encrypted dataset resource__False__ indicates an unencrypted dataset resource
+| compressionFlag | Indicates if the resource is compressed | 1 | Boolean | _True_ indicates a compressed dataset resource
+
+__False__ indicates an uncompressed dataset resource
+| dataProtection | Indicates if the data is encrypted | 1 | Boolean | _True_ indicates an encrypted dataset resource
+
+__False__ indicates an unencrypted dataset resource
 | protectionScheme
 | Specification of method used for data protection
 | 0..1
@@ -198,9 +203,11 @@ h| Name h| Description h| Mult h| Type h| Remarks
 | digitalSignatureReference
 | Specifies the algorithm used to compute digitalSignatureValue
 | 1
-| S100_SE_DigitalSignatureReference (see S-100 Part 15) |
-| digitalSignatureValue | Value derived from the digital signature | 1..* | S100_SE_DigitalSignature (see S-100 Part 15) | The value resulting from application of digitalSignatureReference.Implemented as the digital signature format specified in S-100 Part 15
-| copyright | Indicates if the dataset is copyrighted | 1 | Boolean | _True_ indicates the resource is copyrighted__False__ indicates the resource is not copyrighted
+| S100_SE_DigitalSignatureReference (see <<IHO_S_100,part=15>>) |
+| digitalSignatureValue | Value derived from the digital signature | 1..* | S100_SE_DigitalSignature (see <<IHO_S_100,part=15>>) | The value resulting from application of digitalSignatureReference.Implemented as the digital signature format specified in <<IHO_S_100,part=15>>
+| copyright | Indicates if the dataset is copyrighted | 1 | Boolean | _True_ indicates the resource is copyrighted
+
+__False__ indicates the resource is not copyrighted
 | classification
 | Indicates the security classification of the dataset
 | 1
@@ -221,7 +228,9 @@ MD_SecurityConstraints>MD_ClassificationCode (codelist)
 0..1 multiplicity in S-100 restricted to 1 in S-101
 
 | purpose | The purpose for which the dataset has been issued | 1 | S100_Purpose | 0..1 multiplicity in S-100 restricted to 1 in S-101
-| notForNavigation | Indicates the dataset is not intended to be used for navigation | 1 | Boolean | _True_ indicates the dataset is not intended to be used for navigation__False__ indicates the dataset is intended to be used for navigation
+| notForNavigation | Indicates the dataset is not intended to be used for navigation | 1 | Boolean | _True_ indicates the dataset is not intended to be used for navigation
+
+__False__ indicates the dataset is intended to be used for navigation
 | specificUsage
 | The use for which the dataset is intended
 | 0..1
@@ -274,7 +283,7 @@ and end of the temporal extent is known
 | Agency responsible for producing the data
 | 1
 | CI_Responsibility>CI_Organisation
-| See S-100 Part 17, Table 17-3
+| See <<IHO_S_100,part=17,table=17-3>>
 | producerCode | The official IHO S-100 Producer Code from the IHO GI Registry, Producer Code Register | 1 | CharacterString | 0..1 multiplicity in S-100 restricted to 1 in S-101
 | encodingFormat | The encoding format of the dataset | 1 | S100_EncodingFormat | For S-101 datasets must be ISO/IEC 8211
 | dataCoverage | Provides information about data coverages within the dataset | 1..* | S100_DataCoverage | 0..* multiplicity in S-100 restricted to 1..* in S-101
@@ -287,12 +296,12 @@ and end of the temporal extent is known
 | Other languages and character sets used in the dataset
 | 0..*
 | PT_Locale |
-| metadataPointOfContact | Point of contact for metadata | 0..1 | CI_Responsibility>CI_Individual orCI_Responsibility>CI_Organisation | Only if metadataPointOfContact is different to producingAgency
+| metadataPointOfContact | Point of contact for metadata | 0..1 | CI_Responsibility>CI_Individual or CI_Responsibility>CI_Organisation | Only if metadataPointOfContact is different to producingAgency
 | metadataDateStamp | Date stamp for metadata | 0..1 | Date | Metadata creation date, which may or may not be the dataset creation date
 | replacedData | Indicates if a cancelled dataset is replaced by another data file(s) | 0..1 | Boolean | See <<note_2>>
 | dataReplacement | Dataset name | 0..* | CharacterString | A dataset may be replaced by 1 or more datasetsSee <<note_2>>
 | navigationPurpose | Classification of intended navigation purpose (for Catalogue indexing purposes) | 1 | S100_NavigationPurpose | 0..3 multiplicity in S-100 restricted to 1 in S-101
-| resourceMaintenance | Information about the frequency of resource updates, and the scope of those updates | 0..1 | MD_MaintenanceInformation | S-100 restricts the multiplicity to 0..1 and adds specific restrictions on the ISO 19115 structure and content. See clause MD_MaintenanceInformation later in this PartFormat: PnYnMnDTnHnMnS (XML built-in type for ISO 8601 _duration_). See S-100 Part 17, clause 17-4.9
+| resourceMaintenance | Information about the frequency of resource updates, and the scope of those updates | 0..1 | MD_MaintenanceInformation | S-100 restricts the multiplicity to 0..1 and adds specific restrictions on the ISO 19115 structure and content. See clause MD_MaintenanceInformation later in this PartFormat: PnYnMnDTnHnMnS (XML built-in type for ISO 8601 _duration_). See <<IHO_S_100,part=17,clause=17-4.9>>
 
 |===
 
@@ -368,7 +377,9 @@ h| Name h| Mult h| Value h| Type h| Remarks
 |
 
 | Integer
-| Any value0..1 multiplicity in S-100 restricted to 1 in S-101
+| Any value
+
+0..1 multiplicity in S-100 restricted to 1 in S-101
 
 | minimumDisplayScale
 | 1
@@ -443,10 +454,10 @@ of the dataset
 |===
 h| Item h| Name h| Description h| Code h| Remarks
 
-| Enumeration | S100_EncodingFormat | The encoding format | - | Values listed in S-100 Part 17 but not mentioned in this table are not allowed
+| Enumeration | S100_EncodingFormat | The encoding format | - | Values listed in <<IHO_S_100,part=17>> but not mentioned in this table are not allowed
 | Value
 | ISO/IEC 8211
-| The ISO 8211 data format as defined in S-100 Part 10a
+| The ISO 8211 data format as defined in <<IHO_S_100,part=10a>>
 | *1*
 |
 
@@ -499,7 +510,7 @@ h| Item h| Name h| Description h| Code h| Remarks
 h| Item h| Name h| Description h| Code h| Remarks
 
 | Enumeration | S100_ProtectionScheme | Data protection schemes | - | -
-| Value | S100p15 | IHO S-100 Part 15 | 1 | See S-100 Part 15
+| Value | S100p15 | IHO S-100 Part 15 | 1 | See <<IHO_S_100,part=15>>
 
 |===
 
@@ -511,7 +522,7 @@ h| Item h| Name h| Description h| Code h| Remarks
 h| Name h| Description h| Mult h| Type h| Remarks
 
 | S100_SupportFileDiscoveryMetadata | Metadata about the individual support files in the Exchange Catalogue | - | - | -
-| fileName | Name of the support file | 1 | URI | See S-100 Part 1, clause 1-4.6
+| fileName | Name of the support file | 1 | URI | See <<IHO_S_100,part=1,clause=1-4.6>>
 | revisionStatus | The purpose for which the support file has been issued | 1 | S100_SupportFileRevisionStatus | For example new, replacement, etc
 | editionNumber | The Edition number of the support file | 1 | Integer | When a data set is initially created, the Edition number 1 is assigned to it. The Edition number is increased by 1 at each new Edition. Edition number remains the same for a re-issue
 | issueDate
@@ -521,26 +532,28 @@ h| Name h| Description h| Mult h| Type h| Remarks
 |
 
 | supportFileSpecification | The specification used to create this file | 1 | S100_SupportFileSpecification | 0..1 multiplicity in S-100 restricted to 1 in S-101.
-| dataType | The format of the support file | 1 | S100_SupportFileFormat | Constrained to TXT and TIF - see clause 11.4.1
+| dataType | The format of the support file | 1 | S100_SupportFileFormat | Constrained to TXT and TIF - see <<sec_11.4.1>>
 | comment
 | Optional comment
 | 0..1
 | CharacterString
 | Any additional Information
 
-| compressionFlag | Indicates if the resource is compressed | 1 | Boolean | _True_ indicates a compressed resource__False__ indicates an uncompressed resource
+| compressionFlag | Indicates if the resource is compressed | 1 | Boolean | _True_ indicates a compressed resource
+
+__False__ indicates an uncompressed resource
 | digitalSignatureReference
 | Specifies the algorithm used to compute digitalSignatureValue
 | 1
-| S100_SE_DigitalSignatureReference (see Part 15)
+| S100_SE_DigitalSignatureReference (see <<IHO_S_100,part=15>>)
 |
 
-| digitalSignatureValue | Value derived from the digital signature | 1..* | S100_SE_DigitalSignature (see Part 15)
+| digitalSignatureValue | Value derived from the digital signature | 1..* | S100_SE_DigitalSignature (see <<IHO_S_100,part=15>>)
 | The value resulting from application of digitalSignatureReference
 
-Implemented as the digital signature format specified in S-100 Part 15
+Implemented as the digital signature format specified in <<IHO_S_100,part=15>>
 | defaultLocale | Default language and character set used in the support file | 0..1 | PT_Locale | A support file is expected to use only one as locale. Additional support files can be created for other locales
-| supportedResource | Identifier of the resource supported by this support file | 0..* | CharacterString | Conventions for identifiers are detailed in S-100 Part 15. S-100 allows file URI, digital signature or cryptographic hash checksums to be used
+| supportedResource | Identifier of the resource supported by this support file | 0..* | CharacterString | Conventions for identifiers are detailed in <<IHO_S_100,part=15>>. S-100 allows file URI, digital signature or cryptographic hash checksums to be used
 | resourcePurpose | The purpose of the supporting resource | 0..1 | S100_ResourcePurpose | Identifies how the supporting resource is used
 
 |===
@@ -554,7 +567,7 @@ NOTE: The optional S-100 field _otherDataTypeDescription_ is not allowed in S-10
 |===
 h| Item h| Name h| Description h| Code h| Remarks
 
-| Enumeration | S100_SupportFileFormat | The format used for the support file | - | Values listed in S-100 Part 17 but not mentioned in this table are not allowed
+| Enumeration | S100_SupportFileFormat | The format used for the support file | - | Values listed in <<IHO_S_100,part=17>> but not mentioned in this table are not allowed
 | Value | TXT_UTF-8 | UTF-8 text excluding control codes | 1 | This is the only format allowed for a textual ENC Support file
 | Value | TIFF | Tagged Image File Format | 7 | This is the only format allowed for a textual ENC Support file
 
@@ -631,7 +644,7 @@ This is an optional element that allows for the delivery of S-101 Feature and Po
 h| Name h| Description h| Mult h| Type h| Remarks
 
 | S100_CatalogueDiscoveryMetadata | Class for S-100 Catalogue metadata | - | - | -
-| fileName | The name for the Catalogue | 1 | URI | See S-100 Part 1, clause 1-4.6
+| fileName | The name for the Catalogue | 1 | URI | See <<IHO_S_100,part=1,clause=1-4.6>>
 | purpose | The purpose for which the Catalogue has been issued | 0..1 | S100_Purpose
 |
 The values must be one of the following:
@@ -663,8 +676,8 @@ Default is new edition
 | S100_ProductSpecification
 |
 
-| digitalSignatureReference | Specifies the algorithm used to compute digitalSignatureValue | 1 | S100_SE_DigitalSignatureReference (see Part 15) | Reference to the appropriate digital signature algorithm
-| digitalSignatureValue | Value derived from the digital signature | 1..* | S100_SE_DigitalSignature (see Part 15) | The value resulting from application of digitalSignatureReferenceImplemented as the digital signature format specified in Part 15
+| digitalSignatureReference | Specifies the algorithm used to compute digitalSignatureValue | 1 | S100_SE_DigitalSignatureReference (see <<IHO_S_100,part=15>>) | Reference to the appropriate digital signature algorithm
+| digitalSignatureValue | Value derived from the digital signature | 1..* | S100_SE_DigitalSignature (see <<IHO_S_100,part=15>>) | The value resulting from application of digitalSignatureReferenceImplemented as the digital signature format specified in Part 15
 | compressionFlag | Indicates if the resource is compressed | 1 | Boolean | _True_ indicates a compressed resource__False__ indicates an uncompressed resource
 | defaultLocale | Default language and character set used in the Catalogue | 1 | PT_Locale | 0..1 multiplicity in S-100 restricted to 1 in S-101
 | otherLocale
@@ -716,7 +729,7 @@ and userDefinedMaintenanceFrequency attributes
 [[sec_12.1.4.3]]
 ===== MD_MaintenanceFrequencyCode
 
-S-100 uses a subset of the values allowed in ISO 19115-1.
+S-100 uses a subset of the values allowed in <<ISO_19115_1>>.
 
 [cols="a,a,a,a,a",options="unnumbered"]
 |===
@@ -735,14 +748,14 @@ h| Item h| Name h| Description h| Code h| Remarks
 |===
 h| Role Name h| Name h| Description h| Mult h| Type h| Remarks
 
-| Class | PT_Locale | description of a locale | - | - | From ISO 19115-1
+| Class | PT_Locale | description of a locale | - | - | From <<ISO_19115_1>>
 | Value | language | designation of the locale language | 1 | LanguageCode | ISO 639-2 3-letter language codes.
 | Value | country | designation of the specific country of the locale language | 0..1 | CountryCode | ISO 3166-2 2-letter country codes
 | Value | characterEncoding | designation of the character set to be used to encode the textual value of the locale | 1 | MD_CharacterSetCode | UTF-8 is used in S-100
 
 |===
 
-The class PT_Locale is defined in ISO 19115-1. LanguageCode, CountryCode, and MD_CharacterSetCode are ISO codelists which are defined in a resource file in the S-100 Edition 5.0.0 Schemas distribution.
+The class PT_Locale is defined in <<ISO_19115_1>>. LanguageCode, CountryCode, and MD_CharacterSetCode are ISO codelists which are defined in a resource file in the S-100 Edition 5.0.0 Schemas distribution.
 
 [[sec_12.2]]
 === Language

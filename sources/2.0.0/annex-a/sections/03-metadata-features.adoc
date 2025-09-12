@@ -3,7 +3,7 @@
 == Metadata Features
 
 The maximum use must be made of Meta features to reduce the attribution
-on individual features. In a Base dataset (see S-101 Annex B, clauseB5),
+on individual features. In a Base dataset (see <<S101,annex=B,clause=B5>>),
 some Meta features are mandatory.
 
 These mandatory Meta features are in the following list:
@@ -451,7 +451,7 @@ h| S-101 Role 3+h| Association Type 3+h| Associated to 2+h| Type h| Multiplicity
 ==== Buoyage systems (see S-4 -- B-461)
 
 The buoyage system of the dataset must be encoded using the Meta feature
-*Navigational System of Marks*:All parts of the dataset containing
+*Navigational System of Marks*: All parts of the dataset containing
 data must be covered by *Navigational System of Marks* features, with
 the attribute *marks navigational -- system of* indicating the buoyage
 system in operation. *Navigational System of Marks* features must
@@ -1094,7 +1094,7 @@ indicating the sounding (depth) datum.
 fields for soundings is not utilized by the ECDIS in conveying the
 sounding datum information for an ENC to the Mariner in ECDIS.
 This information is provided instead using *Sounding Datum*. See also
-S-101 Product Specification Main document, <<sec_5.3>>.
+<<S101,clause=5.3>>.
 * Sounding groups, depth contours and depth areas going across areas
 having different values of sounding datum must be split at the border
 of those areas. Other features that should be split include
