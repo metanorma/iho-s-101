@@ -3,7 +3,7 @@
 == Overview
 
 [[sec_1.1]]
-===  Scope
+=== Scope
 
 This document describes an S-100 compliant Product Specification for
 Electronic Navigational Charts, which will form the base navigation
@@ -31,10 +31,10 @@ for developers.
 * [[[ISO_8601_2004,ISO 8601:2004]]]
 
 * [[[ISO_19101_2003,ISO 19101]]]
-    span:date.published[2003]
+span:date.published[2003]
 
 * [[[ISO_19103_2005,ISO/TS 19103:2005]]]
-    span:date.published[2005]
+span:date.published[2005]
 
 * [[[ISO_19103_2_2005,ISO/TS 19103]]]
 
@@ -70,13 +70,12 @@ for developers.
 
 * [[[FIPS_186, FIPS 186]]]
 
-* [[[AnnexA,dropid(repo:(current-metanorma-collection/IHO S-101 Annex A))]]],
+* [[[S101AnnexA,dropid(repo:(current-metanorma-collection/IHO S-101 Annex A))]]],
 span:title[S-101 -- Annex A: Data Classification and Encoding Guide],
 span:edition[2.0.0],
 span:organization[International Hydrographic Organization]
 
 [[sec_1.3]]
-[heading="terms and definitions"]
 === Terms, definitions and abbreviations
 
 [[sec_1.3.1]]
@@ -90,28 +89,29 @@ process to be followed, but is not mandatory.
 * "May" means "allowed to" or "could possibly", and is not mandatory.
 
 [[sec_1.3.2]]
+[heading="terms and definitions"]
 ==== Terms and definitions
 
-==== Accuracy
+===== Accuracy
 
 Closeness of agreement between a test result and the accepted reference
 values.
 
 NOTE: A test result can be from an observation or measurement.
 
-==== Aggregation
+===== Aggregation
 
 Special form of {{Association,association}} that specifies a whole-part
 relationship between the aggregate (whole) and a component part
 (see {{Composition,composition}}).
 
-==== Alarm
+===== Alarm
 
 (MSC.302/A) a high-priority {{Alert,alert}}. Condition requiring immediate
 attention and action by the bridge team, to maintain the safe navigation
 of the ship.
 
-==== Alert
+===== Alert
 
 (MSC.302/A) announcement of abnormal situations and conditions requiring
 attention. Alerts are divided in four priorities:
@@ -120,11 +120,11 @@ and {{Caution,cautions}}. An alert provides information about a defined
 state change in connection with information about how to announce
 this event in a defined way to the system and the operator.
 
-==== Application Schema
+===== Application Schema
 
 Conceptual schema for data required by one or more applications.
 
-==== Association
+===== Association
 
 Semantic relationship between two or more classifiers that specifies
 connections among their {{Instance,instances}}.
@@ -132,7 +132,7 @@ connections among their {{Instance,instances}}.
 NOTE: A binary association is an association among exactly two classifiers
 (including the possibility of an association from a classifier to itself)
 
-==== Attribute
+===== Attribute
 
 . Named property of an entity.
 +
@@ -152,7 +152,7 @@ NOTE: "Feature" used in this definition is the UML meaning of the
 term.
 --
 
-==== Boundary
+===== Boundary
 
 Set that represents the limit of an entity.
 
@@ -160,14 +160,14 @@ NOTE: Boundary is most commonly used in the context of geometry, where
 the set is a collection of points or a collection of objects that
 represent those points.
 
-==== Caution
+===== Caution
 
 (MSC.302/A) lowest priority of an {{Alert,alert}}. Awareness of a
 condition which does not warrant an {{Alarm,alarm}} or warning condition,
 but still requires attention out of the ordinary consideration of
 the situation or of given information.
 
-==== Class
+===== Class
 
 Description of a set of objects that share the same {{Attribute,attributes}},
 operations, methods, {{Relationship,relationships}}, and semantics.
@@ -179,14 +179,14 @@ implementation concepts (for a design model). A classifier is a generalization
 of class that includes other class-like elements, such as data type,
 actor and component.
 
-==== Classification
+===== Classification
 
 The process of determining the appropriate {{Data Type,data type}}
 within a {{Feature Catalogue,feature catalogue}} for a particular
 real world feature, including consideration of
 {{Data Quality,data quality}}.
 
-==== Composition
+===== Composition
 
 Form of {{Aggregation,aggregation}} {{Association,association}} with
 strong ownership and coincident lifetime as part of the whole.
@@ -197,7 +197,7 @@ share lifetimes). Such parts can also be explicitly removed before
 the death of the composite. Composition may be recursive. Synonym:
 Composite aggregation.
 
-==== Coordinate
+===== Coordinate
 
 One of a sequence of n numbers designating the position of a {{Point,point}}
 in n-dimensional space.
@@ -205,19 +205,19 @@ in n-dimensional space.
 NOTE: In a {{Coordinate Reference System,coordinate reference system}},
 the coordinate numbers are qualified by units.
 
-==== Coordinate Reference System
+===== Coordinate Reference System
 
 {{Coordinate}} system that is related to an object by a datum.
 
 NOTE: For geodetic and vertical datums, the object will be the Earth.
 
-==== Coordinate Tuple
+===== Coordinate Tuple
 
 Ordered list of {{Coordinate,coordinates}} where the number and order
 of coordinates is identical to the axes of the
 {{Coordinate Reference System,coordinate reference system}}.
 
-==== Curve
+===== Curve
 
 1-dimensional {{Geometric Primitive,geometric primitive}}, representing
 the continuous image of a line.
@@ -230,7 +230,7 @@ point. Connectivity of the curve is guaranteed by the "continuous
 image of a line" clause. A topological theorem states that a continuous
 image of a connected set is connected.
 
-==== Curve Segment
+===== Curve Segment
 
 1-dimensional geometric object used to represent a continuous component
 of a {{Curve,curve}} using homogeneous interpolation and definition
@@ -239,17 +239,17 @@ methods.
 NOTE: The geometric set represented by a single curve segment is equivalent
 to a curve.
 
-==== Data Product
+===== Data Product
 
 A {{Dataset,dataset}} or dataset series that conforms to a data product
 specification.
 
-==== Data Quality
+===== Data Quality
 
 A set of elements describing aspects of quality, including a measure
 of quality, an evaluation procedure, a quality result, and a scope.
 
-==== Data Type
+===== Data Type
 
 Specification of a value domain with operations allowed on values
 in this domain.
@@ -262,7 +262,7 @@ NOTE: A data type is identified by a term, for example Integer.
 [example]
 Integer, Real, Boolean, CharacterString, DirectPosition and S_100_TruncatedDate
 
-==== Dataset
+===== Dataset
 
 An identifiable collection of data.
 
@@ -272,12 +272,12 @@ physically within a larger dataset. Theoretically, a dataset may be
 as small as a single feature contained within a larger dataset.
 A hardcopy map or chart may be considered a dataset.
 
-==== Datum
+===== Datum
 
 Parameter or set of parameters that define the position of the origin,
 the scale, and the orientation of a {{Coordinate,coordinate}} system.
 
-==== Display Priority
+===== Display Priority
 
 Display priorities control the order in which the output of the portrayal
 functions is processed by the rendering engine. Priorities with smaller
@@ -288,7 +288,7 @@ and lastly text instructions. If the display priority is equal among
 the same type of instruction (area, line, point, or text) some other
 neutral criterion must be used to order the instructions.
 
-==== ECDIS
+===== ECDIS
 
 A navigation information system which with adequate back-up arrangements
 can be accepted as complying with the up-to-date chart required by
@@ -298,19 +298,19 @@ Chart (System Database) with positional information from navigation
 sensors to assist the Mariner in route planning and route monitoring,
 and if required display additional navigation-related information.
 
-==== ECDIS Chart 1
+===== ECDIS Chart 1
 
 An ECDIS version of INT 1, including all symbols, line styles and
 colour coding used for chart presentation. Intended for the Mariner
 for both familiarization with ECDIS and to look up specific symbols.
 
-==== Emergency Alarm
+===== Emergency Alarm
 
 (MSC.302/A) highest priority of an {{Alert,alert}}. A condition presenting
 an immediate danger to human life or to the ship and its machinery
 exists and that immediate action must be taken.
 
-==== ENC
+===== ENC
 
 The {{Dataset,dataset}}, standardized as to content, structure and
 format, issued for use with {{ECDIS}} by or on the authority of a
@@ -320,7 +320,7 @@ the chart information necessary for safe navigation and may contain
 supplementary information in addition to that contained in the paper
 chart which may be considered necessary for safe navigation.
 
-==== ENDS
+===== ENDS
 
 A special-purpose database compiled from nautical chart and nautical
 publication data, standardized as to content, structure and format,
@@ -332,13 +332,13 @@ publications carriage requirements in SOLAS regulations V/19 and V/27.
 The navigational base layer of ENDS is the Electronic Navigational
 Chart ({{ENC}}).
 
-==== Enumeration
+===== Enumeration
 
 A fixed list of valid identifiers of named literal values.
 {{Attribute,Attributes}} of an enumeration type may only take values
 from this list.
 
-==== Feature
+===== Feature
 
 Abstraction of real world phenomena.
 
@@ -349,12 +349,12 @@ feature instance should be used when only one is meant.
 The phenomenon named 'London Eye' may be classified as a feature instance
 with other phenomena into a feature type 'landmark'
 
-==== Feature Association
+===== Feature Association
 
 {{Relationship}} that links instances of one {{Feature,feature}} type
 with instances of the same or a different {{Feature,feature}} type.
 
-==== Feature Attribute
+===== Feature Attribute
 
 Characteristic of a {{Feature,feature}}.
 
@@ -377,14 +377,14 @@ value _VHF0007_ which belongs to the data type _text_
 A feature attribute named _length_ may have an attribute value _82.4_
 which belongs to the data type _real_
 
-==== Feature Catalogue
+===== Feature Catalogue
 
 A catalogue containing definitions and descriptions of the
 {{Feature,feature}} types, {{Feature Attribute,feature attributes}},
 and {{Feature Association,feature associations}} occurring in one
 or more sets of geographic data.
 
-==== Geometric Primitive
+===== Geometric Primitive
 
 Geometric object representing a single, connected, homogeneous element
 of geometry.
@@ -393,53 +393,53 @@ NOTE: Geometric primitives are non-decomposed objects that present
 information about geometric configuration. They include points, curves,
 surfaces, and solids.
 
-==== Human Readable
+===== Human Readable
 
 A representation of information that can be naturally read by humans.
 
-==== Identifier
+===== Identifier
 
 A linguistically independent sequence of characters capable of uniquely
 and permanently identifying that with which it is associated.
 
-==== Indication
+===== Indication
 
 Visual indication giving information about the condition of a system
 or equipment.
 
-==== Instance
+===== Instance
 
 Entity to which a set of operations can be applied and which has a
 state that stores the effects of the operations.
 
 NOTE: See {{Feature,feature}}.
 
-==== Machine Readable
+===== Machine Readable
 
 A representation of information that can be processed by computers.
 
-==== Maximum Display Scale
+===== Maximum Display Scale
 
 The value considered by the Data Producer to be the maximum (largest)
 scale at which the data is to be displayed before it can be considered
 to be "grossly overscaled".
 
-==== Metadata
+===== Metadata
 
 Data about data.
 
-==== Minimum Display Scale
+===== Minimum Display Scale
 
 The minimum (smallest) scale with which the data is intended to be
 displayed.
 
-==== Model
+===== Model
 
 Abstraction of some aspects of universe of discourse.
 
 NOTE: A semantically complete abstraction of a system.
 
-==== Multiplicity
+===== Multiplicity
 
 Specification of the number of possible occurrences of a property,
 or the number of allowable elements that may participate in a given
@@ -448,7 +448,7 @@ relationship.
 [example]
 1..* (one to many); 1 (exactly one); 0..1 (zero or one)
 
-==== Optimum Display Scale
+===== Optimum Display Scale
 
 The maximum (largest) scale with which the data is intended to be
 displayed.
@@ -459,24 +459,24 @@ When the Mariners Selected Viewing Scale (MSVS) is set to a scale
 that is larger than Optimum Display Scale, this triggers the overscale
 indication in the end user system.
 
-==== Overscale
+===== Overscale
 
 The viewing scale is larger than the value considered by the Data
 Producer to be the largest intended (optimum) display scale for the
 data.
 
-==== Point
+===== Point
 
 0-dimensional {{Geometric Primitive,geometric primitive}}, representing
 a position.
 
 NOTE: The boundary of a point is the empty set.
 
-==== Pointset
+===== Pointset
 
 A set of {{Point,points}} in geometric space.
 
-==== Portrayal Catalogue
+===== Portrayal Catalogue
 
 Collection of defined portrayals for a
 {{Feature Catalogue,feature catalogue}}.
@@ -484,32 +484,32 @@ Collection of defined portrayals for a
 NOTE: Content of a portrayal catalogue includes portrayal functions,
 symbols, and portrayal context.
 
-==== Record
+===== Record
 
 Finite, named collection of related items (objects or values).
 
 NOTE: Logically, a record is a set of pairs <name, item >.
 
-==== Relationship
+===== Relationship
 
 Semantic connection among model elements.
 
 NOTE: Kinds of relationships include association, generalization,
 metarelationship, flow, and several kinds grouped under dependency.
 
-==== Scale Minimum
+===== Scale Minimum
 
 The smallest scale at which a feature is intended to be displayed
 (for example, a minor light, with a scale minimum of 1:45,000, would
 not normally be displayed at a scale of 1:90,000).
 
-==== Skin of the Earth
+===== Skin of the Earth
 
 A defined set of non-overlapping geographic features of geometric
 primitive surface, completely covering an area equivalent to that
 of meta-features *Data Coverage*.
 
-==== Surface
+===== Surface
 
 Connected 2-dimensional {{Geometric Primitive,geometric primitive}},
 representing the continuous image of a region of a plane.
@@ -517,7 +517,7 @@ representing the continuous image of a region of a plane.
 NOTE: The boundary of a surface is the set of oriented, closed curves
 that delineate the limits of the surface.
 
-==== System Database
+===== System Database
 
 A database, in the manufacturer's internal ECDIS format, resulting
 from the lossless transformation of the Electronic Navigational Data
@@ -525,22 +525,22 @@ Service (ENDS) contents and its updates. It is this database that
 is accessed by ECDIS for the display generation and other navigational
 functions, and is equivalent to up-to-date ENDS.
 
-==== Temporal Reference System
+===== Temporal Reference System
 
 Reference system against which time is measured.
 
-==== Vertical Datum
+===== Vertical Datum
 
 Datum describing the relation of gravity-related heights or depths
 to the Earth.
 
-==== Viewing Scale
+===== Viewing Scale
 
 The value of the ratio of the linear dimensions of {{Feature,features}}
 of a {{Dataset,dataset}} presented in the display and the actual dimensions
 of the {{Feature,features}} represented of the {{Dataset,dataset}}.
 
-==== Warning
+===== Warning
 
 (MSC.302/A) {{Alert,alert}} for condition requiring immediate attention,
 but no immediate action by the bridge team. Warnings are presented

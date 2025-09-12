@@ -31,7 +31,7 @@ For S-101 the following data quality elements have been included:
 In addition to conformance to the Data Quality elements detailed in
 <<sec_6.2>> below, additional quantitative information may be provided
 to the user using relevant metadata features and attribution.
-The hierarchy of metadata provided in <<AnnexA,clause="3.3",table="3-1">>
+The hierarchy of metadata provided in <<S101AnnexA,table="3-1">>
 describes this further. For S-101 it is not relevant to provide a
 Data Quality Report to end users.
 
@@ -90,7 +90,7 @@ Domain consistency is applicable for S-101 and follows the guidelines
 from <<IHO_S_100,part=5>>.
 
 Data Producers must verify that the dataset conforms to the S-101
-Feature Catalogue and rules described in <<AnnexA>>. IHO Publications S-158:100
+Feature Catalogue and rules described in <<S101AnnexA>>. IHO Publications S-158:100
 - _S-100 Validation Checks_ and/or S-158:101 - _S-101 Validation Checks_,
 provide validation checks which verify this conformance.
 
@@ -138,7 +138,7 @@ the guidelines from <<IHO_S_100,part=4c>>.
 Data Producers must verify the absolute accuracy of S-101 datasets
 and ensure that they achieve an adequate accuracy. Additionally the
 relevant metadata features and attributes as described in
-<<AnnexA>>, must be populated where
+<<S101AnnexA>>, must be populated where
 applicable.
 
 [[sec_6.4.2]]
@@ -149,7 +149,7 @@ guidelines from <<IHO_S_100,part=4c>>.
 
 Data Producers must verify the vertical position accuracy of S-101
 datasets and ensure that they achieve an adequate accuracy. The relevant
-metadata features and attributes as described in <<AnnexA>>, should be populated to
+metadata features and attributes as described in <<S101AnnexA>>, should be populated to
 reflect the vertical position accuracy.
 
 [[sec_6.4.3]]
@@ -160,7 +160,7 @@ guidelines from <<IHO_S_100,part=4c>>.
 
 Data Producers must verify the horizontal position accuracy of S-101
 datasets and ensure that they achieve an adequate accuracy. The relevant
-metadata features and attributes as described in <<AnnexA>>, should be populated to
+metadata features and attributes as described in <<S101AnnexA>>, should be populated to
 reflect the horizontal position accuracy.
 
 [[sec_6.4.4]]
@@ -189,7 +189,7 @@ the guidelines from <<IHO_S_100,part=4c>>.
 Data Producers must verify that features have been encoded correctly
 when included in the S-101 dataset. Encoded features must conform
 to the S-101 Feature Catalogue and the rules described in
-<<AnnexA>>. IHO Publications
+<<S101AnnexA>>. IHO Publications
 S-158:100 - _S-100 Validation Checks_ and/or S-158:101 -
 _S-101 Validation Checks_, provide validation checks which verify
 this conformance.
@@ -206,7 +206,7 @@ the guidelines from <<IHO_S_100,part=4c>>.
 Data Producers must verify that non-quantitative attributes have been
 populated correctly when included in the S-101 dataset. Non-quantitative
 attributes must conform to the S-101 Feature Catalogue and the rules
-described in <<AnnexA>>. IHO Publications S-158:100
+described in <<S101AnnexA>>. IHO Publications S-158:100
 - _S-100 Validation Checks_ and/or S-158:101 - _S-101 Validation Checks_,
 provide validation checks which verify this conformance.
 
@@ -222,7 +222,7 @@ the guidelines from <<IHO_S_100,part=4c>>.
 Data Producers must verify that quantitative attributes have been
 populated correctly when included in the S-101 dataset. Quantitative
 attributes must conform to the S-101 Feature Catalogue and the rules
-described in <<AnnexA>>. Relevant metadata features
+described in <<S101AnnexA>>. Relevant metadata features
 and attributes must be used to indicate the accuracy where applicable.
 IHO Publications S-158:100 - _S-100 Validation Checks_ and/or S-158:101
 - _S-101 Validation Checks_, provide validation checks which verify
@@ -241,7 +241,7 @@ Temporal consistency is applicable for S-101 and follows the guidelines
 from <<IHO_S_100,part=4c>>.
 
 Data Producers must verify that the dataset conforms to rules described
-in <<AnnexA>>.
+in <<S101AnnexA>>.
 IHO Publications S-158:100 - _S-100 Validation Checks_ and/or S-158:101
 - _S-101 Validation Checks_, provide validation checks which verify
 this conformance.
@@ -256,7 +256,7 @@ Temporal validity is applicable for S-101 and follows the guidelines
 from <<IHO_S_100,part=4c>>.
 
 Data Producers must verify that the dataset conforms to rules described
-in <<AnnexA>>.
+in <<S101AnnexA>>.
 IHO Publications S-158:100 - _S-100 Validation Checks_ and/or S-158:101
 - _S-101 Validation Checks_, provide validation checks which verify
 this conformance.
@@ -294,7 +294,7 @@ _S-101 Validation Checks_. As a minimum requirement, all datasets
 must conform to all checks that are categorized as "Critical" in S-158:100
 and S-158:101.
 
-S-101 datasets must conform to all mandatory elements of <<AnnexA>>,
+S-101 datasets must conform to all mandatory elements of <<S101AnnexA>>,
 where the word 'must' is used.
 
 In addition to the above, dataset usability must be assessed against:

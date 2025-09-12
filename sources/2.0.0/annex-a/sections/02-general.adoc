@@ -1539,7 +1539,7 @@ h| name h| language h| name usage h| Language setting h| Name displayed
 | _Baffin Island_ | _eng_ | _1_ .<| Default               .<| Baffin Island
 | _Île de Baffin_ | _fra_ | _2_ .<| Alternate (French)    .<| Île de Baffin
 | _Qikiqtaaluk_   | _iku_ | _2_ .<| Alternate (Inuktitut) .<| Qikiqtaaluk
-| _ᕿᑭᖅᑖᓗᒃ_       | _iku_ | _-_ .<| Alternate (Spanish)   .<| Baffin Island
+| _&#x157F;&#x146D;&#x1575;&#x1456;&#x14D7;&#x14C3;_       | _iku_ | _-_ .<| Alternate (Spanish)   .<| Baffin Island
 
 |===
 

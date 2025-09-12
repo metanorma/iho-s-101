@@ -34,7 +34,7 @@ described in <<IHO_S_100,part=17,clause=17-4.1>>.
 --
 Each Exchange Set has a single Exchange Catalogue which contains the
 discovery metadata for each dataset and references to any support
-files. See S-100 Part 17, clauses 17-4.4 and 17-4.5.
+files. See <<IHO_S_100,part=17,clause=17-4.4>> and <<IHO_S_100,part=17,clause=17-4.5>>.
 --
 
 [[sec_11.3]]
@@ -236,7 +236,7 @@ the file.
 Support files, with the exception of Catalogue files, must be stored
 in a separate folder within the Exchange Set named SUPPORT_FILES.
 The Catalogue files must be stored within the Exchange Set in a folder
-named "CATALOGUES". Refer to <<IHO_S_100,part=17,clause=17-4.2,figure=17-3>>.
+named "CATALOGUES". Refer to <<IHO_S_100,clause=17-4.2,figure=17-3>>.
 
 Re-use of an ENC support file name after a deletion is possible only
 if the ENC support file edition number is higher than the previous

@@ -14,7 +14,7 @@ to depths, heights, elevations and vertical clearances where the information
 is encoded as an attribute rather than the vertical component (Z-coordinate)
 of the CRS. This vertical datum information is included in the ENC
 dataset using the meta features *Sounding Datum* and
-*Vertical Datum of Data*. See <<AnnexA,clause=3.9>> and <<AnnexA,clause=3.10>>.
+*Vertical Datum of Data*. See <<S101AnnexA,clause=3.9>> and <<S101AnnexA,clause=3.10>>.
 
 [[sec_5.2]]
 === Horizontal Coordinate Reference System
@@ -43,7 +43,7 @@ Gas Producers (IOGP)
 
 For ENC the vertical CRS must be in metres and is only relevant to
 soundings (S-101 features *Sounding* and *Depth - No Bottom Found*,
-see <<AnnexA,clause=3.9>>), where the depth information is stored in the Z-coordinate.
+see <<S101AnnexA,clause=3.9>>), where the depth information is stored in the Z-coordinate.
 Depths are represented by positive values, while negative values indicate
 intertidal (drying) soundings.
 
@@ -139,4 +139,4 @@ NOTE: For S-101, the vertical CRS encoded in the Coordinate Reference
 System record fields for soundings is not utilized by the ECDIS in
 conveying the sounding datum information for an ENC to the Mariner
 in ECDIS. This information is provided instead using the S-101 meta
-feature *Sounding Datum* (see <<AnnexA,clause=3.9>>).
+feature *Sounding Datum* (see <<S101AnnexA,clause=3.9>>).
