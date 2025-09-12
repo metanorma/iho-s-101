@@ -1061,7 +1061,7 @@ sub-attributes *file reference* or *text* must be populated.
 A recommended route is a route of undefined width, for the
 convenience of ships in transit, which is often marked by centreline
 buoys. (IMO Ships Routeing, 2010). IMO-designated recommended routes
-are listed in IMO publication "__Ships' Routeing__"Part E. This type
+are listed in IMO publication "__Ships' Routeing__" Part E. This type
 of routeing measure was adopted to include such features as the
 "transit routes" (through former minefields) in the entrances to the
 Baltic Sea. In contrast to recommended tracks (see <<sec_15.5>>),
@@ -1203,7 +1203,7 @@ Routeing, 2010). It consists of one or more areas within which
 traffic flows in two directions along one bearing and/or its
 reciprocal. Such routes are established by regulatory authorities and
 may be adopted by IMO. IMO-designated two-way routes are listed in
-IMO publication "__Ships' Routeing__"Part E. When it is required to
+IMO publication "__Ships' Routeing__" Part E. When it is required to
 encode these areas, this must be done using the feature *Two-Way
 Route Part*. These route parts will generally be two-way, but some
 may be restricted to one-way traffic flow.
@@ -1431,7 +1431,7 @@ indicating a recommended directional movement of traffic where it is
 impractical or unnecessary to adopt an established direction of
 traffic flow. (IMO Ships Routeing, 2010). IMO-designated recommended
 directions of traffic flow are listed in IMO publication "__Ships'
-Routeing__"Part E. Several hydrographic offices, in consultation with
+Routeing__" Part E. Several hydrographic offices, in consultation with
 their Ministries of Transport, have added recommended directions in
 areas such as the outer approaches to major ports in order to show
 the best routes for crossing traffic or to minimise the risk of
@@ -1870,7 +1870,7 @@ Aggregation* (see <<sec_25.18>>) to form a hierarchical relationship.
 The individual elements comprising different routeing measures must
 not be collected into a single *Traffic Separation Scheme* feature.
 * IMO-designated Deep Water routes are listed in IMO publication
-"__Ships' Routeing__"Part C. Where *Deep Water Route Part* features
+"__Ships' Routeing__" Part C. Where *Deep Water Route Part* features
 are included in the associations *Deep Water Route Aggregation* or
 *Traffic Separation Scheme Aggregation*, the attribute *IMO adopted*
 must not be populated for the *Deep Water Route Part* features.
@@ -2914,7 +2914,7 @@ features (see <<sec_15.13;to!sec_15.15>>);- *Inshore Traffic Zone*
 *Traffic Separation Scheme Crossing*, *Traffic Separation Scheme Lane
 Part*, *Traffic Separation Scheme Roundabout* (see
 <<sec_15.18;to!sec_15.22>>); and- Navigational aids features (see
-Sections18 to 21).
+<<sec_18;to!sec_21>>).
 
 To define the complete traffic separation scheme system, these
 features must be associated with the feature *Traffic Separation

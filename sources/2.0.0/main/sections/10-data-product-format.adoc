@@ -13,7 +13,7 @@ fields and subfields defined in the encoding.
 
 *Character Set:*:: ISO 10646 Base Multilingual Plane
 
-*Specification:*:: S-100 profile of ISO/IEC 8211 (S-100 Part 10A)
+*Specification:*:: S-100 profile of ISO/IEC 8211 (<<IHO_S_100,part=10a>>)
 
 [[sec_10.1.1]]
 ==== Encoding of latitude and longitude

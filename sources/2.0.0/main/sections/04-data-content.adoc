@@ -11,8 +11,8 @@ described in terms of a General Feature Model and a Feature Catalogue.
 [[sec_4.2]]
 === Application Schema
 
-S-101 conforms to the General Feature Model (GFM) from S-100
-Part 3. The GFM is the conceptual model and the implementation is
+S-101 conforms to the General Feature Model (GFM) from <<IHO_S_100,part=3>>.
+The GFM is the conceptual model and the implementation is
 defined in the Feature Catalogue. The S-101 Application Schema is
 realised in the Feature Catalogue and the Product Specification only
 contains specific examples.
@@ -29,16 +29,15 @@ may be used in an ENC.
 
 The S-101 Feature Catalogue is available in an XML document which
 conforms to the S-100 XML Feature Catalogue Schema and can be downloaded
-from the IHO website. S-101 <<annexA>> - Data Classification and Encoding
-Guide, constitutes a human readable interpretation of the Feature
+from the IHO website.
+<<AnnexA>> constitutes a human readable interpretation of the Feature
 Catalogue.
 
 [[sec_4.3.2]]
 ==== Feature types
 
-Details of feature types can be found in <<annexA>> -
-_Data Classification and Encoding Guide_, clause 2.1 and
-Sections 3-23.
+Details of feature types can be found in
+<<AnnexA,clause=2.1>> and <<AnnexA,section=3>>-<<AnnexA,section=23>>.
 
 [[sec_4.3.2.1]]
 ===== Geographic
@@ -47,27 +46,27 @@ Geographic (geo) feature types form the principal content of the ENC
 and are fully defined by their associated attributes and information
 types.
 
-Details of geographic feature types can be found in <<annexA>> -
-_Data Classification and Encoding Guide_, clause 2.1 and
-Sections 4-22.
+Details of geographic feature types can be found in
+<<AnnexA,clause=2.1>> and
+<<AnnexA,section=4>>-<<AnnexA,section=22>>.
 
 [[sec_4.3.2.1.1]]
 ====== Skin of the Earth
 
 Details of features comprising the Skin of the Earth can be found
-in <<annexA>> - _Data Classification and Encoding Guide_, clause 2.5.1.1.
+in <<AnnexA,clause=2.5.1.1>>.
 
 [[sec_4.3.2.2]]
 ===== Metadata features
 
-Details of metadata feature types can be found in <<annexA>> -
-_Data Classification and Encoding Guide_, clause 2.1 and Section 3.
+Details of metadata feature types can be found in
+<<AnnexA,clause=2.1>> and <<AnnexA,section=3>>.
 
 [[sec_4.3.2.3]]
 ===== Cartographic
 
-Details of cartographic feature types can be found in <<annexA>> -
-_Data Classification and Encoding Guide_, clause 2.1 and Section 23.
+Details of cartographic feature types can be found in
+<<AnnexA,clause=2.1>> and <<AnnexA,section=23>>.
 
 [[sec_4.3.3]]
 ==== Feature relationships
@@ -127,16 +126,16 @@ image::figure-4-3.jpeg[]
 [[sec_4.3.4]]
 ==== Information types
 
-Details of information types can be found in <<annexA>> -
-_Data Classification and Encoding Guide_, clauses 2.3, 2.4.7 and
-Section 24.
+Details of information types can be found in
+<<AnnexA,clause=2.3>>, <<AnnexA,clause=2.4.7>> and
+<<AnnexA,section=24>>.
 
 [[sec_4.3.4.1]]
 ===== Spatial quality
 
 Spatial quality attributes are carried in an information class called
-*Spatial Quality*. Details of spatial quality can be found in <<annexA>>
-- _Data Classification and Encoding Guide_, clauses 2.4.7 and 24.5.
+*Spatial Quality*. Details of spatial quality can be found in
+<<AnnexA,clause=2.4.7>> and <<AnnexA,clause=24.5>>.
 
 [[sec_4.3.5]]
 ==== Information relationships
@@ -184,9 +183,9 @@ S-101 defines attributes as either simple or complex.
 ===== Simple attributes
 
 S-101 uses nine types of simple attributes; these types are listed
-in <<annexA>> - _Data Classification and Encoding Guide_, clause 2.4.2.
+in <<AnnexA,clause=2.4.2>>.
 Descriptions of the simple attributes included in S-101 can be found
-in <<annexA>>, Sections 27, 28 and 30.
+in <<AnnexA,section=27>>, <<AnnexA,section=28>> and <<AnnexA,section=30>>.
 
 [[sec_4.3.6.2]]
 ===== Complex attributes
@@ -194,9 +193,8 @@ in <<annexA>>, Sections 27, 28 and 30.
 Complex attributes are aggregations of other attributes that are either
 simple or complex. The aggregation is defined by means of attribute
 bindings. Examples of modelling complex attributes can be found in
-S-100 Part 2a, Appendix 2a-A. Descriptions of the complex attributes
-included in S-101 can be found in <<annexA>> -
-_Data Classification and Encoding Guide_, Section 29.
+<<IHO_S_100,part=2a,locality:appendix=2a-A>>. Descriptions of the complex attributes
+included in S-101 can be found in <<AnnexA,section=29>>.
 
 [[sec_4.3.6.3]]
 ===== Attribute suppression
@@ -204,7 +202,7 @@ _Data Classification and Encoding Guide_, Section 29.
 The S-100 XML Feature Catalogue Schema allows for attributes to be
 suppressed in the end-user system Pick Report using the attribute
 _attributeVisibility_ for the class S100_FC_AttributeBinding
-(see S-100 Part 5, Appendix 5-A, Tables 5-A-16 and 5-A-21).
+(see <<IHO_S_100,part=5,locality:appendix=5-A,table=5-A-16>> and <<IHO_S_100,part=5,locality:appendix=5-A,table=5-A-21>>).
 These attributes are generally used to assist with optimum display
 of features in ECDIS systems; or to perform other administrative roles.
 For S-101, these attributes are identified in the Feature Catalogue
@@ -310,8 +308,8 @@ where the datasets intended to form a seamless presentation in ECDIS do not
 share a common minimum display scale. The attribute *drawing index* is also
 required if the dataset may need to form a seamless presentation with one or
 more S-57 datasets, in which case the value should correspond to the usage band
-of the adjoining or overlapping S-57 dataset(s). See S-101 <<annexA>> - _Data
-Classification and Encoding Guide_, clauses 3.5 and 28.3.], where populated,
+of the adjoining or overlapping S-57 dataset(s). See <<AnnexA,clause=3.5>>
+and <<AnnexA,clause=28.3>>.], where populated,
 must be the same.
 
 .. The **optimum display scale**s may be different; and
@@ -321,7 +319,6 @@ must be the same.
 * When a dataset has multiple *Data Coverage* features then the
 *optimum display scale* of the dataset must be equal to the largest
 *optimum display scale* of the *Data Coverage* features.
-
 
 [[fig_4-6]]
 .Dataset with multiple Data Coverage features
@@ -444,7 +441,7 @@ image::figure-4-10.jpeg[]
 
 The underlying geometry of an ENC is constrained to level 3a which
 supports 0, 1 and 2 dimensional features (points, curves and surfaces)
-as defined by S-100 Part 7 - _Spatial Schema_.
+as defined by <<IHO_S_100,part=7>>.
 
 Level 3a is described by the following constraints:
 

@@ -7502,8 +7502,8 @@ Appendix A -- Chapter 2, Page 2.209, November 2000).
 of a single textual ENC support file that contains the textual
 information.
 
-[underline]#Format:# *101CCCCØØØØØØØØØØ.EEE*(See S-101 Main document,
-clause 11.4.3 (mandatory))
+[underline]#Format:# *101CCCCØØØØØØØØØØ.EEE* (See
+<<S101,clause=11.4.3>> (mandatory))
 
 [underline]#Remarks:#
 
@@ -8331,8 +8331,7 @@ follows the syntax and semantics for URNs specified in RFC 2141.
 
 [underline]#Remarks:#
 
-* For further information regarding MRNs, see S-100 Part 3, clause
-3-10.
+* For further information regarding MRNs, see <<IHO_S_100,part=3,clause=3-10>>.
 
 |===
 
@@ -9631,7 +9630,7 @@ of a single pictorial ENC support file (pixel/vector).
 
 [underline]#Format:# *101CCCCØØØØØØØØØØ.
 
-EEE*(See S-101 Main document, clause 11.4.3 (mandatory))
+EEE* (See <<S101,clause=11.4.3>> (mandatory))
 
 [underline]#Remarks:#
 

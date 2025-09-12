@@ -1,0 +1,9 @@
+[bibliography]
+== Bibliography
+
+* [[[S101,dropid(repo:(current-metanorma-collection/IHO S-101))]]],
+span:title[S-101 -- IHO Electronic Navigational Chart (ENC) Product Specification],
+span:edition[2.0.0],
+span:organization[International Hydrographic Organization]
+
+* [[[IHO_S_100,hidden(IHO S-100)]]]

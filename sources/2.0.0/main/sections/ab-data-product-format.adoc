@@ -6,8 +6,8 @@
 [discrete]
 === Introduction
 
-S-101 uses the S-100 profile of ISO/IEC 8211 (refer to S-100 Part
-10A) to encapsulate data. This Annex specifies the interchange format
+S-101 uses the S-100 profile of ISO/IEC 8211 (refer to <<IHO_S_100,part=10A>>)
+to encapsulate data. This Annex specifies the interchange format
 to facilitate the moving of files containing data records between
 computer systems. It defines a specific structure which can be used
 to transmit files containing data type and data structures specific

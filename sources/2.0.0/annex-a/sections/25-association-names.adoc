@@ -309,7 +309,7 @@ end" of the association).
 --
 The type of association as defined for the *Lateral Buoy* end of
 the association -- "Association", "Aggregation" or "Composition" as
-described in S-100 Part 1, clause 1-4.9; and included in the tables
+described in <<IHO_S_100,part=1,clause=1-4.9>>; and included in the tables
 in this Section in the "Role Type" column.
 
 NOTE: The association type for a feature/information association will

@@ -69,7 +69,7 @@ available via the IHO web site.
 [[sec_1.3.1]]
 ==== Terms and definitions
 
-See S-101 Product Specification Main document, <<sec_1.3.2>>.
+See <<S101,clause=1.3.2>>.
 
 [[sec_1.3.2]]
 ==== Abbreviations
@@ -125,4 +125,4 @@ ____
 === Maintenance
 
 Changes to the Data Classification and Encoding Guide must occur in
-accordance with the S-101 ENC Product Specification clause 1.6.
+accordance with the <<S101,clause=1.6>>.
