@@ -302,22 +302,26 @@ possible.
 image::figure-4-5.png[]
 
 * When a dataset has multiple *Data Coverage* features:
+
 .. The **minimum display scale**s must all be the same
-.. The **drawing index**es*, where populated, must be the same.
+
+.. The **drawing index**es* footnote:[The attribute *drawing index* is required
+where the datasets intended to form a seamless presentation in ECDIS do not
+share a common minimum display scale. The attribute *drawing index* is also
+required if the dataset may need to form a seamless presentation with one or
+more S-57 datasets, in which case the value should correspond to the usage band
+of the adjoining or overlapping S-57 dataset(s). See S-101 <<annexA>> - _Data
+Classification and Encoding Guide_, clauses 3.5 and 28.3.], where populated,
+must be the same.
+
 .. The **optimum display scale**s may be different; and
+
 .. The **maximum display scale**s may be different.
 
 * When a dataset has multiple *Data Coverage* features then the
 *optimum display scale* of the dataset must be equal to the largest
 *optimum display scale* of the *Data Coverage* features.
 
-\* The attribute *drawing index* is required where the datasets intended
-to form a seamless presentation in ECDIS do not share a common minimum
-display scale. The attribute *drawing index* is also required if the
-dataset may need to form a seamless presentation with one or more
-S-57 datasets, in which case the value should correspond to the usage
-band of the adjoining or overlapping S-57 dataset(s). See S-101 <<annexA>>
-- _Data Classification and Encoding Guide_, clauses 3.5 and 28.3.
 
 [[fig_4-6]]
 .Dataset with multiple Data Coverage features
